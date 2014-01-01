@@ -1,0 +1,241 @@
+<?php require_once("includes/db_connection.php"); ?>
+<?php require_once("includes/functions.php"); ?>
+<?php include("includes/header.php"); ?>
+<table id="structure">
+	<tr>
+		<td id="navigation">
+			<a href="Main_page.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
+		</td>
+		<td id="page">
+			<head>
+				<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+				<script src="js/jquery-1.9.1.js"></script>
+				<script src="js/jquery-ui-1.10.3.custom.js"></script>
+			
+				<script>
+				$(function() {
+			
+				$( "#accordion" ).accordion();
+			
+	
+			
+	
+			
+	
+			
+	
+			
+	
+			
+	
+			
+	
+			
+	
+				// Hover states on the static widgets
+				$( "#dialog-link, #icons li" ).hover(
+				function() {
+					$( this ).addClass( "ui-state-hover" );
+				},
+				function() {
+					$( this ).removeClass( "ui-state-hover" );
+				}
+				);
+				});
+				
+				$(function() {
+			
+				$( "#accordion2" ).accordion();
+			
+	
+			
+	
+			
+	
+			
+	
+			
+	
+			
+	
+			
+	
+			
+	
+				// Hover states on the static widgets
+				$( "#dialog-link, #icons li" ).hover(
+				function() {
+					$( this ).addClass( "ui-state-hover" );
+				},
+				function() {
+					$( this ).removeClass( "ui-state-hover" );
+				}
+				);
+				});
+				</script>
+			
+				<style>
+					body{
+						font: 62.5% "Trebuchet MS", sans-serif;
+						/*margin: 50px;*/
+					}
+					.demoHeaders {
+						margin-top: 2em;
+					}
+					#dialog-link {
+						padding: .4em 1em .4em 20px;
+						text-decoration: none;
+						position: relative;
+					}
+					#dialog-link span.ui-icon {
+						margin: 0 5px 0 0;
+						position: absolute;
+						left: .2em;
+						top: 50%;
+						margin-top: -8px;
+					}
+					#icons {
+						margin: 0;
+						padding: 0;
+					}
+					#icons li {
+						margin: 2px;
+						position: relative;
+						padding: 4px 0;
+						cursor: pointer;
+						float: left;
+						list-style: none;
+					}
+					#icons span.ui-icon {
+						float: left;
+						margin: 0 4px;
+					}
+					.fakewindowcontain .ui-widget-overlay {
+						position: absolute;
+					}
+				</style>
+			</head>
+			<body>
+				<form action="Search_Models_Process.php" method="post">
+					
+				<h2 class="demoHeaders">Choose the ID You Want to Search by<br /> <h3>Search will use only last data entered; if you get unexpected results, click on 'cancel' and retry:</h3>
+					<div id="accordion">
+						<h3>MAN (FAB) # (i.e. '800')</h3>
+						<div><input type="text" name="MAN_No_1" value="" id="MAN_No_1"><input type="text" name="MAN_No_2" value="" id="MAN_No_2"></p>
+						</div>
+						
+						<h3>Mack# (in format like '33-M')</h3>
+						<div><input type="text" name="Mack_No" value="" id="Mack_No"></p>
+						</div>
+						
+						<h3>Name (uses model, version and base names- takes a few seconds!)</h3>
+						<div><input type="text" name="Name" value="" id="Name" size=40></p>
+						</div>
+						
+						<h3>UMID# (i.e. '858' or 'SF0858')</h3>
+						<div><input type="text" name="UMID_1" value="" id="UMID_1"><input type="text" name="UMID_2" value="" id="UMID_2"></p>
+						</div>
+					</div>
+					
+				<h2 class="demoHeaders">Or Search by General Model Information<br /> <h3>(you may choose more than one of these criteria):</h3>	
+					<div id="accordion2">
+						<h3>Vehicle Type</h3>		
+							<div><input type=checkbox name="VehicleType_Check" id="VehicleType_Check">Vehicle Type:<br>
+							<?php
+								$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");								
+								$result=0;
+								$rows_count=0;									
+								$result = mysql_query($query);
+								if (!result) {
+									echo "Database query failed";
+								}
+								else {
+									//echo "made connection ".$result."<br />";		
+								}
+								$rows_count= mysql_num_rows($result);
+								// echo "Rows Count: ".$rows_count."<br />";
+							?>
+							<select name="TypeofVehicle" id="TypeofVehicle" >
+							<?php
+								for ($i=1; $i<=$rows_count; $i++) {
+									$row=mysql_fetch_array($result);
+									echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+								}	
+							?>
+							</select>
+							<br />
+							</div>
+						
+						<h3>Make of Vehicle (i.e. Ford)</h3>
+							<div><input type=checkbox name="VehicleMake_Check" id="VehicleMake_Check" >Make of Vehicle:<br>
+							<?php
+								$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehMake%'");								
+								$result=0;
+								$rows_count=0;									
+								$result = mysql_query($query);
+								if (!result) {
+									echo "Database query failed";
+								}
+								else {
+									//echo "made connection ".$result."<br />";		
+								}
+								$rows_count= mysql_num_rows($result);
+								// echo "Rows Count: ".$rows_count."<br />";
+							?>
+							<select name="VehicleMake" id="VehicleMake" >
+							<?php
+								for ($i=1; $i<=$rows_count; $i++) {
+									$row=mysql_fetch_array($result);
+									echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+								}	
+							?>
+							</select>
+							<br />	
+							</div>
+							
+						<h3>Country of Make (i.e. Ford is made in the USA)</h3>
+							<div><input type=checkbox name="MakeCountry_Check" id="MakeCountry_Check" >Country of Make:<br>
+							<?php
+								$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%MakeCountry%'");								
+								$result=0;
+								$rows_count=0;									
+								$result = mysql_query($query);
+								if (!result) {
+									echo "Database query failed";
+								}
+								else {
+									//echo "made connection ".$result."<br />";		
+								}
+								$rows_count= mysql_num_rows($result);
+								// echo "Rows Count: ".$rows_count."<br />";
+							?>
+							<select name="MakeCountry" id="MakeCountry">
+							<?php
+								for ($i=1; $i<=$rows_count; $i++) {
+									$row=mysql_fetch_array($result);
+									echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+								}	
+							?>
+							</select>	
+							</div>
+						
+					</div>
+				<h2 class="demoHeaders">Or Search by Text on the Model<br /> <h3></h3>	
+					<div id="accordion2">
+							<div><input type=checkbox name="TempaText_Check" id="TempaText_Check" >Text:<br>
+							<input type="text" name="TempaText" value="" size="25" id="TempaText"></p>						
+							</select>	
+							</div>
+					</div>		
+				<p></p>	
+				<input type="submit"  name="submit" value="Search"/>
+				<br /><br />
+				<a href="Search_Models_Menu.php">Cancel/Clear</a>
+
+				</form>			
+
+			</body>
+		</td>
+	</tr>
+</table>
+<?php include("includes/footer.php"); ?>
