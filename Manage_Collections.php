@@ -6,9 +6,9 @@
     <tr>
             <td id="navigation">
                     <a href="Create_Collection.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Create a Collection</p></a>
-                    <a href="Collection_Value_Lists.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Set up Collection Value Lists</p></a>
+                    <a href="Collection_Value_Lists.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Set up Collection Code Lists</p></a>
                     <a href="Update_Collection.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">View/Update Your Collections</p></a>
-                    <a href="Delete_Collection.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Delete a Collection Collection</p></a>
+                    <a href="Delete_Collection.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Delete a Collection</p></a>
                     <a href="Collections_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Collections Menu</p></a>
                     <a href="Main_page.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>	
             </td>

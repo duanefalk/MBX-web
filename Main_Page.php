@@ -29,8 +29,7 @@ session_start();
 	</td>
 	<td id="page">
 		<h2>The Matchbox Professor Welcomes you to the MBX University!!</h2>
-		<h3>Be Sure to Root for our team: the Hard-Driving
-		Revin' Rebels</h3>
+
 		<p>This site is for Matchbox collectors and anyone intrrested in Matchbox models</p>
 		
 		<div id="quick_search" >

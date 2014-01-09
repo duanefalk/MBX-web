@@ -5,15 +5,15 @@
 <table id="structure">
     <tr>
             <td id="navigation">
-                    <a href="Add_User_Coll_Value.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Add a New Seller or Location Value</p></a>
-                    <a href="Updt_User_Coll_Value.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">View/Update Values</p></a>
-                    <a href="Del_User_Coll_Value.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Delete a Value</p></a>
+                    <a href="Add_User_Coll_Value.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Add a New Seller or Location Code</p></a>
+                    <a href="Updt_User_Coll_Value.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">View/Update Codes</p></a>
+                    <a href="Del_User_Coll_Value.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Delete a Code</p></a>
                     <a href="Manage_Collections.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Manage Collections</p></a>
                     <a href="Main_page.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>	
             </td>
             <td id="page">
-                <h2>Manage Your Value Lists</h2>
-                <p>Collection value lists can speed up adding models to your collection by letting you select from a dropdown list of sellers and storage locations, </>
+                <h2>Manage Your Code Lists</h2>
+                <p>Collection code lists can speed up adding models to your collection by letting you select from a dropdown list of sellers and storage locations, </>
                 <p>rather than having to type those in with each model. In the add/update/delete functions you will first be asked whether you want to work with</p>
                 <p>'Sellers' or 'Locations'</p><br />
 
