@@ -8,7 +8,7 @@ session_start();
 <?php include("includes/header.php"); ?>
 <?php
 	if ($_SESSION['Sec_Lvl'] == 3) {
-		$security= $_SESSION['$Sec_Lvl'];		
+		//$security= $_SESSION['$Sec_Lvl'];		
 		echo "Admin level";
 
 	}
@@ -21,10 +21,21 @@ session_start();
 	<a href="About_site.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">About the Site</p></a>
 	<a href="Search_Models_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Search Models</p></a>
 	<a href="Search_Releases_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Search Releases</p></a>
-	<a href="Collections_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'"> Create/Manage Your Collections</p></a>
+	<?php
+		if ($_SESSION['Sec_Lvl'] > 1) {
+			echo "<a href=\"Collections_Menu.php\"><p onmouseover=\"this.style.color='orange'\" onmouseout=\"this.style.color='white'\"> Create/Manage Your Collections</p></a>";						
+		}						
+	?>	
+
 	<a href="Create_User_Account_Form.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'"> Account</p></a>
-	<a href="Add_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'"> Add a New Record</p></a>
 	<a href="User_Upload.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'"> Upload Photo or Comments</p></a>
+
+	<?php
+		if ($_SESSION['Sec_Lvl'] == 3) {
+			echo "<a href=\"Add_Menu.php\"><p onmouseover=\"this.style.color='orange'\" onmouseout=\"this.style.color='white'\"> Add a New Record</p></a>";						
+		}						
+	?>							
+	
 	<a href="logout.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Logout</p</a>
 	</td>
 	<td id="page">

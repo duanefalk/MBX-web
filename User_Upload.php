@@ -17,7 +17,7 @@
 				</textarea>
 			<br />	
 			<label for="file">Filename:</label>
-			<input type="file" name="upload"<br />
+			<input type="file" name="upload" id="file" <br />
 			<input type="submit" name="submit" id="submit" value="Upload">
 			<br />	
 		</form>

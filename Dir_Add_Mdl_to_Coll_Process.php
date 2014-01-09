@@ -123,7 +123,7 @@
                         <?php
                             //vehicle condition
                             //Get this from session vars and add to user prefs hard code for now
-                            $Cond_scheme="Alpha_cond";
+                            $Cond_scheme="Num_cond";
     
                             $query=("SELECT * FROM Test_Matchbox_Value_lists WHERE ValueList LIKE '%$Cond_scheme%' ORDER BY ValueDispOrder ASC");								
                             $result=0;

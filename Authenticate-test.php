@@ -23,33 +23,36 @@ $_SESSION['Sec_Lvl']=1;
                 <?php
                 $errorMessage = '';
                 if (isset($_POST['txtUserId']) && isset($_POST['txtPassword'])) {
-                   $userId = $_POST['txtUserId'];
-                   $password = $_POST['txtPassword'];
-                
-                   // check if the user id and password combination exist in database
-                   $query = ("SELECT * 
-                           FROM Test_MBXU_User_Accounts
-                           WHERE Username = '$userId'
-                           AND Password = '$password'");   
-                   $result = mysql_query($query);
-                   $rows_count= mysql_num_rows($result);
-                   
-                   if ($rows_count == 0) {
-                      echo "Sorry, wrong user id / password"; } 
-                      // the user id and password match, 
-                      // set the session
-                      else {
-                      $_SESSION['db_is_logged_in'] = true;
-                      // get sec lvl from db
-                      $row=mysql_fetch_array($result);
-                      $_SESSION['Sec_Lvl']=$row["Sec_Lvl"];
-                      echo $userId.$password."<br />";
-                      echo $rows_count. ' '.$row[Username].' '.$row[Password]." ".$row[Sec_Lvl];
-                
-                      // after login we move to the main page
-                      header('Location: main_page.php');
-                      exit;
-                   } 
+                    $userId = $_POST['txtUserId'];
+                    $password = $_POST['txtPassword'];
+                 
+                    // check if the user id and password combination exist in database
+                    $query = ("SELECT * 
+                            FROM Test_MBXU_User_Accounts
+                            WHERE Username = '$userId'
+                            AND Password = '$password'");   
+                    $result = mysql_query($query);
+                    $rows_count= mysql_num_rows($result);
+                    
+                    if ($rows_count == 0) {
+                        echo "Sorry, wrong user id / password";  
+                        // the user id and password match, 
+                        // set the session
+                    } else {
+                        $_SESSION['db_is_logged_in'] = true;
+                        // get sec lvl from db
+                        $row=mysql_fetch_array($result);
+                        $_SESSION['Sec_Lvl']=$row["Sec_Lvl"];
+                        $_SESSION['Veh_Cond_Scheme']=$row["Veh_Cond_Scheme"];
+                        $_SESSION['Pkg_Cond_Scheme']=$row["Pkg_Cond_Scheme"];
+                        $_SESSION['Code2_Pref']=$row["Code2_Pref"];
+                        echo $userId.$password."<br />";
+                        echo $rows_count. ' '.$row[Username].' '.$row[Password]." ".$row[Sec_Lvl];
+                  
+                        // after login we move to the main page
+                        header('Location: main_page.php');
+                        exit;
+                    } 
                    include 'includes/close_db_connection.php';
                 }
                 ?>

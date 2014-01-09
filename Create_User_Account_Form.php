@@ -53,15 +53,25 @@ session_start();
 					}	
 				?>
 				</select>
-		<p>Are you a dealer* (of Matchbox; anything else- TMI)?: </p>     
-				<select name="User_is_Dealer">
-				<option value="N">No</option>
-				<option value="Y">Yes</option>
-				</select>
-				</p>
+		<p>Are you a dealer (of Matchbox; anything else- TMI!)?: </p>     
+			<input type="radio" name="User_is_Dealer" value="0">No<br>
+			<input type="radio" name="User_is_Dealer" value="1">Yes<br>
 		<p>Matchbox clubs you belong to:      </p>
 				<textarea name="User_Memberships" cols="45" rows="4">	
-				</textarea>			
+				</textarea>
+			
+		<p>Preferred Scheme for Vehicle Condition     </p>
+		<p>(alpha= MIB, Mint, Exc etc; num= 10, 9.5, 9 etc): </p>
+			<input type="radio" name="Veh_Cond_Scheme" value="0">Alpha<br>
+			<input type="radio" name="Veh_Cond_Scheme" value="1">Num<br>
+		<p>Preferred Scheme for Pkg Condition (as above):     </p>
+			<input type="radio" name="Pkg_Cond_Scheme" value="0">Alpha<br>
+			<input type="radio" name="Pkg_Cond_Scheme" value="1">Num<br>
+		<p>Code 2 Preference: </p>
+			<input type="radio" name="Code2_Pref" value="0">Combine Code 1 and Code 2 models in displays<br>
+			<input type="radio" name="Code2_Pref" value="1">Show both Code 1 and Code 2, but separate them<br>
+			<input type="radio" name="Code2_Pref" value="2">Don't show Code 2 at all<br>
+
 		<input type="submit"  name="submit" value="Submit"/>
 		</form>			
 		<a href="Create_User_Account_Form.php">Cancel</a>

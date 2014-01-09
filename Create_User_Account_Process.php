@@ -3,6 +3,9 @@
 session_start();
 ?>
 
+<?php require_once("includes/db_connection.php"); ?>
+<?php require_once("includes/functions.php"); ?>
+
 <!-- fields:
     Username
     Password
@@ -18,8 +21,8 @@ session_start();
 -->
 
 <?php
-    $Username=$_POST['Master_Mack_No'];
-    $Password=$_POST['VerName'];
+    $Username=$_POST['Username'];
+    $Password=$_POST['Password'];
     $Sec_Lvl=2;
     $User_Name=$_POST['User_Name'];
     $User_Email=$_POST['User_Email'];
@@ -29,7 +32,7 @@ session_start();
     $Areas_of_Interest=$_POST['Areas_of_Interest'];
         if(isset($Areas_of_Interest)) {
             $InterestString='';
-            foreach ($Area_of_Interest as $key => $value) { 
+            foreach ($Areas_of_Interest as $key => $value) { 
                 $InterestString .= $value.", "; 
             }}
         else
@@ -39,18 +42,24 @@ session_start();
   
     $User_is_Dealer=$_POST['User_is_Dealer'];
     $User_Memberships= $_POST['User_Memberships'];
-    
+    $User_Veh_Cond_Scheme= $_POST['Veh_Cond_Scheme'];
+    $User_Pkg_Cond_Scheme= $_POST['Pkg_Cond_Scheme'];
+    $User_Code2_Pref=$_POST['Code2_Pref'];
+
+
      $query="INSERT INTO Test_MBXU_User_Accounts (Username, Password, Sec_Lvl, User_Name, User_Email, User_Url,
-            User_Address, User_Phone, Areas_of_Interest, User_is_Dealer, User_Memberships) 
-            ) VALUES ('$Username','$Password','$Sec_Lvl','$User_Name','$User_Email','$User_Url',
-            '$User_Address','$User_Phone', '$InterestString','$User_is_Dealer', '$User_Memberships')";
+            User_Address, User_Phone, Areas_of_Interest, User_is_Dealer, User_Memberships,
+            Veh_Cond_Scheme, Pkg_Cond_Scheme, Code2_Pref) 
+            VALUES ('$Username','$Password','$Sec_Lvl','$User_Name','$User_Email','$User_Url',
+            '$User_Address','$User_Phone', ' $InterestString','$User_is_Dealer', '$User_Memberships',
+            '$User_Veh_Cond_Scheme', '$User_Pkg_Cond_Scheme', '$User_Code2_Pref')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;
     // header("Location: Add_Version.php");
     
     $outcome=mysql_query($query);
     if ($outcome) {
-         echo "<a href=\"Create_User_Account_Form.php\">Success. Return to Main Page</a>";
+         echo "<a href=\"Main_Page.php\">Success. Return to Main Page</a>";
      } // success 
      else {
          echo "<p>Account creation failed.</p>";

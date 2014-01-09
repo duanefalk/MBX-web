@@ -16,10 +16,15 @@
     $file_uploaded=0;				
 
     //check if a file has been uploaded
-    if (!empty($_FILES)) {
+    if ($_FILES['upload']['error'] != UPLOAD_ERR_NO_FILE) {
+    //these next two trials didnt work:
+    //if (file_exists(UPLOAD_PATH.$_FILES['upload']['name']))   { 
+    //if (!empty($_FILES)) {
+
     // enter conditional logic
+            echo "there is a file";
             // check file size first
-            if ($_FILES["upload"]["size"] < 4000000) {		
+            if ($_FILES["upload"]["size"] < 4000000) {
                     // if size ok, check file type   , "doc"
                     $allowedExts = array("gif", "jpeg", "jpg", "png", "pdf", "doc", "txt", "xls", "xlsx");
                     $extension = end(explode(".", $_FILES['upload']['name']));
