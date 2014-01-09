@@ -9,7 +9,7 @@
                     <a href="Updt_User_Coll_Value.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">View/Update Codes</p></a>
                     <a href="Del_User_Coll_Value.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Delete a Code</p></a>
                     <a href="Manage_Collections.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Manage Collections</p></a>
-                    <a href="Main_page.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>	
+                    <a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>	
             </td>
             <td id="page">
                 <h2>Manage Your Code Lists</h2>

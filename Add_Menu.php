@@ -14,7 +14,7 @@
 					<a href="Add_Reference_Form.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Reference</p></a>
                                         <a href="Add_Value_List_Item_Form.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Value List Item</p></a>
 					<br />
-					<a href="Main_page.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
+					<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
 					</td>
 					<td id="page">
 						<h2>Welcome to the Online Matchbox Database!!</h2>

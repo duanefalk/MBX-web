@@ -59,7 +59,7 @@ session_start();
     
     $outcome=mysql_query($query);
     if ($outcome) {
-         echo "<a href=\"Main_Page.php\">Success. Return to Main Page</a>";
+         echo "<a href=\"index.php\">Success. Return to Main Page</a>";
      } // success 
      else {
          echo "<p>Account creation failed.</p>";

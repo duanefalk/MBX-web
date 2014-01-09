@@ -18,7 +18,7 @@
                 <a href="Search_Models.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
 		<a href="Search_Releases.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
                 <a href="Manage_Models_in_Collection.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Manage Collection</p></a>
-		<a href="Main_page.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
+		<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
 	</td>
 	<td id="page">
 		<h2>View/Update Model in Collection</h2>

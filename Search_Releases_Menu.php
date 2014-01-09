@@ -4,7 +4,7 @@
 <table id="structure">
 	<tr>
 		<td id="navigation">
-			<a href="Main_page.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
+			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
 		</td>
 		<td id="page">
 		<head>

@@ -24,7 +24,7 @@
 	</head> 
 	<body>
 		<div id="header">
-			<a href="Main_Page.php"><img src="MODLOGO.png" width="180" /></a>
-			<a href="Main_Page.php"><h1>The Matchbox University</h1></a>
+			<a href="index.php"><img src="MODLOGO.png" width="180" /></a>
+			<a href="index.php"><h1>The Matchbox University</h1></a>
 		</div>
 		<div id="main">

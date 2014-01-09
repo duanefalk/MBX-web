@@ -44,7 +44,7 @@
 <tr>
 	<td id="navigation">
 		<a href="Collections.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Collections</p></a>
-		<a href="Main_page.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
+		<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
 	</td>
 	<td id="page">
 		<h2>Add a Model to Your Collection</h2>

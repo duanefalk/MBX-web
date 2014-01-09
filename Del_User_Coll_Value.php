@@ -8,7 +8,7 @@
 
                     <a href="Collection_Value_Lists.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Manage Collection Value Lists</p></a>
                     <a href="Manage_Collections.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Manage Collections</p></a>
-                    <a href="Main_page.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>	
+                    <a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>	
             </td>
             <td id="page">
                 <h2>Delete a Collection Value</h2>

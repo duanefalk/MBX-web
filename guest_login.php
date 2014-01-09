@@ -8,5 +8,5 @@ $_SESSION['sec_level']=1;
 $_SESSION['basic_is_logged_in'] = true;
 
 // move to the main page
-header('Location: main_page.php');
+header('Location: index.php');
 exit;

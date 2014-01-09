@@ -8,7 +8,7 @@
 			<a href="Manage_Collections.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Manage Collections</p></a>
 			<a href="Manage_Models_in_Collection.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Manage Models in Your Collection</p></a>
 			<a href="Collection_Reports.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Info About Your Collection</p></a>
-			<a href="Main_page.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>	
+			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>	
 		</td>
 		<td id="page">
 			<h2>Your Collections</h2>
