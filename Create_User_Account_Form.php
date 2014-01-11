@@ -68,7 +68,7 @@ session_start();
 			<input type="radio" name="Pkg_Cond_Scheme" value="0">Alpha<br>
 			<input type="radio" name="Pkg_Cond_Scheme" value="1">Num<br>
 		<p>Code 2 Preference: </p>
-			<input type="radio" name="Code2_Pref" value="0">Combine Code 1 and Code 2 models in displays<br>
+			<input type="radio" name="Code2_Pref" value="0">Combine Code 1 and Code 2 versions in displays<br>
 			<input type="radio" name="Code2_Pref" value="1">Show both Code 1 and Code 2, but separate them<br>
 			<input type="radio" name="Code2_Pref" value="2">Don't show Code 2 at all<br>
 
