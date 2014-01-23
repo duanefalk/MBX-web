@@ -17,6 +17,8 @@
 				VerName
 				VerYrFirstRel
 				VerTyp
+				CodeLvl
+				SecManuf
 				BaseCompany
 				BodyColor
 				TempaDesign
@@ -59,7 +61,52 @@
 					}	
 				?>
 				</select>				
-					
+			<p>Code Level:    </p>
+				<?php
+					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%CodeLevel%'");								
+					$result=0;
+					$rows_count=0;									
+					$result = mysql_query($query);
+					if (!result) {
+						echo "Database query failed";
+					}
+					else {
+						//echo "made connection ".$result."<br />";		
+					}
+					$rows_count= mysql_num_rows($result);
+					// echo "Rows Count: ".$rows_count."<br />";
+				?>
+				<select name="CodeLvl">
+				<?php
+					for ($i=1; $i<=$rows_count; $i++) {
+						$row=mysql_fetch_array($result);
+						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+					}	
+				?>
+				</select>
+			<p>Secondary Manufacturer:    </p>
+				<?php
+					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%SecondManufacturer%'");								
+					$result=0;
+					$rows_count=0;									
+					$result = mysql_query($query);
+					if (!result) {
+						echo "Database query failed";
+					}
+					else {
+						//echo "made connection ".$result."<br />";		
+					}
+					$rows_count= mysql_num_rows($result);
+					// echo "Rows Count: ".$rows_count."<br />";
+				?>
+				<select name="SecManuf">
+				<?php
+					for ($i=1; $i<=$rows_count; $i++) {
+						$row=mysql_fetch_array($result);
+						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+					}	
+				?>
+				</select>		
 			<p>Body Color(s):     	  <input type="text" name="BodyColor" value="" size="40" id="BodyColor"</p>
 			<p>Tempa Design:     </p>
 				<textarea name="TempaDesign" cols="45" rows="4">			

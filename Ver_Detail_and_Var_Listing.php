@@ -5,6 +5,7 @@
 
 	<tr>
 		<td id="navigation">
+			<?php echo "<a href=\"javascript:history.go(-1)\">Return to Previous Page</a>"; ?>
 			<a href="Search_Models_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
 			<a href="Search_Releases_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
 			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
@@ -43,6 +44,10 @@
 			echo "Color: ".$row["BodyColor"]."   Design: ".$row["TempaDesign"]."<br></>";
 			if ($row["TempaText"]) {
 				echo "Text: ".$row["TempaText"]."<br></>";
+			}
+			echo "<p>Code level: ".$row["CodeLvl"];
+			if ($row["CodeLvl"]=="2") {
+				echo " C2 Manuf.: ".$row["SecManuf"]."</p>";
 			}
 			if ($row["VerAttachments"]) {
 				echo "Text: ".$row["VerAttachments"]."<br></>";
@@ -93,23 +98,24 @@
 												
 				$PhotoRefCd1= $row2["VarPhoto1Ref"];
 				$PhotoRefCd2= $row2["VarPhoto2Ref"];
-				if ($PhotoRefCd1) {
-					$query2a= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
-					$result2a= mysql_query($query2a);
-					$row2a =mysql_fetch_array($result2a);
-					echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"]."</p>";
-					if ($PhotoRefCd2) {
-						$query2b= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
-						$result2b= mysql_query($query2b);
-						$row2b =mysql_fetch_array($result2b);
-						echo "<p id=\"photoref\">, ". $row2b["RefName"]."</p>";
+					if ($PhotoRefCd1) {
+						$query2a= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
+						$result2a= mysql_query($query2a);
+						$row2a =mysql_fetch_array($result2a);
+						if ($PhotoRefCd2) {
+							$query2b= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
+							$result2b= mysql_query($query2b);
+							$row2b =mysql_fetch_array($result2b);
+							echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"]."</p>";
+						} ELSE {
+							echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"];
+						}
+					} ELSE {
+						echo "<p id=\"photoref\">Photo by: no reference listed";
 					}
-				} ELSE {
-					echo "<p id=\"photoref\">Photo by: no reference listed</p>";
-				}
 
 				echo "Base Name: ". $row2["BaseName"]."<br />";
-				echo "Var Year: ".$row2["VarYear"]." Origin: ".$row2["ManufLoc"]."<br />";
+				echo "Var Year: ".$row2["VarYear"]." Origin: ".$row2["ManufLoc"];
 				//echo "Est. Value: ".$row2["StdValue"]."<br /><br />";
 				
 				//look up release info

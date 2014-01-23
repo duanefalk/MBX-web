@@ -21,7 +21,8 @@ $_SESSION['Sec_Lvl']=1;
             <body>
                 <h2>Log In</h2>    
                 <?php
-                $errorMessage = '';
+                $Message = $_GET["msg"];
+                echo $Message;
                 if (isset($_POST['txtUserId']) && isset($_POST['txtPassword'])) {
                     $userId = $_POST['txtUserId'];
                     $password = $_POST['txtPassword'];
@@ -35,13 +36,15 @@ $_SESSION['Sec_Lvl']=1;
                     $rows_count= mysql_num_rows($result);
                     
                     if ($rows_count == 0) {
-                        echo "Sorry, wrong user id / password";  
-                        // the user id and password match, 
-                        // set the session
+                        echo "Sorry, wrong user id / password";
+                        redirect_to("Authenticate-test.php?msg=sorry, wrong username or password, pls try again");
+                    // the user id and password match, 
+                    // set the session
                     } else {
                         $_SESSION['db_is_logged_in'] = true;
                         // get sec lvl from db
                         $row=mysql_fetch_array($result);
+                        $_SESSION['Username']=$row["Username"];
                         $_SESSION['Sec_Lvl']=$row["Sec_Lvl"];
                         $_SESSION['Veh_Cond_Scheme']=$row["Veh_Cond_Scheme"];
                         $_SESSION['Pkg_Cond_Scheme']=$row["Pkg_Cond_Scheme"];

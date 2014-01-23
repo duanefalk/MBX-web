@@ -1,3 +1,9 @@
+<?php
+// we must never forget to start the session
+session_start();
+?>
+
+
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php require_once("includes/functions.php"); ?>
@@ -5,7 +11,7 @@
 <?php
     if (isset($_POST['submit'])) {
 
-        $Coll_Username=$_POST['Coll_Username'];
+        $Username=$_SESSION["Username"];
         $User_Coll_ID=$_POST['User_Coll_ID'];
         $UserCollValType=$_POST['UserCollValType'];
         $UserCollValue=$_POST['UserCollValue'];
@@ -37,7 +43,7 @@
             <td id="page">
                 <h2>Add a Collection Value</h2>
                 <form name="Add_User_Coll_Value" action="Add_User_Coll_Value.php" method="post">
-                    <p>Username: <input type="text" name="Coll_Username" value="duanefalk" size="20" id="Coll_Username"></p>
+                    <?php echo "User: ".$_SESSION_["Username"]."<br />"; ?>
                     <p>Collection ID: <input type="text" name="User_Coll_ID" value="FALKCOLL1" size="20" id="User_Coll_ID"></p><br />
                     <p>Value Type: </p>
                         <?php

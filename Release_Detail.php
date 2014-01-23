@@ -1,9 +1,17 @@
+<?php
+// we must never forget to start the session
+session_start();
+?>
+
+
+
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
 <table id="structure">
 	<tr>
 		<td id="navigation">
+			<?php echo "<a href=\"javascript:history.go(-1)\">Return to Previous Page</a>"; ?>
 			<a href="Search_Models_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
 			<a href="Search_Releases_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
 			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
@@ -43,7 +51,7 @@
 					} else {
 						//echo "cant find picture";
 						//echo DEFAULT_IMAGE;
-						echo "<img src=".DEFAULT_IMAGE." width=\"240\">";
+						echo "<img src=".DEFAULT_REL_IMAGE." width=\"240\">";
 					}
 					if (file_exists($picture2_loc)) {
 						//echo "picture exists";
@@ -96,6 +104,9 @@
 						echo "Pkg Type Cd:   ".$row["PkgVarCd"]."<br />";
 					} ELSE {
 						echo "Pkg Type:  UNKNOWN"."<br />";
+					}
+					if ($row["PkgValAdj"] != 0) {
+						echo "Value Adj. for this pkg: ".$row["PkgValAdj"]."<br />";
 					}
 					if ($row["RelComm"]) {
 						echo "Comments:   ".$row["RelComm"]."<br />";

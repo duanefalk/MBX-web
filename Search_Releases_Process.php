@@ -4,7 +4,7 @@
 <table id="structure">
     <tr>
         <td id="navigation">
-                <a href="Search_Releases.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
+                <a href="Search_Releases_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
                 <a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
         </td>
         <td id="page">
@@ -171,7 +171,7 @@
                             }
                         }
 
-                        $QueryString .= " ORDER BY Test_Matchbox_Releases.Series, Test_Matchbox_Releases.RelYr, Test_Matchbox_Releases.CountryOfSale, Test_Matchbox_Releases.SeriesID ASC";
+                        $QueryString .= " ORDER BY Test_Matchbox_Releases.Series, Test_Matchbox_Releases.RelYr, Test_Matchbox_Releases.CountryOfSale, LENGTH(Test_Matchbox_Releases.SeriesID),Test_Matchbox_Releases.SeriesID ASC";
                         
                     
                     //else nothing was selected               
@@ -200,7 +200,7 @@
             //If release data selected show versions
             for ($i=1; $i<=$rows; $i++)
             {
-            echo "<div class=\"car-block\">";
+                echo "<div class=\"car-block\">";
                 $row=mysql_fetch_array($result);
                 $VarPicture= IMAGE_URL . $row["VarID"]."_1.jpg";
 		$VarPicture_loc=IMAGE_PATH. $row["VarID"]."_1.jpg";
@@ -208,18 +208,27 @@
                 $RelPicture_loc= IMAGE_PATH . $row["RelID"]."_1.jpg";
                 //make image clickable and send proper umid to model_detail page
                 $Model_to_detail=$row["UMID"];
+                $Rel_to_detail=$row["RelID"];
                 $url= "Models_Detail_and_Ver_Listing.php?model=".$Model_to_detail;
-                
+                $url2="Release_Detail.php?model=".$Rel_to_detail;
+
+                //break to new line on change of series, yr, country
+                //echo $i." ".$old_country." ".$row["CountryOfSale"];
+                if (($i>1) AND (($row["Series"] != $old_ser) OR ($row["RelYr"] != $old_yr) OR ($row["CountryOfSale"] != $old_country))) {
+                    echo "<br></br><br></br>";
+                    //NOTE: this doesnt display like I want, need Duncan to break the next model to a new line
+                }  
+                            
                 if (file_exists($VarPicture_loc)) {
                         //echo "picture exists";
                         echo "<a href=\"".$url."\">"."<img src=".$VarPicture." width=\"240\"></a>";
                         if (file_exists($RelPicture_loc)) {
                         //echo "picture exists";
-                            echo "<a href=\"".$url."\">"."<img src=".$RelPicture." width=\"240\"></a>";
+                            echo "<a href=\"".$url2."\">"."<img src=".$RelPicture." width=\"240\"></a>";
                         } else {
                                 //echo "cant find picture";
                                 //echo DEFAULT_IMAGE;
-                                echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
+                                echo "<a href=\"".$url2."\">"."<img src=".DEFAULT_REL_IMAGE." width=\"240\"></a>";
                         }
                 } else {
                         //echo "cant find picture";
@@ -274,6 +283,10 @@
                 }               
                 echo "<p>Rel Yr: ".$row["RelYr"]."</p>";
             echo "</div>";
+
+            $old_ser=$row["Series"];
+            $old_yr=$row["RelYr"];
+            $old_country=$row["CountryOfSale"];
             } 
 
             echo "<br /> All done with query </br />";

@@ -9,9 +9,10 @@ session_start();
 <?php
 	if ($_SESSION['Sec_Lvl'] == 3) {
 		//$security= $_SESSION['$Sec_Lvl'];		
-		echo "Admin level";
+		echo "<h3>"."Admin level"."</h3>";
 
 	}
+
 ?>
 
 <table id="structure">

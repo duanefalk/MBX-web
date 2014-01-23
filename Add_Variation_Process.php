@@ -59,7 +59,7 @@
     $InteriorColor=$_POST['InteriorColor'];
     $Base1Material=$_POST['Base1Material'];
     $Base1Color=$_POST['Base1Color'];
-    $Base2Type=$_POST['Base2Type'];
+    $Base2Type=$_POST['Base2Material'];
     if ($Base2Type=="No Base") {
         $Base2Type="";
         $Base2Material="";
@@ -122,8 +122,6 @@
     //echo $Det4Var."<br />";
     //echo $Det5Typ."<br />";
     //echo $Det5Var."<br />";
-    //echo $CodeLvl."<br />";
-    //echo $SecManuf."<br />";
     //echo $StdValue."<br />";
     //echo $VarComment."<br />";
     //echo $VarPhoto1Name."<br />";
@@ -133,10 +131,10 @@
     
     $query="INSERT INTO Test_Matchbox_Variations (UMID, VERID, VARID, Mack_No, BaseName, BaseCompany, ManufLoc, VarYear, FWhCd, RWhCd, WindowColor, InteriorColor,
             Base1Material, Base1Color, Base2Type, Base2Material, Base2Color, Finish, ColorVar, TempaVar, Det1Typ, Det1Var, Det2Typ, Det2Var, Det3Typ, Det3Var, Det4Typ, Det4Var,
-            Det5Typ, Det5Var, CodeLvl, SecManuf, StdValue, VarComment, VarPhoto1Name, VarPhoto1Ref, VarPhoto2Name, VarPhoto2Ref
+            Det5Typ, Det5Var, StdValue, VarComment, VarPhoto1Name, VarPhoto1Ref, VarPhoto2Name, VarPhoto2Ref
             ) VALUES ('$UMID','$VERID','$VARID','$Mack_No','$BaseName', '$BaseCompany', '$ManufLoc','$VarYear','$FWhCd', '$RWhCd','$WindowColor', '$InteriorColor',
             '$Base1Material','$Base1Color','$Base2Type','$Base2Material','$Base2Color','$Finish','$ColorVar', '$TempaVar', '$Det1Typ', '$Det1Var', '$Det2Typ', '$Det2Var', '$Det3Typ', '$Det3Var', '$Det4Typ', '$Det4Var',
-            '$Det5Typ', '$Det5Var', '$CodeLvl', '$SecManuf', '$StdValue', '$VarComment', '$VarPhoto1Name', '$VarPhoto1Ref', '$VarPhoto2Name','$VarPhoto2Ref')";
+            '$Det5Typ', '$Det5Var', '$StdValue', '$VarComment', '$VarPhoto1Name', '$VarPhoto1Ref', '$VarPhoto2Name','$VarPhoto2Ref')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;
     // header("Location: Add_Variation_Form.php");

@@ -199,7 +199,7 @@
 				</select>	
 			<p>Base (1) Material: </p>	
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%BaseMaterial%' ORDER BY 'ValueDispOrder' ASC");								
+					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%BaseType%' ORDER BY 'ValueDispOrder' ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -245,7 +245,7 @@
 				</select>
 			<p>Base (2) Type: </p>	
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%BaseType%' ORDER BY 'ValueDispOrder' ASC");								
+					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%Base2Type%' ORDER BY 'ValueDispOrder' ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -268,7 +268,7 @@
 				</select>
 			<p>Base (2) Material: </p>	
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%BaseMaterial%' ORDER BY 'ValueDispOrder' ASC");								
+					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%BaseType%' ORDER BY 'ValueDispOrder' ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -351,52 +351,7 @@
 			<p>Detail 4 Variation:     	  <input type="text" name="Det4Var" value="" size="40" id="Det4Var"</p>
 			<p>Detail 5 Type:     	  <input type="text" name="Det5Typ" value="" size="20" id="Det5Typ"</p>
 			<p>Detail 5 Variation:     	  <input type="text" name="Det5Var" value="" size="40" id="Det5Var"</p>
-			<p>Code Level:    </p>
-				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%CodeLevel%'");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows Count: ".$rows_count."<br />";
-				?>
-				<select name="CodeLvl">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<p>Secondary Manufacturer:    </p>
-				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%SecondManufacturer%'");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows Count: ".$rows_count."<br />";
-				?>
-				<select name="SecManuf">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
+			
 			<p>Standard Value:     	  <input type="number" name="StdValue" value="0.00" size="10" id="StdValue"</p>	
 			<p>Variation Comment: </p>
 				<textarea name="VarComment" cols="45" rows="4">	

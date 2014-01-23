@@ -1,3 +1,8 @@
+<?php
+// we must never forget to start the session
+session_start();
+?>
+
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 <?php include("includes/header.php"); ?>
@@ -12,10 +17,15 @@
 	$User_Coll_Desc=$_POST['User_Coll_Desc'];
 	$User_Coll_Created_Date=$_POST['User_Coll_Created_Date'];
 
+	echo $Username;
+	echo $User_Coll_ID;
+	echo $User_Coll_Desc;
+	echo $User_Coll_Created_Date;
+
 	//Add the collection record
-	$query="INSERT INTO Test_Matchbox_User_Collections (Username, User_Coll_ID, User_Coll_Desc, User_Coll_Created_Date) 
-	    VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
-   
+	//$query="INSERT INTO Test_Matchbox_User_Collections (Username, User_Coll_ID, User_Coll_Desc, User_Coll_Created_Date) 
+	//    VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
+	$query="INSERT INTO Test_Matchbox_User_Collections VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
     
 				
 	$outcome=mysql_query($query);
@@ -53,7 +63,7 @@
 		<?php
 			//check for existing collection	
 			//hard coding username for now					
-			$Username="duncanfalk";
+			$Username=$_SESSION["Username"];
 			$rows_count=0;
 			$query2=("SELECT * FROM Test_Matchbox_User_Collections WHERE Username='$Username'");
 			$result2 = mysql_query($query2);

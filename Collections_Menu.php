@@ -1,6 +1,16 @@
+<?php
+// we must never forget to start the session
+session_start();
+?>
+
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php require_once("includes/functions.php"); ?>
+<?php 	$Username= $_SESSION['Username'];
+	$SecLvl=$_SESSION['Sec_Lvl'];
+	$check= IMAGE_URL . "IMG_Check.jpg";
+	$X_out= IMAGE_URL . "IMG_X.jpg";
+?>
 
 <table id="structure">
 	<tr>
@@ -15,11 +25,7 @@
 			<p>Steps to set up a collection using this web site and database:</p><br></>
 			<h3>Step 1:     Set up an Account</h3>
 			<?php
-				$check= IMAGE_URL . "IMG_Check.png";
-				$X_out= IMAGE_URL . "IMG_X.png";
-				//fake until security set up
-				$SecLvl=2;
-				$Username= "duanefalk"; //get from session normally;
+
 				if ($SecLvl>1) {
 					echo "<img src=".$check." width=\"40\">";
 					echo "You are all set with an account, proceed to step 2";
@@ -31,11 +37,9 @@
 			
 			<h3>Step 2:     Create a Collection under your account</h3>
 			<?php
-				//fake until set up
-				$Coll_Username=$Username;
 				$result=0;
 				$rows_count=0;
-				$query=("SELECT * FROM Test_Matchbox_User_Collections WHERE Username= '$Coll_Username'");													
+				$query=("SELECT * FROM Test_Matchbox_User_Collections WHERE Username='$Username'");													
 				$result = mysql_query($query);
 				$rows_count= mysql_num_rows($result);
 		                if ($rows_count == 0) {
@@ -51,10 +55,10 @@
 			<h3>Step 3 (optional):     Set up lists of sellers and storage locations</h3>
 			<?php
 				//fake until set up
-				$Coll_Username=$Username;
+				$Username;
 				$result=0;
 				$rows_count=0;
-				$query=("SELECT * FROM Test_Matchbox_User_Coll_Value_Lists WHERE Username= '$Coll_Username'");													
+				$query=("SELECT * FROM Test_Matchbox_User_Coll_Value_Lists WHERE Username= '$Username'");													
 				$result = mysql_query($query);
 				$rows_count= mysql_num_rows($result);
 		                if ($rows_count == 0) {

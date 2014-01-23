@@ -9,6 +9,8 @@
     VerName
     VerYrFirstRel
     VerTyp
+    CodeLvl
+    SecManuf
     BodyColor
     TempaDesign
     TempaText
@@ -31,6 +33,8 @@
     $VerName=$_POST['VerName'];
     $VerYrFirstRel=$_POST['VerYrFirstRel'];
     $VerTyp=$_POST['VerTyp'];
+    $CodeLvl=$_POST['CodeLvl'];
+    $SecManuf=$_POST['SecManuf'];
     $BodyColor=$_POST['BodyColor'];
     $TempaDesign=$_POST['TempaDesign'];
     $TempaText=$_POST['TempaText'];
@@ -53,6 +57,8 @@
     //echo $VerName."<br />";
     //echo $VerYrFirstRel."<br />";
     //echo $VerTyp."<br />";
+    //echo $CodeLvl."<br />";
+    //echo $SecManuf."<br />";
     //echo $BodyColor."<br />";
     //echo $TempaDesign."<br />";
     //echo $TempaText."<br />";
@@ -64,9 +70,9 @@
     //echo $VerComm."<br />";
  
     
-    $query="INSERT INTO Test_Matchbox_Versions (UMID, VERID, FAB_No, Master_Mack_No, VerName, VerYrFirstRel, VerTyp, BodyColor, TempaDesign, TempaText,
+    $query="INSERT INTO Test_Matchbox_Versions (UMID, VERID, FAB_No, Master_Mack_No, VerName, VerYrFirstRel, VerTyp, CodeLvl, SecManuf, BodyColor, TempaDesign, TempaText,
             VerAttachments, VerPhoto1Name, VerPhoto1Ref, VerPhoto2Name, VerPhoto2Ref, VerComm
-            ) VALUES ('$UMID','$VERID','$FAB_No','$Master_Mack_No','$VerName','$VerYrFirstRel','$VerTyp', '$BodyColor','$TempaDesign', '$TempaText',
+            ) VALUES ('$UMID','$VERID','$FAB_No','$Master_Mack_No','$VerName','$VerYrFirstRel','$VerTyp', '$CodeLvl', '$SecManuf', '$BodyColor','$TempaDesign', '$TempaText',
             '$VerAttachments','$VerPhoto1Name','$VerPhoto1Ref','$VerPhoto2Name','$VerPhoto2Ref', '$VerComm')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;

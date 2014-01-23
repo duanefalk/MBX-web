@@ -1,3 +1,10 @@
+<?php
+// we must never forget to start the session
+session_start();
+
+?>
+
+
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>

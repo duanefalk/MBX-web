@@ -5,6 +5,7 @@
 	<tr>
 		<td id="navigation">
 			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
+			<a href="model_search_help.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Tips on Searching for Models</p></a>
 		</td>
 		<td id="page">
 			<head>
@@ -128,7 +129,7 @@
 						<div><input type="text" name="Mack_No" value="" id="Mack_No"></p>
 						</div>
 						
-						<h3>Name (uses model, version and base names- takes a few seconds!)</h3>
+						<h3>Name (searches model, version and base names- takes a few seconds!)</h3>
 						<div><input type="text" name="Name" value="" id="Name" size=40></p>
 						</div>
 						
@@ -228,7 +229,7 @@
 							</div>
 					</div>		
 				<p></p>	
-				<input type="submit"  name="submit" value="Search"/>
+				<input type="submit" name="submit" value="Search"/>
 				<br /><br />
 				<a href="Search_Models_Menu.php">Cancel/Clear</a>
 

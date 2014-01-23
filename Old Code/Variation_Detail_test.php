@@ -1,8 +1,3 @@
-<?php
-// we must never forget to start the session
-session_start();
-
-?>
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
@@ -18,19 +13,22 @@ session_start();
 			<h2>Variation Details</h2>
 			<br />
 			<?php
-				$result=0;
-				$rows=0;
-				$Variation_for_detail=$_GET["model"];
+			$result=0;
+			$rows=0;
+			$Variation_for_detail=$_GET["model"];
 
-				$query= ("SELECT * FROM Test_Matchbox_Variations WHERE VarID LIKE '%$Variation_for_detail%'");
-				$result= mysql_query($query);
+			$query= ("SELECT * FROM Test_Matchbox_Variations WHERE VarID LIKE '%$Variation_for_detail%'");
+			$result= mysql_query($query);
 			
-				//if not found			
-				if(!$result) {
-					echo "No matching results found"; //mysql_error();
-					exit;
+			//if not found			
+			if(!$result) {
+				echo "No matching results found"; //mysql_error();
+				exit;
 				}
-      			
+			?>
+
+			<form name="Add_Var_to_Coll_or_Wishlist" action="Add_Var_Coll_or_Wishlist.php" method="post">	
+				<?php
 					$row=mysql_fetch_array($result);
 
 					$picture1= IMAGE_URL . $row["VarID"]."_1.jpg";
@@ -43,11 +41,11 @@ session_start();
 					$url= "Variation_Detail.php?model=".$Variation_to_detail;				
 					if (file_exists($picture1_loc)) {
 						//echo "picture exists";
-						echo "<img src=".$picture1." width=\"240\">";
+						echo "<a href=\"".$url."\">"."<img src=".$picture1." width=\"240\"></a>";
 					} else {
 						//echo "cant find picture";
 						//echo DEFAULT_IMAGE;
-						echo "<img src=".DEFAULT_IMAGE." width=\"240\">";
+						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
 					}
 	
 					if (file_exists($picture2_loc)) {
@@ -67,15 +65,16 @@ session_start();
 							$query2b= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
 							$result2b= mysql_query($query2b);
 							$row2b =mysql_fetch_array($result2b);
-							echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"];
+							echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"]."</p>";
 						} ELSE {
 							echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"];
 						}
 					} ELSE {
-						echo "<p id=\"photoref\">Photo by: no reference listed</p>";
-					}		
-		
-					echo "Mack#: ". $row["Mack_No"]."<br />";
+						echo "<p id=\"photoref\">Photo by: no reference listed";
+					}
+
+					//Need Duncan to look at why the italic carries over to rest of text
+					echo "<p><br /><br />Mack#: </p>". $row["Mack_No"]."<br />";
 					echo "Base Name: ". $row["BaseName"]."<br />";
 					echo "Base Company: ". $row["BaseCompany"]."<br />";
 					echo "Manufactured in: ". $row["ManufLoc"]."<br />";
@@ -122,18 +121,14 @@ session_start();
 					echo "Comments: ". $row["VarComment"]."<br />";
 					echo "<br></>";
 	
-					$User=$_SESSION['Username'];
+					$User="duanefalk";
 					$query3=("SELECT * FROM Test_Matchbox_User_Collections WHERE Username='$User'");								
 					$result3=0;
 					$rows_count3=0;									
 					$result3 = mysql_query($query3);
 					$row3=mysql_fetch_array($result3);
-					$User_CollID=$row3["User_Coll_ID"];
-			
-				if ($_SESSION['Sec_Lvl'] > 1) {	
-				?>
-				<form name="Add_Var_to_Coll_or_Wishlist" action="Add_Var_Coll_or_Wishlist.php" method="post">
-				<?php
+					$User_CollID=$row3["User_Coll_ID"]; 
+		    
 					//see if exists in wishlist and/or collection
 					echo "Variation Selected: ".$Variation_for_detail."<br /><br />";
 					$query4=("SELECT * FROM Test_Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Variation_for_detail'");								
@@ -184,10 +179,7 @@ session_start();
 					$url= "Ver_Detail_and_Var_Listing.php?model=".$Version_to_list;
 					echo "<a href=\"".$url."\">Cancel</a>";
 				?>
-				</form>
-				<?php
-				}
-			?>
+			</form>
 		</td>
 	</tr>
 </table>
