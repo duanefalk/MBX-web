@@ -72,22 +72,114 @@
 							 WHERE Test_Matchbox_Models.MasterModelName LIKE '%$ID_Value1%' OR Test_Matchbox_Versions.VerName LIKE '%$ID_Value1%' OR Test_Matchbox_Variations.BaseName LIKE '%$ID_Value1%'");	
 				}
 				elseif ($_POST[UMID_1]) {
-					$ID_Value1=$_POST[UMID_1];
-					$ID_String1= strval($ID_Value1);
+					$ID_String1= strval($_POST[UMID_1]);
 					$ID_Len=strlen($ID_String1);
-					$ID_String1=str_pad($ID_String1, 4, "0", STR_PAD_LEFT);
-					$ID_String1=str_pad($ID_String1, 6,"SF", STR_PAD_LEFT);	
-					
+					//check if LR number
+					if (substr($ID_String1,0,2)=="LR") {
+						//make sure no other letters
+						if (!is_numeric(substr($ID_String1,2))) {
+							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
+							exit;
+						//	$ID_String1="Invalid UMID, please retry";
+						//make sure not too long
+						} ELSEIF (strlen(substr($ID_String1,2))>3) {
+							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
+							exit;
+						//pad if too short						
+						} ELSEIF ($ID_Len<5) {
+							$ID_String_LRno= substr($ID_String1,2);
+							$ID_String_LRno=str_pad($ID_String_LRno, 3, "0", STR_PAD_LEFT);
+							$ID_String1=str_pad($ID_String_LRno, 5, "LR", STR_PAD_LEFT);
+						}
+						//otherwise just right
+					//if SF
+					} ELSEIF (substr($ID_String1,0,2)=="SF") {
+						//make sure no other letters
+						if (!is_numeric(substr($ID_String1,2))) {
+							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
+							exit;
+						//make sure not too long
+						} ELSEIF (strlen(substr($ID_String1,2))>4) {
+							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
+							exit;;
+						//pad if too short otherwise good						
+						} ELSEIF ($ID_Len<6) {						
+							$ID_String_SFno= substr($ID_String1,2);
+							$ID_String1=str_pad($ID_String_SFno, 4, "0", STR_PAD_LEFT);
+							$ID_String1=str_pad($ID_String1, 6,"SF", STR_PAD_LEFT);	
+						}
+					//should be just up to 4 numbers
+					} ELSE {
+						//make sure no other letters
+						if (!is_numeric($ID_String1)) {
+							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
+							exit;
+						//make sure not too long
+						} ELSEIF ($ID_Len>4) {
+							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
+							exit;
+						//pad if too short otherwise jsut right						
+						} ELSE {						
+							$ID_String1=str_pad($ID_String1, 4, "0", STR_PAD_LEFT);
+							$ID_String1=str_pad($ID_String1, 6,"SF", STR_PAD_LEFT);
+						}
+					}	
 					if (!$_POST[UMID_2]) {
-					//if searching by 1 umid, skip the search results and go right to model detail page
-					$string_to_redirect="Models_Detail_and_Ver_Listing.php?model=".$ID_String1;
-					redirect_to($string_to_redirect);
+						//if searching by 1 umid, skip the search results and go right to model detail page
+						$string_to_redirect="Models_Detail_and_Ver_Listing.php?model=".$ID_String1;	
+						redirect_to($string_to_redirect);
 					} else {	
-						$ID_Value2=$_POST[UMID_2];
-						$ID_String2= strval($ID_Value2);
+						$ID_String2= strval($_POST[UMID_2]);
 						$ID_Len=strlen($ID_String2);
-						$ID_String2=str_pad($ID_String2, 4, "0", STR_PAD_LEFT);
-						$ID_String2=str_pad($ID_String2, 6,"SF", STR_PAD_LEFT);
+
+						if (substr($ID_String2,0,2)=="LR") {
+							//make sure no other letters
+							if (!is_numeric(substr($ID_String2,2))) {
+								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
+								exit;
+							//make sure not too long
+							} ELSEIF (strlen(substr($ID_String2,2))>3) {
+								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
+								exit;
+							//pad if too short						
+							} ELSEIF ($ID_Len<5) {
+								$ID_String_LRno= substr($ID_String2,2);
+								$ID_String_LRno=str_pad($ID_String_LRno, 3, "0", STR_PAD_LEFT);
+								$ID_String2=str_pad($ID_String_LRno, 5, "LR", STR_PAD_LEFT);
+							}
+							//otherwise just right
+						//if SF
+						} ELSEIF (substr($ID_String2,0,2)=="SF") {
+							//make sure no other letters
+							if (!is_numeric(substr($ID_String2,2))) {
+								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
+								exit;
+							//make sure not too long
+							} ELSEIF (strlen(substr($ID_String2,2))>4) {
+								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
+								exit;
+							//pad if too short otherwise good						
+							} ELSEIF ($ID_Len<6) {						
+								$ID_String_SFno= substr($ID_String2,2);
+								$ID_String2=str_pad($ID_String_SFno, 4, "0", STR_PAD_LEFT);
+								$ID_String2=str_pad($ID_String2, 6,"SF", STR_PAD_LEFT);	
+							}
+						//should be just up to 4 numbers
+						} ELSE {
+							//make sure no other letters
+							if (!is_numeric($ID_String2)) {
+								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
+								exit;
+							//make sure not too long
+							} ELSEIF ($ID_Len>4) {
+								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
+								exit;
+							//pad if too short otherwise jsut right						
+							} ELSE {						
+								$ID_String2=str_pad($ID_String2, 4, "0", STR_PAD_LEFT);
+								$ID_String2=str_pad($ID_String2, 6,"SF", STR_PAD_LEFT);
+							}
+						}	
 					
 						echo "Searching for UMIDs: ". $ID_String1 ." to ".$ID_String2 . "<br />";
 						//$query= ("SELECT * FROM Test_Matchbox_Models WHERE UMID >='$ID_String1' AND UMID <='$ID_String2' ORDER BY UMID ASC");

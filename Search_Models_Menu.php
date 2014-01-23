@@ -137,7 +137,7 @@
 						<div><input type="text" name="Name" value="" id="Name" size=40></p>
 						</div>
 						
-						<h3>UMID# (i.e. '858' or 'SF0858')</h3>
+						<h3>UMID# (LR and 3 numbers, e.g. 'LR025', or SF and 4 numbers, e.g. 'SF0858'. If LR or SF not specified will assume SF.</h3>
 						<div><input type="text" name="UMID_1" value="" id="UMID_1"><input type="text" name="UMID_2" value="" id="UMID_2"></p>
 						</div>
 					</div>

@@ -27,12 +27,33 @@ $Code2_Pref=$_SESSION['Code2_Pref'];
 			$model_for_detail=$_GET["model"];
 			$query2= ("SELECT * FROM Test_Matchbox_Models WHERE UMID LIKE '%$model_for_detail%'");
 			$result2 = mysql_query($query2);
-			if(!$result2) {
-				echo "Error in database- No matching results found"; //mysql_error();
+			if (mysql_num_rows($result2)==0) {			
+				echo "<h3>Error - No matching results found</h3>"; //mysql_error();
 				exit;
 			}
 			$row2=mysql_fetch_array($result2);
 			echo "<h3>".$model_for_detail."  ".$row2['MasterModelName']."</h3>";
+			$picture= IMAGE_URL . $row2["UMID"].".jpg";
+			$picture_loc=IMAGE_PATH. $row2["UMID"].".jpg";
+			if (file_exists($picture_loc)) {
+				//echo "picture exists";
+				echo "<img class='own' src=".$picture." width=\"240\">";
+			} else {
+				//echo "cant find picture";
+				//echo DEFAULT_IMAGE;
+				echo "<img class='own-poor' src=".DEFAULT_IMAGE." width=\"240\">";
+			}	
+			echo "<br />";
+			$PhotoRefCd= $row2["ModelPhotoRef"];
+			if ($PhotoRefCd) {
+				$query3= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+				$result3= mysql_query($query3);
+				$row3 =mysql_fetch_array($result3);
+				echo "<p id=\"photoref\">Photo by: ". $row3["RefName"]."</p>";
+			} ELSE {
+				echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
+			}
+
 			echo "First rel in ".$row2['YrFirstProduced']."<br></>";
 			if ($row2["VehicleType2"]) {	
 				echo "Vehicles type(s): ".$row2["VehicleType"].",  ".$row2["VehicleType2"]."<br></>";
