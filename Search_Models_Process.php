@@ -52,9 +52,18 @@
 							 INNER JOIN Test_Matchbox_Versions ON Test_Matchbox_Models.UMID=Test_Matchbox_Versions.UMID
 							 WHERE Test_Matchbox_Versions.Master_Mack_No='$ID_Value1'");
 				}
+				elseif ($_POST[QuickName]) {
+					$ID_Value1=$_POST[QuickName];
+					echo "Searching for Version Name: ".$ID_Value1 ."<br />";
+					//$query= ("SELECT * FROM Test_Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `Test_Matchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Test_Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
+					$query= ("SELECT DISTINCT Test_Matchbox_Models.UMID, Test_Matchbox_Models.MasterModelName, Test_Matchbox_Models.YrFirstProduced, Test_Matchbox_Versions.FAB_No, Test_Matchbox_Models.ModelPhotoRef, Test_Matchbox_Versions.Master_Mack_No
+							 FROM Test_Matchbox_Models
+							 JOIN Test_Matchbox_Versions ON Test_Matchbox_Models.UMID=Test_Matchbox_Versions.UMID
+							 WHERE Test_Matchbox_Versions.VerName LIKE '%$ID_Value1%'");	
+				}
 				elseif ($_POST[Name]) {
 					$ID_Value1=$_POST[Name];
-					echo "Searching for Version Name: ".$ID_Value1 ."<br />";
+					echo "Searching for Any Name: ".$ID_Value1 ."<br />";
 					//$query= ("SELECT * FROM Test_Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `Test_Matchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Test_Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
 					$query= ("SELECT DISTINCT Test_Matchbox_Models.UMID, Test_Matchbox_Models.MasterModelName, Test_Matchbox_Models.YrFirstProduced, Test_Matchbox_Versions.FAB_No, Test_Matchbox_Models.ModelPhotoRef, Test_Matchbox_Versions.Master_Mack_No
 							 FROM Test_Matchbox_Models

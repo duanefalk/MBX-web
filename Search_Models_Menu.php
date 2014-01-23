@@ -128,8 +128,12 @@
 						<h3>Mack# (in format like '33-M')</h3>
 						<div><input type="text" name="Mack_No" value="" id="Mack_No"></p>
 						</div>
+
+						<h3>Quick Name Search</h3>
+						<div><input type="text" name="QuickName" value="" id="QuickName" size=40></p>
+						</div>
 						
-						<h3>Name (searches model, version and base names- takes a few seconds!)</h3>
+						<h3>Complete Name Search (searches model, version and base names- takes a few seconds!)</h3>
 						<div><input type="text" name="Name" value="" id="Name" size=40></p>
 						</div>
 						
