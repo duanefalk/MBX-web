@@ -1,0 +1,26 @@
+/* -- Colors -- */
+/* -- Main -- */
+/* line 4, sass/interior.scss */
+#main {
+  background: #f3eece;
+}
+
+/* -- Login Screen --------------- */
+/* line 8, sass/interior.scss */
+#login {
+  margin: 2em auto;
+}
+/* line 14, sass/interior.scss */
+#login form input[type=submit] {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 1em 2em;
+  color: white;
+  background: green;
+  border: 0 none;
+}
+/* line 23, sass/interior.scss */
+#login form input[type=submit]:hover {
+  background: blue;
+}

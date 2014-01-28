@@ -1,13 +1,13 @@
 /* -- Colors -- */
 /* -- Header --------------- */
-/* line 6, sass/style.scss */
+/* line 6, sass/style copy.scss */
 #header {
   margin: 0px;
   padding: 0px;
   text-align: left;
 }
 
-/* line 12, sass/style.scss */
+/* line 12, sass/style copy.scss */
 #header h1,
 #header img {
   display: inline-block;
@@ -18,26 +18,26 @@
 /* -- 
 
 /* -- Navigation ------------- */
-/* line 20, sass/style.scss */
+/* line 20, sass/style copy.scss */
 #utilityNav {
   padding: 0 1em;
   text-align: right;
   background: #333333;
 }
-/* line 26, sass/style.scss */
+/* line 26, sass/style copy.scss */
 #utilityNav a {
   display: inline-block;
   padding: 16px 16px;
   color: white;
   text-decoration: none;
 }
-/* line 33, sass/style.scss */
+/* line 33, sass/style copy.scss */
 #utilityNav a:hover, #utilityNav a:visited, #utilityNav a:active {
   text-decoration: underline;
 }
 
 /* -- Models Detail --------------- */
-/* line 43, sass/style.scss */
+/* line 43, sass/style copy.scss */
 .car-block {
   width: 240px;
   display: inline-block;
@@ -45,38 +45,38 @@
   margin: 1em 1.2em;
 }
 
-/* line 49, sass/style.scss */
+/* line 49, sass/style copy.scss */
 .car-block img {
   max-width: 100%;
   margin-bottom: .5em;
 }
 
-/* line 54, sass/style.scss */
+/* line 54, sass/style copy.scss */
 .car-block img.own {
   border-bottom: 10px solid #2E8B57;
 }
 
 /*green*/
-/* line 55, sass/style.scss */
+/* line 55, sass/style copy.scss */
 .car-block img.own-not {
   border-bottom: 10px solid #de3939;
 }
 
 /*red*/
-/* line 56, sass/style.scss */
+/* line 56, sass/style copy.scss */
 .car-block img.own-poor {
   border-bottom: 10px solid #ffde42;
 }
 
 /*yellow*/
-/* line 58, sass/style.scss */
+/* line 58, sass/style copy.scss */
 .car-block p {
   max-width: 95%;
   margin: 0 0 .4em;
   line-height: 120%;
 }
 
-/* line 64, sass/style.scss */
+/* line 64, sass/style copy.scss */
 #photoref {
   font-size: x-small;
   font-style: italic;

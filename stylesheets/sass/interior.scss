@@ -1,0 +1,27 @@
+@import "settings";
+
+/* -- Main -- */
+#main {background:$cream;}
+
+
+/* -- Login Screen --------------- */
+#login {
+	
+	margin:2em auto;
+	
+	form {
+		
+		input[type=submit] {
+			cursor:pointer;
+			display:block;
+			width:100%;
+			padding:1em 2em;
+			color:$white;
+			background:green;
+			border:0 none;
+			
+			&:hover {background:blue;}
+		}
+	}
+	
+}

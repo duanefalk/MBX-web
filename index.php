@@ -5,6 +5,7 @@ session_start();
 
 <?php require_once("includes/functions.php"); ?>
 <?php require_once("includes/db_connection.php"); ?>
+<?php include("includes/navMain.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php
 	if ($_SESSION['Sec_Lvl'] == 3) {
@@ -39,6 +40,7 @@ session_start();
 	
 	<a href="logout.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Logout</p</a>
 	</td>
+	
 	<td id="page">
 		<h2>The Matchbox Professor Welcomes you to the MBX University!!</h2>
 

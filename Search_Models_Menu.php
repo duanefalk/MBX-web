@@ -8,6 +8,8 @@
 			<a href="model_search_help.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Tips on Searching for Models</p></a>
 		</td>
 		<td id="page">
+		
+		
 			<head>
 				<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
 				<script src="js/jquery-1.9.1.js"></script>
