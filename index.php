@@ -7,14 +7,6 @@ session_start();
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/navMain.php"); ?>
 <?php include("includes/header.php"); ?>
-<?php
-	if ($_SESSION['Sec_Lvl'] == 3) {
-		//$security= $_SESSION['$Sec_Lvl'];		
-		echo "<h3>"."Admin level"."</h3>";
-
-	}
-
-?>
 
 <table id="structure">
 <tr>

@@ -1,6 +1,6 @@
 <div id="utilityNav">
-	<a href="Search_Models_Menu.php">Search Models</a>
-	<a href="Search_Releases_Menu.php">Search Releases</a>
+	<!--a href="Search_Models_Menu.php">Search Models</a>
+	<a href="Search_Releases_Menu.php">Search Releases</a-->
 	
 	<?php
 	
@@ -15,10 +15,12 @@
 			
 			//code 3 = Dad
 			if ($_SESSION['Sec_Lvl'] == 3) {
-				echo "<a href=\"Add_Menu.php\">Add a New Record</a>";						
+				echo "<em>Hello, Duane</em>";
+				echo "<a href='#'>Edit Account (needs a page)</a>";
+				echo "<a href='Add_Menu.php'>Add a New Record</a>";						
 			}
 			
-			echo "<a href=\"Collections_Menu.php\">Create / Manage Your Collections</a>";
+			echo "<a href='Collections_Menu.php'>Create / Manage Your Collections</a>";
 			echo "<a href='User_Upload.php'>Upload Photo or Comments</a>";
 			echo "<a href='logout.php'>Logout</a>";					
 		}				

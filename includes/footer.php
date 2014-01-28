@@ -6,6 +6,12 @@
          }
     ?>
     
+    <footer id="footer">
+    
+    	<p>Copyright &copy; <?php echo date("Y"); ?> Matchbox University / Duane Falk, All Rights Reserved.</p>
+    
+    </footer>
+    
     
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>

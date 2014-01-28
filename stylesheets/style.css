@@ -35,9 +35,13 @@
 #utilityNav a:hover, #utilityNav a:visited, #utilityNav a:active {
   text-decoration: underline;
 }
+/* line 36, sass/style.scss */
+#utilityNav em {
+  color: white;
+}
 
 /* -- Models Detail --------------- */
-/* line 43, sass/style.scss */
+/* line 44, sass/style.scss */
 .car-block {
   width: 240px;
   display: inline-block;
@@ -45,38 +49,38 @@
   margin: 1em 1.2em;
 }
 
-/* line 49, sass/style.scss */
+/* line 50, sass/style.scss */
 .car-block img {
   max-width: 100%;
   margin-bottom: .5em;
 }
 
-/* line 54, sass/style.scss */
+/* line 55, sass/style.scss */
 .car-block img.own {
   border-bottom: 10px solid #2E8B57;
 }
 
 /*green*/
-/* line 55, sass/style.scss */
+/* line 56, sass/style.scss */
 .car-block img.own-not {
   border-bottom: 10px solid #de3939;
 }
 
 /*red*/
-/* line 56, sass/style.scss */
+/* line 57, sass/style.scss */
 .car-block img.own-poor {
   border-bottom: 10px solid #ffde42;
 }
 
 /*yellow*/
-/* line 58, sass/style.scss */
+/* line 59, sass/style.scss */
 .car-block p {
   max-width: 95%;
   margin: 0 0 .4em;
   line-height: 120%;
 }
 
-/* line 64, sass/style.scss */
+/* line 65, sass/style.scss */
 #photoref {
   font-size: x-small;
   font-style: italic;

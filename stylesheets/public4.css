@@ -22,8 +22,7 @@ a { color: #8D0D19;}
 #main { margin: 0px; padding:0px; width: 100%; background: #00CED1; }
 #structure {  width: 100%;  padding:0 0 20px;}
 
-#footer { height: 2em; margin: 0px; padding: 1em; text-align: center; 
-	background: #00CED1;  color: #FFFFFF; }
+#footer { padding:1em; text-align:center; color:#FFFFFF; background:#00CED1; }
 
 /* Navigation */
 #navigation { width: 150px; padding: 1em 2em; color: #FFFFFF; background: #1E90FF; }
