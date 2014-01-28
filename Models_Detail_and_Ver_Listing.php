@@ -68,7 +68,20 @@ $Code2_Pref=$_SESSION['Code2_Pref'];
 			echo "Vehicle Make: ".$row2['MakeofModel']."   Country of Make: ".$row2['CountryofMake']."<br></>";
 			if ($row2["ModelComment"]) {	
 				echo "Comments: ".$row2["ModelComment"]."<br></>";
-			} 
+			}
+
+			//check if any microvar listings
+			$query4=("SELECT * FROM Test_Matchbox_Model_Microvariations WHERE Test_Matchbox_Model_Microvariations.UMID='$model_for_detail'");
+			$result4 = mysql_query($query4);
+			//$rowcount=mysql_num_rows($result4);
+			//if ($rowcount!=0) {
+			if ($result4) {
+				echo "<a href=\"Display_Microvariations.php?model=$model_for_detail\">See Microvariations</a>";
+				echo "<br></>";
+			}
+
+			$row2=mysql_fetch_array($result2);
+
 			//check user code2 display preference
 			//if logged as guest, or chose to mix then do code2 with code1
 			if (($Sec_Lvl < "2") OR ($Code2_Pref=="0")) {
