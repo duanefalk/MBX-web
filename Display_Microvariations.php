@@ -23,7 +23,7 @@ $Code2_Pref=$_SESSION['Code2_Pref'];
 			    $Model_for_microvar=$_GET["model"];
 			    echo "<h2>Microvariations for Model ".$Model_for_microvar."</h2>";
 			    echo "<br></>";
-			    $query=("SELECT * FROM Test_Matchbox_Model_Microvariations");
+			    $query=("SELECT * FROM Test_Matchbox_Model_Microvariations WHERE UMID='$Model_for_microvar'");
 			    $result = mysql_query($query);
 			    if (!$result) {			
 				echo "Database Error";

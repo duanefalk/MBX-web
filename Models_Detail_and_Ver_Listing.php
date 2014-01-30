@@ -73,9 +73,9 @@ $Code2_Pref=$_SESSION['Code2_Pref'];
 			//check if any microvar listings
 			$query4=("SELECT * FROM Test_Matchbox_Model_Microvariations WHERE Test_Matchbox_Model_Microvariations.UMID='$model_for_detail'");
 			$result4 = mysql_query($query4);
-			//$rowcount=mysql_num_rows($result4);
-			//if ($rowcount!=0) {
-			if ($result4) {
+			$rowcount4=mysql_num_rows($result4);
+			if ($rowcount4!=0) {
+			//if ($result4) {
 				echo "<a href=\"Display_Microvariations.php?model=$model_for_detail\">See Microvariations</a>";
 				echo "<br></>";
 			}
