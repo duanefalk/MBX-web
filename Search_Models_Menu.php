@@ -5,7 +5,10 @@
 	<tr>
 		<td id="navigation">
 			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
+			<a href="similar_models_compare.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Differences Among Similar Models</p></a>
 			<a href="model_search_help.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Tips on Searching for Models</p></a>
+
+			
 		</td>
 		<td id="page">
 		
