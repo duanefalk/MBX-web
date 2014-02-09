@@ -11,7 +11,7 @@ session_start();
 <?php
     if (isset($_POST['submit'])) {
 
-        $Username=$_SESSION["Username"];
+        $Username=$_SESSION['Username'];
         $User_Coll_ID=$_POST['User_Coll_ID'];
         $UserCollValType=$_POST['UserCollValType'];
         $UserCollValue=$_POST['UserCollValue'];
@@ -20,7 +20,7 @@ session_start();
 
        
         $query="INSERT INTO Test_Matchbox_User_Coll_Value_Lists (Username, User_Coll_ID, Coll_List_Type, Coll_List_Value, Coll_List_Val_DisplOrd, Coll_List_Val_InactivFlg) 
-            VALUES ('$Coll_Username','$User_Coll_ID','$UserCollValType', '  $UserCollValue', '$UserCollValueDisplOrd', '$Coll_List_Val_InactivFlg')";
+            VALUES ('$Username','$User_Coll_ID','$UserCollValType', '  $UserCollValue', '$UserCollValueDisplOrd', '$Coll_List_Val_InactivFlg')";
    
         $outcome=mysql_query($query);
         if (!$outcome) {
@@ -43,8 +43,8 @@ session_start();
             <td id="page">
                 <h2>Add a Collection Value</h2>
                 <form name="Add_User_Coll_Value" action="Add_User_Coll_Value.php" method="post">
-                    <?php echo "User: ".$_SESSION_["Username"]."<br />"; ?>
-                    <p>Collection ID: <input type="text" name="User_Coll_ID" value="FALKCOLL1" size="20" id="User_Coll_ID"></p><br />
+                    <?php echo "User: ".$_SESSION['Username']."<br />"; ?>
+                    <p>Collection ID: <input type="text" name="User_Coll_ID" value="" size="20" id="User_Coll_ID"></p><br />
                     <p>Value Type: </p>
                         <?php
                                 $query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%UserCollValType%'");								

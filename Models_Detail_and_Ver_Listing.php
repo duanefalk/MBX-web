@@ -3,7 +3,7 @@
 session_start();
 $Sec_Lvl=$_SESSION['Sec_Lvl'];
 $Code2_Pref=$_SESSION['Code2_Pref'];
-
+$Username=$_SESSION['Username'];
 ?>
 
 <?php require_once("includes/db_connection.php"); ?>
@@ -13,7 +13,7 @@ $Code2_Pref=$_SESSION['Code2_Pref'];
 
 	<tr>
 		<td id="navigation">
-			<?php echo "<a href=\"javascript:history.go(-1)\">Return to Previous Page</a>"; ?>
+			<?php echo "<a href=\"javascript:history.go(-1)\">Return to Matching Models</a>"; ?>
 			<a href="Search_Models_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
 			<a href="Search_Releases_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
 			<a href="Index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
@@ -100,21 +100,48 @@ $Code2_Pref=$_SESSION['Code2_Pref'];
 				for ($i=1; $i<=$rows; $i++)
 					{
 					echo "<div class=\"car-block\">";
+						//make image clickable and send proper umid to model_detail pa
 						$row=mysql_fetch_array($result);
 						$picture= IMAGE_URL . $row["VerID"]."_1.jpg";
 						$picture_loc=IMAGE_PATH. $row["VerID"]."_1.jpg";
-		
-						//make image clickable and send proper umid to model_detail page
 						$Version_to_detail=$row["VerID"];
 						$url= "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
-						if (file_exists($picture_loc)) {
-							//echo "picture exists";
-							echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
+
+						//determine what to show fro version pics
+						//check if have account
+						if ($Sec_Lvl >= "2") {	
+							//if have account, have collection?
+							$query_coll=("SELECT * FROM Matchbox_Collection WHERE Username='$Username'");
+							$result_coll = mysql_query($query_coll);
+							if ($result_coll) {
+								//if so, check if have in collection
+								$query_own=("SELECT * FROM Matchbox_Collection WHERE Username='$Username' AND VerID='$Version_to_detail'");
+								$result_own = mysql_query($query_own);
+								$rows_own= mysql_num_rows($result_own);
+								//$rows_own= mysql_num_rows($result_own);
+								//check if pic exists and apply colors
+								if (file_exists($picture_loc)) {									
+									if ($rows_own !="0") {
+										echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
+									} ELSE {
+										echo "<a href=\"".$url."\">"."<img class='own.not' src=".$picture." width=\"240\"></a>";
+									}	
+								} ELSE {
+									if ($rows_own !="0") {
+										echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+									} ELSE {
+										echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+									}
+								}	
+							}			
 						} else {
-							//echo "cant find picture";
-							//echo DEFAULT_IMAGE;
-							echo "<a href=\"".$url."\">"."<img class='own-poor' src=".DEFAULT_IMAGE." width=\"240\"></a>";
-						}	
+							if (file_exists($picture_loc)) {									
+								echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
+							} ELSE {
+								echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
+							}
+						}			
+				
 						echo "<br />";
 						$PhotoRefCd= $row["VerPhoto1Ref"];
 						if ($PhotoRefCd) {
@@ -135,7 +162,7 @@ $Code2_Pref=$_SESSION['Code2_Pref'];
 					echo "</div>";
 					}	
 			} else {
-				//if logged in, start by showing code1
+				//start by showing code1
 				$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='1'");
 				$result=0;
 				$rows=0;
@@ -147,41 +174,74 @@ $Code2_Pref=$_SESSION['Code2_Pref'];
 					echo "No matching results found"; //mysql_error();
 					exit;
 					}					
-				for ($i=1; $i<=$rows; $i++)
-					{
+				for ($i=1; $i<=$rows; $i++) {
 					echo "<div class=\"car-block\">";
-						$row=mysql_fetch_array($result);
-						$picture= IMAGE_URL . $row["VerID"]."_1.jpg";
-						$picture_loc=IMAGE_PATH. $row["VerID"]."_1.jpg";
+					$row=mysql_fetch_array($result);
+					$picture= IMAGE_URL . $row["VerID"]."_1.jpg";
+					$picture_loc=IMAGE_PATH. $row["VerID"]."_1.jpg";
 		
-						//make image clickable and send proper umid to model_detail page
-						$Version_to_detail=$row["VerID"];
-						$url= "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
-						if (file_exists($picture_loc)) {
-							//echo "picture exists";
-							echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
-						} else {
-							//echo "cant find picture";
-							//echo DEFAULT_IMAGE;
-							echo "<a href=\"".$url."\">"."<img class='own-poor' src=".DEFAULT_IMAGE." width=\"240\"></a>";
-						}	
-						echo "<br />";
-						$PhotoRefCd= $row["VerPhoto1Ref"];
-						if ($PhotoRefCd) {
-							$query2= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
-							$result2= mysql_query($query2);
-							$row2 =mysql_fetch_array($result2);
-							echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
+					//make image clickable and send proper umid to model_detail page
+					$Version_to_detail=$row["VerID"];
+					$url= "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
+					
+					if ($Sec_Lvl >= "2") {	
+						//if have account, have collection?
+						$query_coll=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$Username'");
+						$result_coll = mysql_query($query_coll);
+						if ($result_coll) {
+								
+							//if so, check if have in collection
+							$query_own=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$Username' AND VerID='$Version_to_detail'");
+							$result_own = mysql_query($query_own);
+							$rows_own= mysql_num_rows($result_own);
+							//$rows_own= mysql_num_rows($result_own);
+							//check if pic exists and apply colors
+							if (file_exists($picture_loc)) {									
+								if ($rows_own !="0") {
+									
+									echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
+								} ELSE {
+									echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." width=\"240\"></a>";
+								}	
+							} ELSE {
+								if ($rows_own !="0") {
+									echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+								} ELSE {
+									echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+								}
+							}	
 						} ELSE {
-							echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
+								
+							if (file_exists($picture_loc)) {									
+								echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
+							} ELSE {
+								echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
+							}	
+						}	
+					} else {
+						if (file_exists($picture_loc)) {									
+							echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
+						} ELSE {
+							echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
 						}
-						echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
-						echo "<p>Ver Name: ".$row["VerName"]."</p>";
-						echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
-					echo "</div>";
+					}	
+					echo "<br />";
+					$PhotoRefCd= $row["VerPhoto1Ref"];
+					if ($PhotoRefCd) {
+						$query2= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+						$result2= mysql_query($query2);
+						$row2 =mysql_fetch_array($result2);
+						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
+					} ELSE {
+						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 					}
+					echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
+					echo "<p>Ver Name: ".$row["VerName"]."</p>";
+					echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
+					echo "</div>";
+				}
 				//then check if to show code 2 also. if so sep srch for code 2
-				if ($Code2_Pref == "1") {
+				if (($Sec_Lvl >= "2") AND ($Code2_Pref == "1")) {
 					$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='2'");
 					$result=0;
 					$rows=0;
@@ -197,21 +257,38 @@ $Code2_Pref=$_SESSION['Code2_Pref'];
 					for ($i=1; $i<=$rows; $i++)
 						{
 						echo "<div class=\"car-block\">";
-							$row=mysql_fetch_array($result);
-							$picture= IMAGE_URL . $row["VerID"]."_1.jpg";
-							$picture_loc=IMAGE_PATH. $row["VerID"]."_1.jpg";
+						$row=mysql_fetch_array($result);
+						$picture= IMAGE_URL . $row["VerID"]."_1.jpg";
+						$picture_loc=IMAGE_PATH. $row["VerID"]."_1.jpg";
 			
-							//make image clickable and send proper umid to model_detail page
-							$Version_to_detail=$row["VerID"];
-							$url= "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
-							if (file_exists($picture_loc)) {
-								//echo "picture exists";
-								echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
-							} else {
-								//echo "cant find picture";
-								//echo DEFAULT_IMAGE;
-								echo "<a href=\"".$url."\">"."<img class='own-poor' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+						//make image clickable and send proper umid to model_detail page
+						$Version_to_detail=$row["VerID"];
+						$url= "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
+							
+						//have collection?
+						$query_coll=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$Username'");
+						$result_coll = mysql_query($query_coll);
+						if ($result_coll) {
+							//if so, check if have in collection
+							$query_own=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$Username' AND VerID='$Version_to_detail'");
+							$result_own = mysql_query($query_own);
+							$rows_own=mysql_num_rows($result_own);
+							//$rows_own= mysql_num_rows($result_own);
+							//check if pic exists and apply colors
+							if (file_exists($picture_loc)) {									
+								if ($rows_own !="0") {
+									echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
+								} ELSE {
+									echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." width=\"240\"></a>";
+								}	
+							} ELSE {
+								if ($rows_own !="0") {
+									echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+								} ELSE {
+									echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+								}
 							}	
+						}				
 							echo "<br />";
 							$PhotoRefCd= $row["VerPhoto1Ref"];
 							if ($PhotoRefCd) {

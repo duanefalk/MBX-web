@@ -77,8 +77,11 @@ session_start();
 			<h3>Step 4:     Add models to your collection</h3>
 			<?php
 				//fake until set up
-				$Collection_not_null=0;
-				if ($Collection_not_null) {
+				$query_mdls= ("SELECT * FROM Test_Matchbox_Collection WHERE Username= '$Username'");
+				$result_mdls= mysql_query($query_mdls);
+				if ($result_mdls) {
+				//$Collection_not_null=0;
+				//if ($Collection_not_null) {
 					echo "<img src=".$check." width=\"40\">";
 					echo "You've already started adding models. Enjoy growing your collection!";
 				} ELSE {

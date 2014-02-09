@@ -9,7 +9,7 @@ session_start();
 <table id="structure">
 	<tr>
 		<td id="navigation">
-			<?php echo "<a href=\"javascript:history.go(-1)\">Return to Matching Versions Page</a>"; ?>
+			<?php echo "<a href=\"javascript:history.go(-1)\">Return to Variations List Page</a>"; ?>
 			<a href="Search_Models_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
 			<a href="Search_Releases_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
 			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>

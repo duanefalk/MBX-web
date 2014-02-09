@@ -1,3 +1,8 @@
+<?php
+// we must never forget to start the session
+session_start();
+?>
+
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
@@ -86,10 +91,17 @@
 		<br />
                 <?php
                     $Var_to_Add=$_GET["model"];
-                    $User="duanefalk";
-                    $User_CollID="FALKCOLL1";
+                    $Username=$_SESSION['Username'];
+		    $query=("SELECT * FROM Test_Matchbox_User_Collections WHERE Username='$Username'");
+		    $result=mysql_query($query);
+		    if (!$result) {
+			echo "You have no collection. Please go to Manage Collections and follow the steps described there to create a collection.";
+			exit;
+		    } 
+		    $row=mysql_fetch_array($result);
+                    $User_CollID=$row['User_Coll_ID'];
                     echo "Variation Selected: ".$Var_to_Add."<br /><br />";
-                    
+                   
                     $picture1= IMAGE_URL . $Var_to_Add."_1.jpg";
 		    $picture1_loc=IMAGE_PATH. $Var_to_Add."_1.jpg";
                     if (file_exists($picture1_loc)) {
@@ -102,14 +114,14 @@
               
 		<form name="Add_Var_to_Coll" action="Add_Var_to_Coll.php" method="post">	
                     <?php
-                        //$Coll_Username="duanefalk";
+                        
                         $Coll_VarID=$Var_to_Add;
                         $Coll_VerID=substr($Coll_VarID,0,10);
                         $Coll_UMID=substr($Coll_VerID,0,6);
                         echo "<br /><br />";
                         
                         //determine what copy to default in field
-                        $query=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_to_Add'");								
+                        $query=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$Username' AND User_Coll_ID='$User_CollID' AND VarID='$Var_to_Add'");								
 			$result=0;
 			$result=mysql_query($query);
                         if ($result) {
@@ -119,8 +131,8 @@
                         }          
                     ?>
 
-                    <p>Username: <input type="text" name="Coll_Username" value="duanefalk" size="20" id="Coll_Username"></p>
-                    <p>Collection ID:  <input type="text" name="User_CollID" value="FALKCOLL1" size="12" id="User_CollID"></p>
+                    <p>Username: <input type="text" name="Coll_Username" value="<?php echo $Username;?>" size="20" id="Coll_Username"></p>
+                    <p>Collection ID:  <input type="text" name="User_CollID" value="<?php echo $User_CollID;?>" size="12" id="User_CollID"></p>
                     <p>UMID:          <input type="text" name="Coll_UMID" value="<?php echo $Coll_UMID;?>" size="6" id="Coll_UMID"></p>
                     <p>Version ID:    <input type="text" name="Coll_VerID" value="<?php echo $Coll_VerID;?>" size="10" id="Coll_VerID"></p>
                     <p>Variation ID:  <input type="text" name="Coll_VarID" value="<?php echo $Coll_VarID;?>" size="13" id="Coll_VarID"></p>
@@ -131,9 +143,16 @@
                         <?php
                             //vehicle condition
                             //Get this from session vars and add to user prefs hard code for now
-                            $Cond_scheme="Alpha_cond";
-    
-                            $query=("SELECT * FROM Test_Matchbox_Value_lists WHERE ValueList LIKE '%$Cond_scheme%' ORDER BY ValueDispOrder ASC");								
+                            $query_cond=("SELECT * FROM Test_MBXU_User_Accounts WHERE Username=$Username");
+			    $result_cond = mysql_query($query_cond);
+			    
+			    $Cond_scheme=$result_cond['Veh_Cond_Scheme'];
+			    if ($Cond_scheme == "0") {
+				$Veh_Cond_Scheme="Alpha_Mdl_Cond";
+			    } ELSE {
+				$Veh_Cond_Scheme="Num_cond";			
+			    }
+                            $query=("SELECT * FROM Test_Matchbox_Value_lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
@@ -154,9 +173,17 @@
                     <p>Package Condition: 
                         <?php
                             //Get this from session vars and add to user prefs hard code for now
-                            $Cond_scheme="Alpha_cond";
+                            $query_cond=("SELECT * FROM Test_MBXU_User_Accounts WHERE Username=$Username");
+			    $result_cond = mysql_query($query_cond);
+			    
+			    $Cond_scheme=$result_cond['Pkg_Cond_Scheme'];
+			    if ($Cond_scheme == "0") {
+				$Pkg_Cond_Scheme="Alpha_Pkg_Cond";
+			    } ELSE {
+				$Veh_Cond_Scheme="Num_cond";			
+			    }
     
-                            $query=("SELECT * FROM Test_Matchbox_Value_lists WHERE ValueList LIKE '%$Cond_scheme%' ORDER BY ValueDispOrder ASC");								
+                            $query=("SELECT * FROM Test_Matchbox_Value_lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
@@ -178,8 +205,8 @@
                     <p>Item Value:      <input type="text" name="Coll_Value" value="" size="10" id="Coll_Value"></p>
                     <p>Storage Location 1:     
 			<?php
-			    $query=("SELECT * FROM Test_Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
-                                    AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
+			    $query=("SELECT * FROM Test_Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
+                                    AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
@@ -199,8 +226,8 @@
                             </select>
                     <p>Storage Location 2:    
 			<?php
-			    $query=("SELECT * FROM Test_Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
-                                    AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
+			    $query=("SELECT * FROM Test_Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
+                                    AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
@@ -221,8 +248,8 @@
                     <p>Purchase Date:      <input type="text" name="Coll_Purch_Dt" value="" size="8" id="Coll_Purch_Dt"></p>
                     <p>Seller:      
 			<?php
-			    $query=("SELECT * FROM Test_Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Seller%'
-                                    AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
+			    $query=("SELECT * FROM Test_Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Seller%'
+                                    AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);

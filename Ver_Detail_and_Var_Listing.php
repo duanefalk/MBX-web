@@ -5,7 +5,12 @@
 
 	<tr>
 		<td id="navigation">
-			<?php echo "<a href=\"javascript:history.go(-1)\">Return to Previous Page</a>"; ?>
+			<?php
+			$model_for_detail=$_GET["model"];
+			$UMID=substr($model_for_detail,0,6);
+			
+			echo "<a href=\"Models_Detail_and_Ver_Listing.php?model=".$UMID."\"><p onmouseover=\"this.style.color='orange'\" onmouseout=\"this.style.color='white'\">Return to Versions Listing Page</a>";
+			?>
 			<a href="Search_Models_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
 			<a href="Search_Releases_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
 			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
