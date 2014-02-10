@@ -21,62 +21,28 @@
 				<script>
 				$(function() {
 			
-				$( "#accordion" ).accordion();
-			
-	
-			
-	
-			
-	
-			
-	
-			
-	
-			
-	
-			
-	
-			
-	
-				// Hover states on the static widgets
-				$( "#dialog-link, #icons li" ).hover(
-				function() {
-					$( this ).addClass( "ui-state-hover" );
-				},
-				function() {
-					$( this ).removeClass( "ui-state-hover" );
-				}
-				);
+					// Hover states on the static widgets
+					$( "#dialog-link, #icons li" ).hover(
+						function() {
+							$( this ).addClass( "ui-state-hover" );
+						},
+						function() {
+							$( this ).removeClass( "ui-state-hover" );
+						}
+					);
 				});
 				
 				$(function() {
 			
-				$( "#accordion2" ).accordion();
-			
-	
-			
-	
-			
-	
-			
-	
-			
-	
-			
-	
-			
-	
-			
-	
-				// Hover states on the static widgets
-				$( "#dialog-link, #icons li" ).hover(
-				function() {
-					$( this ).addClass( "ui-state-hover" );
-				},
-				function() {
-					$( this ).removeClass( "ui-state-hover" );
-				}
-				);
+					// Hover states on the static widgets
+					$( "#dialog-link, #icons li" ).hover(
+						function() {
+							$( this ).addClass( "ui-state-hover" );
+						},
+						function() {
+							$( this ).removeClass( "ui-state-hover" );
+						}
+					);
 				});
 				</script>
 			
@@ -149,86 +115,104 @@
 					
 				<h2 class="demoHeaders">Or Search by General Model Information<br /> <h3>(you may choose more than one of these criteria):</h3>	
 					<div id="accordion2">
-						<h3>Vehicle Type</h3>		
-							<div><input type=checkbox name="VehicleType_Check" id="VehicleType_Check">Vehicle Type:<br>
-							<?php
-								$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");								
-								$result=0;
-								$rows_count=0;									
-								$result = mysql_query($query);
-								if (!result) {
-									echo "Database query failed";
-								}
-								else {
-									//echo "made connection ".$result."<br />";		
-								}
-								$rows_count= mysql_num_rows($result);
-								// echo "Rows Count: ".$rows_count."<br />";
-							?>
-							<select name="TypeofVehicle" id="TypeofVehicle" >
-							<?php
-								for ($i=1; $i<=$rows_count; $i++) {
-									$row=mysql_fetch_array($result);
-									echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-								}	
-							?>
-							</select>
-							<br />
-							</div>
 						
-						<h3>Make of Vehicle (i.e. Ford)</h3>
-							<div><input type=checkbox name="VehicleMake_Check" id="VehicleMake_Check" >Make of Vehicle:<br>
-							<?php
-								$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehMake%'");								
-								$result=0;
-								$rows_count=0;									
-								$result = mysql_query($query);
-								if (!result) {
-									echo "Database query failed";
-								}
-								else {
-									//echo "made connection ".$result."<br />";		
-								}
-								$rows_count= mysql_num_rows($result);
-								// echo "Rows Count: ".$rows_count."<br />";
-							?>
-							<select name="VehicleMake" id="VehicleMake" >
-							<?php
-								for ($i=1; $i<=$rows_count; $i++) {
-									$row=mysql_fetch_array($result);
-									echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-								}	
-							?>
-							</select>
-							<br />	
-							</div>
+						
+							<dl class="accordion" data-accordion>
+								<dd>
+									<a href="#panel1"><h3>Vehicle Type</h3></a>
+									<div id="panel1" class="content">
+										<input type=checkbox name="VehicleType_Check" id="VehicleType_Check" />
+										<label>Vehicle Type:</label>
+										<?php
+											$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");								
+											$result=0;
+											$rows_count=0;									
+											$result = mysql_query($query);
+											if (!result) {
+												echo "Database query failed";
+											}
+											else {
+												//echo "made connection ".$result."<br />";		
+											}
+											$rows_count= mysql_num_rows($result);
+											// echo "Rows Count: ".$rows_count."<br />";
+										?>
+										<select name="TypeofVehicle" id="TypeofVehicle" >
+										<?php
+											for ($i=1; $i<=$rows_count; $i++) {
+												$row=mysql_fetch_array($result);
+												echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+											}	
+										?>
+										</select>
+									</div>
+								</dd>
+							</dl>
 							
-						<h3>Country of Make (i.e. Ford is made in the USA)</h3>
-							<div><input type=checkbox name="MakeCountry_Check" id="MakeCountry_Check" >Country of Make:<br>
-							<?php
-								$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%MakeCountry%'");								
-								$result=0;
-								$rows_count=0;									
-								$result = mysql_query($query);
-								if (!result) {
-									echo "Database query failed";
-								}
-								else {
-									//echo "made connection ".$result."<br />";		
-								}
-								$rows_count= mysql_num_rows($result);
-								// echo "Rows Count: ".$rows_count."<br />";
-							?>
-							<select name="MakeCountry" id="MakeCountry">
-							<?php
-								for ($i=1; $i<=$rows_count; $i++) {
-									$row=mysql_fetch_array($result);
-									echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-								}	
-							?>
-							</select>	
-							</div>
-						
+							<dl class="accordion" data-accordion>
+								<dd>
+									<a href="#panel2"><h3>Make of Vehicle (i.e. Ford)</h3></a>
+									<div id="panel2" class="content">
+										<input type=checkbox name="VehicleMake_Check" id="VehicleMake_Check" />
+										<label>Make of Vehicle:</label>
+										<?php
+											$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehMake%'");								
+											$result=0;
+											$rows_count=0;									
+											$result = mysql_query($query);
+											if (!result) {
+												echo "Database query failed";
+											}
+											else {
+												//echo "made connection ".$result."<br />";		
+											}
+											$rows_count= mysql_num_rows($result);
+											// echo "Rows Count: ".$rows_count."<br />";
+										?>
+										<select name="VehicleMake" id="VehicleMake" >
+										<?php
+											for ($i=1; $i<=$rows_count; $i++) {
+												$row=mysql_fetch_array($result);
+												echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+											}	
+										?>
+										</select>
+									</div>
+								</dd>
+							</dl>
+							
+							<dl class="accordion" data-accordion>
+								<dd>
+									<a href="#panel3"><h3>Country of Make (i.e. Ford is made in the USA)</h3></a>
+									<div id="panel3" class="content">
+										<input type=checkbox name="MakeCountry_Check" id="MakeCountry_Check" />
+										<label>Country of Make:</label>
+										<?php
+											$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%MakeCountry%'");								
+											$result=0;
+											$rows_count=0;									
+											$result = mysql_query($query);
+											if (!result) {
+												echo "Database query failed";
+											}
+											else {
+												//echo "made connection ".$result."<br />";		
+											}
+											$rows_count= mysql_num_rows($result);
+											// echo "Rows Count: ".$rows_count."<br />";
+										?>
+										<select name="MakeCountry" id="MakeCountry">
+										<?php
+											for ($i=1; $i<=$rows_count; $i++) {
+												$row=mysql_fetch_array($result);
+												echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+											}	
+										?>
+										</select>
+									</div>
+								</dd>
+							</dl>
+													
 					</div>
 				<h2 class="demoHeaders">Or Search by Text on the Model<br /> <h3></h3>	
 					<div id="accordion2">
