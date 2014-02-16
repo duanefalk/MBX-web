@@ -22,7 +22,7 @@
 <p>13	Clicking on the Cancel/Clear button will clear out whatever has been entered/selected on the page, giving you a clean slate. </p>
 <p>14	Once you&#39ve run a search and are on the models page, you can return to the search page in 2 ways: </p>
 <p>	a.	Click on the &#39Return to Model Search&#39 menu option; this gives you a blank search page for your next search </p>
-<p>	b.	Click on the browser back button. This will leave whatever you last search info was on the search page, which may give you unexpected results if you don&#39t notice it. If you do use the back arrow, best to hit Cancel/Clear before entering your next search. </p>
+<p>	b.	Click on the browser back button. This will leave whatever you last search info was on the search page, which may give you unexpected results if you don&#39t notice it. If you do use the back arrow, best to hit Cancel/Clear before entering your next search, unless you want to return to the same search criteria (i.e. if you searched on vehicle type and want to seaarch again on vehicle type, hitting back arrow will leave that box checked and you can choose your next type from the dropdown). </p>
 <p>15	If you are not getting the results you expect, please send me a comment and I will check the database- I could easily have made a typo! </p>
  </p>
 
