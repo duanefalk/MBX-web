@@ -275,6 +275,7 @@ $Username=$_SESSION['Username'];
 							$rows_own=mysql_num_rows($result_own);
 							//$rows_own= mysql_num_rows($result_own);
 							//check if pic exists and apply colors
+							
 							if (file_exists($picture_loc)) {									
 								if ($rows_own !="0") {
 									echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
@@ -308,7 +309,78 @@ $Username=$_SESSION['Username'];
 				}		
 			}
 				//if chose no code2 just drop down without doing code 2 search
-
+			// display releases for this umid
+			$rel_result=0;
+			$rel_rows=0;
+			//Search for 1-75
+			$rel_query=("SELECT * FROM Test_Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND Series='1-75' ORDER BY RelYr, CountryofSale, SeriesID, RelID");
+			$rel_result = mysql_query($rel_query);
+			$rel_rows= mysql_num_rows($rel_result);
+			if ($rel_rows!=0) {
+				echo "<br></><h2>1-75 series</h2>";
+				for ($i=1; $i<=$rel_rows; $i++) {
+					echo "<div class=\"car-block\">";
+					$rel_row=mysql_fetch_array($rel_result);
+					$curr_yr=$rel_row["RelYr"];
+	
+					if ($i==1) {
+						$last_yr=$curr_yr;
+						echo "<h3>".$rel_row["RelYr"]."</h3>";
+					}
+					//echo $curr_yr."...".$last_yr;
+					if ($curr_yr!=$last_yr) {
+						echo "<h3>".$rel_row["RelYr"]."</h3>";
+					}
+					//print info
+					$picture= IMAGE_URL . $rel_row["RelID"]."_1.jpg";
+					$picture_loc=IMAGE_PATH. $rel_row["RelID"]."_1.jpg";
+					$url= "Release_Detail.php?model=".$rel_row["RelID"];
+					if (file_exists($picture_loc)) {
+						echo "<a href=\"".$url."\">"."<img src=".$picture." height=\"400\"></a>";
+					} ELSE {	
+						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
+					}
+					if ($rel_row["RelPkgPhotoRef"]) {
+						$query2= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+						$result2= mysql_query($query2);
+						$row2 =mysql_fetch_array($result2);
+						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
+					} ELSE {
+						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
+					}
+					echo "<p>Country:  ".$rel_row["CountryOfSale"]."</p>";
+					echo "<p>Rel ID: ". $rel_row["RelID"]."</p>";
+					echo "<p>Series ID: ".$rel_row["SeriesID"]."</p>";
+					echo "<p>Name on Pkg: ".$rel_row["MdlNameOnPkg"]."</p>";	
+					$last_yr=$curr_yr;
+					echo "</div>";
+				}
+			}
+			//Search for Superfast
+			$rel_query=("SELECT * FROM Test_Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND Series='Superfast' ORDER BY RelYr, CountryofSale, SeriesID, RelID");
+			$rel_result = mysql_query($rel_query);
+			$rel_rows= mysql_num_rows($rel_result);
+			if ($rel_rows!=0) {
+			
+				echo "<br></><h2>SUPERFAST</h2>";
+			}
+			//Search for Multipacks
+			$rel_query=("SELECT * FROM Test_Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND Series='Multi-Packs' ORDER BY RelYr, CountryofSale, SeriesID, RelID");
+			$rel_result = mysql_query($rel_query);
+			$rel_rows= mysql_num_rows($rel_result);
+			if ($rel_rows!=0) {
+			
+				echo "<br></><h2>MULTI-PACKS</h2>";
+			}
+			//Search for Other
+			//Search for Multipacks
+			$rel_query=("SELECT * FROM Test_Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND (Series!='Multi-Packs' AND Series!='Superfast' AND Series!='1-75') ORDER BY RelYr, CountryofSale, SeriesID, RelID");
+			$rel_result = mysql_query($rel_query);
+			$rel_rows= mysql_num_rows($rel_result);
+			if ($rel_rows!=0) {
+			
+				echo "<br></><h2>OTHER RELEASES</h2>";
+			}
 			?>			
 		</td>
 	</tr>
