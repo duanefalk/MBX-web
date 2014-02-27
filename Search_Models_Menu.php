@@ -92,25 +92,57 @@
 					
 				<h2 class="demoHeaders">Choose the ID You Want to Search by<br /> <h3>Search will use only last data entered; if you get unexpected results, click on 'cancel' and retry:</h3>
 					<div id="accordion">
-						<h3>MAN (FAB) # (i.e. '800')</h3>
-						<div><input type="text" name="MAN_No_1" value="" id="MAN_No_1"><input type="text" name="MAN_No_2" value="" id="MAN_No_2"></p>
-						</div>
+						<dl class="accordion" data-accordion>
+							<dd>
+								<a href="#panela"><h3>MAN (FAB) # (i.e. '800')</h3></a>
+								<div id="panela" class="content">
+									<input type="text" name="MAN_No_1" id="MAN_No_1" />
+									<input type="text" name="MAN_No_2" id="MAN_No_2" />
+									<label>MAN (FAB) #:</label>									
+								</div>
+							</dd>
+						</dl>
 						
-						<h3>Mack# (in format like '33-M')</h3>
-						<div><input type="text" name="Mack_No" value="" id="Mack_No"></p>
-						</div>
+						<dl class="accordion" data-accordion>
+							<dd>
+								<a href="#panelb"><h3>Mack# (in format like '33-M')</h3></a>
+								<div id="panelb" class="content">
+									<input type="text" name="Mack_No" id="Mack_No" />
+									<label>Mack#:</label>									
+								</div>
+							</dd>
+						</dl>
 
-						<h3>Quick Name Search</h3>
-						<div><input type="text" name="QuickName" value="" id="QuickName" size=40></p>
-						</div>
-						
-						<h3>Complete Name Search (searches model, version and base names- takes a few seconds!)</h3>
-						<div><input type="text" name="Name" value="" id="Name" size=40></p>
-						</div>
-						
-						<h3>UMID# (LR and 3 numbers, e.g. 'LR025', or SF and 4 numbers, e.g. 'SF0858'. If LR or SF not specified will assume SF.</h3>
-						<div><input type="text" name="UMID_1" value="" id="UMID_1"><input type="text" name="UMID_2" value="" id="UMID_2"></p>
-						</div>
+						<dl class="accordion" data-accordion>
+							<dd>
+								<a href="#panelc"><h3>Quick Name Search</h3></a>
+								<div id="panelc" class="content">
+									<input type="text" name="QuickName" id="QuickName" />
+									<label>Mack#:</label>									
+								</div>
+							</dd>
+						</dl>		
+
+						<dl class="accordion" data-accordion>
+							<dd>
+								<a href="#paneld"><h3>Complete Name Search (searches model, version and base names- takes a few seconds!)</h3></a>
+								<div id="paneld" class="content">
+									<input type="text" name="Name" id="Name" />
+									<label>Name Search</label>									
+								</div>
+							</dd>
+						</dl>	
+
+						<dl class="accordion" data-accordion>
+							<dd>
+								<a href="#panele"><h3>UMID# (LR and 3 numbers, e.g. 'LR025', or SF and 4 numbers, e.g. 'SF0858'. If LR or SF not specified will assume SF.</h3></a>
+								<div id="panele" class="content">
+									<input type="text" name="UMID_1" id="UMID_1" />
+									<input type="text" name="UMID_2" id="MUMID_2" />
+									<label>UMID#:</label>							
+								</div>
+							</dd>
+						</dl>	
 					</div>
 					
 				<h2 class="demoHeaders">Or Search by General Model Information<br /> <h3>(you may choose more than one of these criteria):</h3>	

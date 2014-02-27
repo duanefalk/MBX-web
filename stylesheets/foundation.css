@@ -2445,7 +2445,7 @@ ul.pagination {
       font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       font-size: 1rem; }
       .accordion dd > a:hover {
-        background: #e3e3e3; }
+        background: #33e3e3; }
   .accordion .content {
     display: none;
     padding: 0.9375em; }
