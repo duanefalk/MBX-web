@@ -122,122 +122,158 @@
 			<h2 class="demoHeaders">Search by Package Info</h2>
 			<p>Choose one or more package identifiers to search with.</p>
 				<div id="accordion">
-					
-					<h3>Package Name, i.e. Construction Playset</h3>
-						<div><input type=checkbox name="PkgName_Check"  id= "PkgName_Check" >Package Name<br>
-						<input type="text" name="PkgName" id="PkgName" value="" size="40" id="PkgName"</p><br />		
-						</div>
-			
-					<h3>Model Name on Package</h3>
-						<div><input type=checkbox name="MdlNameOnPkg_Check"  id="MdlNameOnPkg_Check"   >Model Name on the Package:<br>
-						<input type="text" name="MdlNameOnPkg" id="MdlNameOnPkg" value="" size="40" id="MdlNameOnPkg"</p>	
-						</div>
-						
-					<h3>Package ID#</h3>
-						<div><input type=checkbox name="PkgID_Check" id="PkgID_Check"  >Package ID#: <br>
-						<input type="text" name="PkgID" id="PkgID" value="" size="40" </p>	
-						</div>		
+					<dl class="accordion" data-accordion>
+						<dd>	
+							<a href="#panela"><h3>Package Name, i.e. Construction Playset</h3></a>
+							<div id="panela" class="content">
+								<input type=checkbox name="PkgName_Check"  id= "PkgName_Check" />
+								<label>Package Name:</label>
+								<input type="text" name="PkgName" id="PkgName" value="" size="40" id="PkgName" />		
+							</div>
+						</dd>
+					</dl>
+					<dl class="accordion" data-accordion>
+						<dd>
+							<a href="#panelb"><h3>Model Name on Package</h3></a>
+							<div id="panelb" class="content">
+								<input type=checkbox name="MdlNameOnPkg_Check"  id="MdlNameOnPkg_Check" />
+								<label>Model Name on the Package:</label>
+								<input type="text" name="MdlNameOnPkg" id="MdlNameOnPkg" value="" size="40" id="MdlNameOnPkg" />	
+							</div>
+					<dl class="accordion" data-accordion>
+						<dd>
+							<a href="#panelc"><h3>Package ID#</h3></a>
+							<div id="panelc" class="content">	
+								<input type=checkbox name="PkgID_Check" id="PkgID_Check"  />
+								<label>Package ID#:</label>
+								<input type="text" name="PkgID" id="PkgID" value="" size="40" />	
+							</div>		
 				</div>
 			<br />	
+					
 				
 			<h2 class="demoHeaders">Or Browse Release Data</h2>
-			<p>Choose one or more criteria to browse with. Please be sure your selection is sufficently specific to</p>
-			<p>provide meaningful results (i.e. specifying only 'released in USA' will produce a list too large to be useful.</p>
-			<p>Note: These criteria will be ignored if you've selected a search above.</p>
+			<p>Choose one or more criteria to browse with. Please be sure your selection is sufficently specific to provide meaningful results (i.e. specifying only 'released in USA' will produce a list too large to be useful. Note: These criteria will be ignored if you've selected a search above.</p>
 				<div id="accordion2">
+					<dl class="accordion" data-accordion>
+						<dd>	
+							<a href="#panel1"><h3>Theme</h3></a>
+							<div id="panel1" class="content">
+								<input type=checkbox name="ReleaseTheme_Check" id="ReleaseTheme_Check" />
+								<label>Release Theme:</label>
+								<?php
+									$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%ReleaseTheme%'");								
+									$result=0;
+									$rows_count=0;									
+									$result = mysql_query($query);
+									if (!result) {
+										echo "Database query failed";
+									}
+									else {
+										//echo "made connection ".$result."<br />";		
+									}
+									$rows_count= mysql_num_rows($result);
+									// echo "Rows Count: ".$rows_count."<br />";
+									?>
+									<select name="ReleaseTheme" id="ReleaseTheme">
+									<?php
+										for ($i=1; $i<=$rows_count; $i++) {
+											$row=mysql_fetch_array($result);
+											echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+										}	
+									?>
+								</select>		
+							</div>
+						</dd>
+					</dl>
 					
-					<h3>Theme</h3>
-						<div><input type=checkbox name="ReleaseTheme_Check" id="ReleaseTheme_Check"  >Release Theme:<br>
-						<?php
-						$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%ReleaseTheme%'");								
-						$result=0;
-						$rows_count=0;									
-						$result = mysql_query($query);
-						if (!result) {
-							echo "Database query failed";
-						}
-						else {
-							//echo "made connection ".$result."<br />";		
-						}
-						$rows_count= mysql_num_rows($result);
-						// echo "Rows Count: ".$rows_count."<br />";
-						?>
-						<select name="ReleaseTheme" id="ReleaseTheme">
-						<?php
-							for ($i=1; $i<=$rows_count; $i++) {
-								$row=mysql_fetch_array($result);
-								echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-							}	
-						?>
-						</select>
-						<br />		
-						</div>
-					
-					<h3>Series</h3>
-						<div><input type=checkbox name="RelSeries_Check" id="RelSeries_Check"  >Series:<br>
-						<?php
-						$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%RelSeries%'");								
-						$result=0;
-						$rows_count=0;									
-						$result = mysql_query($query);
-						if (!result) {
-							echo "Database query failed";
-						}
-						else {
-							//echo "made connection ".$result."<br />";		
-						}
-						$rows_count= mysql_num_rows($result);
-						// echo "Rows Count: ".$rows_count."<br />";
-						?>
-						<select name="RelSeries" id="RelSeries">
-						<?php
-							for ($i=1; $i<=$rows_count; $i++) {
-								$row=mysql_fetch_array($result);
-								echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-							}	
-						?>
-						</select>
-						<br />
-						</div>
-			
-					<h3>No. in Series</h3>
-						<div><input type=checkbox name="SeriesID_Check" id="SeriesID_Check" ># in Series:<br>
-						<input type="text" name="SeriesID" id="SeriesID" value="" size="20" id="SeriesID"</p><br />
-						</div>
-			
-					<h3>Release Year</h3>
-						<div><input type=checkbox name="RelYr_Check" id="RelYr_Check"  >Release Year:<br>
-						<input type="text" name="RelYr" id= "RelYr" value="" size="4" id="RelYr"</p><br />	
-						</div>
-			
-					<h3>Country Where Released</h3>
-						<div><input type=checkbox name="CountryOfSale_Check" id="CountryOfSale_Check"  >Country Where Released:<br>
-						<?php
-						$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%CountryOfSale%'");								
-						$result=0;
-						$rows_count=0;									
-						$result = mysql_query($query);
-						if (!result) {
-							echo "Database query failed";
-						}
-						else {
-							//echo "made connection ".$result."<br />";		
-						}
-						$rows_count= mysql_num_rows($result);
-						// echo "Rows Count: ".$rows_count."<br />";
-						?>
-						<select name="CountryOfSale" id="CountryOfSale">
-						<?php
-							for ($i=1; $i<=$rows_count; $i++) {
-								$row=mysql_fetch_array($result);
-								echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-							}	
-						?>
-						</select>
-						<br />	
-						</div>
-			
+					<dl class="accordion" data-accordion>
+						<dd>	
+							<a href="#panel2"><h3>Series</h3></a>
+							<div id="panel2" class="content">
+								<input type=checkbox name="RelSeries_Check" id="RelSeries_Check"  />
+								<label>Series:</label>
+								<?php
+									$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%RelSeries%'");									
+									$result=0;
+									$rows_count=0;									
+									$result = mysql_query($query);
+									if (!result) {
+										echo "Database query failed";
+									}
+									else {
+										//echo "made connection ".$result."<br />";		
+									}
+									$rows_count= mysql_num_rows($result);
+									// echo "Rows Count: ".$rows_count."<br />";
+									?>
+									<select name="RelSeries" id="RelSeries">
+									<?php
+										for ($i=1; $i<=$rows_count; $i++) {
+											$row=mysql_fetch_array($result);
+											echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+										}	
+									?>
+								</select>		
+							</div>
+						</dd>
+					</dl>
+	
+					<dl class="accordion" data-accordion>
+						<dd>	
+							<a href="#panel3"><h3>No. in Series</h3></a>
+							<div id="panel3" class="content">
+								<input type=checkbox name="SeriesID_Check" id="SeriesID_Check" />
+								<label># in Series:</label>
+								<input type="text" name="SeriesID" id="SeriesID" value="" size="20" id="SeriesID" />										
+							</div>
+						</dd>
+					</dl>			
+
+					<dl class="accordion" data-accordion>
+						<dd>	
+							<a href="#panel4"><h3>Release Year</h3></a>
+							<div id="panel4" class="content">
+								<input type=checkbox name="RelYr_Check" id="RelYr_Check" />
+								<label># in Series:</label>
+								<input type="text" name="RelYr" id= "RelYr" value="" size="4" id="RelYr" />										
+							</div>
+						</dd>
+					</dl>			
+
+					<dl class="accordion" data-accordion>
+						<dd>	
+							<a href="#panel5"><h3>Country of Release</h3></a>
+							<div id="panel5" class="content">
+								<input type=checkbox name="CountryOfSale_Check" id="CountryOfSale_Check"  />
+								<label>Country Where Released:</label>
+								<?php
+									$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%CountryOfSale%'");									
+									$result=0;
+									$rows_count=0;									
+									$result = mysql_query($query);
+									if (!result) {
+										echo "Database query failed";
+									}
+									else {
+										//echo "made connection ".$result."<br />";		
+									}
+									$rows_count= mysql_num_rows($result);
+									// echo "Rows Count: ".$rows_count."<br />";
+									?>
+									<select name="CountryOfSale" id="CountryOfSale">
+									<?php
+										for ($i=1; $i<=$rows_count; $i++) {
+											$row=mysql_fetch_array($result);
+											echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+										}	
+									?>
+								</select>		
+							</div>
+						</dd>
+					</dl>						
 				</div>
+				
 					<br /><br />
 					<script>
 						var stringBuilt=false;					
