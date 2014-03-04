@@ -86,6 +86,7 @@ $Username=$_SESSION['Username'];
 			//if logged as guest, or chose to mix then do code2 with code1
 			if (($Sec_Lvl < "2") OR ($Code2_Pref=="0")) {
 				//get version data to display
+				
 				$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%'");
 				$result=0;
 				$rows=0;
@@ -120,6 +121,7 @@ $Username=$_SESSION['Username'];
 								$rows_own= mysql_num_rows($result_own);
 								//$rows_own= mysql_num_rows($result_own);
 								//check if pic exists and apply colors
+								echo $picture_loc;
 								if (file_exists($picture_loc)) {									
 									if ($rows_own !="0") {
 										echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
@@ -133,7 +135,14 @@ $Username=$_SESSION['Username'];
 										echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
 									}
 								}	
-							}			
+							} ELSE {
+								if (file_exists($picture_loc)) {									
+									echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
+										
+								} ELSE {
+									echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
+								}	
+							}	
 						} else {
 							if (file_exists($picture_loc)) {									
 								echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";

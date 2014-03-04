@@ -96,9 +96,10 @@
 							<dd>
 								<a href="#panela"><h3>MAN (FAB) # (i.e. '800')</h3></a>
 								<div id="panela" class="content">
+									<label>MAN (FAB) #:</label>
 									<input type="text" name="MAN_No_1" id="MAN_No_1" />
 									<input type="text" name="MAN_No_2" id="MAN_No_2" />
-									<label>MAN (FAB) #:</label>									
+																		
 								</div>
 							</dd>
 						</dl>
@@ -107,8 +108,9 @@
 							<dd>
 								<a href="#panelb"><h3>Mack# (in format like '33-M')</h3></a>
 								<div id="panelb" class="content">
+									<label>Mack#:</label>
 									<input type="text" name="Mack_No" id="Mack_No" />
-									<label>Mack#:</label>									
+																		
 								</div>
 							</dd>
 						</dl>
@@ -117,8 +119,9 @@
 							<dd>
 								<a href="#panelc"><h3>Quick Name Search</h3></a>
 								<div id="panelc" class="content">
+									<label>Name:</label>	
 									<input type="text" name="QuickName" id="QuickName" />
-									<label>Mack#:</label>									
+																	
 								</div>
 							</dd>
 						</dl>		
@@ -127,8 +130,9 @@
 							<dd>
 								<a href="#paneld"><h3>Complete Name Search (searches model, version and base names- takes a few seconds!)</h3></a>
 								<div id="paneld" class="content">
+									<label>Name:</label>
 									<input type="text" name="Name" id="Name" />
-									<label>Name Search</label>									
+																		
 								</div>
 							</dd>
 						</dl>	
@@ -137,9 +141,10 @@
 							<dd>
 								<a href="#panele"><h3>UMID# (LR and 3 numbers, e.g. 'LR025', or SF and 4 numbers, e.g. 'SF0858'. If LR or SF not specified will assume SF.</h3></a>
 								<div id="panele" class="content">
+									<label>UMID#:</label>
 									<input type="text" name="UMID_1" id="UMID_1" />
 									<input type="text" name="UMID_2" id="MUMID_2" />
-									<label>UMID#:</label>							
+																
 								</div>
 							</dd>
 						</dl>	
@@ -153,8 +158,9 @@
 								<dd>
 									<a href="#panel1"><h3>Vehicle Type</h3></a>
 									<div id="panel1" class="content">
-										<input type=checkbox name="VehicleType_Check" id="VehicleType_Check" />
 										<label>Vehicle Type:</label>
+										<input type=checkbox name="VehicleType_Check" id="VehicleType_Check" />
+										
 										<?php
 											$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");								
 											$result=0;
@@ -185,8 +191,9 @@
 								<dd>
 									<a href="#panel2"><h3>Make of Vehicle (i.e. Ford)</h3></a>
 									<div id="panel2" class="content">
-										<input type=checkbox name="VehicleMake_Check" id="VehicleMake_Check" />
 										<label>Make of Vehicle:</label>
+										<input type=checkbox name="VehicleMake_Check" id="VehicleMake_Check" />
+										
 										<?php
 											$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehMake%'");								
 											$result=0;
@@ -217,8 +224,9 @@
 								<dd>
 									<a href="#panel3"><h3>Country of Make (i.e. Ford is made in the USA)</h3></a>
 									<div id="panel3" class="content">
-										<input type=checkbox name="MakeCountry_Check" id="MakeCountry_Check" />
 										<label>Country of Make:</label>
+										<input type=checkbox name="MakeCountry_Check" id="MakeCountry_Check" />
+										
 										<?php
 											$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%MakeCountry%'");								
 											$result=0;

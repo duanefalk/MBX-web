@@ -38,6 +38,11 @@
 			if (file_exists($picture1_loc)) {
 				//echo "picture exists";
 				echo "<img src=".$picture1." width=\"240\">";
+				$picture2=IMAGE_URL . $row["VerID"]."_2.jpg";
+				$picture2_loc=IMAGE_PATH. $row["VerID"]."_2.jpg";
+				if (file_exists($picture2_loc)) {
+					echo "<img src=".$picture2." width=\"240\">";
+				}
 			} else {
 				//echo "cant find picture";
 				//echo DEFAULT_IMAGE;
