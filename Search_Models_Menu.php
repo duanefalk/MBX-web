@@ -262,7 +262,7 @@
 							</div>
 					</div>		
 				<p></p>	
-				<input type="submit" name="submit" value="Search"/>
+				<input type="submit" name="submit" value="Search"  />
 				<br /><br />
 				<a href="Search_Models_Menu.php">Cancel/Clear</a>
 
