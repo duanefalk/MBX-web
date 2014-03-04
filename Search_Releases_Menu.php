@@ -13,64 +13,33 @@
 			<script src="js/jquery-ui-1.10.3.custom.js"></script>
 
 			<script>
-			$(function() {
+				$(function() {
+					$( "#accordion" ).accordion();
 		
-			$( "#accordion" ).accordion();
-		
-
-		
-
-		
-
-		
-
-		
-
-		
-
-		
-
-		
-
-			// Hover states on the static widgets
-			$( "#dialog-link, #icons li" ).hover(
-			function() {
-				$( this ).addClass( "ui-state-hover" );
-			},
-			function() {
-				$( this ).removeClass( "ui-state-hover" );
-			}
-			);
-			});
-			$(function() {
-		
-			$( "#accordion2" ).accordion();
-		
-
-		
-
-		
-
-		
-
-		
-
-		
-
-		
-
-		
-
-			// Hover states on the static widgets
-			$( "#dialog-link, #icons li" ).hover(
-			function() {
-				$( this ).addClass( "ui-state-hover" );
-			},
-			function() {
-				$( this ).removeClass( "ui-state-hover" );
-			}
-			);
-			});
+					// Hover states on the static widgets
+					$( "#dialog-link, #icons li" ).hover(
+						function() {
+							$( this ).addClass( "ui-state-hover" );
+						},
+						function() {
+							$( this ).removeClass( "ui-state-hover" );
+						}
+					);
+				});
+				
+				$(function() {
+					$( "#accordion2" ).accordion();
+			
+					// Hover states on the static widgets
+					$( "#dialog-link, #icons li" ).hover(
+						function() {
+							$( this ).addClass( "ui-state-hover" );
+						},
+						function() {
+							$( this ).removeClass( "ui-state-hover" );
+						}
+					);
+				});
 			</script>
 		
 			<style>

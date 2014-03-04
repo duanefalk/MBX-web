@@ -216,13 +216,13 @@
 					</div>
 				<h2 class="demoHeaders">Or Search by Text on the Model<br /> <h3></h3>	
 					<div id="accordion2">
-							<div><input type=checkbox name="TempaText_Check" id="TempaText_Check" >Text:<br>
-							<input type="text" name="TempaText" value="" size="25" id="TempaText"></p>						
-							</select>	
-							</div>
+						<input type=checkbox name="TempaText_Check" id="TempaText_Check" >Text:<br>
+						<input type="text" name="TempaText" value="" size="25" id="TempaText"></p>						
+						</select>	
+						</div>
 					</div>		
 				<p></p>	
-				<input type="submit" name="submit" value="Search"/>
+				<input type="submit" class="button" name="submit" value="Search"/>
 				<br /><br />
 				<a href="Search_Models_Menu.php">Cancel/Clear</a>
 

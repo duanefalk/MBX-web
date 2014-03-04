@@ -8,6 +8,23 @@ session_start();
 <?php include("includes/navMain.php"); ?>
 <?php include("includes/header.php"); ?>
 
+
+<ul class="bxslider">
+	<li><img src="images/NoImageAvail.jpg" title="" /></li>
+	<li><img src="images/NoRelImageAvail.jpg" title="" /></li>
+	<li><img src="images/NoImageAvail.jpg" title="" /></li>
+</ul>
+
+<div class="row">
+
+	<div class="large-12 columns">
+		<h1>Banner Goes here</h1>
+	</div>
+
+</div>
+
+
+
 <table id="structure">
 <tr>
 	<td id="navigation">

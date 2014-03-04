@@ -59,20 +59,20 @@
 .car-block img.own {
   border-bottom: 10px solid #2E8B57;
 }
-/*green*/
 
+/*green*/
 /* line 56, sass/style.scss */
 .car-block img.own-not {
   border-bottom: 10px solid #de3939;
 }
-/*red*/
 
+/*red*/
 /* line 57, sass/style.scss */
 .car-block img.own-poor {
   border-bottom: 10px solid #ffde42;
 }
-/*yellow*/
 
+/*yellow*/
 /* line 59, sass/style.scss */
 .car-block p {
   max-width: 95%;
