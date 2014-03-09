@@ -92,62 +92,25 @@
 					
 				<h2 class="demoHeaders">Choose the ID You Want to Search by<br /> <h3>Search will use only last data entered; if you get unexpected results, click on 'cancel' and retry:</h3>
 					<div id="accordion">
-						<dl class="accordion" data-accordion>
-							<dd>
-								<a href="#panela"><h3>MAN (FAB) # (i.e. '800')</h3></a>
-								<div id="panela" class="content">
-									<label>MAN (FAB) #:</label>
-									<input type="text" name="MAN_No_1" id="MAN_No_1" />
-									<input type="text" name="MAN_No_2" id="MAN_No_2" />
-																		
-								</div>
-							</dd>
-						</dl>
+						<h3>MAN (FAB) # (i.e. '800')</h3>
+						<div><input type="text" name="MAN_No_1" value="" id="MAN_No_1"><input type="text" name="MAN_No_2" value="" id="MAN_No_2"></p>
+						</div>
 						
-						<dl class="accordion" data-accordion>
-							<dd>
-								<a href="#panelb"><h3>Mack# (in format like '33-M')</h3></a>
-								<div id="panelb" class="content">
-									<label>Mack#:</label>
-									<input type="text" name="Mack_No" id="Mack_No" />
-																		
-								</div>
-							</dd>
-						</dl>
+						<h3>Mack# (in format like '33-M')</h3>
+						<div><input type="text" name="Mack_No" value="" id="Mack_No"></p>
+						</div>
 
-						<dl class="accordion" data-accordion>
-							<dd>
-								<a href="#panelc"><h3>Quick Name Search</h3></a>
-								<div id="panelc" class="content">
-									<label>Name:</label>	
-									<input type="text" name="QuickName" id="QuickName" />
-																	
-								</div>
-							</dd>
-						</dl>		
-
-						<dl class="accordion" data-accordion>
-							<dd>
-								<a href="#paneld"><h3>Complete Name Search (searches model, version and base names- takes a few seconds!)</h3></a>
-								<div id="paneld" class="content">
-									<label>Name:</label>
-									<input type="text" name="Name" id="Name" />
-																		
-								</div>
-							</dd>
-						</dl>	
-
-						<dl class="accordion" data-accordion>
-							<dd>
-								<a href="#panele"><h3>UMID# (LR and 3 numbers, e.g. 'LR025', or SF and 4 numbers, e.g. 'SF0858'. If LR or SF not specified will assume SF.</h3></a>
-								<div id="panele" class="content">
-									<label>UMID#:</label>
-									<input type="text" name="UMID_1" id="UMID_1" />
-									<input type="text" name="UMID_2" id="MUMID_2" />
-																
-								</div>
-							</dd>
-						</dl>	
+						<h3>Quick Name Search</h3>
+						<div><input type="text" name="QuickName" value="" id="QuickName" size=40></p>
+						</div>
+						
+						<h3>Complete Name Search (searches model, version and base names- takes a few seconds!)</h3>
+						<div><input type="text" name="Name" value="" id="Name" size=40></p>
+						</div>
+						
+						<h3>UMID# (LR and 3 numbers, e.g. 'LR025', or SF and 4 numbers, e.g. 'SF0858'. If LR or SF not specified will assume SF.</h3>
+						<div><input type="text" name="UMID_1" value="" id="UMID_1"><input type="text" name="UMID_2" value="" id="UMID_2"></p>
+						</div>
 					</div>
 					
 				<h2 class="demoHeaders">Or Search by General Model Information<br /> <h3>(you may choose more than one of these criteria):</h3>	
@@ -158,9 +121,8 @@
 								<dd>
 									<a href="#panel1"><h3>Vehicle Type</h3></a>
 									<div id="panel1" class="content">
-										<label>Vehicle Type:</label>
 										<input type=checkbox name="VehicleType_Check" id="VehicleType_Check" />
-										
+										<label>Vehicle Type:</label>
 										<?php
 											$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");								
 											$result=0;
@@ -191,9 +153,8 @@
 								<dd>
 									<a href="#panel2"><h3>Make of Vehicle (i.e. Ford)</h3></a>
 									<div id="panel2" class="content">
-										<label>Make of Vehicle:</label>
 										<input type=checkbox name="VehicleMake_Check" id="VehicleMake_Check" />
-										
+										<label>Make of Vehicle:</label>
 										<?php
 											$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehMake%'");								
 											$result=0;
@@ -224,9 +185,8 @@
 								<dd>
 									<a href="#panel3"><h3>Country of Make (i.e. Ford is made in the US)</h3></a>
 									<div id="panel3" class="content">
-										<label>Country of Make:</label>
 										<input type=checkbox name="MakeCountry_Check" id="MakeCountry_Check" />
-										
+										<label>Country of Make:</label>
 										<?php
 											$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%MakeCountry%'");								
 											$result=0;
@@ -256,13 +216,13 @@
 					</div>
 				<h2 class="demoHeaders">Or Search by Text on the Model<br /> <h3></h3>	
 					<div id="accordion2">
-							<div><input type=checkbox name="TempaText_Check" id="TempaText_Check" >Text:<br>
-							<input type="text" name="TempaText" value="" size="25" id="TempaText"></p>						
-							</select>	
-							</div>
+						<input type=checkbox name="TempaText_Check" id="TempaText_Check" >Text:<br>
+						<input type="text" name="TempaText" value="" size="25" id="TempaText"></p>						
+						</select>	
+						</div>
 					</div>		
 				<p></p>	
-				<input type="submit" name="submit" value="Search"  />
+				<input type="submit" class="button" name="submit" value="Search"/>
 				<br /><br />
 				<a href="Search_Models_Menu.php">Cancel/Clear</a>
 
