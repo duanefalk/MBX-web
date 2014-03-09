@@ -56,7 +56,8 @@ $_SESSION['Sec_Lvl']=1;
 			                echo $rows_count. ' '.$row[Username].' '.$row[Password]." ".$row[Sec_Lvl];
 			          
 			                // after login we move to the main page
-			                header('Location: index.php');
+			                redirect_to("index.php");
+					//header('Location: index.php');
 			                exit;
 			            } 
 			           include 'includes/close_db_connection.php';

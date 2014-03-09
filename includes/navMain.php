@@ -16,7 +16,7 @@
 			//code 3 = Dad
 			if ($_SESSION['Sec_Lvl'] == 3) {
 				echo "<em>Hello, Duane</em>";
-				echo "<a href='#'>Edit Account (needs a page)</a>";
+				echo "<a href='Edit_Account_Form.php'>Edit Account (needs a page)</a>";
 				echo "<a href='Add_Menu.php'>Add a New Record</a>";						
 			}
 			

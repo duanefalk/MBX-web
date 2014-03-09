@@ -222,7 +222,7 @@
 							
 							<dl class="accordion" data-accordion>
 								<dd>
-									<a href="#panel3"><h3>Country of Make (i.e. Ford is made in the USA)</h3></a>
+									<a href="#panel3"><h3>Country of Make (i.e. Ford is made in the US)</h3></a>
 									<div id="panel3" class="content">
 										<label>Country of Make:</label>
 										<input type=checkbox name="MakeCountry_Check" id="MakeCountry_Check" />
