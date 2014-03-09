@@ -15,13 +15,10 @@
 			
 			//code 3 = Dad
 			if ($_SESSION['Sec_Lvl'] == 3) {
-<<<<<<< HEAD:includes/navMain.php
 				echo "<em>Hello, Duane</em>";
 				echo "<a href='Edit_Account_Form.php'>Edit Account (needs a page)</a>";
 				echo "<a href='Add_Menu.php'>Add a New Record</a>";						
-=======
-				echo "<em>Hello, Duane</em>";					
->>>>>>> FETCH_HEAD:includes/navUtility.php
+				echo "<em>Hello, Duane</em>";
 			}
 			
 			echo "<a href='#'>Edit Account</a>";
