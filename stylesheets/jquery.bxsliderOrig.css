@@ -33,11 +33,10 @@
 	-moz-box-shadow: 0 0 5px #ccc;
 	-webkit-box-shadow: 0 0 5px #ccc;
 	box-shadow: 0 0 5px #ccc;
-	/*left: -5px;*/
+	border: solid #fff 5px;
+	left: -5px;
 	background: #fff;
 }
-
-.bx-wrapper .bx-viewport ul { display:block; margin:0; }
 
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
@@ -179,7 +178,7 @@
 }
 
 /* IMAGE CAPTIONS */
-/*
+
 .bx-wrapper .bx-caption {
 	position: absolute;
 	bottom: 0;
@@ -195,4 +194,4 @@
 	display: block;
 	font-size: .85em;
 	padding: 10px;
-}*/
+}

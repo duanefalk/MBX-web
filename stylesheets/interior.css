@@ -1,10 +1,5 @@
 /* -- Colors -- */
 /* -- Main -- */
-/* line 4, sass/interior.scss */
-#main {
-  background: #f3eece;
-}
-
 /* -- Login Screen --------------- */
 /* line 8, sass/interior.scss */
 #login {
@@ -23,4 +18,50 @@
 /* line 23, sass/interior.scss */
 #login form input[type=submit]:hover {
   background: blue;
+}
+
+/* -- Models Detail --------------- */
+/* line 31, sass/interior.scss */
+.car-block {
+  width: 240px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em 1.2em;
+}
+
+/* line 37, sass/interior.scss */
+.car-block img {
+  max-width: 100%;
+  margin-bottom: .5em;
+}
+
+/* line 42, sass/interior.scss */
+.car-block img.own {
+  border-bottom: 10px solid #2E8B57;
+}
+
+/*green*/
+/* line 43, sass/interior.scss */
+.car-block img.own-not {
+  border-bottom: 10px solid #de3939;
+}
+
+/*red*/
+/* line 44, sass/interior.scss */
+.car-block img.own-poor {
+  border-bottom: 10px solid #ffde42;
+}
+
+/*yellow*/
+/* line 46, sass/interior.scss */
+.car-block p {
+  max-width: 95%;
+  margin: 0 0 .4em;
+  line-height: 120%;
+}
+
+/* line 52, sass/interior.scss */
+#photoref {
+  font-size: x-small;
+  font-style: italic;
 }

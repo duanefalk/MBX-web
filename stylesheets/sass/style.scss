@@ -1,20 +1,37 @@
 @import "settings";
 
+html,
+body {background:lighten($cream,10%);}
+
+a {color:$black;}
+a:hover,
+a:active {color:$orange; text-decoration:none;}
+
+.row {max-width:85%;}
+.clear {clear:both;}
 
 /* -- Header --------------- */
 
 #header {
-    margin: 0px; padding: 0px;
-    text-align: left;
+	margin:0 0 2em; padding:.5em;
 }
 
 #header h1,
 #header img {
     display:inline-block; vertical-align:middle;  
-    margin: 10px;    
+    margin:10px;    
 }
 
-/* -- 
+#mainNav {
+	list-style-type:none;
+	margin:1.5em 0 0;
+	text-align:right;
+	
+	li {display:inline-block;}
+	a {padding:.5em 1em; font-size:110%;}
+}
+
+ 
 
 /* -- Navigation ------------- */
 #utilityNav {
@@ -38,30 +55,13 @@
 
 
 
-
-/* -- Models Detail --------------- */
-
-.car-block {
-    width:240px;
-    display:inline-block; vertical-align:top;
-    margin:1em 1.2em;
+/* -- Footer ------------- */
+#footer {
+	padding:2em 0; 
+	text-align:center;
 }
 
-.car-block img {
-    max-width:100%; 
-    margin-bottom:.5em;
-}
 
-.car-block img.own {border-bottom:10px solid #2E8B57;}	/*green*/
-.car-block img.own-not {border-bottom:10px solid #de3939;}	/*red*/
-.car-block img.own-poor {border-bottom:10px solid #ffde42;}	/*yellow*/
 
-.car-block p {
-    max-width:95%;
-    margin:0 0 .4em;
-    line-height:120%;
-}
-
-#photoref {
-    font-size:x-small; font-style:italic;
-}
+/* -- Home --------------- */
+.row.slider {max-width:70em;}
