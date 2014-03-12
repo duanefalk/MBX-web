@@ -24,10 +24,16 @@
 				echo "<p>Ford T-Birds MB 212, 268 & WRP02</p>";
 				
 				$picture1= "Images/Similar_Models/39_Chevy_Delivery.jpg";
-				$url1= "Similar_TBirds.php";
+				$url1= "Similar_39_Chevy_deliv.php";
 				echo "<a href=\"".$url1."\">"."<img src=".$picture1." width=\"240\"></a>";
 				echo "<br />";
-				echo "1939 Chevy Sedan Delivery MB 215 & 245<br />";
+				echo "<p>1939 Chevy Sedan Delivery MB 215 & 245</p>";
+				
+				$picture1= "Images/Similar_Models/Carbodies.jpg";
+				$url1= "Similar_Carbodies.php";
+				echo "<a href=\"".$url1."\">"."<img src=".$picture1." width=\"240\"></a>";
+				echo "<br />";
+				echo "Carbodies London Taxis MB 174 & 667<br />";
 				
 				$picture1= "Images/Similar_Models/BMW_Z3.jpg";
 				$url1= "Similar_TBirds.php";
@@ -83,12 +89,7 @@
 				echo "<br />";
 				echo "Crown Victorias MB 304/459/466 & 689<br />";
 				
-				$picture1= "Images/Similar_Models/Carbodies.jpg";
-				$url1= "Similar_TBirds.php";
-				echo "<a href=\"".$url1."\">"."<img src=".$picture1." width=\"240\"></a>";
-				echo "<br />";
-				echo "Carbodies London Taxis MB 174 & 667<br />";
-				
+
 				$picture1= "Images/Similar_Models/TBirds.jpg";
 				$url1= "Similar_TBirds.php";
 				echo "<a href=\"".$url1."\">"."<img src=".$picture1." width=\"240\"></a>";
