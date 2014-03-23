@@ -11,7 +11,7 @@ session_start();
 <table id="structure">
 	<tr>
 		<td id="navigation">
-			<?php echo "<a href=\"javascript:history.go(-1)\">Return to Previous Page</a>"; ?>
+			<?php echo "<a href=\"javascript:history.go(-1)\">Return to Previous Page</a><br></><br></>"; ?>
 			<a href="Search_Models_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
 			<a href="Search_Releases_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
 			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
@@ -129,6 +129,7 @@ session_start();
 					$result4a=0;
 					$rows_count4a=0;									
 					$result4a = mysql_query($query4a);
+					
 	
 					$query4b=("SELECT * FROM Test_Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_for_detail'");								
 					$result4b=0;
@@ -146,17 +147,17 @@ session_start();
 					$rows_count5b=0;									
 					$result5b = mysql_query($query5b);
 	
-					if (mysql_num_rows($result4a) > 0) {
+					if ($result4a!=false) {
 					    echo "You already have this release on your wishlist."."<br />";
 					    $Wishlist_option=0;
 		    
-					    if (mysql_num_rows($result5a) > 0) {
+					    if ($result5a != false) {
 						echo "You have ".mysql_num_rows($result5a)." copy/copies of release ".$Rel_to_Add." in your collection."."<br />";
 						echo "If you want to edit an existing record, select 'Update Models in Your Collection' from the menu bar on this page."."<br />";
 						echo "Continue below if you want to add a new copy of this release to your collection."."<br /><br />";
 					    } ELSE {
 						echo "You do not have this release in your collection.";
-						if (mysql_num_rows($result5b) == 0) {
+						if ($result5b != false) {
 							echo "Nor do you have this model variation in your collection."."<br />";
 							echo "Continue below if you want to add a new copy of this release to your collection."."<br /><br />";
 						} ELSE {
@@ -168,13 +169,13 @@ session_start();
 					    echo "You do not have this release on your wishlist."."<br />";
 					    $Wishlist_option=1;
 	
-					    if (mysql_num_rows($result5a) > 0) {
+					    if ($result5a != false) {
 						echo "You have ".mysql_num_rows($result5a)." copy/copies of release ".$Rel_to_Add." in your collection."."<br />";
 						echo "If you want to edit an existing record, select 'Update Models in Your Collection' from the menu bar on this page."."<br />";
 						echo "Continue below if you want to add a new copy of this release to your collection."."<br /><br />";
 					    } ELSE {
 						echo "You do not have this release in your collection.";
-						if (mysql_num_rows($result5b) == 0) {
+						if ($result5b === false) {
 							echo "Nor do you have this model variation in your collection."."<br />";
 							echo "Continue below if you want to add a new copy of this release to your collection."."<br /><br />";
 						} ELSE {
