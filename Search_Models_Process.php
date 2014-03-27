@@ -17,7 +17,7 @@
 			$MakeCountry=$_POST['MakeCountry'];
 			$TempaText=$_POST['TempaText'];
 
-			if ((!$_POST['VehicleType_Check']) AND (!$_POST['VehicleMake_Check']) AND (!$_POST['MakeCountry_Check']) AND (!$_POST['TempaText_Check'])) {	
+			if ((!$_POST['VehicleType_Check']) AND (!$_POST['VehicleMake_Check']) AND (!$_POST['MakeCountry_Check']) AND (!$_POST['TempaText'])) {	
 			
 				if ($_POST[MAN_No_1]) {
 					$ID_Value1=$_POST[MAN_No_1];
@@ -192,7 +192,7 @@
 					echo "ERROR no type selected";
 					exit;
 				}
-			} ELSEIF (!$_POST['TempaText_Check']) {
+			} ELSEIF (!$_POST['TempaText']) {
 				
 
 				 //if model criteria checked
