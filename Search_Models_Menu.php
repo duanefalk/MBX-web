@@ -25,7 +25,7 @@
 		
 			<dl class="accordion" data-accordion>
 				<dd>
-					<a href="#panel4">MAN (FAB) # <small>(i.e. '800')</small></a>
+					<a href="#panel4">MAN (FAB) # <small>(i.e. '800'; enter one no. on the top line, or one on each line for a range)</small></a>
 					<div id="panel4" class="content">
 						<input type="text" name="MAN_No_1" value="" id="MAN_No_1" />
 						<input type="text" name="MAN_No_2" value="" id="MAN_No_2" />
@@ -62,7 +62,7 @@
 			
 			<dl class="accordion" data-accordion>
 				<dd>
-					<a href="#panel8">UMID # <small>(LR and 3 numbers, e.g. 'LR025', or SF and 4 numbers, e.g. 'SF0858'. If LR or SF not specified will assume SF</small></a>
+					<a href="#panel8">UMID # <small>(LR and 3 numbers, e.g. 'LR025', or SF and 4 numbers, e.g. 'SF0858'. If LR or SF not specified will assume SF; enter one no. on the top line, or one on each line for a range</small></a>
 					<div id="panel8" class="content">
 						<input type="text" name="UMID_1" value="" id="UMID_1"><input type="text" name="UMID_2" value="" id="UMID_2" />
 					</div>
