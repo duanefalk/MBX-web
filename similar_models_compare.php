@@ -71,14 +71,14 @@
 				echo "<br />";
 				echo "Datsum 260's & 280's<br />";
 				
-				$picture1= "Images/Similar_Models/TBirds.jpg";
-				$url1= "Similar_TBirds.php";
+				$picture1= "Images/Similar_Models/Luminas.jpg";
+				$url1= "Similar_Luminas.php";
 				echo "<a href=\"".$url1."\">"."<img src=".$picture1." width=\"240\"></a>";
 				echo "<br />";
 				echo "Chevy Lumina Stock Cars MB 221, 224 & 267<br />";
 				
-				$picture1= "Images/Similar_Models/TBirds.jpg";
-				$url1= "Similar_TBirds.php";
+				$picture1= "Images/Similar_Models/Pontiac_stock_cars.jpg";
+				$url1= "Similar_Pontiac_stock_cars.php";
 				echo "<a href=\"".$url1."\">"."<img src=".$picture1." width=\"240\"></a>";
 				echo "<br />";
 				echo "Pontiac Stock Cars MB 216, 238 &. 269<br />";
