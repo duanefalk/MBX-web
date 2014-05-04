@@ -52,7 +52,7 @@ session_start();
 	
 					if (file_exists($picture2_loc)) {
 						//echo "picture exists";
-						echo "<a href=\"".$url."\">"."<img src=".$picture2." width=\"240\"></a>";
+						echo "<img src=".$picture2." width=\"240\">";
 					} else {
 						//ignore, dont put up a default for 2nd one	
 					}
