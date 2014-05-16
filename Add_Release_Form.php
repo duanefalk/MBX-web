@@ -28,7 +28,7 @@
 		UnitTyp
 		PkgID
 		PkgVarCd
-		RelDt
+		
 		RelComm
 		RelPkgPhotoName
 		RelPkgPhotoRef
@@ -166,8 +166,7 @@
 					}	
 				?>
 				</select>			
-			
-			<p>Release Date:      <input type="text" name="RelDt" value="" size="10" id="RelDt"</p>			
+					
 			<p>Release Comments:     </p>
 				<textarea name="RelComm" cols="45" rows="4">			
 				</textarea>

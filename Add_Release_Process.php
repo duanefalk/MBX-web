@@ -20,7 +20,7 @@
         UnitTyp
         PkgID
         PkgVarCd
-        RelDt
+        
         RelComm
         RelPkgPhotoName
         RelPkgPhotoRef
@@ -53,7 +53,6 @@
     $UnitTyp=$_POST['UnitTyp'];
     $PkgID=$_POST['PkgID'];
     $PkgVarCd=$_POST['PkgVarCd'];
-    $RelDt=$_POST['RelDt'];
     $RelComm=$_POST['RelComm'];
     $RelPkgPhotoName=$_POST['RelPkgPhotoName'];
     $RelPkgPhotoRef=$_POST['RelPkgPhotoRef'];
@@ -77,17 +76,16 @@
     echo $UnitTyp."<br />";
     echo $PkgID."<br />";
     echo $PkgVarCd."<br />";
-    echo $RelDt."<br />";
     echo $RelComm."<br />";
     echo $RelPkgPhotoName."<br />";
     echo $RelPkgPhotoRef."<br />";
     
    
     $query="INSERT INTO Test_Matchbox_Releases (UMID, VerID, VarID, RelID, RelYr, CountryOfSale, Theme, Series, SeriesID, ShowSeriesID,
-            PkgName, MdlNameOnPkg, SubSeries, SubSeriesID, ShowSubSeriesID, UnitTyp, PkgID, PkgVarCd, RelDt, RelComm, RelPkgPhotoName,
+            PkgName, MdlNameOnPkg, SubSeries, SubSeriesID, ShowSubSeriesID, UnitTyp, PkgID, PkgVarCd, RelComm, RelPkgPhotoName,
             RelPkgPhotoRef)
             VALUES ('$UMID','$VerID','$VarID','$RelID','$RelYr','$CountryOfSale','$Theme','$Series', '$SeriesID', '$ShowSeriesID',
-            '$PkgName','$MdlNameOnPkg','$SubSeries','$SubSeriesID','$ShowSubSeriesID','$UnitTyp', '$PkgID', '$PkgVarCd', '$RelDt', '$RelComm', '$RelPkgPhotoName',
+            '$PkgName','$MdlNameOnPkg','$SubSeries','$SubSeriesID','$ShowSubSeriesID','$UnitTyp', '$PkgID', '$PkgVarCd', '$RelComm', '$RelPkgPhotoName',
             '$RelPkgPhotoRef')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;

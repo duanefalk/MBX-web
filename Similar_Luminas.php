@@ -7,17 +7,14 @@
 		</td>
 		<td id="page">
 			<h2>Differences Among NASCAR Lumina Models</h2>
-			<p>Matchbox released 3 Chevrolet Lumina models. There was an earlier Buick LeSabre that was used briefly as a Lumina for the &#34;Days of Thunder&#34; movie promotionals (see below), but the body is fairly dissimilar to the Luminas and it says Buick LeSabre on the base, so it&#39;s not considered here.</p>
-                        <img src="Images/Similar_Models/Buick LeSabre.jpg" width=200>
-			<p></p>	
-			<p>MB224 / SF0362
-                        <p>NASCAR was suddenly popular with the success of the movie &#34;Days of Thunder&#34; and the diecast company Racing Champions got its start making models from the movie. Matchbox wanted to get into the game as well and initially used some of the Racing Champion models, released under their name. These are not Matchbox (they say Racing Champions on the base) and are not listed in the database, though there is a note regarding them in the SF0362 model record.</p>
+			<p>Matchbox released 3 Chevrolet Lumina models. In 1990 NASCAR was suddenly popular with the success of the movie &#34;Days of Thunder&#34; and the diecast company Racing Champions got its start making models from the movie. Matchbox wanted to get into the game as well and initially used some of the Racing Champion models, released under the Matchbox name. These are not Matchbox models though (they say Racing Champions on the base) and are not listed in the database, though there is a note regarding them in the SF0362 model record.</p></p>
                         <p>The model is distinctive- actually a poor quality mold- and needs no detail listing to tell it apart:</p>
-  			<img src="Images/Similar_Models/RC Lumina_1.jpg" width=200>
+			<img src="Images/Similar_Models/RC Lumina_1.jpg" width=200>
 			<img src="Images/Similar_Models/RC Lumina_2.jpg" width=200>
-			<p></p>                      
-			
-			<p>The first Matchbox-made model to be called a Lumina was a modified version of the Buick LeSabre, used in lieu of the later MB221, which was not ready in time for release. This early version was released under the same MAN# as the RC models. </p>
+			<p></p>  
+			<p>MB224 / SF0360<p>
+
+			<p>The first Matchbox-made model to be called a Lumina was a modified version of the Buick LeSabre, used in lieu of the later MB221, which was not ready in time for release.</p>
                         <p>Differentiating points from later Luminas: </p>
 			<ol>
 				<li>On the front end, the grill space is very flat. Other models have a curved or triangular shape</li>
@@ -32,8 +29,8 @@
 			<p></p>	
 
 			
-			<p>MB221 / SF0360</p>
-			<p>The First real Matchbox model was MB221 (SF0360). The first releases, in 1990, replaced MB224 as &#34;DOT&#34; cars, but  later that year they also incorporated the Lumina stock car into the 1-75 series. This mold was adopted in 1991 for White Rose Collectibles NASCAR Chevy releases, and used  by them through 1993. A white blank of the model was made and has been very popular for Code 2 models,  even up to today. This model, and the one released in 1994, are similar and the hardest to tell apart.</p>
+			<p>MB221 / SF0362</p>
+			<p>The First real Matchbox model was MB221 (SF0362). The first releases, in 1990, replaced MB224 as &#34;DOT&#34; cars, but  later that year they also incorporated the Lumina stock car into the 1-75 series. This mold was adopted in 1991 for White Rose Collectibles NASCAR Chevy releases, and used  by them through 1993. A white blank of the model was made and has been very popular for Code 2 models,  even up to today. This model, and the one released in 1994, are similar and the hardest to tell apart.</p>
 			<ol>
 				<li>Lumina is inscribed in the front flange. As well, there are 2 rectangular indentations to either side, and one higher up, to the right of the grill</li>
 				<li>This model has 3 distinct grooves in the front end, one large on bottom, and two thinner above</li>

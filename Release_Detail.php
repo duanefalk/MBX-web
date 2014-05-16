@@ -73,7 +73,7 @@ session_start();
 
 					//display remainder of rel info
 					//echo "<br />";
-					echo "Rel Yr:   ".$row["RelYr"]."   Rel Dt:  ".$row["RelDt"]."<br />";
+					echo "Rel Yr:   ".$row["RelYr"]."<br />";
 					if ($row["Theme"]) {
 						echo "Rel Theme:   ".$row["Theme"]."<br />";
 					}

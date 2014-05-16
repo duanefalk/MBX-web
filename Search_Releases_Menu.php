@@ -213,7 +213,7 @@
 					<a href="#panel4"><h3>Release Year</h3></a>
 					<div id="panel4" class="content">
 						<input type=checkbox name="RelYr_Check" id="RelYr_Check" />
-						<label># in Series:</label>
+						<label>Release Yr:</label>
 						<input type="text" name="RelYr" id= "RelYr" value="" size="4" id="RelYr" />										
 					</div>
 				</dd>
