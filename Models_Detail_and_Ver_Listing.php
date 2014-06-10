@@ -87,7 +87,7 @@ $Username=$_SESSION['Username'];
 			if (($Sec_Lvl < "2") OR ($Code2_Pref=="0")) {
 				//get version data to display
 				
-				$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%'");
+				$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' ORDER BY VerYrFirstRel,VerID ASC");
 				$result=0;
 				$rows=0;
 				// echo $result;
@@ -161,8 +161,20 @@ $Username=$_SESSION['Username'];
 						} ELSE {
 							echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 						}
+						echo "<p>".$row["VerName"]."</p>";
 						echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
-						echo "<p>Ver Name: ".$row["VerName"]."</p>";
+						echo "<p>".$row["BodyColor"]."</p>";
+						echo "<p>";
+						if (!empty($row["TempaDesign"])) {
+							echo $row["TempaDesign"].", ";
+							}
+						echo $row["TempaText"]."</p>";	
+						echo "<p>".$row["BodyColor"]."</p>";
+						echo "<p>";
+						if (!empty($row["TempaDesign"])) {
+							echo $row["TempaDesign"].", ";
+							}
+						echo $row["TempaText"]."</p>";	
 						echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
 						echo "<p>Code level: ".$row["CodeLvl"];
 						if ($row["CodeLvl"]=="2") {
@@ -172,7 +184,7 @@ $Username=$_SESSION['Username'];
 					}	
 			} else {
 				//start by showing code1
-				$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='1'");
+				$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='1' ORDER BY VerYrFirstRel,VerID ASC");
 				$result=0;
 				$rows=0;
 				// echo $result;
@@ -244,14 +256,20 @@ $Username=$_SESSION['Username'];
 					} ELSE {
 						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 					}
+					echo "<p>".$row["VerName"]."</p>";
 					echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
-					echo "<p>Ver Name: ".$row["VerName"]."</p>";
+					echo "<p>".$row["BodyColor"]."</p>";
+					echo "<p>";
+					if (!empty($row["TempaDesign"])) {
+						echo $row["TempaDesign"].", ";
+						}
+					echo $row["TempaText"]."</p>";	
 					echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
 					echo "</div>";
 				}
 				//then check if to show code 2 also. if so sep srch for code 2
 				if (($Sec_Lvl >= "2") AND ($Code2_Pref == "1")) {
-					$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='2'");
+					$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='2' ORDER BY VerYrFirstRel,VerID ASC");
 					$result=0;
 					$rows=0;
 					// echo $result;
@@ -309,10 +327,16 @@ $Username=$_SESSION['Username'];
 							} ELSE {
 								echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 							}
+							echo "<p>".$row["VerName"]."</p>";
 							echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
-							echo "<p>Ver Name: ".$row["VerName"]."</p>";
+							echo "<p>".$row["BodyColor"]."</p>";
+							echo "<p>";
+							if (!empty($row["TempaDesign"])) {
+								echo $row["TempaDesign"].", ";
+								}
+							echo $row["TempaText"]."</p>";	
 							echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
-							echo "<p>Code level: ".$row["CodeLvl"].";C2 Manuf.: ".$row["SecManuf"]."</p>";
+							echo "<p>Code level: ".$row["CodeLvl"].", C2 Manuf.: ".$row["SecManuf"]."</p>";
 						echo "</div>";
 						}
 				}		

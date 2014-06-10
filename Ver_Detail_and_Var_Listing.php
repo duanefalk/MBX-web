@@ -48,16 +48,19 @@
 				//echo DEFAULT_IMAGE;
 				echo "<img src=".DEFAULT_IMAGE." width=\"240\">";
 			}
-			echo "<br></>Version Mack#: ".$row["Master_Mack_No"]."    MAN#: ".$row["FAB_No"]."<br></>";
 			echo "Version Name: ". $row["VerName"]. "<br></>";
+			echo "<br></>Version Mack#: ".$row["Master_Mack_No"]."    MAN#: ".$row["FAB_No"]."<br></>";
 			echo "First Prod.: ". $row["VerYrFirstRel"]."    Ver Type: ".$row["VerTyp"]."<br></>";
-			echo "Color: ".$row["BodyColor"]."   Design: ".$row["TempaDesign"]."<br></>";
-			if ($row["TempaText"]) {
+			echo $row["BodyColor"]."<br></>";
+			if (!empty($row["TempaDesign"])) {
+				echo "Design: ".$row["TempaDesign"]."<br></>";
+				}
+			if (!empty($row["TempaText"])) {
 				echo "Text: ".$row["TempaText"]."<br></>";
-			}
-			echo "<p>Code level: ".$row["CodeLvl"];
+				}
+			echo "Code level: ".$row["CodeLvl"]."<br></>";
 			if ($row["CodeLvl"]=="2") {
-				echo " C2 Manuf.: ".$row["SecManuf"]."</p>";
+				echo " C2 Manuf.: ".$row["SecManuf"]."<br></>";
 			}
 			if ($row["VerAttachments"]) {
 				echo "Text: ".$row["VerAttachments"]."<br></>";
