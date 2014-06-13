@@ -4,6 +4,7 @@
 		<td id="navigation">
 			<a href="What_is_MBXU.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">MBX-U FAQ's</p></a>
 			<a href="DB_explan.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">About the Database</p></a>
+			<a href="About_photos.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">About the Photos</p></a>
 			<a href="Ref_files.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">View Reference Files</p></a>
 			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>	
 		</td>

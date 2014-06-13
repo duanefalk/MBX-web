@@ -2,6 +2,7 @@
 <table id="structure">
 	<tr>
 		<td id="navigation">
+			<a href="Photo_refs.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Photo References</p></a>
 			<a href="About_site.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to About Site</p></a>
 			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
 			&nbsp;
