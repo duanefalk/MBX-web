@@ -1,17 +1,21 @@
 <?php include("includes/header.php"); ?>
-<table id="structure">
-	<tr>
-		<td id="navigation">
-			<a href="What_is_MBXU.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">MBX-U FAQ's</p></a>
-			<a href="DB_explan.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">About the Database</p></a>
-			<a href="About_photos.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">About the Photos</p></a>
-			<a href="Ref_files.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">View Reference Files</p></a>
-			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>	
-		</td>
-		<td id="page">
-			<h2>About the Site</h2>
+
+<div class="row">
+	<div class="large-12 columns">
+	
+		<h2>About the Site</h2>
+		<ul>
+			<li>What do we do with these links? Subpages?</li>
+			<li><a href="What_is_MBXU.php">MBX-U FAQ's</a></li>
+			<li><a href="DB_explan.php">About the Database</a></li>
+			<li><a href="About_photos.php">About the Photos</a></li>
+			<li><a href="Ref_files.php">View Reference Files</a></li>
+			<li><a href="index.php">Return to Main Page</a></li>
+			
 			<p>Information about the site.</p>
-		</td>
-	</tr>
-</table>
+		</ul>
+	
+	</div>
+</div>
+
 <?php include("includes/footer.php"); ?>

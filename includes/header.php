@@ -41,10 +41,12 @@
 
 <body>
 	
+	<?php include("includes/navUtility.php"); ?>
+	
 	<div id="header">
 		<div class="row">
 			<div class="large-3 columns">
-				<a href="index.php"><img src="images/logo.png" width="225" height="59" /></a>
+				<a href="index.php"><img src="images/logoOnWhite.png" width="225" height="59" /></a>
 			</div>
 			
 			<div class="large-9 columns">
