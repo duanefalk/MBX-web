@@ -1,40 +1,69 @@
+/* -- Fonts -- */
 /* -- Colors -- */
 /* line 4, sass/style.scss */
 html,
 body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
   background: #fdfcf7;
 }
 
 /* line 6, sass/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 115%;
+}
+
+/* line 8, sass/style.scss */
 a {
   color: #333333;
 }
 
-/* line 8, sass/style.scss */
+/* line 10, sass/style.scss */
 a:hover,
 a:active {
   color: #d45132;
   text-decoration: none;
 }
 
-/* line 10, sass/style.scss */
+/* line 12, sass/style.scss */
 .row {
   max-width: 85%;
 }
 
-/* line 11, sass/style.scss */
+/* line 13, sass/style.scss */
 .clear {
   clear: both;
 }
 
-/* -- Header --------------- */
 /* line 15, sass/style.scss */
+.button {
+  padding: .6em 1.4em;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+}
+/* line 22, sass/style.scss */
+.button:hover {
+  background: #087b80;
+}
+
+/* -- Header --------------- */
+/* line 28, sass/style.scss */
 #header {
   margin: 0 0 2em;
   padding: .5em;
 }
 
-/* line 20, sass/style.scss */
+/* line 33, sass/style.scss */
 #header h1,
 #header img {
   display: inline-block;
@@ -42,54 +71,82 @@ a:active {
   margin: 10px;
 }
 
-/* line 25, sass/style.scss */
+/* line 38, sass/style.scss */
 #mainNav {
   list-style-type: none;
-  margin: 1.5em 0 0;
+  margin: 1em 0 0;
   text-align: right;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: .75px;
 }
-/* line 30, sass/style.scss */
+/* line 43, sass/style.scss */
 #mainNav li {
   display: inline-block;
 }
-/* line 31, sass/style.scss */
+/* line 44, sass/style.scss */
 #mainNav a {
   padding: .5em 1em;
   font-size: 110%;
 }
 
 /* -- Navigation ------------- */
-/* line 37, sass/style.scss */
+/* line 50, sass/style.scss */
 #utilityNav {
   padding: 0 1em;
   text-align: right;
+  font-size: 80%;
   background: #333333;
 }
-/* line 43, sass/style.scss */
+/* line 56, sass/style.scss */
 #utilityNav a {
   display: inline-block;
-  padding: 16px 16px;
+  padding: 8px;
   color: white;
   text-decoration: none;
 }
-/* line 50, sass/style.scss */
+/* line 63, sass/style.scss */
 #utilityNav a:hover, #utilityNav a:visited, #utilityNav a:active {
   text-decoration: underline;
 }
-/* line 53, sass/style.scss */
+/* line 66, sass/style.scss */
 #utilityNav em {
   color: white;
 }
 
+/* line 69, sass/style.scss */
+body.home #utilityNav {
+  margin-bottom: 1em;
+  background: rgba(51, 51, 51, 0.25);
+}
+
 /* -- Footer ------------- */
-/* line 59, sass/style.scss */
+/* line 76, sass/style.scss */
 #footer {
   padding: 2em 0;
   text-align: center;
 }
 
 /* -- Home --------------- */
-/* line 67, sass/style.scss */
+/* line 84, sass/style.scss */
 .row.slider {
   max-width: 70em;
+}
+
+/* line 86, sass/style.scss */
+#header-home {
+  background: #d45132 url("../images/banners/chalkboard.png") center center no-repeat;
+}
+/* line 89, sass/style.scss */
+#header-home * {
+  color: white;
+}
+/* line 91, sass/style.scss */
+#header-home #banner {
+  margin-top: 2em;
+}
+/* line 94, sass/style.scss */
+#header-home #banner #bannerText {
+  margin-top: 2em;
 }

@@ -5,11 +5,10 @@ session_start();
 
 <?php require_once("includes/functions.php"); ?>
 <?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/navUtility.php"); ?>
-<?php include("includes/header.php"); ?>
+<?php include("includes/header-home.php"); ?>
 
 
-<div class="row slider">
+<!--div class="row slider">
 	<div class="large-12 columns">
 		<ul class="bxslider">
 			<li><img src="images/banner1.jpg" title="" /></li>
@@ -17,7 +16,7 @@ session_start();
 			<li><img src="images/NoImageAvail.jpg" title="" /></li>
 		</ul>
 	</div>
-</div>
+</div-->
 
 
 <div class="row">

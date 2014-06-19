@@ -1,7 +1,9 @@
 @import "settings";
 
 html,
-body {background:lighten($cream,10%);}
+body {@include body; background:lighten($cream,10%);}
+
+h1,h2,h3,h4,h5,h6 {@include headline; line-height:115%;}
 
 a {color:$black;}
 a:hover,
@@ -10,10 +12,21 @@ a:active {color:$orange; text-decoration:none;}
 .row {max-width:85%;}
 .clear {clear:both;}
 
+.button {
+	padding:.6em 1.4em;
+	@include headline; color:$white; text-transform:uppercase;
+	background:none;
+	border:2px solid #FFFFFF;
+	border-radius:5px;
+	
+	&:hover {background:$teal;}
+}
+
+
 /* -- Header --------------- */
 
 #header {
-	margin:0 0 2em; padding:.5em;
+	margin:0 0 2em; padding:.5em; 
 }
 
 #header h1,
@@ -24,8 +37,8 @@ a:active {color:$orange; text-decoration:none;}
 
 #mainNav {
 	list-style-type:none;
-	margin:1.5em 0 0;
-	text-align:right;
+	margin:1em 0 0;
+	text-align:right; @include headline; letter-spacing:.75px;
 	
 	li {display:inline-block;}
 	a {padding:.5em 1em; font-size:110%;}
@@ -37,12 +50,12 @@ a:active {color:$orange; text-decoration:none;}
 #utilityNav {
 	
 	padding:0 1em;
-	text-align:right;
+	text-align:right; font-size:80%;
 	background:$black;
 	
 	a {
 		display:inline-block;
-		padding:16px 16px;
+		padding:8px;
 		color:$white; text-decoration:none;
 		
 		&:hover,
@@ -51,6 +64,10 @@ a:active {color:$orange; text-decoration:none;}
 	}
 	
 	em {color:$white;}
+}
+
+body.home #utilityNav {
+	margin-bottom:1em; background:transparentize($black,.75);
 }
 
 
@@ -65,3 +82,17 @@ a:active {color:$orange; text-decoration:none;}
 
 /* -- Home --------------- */
 .row.slider {max-width:70em;}
+
+#header-home {
+	background:$orange url('../images/banners/chalkboard.png') center center no-repeat;
+
+	* {color:$white;}
+	
+	#banner {
+		margin-top:2em;
+	
+		#bannerText {
+			margin-top:2em;
+		}	
+	}
+}

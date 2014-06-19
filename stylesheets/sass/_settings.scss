@@ -1,3 +1,8 @@
+/* -- Fonts -- */
+@mixin body {font-family: 'Lato', sans-serif; font-weight:400; font-style:normal;}
+@mixin italic {font-family: 'Lato', sans-serif; font-weight:400; font-style:italic;}
+@mixin headline {font-family: 'Lato', sans-serif; font-weight:700; font-style:normal;}
+
 
 /* -- Colors -- */
 $black : #333333;
