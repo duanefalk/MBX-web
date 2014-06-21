@@ -6,8 +6,7 @@ $_SESSION['Sec_Lvl']=1;
 
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
-<?php include("includes/navUtility.php"); ?>
-<?php include("includes/header.php"); ?>
+<?php include("includes/header-login.php"); ?>
 
 <title>Basic Login</title>
 
@@ -83,7 +82,7 @@ $_SESSION['Sec_Lvl']=1;
 					</div>
 					<div class="row">
 						<div class="large-12 large-centered columns">
-					    	<input type="submit" name="btnLogin" value="Login">
+					    	<input class="button" type="submit" name="btnLogin" value="Login">
 					    </div>
 					</div>
 		        </form>

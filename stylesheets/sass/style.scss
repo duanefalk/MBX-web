@@ -1,9 +1,11 @@
 @import "settings";
 
 html,
-body {@include body; background:lighten($cream,10%);}
+body {@include body; color:$black; background:lighten($cream,5%) url('../images/bgTexture.png') repeat;}
 
-h1,h2,h3,h4,h5,h6 {@include headline; line-height:115%;}
+h1,h2,h3,h4,h5,h6 {@include headline; color:$black; line-height:115%;}
+
+p {color:$black;}
 
 a {color:$black;}
 a:hover,
@@ -50,13 +52,13 @@ a:active {color:$orange; text-decoration:none;}
 #utilityNav {
 	
 	padding:0 1em;
-	text-align:right; font-size:80%;
+	text-align:right; font-size:80%; 
 	background:$black;
 	
 	a {
 		display:inline-block;
 		padding:8px;
-		color:$white; text-decoration:none;
+		color:$cream; text-decoration:none;
 		
 		&:hover,
 		&:visited,
@@ -74,8 +76,11 @@ body.home #utilityNav {
 
 /* -- Footer ------------- */
 #footer {
-	padding:2em 0; 
-	text-align:center;
+	margin:4em 0 0; padding:3em 0; 
+	text-align:center; color:$cream;
+	background:$teal url('../images/bgGrit.jpg') top repeat;
+	
+	p {color:$cream;}
 }
 
 
@@ -84,9 +89,9 @@ body.home #utilityNav {
 .row.slider {max-width:70em;}
 
 #header-home {
-	background:$orange url('../images/banners/chalkboard.png') center center no-repeat;
+	margin-bottom:2em; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;
 
-	* {color:$white;}
+	* {color:$cream;}
 	
 	#banner {
 		margin-top:2em;
@@ -95,4 +100,19 @@ body.home #utilityNav {
 			margin-top:2em;
 		}	
 	}
+}
+
+#quick_search {
+	padding:1.5em; color:$white; background:$teal; border-radius:1em;
+	
+	h3 {color:$white;}
+	form {
+		margin-bottom:0;
+	
+		label {color:$white;}
+		input {display:inline-block; margin-bottom:0;}
+		input[type=text] {width:72%; margin-right:2%; border:none; box-shadow:0;}
+		input[type=submit] {width:25%; font-size:90%;}
+	}
+		
 }

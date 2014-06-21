@@ -20,16 +20,16 @@ session_start();
 
 
 <div class="row">
-	<div class="large-6 columns">
-		<h2>The Matchbox Professor welcomes you to the MBX University!!</h2>
-		<p>This site is for Matchbox collectors and anyone intrrested in Matchbox models</p>
+	<div class="large-5 columns">
+		<h4>The Matchbox Professor welcomes you to the MBX University!!</h4>
+		<p>This site is for Matchbox collectors and anyone interested in Matchbox models</p>
 	</div>
 	
-	<div class="large-6 columns">
+	<div class="large-7 columns">
 		<div id="quick_search">
 			<h3>Quick Search</h3>
 			<form action="Search_Models_Process.php" method="post">			
-				<h5>MAN (FAB) # (i.e. '800'):</h5>
+				<label for="MAN_No_1">MAN (FAB) # (i.e. '800'):</label>
 				<input type="text" name="MAN_No_1" value="" id="MAN_No_1">
 				<input type="submit" class="button" name="submit" value="Search"/>
 			</form>
