@@ -1,17 +1,18 @@
 @import "settings";
 
 html,
-body {@include body; color:$black; background:lighten($cream,5%) url('../images/bgTexture.png') repeat;}
+body {@include body; color:$black; background:lighten($cream,5%) url('../images/bgTexture.jpg') repeat;}
 
 h1,h2,h3,h4,h5,h6 {@include headline; color:$black; line-height:115%;}
 
 p {color:$black;}
 
+img {max-width:100%;}
+
 a {color:$black;}
 a:hover,
 a:active {color:$orange; text-decoration:none;}
 
-.row {max-width:85%;}
 .clear {clear:both;}
 
 .button {
@@ -27,15 +28,9 @@ a:active {color:$orange; text-decoration:none;}
 
 /* -- Header --------------- */
 
-#header {
-	margin:0 0 2em; padding:.5em; 
-}
+#header { margin:0 0 2em; padding:0 0 1.25em; background:$orange; }
 
-#header h1,
-#header img {
-    display:inline-block; vertical-align:middle;  
-    margin:10px;    
-}
+#logo {display:block;}
 
 #mainNav {
 	list-style-type:none;
@@ -43,22 +38,23 @@ a:active {color:$orange; text-decoration:none;}
 	text-align:right; @include headline; letter-spacing:.75px;
 	
 	li {display:inline-block;}
-	a {padding:.5em 1em; font-size:110%;}
+	a {padding:.5em 1em; font-size:110%; color:$cream;}
 }
+
+
 
  
 
 /* -- Navigation ------------- */
 #utilityNav {
-	
-	padding:0 1em;
-	text-align:right; font-size:80%; 
-	background:$black;
+	margin-bottom:.5em;
+	text-align:right;
+	background:transparentize($black,.75);
 	
 	a {
 		display:inline-block;
 		padding:8px;
-		color:$cream; text-decoration:none;
+		font-size:80%; color:$cream; text-decoration:none;
 		
 		&:hover,
 		&:visited,
@@ -68,9 +64,7 @@ a:active {color:$orange; text-decoration:none;}
 	em {color:$white;}
 }
 
-body.home #utilityNav {
-	margin-bottom:1em; background:transparentize($black,.75);
-}
+body.home #utilityNav {}
 
 
 
@@ -86,8 +80,6 @@ body.home #utilityNav {
 
 
 /* -- Home --------------- */
-.row.slider {max-width:70em;}
-
 #header-home {
 	margin-bottom:2em; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;
 

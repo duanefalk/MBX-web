@@ -47,7 +47,7 @@
 	
 		<div class="row">
 			<div class="large-4 columns">
-				<a href="index.php"><img src="images/logo.png" width="225" height="59" /></a>
+				<a href="index.php" id="logo"><img src="images/logo.png" width="225" height="59" /></a>
 			</div>
 			
 			<div class="large-8 columns">

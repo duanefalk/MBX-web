@@ -41,15 +41,16 @@
 
 <body>
 	
-	<?php include("includes/navUtility.php"); ?>
-	
 	<div id="header">
+	
+		<?php include("includes/navUtility.php"); ?>
+		
 		<div class="row">
-			<div class="large-3 columns">
-				<a href="index.php"><img src="images/logoOnWhite.png" width="225" height="59" /></a>
+			<div class="large-4 columns">
+				<a href="index.php" id="logo"><img src="images/logo.png" width="225" height="59" /></a>
 			</div>
 			
-			<div class="large-9 columns">
+			<div class="large-8 columns">
 				<ul id="mainNav">
 					<li><a href="About_site.php">About</a></li>
 					<li><a href="Search_Models_Menu.php">Search Models</a></li>
