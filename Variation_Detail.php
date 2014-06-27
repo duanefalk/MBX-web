@@ -21,7 +21,7 @@ session_start();
 				$result=0;
 				$rows=0;
 				$Variation_for_detail=$_GET["model"];
-
+				echo "<h3>Variation ID: ".$Variation_for_detail."</h3>";
 				$query= ("SELECT * FROM Test_Matchbox_Variations WHERE VarID LIKE '%$Variation_for_detail%'");
 				$result= mysql_query($query);
 			
