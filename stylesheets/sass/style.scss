@@ -7,9 +7,9 @@ h1,h2,h3,h4,h5,h6 {@include headline; color:$black; line-height:115%;}
 
 p {color:$black;}
 
-img {max-width:100%;}
+img {max-width:100%; border:none;}
 
-a {color:$black;}
+a {color:$black; border:none;}
 a:hover,
 a:active {color:$orange; text-decoration:none;}
 
