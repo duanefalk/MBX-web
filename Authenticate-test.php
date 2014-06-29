@@ -51,7 +51,7 @@ $_SESSION['Sec_Lvl']=1;
 			                $_SESSION['Veh_Cond_Scheme']=$row["Veh_Cond_Scheme"];
 			                $_SESSION['Pkg_Cond_Scheme']=$row["Pkg_Cond_Scheme"];
 			                $_SESSION['Code2_Pref']=$row["Code2_Pref"];
-					$_SESSION['Full_name']=$row["User_name"];
+					$_SESSION['Full_Name']=$row["User_Name"];
 			                echo $userId.$password."<br />";
 			                echo $rows_count. ' '.$row[Username].' '.$row[Password]." ".$row[Sec_Lvl];
 			          
