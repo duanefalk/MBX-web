@@ -16,7 +16,7 @@
 				//code 2,3 = users with profiles
 				if ($_SESSION['Sec_Lvl'] > 1) {
 					
-					echo "<em>Hello, " . $_SESSION['User_name'] . "</em>";
+					echo "<em>Hello, " . $_SESSION['Full_name'] . "</em>";
 					
 					//code 3 = Dad
 					if ($_SESSION['Sec_Lvl'] == 3) {
