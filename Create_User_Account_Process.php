@@ -10,7 +10,8 @@ session_start();
     Username
     Password
     Sec_Lvl
-    User_Name
+    First_Name
+    Last_Name
     User_Email
     User_Url
     User_Address
@@ -24,7 +25,8 @@ session_start();
     $Username=$_POST['Username'];
     $Password=$_POST['Password'];
     $Sec_Lvl=2;
-    $User_Name=$_POST['User_Name'];
+    $First_Name=$_POST['First_Name'];
+    $Last_Name=$_POST['Last_Name'];
     $User_Email=$_POST['User_Email'];
     $User_Url=$_POST['User_Url'];
     $User_Address=$_POST['User_Address'];
@@ -47,10 +49,10 @@ session_start();
     $User_Code2_Pref=$_POST['Code2_Pref'];
 
 
-     $query="INSERT INTO Test_MBXU_User_Accounts (Username, Password, Sec_Lvl, User_Name, User_Email, User_Url,
+     $query="INSERT INTO Test_MBXU_User_Accounts (Username, Password, Sec_Lvl, First_Name, Last_Name, User_Email, User_Url,
             User_Address, User_Phone, Areas_of_Interest, User_is_Dealer, User_Memberships,
             Veh_Cond_Scheme, Pkg_Cond_Scheme, Code2_Pref) 
-            VALUES ('$Username','$Password','$Sec_Lvl','$User_Name','$User_Email','$User_Url',
+            VALUES ('$Username','$Password','$Sec_Lvl','$First_Name','$Last_Name', '$User_Email','$User_Url',
             '$User_Address','$User_Phone', ' $InterestString','$User_is_Dealer', '$User_Memberships',
             '$User_Veh_Cond_Scheme', '$User_Pkg_Cond_Scheme', '$User_Code2_Pref')";
     // mysql_query($query);

@@ -25,7 +25,8 @@ session_start();
 		<p>Username* (4-20 chars, alphanumeric only):     	  <input type="text" name="Username" value="" size="20" id="Username"</p>
 		<p>Password* (at least 4 chars, alphanumeric only):     <input type="text" name="Password" value="" size="40" id="Password"</p>
 		<?php $_SESSION['Sec_Lvl']=2; ?> 
-		<p>Name*:      <input type="text" name="User_Name" value="" size="60" id="User_Name"</p>
+		<p>First Name*:      <input type="text" name="First_Name" value="" size="60" id="First_Name"</p>
+		<p>Last Name*:	     <input type="text" name="Last_Name" value="" size="60" id="Last_Name"</p>
 		<p>Email*:      <input type="text" name="User_Email" value="" size="60" id="User_Email"</p>
 		<p>Home page url (if you have a web site):      <input type="text" name="User_Url" value="" size="60" id="User_Url"</p>
 		<p>Address (please enter country at minimum):      <input type="text" name="User_Address" value="" size="60" id="User_Address"</p>
