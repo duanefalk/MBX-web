@@ -57,11 +57,6 @@
 					<li><a href="Search_Releases_Menu.php">Search Releases</a></li>
 					<?php 
 						if ($_SESSION['Sec_Lvl'] > 1) {
-					
-							if ($_SESSION['Sec_Lvl'] == 3) {
-								echo "<li><a href='Add_Menu.php'>Add Record</a></li>";						
-							}
-					
 							echo "<li><a href='Collections_Menu.php'>Manage Collections</a></li>";
 							echo "<li><a href='User_Upload.php'>Upload</a></li>";
 						}

@@ -16,9 +16,10 @@
 				//code 2,3 = users with profiles
 				if ($_SESSION['Sec_Lvl'] > 1) {
 					
+					echo "<em>Hello, " . $_SESSION['User_name'] . "</em>";
+					
 					//code 3 = Dad
 					if ($_SESSION['Sec_Lvl'] == 3) {
-						echo "<em>Hello, Duane</em>";
 						echo "<a href='Add_Menu.php'>Add a New Record</a>";						
 					}
 					
