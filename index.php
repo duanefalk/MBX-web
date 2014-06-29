@@ -22,7 +22,7 @@ session_start();
 <div class="row">
 	<div class="large-5 columns">
 		<h4>The Matchbox Professor welcomes you to the MBX University!!</h4>
-		<p>This site is for Matchbox collectors and anyone interested in Matchbox models</p>
+		<p>This site is for Matchbox collectors and anyone interested in Matchbox models. Do a quick lookup of a model using the MAN# (box to the right), or check out the more extensive search abilities in 'Search Models' and 'Search Releases' above.</p>
 	</div>
 	
 	<div class="large-7 columns">

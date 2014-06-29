@@ -48,7 +48,7 @@
 				//echo DEFAULT_IMAGE;
 				echo "<img src=".DEFAULT_IMAGE." width=\"240\">";
 			}
-			echo "Version Name: ". $row["VerName"]. "<br></>";
+			echo "<br></>Version Name: ". $row["VerName"]. "<br></>";
 			echo "<br></>Version Mack#: ".$row["Master_Mack_No"]."    MAN#: ".$row["FAB_No"]."<br></>";
 			echo "First Prod.: ". $row["VerYrFirstRel"]."    Ver Type: ".$row["VerTyp"]."<br></>";
 			echo $row["BodyColor"]."<br></>";
