@@ -23,12 +23,17 @@ a:active {color:$orange; text-decoration:none;}
 	border-radius:5px;
 	
 	&:hover {background:$teal;}
+	
+	&.dark {
+		color:$orange; border-color:$orange;
+		&:hover {color:$teal; background:none; border-color:$teal;}
+	}
 }
 
 
 /* -- Header --------------- */
 
-#header { margin:0 0 2em; padding:0 0 1.25em; background:$orange; }
+#header { position:fixed; z-index:2; width:100%; top:0; margin:0; padding:0 0 1.25em; background:$orange; }
 
 #logo {display:block;}
 
@@ -38,7 +43,7 @@ a:active {color:$orange; text-decoration:none;}
 	text-align:right; @include headline; letter-spacing:.75px;
 	
 	li {display:inline-block;}
-	a {padding:.5em 1em; font-size:110%; color:$cream;}
+	a {padding:.5em 1em; font-size:90%; color:$cream;}
 }
 
 
@@ -104,7 +109,10 @@ body.home #utilityNav {}
 		label {color:$white;}
 		input {display:inline-block; margin-bottom:0;}
 		input[type=text] {width:72%; margin-right:2%; border:none; box-shadow:0;}
-		input[type=submit] {width:25%; font-size:90%;}
+		input[type=submit] {
+			width:25%; font-size:90%;
+			&:hover {background:$orange;}	
+		}
 	}
 		
 }

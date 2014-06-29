@@ -2,24 +2,34 @@
 /* -- Colors -- */
 /*$cream : #F3EECE;*/
 /* -- Main -- */
+/* line 4, sass/interior.scss */
+#main {
+  padding-top: 10em;
+}
+
+/* line 6, sass/interior.scss */
+.home #main {
+  padding-top: 0;
+}
+
 /* -- Sidebar -- */
-/* line 8, sass/interior.scss */
+/* line 10, sass/interior.scss */
 .sidebar {
   margin-top: 3em;
   font-size: 120%;
 }
-/* line 12, sass/interior.scss */
+/* line 14, sass/interior.scss */
 .sidebar a {
   display: block;
   margin: .5em 0;
 }
 
 /* -- Login Screen --------------- */
-/* line 17, sass/interior.scss */
+/* line 19, sass/interior.scss */
 #login {
   margin: 2em auto;
 }
-/* line 23, sass/interior.scss */
+/* line 25, sass/interior.scss */
 #login form input[type=submit] {
   cursor: pointer;
   display: block;
@@ -29,13 +39,13 @@
   background: green;
   border: 0 none;
 }
-/* line 32, sass/interior.scss */
+/* line 34, sass/interior.scss */
 #login form input[type=submit]:hover {
   background: blue;
 }
 
 /* -- Models Detail --------------- */
-/* line 40, sass/interior.scss */
+/* line 42, sass/interior.scss */
 .car-block {
   width: 240px;
   display: inline-block;
@@ -43,38 +53,38 @@
   margin: 1em 1.2em;
 }
 
-/* line 46, sass/interior.scss */
+/* line 48, sass/interior.scss */
 .car-block img {
   max-width: 100%;
   margin-bottom: .5em;
 }
 
-/* line 51, sass/interior.scss */
+/* line 53, sass/interior.scss */
 .car-block img.own {
   border-bottom: 10px solid #2E8B57;
 }
 
 /*green*/
-/* line 52, sass/interior.scss */
+/* line 54, sass/interior.scss */
 .car-block img.own-not {
   border-bottom: 10px solid #de3939;
 }
 
 /*red*/
-/* line 53, sass/interior.scss */
+/* line 55, sass/interior.scss */
 .car-block img.own-poor {
   border-bottom: 10px solid #ffde42;
 }
 
 /*yellow*/
-/* line 55, sass/interior.scss */
+/* line 57, sass/interior.scss */
 .car-block p {
   max-width: 95%;
   margin: 0 0 .4em;
   line-height: 120%;
 }
 
-/* line 61, sass/interior.scss */
+/* line 63, sass/interior.scss */
 #photoref {
   font-size: x-small;
   font-style: italic;

@@ -70,7 +70,7 @@
 				<h2>What is the Matchbox University?</h2>
 				<p>The Matchbox University is an on-line database of Matchbox ‘miniatures’, from regular wheels models up through this year’s versions.</p>
 				<p>The listings are built in a relational database to catalog and categorize the models uniquely.</p>
-				<p><a href="#" class="button">Learn More</a></p>
+				<p><a href="About_site.php" class="button">Learn More</a></p>
 			</div>
 			<div class="large-5 columns">
 				<img src="images/banners/professor.png" />

@@ -1,7 +1,9 @@
 @import "settings";
 
 /* -- Main -- */
-#main {}
+#main {padding-top:10em; }
+
+.home #main {padding-top:0;}
 
 
 /* -- Sidebar -- */
