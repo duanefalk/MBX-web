@@ -30,6 +30,7 @@
 		<hr>
 		
 		<form action="Create_User_Account_Process.php" method="post">
+<<<<<<< HEAD
 			
 			<div class="formRow">
 				<label>Username* (4-20 chars, alphanumeric only):</label>
@@ -91,6 +92,40 @@
 							echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
 						}	
 					?>
+=======
+		<br />
+		<p>Username* (4-20 chars, alphanumeric only):   <?php echo "$Username"; ?> </p>  	  
+		<p>Password* (at least 4 chars, alphanumeric only):     <input type="text" name="Password" value="" size="40" id="Password"</p>
+		<?php $_SESSION['Sec_Lvl']=2; ?> 
+		<p>First Name*:      <input type="text" name="First_Name" value="<?php echo $row['$First_Name']; ?>" size="60" id="First_Name"</p>
+		<p>Last Name*:      <input type="text" name="Last_Name" value="<?php echo $row['$Last_Name']; ?>" size="60" id="Last_Name"</p>
+		<p>Email*:      <input type="text" name="User_Email" value="<?php echo $row['$User_Email']; ?>" size="60" id="User_Email"</p>
+		<p>Home page url (if you have a web site):      <input type="text" name="User_Url" value="<?php echo $row['$User_Url']; ?>" size="60" id="User_Url"</p>
+		<p>Address (please enter country at minimum):      <input type="text" name="User_Address" value="<?php echo $row['$User_Address']; ?>" size="60" id="User_Address"</p>
+		<p>Phone:      <input type="text" name="User_Phone" value="<?php echo $row['$User_Phone']; ?>" size="20" id="User_Phone"</p>
+		<p>Areas of Interest (choose as many as apply): </p>
+			<?php
+				$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%UserInterest%' ORDER BY ValueDispOrder ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {
+					//echo "made connection ".$result."<br />";		
+				}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select multiple size=10 name="Areas_of_Interest[]">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+				}	
+			?>
+>>>>>>> FETCH_HEAD
 				</select>
 			</div>
 				
