@@ -1,6 +1,6 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
-<?php include("includes/navUtility.php"); ?>
+
 <?php include("includes/header.php"); ?>
 
 <head>
@@ -38,60 +38,13 @@
 		});
 	</script>
 
-	<style>
-		body{
-			font: 62.5% "Trebuchet MS", sans-serif;
-			/* margin: 50px; */
-		}
-		.demoHeaders {
-			margin-top: 2em;
-		}
-		#dialog-link {
-			padding: .4em 1em .4em 20px;
-			text-decoration: none;
-			position: relative;
-		}
-		#dialog-link span.ui-icon {
-			margin: 0 5px 0 0;
-			position: absolute;
-			left: .2em;
-			top: 50%;
-			margin-top: -8px;
-		}
-		#icons {
-			margin: 0;
-			padding: 0;
-		}
-		#icons li {
-			margin: 2px;
-			position: relative;
-			padding: 4px 0;
-			cursor: pointer;
-			float: left;
-			list-style: none;
-		}
-		#icons span.ui-icon {
-			float: left;
-			margin: 0 4px;
-		}
-		.fakewindowcontain .ui-widget-overlay {
-			position: absolute;
-		}
-	</style>
 </head>
 
 <form name="SearchReleases" action="Search_Releases_Process.php" method="post">
 
 <div class="row">
-
-	<div class="large-3 columns sidebar">
 	
-		<a href="index.php">Return to Main Page</a>
-	
-	</div>
-	
-	
-	<div class="large-9 columns">
+	<div class="large-12 columns">
 	
 		<h2 class="demoHeaders">Search by Package Info</h2>
 		<p>Choose one or more package identifiers to search with.</p>
@@ -253,7 +206,7 @@
 		
 		</div>
 		
-		<input type="button" name="testcheckbox" id="testcheckbox" value="Check Query" onclick="onCheckQuery()">
+		<input type="button" name="testcheckbox" class="button dark" id="testcheckbox" value="Check Query" onclick="onCheckQuery()">
 					
 		<h2>Your Query So Far: </h2>
 		<div id="querybox">
@@ -262,7 +215,7 @@
 			<br />
 		</div>
 		
-		<input type="submit"  name="submit" value="OK to Submit"/>
+		<input type="submit" class="button dark" name="submit" value="Submit"/>
 			
 		<a href="Search_Releases_Menu.php">Cancel/Clear</a>
 			

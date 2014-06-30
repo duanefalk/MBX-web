@@ -35,21 +35,28 @@ img {
 a {
   color: #333333;
   border: none;
+  outline: none;
 }
 
-/* line 14, sass/style.scss */
+/* line 15, sass/style.scss */
 a:hover,
-a:active {
+a:active,
+a:focus {
   color: #d45132;
   text-decoration: none;
 }
 
-/* line 16, sass/style.scss */
+/* line 17, sass/style.scss */
+.row {
+  max-width: 62.5rem;
+}
+
+/* line 19, sass/style.scss */
 .clear {
   clear: both;
 }
 
-/* line 18, sass/style.scss */
+/* line 21, sass/style.scss */
 .button {
   padding: .6em 1.4em;
   font-family: 'Lato', sans-serif;
@@ -61,24 +68,24 @@ a:active {
   border: 2px solid #FFFFFF;
   border-radius: 5px;
 }
-/* line 25, sass/style.scss */
+/* line 28, sass/style.scss */
 .button:hover {
   background: #087b80;
 }
-/* line 27, sass/style.scss */
+/* line 30, sass/style.scss */
 .button.dark {
   color: #d45132;
   border-color: #d45132;
 }
-/* line 29, sass/style.scss */
-.button.dark:hover {
+/* line 33, sass/style.scss */
+.button.dark:hover, .button.dark:focus {
   color: #087b80;
   background: none;
   border-color: #087b80;
 }
 
 /* -- Header --------------- */
-/* line 36, sass/style.scss */
+/* line 40, sass/style.scss */
 #header {
   position: fixed;
   z-index: 2;
@@ -89,12 +96,12 @@ a:active {
   background: #d45132;
 }
 
-/* line 38, sass/style.scss */
+/* line 42, sass/style.scss */
 #logo {
   display: block;
 }
 
-/* line 40, sass/style.scss */
+/* line 44, sass/style.scss */
 #mainNav {
   list-style-type: none;
   margin: 1em 0 0;
@@ -104,11 +111,11 @@ a:active {
   font-style: normal;
   letter-spacing: .75px;
 }
-/* line 45, sass/style.scss */
+/* line 49, sass/style.scss */
 #mainNav li {
   display: inline-block;
 }
-/* line 46, sass/style.scss */
+/* line 50, sass/style.scss */
 #mainNav a {
   padding: .5em 1em;
   font-size: 90%;
@@ -116,13 +123,13 @@ a:active {
 }
 
 /* -- Navigation ------------- */
-/* line 54, sass/style.scss */
+/* line 58, sass/style.scss */
 #utilityNav {
   margin-bottom: .5em;
   text-align: right;
   background: rgba(51, 51, 51, 0.25);
 }
-/* line 59, sass/style.scss */
+/* line 63, sass/style.scss */
 #utilityNav a {
   display: inline-block;
   padding: 8px;
@@ -130,17 +137,17 @@ a:active {
   color: #f6f3dd;
   text-decoration: none;
 }
-/* line 66, sass/style.scss */
+/* line 70, sass/style.scss */
 #utilityNav a:hover, #utilityNav a:visited, #utilityNav a:active {
   text-decoration: underline;
 }
-/* line 69, sass/style.scss */
+/* line 73, sass/style.scss */
 #utilityNav em {
   color: white;
 }
 
 /* -- Footer ------------- */
-/* line 77, sass/style.scss */
+/* line 81, sass/style.scss */
 #footer {
   margin: 4em 0 0;
   padding: 3em 0;
@@ -148,67 +155,15 @@ a:active {
   color: #f6f3dd;
   background: #087b80 url("../images/bgGrit.jpg") top repeat;
 }
-/* line 82, sass/style.scss */
+/* line 86, sass/style.scss */
 #footer p {
   color: #f6f3dd;
 }
 
-/* -- Home --------------- */
-/* line 88, sass/style.scss */
-#header-home {
-  margin-bottom: 2em;
-  background: #d45132 url("../images/banners/chalkboard.png") center center no-repeat;
-}
-/* line 91, sass/style.scss */
-#header-home * {
-  color: #f6f3dd;
-}
-/* line 93, sass/style.scss */
-#header-home #banner {
-  margin-top: 2em;
-}
-/* line 96, sass/style.scss */
-#header-home #banner #bannerText {
-  margin-top: 2em;
-}
-
-/* line 102, sass/style.scss */
-#quick_search {
-  padding: 1.5em;
-  color: white;
-  background: #087b80;
-  border-radius: 1em;
-}
-/* line 105, sass/style.scss */
-#quick_search h3 {
-  color: white;
-}
-/* line 106, sass/style.scss */
-#quick_search form {
-  margin-bottom: 0;
-}
-/* line 109, sass/style.scss */
-#quick_search form label {
-  color: white;
-}
-/* line 110, sass/style.scss */
-#quick_search form input {
-  display: inline-block;
-  margin-bottom: 0;
-}
-/* line 111, sass/style.scss */
-#quick_search form input[type=text] {
-  width: 72%;
-  margin-right: 2%;
-  border: none;
-  box-shadow: 0;
-}
-/* line 112, sass/style.scss */
-#quick_search form input[type=submit] {
-  width: 25%;
-  font-size: 90%;
-}
-/* line 114, sass/style.scss */
-#quick_search form input[type=submit]:hover {
-  background: #d45132;
+/* -- Forms -- */
+/* line 90, sass/style.scss */
+.formRow {
+  margin-bottom: 1em;
+  padding-bottom: .5em;
+  border-bottom: 0.2em solid rgba(80, 63, 45, 0.15);
 }

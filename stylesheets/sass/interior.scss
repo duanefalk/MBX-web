@@ -1,7 +1,7 @@
 @import "settings";
 
 /* -- Main -- */
-#main {padding-top:10em; }
+#main {padding-top:8em; }
 
 .home #main {padding-top:0;}
 
@@ -12,6 +12,42 @@
 	font-size:120%;
 
 	a {display:block; margin:.5em 0;}
+}
+
+
+
+
+/* -- Home --------------- */
+#header-home {
+	margin-bottom:2em; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;
+
+	* {color:$cream;}
+	
+	#banner {
+		margin-top:2em;
+	
+		#bannerText {
+			margin-top:2em;
+		}	
+	}
+}
+
+#quick_search {
+	padding:1.5em; color:$white; background:$teal; border-radius:1em;
+	
+	h3 {color:$white;}
+	form {
+		margin-bottom:0;
+	
+		label {color:$white;}
+		input {display:inline-block; margin-bottom:0;}
+		input[type=text] {width:72%; margin-right:2%; border:none; box-shadow:0;}
+		input[type=submit] {
+			width:25%; font-size:90%;
+			&:hover {background:$orange;}	
+		}
+	}
+		
 }
 
 

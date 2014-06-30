@@ -4,7 +4,7 @@
 /* -- Main -- */
 /* line 4, sass/interior.scss */
 #main {
-  padding-top: 10em;
+  padding-top: 8em;
 }
 
 /* line 6, sass/interior.scss */
@@ -24,12 +24,72 @@
   margin: .5em 0;
 }
 
+/* -- Home --------------- */
+/* line 21, sass/interior.scss */
+#header-home {
+  margin-bottom: 2em;
+  background: #d45132 url("../images/banners/chalkboard.png") center center no-repeat;
+}
+/* line 24, sass/interior.scss */
+#header-home * {
+  color: #f6f3dd;
+}
+/* line 26, sass/interior.scss */
+#header-home #banner {
+  margin-top: 2em;
+}
+/* line 29, sass/interior.scss */
+#header-home #banner #bannerText {
+  margin-top: 2em;
+}
+
+/* line 35, sass/interior.scss */
+#quick_search {
+  padding: 1.5em;
+  color: white;
+  background: #087b80;
+  border-radius: 1em;
+}
+/* line 38, sass/interior.scss */
+#quick_search h3 {
+  color: white;
+}
+/* line 39, sass/interior.scss */
+#quick_search form {
+  margin-bottom: 0;
+}
+/* line 42, sass/interior.scss */
+#quick_search form label {
+  color: white;
+}
+/* line 43, sass/interior.scss */
+#quick_search form input {
+  display: inline-block;
+  margin-bottom: 0;
+}
+/* line 44, sass/interior.scss */
+#quick_search form input[type=text] {
+  width: 72%;
+  margin-right: 2%;
+  border: none;
+  box-shadow: 0;
+}
+/* line 45, sass/interior.scss */
+#quick_search form input[type=submit] {
+  width: 25%;
+  font-size: 90%;
+}
+/* line 47, sass/interior.scss */
+#quick_search form input[type=submit]:hover {
+  background: #d45132;
+}
+
 /* -- Login Screen --------------- */
-/* line 19, sass/interior.scss */
+/* line 55, sass/interior.scss */
 #login {
   margin: 2em auto;
 }
-/* line 25, sass/interior.scss */
+/* line 61, sass/interior.scss */
 #login form input[type=submit] {
   cursor: pointer;
   display: block;
@@ -39,13 +99,13 @@
   background: green;
   border: 0 none;
 }
-/* line 34, sass/interior.scss */
+/* line 70, sass/interior.scss */
 #login form input[type=submit]:hover {
   background: blue;
 }
 
 /* -- Models Detail --------------- */
-/* line 42, sass/interior.scss */
+/* line 78, sass/interior.scss */
 .car-block {
   width: 240px;
   display: inline-block;
@@ -53,38 +113,38 @@
   margin: 1em 1.2em;
 }
 
-/* line 48, sass/interior.scss */
+/* line 84, sass/interior.scss */
 .car-block img {
   max-width: 100%;
   margin-bottom: .5em;
 }
 
-/* line 53, sass/interior.scss */
+/* line 89, sass/interior.scss */
 .car-block img.own {
   border-bottom: 10px solid #2E8B57;
 }
 
 /*green*/
-/* line 54, sass/interior.scss */
+/* line 90, sass/interior.scss */
 .car-block img.own-not {
   border-bottom: 10px solid #de3939;
 }
 
 /*red*/
-/* line 55, sass/interior.scss */
+/* line 91, sass/interior.scss */
 .car-block img.own-poor {
   border-bottom: 10px solid #ffde42;
 }
 
 /*yellow*/
-/* line 57, sass/interior.scss */
+/* line 93, sass/interior.scss */
 .car-block p {
   max-width: 95%;
   margin: 0 0 .4em;
   line-height: 120%;
 }
 
-/* line 63, sass/interior.scss */
+/* line 99, sass/interior.scss */
 #photoref {
   font-size: x-small;
   font-style: italic;

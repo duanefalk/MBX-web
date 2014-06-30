@@ -190,7 +190,7 @@
 	<div class="row">
 		
 		<div class="large-12 columns">
-			<input type="submit" class="button" name="submit" value="Search" />
+			<input type="submit" class="button dark" name="submit" value="Search" />
 		
 			<a href="Search_Models_Menu.php">Cancel / Clear</a>
 		</div>

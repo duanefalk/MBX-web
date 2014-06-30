@@ -3,8 +3,8 @@
 	<!-- Top Menu -->
 	<div class="row">
 		<div class="large-12 columns">
-			<a class="button" href="Search_Models_Menu.php">Return to Search Models</a>
-			<a class="button" href="index.php">Return to Main Page</a>
+			<a class="button dark" href="Search_Models_Menu.php">Return to Search Models</a>
+			<a class="button dark" href="index.php">Return to Main Page</a>
 		</div>
 	</div>
 	
