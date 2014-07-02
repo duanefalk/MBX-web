@@ -18,7 +18,8 @@
 			$query= ("SELECT DISTINCT Test_Matchbox_Versions.UMID, Test_Matchbox_Versions.VerID, Test_Matchbox_Versions.VerName, Test_Matchbox_Versions.VerYrFirstRel, Test_Matchbox_Versions.FAB_No, Test_Matchbox_Versions.VerPhoto1Ref, Test_Matchbox_Versions.Master_Mack_No
 							 FROM Test_Matchbox_Versions
 							 LEFT JOIN Test_Matchbox_Variations ON Test_Matchbox_Versions.VerID=Test_Matchbox_Variations.VerID
-							 WHERE Test_Matchbox_Versions.TempaText LIKE '%$TexttoSearch%' OR Test_Matchbox_Variations.TempaVar LIKE '%$TexttoSearch%'");	
+							 WHERE Test_Matchbox_Versions.TempaText LIKE '%$TexttoSearch%' OR Test_Matchbox_Variations.TempaVar LIKE '%$TexttoSearch%'
+							 ORDER BY Test_Matchbox_Versions.VerID ASC");	
 			$result=0;
 			$rows=0;
 			// echo $result;
