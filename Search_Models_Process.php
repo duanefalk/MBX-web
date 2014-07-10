@@ -58,7 +58,7 @@
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `TMatchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
 							 FROM Matchbox_Models
-							 LEFT JOIN Matchbox_Versions ON TMatchbox_Models.UMID=Matchbox_Versions.UMID
+							 LEFT JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
 							 WHERE Matchbox_Versions.VerName LIKE '%$ID_Value1%'");	
 				}
 				elseif ($_POST[Name]) {
