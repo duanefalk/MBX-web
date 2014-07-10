@@ -16,7 +16,7 @@
     echo $Text."<br />";
     echo $Updt_Dt."<br />";  
     
-    $query="INSERT INTO Test_Matchbox_Microvariations (UMID, Microvariation, Microvar_Updt_Dt)
+    $query="INSERT INTO Matchbox_Microvariations (UMID, Microvariation, Microvar_Updt_Dt)
             VALUES ('$UMID','$Text','$Updt_Dt')";
 
     $outcome=mysql_query($query);
