@@ -16,7 +16,7 @@ session_start();
         //Do collection table updates
         //Fields:
     	$User=$_SESSION['Username'];
-	$query3=("SELECT * FROM Test_Matchbox_User_Collections WHERE Username='$User'");								
+	$query3=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");								
 	$result3=0;
 	$rows_count3=0;									
 	$result3 = mysql_query($query3);
@@ -37,7 +37,7 @@ session_start();
 	echo $User_Coll_ID."<br />";
 	echo $Wishlist_InactivFlg."<br />";
      
-        $query="INSERT INTO Test_Matchbox_User_Wishlist (Username, User_Coll_ID, UMID, VerID, VarID, Wishlist_InactivFlg) 
+        $query="INSERT INTO Matchbox_User_Wishlist (Username, User_Coll_ID, UMID, VerID, VarID, Wishlist_InactivFlg) 
             VALUES ('$User', '$User_CollID', '$UMID','$VerID', '$VarID', '$Wishlist_InactivFlg')";
    
         $outcome=mysql_query($query);

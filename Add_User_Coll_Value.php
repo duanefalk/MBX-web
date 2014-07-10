@@ -19,7 +19,7 @@ session_start();
         $Coll_List_Val_InactivFlg=0;
 
        
-        $query="INSERT INTO Test_Matchbox_User_Coll_Value_Lists (Username, User_Coll_ID, Coll_List_Type, Coll_List_Value, Coll_List_Val_DisplOrd, Coll_List_Val_InactivFlg) 
+        $query="INSERT INTO Matchbox_User_Coll_Value_Lists (Username, User_Coll_ID, Coll_List_Type, Coll_List_Value, Coll_List_Val_DisplOrd, Coll_List_Val_InactivFlg) 
             VALUES ('$Username','$User_Coll_ID','$UserCollValType', '  $UserCollValue', '$UserCollValueDisplOrd', '$Coll_List_Val_InactivFlg')";
    
         $outcome=mysql_query($query);
@@ -47,7 +47,7 @@ session_start();
                     <p>Collection ID: <input type="text" name="User_Coll_ID" value="" size="20" id="User_Coll_ID"></p><br />
                     <p>Value Type: </p>
                         <?php
-                                $query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%UserCollValType%'");								
+                                $query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UserCollValType%'");								
                                 $result=0;
                                 $rows_count=0;									
                                 $result = mysql_query($query);

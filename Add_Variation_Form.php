@@ -59,7 +59,7 @@
 			<p>Base Name:     	  <input type="text" name="BaseName" value="" size="60" id="BaseName"</p>
 						<p>Company on Base: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%BaseCompany%'");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseCompany%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -82,7 +82,7 @@
 				</select>
 			<p>Manufacture Location:    </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%ManufactureOrigin%'");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%ManufactureOrigin%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -106,7 +106,7 @@
 			<p>Variation Year:     	  <input type="text" name="VarYear" value="" size="9" id="VarYear"</p>	
 			<p>Front Wheel Code: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Wheels");								
+					$query=("SELECT * FROM Matchbox_Wheels");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -129,7 +129,7 @@
 				</select>				
 			<p>Rear Wheel Code: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Wheels");								
+					$query=("SELECT * FROM Matchbox_Wheels");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -152,7 +152,7 @@
 				</select>
 			<p>Window Color: </p>	
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%WindowColor%' ORDER BY 'ValueDispOrder' ASC");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%WindowColor%' ORDER BY 'ValueDispOrder' ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -175,8 +175,8 @@
 				</select>
 			<p>Interior Color: </p>	
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%InteriorColor%' ORDER BY ValueDispOrder ASC");
-					// $query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%InteriorColor%' ORDER BY 'ValueDispOrder' ASC");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%InteriorColor%' ORDER BY ValueDispOrder ASC");
+					// $query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%InteriorColor%' ORDER BY 'ValueDispOrder' ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -199,7 +199,7 @@
 				</select>	
 			<p>Base (1) Material: </p>	
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%BaseType%' ORDER BY 'ValueDispOrder' ASC");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseType%' ORDER BY 'ValueDispOrder' ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -222,7 +222,7 @@
 				</select>
 			<p>Base (1) Color: </p>	
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%BaseColor%' ORDER BY 'ValueDispOrder' ASC");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseColor%' ORDER BY 'ValueDispOrder' ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -245,7 +245,7 @@
 				</select>
 			<p>Base (2) Type: </p>	
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%Base2Type%' ORDER BY 'ValueDispOrder' ASC");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%Base2Type%' ORDER BY 'ValueDispOrder' ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -268,7 +268,7 @@
 				</select>
 			<p>Base (2) Material: </p>	
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%BaseType%' ORDER BY 'ValueDispOrder' ASC");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseType%' ORDER BY 'ValueDispOrder' ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -291,7 +291,7 @@
 				</select>	
 			<p>Base (2) Color: </p>	
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%BaseColor%' ORDER BY 'ValueDispOrder' ASC");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseColor%' ORDER BY 'ValueDispOrder' ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -314,7 +314,7 @@
 				</select>	
 			<p>Finish: </p>	
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%Finish%'");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%Finish%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -359,7 +359,7 @@
 			<p>Variation Photo 1 Name:     	  <input type="text" name="VarPhoto1Name" value="" size="40" id="VarPhoto1Name"</p>
 			<p>Variation Photo 1 Reference: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_References ORDER BY RefCode ASC");								
+					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -383,7 +383,7 @@
 			<p>Variation Photo 2 Name:     	  <input type="text" name="VarPhoto2Name" value="" size="40" id="VarPhoto2Name"</p>
 			<p>Variation Photo 2 Reference: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_References ORDER BY RefCode ASC");								
+					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);

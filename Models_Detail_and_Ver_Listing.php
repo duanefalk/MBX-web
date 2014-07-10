@@ -25,7 +25,7 @@ $Username=$_SESSION['Username'];
 			<?php
 			//show model header info
 			$model_for_detail=$_GET["model"];
-			$query2= ("SELECT * FROM Test_Matchbox_Models WHERE UMID LIKE '%$model_for_detail%'");
+			$query2= ("SELECT * FROM Matchbox_Models WHERE UMID LIKE '%$model_for_detail%'");
 			$result2 = mysql_query($query2);
 			if (mysql_num_rows($result2)==0) {			
 				echo "<h3>Error - No matching results found</h3>"; //mysql_error();
@@ -46,7 +46,7 @@ $Username=$_SESSION['Username'];
 			echo "<br />";
 			$PhotoRefCd= $row2["ModelPhotoRef"];
 			if ($PhotoRefCd) {
-				$query3= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+				$query3= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 				$result3= mysql_query($query3);
 				$row3 =mysql_fetch_array($result3);
 				echo "<p id=\"photoref\">Photo by: ". $row3["RefName"]."</p>";
@@ -71,7 +71,7 @@ $Username=$_SESSION['Username'];
 			}
 			echo "<br></>";
 			//check if any microvar listings
-			$query4=("SELECT * FROM Test_Matchbox_Model_Microvariations WHERE Test_Matchbox_Model_Microvariations.UMID='$model_for_detail'");
+			$query4=("SELECT * FROM Matchbox_Model_Microvariations WHERE Matchbox_Model_Microvariations.UMID='$model_for_detail'");
 			$result4 = mysql_query($query4);
 			$rowcount4=mysql_num_rows($result4);
 			if ($rowcount4!=0) {
@@ -87,7 +87,7 @@ $Username=$_SESSION['Username'];
 			if (($Sec_Lvl < "2") OR ($Code2_Pref=="0")) {
 				//get version data to display
 				
-				$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' ORDER BY VerYrFirstRel,VerID ASC");
+				$query= ("SELECT * FROM Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' ORDER BY VerYrFirstRel,VerID ASC");
 				$result=0;
 				$rows=0;
 				// echo $result;
@@ -154,7 +154,7 @@ $Username=$_SESSION['Username'];
 						echo "<br />";
 						$PhotoRefCd= $row["VerPhoto1Ref"];
 						if ($PhotoRefCd) {
-							$query2= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+							$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 							$result2= mysql_query($query2);
 							$row2 =mysql_fetch_array($result2);
 							echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
@@ -184,7 +184,7 @@ $Username=$_SESSION['Username'];
 					}	
 			} else {
 				//start by showing code1
-				$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='1' ORDER BY VerYrFirstRel,VerID ASC");
+				$query= ("SELECT * FROM Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='1' ORDER BY VerYrFirstRel,VerID ASC");
 				$result=0;
 				$rows=0;
 				// echo $result;
@@ -207,12 +207,12 @@ $Username=$_SESSION['Username'];
 					
 					if ($Sec_Lvl >= "2") {	
 						//if have account, have collection?
-						$query_coll=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$Username'");
+						$query_coll=("SELECT * FROM Matchbox_Collection WHERE Username='$Username'");
 						$result_coll = mysql_query($query_coll);
 						if ($result_coll) {
 								
 							//if so, check if have in collection
-							$query_own=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$Username' AND VerID='$Version_to_detail'");
+							$query_own=("SELECT * FROM Matchbox_Collection WHERE Username='$Username' AND VerID='$Version_to_detail'");
 							$result_own = mysql_query($query_own);
 							$rows_own= mysql_num_rows($result_own);
 							//$rows_own= mysql_num_rows($result_own);
@@ -249,7 +249,7 @@ $Username=$_SESSION['Username'];
 					echo "<br />";
 					$PhotoRefCd= $row["VerPhoto1Ref"];
 					if ($PhotoRefCd) {
-						$query2= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
@@ -269,7 +269,7 @@ $Username=$_SESSION['Username'];
 				}
 				//then check if to show code 2 also. if so sep srch for code 2
 				if (($Sec_Lvl >= "2") AND ($Code2_Pref == "1")) {
-					$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='2' ORDER BY VerYrFirstRel,VerID ASC");
+					$query= ("SELECT * FROM Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='2' ORDER BY VerYrFirstRel,VerID ASC");
 					$result=0;
 					$rows=0;
 					// echo $result;
@@ -293,11 +293,11 @@ $Username=$_SESSION['Username'];
 						$url= "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
 							
 						//have collection?
-						$query_coll=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$Username'");
+						$query_coll=("SELECT * FROM Matchbox_Collection WHERE Username='$Username'");
 						$result_coll = mysql_query($query_coll);
 						if ($result_coll) {
 							//if so, check if have in collection
-							$query_own=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$Username' AND VerID='$Version_to_detail'");
+							$query_own=("SELECT * FROM Matchbox_Collection WHERE Username='$Username' AND VerID='$Version_to_detail'");
 							$result_own = mysql_query($query_own);
 							$rows_own=mysql_num_rows($result_own);
 							//$rows_own= mysql_num_rows($result_own);
@@ -320,7 +320,7 @@ $Username=$_SESSION['Username'];
 							echo "<br />";
 							$PhotoRefCd= $row["VerPhoto1Ref"];
 							if ($PhotoRefCd) {
-								$query2= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+								$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 								$result2= mysql_query($query2);
 								$row2 =mysql_fetch_array($result2);
 								echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
@@ -346,7 +346,7 @@ $Username=$_SESSION['Username'];
 			$rel_result=0;
 			$rel_rows=0;
 			//Search for 1-75
-			$rel_query=("SELECT * FROM Test_Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND Series='1-75' ORDER BY RelYr, CountryofSale, SeriesID, RelID");
+			$rel_query=("SELECT * FROM Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND Series='1-75' ORDER BY RelYr, CountryofSale, SeriesID, RelID");
 			$rel_result = mysql_query($rel_query);
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {
@@ -374,7 +374,7 @@ $Username=$_SESSION['Username'];
 						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
-						$query2= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
@@ -390,7 +390,7 @@ $Username=$_SESSION['Username'];
 				}
 			}
 			//Search for Superfast
-			$rel_query=("SELECT * FROM Test_Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND Series='Superfast' ORDER BY RelYr, CountryofSale, SeriesID, RelID");
+			$rel_query=("SELECT * FROM Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND Series='Superfast' ORDER BY RelYr, CountryofSale, SeriesID, RelID");
 			$rel_result = mysql_query($rel_query);
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {	
@@ -418,7 +418,7 @@ $Username=$_SESSION['Username'];
 						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
-						$query2= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
@@ -435,7 +435,7 @@ $Username=$_SESSION['Username'];
 			}
 
 			//Search for Multipacks
-			$rel_query=("SELECT * FROM Test_Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND Series='Multi-Packs' ORDER BY RelYr, CountryofSale, SeriesID, RelID");
+			$rel_query=("SELECT * FROM Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND Series='Multi-Packs' ORDER BY RelYr, CountryofSale, SeriesID, RelID");
 			$rel_result = mysql_query($rel_query);
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {
@@ -463,7 +463,7 @@ $Username=$_SESSION['Username'];
 						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
-						$query2= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
@@ -480,7 +480,7 @@ $Username=$_SESSION['Username'];
 			}
 			
 			//Search for Other Code 1
-			$rel_query=("SELECT * FROM Test_Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND (Series!='Multi-Packs' AND Series!='Superfast' AND Series!='1-75' AND Series!='Code 2') ORDER BY Series, RelYr, CountryofSale, SeriesID, RelID");
+			$rel_query=("SELECT * FROM Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND (Series!='Multi-Packs' AND Series!='Superfast' AND Series!='1-75' AND Series!='Code 2') ORDER BY Series, RelYr, CountryofSale, SeriesID, RelID");
 			$rel_result = mysql_query($rel_query);
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {	
@@ -508,7 +508,7 @@ $Username=$_SESSION['Username'];
 						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
-						$query2= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";

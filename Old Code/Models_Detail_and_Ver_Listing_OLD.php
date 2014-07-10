@@ -16,7 +16,7 @@
 			<?php
 			//show model header info
 			$model_for_detail=$_GET["model"];
-			$query2= ("SELECT * FROM Test_Matchbox_Models WHERE UMID LIKE '%$model_for_detail%'");
+			$query2= ("SELECT * FROM Matchbox_Models WHERE UMID LIKE '%$model_for_detail%'");
 			$result2 = mysql_query($query2);
 			if(!$result2) {
 				echo "Error in database- No matching results found"; //mysql_error();
@@ -41,7 +41,7 @@
 			} 
 				
 			//get version data to display
-			$query= ("SELECT * FROM Test_Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%'");
+			$query= ("SELECT * FROM Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%'");
 			$result=0;
 			$rows=0;
 			// echo $result;
@@ -73,7 +73,7 @@
 					echo "<br />";
 					$PhotoRefCd= $row["VerPhoto1Ref"];
 					if ($PhotoRefCd) {
-						$query2= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";

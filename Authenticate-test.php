@@ -28,7 +28,7 @@ $_SESSION['Sec_Lvl']=1;
 			         
 			            // check if the user id and password combination exist in database
 			            $query = ("SELECT * 
-			                    FROM Test_MBXU_User_Accounts
+			                    FROM MBXU_User_Accounts
 			                    WHERE Username = '$userId'
 			                    AND Password = '$password'");   
 			            $result = mysql_query($query);

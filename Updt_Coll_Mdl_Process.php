@@ -28,7 +28,7 @@
         $Coll_InactiveFlg="0";
         
 	//update record, omit copy, username, coll id and var id since they are the keys for thesearch and cant change        
-        $query=("UPDATE Test_Matchbox_Collection SET
+        $query=("UPDATE Matchbox_Collection SET
 		UMID='$UMID',
 		VerID='$VerID',
 		RelID='$RelID',
@@ -98,7 +98,7 @@
                          echo "<br /><br />";
                         
                         //determine what copy to default in field
-                        $query=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_to_Updt' AND Copy='$Copy_to_Updt'");								
+                        $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_to_Updt' AND Copy='$Copy_to_Updt'");								
 			$result=0;
 			$result=mysql_query($query);
 			echo "rows found: ".mysql_num_rows($result);
@@ -138,7 +138,7 @@
                             //Get this from session vars and add to user prefs hard code for now
                             $Cond_scheme="Alpha_cond";
     
-                            $query=("SELECT * FROM Test_Matchbox_Value_lists WHERE ValueList LIKE '%$Cond_scheme%' ORDER BY ValueDispOrder ASC");								
+                            $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Cond_scheme%' ORDER BY ValueDispOrder ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
@@ -161,7 +161,7 @@
                             //Get this from session vars and add to user prefs hard code for now
                             $Cond_scheme="Alpha_cond";
     
-                            $query=("SELECT * FROM Test_Matchbox_Value_lists WHERE ValueList LIKE '%$Cond_scheme%' ORDER BY ValueDispOrder ASC");								
+                            $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Cond_scheme%' ORDER BY ValueDispOrder ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
@@ -183,7 +183,7 @@
                     <p>Item Value:      <input type="text" name="Coll_Value" value="<?php echo $row["ItemVal"];?>" size="10" id="Coll_Value"></p>
                     <p>Storage Location 1:     
 			<?php
-			    $query=("SELECT * FROM Test_Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
                                     AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -204,7 +204,7 @@
                             </select>
                     <p>Storage Location 2:    
 			<?php
-			    $query=("SELECT * FROM Test_Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
                                     AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -226,7 +226,7 @@
                     <p>Purchase Date:      <input type="text" name="Coll_Purch_Dt" value="<?php echo $row["PurchDt"];?>" size="8" id="Coll_Purch_Dt"></p>
                     <p>Seller:      
 			<?php
-			    $query=("SELECT * FROM Test_Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Seller%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Seller%'
                                     AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									

@@ -33,7 +33,7 @@ session_start();
 		<p>Phone:      <input type="text" name="User_Phone" value="" size="20" id="User_Phone"</p>
 		<p>Areas of Interest (choose as many as apply): </p>
 			<?php
-				$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%UserInterest%' ORDER BY ValueDispOrder ASC");								
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UserInterest%' ORDER BY ValueDispOrder ASC");								
 				$result=0;
 				$rows_count=0;									
 				$result = mysql_query($query);

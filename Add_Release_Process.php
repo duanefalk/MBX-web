@@ -81,7 +81,7 @@
     echo $RelPkgPhotoRef."<br />";
     
    
-    $query="INSERT INTO Test_Matchbox_Releases (UMID, VerID, VarID, RelID, RelYr, CountryOfSale, Theme, Series, SeriesID, ShowSeriesID,
+    $query="INSERT INTO Matchbox_Releases (UMID, VerID, VarID, RelID, RelYr, CountryOfSale, Theme, Series, SeriesID, ShowSeriesID,
             PkgName, MdlNameOnPkg, SubSeries, SubSeriesID, ShowSubSeriesID, UnitTyp, PkgID, PkgVarCd, RelComm, RelPkgPhotoName,
             RelPkgPhotoRef)
             VALUES ('$UMID','$VerID','$VarID','$RelID','$RelYr','$CountryOfSale','$Theme','$Series', '$SeriesID', '$ShowSeriesID',

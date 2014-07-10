@@ -23,9 +23,9 @@ session_start();
 	echo $User_Coll_Created_Date;
 
 	//Add the collection record
-	//$query="INSERT INTO Test_Matchbox_User_Collections (Username, User_Coll_ID, User_Coll_Desc, User_Coll_Created_Date) 
+	//$query="INSERT INTO Matchbox_User_Collections (Username, User_Coll_ID, User_Coll_Desc, User_Coll_Created_Date) 
 	//    VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
-	$query="INSERT INTO Test_Matchbox_User_Collections VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
+	$query="INSERT INTO Matchbox_User_Collections VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
     
 				
 	$outcome=mysql_query($query);
@@ -65,7 +65,7 @@ session_start();
 			//hard coding username for now					
 			$Username=$_SESSION["Username"];
 			$rows_count=0;
-			$query2=("SELECT * FROM Test_Matchbox_User_Collections WHERE Username='$Username'");
+			$query2=("SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'");
 			$result2 = mysql_query($query2);
 			$rows_count= mysql_num_rows($result2);
 			if ($rows_count != 0) {

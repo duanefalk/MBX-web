@@ -28,48 +28,48 @@
 						//LEFT JOIN user_category_subscriptions ON 
 						//user_category_subscriptions.category_id = categories.category_id
 						//and user_category_subscriptions.user_id =1
-						//$query= ("SELECT * FROM Test_Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Test_Matchbox_Versions WHERE `FAB_No`='$ID_Value1')");
-						$query= ("SELECT DISTINCT Test_Matchbox_Models.UMID, Test_Matchbox_Models.MasterModelName, Test_Matchbox_Models.YrFirstProduced, Test_Matchbox_Versions.FAB_No, Test_Matchbox_Models.ModelPhotoRef, Test_Matchbox_Versions.Master_Mack_No
-							 FROM Test_Matchbox_Models
-							 INNER JOIN Test_Matchbox_Versions ON Test_Matchbox_Models.UMID=Test_Matchbox_Versions.UMID
-							 WHERE Test_Matchbox_Versions.FAB_No='$ID_Value1'");
+						//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `FAB_No`='$ID_Value1')");
+						$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
+							 FROM Matchbox_Models
+							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
+							 WHERE Matchbox_Versions.FAB_No='$ID_Value1'");
 						} else {
 						$ID_Value2=$_POST[MAN_No_2];
 						echo "Searching for MAN#s: ". $ID_Value1 ." to ".$ID_Value2 . "<br />";
-						//$query= ("SELECT * FROM Test_Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Test_Matchbox_Versions WHERE `FAB_No`>='$ID_Value1' AND `FAB_No`<='$ID_Value2')");
-						$query= ("SELECT DISTINCT Test_Matchbox_Models.UMID, Test_Matchbox_Models.MasterModelName, Test_Matchbox_Models.YrFirstProduced, Test_Matchbox_Versions.FAB_No, Test_Matchbox_Models.ModelPhotoRef, Test_Matchbox_Versions.Master_Mack_No
-							 FROM Test_Matchbox_Models
-							 INNER JOIN Test_Matchbox_Versions ON Test_Matchbox_Models.UMID=Test_Matchbox_Versions.UMID
-							 WHERE Test_Matchbox_Versions.FAB_No>='$ID_Value1' AND Test_Matchbox_Versions.FAB_No<='$ID_Value2'");
+						//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `FAB_No`>='$ID_Value1' AND `FAB_No`<='$ID_Value2')");
+						$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
+							 FROM Matchbox_Models
+							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
+							 WHERE Matchbox_Versions.FAB_No>='$ID_Value1' AND Matchbox_Versions.FAB_No<='$ID_Value2'");
 					}
 				}
 				elseif ($_POST[Mack_No]) {
 					$ID_Value1=$_POST[Mack_No];
 					echo "Searching for Mack #: ". $ID_Value1 ."<br />";
-					//$query= ("SELECT * FROM Test_Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Test_Matchbox_Versions WHERE `Master_Mack_No`='$ID_Value1')");
-					$query= ("SELECT DISTINCT Test_Matchbox_Models.UMID, Test_Matchbox_Models.MasterModelName, Test_Matchbox_Models.YrFirstProduced, Test_Matchbox_Versions.FAB_No, Test_Matchbox_Models.ModelPhotoRef, Test_Matchbox_Versions.Master_Mack_No
-							 FROM Test_Matchbox_Models
-							 INNER JOIN Test_Matchbox_Versions ON Test_Matchbox_Models.UMID=Test_Matchbox_Versions.UMID
-							 WHERE Test_Matchbox_Versions.Master_Mack_No='$ID_Value1'");
+					//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `Master_Mack_No`='$ID_Value1')");
+					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
+							 FROM Matchbox_Models
+							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
+							 WHERE Matchbox_Versions.Master_Mack_No='$ID_Value1'");
 				}
 				elseif ($_POST[QuickName]) {
 					$ID_Value1=$_POST[QuickName];
 					echo "Searching for Version Name: ".$ID_Value1 ."<br />";
-					//$query= ("SELECT * FROM Test_Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `Test_Matchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Test_Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
-					$query= ("SELECT DISTINCT Test_Matchbox_Models.UMID, Test_Matchbox_Models.MasterModelName, Test_Matchbox_Models.YrFirstProduced, Test_Matchbox_Versions.FAB_No, Test_Matchbox_Models.ModelPhotoRef, Test_Matchbox_Versions.Master_Mack_No
-							 FROM Test_Matchbox_Models
-							 LEFT JOIN Test_Matchbox_Versions ON Test_Matchbox_Models.UMID=Test_Matchbox_Versions.UMID
-							 WHERE Test_Matchbox_Versions.VerName LIKE '%$ID_Value1%'");	
+					//$query= ("SELECT * FROM Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `TMatchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
+					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
+							 FROM Matchbox_Models
+							 LEFT JOIN Matchbox_Versions ON TMatchbox_Models.UMID=Matchbox_Versions.UMID
+							 WHERE Matchbox_Versions.VerName LIKE '%$ID_Value1%'");	
 				}
 				elseif ($_POST[Name]) {
 					$ID_Value1=$_POST[Name];
 					echo "Searching for Any Name: ".$ID_Value1 ."<br />";
-					//$query= ("SELECT * FROM Test_Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `Test_Matchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Test_Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
-					$query= ("SELECT DISTINCT Test_Matchbox_Models.UMID, Test_Matchbox_Models.MasterModelName, Test_Matchbox_Models.YrFirstProduced, Test_Matchbox_Versions.FAB_No, Test_Matchbox_Models.ModelPhotoRef, Test_Matchbox_Versions.Master_Mack_No
-							 FROM Test_Matchbox_Models
-							 LEFT JOIN Test_Matchbox_Versions ON Test_Matchbox_Models.UMID=Test_Matchbox_Versions.UMID
-							 LEFT JOIN Test_Matchbox_Variations ON Test_Matchbox_Models.UMID=Test_Matchbox_Variations.UMID
-							 WHERE Test_Matchbox_Models.MasterModelName LIKE '%$ID_Value1%' OR Test_Matchbox_Versions.VerName LIKE '%$ID_Value1%' OR Test_Matchbox_Variations.BaseName LIKE '%$ID_Value1%'");	
+					//$query= ("SELECT * FROM Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `Matchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
+					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
+							 FROM Matchbox_Models
+							 LEFT JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
+							 LEFT JOIN Matchbox_Variations ON Matchbox_Models.UMID=Matchbox_Variations.UMID
+							 WHERE Matchbox_Models.MasterModelName LIKE '%$ID_Value1%' OR Matchbox_Versions.VerName LIKE '%$ID_Value1%' OR Matchbox_Variations.BaseName LIKE '%$ID_Value1%'");	
 				}
 				elseif ($_POST[UMID_1]) {
 					$ID_String1= strval($_POST[UMID_1]);
@@ -182,11 +182,11 @@
 						}	
 					
 						echo "Searching for UMIDs: ". $ID_String1 ." to ".$ID_String2 . "<br />";
-						//$query= ("SELECT * FROM Test_Matchbox_Models WHERE UMID >='$ID_String1' AND UMID <='$ID_String2' ORDER BY UMID ASC");
-						$query= ("SELECT DISTINCT Test_Matchbox_Models.UMID, Test_Matchbox_Models.MasterModelName, Test_Matchbox_Models.YrFirstProduced, Test_Matchbox_Versions.FAB_No, Test_Matchbox_Models.ModelPhotoRef, Test_Matchbox_Versions.Master_Mack_No
-							 FROM Test_Matchbox_Models
-							 LEFT JOIN Test_Matchbox_Versions ON Test_Matchbox_Models.UMID=Test_Matchbox_Versions.UMID
-							 WHERE Test_Matchbox_Models.UMID>='$ID_String1' AND Test_Matchbox_Models.UMID<='$ID_String2'");
+						//$query= ("SELECT * FROM Matchbox_Models WHERE UMID >='$ID_String1' AND UMID <='$ID_String2' ORDER BY UMID ASC");
+						$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
+							 FROM Matchbox_Models
+							 LEFT JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
+							 WHERE Matchbox_Models.UMID>='$ID_String1' AND Matchbox_Models.UMID<='$ID_String2'");
 					}
 				} else {
 					echo "ERROR no type selected";
@@ -203,11 +203,11 @@
 					echo "Vehicle Type= ".$VehicleType."<br />";
 					$VehicleType=$_POST['TypeofVehicle'];
 					$PrevModelCriteria="1";
-					//$query= "SELECT * FROM Test_Matchbox_Models WHERE `VehicleType` LIKE '%$VehicleType%'  OR `VehicleType2` LIKE '%$VehicleType%'";
-					$query= "SELECT DISTINCT Test_Matchbox_Models.UMID, Test_Matchbox_Models.MasterModelName, Test_Matchbox_Models.YrFirstProduced, Test_Matchbox_Versions.FAB_No, Test_Matchbox_Models.ModelPhotoRef, Test_Matchbox_Versions.Master_Mack_No
-							 FROM Test_Matchbox_Models
-							 LEFT JOIN Test_Matchbox_Versions ON Test_Matchbox_Models.UMID=Test_Matchbox_Versions.UMID
-							 WHERE (Test_Matchbox_Models.VehicleType LIKE '%$VehicleType%' OR Test_Matchbox_Models.VehicleType2 LIKE '%$VehicleType%')";
+					//$query= "SELECT * FROM Matchbox_Models WHERE `VehicleType` LIKE '%$VehicleType%'  OR `VehicleType2` LIKE '%$VehicleType%'";
+					$query= "SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
+							 FROM Matchbox_Models
+							 LEFT JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
+							 WHERE (Matchbox_Models.VehicleType LIKE '%$VehicleType%' OR Matchbox_Models.VehicleType2 LIKE '%$VehicleType%')";
 				
 				}
 				if ($_POST['VehicleMake_Check']) {
@@ -217,15 +217,15 @@
 					if ($PrevModelCriteria != "1") {
 					    //echo "only vehicle make";
 					    $PrevModelCriteria="1";
-					    //$query= "SELECT * FROM Test_Matchbox_Models WHERE `MakeofModel` LIKE '%$VehicleMake%'";
-					    $query= "SELECT DISTINCT Test_Matchbox_Models.UMID, Test_Matchbox_Models.MasterModelName, Test_Matchbox_Models.YrFirstProduced, Test_Matchbox_Versions.FAB_No, Test_Matchbox_Models.ModelPhotoRef, Test_Matchbox_Versions.Master_Mack_No
-							 FROM Test_Matchbox_Models
-							 INNER JOIN Test_Matchbox_Versions ON Test_Matchbox_Models.UMID=Test_Matchbox_Versions.UMID
-							 WHERE Test_Matchbox_Models.MakeofModel LIKE '%$VehicleMake%'";
+					    //$query= "SELECT * FROM Matchbox_Models WHERE `MakeofModel` LIKE '%$VehicleMake%'";
+					    $query= "SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
+							 FROM Matchbox_Models
+							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
+							 WHERE Matchbox_Models.MakeofModel LIKE '%$VehicleMake%'";
 					} ELSE {
 					    //echo "type and make";
 					    $PrevModelCriteria="1";
-					    $query .= " AND Test_Matchbox_Models.MakeofModel LIKE '%$VehicleMake%'";
+					    $query .= " AND Matchbox_Models.MakeofModel LIKE '%$VehicleMake%'";
 					    //echo $query;
 					    //exit;
 					}
@@ -236,14 +236,14 @@
 					$MakeCountry=$_POST['MakeCountry'];
 					if (!$PrevModelCriteria) {
 						$PrevModelCriteria="1";
-						//$query= "SELECT * FROM Test_Matchbox_Models WHERE `CountryofMake` LIKE '%$MakeCountry%'";
-						$query= "SELECT DISTINCT Test_Matchbox_Models.UMID, Test_Matchbox_Models.MasterModelName, Test_Matchbox_Models.YrFirstProduced, Test_Matchbox_Versions.FAB_No, Test_Matchbox_Models.ModelPhotoRef, Test_Matchbox_Versions.Master_Mack_No
-							 FROM Test_Matchbox_Models
-							 INNER JOIN Test_Matchbox_Versions ON Test_Matchbox_Models.UMID=Test_Matchbox_Versions.UMID
-							 WHERE Test_Matchbox_Models.CountryofMake LIKE '%$MakeCountry%'";
+						//$query= "SELECT * FROM Matchbox_Models WHERE `CountryofMake` LIKE '%$MakeCountry%'";
+						$query= "SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
+							 FROM Matchbox_Models
+							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
+							 WHERE Matchbox_Models.CountryofMake LIKE '%$MakeCountry%'";
 				       } ELSE {
 					   $PrevModelCriteria="1";
-					   $query=$query . " AND Test_Matchbox_Models.CountryofMake LIKE '%$MakeCountry%'";
+					   $query=$query . " AND Matchbox_Models.CountryofMake LIKE '%$MakeCountry%'";
 				       }                   
 				}
 				$query = "(".$query.")";
@@ -294,7 +294,7 @@
 				//echo $picture."<br />";
 				$PhotoRefCd= $row["ModelPhotoRef"];
 				if ($PhotoRefCd) {
-					$query2= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+					$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 					$result2= mysql_query($query2);
 					$row2 =mysql_fetch_array($result2);
 					echo "<p>Photo by: ". $row2["RefName"]."</p>";

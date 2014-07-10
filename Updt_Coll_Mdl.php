@@ -7,7 +7,7 @@
 	$VarID=$_POST['Coll_VarID'];
         $User="duanefalk";
         $User_CollID="FALKCOLL1";
-	$query=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$VarID'");								
+	$query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$VarID'");								
 	$result=0;
 	$result=mysql_query($query);
 	if (mysql_num_rows($result) != 0) { 

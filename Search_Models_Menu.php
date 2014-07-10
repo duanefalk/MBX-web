@@ -80,7 +80,7 @@
 						<input type=checkbox name="VehicleType_Check" id="VehicleType_Check" />
 						<label>Vehicle Type:</label>
 						<?php
-							$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");								
+							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");								
 							$result=0;
 							$rows_count=0;									
 							$result = mysql_query($query);
@@ -112,7 +112,7 @@
 						<input type=checkbox name="VehicleMake_Check" id="VehicleMake_Check" />
 						<label>Make of Vehicle:</label>
 						<?php
-							$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehMake%'");								
+							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%VehMake%'");								
 							$result=0;
 							$rows_count=0;									
 							$result = mysql_query($query);
@@ -144,7 +144,7 @@
 						<input type=checkbox name="MakeCountry_Check" id="MakeCountry_Check" />
 						<label>Country of Make:</label>
 						<?php
-							$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%MakeCountry%'");								
+							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%MakeCountry%'");								
 							$result=0;
 							$rows_count=0;									
 							$result = mysql_query($query);

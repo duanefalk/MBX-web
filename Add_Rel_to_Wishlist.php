@@ -23,7 +23,7 @@
 	//echo $User_Coll_ID."<br />";
 	//echo $Wishlist_InactivFlg."<br />";
      
-        $query="INSERT INTO Test_Matchbox_User_Wishlist (Username, User_Coll_ID, UMID, VerID, VarID, RelID, Wishlist_InactivFlg) 
+        $query="INSERT INTO Matchbox_User_Wishlist (Username, User_Coll_ID, UMID, VerID, VarID, RelID, Wishlist_InactivFlg) 
             VALUES ('$Coll_Username', '$User_Coll_ID', '$UMID','$VerID', '$VarID', '$RelID', '$Wishlist_InactivFlg')";
    
         $outcome=mysql_query($query);

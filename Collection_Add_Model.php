@@ -19,7 +19,7 @@
 	echo $User_Coll_Desc;
 	echo $User_Coll_Create_Date;
 	
-	$query="INSERT INTO Test_Matchbox_User_Collections (Username, User_Coll_ID, User_Coll_Desc, User_Coll_Created_Date) 
+	$query="INSERT INTO Matchbox_User_Collections (Username, User_Coll_ID, User_Coll_Desc, User_Coll_Created_Date) 
             VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
    
     

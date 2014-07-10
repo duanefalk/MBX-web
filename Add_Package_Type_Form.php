@@ -26,7 +26,7 @@
 			<p>Package Code:     	  <input type="text" name="PkgVarCode" value="" size="20" id="PkgVarCode"</p>
 			<p>Package Type:     	</p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%PkgType%'");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%PkgType%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -53,7 +53,7 @@
 			<p>Photo Name:     	  <input type="text" name="PkgTypePhotoName" value="" size="20" id="PkgTypePhotoName"</p>
 			<p>Photo Reference:     </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_References ORDER BY RefCode ASC");								
+					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);

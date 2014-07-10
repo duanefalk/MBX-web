@@ -46,7 +46,7 @@
 			<?php
 				$result = 0;
 				$rows_count = 0;
-				$query = ("SELECT * FROM Test_Matchbox_User_Collections WHERE Username='$Username'");													
+				$query = ("SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'");													
 				$result = mysql_query($query);
 				$rows_count = mysql_num_rows($result);
 		                if ($rows_count == 0) {
@@ -65,7 +65,7 @@
 					$Username;
 					$result=0;
 					$rows_count=0;
-					$query=("SELECT * FROM Test_Matchbox_User_Coll_Value_Lists WHERE Username= '$Username'");													
+					$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username= '$Username'");													
 					$result = mysql_query($query);
 					$rows_count= mysql_num_rows($result);
 			                if ($rows_count == 0) {
@@ -85,7 +85,7 @@
 			<h3>Step 4: Add models to your collection</h3>
 				<?php
 					//fake until set up
-					$query_mdls= ("SELECT * FROM Test_Matchbox_Collection WHERE Username= '$Username'");
+					$query_mdls= ("SELECT * FROM Matchbox_Collection WHERE Username= '$Username'");
 					$result_mdls= mysql_query($query_mdls);
 					if ($result_mdls) {
 					//$Collection_not_null=0;

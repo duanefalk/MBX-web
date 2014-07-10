@@ -129,7 +129,7 @@
     //echo $VarPhoto2Name."<br />";
     //echo $VarPhoto2Ref."<br />";
     
-    $query="INSERT INTO Test_Matchbox_Variations (UMID, VERID, VARID, Mack_No, BaseName, BaseCompany, ManufLoc, VarYear, FWhCd, RWhCd, WindowColor, InteriorColor,
+    $query="INSERT INTO Matchbox_Variations (UMID, VERID, VARID, Mack_No, BaseName, BaseCompany, ManufLoc, VarYear, FWhCd, RWhCd, WindowColor, InteriorColor,
             Base1Material, Base1Color, Base2Type, Base2Material, Base2Color, Finish, ColorVar, TempaVar, Det1Typ, Det1Var, Det2Typ, Det2Var, Det3Typ, Det3Var, Det4Typ, Det4Var,
             Det5Typ, Det5Var, StdValue, VarComment, VarPhoto1Name, VarPhoto1Ref, VarPhoto2Name, VarPhoto2Ref
             ) VALUES ('$UMID','$VERID','$VARID','$Mack_No','$BaseName', '$BaseCompany', '$ManufLoc','$VarYear','$FWhCd', '$RWhCd','$WindowColor', '$InteriorColor',

@@ -3,7 +3,7 @@
 <?php include("includes/header.php"); ?>
 
 <?php
-    $query=("SELECT * FROM Test_MBXU_User_Uploads ORDER BY user_input_id DESC LIMIT 1");
+    $query=("SELECT * FROM MBXU_User_Uploads ORDER BY user_input_id DESC LIMIT 1");
     $result = mysql_query($query);
     $row=mysql_fetch_array($result);
     echo $row["user_input_id"];
@@ -46,7 +46,7 @@
                     exit;
             }
     }
-    $query="INSERT INTO Test_MBXU_User_Uploads (
+    $query="INSERT INTO MBXU_User_Uploads (
     user_input_id, user_name, user_comment, user_file_loaded
     ) VALUES (
     '$new_input_id', '$upload_user_name', '$upload_comment', '$file_uploaded'

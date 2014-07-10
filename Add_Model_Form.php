@@ -15,7 +15,7 @@
 			<p>Model Photo Name:     	  <input type="text" name="ModelPhotoName" value="" size="20" id="ModelPhotoName"</p>
 			<p>Model Photo Reference: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_References ORDER BY RefCode ASC");								
+					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -39,7 +39,7 @@
 			<p>Year First Released:      <input type="text" name="YrFirstProduced" value="" size="4" id="YrFirstProduced"</p>
 			<p>Vehicle Type: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -62,7 +62,7 @@
 				</select>
 			<p>Additional Vehicle Type: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");						
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");						
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -96,7 +96,7 @@
 				</textarea>
 			<p>Make of Model: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_lists WHERE ValueList LIKE '%VehMake%'");								
+					$query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%VehMake%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -119,7 +119,7 @@
 				</select>
 			<p>Country of Make: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_lists WHERE ValueList LIKE '%MakeCountry%'");								
+					$query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%MakeCountry%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);

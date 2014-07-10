@@ -7,7 +7,7 @@
     $Wheel_Photo_Path=$_POST['WheelPhotoPath'];
     $Wheel_Photo_Name=$_POST['WheelPhotoName'];
     $Wheel_Photo_Ref=$_POST['WheelPhotoRef'];
-    $query="INSERT INTO Test_Matchbox_Wheels (
+    $query="INSERT INTO Matchbox_Wheels (
             WheelTyp, WheelCod, WheelDescr, WheelPhotoPath, WheelPhotoName, WheelPhotoRef
             ) VALUES (
             '$Wheel_Type', '$Wheel_Code', '$Wheel_Description', '$Wheel_Photo_Path', '$Wheel_Photo_Name', '$Wheel_Photo_Ref'     

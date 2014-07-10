@@ -24,7 +24,7 @@
 			$model_for_detail=$_GET["model"];
 			//find and display version details
 			//echo "The picture you clicked on was: ".$model_for_detail."<br />";
-			$query= ("SELECT * FROM Test_Matchbox_Versions WHERE VerID LIKE '%$model_for_detail%'");
+			$query= ("SELECT * FROM Matchbox_Versions WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			if(!$result) {
 				echo "Database error: No matching results found"; //mysql_error();
@@ -72,7 +72,7 @@
 
 			echo "<h2>Variations</h2>";
 			//find and display variations
-			$query2= ("SELECT * FROM Test_Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$query2= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result2 = mysql_query($query2);
 			$rows2= mysql_num_rows($result2);
 
@@ -112,11 +112,11 @@
 				$PhotoRefCd1= $row2["VarPhoto1Ref"];
 				$PhotoRefCd2= $row2["VarPhoto2Ref"];
 					if ($PhotoRefCd1) {
-						$query2a= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
+						$query2a= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
 						$result2a= mysql_query($query2a);
 						$row2a =mysql_fetch_array($result2a);
 						if ($PhotoRefCd2) {
-							$query2b= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
+							$query2b= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
 							$result2b= mysql_query($query2b);
 							$row2b =mysql_fetch_array($result2b);
 							echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"]."</p>";
@@ -136,7 +136,7 @@
 				$rows3=0;
 				$variation_for_detail=$row2["VarID"];
 				echo "<br></>";
-				$query3= ("SELECT * FROM Test_Matchbox_Releases WHERE VarID LIKE '%$variation_for_detail%' ORDER BY RelID ASC");
+				$query3= ("SELECT * FROM Matchbox_Releases WHERE VarID LIKE '%$variation_for_detail%' ORDER BY RelID ASC");
 				$result3 = mysql_query($query3);
 				$rows3= mysql_num_rows($result3);
 				if(!$result2) {

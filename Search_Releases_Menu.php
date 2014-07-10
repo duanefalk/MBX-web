@@ -93,7 +93,7 @@
 						<input type=checkbox name="ReleaseTheme_Check" id="ReleaseTheme_Check" />
 						<label>Release Theme:</label>
 						<?php
-							$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%ReleaseTheme%'");								
+							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%ReleaseTheme%'");								
 							$result=0;
 							$rows_count=0;									
 							$result = mysql_query($query);
@@ -125,7 +125,7 @@
 						<input type=checkbox name="RelSeries_Check" id="RelSeries_Check"  />
 						<label>Series:</label>
 						<?php
-							$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%RelSeries%'");									
+							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%RelSeries%'");									
 							$result=0;
 							$rows_count=0;									
 							$result = mysql_query($query);
@@ -179,7 +179,7 @@
 						<input type=checkbox name="CountryOfSale_Check" id="CountryOfSale_Check"  />
 						<label>Country Where Released:</label>
 						<?php
-							$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%CountryOfSale%'");									
+							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%CountryOfSale%'");									
 							$result=0;
 							$rows_count=0;									
 							$result = mysql_query($query);

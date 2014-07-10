@@ -47,7 +47,7 @@ session_start();
     $User_Code2_Pref=$_POST['Code2_Pref'];
 
 
-     $query="INSERT INTO Test_MBXU_User_Accounts (Username, Password, Sec_Lvl, User_Name, User_Email, User_Url,
+     $query="INSERT INTO MBXU_User_Accounts (Username, Password, Sec_Lvl, User_Name, User_Email, User_Url,
             User_Address, User_Phone, Areas_of_Interest, User_is_Dealer, User_Memberships,
             Veh_Cond_Scheme, Pkg_Cond_Scheme, Code2_Pref) 
             VALUES ('$Username','$Password','$Sec_Lvl','$User_Name','$User_Email','$User_Url',

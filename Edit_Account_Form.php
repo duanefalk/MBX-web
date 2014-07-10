@@ -14,7 +14,7 @@
 	<div class="large-12 columns">
 	
 		<?php
-			$query= ("SELECT * FROM Test_MBXU_USer_Accounts WHERE Username = '$Username'");
+			$query= ("SELECT * FROM MBXU_USer_Accounts WHERE Username = '$Username'");
 			$result = mysql_query($query);
 			if (mysql_num_rows($result)==0) {			
 				echo "<h3>Error - Cant find user record</h3>"; //mysql_error();
@@ -72,7 +72,7 @@
 			<div class="formRow">
 				<label for="ddlInterests" id="lblInterests">Areas of Interest</label>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%UserInterest%' ORDER BY ValueDispOrder ASC");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UserInterest%' ORDER BY ValueDispOrder ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -105,7 +105,7 @@
 		<p>Phone:      <input type="text" name="User_Phone" value="<?php echo $row['$User_Phone']; ?>" size="20" id="User_Phone"</p>
 		<p>Areas of Interest (choose as many as apply): </p>
 			<?php
-				$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%UserInterest%' ORDER BY ValueDispOrder ASC");								
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UserInterest%' ORDER BY ValueDispOrder ASC");								
 				$result=0;
 				$rows_count=0;									
 				$result = mysql_query($query);

@@ -22,7 +22,7 @@ session_start();
 				$rows=0;
 				$Variation_for_detail=$_GET["model"];
 				echo "<h3>Variation ID: ".$Variation_for_detail."</h3>";
-				$query= ("SELECT * FROM Test_Matchbox_Variations WHERE VarID LIKE '%$Variation_for_detail%'");
+				$query= ("SELECT * FROM Matchbox_Variations WHERE VarID LIKE '%$Variation_for_detail%'");
 				$result= mysql_query($query);
 			
 				//if not found			
@@ -60,11 +60,11 @@ session_start();
 					$PhotoRefCd1= $row["VarPhoto1Ref"];
 					$PhotoRefCd2= $row["VarPhoto2Ref"];
 					if ($PhotoRefCd1) {
-						$query2a= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
+						$query2a= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
 						$result2a= mysql_query($query2a);
 						$row2a =mysql_fetch_array($result2a);
 						if ($PhotoRefCd2) {
-							$query2b= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
+							$query2b= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
 							$result2b= mysql_query($query2b);
 							$row2b =mysql_fetch_array($result2b);
 							echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"];
@@ -123,7 +123,7 @@ session_start();
 					echo "<br></>";
 	
 					$User=$_SESSION['Username'];
-					$query3=("SELECT * FROM Test_Matchbox_User_Collections WHERE Username='$User'");								
+					$query3=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");								
 					$result3=0;
 					$rows_count3=0;									
 					$result3 = mysql_query($query3);
@@ -136,13 +136,13 @@ session_start();
 				<?php
 					//see if exists in wishlist and/or collection
 					echo "Variation Selected: ".$Variation_for_detail."<br /><br />";
-					$query4=("SELECT * FROM Test_Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Variation_for_detail'");								
+					$query4=("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Variation_for_detail'");								
 					$result4=0;
 					$rows_count4=0;									
 					$result4 = mysql_query($query4);
 					//can only have a var in wishlist once, see if have already, set option to add                    
 		    
-					$query5=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Variation_for_detail'");								
+					$query5=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Variation_for_detail'");								
 					$result5=0;
 					$rows_count5=0;									
 					$result5 = mysql_query($query5);

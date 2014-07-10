@@ -43,7 +43,7 @@
 			<p>Intended Release Year:     	  <input type="text" name="RelYr" value="" size="4" id="RelYr"</p>
 			<p>Country of Sale: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%CountryOfSale%'");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%CountryOfSale%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -67,7 +67,7 @@
 				
 			<p>Release Theme: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%ReleaseTheme%' ORDER BY ValueDispOrder ASC");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%ReleaseTheme%' ORDER BY ValueDispOrder ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -90,7 +90,7 @@
 				</select>
 			<p>Release Series: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%RelSeries%'");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%RelSeries%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -121,7 +121,7 @@
 			<p>Name of the Package:     	  <input type="text" name="PkgName" value="" size="40" id="PkgName"</p>
 			<p>Unit Size: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%UnitSize%'");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UnitSize%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -145,7 +145,7 @@
 			<p>Package ID#:     	  <input type="text" name="PkgID" value="" size="12" id="PkgID"</p>
 			<p>Type of Package: </p>
 				<?php
-					$query=("SELECT PkgVarCode FROM Test_Matchbox_Package_Varieties");								
+					$query=("SELECT PkgVarCode FROM Matchbox_Package_Varieties");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -173,7 +173,7 @@
 			<p>Package Photo Name:     	  <input type="text" name="RelPkgPhotoName" value="" size="40" id="RelPkgPhotoName"</p>	
 			<p>Package Photo Reference: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_References ORDER BY RefCode ASC");								
+					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);

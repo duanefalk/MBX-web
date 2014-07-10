@@ -55,7 +55,7 @@ session_start();
         //echo $CollComm;
         //echo $Coll_InactiveFlg;
        
-        $query="INSERT INTO Test_Matchbox_Collection (Username, User_Coll_ID, UMID, VerID, VarID, User_SpecID, Copy, VehCond, PkgCond, ItemVal, StorLoc,
+        $query="INSERT INTO Matchbox_Collection (Username, User_Coll_ID, UMID, VerID, VarID, User_SpecID, Copy, VehCond, PkgCond, ItemVal, StorLoc,
             StorLoc2, PurchDt, Seller, PurchPrice, SellFlag, MinSellPrice, CollComm, Coll_InactiveFlg) 
             VALUES ('$Coll_Username','$User_CollID','$UMID', '$VerID', '$VarID', '$User_SpecID', '$Copy', '$VehCond', '$PkgCond', '$ItemVal', '$StorLoc',
             '$StorLoc2', '$PurchDt', '$Seller', '$PurchPrice', '$SellFlg', '$MinSellPric', '$CollComm', '$Coll_InactiveFlg')";
@@ -92,7 +92,7 @@ session_start();
                 <?php
                     $Var_to_Add=$_GET["model"];
                     $Username=$_SESSION['Username'];
-		    $query=("SELECT * FROM Test_Matchbox_User_Collections WHERE Username='$Username'");
+		    $query=("SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'");
 		    $result=mysql_query($query);
 		    if (!$result) {
 			echo "You have no collection. Please go to Manage Collections and follow the steps described there to create a collection.";
@@ -121,7 +121,7 @@ session_start();
                         echo "<br /><br />";
                         
                         //determine what copy to default in field
-                        $query=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$Username' AND User_Coll_ID='$User_CollID' AND VarID='$Var_to_Add'");								
+                        $query=("SELECT * FROM Matchbox_Collection WHERE Username='$Username' AND User_Coll_ID='$User_CollID' AND VarID='$Var_to_Add'");								
 			$result=0;
 			$result=mysql_query($query);
                         if ($result) {
@@ -143,7 +143,7 @@ session_start();
                         <?php
                             //vehicle condition
                             //Get this from session vars and add to user prefs hard code for now
-                            $query_cond=("SELECT * FROM Test_MBXU_User_Accounts WHERE Username=$Username");
+                            $query_cond=("SELECT * FROM MBXU_User_Accounts WHERE Username=$Username");
 			    $result_cond = mysql_query($query_cond);
 			    
 			    $Cond_scheme=$result_cond['Veh_Cond_Scheme'];
@@ -152,7 +152,7 @@ session_start();
 			    } ELSE {
 				$Veh_Cond_Scheme="Num_cond";			
 			    }
-                            $query=("SELECT * FROM Test_Matchbox_Value_lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
+                            $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
@@ -173,7 +173,7 @@ session_start();
                     <p>Package Condition: 
                         <?php
                             //Get this from session vars and add to user prefs hard code for now
-                            $query_cond=("SELECT * FROM Test_MBXU_User_Accounts WHERE Username=$Username");
+                            $query_cond=("SELECT * FROM MBXU_User_Accounts WHERE Username=$Username");
 			    $result_cond = mysql_query($query_cond);
 			    
 			    $Cond_scheme=$result_cond['Pkg_Cond_Scheme'];
@@ -183,7 +183,7 @@ session_start();
 				$Veh_Cond_Scheme="Num_cond";			
 			    }
     
-                            $query=("SELECT * FROM Test_Matchbox_Value_lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
+                            $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
@@ -205,7 +205,7 @@ session_start();
                     <p>Item Value:      <input type="text" name="Coll_Value" value="" size="10" id="Coll_Value"></p>
                     <p>Storage Location 1:     
 			<?php
-			    $query=("SELECT * FROM Test_Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
                                     AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -226,7 +226,7 @@ session_start();
                             </select>
                     <p>Storage Location 2:    
 			<?php
-			    $query=("SELECT * FROM Test_Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
                                     AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -248,7 +248,7 @@ session_start();
                     <p>Purchase Date:      <input type="text" name="Coll_Purch_Dt" value="" size="8" id="Coll_Purch_Dt"></p>
                     <p>Seller:      
 			<?php
-			    $query=("SELECT * FROM Test_Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Seller%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Seller%'
                                     AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									

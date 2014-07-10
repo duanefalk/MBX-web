@@ -70,7 +70,7 @@
     //echo $VerComm."<br />";
  
     
-    $query="INSERT INTO Test_Matchbox_Versions (UMID, VERID, FAB_No, Master_Mack_No, VerName, VerYrFirstRel, VerTyp, CodeLvl, SecManuf, BodyColor, TempaDesign, TempaText,
+    $query="INSERT INTO Matchbox_Versions (UMID, VERID, FAB_No, Master_Mack_No, VerName, VerYrFirstRel, VerTyp, CodeLvl, SecManuf, BodyColor, TempaDesign, TempaText,
             VerAttachments, VerPhoto1Name, VerPhoto1Ref, VerPhoto2Name, VerPhoto2Ref, VerComm
             ) VALUES ('$UMID','$VERID','$FAB_No','$Master_Mack_No','$VerName','$VerYrFirstRel','$VerTyp', '$CodeLvl', '$SecManuf', '$BodyColor','$TempaDesign', '$TempaText',
             '$VerAttachments','$VerPhoto1Name','$VerPhoto1Ref','$VerPhoto2Name','$VerPhoto2Ref', '$VerComm')";

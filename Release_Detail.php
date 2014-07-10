@@ -25,7 +25,7 @@ session_start();
 			$Release_for_detail=$_GET["model"];
 			$Var_for_detail= substr($Release_for_detail,0,12);
 			echo "The picture you clicked on was: ".$Release_for_detail."<br />";
-			$query= ("SELECT * FROM Test_Matchbox_Releases WHERE RelID LIKE '%$Release_for_detail%'");
+			$query= ("SELECT * FROM Matchbox_Releases WHERE RelID LIKE '%$Release_for_detail%'");
 
 			$result = mysql_query($query);
 			if(!$result) {
@@ -63,7 +63,7 @@ session_start();
 					//get photo ref codes and lookup names
 					$PhotoRefCd= $row["RelPkgPhotoRef"];
 					if ($PhotoRefCd) {
-						$query2a= ("SELECT * FROM Test_Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+						$query2a= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 						$result2a= mysql_query($query2a);
 						$row2a =mysql_fetch_array($result2a);
 						echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"]."</p>";
@@ -116,7 +116,7 @@ session_start();
 					//check on existing collection or wishlist records
 					$User="duanefalk";
 					//get the collection ID
-					$query3=("SELECT * FROM Test_Matchbox_User_Collections WHERE Username='$User'");								
+					$query3=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");								
 					$result3=0;
 					$rows_count3=0;									
 					$result3 = mysql_query($query3);
@@ -125,24 +125,24 @@ session_start();
 		    
 					//see if rel or variation exist in wish list and advise user
 					echo "Variation Selected: ".$Var_to_Add."<br /><br />";
-					$query4a=("SELECT * FROM Test_Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND RelID='$Release_for_detail'");								
+					$query4a=("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND RelID='$Release_for_detail'");								
 					$result4a=0;
 					$rows_count4a=0;									
 					$result4a = mysql_query($query4a);
 					
 	
-					$query4b=("SELECT * FROM Test_Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_for_detail'");								
+					$query4b=("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_for_detail'");								
 					$result4b=0;
 					$rows_count4b=0;									
 					$result4b = mysql_query($query4b);			
 					//can only have a var in wishlist once, see if have already, set option to add                    
 		    
-					$query5a=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND RelID='$Release_for_detail'");								
+					$query5a=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND RelID='$Release_for_detail'");								
 					$result5a=0;
 					$rows_count5a=0;									
 					$result5a = mysql_query($query5a);
 	
-					$query5b=("SELECT * FROM Test_Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_for_detail'");								
+					$query5b=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_for_detail'");								
 					$result5b=0;
 					$rows_count5b=0;									
 					$result5b = mysql_query($query5b);

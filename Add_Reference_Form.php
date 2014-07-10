@@ -23,7 +23,7 @@
 			<p>Reference Code:     	  <input type="text" name="RefCode" value="" size="8" id="RefCode"</p>
 			<p>Reference Type:     	</p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%ReferenceType%'");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%ReferenceType%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);

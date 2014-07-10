@@ -26,7 +26,7 @@
 
 
     
-    $query="INSERT INTO Test_Matchbox_References (RefType, RefCode, RefName, RefDetails, RefComment)
+    $query="INSERT INTO Matchbox_References (RefType, RefCode, RefName, RefDetails, RefComment)
             VALUES ('$RefType','$RefCode','$RefName','$RefDetails','$RefComment')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;

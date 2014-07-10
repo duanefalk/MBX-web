@@ -31,7 +31,7 @@ PkgTypePhotoRef
     echo $PkgTypePhotoRef."<br />";
 
     
-    $query="INSERT INTO Test_Matchbox_package_Varieties (PkgVarCode, PkgType, PkgTypeYrs, PkgTypeDescr, PkgTypePhotoName, PkgTypePhotoPath, PkgTypePhotoRef)
+    $query="INSERT INTO Matchbox_package_Varieties (PkgVarCode, PkgType, PkgTypeYrs, PkgTypeDescr, PkgTypePhotoName, PkgTypePhotoPath, PkgTypePhotoRef)
             VALUES ('$PkgVarCode','$PkgType','$PkgTypeYrs','$PkgTypeDescr','$PkgTypePhotoName','$PkgTypePhotoPath','$PkgTypePhotoRef')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;

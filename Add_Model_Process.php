@@ -34,7 +34,7 @@
     echo $Country_of_Make."<br />";
  
     
-    $query="INSERT INTO Test_Matchbox_Models (UMID, MasterModelName, ModelPhotoName, ModelPhotoRef, YrFirstProduced, VehicleType, VehicleType2, ModelScale, BaseCastYr, ModelComment,
+    $query="INSERT INTO Matchbox_Models (UMID, MasterModelName, ModelPhotoName, ModelPhotoRef, YrFirstProduced, VehicleType, VehicleType2, ModelScale, BaseCastYr, ModelComment,
             SimilarModels, MakeofModel, CountryofMake
             ) VALUES ('$UMID','$Master_Model_Name','$Model_Photo_Name','$Model_Photo_Ref','$Yr_First_Prod','$Vehicle_Type','$Vehicle_Type_2',
             '$Model_Scale','$Base_Cast_Yr','$Model_Comment','$Similar_Models','$Make_of_Model','$Country_of_Make')";

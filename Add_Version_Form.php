@@ -40,7 +40,7 @@
 			<p>Version Release Year:     	  <input type="text" name="VerYrFirstRel" value="" size="4" id="VerYrFirstRel"</p>
 			<p>Version Type: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%VersionType%'");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%VersionType%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -63,7 +63,7 @@
 				</select>				
 			<p>Code Level:    </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%CodeLevel%'");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%CodeLevel%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -86,7 +86,7 @@
 				</select>
 			<p>Secondary Manufacturer:    </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_Value_Lists WHERE ValueList LIKE '%SecondManufacturer%'");								
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%SecondManufacturer%'");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -118,7 +118,7 @@
 			<p>Version Photo 1 Name:     	  <input type="text" name="VerPhoto1Name" value="" size="40" id="VerPhoto1Name"</p>
 			<p>Version Photo 1 Reference: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_References ORDER BY RefCode ASC");								
+					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);
@@ -142,7 +142,7 @@
 			<p>Version Photo 2 Name:     	  <input type="text" name="VerPhoto2Name" value="" size="40" id="VerPhoto2Name"</p>
 			<p>Version Photo 2 Reference: </p>
 				<?php
-					$query=("SELECT * FROM Test_Matchbox_References ORDER BY RefCode ASC");								
+					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
 					$result=0;
 					$rows_count=0;									
 					$result = mysql_query($query);

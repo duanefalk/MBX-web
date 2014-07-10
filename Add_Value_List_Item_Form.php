@@ -15,7 +15,7 @@
 							<!--<p>Value List:     <input type="text" name="ValueList" value="" size="20" id="ValueList"</p>-->
 							<p>Value Type: </p>
 								<?php
-									$query=("SELECT DISTINCT ValueList FROM Test_Matchbox_Value_Lists");								
+									$query=("SELECT DISTINCT ValueList FROM Matchbox_Value_Lists");								
 									$result=0;
 									$rows_count=0;									
 									$result = mysql_query($query);

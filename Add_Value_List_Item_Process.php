@@ -5,7 +5,7 @@
     $Entry=$_POST['ValueListEntry'];
     $ValueDispOrder=$_POST['ValueDispOrder'];
 
-    $query="INSERT INTO Test_Matchbox_Value_Lists (
+    $query="INSERT INTO Matchbox_Value_Lists (
             ValueList, ValueListEntry, ValueDispOrder
             ) VALUES (
             '$Value_List', '$Entry', '$ValueDispOrder'     
