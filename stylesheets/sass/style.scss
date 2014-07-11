@@ -22,7 +22,7 @@ a:focus {color:$orange; text-decoration:none;}
 .button {
 	padding:.6em 1.4em;
 	@include headline; color:$white; text-transform:uppercase;
-	background:none;\
+	background:none;
 	border:2px solid #FFFFFF;
 	border-radius:5px;
 	

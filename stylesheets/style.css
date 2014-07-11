@@ -1,58 +1,169 @@
-/*
-Syntax error: Invalid CSS after "	background:none;": expected "}", was "\"
-        on line 25 of /Applications/XAMPP/xamppfiles/htdocs/MBX-web/stylesheets/sass/style.scss
+/* -- Fonts -- */
+/* -- Colors -- */
+/*$cream : #F3EECE;*/
+/* line 4, sass/style.scss */
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+  background: #fbfaf1 url("../images/bgTexture.jpg") repeat;
+}
 
-Backtrace:
-/Applications/XAMPP/xamppfiles/htdocs/MBX-web/stylesheets/sass/style.scss:25
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/scss/parser.rb:1129:in `expected'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/scss/parser.rb:1066:in `expected'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/scss/parser.rb:1061:in `tok!'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/scss/parser.rb:519:in `block'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/scss/parser.rb:512:in `ruleset'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/scss/parser.rb:536:in `block_child'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/scss/parser.rb:529:in `block_contents'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/scss/parser.rb:70:in `stylesheet'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/scss/parser.rb:27:in `parse'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/engine.rb:342:in `_to_tree'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/engine.rb:315:in `_render'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/engine.rb:262:in `render'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
-org/jruby/RubyArray.java:1603:in `each'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
-org/jruby/RubyMethod.java:133:in `call'
-org/jruby/RubyProc.java:268:in `call'
-org/jruby/RubyProc.java:228:in `call'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/fssm-0.2.9/lib/fssm/path.rb:35:in `update'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/fssm-0.2.9/lib/fssm/state/directory.rb:39:in `modified'
-org/jruby/RubyArray.java:1603:in `each'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `modified'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/fssm-0.2.9/lib/fssm/state/directory.rb:18:in `refresh'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
-org/jruby/RubyArray.java:1603:in `each'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
-org/jruby/RubyKernel.java:1419:in `loop'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `run'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/fssm-0.2.9/lib/fssm/monitor.rb:26:in `run'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/fssm-0.2.9/lib/fssm.rb:70:in `monitor'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Applications/Scout.app/Contents/Resources/bin/compass:12:in `(root)'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"	background:none;\": expected \"}\", was \"\\"\A         on line 25 of /Applications/XAMPP/xamppfiles/htdocs/MBX-web/stylesheets/sass/style.scss"; }
+/* line 6, sass/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+  line-height: 115%;
+}
+
+/* line 8, sass/style.scss */
+p {
+  color: #333333;
+}
+
+/* line 10, sass/style.scss */
+img {
+  max-width: 100%;
+  border: none;
+}
+
+/* line 12, sass/style.scss */
+a {
+  color: #333333;
+  border: none;
+  outline: none;
+}
+
+/* line 15, sass/style.scss */
+a:hover,
+a:active,
+a:focus {
+  color: #d45132;
+  text-decoration: none;
+}
+
+/* line 17, sass/style.scss */
+.row {
+  max-width: 62.5rem;
+}
+
+/* line 19, sass/style.scss */
+.clear {
+  clear: both;
+}
+
+/* line 22, sass/style.scss */
+.button {
+  padding: .6em 1.4em;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+}
+/* line 29, sass/style.scss */
+.button:hover {
+  background: #087b80;
+}
+/* line 31, sass/style.scss */
+.button.dark {
+  color: #d45132;
+  border-color: #d45132;
+}
+/* line 34, sass/style.scss */
+.button.dark:hover, .button.dark:focus {
+  color: #087b80;
+  background: none;
+  border-color: #087b80;
+}
+
+/* -- Header --------------- */
+/* line 41, sass/style.scss */
+#header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0 0 1.25em;
+  background: #d45132;
+}
+
+/* line 43, sass/style.scss */
+#logo {
+  display: block;
+}
+
+/* line 45, sass/style.scss */
+#mainNav {
+  list-style-type: none;
+  margin: 1em 0 0;
+  text-align: right;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: .75px;
+}
+/* line 50, sass/style.scss */
+#mainNav li {
+  display: inline-block;
+}
+/* line 51, sass/style.scss */
+#mainNav a {
+  padding: .5em 1em;
+  font-size: 90%;
+  color: #f6f3dd;
+}
+
+/* -- Navigation ------------- */
+/* line 59, sass/style.scss */
+#utilityNav {
+  margin-bottom: .5em;
+  text-align: right;
+  background: rgba(51, 51, 51, 0.25);
+}
+/* line 64, sass/style.scss */
+#utilityNav a {
+  display: inline-block;
+  padding: 8px;
+  font-size: 80%;
+  color: #f6f3dd;
+  text-decoration: none;
+}
+/* line 71, sass/style.scss */
+#utilityNav a:hover, #utilityNav a:visited, #utilityNav a:active {
+  text-decoration: underline;
+}
+/* line 74, sass/style.scss */
+#utilityNav em {
+  color: white;
+}
+
+/* -- Footer ------------- */
+/* line 82, sass/style.scss */
+#footer {
+  margin: 4em 0 0;
+  padding: 3em 0;
+  text-align: center;
+  color: #f6f3dd;
+  background: #087b80 url("../images/bgGrit.jpg") top repeat;
+}
+/* line 87, sass/style.scss */
+#footer p {
+  color: #f6f3dd;
+}
+
+/* -- Forms -- */
+/* line 91, sass/style.scss */
+.formRow {
+  margin-bottom: 1em;
+  padding-bottom: .5em;
+  border-bottom: 0.2em solid rgba(80, 63, 45, 0.15);
+}

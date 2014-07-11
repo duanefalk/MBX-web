@@ -87,7 +87,7 @@
 /* -- Login Screen --------------- */
 /* line 54, sass/interior.scss */
 #login {
-  margin: 2em auto;
+  margin: 6em auto 3em;
 }
 /* line 60, sass/interior.scss */
 #login form input[type=submit] {
@@ -103,6 +103,7 @@
   background: #087b80;
   border: none;
   border-radius: 5px;
+  box-shadow: 0 none;
 }
 /* line 68, sass/interior.scss */
 #login form input[type=submit]:hover {
