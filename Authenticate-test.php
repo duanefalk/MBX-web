@@ -4,8 +4,8 @@ session_start();
 $_SESSION['Sec_Lvl']=1;
 ?>
 
-<?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
+<?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header-login.php"); ?>
 
 <title>Basic Login</title>
