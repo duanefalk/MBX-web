@@ -16,7 +16,6 @@
 
 
 
-
 /* -- Home --------------- */
 #header-home {
 	margin-bottom:2em; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;
@@ -63,11 +62,10 @@
 			display:block;
 			width:100%;
 			padding:1em 2em;
-			color:$white;
-			background:green;
-			border:0 none;
+			@include headline; color:$white;  text-transform:uppercase;
+			background:$teal; border:none; border-radius:5px;
 			
-			&:hover {background:blue;}
+			&:hover {background:$orange;}
 		}
 	}
 	
