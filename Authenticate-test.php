@@ -1,4 +1,5 @@
 <?php
+ob_start();
 // we must never forget to start the session
 session_start();
 $_SESSION['Sec_Lvl']=1;
@@ -19,18 +20,18 @@ $_SESSION['Sec_Lvl']=1;
 			<h2>Log In</h2>    
 		        
 		        <?php
-		        	$Message = $_GET["msg"];
-					echo $Message;
+		        	//$Message = $_GET["msg"];
+					//echo $Message;
 		        
+					// If User ID & Password fields have entry
 			        if (isset($_POST['txtUserId']) && isset($_POST['txtPassword'])) {
+			            
+			            //username and password variables
 			            $userId = $_POST['txtUserId'];
 			            $password = $_POST['txtPassword'];
 			         
 			            // check if the user id and password combination exist in database
-			            $query = ("SELECT * 
-			                    FROM MBXU_User_Accounts
-			                    WHERE Username = '$userId'
-			                    AND Password = '$password'");   
+			            $query = ("SELECT * FROM MBXU_User_Accounts WHERE Username = '$userId' AND Password = '$password'");   
 			            $result = mysql_query($query);
 			            $rows_count= mysql_num_rows($result);
 			            
@@ -45,28 +46,30 @@ $_SESSION['Sec_Lvl']=1;
 			            } else {
 			                $_SESSION['db_is_logged_in'] = true;
 			                // get sec lvl from db
-			                $row=mysql_fetch_array($result);
-			                $_SESSION['Username']=$row["Username"];
-			                $_SESSION['Sec_Lvl']=$row["Sec_Lvl"];
-			                $_SESSION['Veh_Cond_Scheme']=$row["Veh_Cond_Scheme"];
-			                $_SESSION['Pkg_Cond_Scheme']=$row["Pkg_Cond_Scheme"];
-			                $_SESSION['Code2_Pref']=$row["Code2_Pref"];
-							$_SESSION['First_Name']=$row["First_Name"];
-			                echo $userId.$password."<br />";
-			                echo $rows_count. ' '.$row[Username].' '.$row[Password]." ".$row[Sec_Lvl];
+			                $row = mysql_fetch_array($result);
+			                
+			                $_SESSION['Username'] = $row["Username"];
+			                $_SESSION['Sec_Lvl'] = $row["Sec_Lvl"];
+			                $_SESSION['Veh_Cond_Scheme'] = $row["Veh_Cond_Scheme"];
+			                $_SESSION['Pkg_Cond_Scheme'] = $row["Pkg_Cond_Scheme"];
+			                $_SESSION['Code2_Pref'] = $row["Code2_Pref"];
+							$_SESSION['First_Name'] = $row["First_Name"];
+			                
+			                //echo $userId . $password . "<br />";
+			                //echo $rows_count . ' ' . $row[Username] . ' ' . $row[Password] . " " . $row[Sec_Lvl];
 			          
 			                // after login we move to the main page
-			                redirect_to("index.php");
-					//header('Location: index.php');
+			                redirect_to('index.php');
+			                
 			                exit;
 			            } 
 			           include 'includes/close_db_connection.php';
 			        }
 		        ?>
 		
-		        <?php if ($errorMessage != '') { ?>
-		        	<p align="center"><strong><font color="#990000"><?php echo $errorMessage; ?></font></strong></p>
-		        <?php } ?> 
+		        <?php //if ($errorMessage != '') { ?>
+		        	<!--p align="center"><strong><font color="#990000"><?php echo $errorMessage; ?></font></strong></p-->
+		        <?php //} ?> 
 		        
 		        <form method="post" name="frmLogin" id="frmLogin">
 		        	<div class="row">

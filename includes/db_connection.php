@@ -2,6 +2,7 @@
 require("constants.php");
 // 1. create connection
 $connection= mysql_connect(DB_SERVER,DB_USER,DB_PASS);
+
 if(!$connection) {
 	echo "Database connection failed ";
 }
