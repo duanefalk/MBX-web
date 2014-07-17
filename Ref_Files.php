@@ -1,17 +1,18 @@
 <?php include("includes/header.php"); ?>
-<table id="structure">
-	<tr>
-		<td id="navigation">
-			<a href="Photo_refs.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Photo References</p></a>
-			<a href="About_site.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to About Site</p></a>
-			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
-			&nbsp;
-		</td>
-		<td id="page">
-			<h2>Reference Files</h2>
-			<p>Lots of info about how the database is structred and used</p>
 
-		</td>
-	</tr>
-</table>
+<div class="row">
+	<div class="large-12 columns">
+		<h2>Reference Files</h2>
+		<p>Information about how the database is structured and used will be provided soon.</p>
+	</div>
+</div>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="About_site.php">About the Site</a>
+	</div>
+</div>
+
 <?php include("includes/footer.php"); ?>

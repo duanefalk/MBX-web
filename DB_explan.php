@@ -1,16 +1,11 @@
 <?php include("includes/header.php"); ?>
-<table id="structure">
-	<tr>
-		<td id="navigation">
-			<a href="About_site.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to About Site</p></a>
-			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
-			&nbsp;
-		</td>
-		<td id="page">
-			<h2>The MBX-U Matchbox Models Database</h2>
-			<p>The Matchbox companies, Lesney through Mattel, have consistently been inconsistent in their organization of the miniature models and attendant numbering schemes. This became more apparent with the advent of MAN or FAB#&#39;s and re-issue of some older models by Mattel. In some cases the same numbering has been used to identify multiple models, and conversely the same model may have multiple numbers. There is further inconsistency in whether models with different attachments (e.g. a light bar) are grouped together or given separate numbers.</p>
-			<p>Perhaps of even more concern is that Mattel historically has not been a fan of assigning individual model numbers,. And as we approach the endpoint of the 3-digit MAN# there&#39;s the possibility that another change in numbering scheme may occur.</p>
-			<p>As I began organizing my collection models into a relational database, the difficulties posed by these factors became evident. I felt it necessary to institute my own organizational scheme, which is used on this web-site and explained below.</p>
+
+<div class="row">
+	<div class="large-12 columns">
+		<h2>The MBX-U Matchbox Models Database</h2>
+		<p>The Matchbox companies, Lesney through Mattel, have consistently been inconsistent in their organization of the miniature models and attendant numbering schemes. This became more apparent with the advent of MAN or FAB#&#39;s and re-issue of some older models by Mattel. In some cases the same numbering has been used to identify multiple models, and conversely the same model may have multiple numbers. There is further inconsistency in whether models with different attachments (e.g. a light bar) are grouped together or given separate numbers.</p>
+		<p>Perhaps of even more concern is that Mattel historically has not been a fan of assigning individual model numbers,. And as we approach the endpoint of the 3-digit MAN# there&#39;s the possibility that another change in numbering scheme may occur.</p>
+		<p>As I began organizing my collection models into a relational database, the difficulties posed by these factors became evident. I felt it necessary to institute my own organizational scheme, which is used on this web-site and explained below.</p>
 		<p>The database is organized using the following hierarchy, with a database table for each of these levels:</p>
 		<ol type="I">
 			<li>Models</li>		
@@ -21,8 +16,10 @@
 		<p>A feature of the web site is the ability for each user to their own collection. Collection records are at the level of the variation, althoguh release info can also be included in a user's collection.</p>
 		<p>In addition the database includes several reference tables (i.e. Wheel Types and Packages Types), and a number of lookup value lists for pre-determined selections to some field values (i.e. window color, country of manufacture). There is also a table of 'microvariations' that includes very small differences in variations that might not easily be detected and so aren't used as criteria to create a new variation.</p>
 		<p>Let's go through each level of the database hierarchy and understand what they mean.</p>
+		
 		<h4>MODEL</h4>
 		<h6>What is a Model ?</h6>
+		
 		<p>All cars (note: I use 'cars' in a broad sense to mean miniature vehicle) with same characteristics, as listed below, are a single model; if any of these characteristics differ, they are listed as separate models</p>
 		<ol>
 			<li>Basic body casting: Early models may have fairly small casting differences, but have historically been listed as separate models. I;ve maintained that here.</li>
@@ -71,14 +68,16 @@
 			<li>Version Type: wherther the version is a premier model ('Premiere') or regular level of detail ('MB')</li>
 			<li>Code Level and Secondary Manufacturer when appropriate: Code 1, made by Mattel (or LEsney etc), Code 2 design applied by an approved secondary company (i.e. CCI). I have not included code 3 (custom models made without approval of Mattel)</li>
 		</ul>
-		
-		
-		
-		
-		
-		
-		
-		</td>
-	</tr>
-</table>
+
+	</div>
+</div>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="About_site.php">About the Site</a>
+	</div>
+</div>
+
 <?php include("includes/footer.php"); ?>
