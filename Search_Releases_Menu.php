@@ -52,7 +52,7 @@
 		<div id="accordion">
 			<dl class="accordion" data-accordion>
 				<dd>	
-					<a href="#panela"><h3>Package Name, i.e. Construction Playset</h3></a>
+					<a href="#panela">Package Name, i.e. Construction Playset</a>
 					<div id="panela" class="content">
 						<input type=checkbox name="PkgName_Check"  id= "PkgName_Check" />
 						<label>Package Name:</label>
@@ -62,7 +62,7 @@
 			</dl>
 			<dl class="accordion" data-accordion>
 				<dd>
-					<a href="#panelb"><h3>Model Name on Package</h3></a>
+					<a href="#panelb">Model Name on Package</a>
 					<div id="panelb" class="content">
 						<input type=checkbox name="MdlNameOnPkg_Check"  id="MdlNameOnPkg_Check" />
 						<label>Model Name on the Package:</label>
@@ -72,7 +72,7 @@
 			</dl>
 			<dl class="accordion" data-accordion>
 				<dd>
-				<a href="#panelc"><h3>Package ID#</h3></a>
+				<a href="#panelc">Package ID#</a>
 				<div id="panelc" class="content">	
 					<input type=checkbox name="PkgID_Check" id="PkgID_Check"  />
 					<label>Package ID#:</label>
@@ -88,7 +88,7 @@
 		<div id="accordion2">
 			<dl class="accordion" data-accordion>
 				<dd>	
-					<a href="#panel1"><h3>Theme</h3></a>
+					<a href="#panel1">Theme</a>
 					<div id="panel1" class="content">
 						<input type=checkbox name="ReleaseTheme_Check" id="ReleaseTheme_Check" />
 						<label>Release Theme:</label>
@@ -120,7 +120,7 @@
 				
 			<dl class="accordion" data-accordion>
 				<dd>	
-					<a href="#panel2"><h3>Series</h3></a>
+					<a href="#panel2">Series</a>
 					<div id="panel2" class="content">
 						<input type=checkbox name="RelSeries_Check" id="RelSeries_Check"  />
 						<label>Series:</label>
@@ -152,7 +152,7 @@
 
 			<dl class="accordion" data-accordion>
 				<dd>	
-					<a href="#panel3"><h3>No. in Series</h3></a>
+					<a href="#panel3">No. in Series</a>
 					<div id="panel3" class="content">
 						<input type=checkbox name="SeriesID_Check" id="SeriesID_Check" />
 						<label># in Series:</label>
@@ -163,7 +163,7 @@
 
 			<dl class="accordion" data-accordion>
 				<dd>	
-					<a href="#panel4"><h3>Release Year</h3></a>
+					<a href="#panel4">Release Year</a>
 					<div id="panel4" class="content">
 						<input type=checkbox name="RelYr_Check" id="RelYr_Check" />
 						<label>Release Yr:</label>
@@ -174,7 +174,7 @@
 
 			<dl class="accordion" data-accordion>
 				<dd>	
-					<a href="#panel5"><h3>Country of Release</h3></a>
+					<a href="#panel5">Country of Release</a>
 					<div id="panel5" class="content">
 						<input type=checkbox name="CountryOfSale_Check" id="CountryOfSale_Check"  />
 						<label>Country Where Released:</label>
@@ -208,7 +208,7 @@
 		
 		<input type="button" name="testcheckbox" class="button dark" id="testcheckbox" value="Check Query" onclick="onCheckQuery()">
 					
-		<h2>Your Query So Far: </h2>
+		<h2>Your Query So Far:</h2>
 		<div id="querybox">
 			<br />
 			<p></p>

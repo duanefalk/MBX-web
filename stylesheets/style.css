@@ -274,9 +274,15 @@ a:focus {
 /* line 108, sass/style.scss */
 dl.accordion {
   margin: 0 auto 1em;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 /* line 110, sass/style.scss */
 dl.accordion dd > a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: white;
   background: #087b80;
 }

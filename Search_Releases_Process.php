@@ -203,7 +203,7 @@
                 echo "<div class=\"car-block\">";
                 $row=mysql_fetch_array($result);
                 $VarPicture= IMAGE_URL . $row["VarID"]."_1.jpg";
-		$VarPicture_loc=IMAGE_PATH. $row["VarID"]."_1.jpg";
+				$VarPicture_loc=IMAGE_PATH. $row["VarID"]."_1.jpg";
                 $RelPicture= IMAGE_URL . $row["RelID"]."_1.jpg";
                 $RelPicture_loc= IMAGE_PATH . $row["RelID"]."_1.jpg";
                 //make image clickable and send proper umid to model_detail page

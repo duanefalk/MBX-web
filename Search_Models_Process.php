@@ -263,12 +263,19 @@
 			if(!$result) {
 				echo "No matching results found"; //mysql_error();
 				exit;
-				}
-	
-			for ($i=1; $i<=$rows; $i++)
-			{
-			echo "<div class=\"car-block\">";
-				$row=mysql_fetch_array($result);
+			} ?>
+			
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-12 columns">
+			<?php
+			for ($i=1; $i<=$rows; $i++) {
+			
+				echo "<div class=\"car-block\">";
+				
+				$row = mysql_fetch_array($result);
 				//$picture= IMAGE_PATH . $row["UMID"].".jpg";
 				//make image clickable and send proper umid to model_detail page
 				$Model_to_detail=$row["UMID"];
@@ -277,13 +284,13 @@
 				
 				$picture_loc= IMAGE_PATH . $row["UMID"].".jpg";
 				
-				if (file_exists($picture_loc)) {
+				if ( file_exists($picture_loc) ) {
 						//echo "picture exists";
-						echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
+						echo "<a href=\"" . $url . "\">"."<img src=" . $picture . " width=\"240\"></a>";
 					} else {
 						//echo "cant find picture";
 						//echo DEFAULT_IMAGE;
-						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
+						echo "<a href=\"" . $url . "\">"."<img src=" . DEFAULT_IMAGE . " width=\"240\"></a>";
 					}	
 
 				echo "<br />";
@@ -303,8 +310,14 @@
 				echo "<p>Master Name: ".$row["MasterModelName"]."</p>";
 				echo "<p>First Rel Dt: ".$row["YrFirstProduced"]."</p>";
 			echo "</div>";
-			}
+			} ?>
+	</div>
+</div>
 
+<div class="row">
+	<div class="large-12 columns">
+
+		<?php 
 			echo "<br /> Query Completed </br /><br />";
 			//echo "* see 'References' page for full source info"."<br /><br />";
 			mysql_free_result($result);

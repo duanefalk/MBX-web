@@ -105,9 +105,9 @@ body.home #utilityNav {}
 .formRow {margin-bottom:1em; padding-bottom:.5em; border-bottom:.2em solid transparentize($brown,.85);}
 
 /* -- Accordions -- */
-dl.accordion { margin:0 auto 1em;
+dl.accordion { margin:0 auto 1em; @include body;
 	
-	dd > a { color:$white; background:$teal; 
+	dd > a { @include body; color:$white; background:$teal; 
 		&:hover {background:lighten($teal,5%); }
 	}
 }

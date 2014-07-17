@@ -125,28 +125,28 @@ $Username=$_SESSION['Username'];
 								if (file_exists($picture_loc)) {									
 									if ($rows_own !="0") {
 										echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
-									} ELSE {
-										echo "<a href=\"".$url."\">"."<img class='own.not' src=".$picture." width=\"240\"></a>";
+									} else {
+										echo "<a href=\"".$url."\">"."<img class='own not' src=".$picture." width=\"240\"></a>";
 									}	
-								} ELSE {
+								} else {
 									if ($rows_own !="0") {
 										echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"240\"></a>";
-									} ELSE {
-										echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+									} else {
+										echo "<a href=\"".$url."\">"."<img class='own not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
 									}
 								}	
-							} ELSE {
+							} else {
 								if (file_exists($picture_loc)) {									
 									echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
 										
-								} ELSE {
+								} else {
 									echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
 								}	
 							}	
 						} else {
 							if (file_exists($picture_loc)) {									
 								echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
-							} ELSE {
+							} else {
 								echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
 							}
 						}			
