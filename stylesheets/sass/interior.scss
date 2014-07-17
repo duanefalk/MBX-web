@@ -1,7 +1,9 @@
 @import "settings";
 
 /* -- Main -- */
-#main {padding-top:8em; }
+#main {padding-top:8em;
+	@media only screen and (max-width:480px){ padding-top:2em; font-size:90%; }
+}
 
 .home #main {padding-top:0;}
 
@@ -17,17 +19,25 @@
 
 
 /* -- Home --------------- */
-#header-home {
-	margin-bottom:2em; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;
-
+#header-home { margin-bottom:2em; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;
+	
 	* {color:$cream;}
+	
+	#logo {
+		@media only screen and (max-width:480px){ text-align:center; }
+	}
 	
 	#banner {
 		margin-top:2em;
 	
 		#bannerText {
 			margin-top:2em;
-		}	
+		}
+		#bannerImage {
+			@media only screen and (max-width:480px){ text-align:center; }
+			
+			img { @media only screen and (max-width:480px){ max-width:60%; margin:0 auto; } }
+		}
 	}
 }
 
@@ -40,9 +50,12 @@
 	
 		label {color:$white;}
 		input {display:inline-block; margin-bottom:0;}
-		input[type=text] {width:72%; margin-right:2%; border:none; box-shadow:0;}
-		input[type=submit] {
-			width:25%; font-size:90%;
+		input[type=text] { width:72%; margin-right:2%; border:none; box-shadow:0;
+			@media only screen and (max-width:480px){ width:100%; margin:0 auto 1em; }
+		}
+		input[type=submit] { width:25%; font-size:90%;
+			@media only screen and (max-width:480px){ width:100%; margin:0 auto; }
+			
 			&:hover {background:$orange;}	
 		}
 	}
@@ -68,6 +81,13 @@
 			&:hover {background:$orange;}
 		}
 	}
+	
+}
+
+
+/* -- About ----------------------- */
+.section { margin:1em auto 3em; padding-bottom:2em; border-bottom:.2em solid transparentize($black,.75);
+	h2 {}
 	
 }
 

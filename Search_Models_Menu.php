@@ -6,15 +6,6 @@
 
 <form action="Search_Models_Process.php" method="post">
 
-	<!-- Top Menu -->
-	<div class="row">
-		<div class="large-12 columns">
-			<a class="button dark" href="index.php">Return to Main Page</a>
-			<a class="button dark" href="similar_models_compare.php">Differences Among Similar Models</a>
-			<a class="button dark" href="model_search_help.php">Tips on Searching for Models</a>
-		</div>
-	</div>
-
 	<!-- Search Options -->
 	<div class="row">
 		
@@ -198,5 +189,14 @@
 	</div>
 	
 </form>	
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="similar_models_compare.php">Differences Among Similar Models</a>
+		<a href="model_search_help.php">Tips on Searching for Models</a>
+	</div>
+</div>
 			
 <?php include("includes/footer.php"); ?>

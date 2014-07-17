@@ -45,7 +45,7 @@
 	
 		<?php include("includes/navUtility.php"); ?>
 	
-		<div class="row">
+		<div class="row" class="header">
 			<div class="large-4 columns">
 				<a href="index.php" id="logo"><img src="images/logo.png" width="225" height="59" /></a>
 			</div>
@@ -72,7 +72,7 @@
 				<p>The listings are built in a relational database to catalog and categorize the models uniquely.</p>
 				<p><a href="About_site.php" class="button">Learn More</a></p>
 			</div>
-			<div class="large-5 columns">
+			<div class="large-5 columns" id="bannerImage">
 				<img src="images/banners/professor.png" />
 			</div>
 		</div>

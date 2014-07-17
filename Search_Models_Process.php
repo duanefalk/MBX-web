@@ -2,17 +2,12 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
-<table id="structure">
 
-	<tr>
-		<td id="navigation">
-			<a href="Search_Models_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
-			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
-		</td>
-		<td id="page">
-			
-			<h2>Matching Models</h2> 
-			<?php
+<div class="row">
+	<div class="large-12 column">
+		<h2>Matching Models</h2>
+	 
+		<?php
 			$VehicleType=$_POST['TypeofVehicle'];
 			$VehicleMake=$_POST['VehicleMake'];
 			$MakeCountry=$_POST['MakeCountry'];
@@ -317,8 +312,16 @@
 			
 			?>
 			<a href="Search_Models_Menu.php">Cancel</a>
-		</td>
-	</tr>
-</table>
+	</div>
+</div>	
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Search_Models_Menu.php">Search Models</a>
+		<a href="model_search_help.php">Tips on Searching for Models</a>
+	</div>
+</div>
 
 <?php include("includes/footer.php"); ?>
