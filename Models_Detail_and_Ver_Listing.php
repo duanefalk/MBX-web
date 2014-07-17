@@ -9,20 +9,16 @@ $Username=$_SESSION['Username'];
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
-<table id="structure">
 
-	<tr>
-		<td id="navigation">
-			<?php echo "<a href=\"javascript:history.go(-1)\">Return to Matching Models</a>"; ?>
-			<a href="Search_Models_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
-			<a href="Search_Releases_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
-			<a href="Index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
-		</td>
-		<td id="page">
-			<h2>Models Detail Page</h2>
-			<br />
-			<!--<a href="http://localhost/~Falk/MBX_Web_Site_Test/IMAGES/TEST.doc"><p>CLICK TO DOWNLOAD FILE</p</a><br /> -->
-			<?php
+
+<div class="row">
+	<div class="large-12 columns">
+	
+		<h2>Models Detail Page</h2>
+			
+		<!--<a href="http://localhost/~Falk/MBX_Web_Site_Test/IMAGES/TEST.doc"><p>CLICK TO DOWNLOAD FILE</p</a><br /> -->
+			
+		<?php
 			//show model header info
 			$model_for_detail=$_GET["model"];
 			$query2= ("SELECT * FROM Matchbox_Models WHERE UMID LIKE '%$model_for_detail%'");
@@ -50,19 +46,19 @@ $Username=$_SESSION['Username'];
 				$result3= mysql_query($query3);
 				$row3 =mysql_fetch_array($result3);
 				echo "<p id=\"photoref\">Photo by: ". $row3["RefName"]."</p>";
-			} ELSE {
+			} else {
 				echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 			}
 
 			echo "First rel in ".$row2['YrFirstProduced']."<br></>";
 			if ($row2["VehicleType2"]) {	
 				echo "Vehicles type(s): ".$row2["VehicleType"].",  ".$row2["VehicleType2"]."<br></>";
-			} ELSE {
+			} else {
 				echo "Vehicles type(s): ".$row2["VehicleType"]."<br></>";				
 			}
 			if ($row2["Scale"]) {	
 				echo "Scale:  ".$row2['ModelScale']."   Base Casting Dt: ".$row2['BaseCastYr']."<br></>";
-			} ELSE {
+			} else {
 				echo "Scale: None shown ".$row2['ModelScale']."   Base Casting Dt: ".$row2['BaseCastYr']."<br></>";				
 			}			
 			echo "Vehicle Make: ".$row2['MakeofModel']."   Country of Make: ".$row2['CountryofMake']."<br></>";
@@ -158,7 +154,7 @@ $Username=$_SESSION['Username'];
 							$result2= mysql_query($query2);
 							$row2 =mysql_fetch_array($result2);
 							echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
-						} ELSE {
+						} else {
 							echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 						}
 						echo "<p>".$row["VerName"]."</p>";
@@ -221,28 +217,28 @@ $Username=$_SESSION['Username'];
 								if ($rows_own !="0") {
 									
 									echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
-								} ELSE {
+								} else {
 									echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." width=\"240\"></a>";
 								}	
-							} ELSE {
+							} else {
 								if ($rows_own !="0") {
 									echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"240\"></a>";
-								} ELSE {
+								} else {
 									echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
 								}
 							}	
-						} ELSE {
+						} else {
 								
 							if (file_exists($picture_loc)) {									
 								echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
-							} ELSE {
+							} else {
 								echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
 							}	
 						}	
 					} else {
 						if (file_exists($picture_loc)) {									
 							echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
-						} ELSE {
+						} else {
 							echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
 						}
 					}	
@@ -253,7 +249,7 @@ $Username=$_SESSION['Username'];
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
-					} ELSE {
+					} else {
 						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 					}
 					echo "<p>".$row["VerName"]."</p>";
@@ -306,13 +302,13 @@ $Username=$_SESSION['Username'];
 							if (file_exists($picture_loc)) {									
 								if ($rows_own !="0") {
 									echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
-								} ELSE {
+								} else {
 									echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." width=\"240\"></a>";
 								}	
-							} ELSE {
+							} else {
 								if ($rows_own !="0") {
 									echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"240\"></a>";
-								} ELSE {
+								} else {
 									echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
 								}
 							}	
@@ -324,7 +320,7 @@ $Username=$_SESSION['Username'];
 								$result2= mysql_query($query2);
 								$row2 =mysql_fetch_array($result2);
 								echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
-							} ELSE {
+							} else {
 								echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 							}
 							echo "<p>".$row["VerName"]."</p>";
@@ -370,7 +366,7 @@ $Username=$_SESSION['Username'];
 					$url= "Release_Detail.php?model=".$rel_row["RelID"];
 					if (file_exists($picture_loc)) {
 						echo "<a href=\"".$url."\">"."<img src=".$picture." height=\"400\"></a>";
-					} ELSE {	
+					} else {	
 						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
@@ -378,7 +374,7 @@ $Username=$_SESSION['Username'];
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
-					} ELSE {
+					} else {
 						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 					}
 					echo "<p>Country:  ".$rel_row["CountryOfSale"]."</p>";
@@ -414,7 +410,7 @@ $Username=$_SESSION['Username'];
 					$url= "Release_Detail.php?model=".$rel_row["RelID"];
 					if (file_exists($picture_loc)) {
 						echo "<a href=\"".$url."\">"."<img src=".$picture." height=\"400\"></a>";
-					} ELSE {	
+					} else {	
 						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
@@ -422,7 +418,7 @@ $Username=$_SESSION['Username'];
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
-					} ELSE {
+					} else {
 						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 					}
 					echo "<p>Country:  ".$rel_row["CountryOfSale"]."</p>";
@@ -459,7 +455,7 @@ $Username=$_SESSION['Username'];
 					$url= "Release_Detail.php?model=".$rel_row["RelID"];
 					if (file_exists($picture_loc)) {
 						echo "<a href=\"".$url."\">"."<img src=".$picture." height=\"400\"></a>";
-					} ELSE {	
+					} else {	
 						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
@@ -467,7 +463,7 @@ $Username=$_SESSION['Username'];
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
-					} ELSE {
+					} else {
 						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 					}
 					echo "<p>Country:  ".$rel_row["CountryOfSale"]."</p>";
@@ -504,7 +500,7 @@ $Username=$_SESSION['Username'];
 					$url= "Release_Detail.php?model=".$rel_row["RelID"];
 					if (file_exists($picture_loc)) {
 						echo "<a href=\"".$url."\">"."<img src=".$picture." height=\"400\"></a>";
-					} ELSE {	
+					} else {	
 						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
@@ -512,7 +508,7 @@ $Username=$_SESSION['Username'];
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
-					} ELSE {
+					} else {
 						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 					}
 					echo "<p>Country:  ".$rel_row["CountryOfSale"]."</p>";
@@ -526,8 +522,18 @@ $Username=$_SESSION['Username'];
 			
 
 			?>			
-		</td>
-	</tr>
-</table>
+	</div>
+</div>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Search_Models_Menu.php">Search Models</a>
+		<a href="Search_Releases_Menu.php">Search Releases</a>
+		<a href="model_search_help.php">Tips on Searching for Models</a>
+	</div>
+</div>
+
 
 <?php include("includes/footer.php"); ?>	

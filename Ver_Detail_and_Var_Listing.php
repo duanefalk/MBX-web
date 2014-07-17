@@ -1,24 +1,21 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
-<table id="structure">
 
-	<tr>
-		<td id="navigation">
-			<?php
+<div class="row">
+	<div class="large-12 columns">
+	
+		<?php
 			$model_for_detail=$_GET["model"];
 			$UMID=substr($model_for_detail,0,6);
 			
 			echo "<a href=\"Models_Detail_and_Ver_Listing.php?model=".$UMID."\"><p onmouseover=\"this.style.color='orange'\" onmouseout=\"this.style.color='white'\">Return to Versions Listing Page</a>";
-			?>
-			<a href="Search_Models_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
-			<a href="Search_Releases_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
-			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
-		</td>
-		<td id="page">
-			<h2>Version Details Page</h2>
-			<br></>
-			<?php
+		?>
+			
+	
+		<h2>Version Details Page</h2>
+		
+		<?php
 			$result=0;
 			$rows=0;
 			$model_for_detail=$_GET["model"];
@@ -120,10 +117,10 @@
 							$result2b= mysql_query($query2b);
 							$row2b =mysql_fetch_array($result2b);
 							echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"]."</p>";
-						} ELSE {
+						} else {
 							echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"];
 						}
-					} ELSE {
+					} else {
 						echo "<p id=\"photoref\">Photo by: no reference listed";
 					}
 
@@ -165,14 +162,23 @@
 						echo "<p>Package Name: ".$row3["PkgName"]."</p>";
 					echo "</div>";					
 					}
-					echo "<br></>";
+					echo "<br />";
 				}
 				$model_for_detail=$row["UMID"];
 			        $url= "Models_Detail_and_Ver_Listing.php?model=".$model_for_detail;
 				echo "<a href=\"".$url."\">Cancel</a>";
 			?>
-		</td>
-	</tr>
-</table>
+	</div>
+</div>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Search_Models_Menu.php">Search Models</a>
+		<a href="Search_Releases_Menu.php">Search Releases</a>
+		<a href="model_search_help.php">Tips on Searching for Models</a>
+	</div>
+</div>
 
 <?php include("includes/footer.php"); ?>	
