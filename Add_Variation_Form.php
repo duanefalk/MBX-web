@@ -338,7 +338,7 @@
 			<p>Color Variation:     </p>
 				<textarea name="ColorVar" cols="45" rows="4">			
 				</textarea>	
-			<p>Tempa Variation:     </p>
+			<p>Tampo Variation:     </p>
 				<textarea name="TempaVar" cols="45" rows="4">			
 				</textarea>		
 			<p>Detail 1 Type:     	  <input type="text" name="Det1Typ" value="" size="20" id="Det1Typ"</p>

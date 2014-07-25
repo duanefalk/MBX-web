@@ -108,10 +108,10 @@
 				?>
 				</select>		
 			<p>Body Color(s):     	  <input type="text" name="BodyColor" value="" size="40" id="BodyColor"</p>
-			<p>Tempa Design:     </p>
+			<p>Tampo Design:     </p>
 				<textarea name="TempaDesign" cols="45" rows="4">			
 				</textarea>	
-			<p>Tempa Text:     </p>
+			<p>Tampo Text:     </p>
 				<textarea name="TempaText" cols="45" rows="4">			
 				</textarea>
 			<p>Version Attachments:     	  <input type="text" name="VerAttachments" value="" size="60" id="VerAttachments"</p>	
