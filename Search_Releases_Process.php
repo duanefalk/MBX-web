@@ -32,14 +32,14 @@
                 if (($_POST['PkgName_Check']) OR ($_POST['MdlNameOnPkg_Check']) OR ($_POST['PkgID_Check'])) {
                     //WORKS
                     if ($_POST['PkgName_Check']) {
+                        echo "Pkg name is: ".$PkgName."<br></> ";
                             $PrevRelCriteria="1";
-                            //$QueryString=("SELECT * FROM Matchbox_Releases WHERE Matchbox_Releases.PkgName LIKE '%$PkgName%'");
                             $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
-                                           Matchbox_Releases.RelID, Matchbox_Releases.Series, TMatchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr,
+                                           Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
                                            Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
-                             FROM Matchbox_Variations
-                             LEFT JOIN Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
-                             WHERE Matchbox_Releases.PkgName LIKE '%$PkgName%' OR Matchbox_Releases.Series LIKE '%$PkgName%' OR Matchbox_Releases.SubSeries LIKE '%$PkgName%'");
+                            FROM Matchbox_Variations
+                            LEFT JOIN Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
+                            WHERE Matchbox_Releases.PkgName LIKE '%$PkgName%' OR Matchbox_Releases.Series LIKE '%$PkgName%' OR Matchbox_Releases.SubSeries LIKE '%$PkgName%'");
                     }                       
                     
                     if ($_POST['MdlNameOnPkg_Check']) {
@@ -65,10 +65,10 @@
                             $PrevRelCriteria="1";
                             //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `MdlNameOnPkg` LIKE '%$MdlNameOnPkg%')");
                             $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
-                                       Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
-                                       Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
+                                           Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
+                                           Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
                             FROM Matchbox_Variations
-                            LEFT JOIN _Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
+                            LEFT JOIN Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
                             WHERE Matchbox_Releases.PkgID LIKE '%$PkgID%'");
                             
                         } ELSE {
@@ -188,13 +188,13 @@
             //echo $QueryString;
             
             $result = mysql_query($QueryString);
-            $rows= mysql_num_rows($result);
-            //print_r($result);
-            echo "Number of Matches: ".$rows."<br /><br />";
             if(!$result) {
                     echo "No matching results found"; //mysql_error();
                     exit;
-                    }
+                } ELSE {
+                    $rows= mysql_num_rows($result);
+                    echo "Number of Matches: ".$rows."<br /><br />";
+                }  
                     
 
             //If release data selected show versions
