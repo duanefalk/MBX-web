@@ -65,7 +65,7 @@
 			<li>Year the Version was First released</li>
 			<li>The color(s), tampo deisng and tampo text on the version</li>
 			<li>Version attachments, when appropriate</li>
-			<li>Version Type: wherther the version is a premier model ('Premiere') or regular level of detail ('MB')</li>
+			<li>Detail Level: wherther the version is a premier model ('Premiere'), regular level of detail ('MB') or economy ;evel ('Economy')</li>
 			<li>Code Level and Secondary Manufacturer when appropriate: Code 1, made by Mattel (or LEsney etc), Code 2 design applied by an approved secondary company (i.e. CCI). I have not included code 3 (custom models made without approval of Mattel)</li>
 		</ul>
 

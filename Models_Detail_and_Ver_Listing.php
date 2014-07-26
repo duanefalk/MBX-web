@@ -56,7 +56,7 @@ $Username=$_SESSION['Username'];
 			} else {
 				echo "Vehicles type(s): ".$row2["VehicleType"]."<br></>";				
 			}
-			if ($row2["Scale"]) {	
+			if ($row2["ModelScale"]) {	
 				echo "Scale:  ".$row2['ModelScale']."   Base Casting Dt: ".$row2['BaseCastYr']."<br></>";
 			} else {
 				echo "Scale: None shown ".$row2['ModelScale']."   Base Casting Dt: ".$row2['BaseCastYr']."<br></>";				

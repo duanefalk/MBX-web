@@ -47,7 +47,7 @@
 			}
 			echo "<br></>Version Name: ". $row["VerName"]. "<br></>";
 			echo "<br></>Version Mack#: ".$row["Master_Mack_No"]."    MAN#: ".$row["FAB_No"]."<br></>";
-			echo "First Prod.: ". $row["VerYrFirstRel"]."    Ver Type: ".$row["VerTyp"]."<br></>";
+			echo "First Prod.: ". $row["VerYrFirstRel"]."    Detail Level: ".$row["VerTyp"]."<br></>";
 			echo $row["BodyColor"]."<br></>";
 			if (!empty($row["TempaDesign"])) {
 				echo "Design: ".$row["TempaDesign"]."<br></>";
@@ -60,10 +60,10 @@
 				echo " C2 Manuf.: ".$row["SecManuf"]."<br></>";
 			}
 			if ($row["VerAttachments"]) {
-				echo "Text: ".$row["VerAttachments"]."<br></>";
+				echo "Attachments: ".$row["VerAttachments"]."<br></>";
 			}			
 			if ($row["VerComm"]) {
-				echo "Text: ".$row["VerComm"]."<br></>";
+				echo "Comment: ".$row["VerComm"]."<br></>";
 			}	
 			echo "<br></>";
 
@@ -77,7 +77,11 @@
 			if(!$result2) {
 				echo "No matching results found"; //mysql_error();
 				exit;
-				}			
+				}
+			if ($rows2>1) {
+			        $url= "Variation_Comparison.php?model=".$Version_to_detail;
+				echo "<a href=\"".$url."\">Var Comparison Chart</a><br></><br></>";
+			}
 			for ($i=1; $i<=$rows2; $i++)
 				{
 				$row2=mysql_fetch_array($result2);
@@ -124,8 +128,8 @@
 						echo "<p id=\"photoref\">Photo by: no reference listed";
 					}
 
-				echo "Base Name: ". $row2["BaseName"]."<br />";
-				echo "Var Year: ".$row2["VarYear"]." Origin: ".$row2["ManufLoc"];
+				//echo "Base Name: ". $row2["BaseName"]."<br />";
+				//echo "Var Year: ".$row2["VarYear"]." Origin: ".$row2["ManufLoc"];
 				//echo "Est. Value: ".$row2["StdValue"]."<br /><br />";
 				
 				//look up release info
