@@ -1,5 +1,7 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
+<?php include("includes/header.php"); ?>
+
 <?php
     $Wheel_Type=$_POST['WheelTyp'];
     $Wheel_Code=$_POST['WheelCod'];

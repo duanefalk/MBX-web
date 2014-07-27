@@ -1,5 +1,6 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
+<?php include("includes/header.php"); ?>
 <?php
     $Value_List=$_POST['ValueList'];
     $Entry=$_POST['ValueListEntry'];

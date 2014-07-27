@@ -5,6 +5,7 @@ session_start();
 
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
+<?php include("includes/header.php"); ?>
 
 <!-- fields:
     Username
