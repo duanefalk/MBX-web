@@ -69,8 +69,12 @@
 							$query2b= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
 							$result2b= mysql_query($query2b);
 							$row2b =mysql_fetch_array($result2b);
+							if ($row2b==$row2a) {
+								echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"];
+							} ELSE {
 							echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"]."</p>";
-						} else {
+							}
+						} ELSE {
 							echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"];
 						}
 					} else {
