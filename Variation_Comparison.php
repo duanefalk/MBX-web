@@ -21,27 +21,28 @@
 			$model_for_detail=$_GET["model"];
 
 			//find and display variations
-			$query2= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
-			$result2 = mysql_query($query2);
-			$rows2= mysql_num_rows($result2);
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
 
 			//echo "No. of Variations: ".$rows2."<br /><br />";
-			if(!$result2) {
+			if(!$result) {
 				echo "Database error"; //mysql_error();
 				exit;
 				}
 
-			for ($i=1; $i<=$rows2; $i++)
-				{
-				$row2=mysql_fetch_array($result2);
-				echo "<h3>Var ID: ". $row2["VarID"]."</h3>";
-				$picture1= IMAGE_URL . $row2["VarID"]."_1.jpg";
-				$picture1_loc=IMAGE_PATH. $row2["VarID"]."_1.jpg";
+			for ($i=1; $i<=$rows; $i++)
+			{
+				$row=mysql_fetch_array($result);
+				echo "<h3>Var ID: ". $row["VarID"]."</h3>";
+				$picture1= IMAGE_URL . $row["VarID"]."_1.jpg";
+				$picture1_loc=IMAGE_PATH. $row["VarID"]."_1.jpg";
 				//echo $picture1."<br />";
-				$picture2= IMAGE_URL . $row2["VarID"]."_2.jpg";
-				$picture2_loc=IMAGE_PATH. $row2["VarID"]."_2.jpg";	
+				$picture2= IMAGE_URL . $row["VarID"]."_2.jpg";
+				$picture2_loc=IMAGE_PATH. $row["VarID"]."_2.jpg";
 				
-				$Variation_to_detail= $row2["VarID"];
+				//show photos
+				$Variation_to_detail= $row["VarID"];
 				$url= "Variation_Detail.php?model=".$Variation_to_detail;				
 				if (file_exists($picture1_loc)) {
 					//echo "picture exists";
@@ -58,9 +59,9 @@
 				} else {
 					//ignore, dont put up a default for 2nd one	
 				}
-												
-				$PhotoRefCd1= $row2["VarPhoto1Ref"];
-				$PhotoRefCd2= $row2["VarPhoto2Ref"];
+				//show photo refs								
+				$PhotoRefCd1= $row["VarPhoto1Ref"];
+				$PhotoRefCd2= $row["VarPhoto2Ref"];
 					if ($PhotoRefCd1) {
 						$query2a= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
 						$result2a= mysql_query($query2a);
@@ -80,7 +81,53 @@
 					} else {
 						echo "<p id=\"photoref\">Photo by: no reference listed";
 					}
-				}	
+				echo "<p></p>";
+				echo "Mack#: ". $row["Mack_No"]."<br />";
+				echo "Base Name: ". $row["BaseName"]."<br />";
+				echo "Base Company: ". $row["BaseCompany"]."<br />";
+				echo "Manufactured in: ". $row["ManufLoc"]."<br />";
+				echo "Variation Year: ". $row["VarYear"]."<br />";
+				echo "Front Wheel Code: ". $row["FWhCd"]."<br />";
+				echo "Rear Wheel Code: ". $row["RWhCd"]."<br />";
+				echo "Window Color: ". $row["WindowColor"]."<br />";
+				echo "Interior Color: ". $row["InteriorColor"]."<br />";
+				echo "Base Material: ". $row["Base1Material"]."<br />";
+				echo "Base Color: ". $row["Base1Color"]."<br />";
+				if ($row["Base2Material"]) {
+					echo "2nd Base Material: ". $row["Base2Material"]."<br />";
+					echo "2nd Base Color: ". $row["Base2Color"]."<br />";
+				}
+				echo "Finish: ". $row["Finish"]."<br />";
+				if ($row["ColorVar"]) {
+					echo "Color Variation: ". $row["ColorVar"]."<br />";
+				}
+				if ($row["TempaVar"]) {
+					echo "Tempa Variation: ". $row["TempaVar"]."<br />";
+				}
+				if ($row["Det1Typ"]) {
+					echo "Detail 1 Type: ". $row["Det1Typ"]."<br />";
+					echo "Detail 1 Variation: ". $row["Det1Var"]."<br />";
+				}
+				if ($row["Det2Typ"]) {
+					echo "Detail 2 Type: ". $row["Det2Typ"]."<br />";
+					echo "Detail 2 Variation: ". $row["Det2Var"]."<br />";
+				}
+				if ($row["Det3Typ"]) {
+					echo "Detail 3 Type: ". $row["Det3Typ"]."<br />";
+					echo "Detail 3 Variation: ". $row["Det3Var"]."<br />";
+				}
+				if ($row["Det4Typ"]) {
+					echo "Detail 4 Type: ". $row["Det4Typ"]."<br />";
+					echo "Detail 4 Variation: ". $row["Det4Var"]."<br />";
+				}
+				if ($row["Det5Typ"]) {	
+					echo "Detail 5 Type: ". $row["Det5Typ"]."<br />";
+					echo "Detail 5 Variation: ". $row["Det5Var"]."<br />";
+				}
+				echo "Est. Value: ".$row["StdValue"]."<br /><br />";
+				echo "Comments: ". $row["VarComment"]."<br />";
+				echo "<br></>";
+			}	
 			
 				$model_for_detail=$row["UMID"];
 			        $url= "Models_Detail_and_Ver_Listing.php?model=".$model_for_detail;
