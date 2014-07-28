@@ -47,7 +47,7 @@
 			}
 			echo "<br></>Version Name: ". $row["VerName"]. "<br></>";
 			echo "<br></>Version Mack#: ".$row["Master_Mack_No"]."    MAN#: ".$row["FAB_No"]."<br></>";
-			echo "First Prod.: ". $row["VerYrFirstRel"]."    Detail Level: ".$row["VerTyp"]."<br></>";
+			echo "First Prod.: ". $row["VerYrFirstRel"]."    Version Type: ".$row["VerTyp"]."<br></>";
 			echo $row["BodyColor"]."<br></>";
 			if (!empty($row["TempaDesign"])) {
 				echo "Design: ".$row["TempaDesign"]."<br></>";

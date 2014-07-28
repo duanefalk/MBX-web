@@ -38,7 +38,7 @@
 			<p>Master Mack#:     	  <input type="text" name="Master_Mack_No" value="" size="8" id="Master_Mack_No"</p>
 			<p>Version Name:     	  <input type="text" name="VerName" value="" size="60" id="VerName"</p>
 			<p>Version Release Year:     	  <input type="text" name="VerYrFirstRel" value="" size="4" id="VerYrFirstRel"</p>
-			<p>Detail Level: </p>
+			<p>Version Type: </p>
 				<?php
 					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%VersionType%'");								
 					$result=0;

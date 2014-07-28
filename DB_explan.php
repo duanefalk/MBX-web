@@ -54,7 +54,7 @@
 			<li>Tampo design: Data is recorded for both the graphic design  (i.e. blue stripes or a Ferrari logo) and tampo text (i.e. the text 'Ferrari' on the car</li>
 			<li>Release as separate models: some colors may seem very similar, but if they were released as separate versions by Matchbox (i.e. one several years later than the other or in a dfferent series), then they are listed as separate versions of a model</li>
 			<li>Major Attachments: this applies to attachments that comprise the identity of the model, ie shovel on tractor shovel, boom and crane color on Crane Truck. The presence/absence of an attachment define different versions.</li>
-			<li>Detail Level: premier detail level of trim/wheels vs regular models</li>
+			<li>Version Type: Regular wheel, Lesney Superfast, MB (post Lesney), Premiere level (extra detail and/or premiere wheels) or economy (i.e. plastic, no interior, black windows such as Burger King models)</li>
 			<li>For racecars: Different #'s on the car create different versions (i.e. Catepillar Luminas #95 and #96 are separate versions though they look similar).</li>
 		</ol>
 		<p>Each version of a model has these characteristics:</p>
@@ -65,7 +65,6 @@
 			<li>Year the Version was First released</li>
 			<li>The color(s), tampo deisng and tampo text on the version</li>
 			<li>Version attachments, when appropriate</li>
-			<li>Detail Level: wherther the version is a premier model ('Premiere'), regular level of detail ('MB') or economy ;evel ('Economy')</li>
 			<li>Code Level and Secondary Manufacturer when appropriate: Code 1, made by Mattel (or LEsney etc), Code 2 design applied by an approved secondary company (i.e. CCI). I have not included code 3 (custom models made without approval of Mattel)</li>
 		</ul>
 
