@@ -64,6 +64,7 @@
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
 		<a href="DB_explan.php">About the Database</a>
+		<a href="MB_Code_System.php">The Matchbox Code System</a>
 		<a href="About_photos.php">About the Photos</a>
 		<a href="Ref_files.php">View Reference Files</a>
 	</div>
