@@ -10,6 +10,10 @@ session_start();
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Matchbox Cars Database and Collections">
+	<meta name="keywords" content="Matchbox,Matchbox cars,Superfast,Regular Wheels,Matchbox packages,Matchbox wheels">
+	<meta name="author" content="Duane Falk">
+</head>
 	
 	<title>Matchbox University</title>
 		
