@@ -115,5 +115,10 @@
 }
 
 #photoref {
-    font-size:x-small; font-style:italic;
+    font-size:x-small; font-style:italic; margin-bottom:.5em;
+}
+
+/* -- Variations Comparison -- */
+#varCompare {
+	table tr td:first-of-type {min-width:140px; @include headline; }
 }

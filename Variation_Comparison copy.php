@@ -72,10 +72,10 @@
 							$row2b =mysql_fetch_array($result2b);
 							if ($row2b==$row2a) {
 								echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"];
-							} ELSE {
+							} else {
 							echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"]."</p>";
 							}
-						} ELSE {
+						} else {
 							echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"];
 						}
 					} else {
@@ -133,6 +133,31 @@
 			        $url= "Models_Detail_and_Ver_Listing.php?model=".$model_for_detail;
 				echo "<a href=\"".$url."\">Cancel</a>";
 		?>
+	</div>
+</div>
+
+<div class="row" id="varCompare">
+	<div class="large-12 columns">
+		
+		<table>
+			<tr>
+				<td></td>
+				<td>photo 1</td>
+				<td>photo 2</td>
+			</tr>
+			<tr>
+				<td>Variation ID</td>
+				<td>a</td>
+				<td>b</td>
+			</tr>
+			<tr>
+				<td>Mack ID #</td>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+		
+		</table>
+	
 	</div>
 </div>
 

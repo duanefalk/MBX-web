@@ -1,39 +1,40 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 <?php include("includes/header.php"); ?>
-<table id="structure">
-				<tr>
-					<td id="navigation">
-						<a href="Add_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Add New Record</p></a>
-						<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
-					</td>
-					<td id="page">
 
-						<head>
-
-						</head>						
-						<h2>Add a Microvariation</h2>
-						<p></p>
-
-				<!-- fields:
-				RefType
-				RefCode
-				RefName
-				RefDetails
-				RefComment
-				-->		
+<div class="row">
+	<div class="large-12 columns">
+	
+		<h2>Add a Microvariation</h2>
 				
 		<form action="Add_Microvariation_Process.php" method="post">
-			<p>UMID:     	  <input type="text" name="UMID" value="" size="6" id="UMID"</p>
-			<p>Microvariation:     	</p>
-				<textarea name="Microvariation" cols="45" rows="4">			
-				</textarea>
-			<p>Update Date:          <input type="date" name="Microvar_Updt_Dt" </p>
+			
+			<label for="UMID">UMID:</label>
+			<input type="text" name="UMID" value="" size="6" id="UMID">
+			
+			<label for="Microvariation">Microvariation:</label>
+			<textarea name="Microvariation" cols="45" rows="4"></textarea>
+			
+			<label for="Microvar_Updt_Dt">Update Date:</label>
+			<input type="date" name="Microvar_Updt_Dt">
 
-			<input type="submit" name="submit" value="Submit"/>
+			<input type="submit" class="button dark" name="submit" value="Submit"/>
+		
 		</form>			
-		<a href="Add_Microvariation.php">Cancel</a>						 						
-	</td>
-</tr>
-</table>
+		
+		<a href="Add_Microvariation.php">Cancel</a>				 						
+
+	
+	</div>
+</div>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Add_Menu.php">Return to Add New Record</a>
+		<a href="index.php">Return to Main Page</a>		
+	</div>
+</div>
+
 <?php require("includes/footer.php"); ?>

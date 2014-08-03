@@ -41,7 +41,7 @@
 					
 					//make image clickable and send proper umid to model_detail page
 					$Version_to_detail=$row["VerID"];
-					$url= "Ver_detail_and_Var_Listing.php?model=".$Version_to_detail;
+					$url= "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
 					if (file_exists($picture_loc)) {
 						//echo "picture exists";
 						echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";

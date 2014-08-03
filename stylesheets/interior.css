@@ -202,4 +202,14 @@
 #photoref {
   font-size: x-small;
   font-style: italic;
+  margin-bottom: .5em;
+}
+
+/* -- Variations Comparison -- */
+/* line 123, sass/interior.scss */
+#varCompare table tr td:first-of-type {
+  min-width: 140px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }

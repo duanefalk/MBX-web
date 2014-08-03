@@ -121,15 +121,15 @@
 							$result2b= mysql_query($query2b);
 							$row2b =mysql_fetch_array($result2b);
 							if ($row2b==$row2a) {
-								echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"];
+								echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"] . "</p>";
 							} ELSE {
-								echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"]."</p>";
+								echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"] . "</p>";
 							}
 						} else {
-							echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"];
+							echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"] . "</p>";
 						}
 					} else {
-						echo "<p id=\"photoref\">Photo by: no reference listed";
+						echo "<p id=\"photoref\">Photo by: no reference listed</p>";
 					}
 
 				//echo "Base Name: ". $row2["BaseName"]."<br />";

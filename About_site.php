@@ -35,7 +35,7 @@
 	
 		<div class="section">
 			<h2>5) Do I have to learn a new numbering method?</h2>
-			<p>No! The database is structured around a unique model ID that I assigned each model, and a model/version/variation/release hierarchy. BUTÉ all of the usual methods of cataloging and organizing Matchbox models- Charlie Mack numbers, FAB/MAN#s, model names etc.- are all still there and you can use those. If you are interested in how the models are organized though, please check out &#39;About the Database&#39; from the &#39;About the Site&#39; menu.</p>
+			<p>No! The database is structured around a unique model ID that I assigned each model, and a model/version/variation/release hierarchy. BUT all of the usual methods of cataloging and organizing Matchbox models- Charlie Mack numbers, FAB/MAN#s, model names etc.- are all still there and you can use those. If you are interested in how the models are organized though, please check out &#39;About the Database&#39; from the &#39;About the Site&#39; menu.</p>
 		</div>
 		
 		<div class="section">
@@ -63,7 +63,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="DB_explan.php">About the Database</a>
+		<a href="DB_explain.php">About the Database</a>
 		<a href="MB_Code_System.php">The Matchbox Code System</a>
 		<a href="About_photos.php">About the Photos</a>
 		<a href="Ref_files.php">View Reference Files</a>
