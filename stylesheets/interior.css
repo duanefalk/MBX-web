@@ -200,9 +200,10 @@
 
 /* line 117, sass/interior.scss */
 #photoref {
+  margin-bottom: .5em;
   font-size: x-small;
   font-style: italic;
-  margin-bottom: .5em;
+  line-height: 100%;
 }
 
 /* -- Variations Comparison -- */

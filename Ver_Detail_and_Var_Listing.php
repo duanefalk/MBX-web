@@ -80,7 +80,7 @@
 				}
 			if ($rows2>1) {
 			        $url= "Variation_Comparison.php?model=".$Version_to_detail;
-				echo "<a href=\"".$url."\">Var Comparison Chart</a><br></><br></>";
+				echo "<a class=\"button dark\" href=\"".$url."\">Var Comparison Chart</a><br></><br></>";
 			}
 			for ($i=1; $i<=$rows2; $i++)
 				{

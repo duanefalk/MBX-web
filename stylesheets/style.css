@@ -49,6 +49,7 @@ a:focus {
 /* line 20, sass/style.scss */
 table tr td {
   padding: 5px 6px;
+  vertical-align: top;
 }
 /* line 24, sass/style.scss */
 table tr.even,
