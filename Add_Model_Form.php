@@ -1,19 +1,18 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 <?php include("includes/header.php"); ?>
-<table id="structure">
-<tr>
-	<td id="navigation">
-		<a href="Add_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Add New Record</p></a>
-		<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
-	</td>
-	<td id="page">
+
+<div class="row">
+	<div class="large-12 columns">
 		<h2>Add a Model</h2>
 		<form action="Add_Model_Process.php" method="post">
-			<p>UMID:     	  <input type="text" name="UMID" value="" size="6" id="UMID"</p>
-			<p>Master Model Name:     	  <input type="text" name="MasterModelName" value="" size="60" id="MasterModelName"</p>
-			<p>Model Photo Name:     	  <input type="text" name="ModelPhotoName" value="" size="20" id="ModelPhotoName"</p>
-			<p>Model Photo Reference: </p>
+			<label for="UMID">UMID:</label>
+			<input type="text" name="UMID" value="" size="6" id="UMID">
+			<label for="MasterModelName">Master Model Name: </label>
+			<input type="text" name="MasterModelName" value="" size="60" id="MasterModelName">
+			<label for="ModelPhotoName">Model Photo Name: </label>	
+			<input type="text" name="ModelPhotoName" value="" size="20" id="ModelPhotoName">
+			<label for="ModelPhotoRef">Model Photo Reference:</label>	
 				<?php
 					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
 					$result=0;
@@ -36,8 +35,9 @@
 					}	
 				?>
 				</select>
-			<p>Year First Released:      <input type="text" name="YrFirstProduced" value="" size="4" id="YrFirstProduced"</p>
-			<p>Vehicle Type: </p>
+			<label for="YrFirstProduced">Year First Released:</label>	
+			<input type="text" name="YrFirstProduced" value="" size="4" id="YrFirstProduced">
+			<label for="VehicleType">Vehicle Type:</label>	
 				<?php
 					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");								
 					$result=0;
@@ -60,7 +60,7 @@
 					}	
 				?>
 				</select>
-			<p>Additional Vehicle Type: </p>
+			<label for="VehicleType2">Additional Vehicle Type:</label>
 				<?php
 					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");						
 					$result=0;
@@ -83,18 +83,17 @@
 					}	
 				?>
 				</select>
-			<p>Scale:     	  <input type="text" name="ModelScale" value="" size="10" id="ModelScale"</p>
-			<p>Base Casting Date:     <input type="text" name="BaseCastYr" value="" size="10" id="BaseCastYr"</p>
-			<p>Model Comment: </p>
-				<!--check the syntax of textarea...
-				<textarea id="ModelComment" cols="45" rows="4">			
-				</textarea> -->
+			<label for="ModelScale">Scale:</label>
+			<input type="text" name="ModelScale" value="" size="10" id="ModelScale">
+			<label for="BaseCastYr">Base Casting Date:</label>	
+			<input type="text" name="BaseCastYr" value="" size="10" id="BaseCastYr">
+			<label for="ModelComment">Model Comment:</label>
 				<textarea name="ModelComment" cols="45" rows="4">	
 				</textarea>
-			<p>Similar Models:     </p>
+			<label for="SimilarModels">imilar Models:</label>	
 				<textarea name="SimilarModels" cols="45" rows="4">			
 				</textarea>
-			<p>Make of Model: </p>
+			<label for="MakeofModel">Make of Model:</label>	
 				<?php
 					$query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%VehMake%'");								
 					$result=0;
@@ -117,7 +116,7 @@
 					}	
 				?>
 				</select>
-			<p>Country of Make: </p>
+			<label for="CountryofMake">Country of Make:</label>		
 				<?php
 					$query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%MakeCountry%'");								
 					$result=0;
@@ -139,11 +138,20 @@
 						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
 					}	
 				?>
-				</select>	
-			<input type="submit" name="submit" value="Submit"/>
+				</select>
+			<!-- Search Submit -->	
+			<input type="submit" class="button dark" value="Submit"/>
 		</form>			
-		<a href="Add_Model_Form.php">Cancel</a>						 						
-	</td>
-</tr>
-			</table>
+		<a href="Add_Model_Form.php">Cancel / Clear</a>						 						
+	</div>
+</div>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Add_Menu.php">Return to Add New Record</a>
+		<a href="index.php">Return to Main Page</a>		
+	</div>
+</div>
 <?php require("includes/footer.php"); ?>
