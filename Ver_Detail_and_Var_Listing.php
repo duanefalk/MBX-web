@@ -159,12 +159,13 @@
 						$url2= "Release_Detail.php?model=".$Release_to_detail;	
 						if (file_exists($rel_picture1_loc)) {
 						//echo "picture exists";
-						echo "<a href=\"".$url2."\">"."<img src=".$rel_picture1." width=\"240\"></a>";
+						echo "<a href=\"".$url2."\">"."<img src=".$rel_picture1." width=\"180\"></a>";
 						} else {
 							//echo "cant find picture";
-							echo "<a href=\"".$url2."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
+							echo "<a href=\"".$url2."\">"."<img src=".DEFAULT_REL_IMAGE." width=\"180\"></a>";
 						}
-						echo "<p>Release Yr: ". $row3["RelYr"]."   Country: ". $row3["CountryOfSale"]."</p>";
+						echo "<p>Release Yr: ". $row3["RelYr"]."</p>";
+						echo "<p>Country: ". $row3["CountryOfSale"]."</p>";
 						echo "<p>Series: ".$row3["Series"]." Series#: ".$row3["SeriesID"]."</p>";
 						echo "<p>Model Name: ".$row3["MdlNameOnPkg"]."</p>";
 						echo "<p>Package Name: ".$row3["PkgName"]."</p>";

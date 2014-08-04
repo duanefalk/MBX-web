@@ -33,12 +33,9 @@
 			
 			
 			//BEGIN NEW COMPARISON CHART
-			echo "<table><tr><td></td>";
-			
-			
-			
+
 			//Row 1, photos
-			
+			echo "<table><tr><td></td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
@@ -60,11 +57,11 @@
 				
 				if (file_exists($picture1_loc)) {
 					//echo "picture exists";
-					echo "<a href=\"".$url."\">"."<img src=".$picture1." width=\"120\"></a>";
+					echo "<a href=\"".$url."\">"."<img src=".$picture1." width=\"180\"></a>";
 				} else {
 					//echo "cant find picture";
 					//echo DEFAULT_IMAGE;
-					echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"120\"></a>";
+					echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"180\"></a>";
 				}
 
 				//show photo refs								
@@ -82,13 +79,9 @@
 			
 				echo "</td>";
 			} // end row 1
-			
-			
-			echo "<tr><td>Variation ID</td>";
-			
-			
+						
 			//Row 2, Var ID
-			
+			echo "<tr><td>Variation ID</td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
@@ -98,16 +91,11 @@
 			
 				echo "<td>";
 					echo $row["VarID"];
-				echo "</td>";
-			
+				echo "</td>";			
 			} //end row 2
 			
-			
-			echo "<tr><td>Mack ID #</td>";
-			
-			
 			//Row 3, Mack ID
-			
+			echo "<tr><td>Mack ID #</td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
@@ -118,15 +106,10 @@
 				echo "<td>";
 					echo $row["Mack_No"];
 				echo "</td>";
-			
 			} //end row 3
-			
-			
-			echo "<tr><td>Base Name</td>";
-			
-			
-			//Row 4, Mack ID
-			
+					
+			//Row 4, Base name
+			echo "<tr><td>Base Name</td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
@@ -137,16 +120,10 @@
 				echo "<td>";
 					echo $row["BaseName"];
 				echo "</td>";
-			
 			} //end row 4
-			
-			
-			
-			echo "<tr><td>Manu. Location</td>";
-			
-			
+						
 			//Row 5, Manufactured In
-			
+			echo "<tr><td>Manu. Location</td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
@@ -156,16 +133,11 @@
 			
 				echo "<td>";
 					echo $row["ManufLoc"];
-				echo "</td>";
-			
+				echo "</td>";		
 			} //end row 5
-			
-			
-			echo "<tr><td>Variation Year</td>";
-			
-			
+					
 			//Row 6, Var Year
-			
+			echo "<tr><td>Variation Year</td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
@@ -175,56 +147,71 @@
 			
 				echo "<td>";
 					echo $row["VarYear"];
-				echo "</td>";
-			
+				echo "</td>";		
 			} //end row 6
 			
-			
-			
-			echo "<tr><td>Front Wheel Code</td>";
-			
-			
-			//Row 7, Front Wheel Code
-			
+			//Row 7, Front Wheel Photo
+			echo "<tr><td>Front Wheel</td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
 			
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
-			
+
+				$fwheel= WHEEL_URL . $row["FWhCd"].".jpg";
+				//$fwheel_loc=WHEEL_PATH. $row["FWhCd"]."_1.jpg";
+				//echo "<img src=".$fwheel." width=\"120\"></a>";
 				echo "<td>";
-					echo $row["FWhCd"];
-				echo "</td>";
-			
+					echo "<img src=".$fwheel." width=\"100\"";
+				echo "</td>";		
 			} //end row 7
 			
-			
-			echo "<tr><td>Rear Wheel Code</td>";
-			
-			
-			//Row 8, Rear Wheel Code
-			
+			//Row 8, Front Wheel Code
+			echo "<tr><td></td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
 			
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
+				echo "<td>";
+					echo $row["FWhCd"];
+				echo "</td>";		
+			} //end row 8			
+		
+			//Row 9, Rear Wheel Photo
+			echo "<tr><td>Rear Wheel</td>";			
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
 			
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+
+				$rwheel= WHEEL_URL . $row["RWhCd"].".jpg";
+				//$fwheel_loc=WHEEL_PATH. $row["FWhCd"]."_1.jpg";
+				//echo "<img src=".$fwheel." width=\"120\"></a>";
+				echo "<td>";
+					echo "<img src=".$rwheel." width=\"100\"";
+				echo "</td>";			
+			} //end row 9
+	
+			//Row 10, Rear Wheel Code
+			echo "<tr><td></td>";			
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
+			
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
 				echo "<td>";
 					echo $row["RWhCd"];
-				echo "</td>";
-			
-			} //end row 8
-			
-			
-			
-			echo "<tr><td>Window Color</td>";
-			
-			
-			//Row 9, Window Color
-			
+				echo "</td>";		
+			} //end row 10		
+
+			//Row 11, Window Color
+			echo "<tr><td>Window Color</td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
@@ -234,16 +221,11 @@
 			
 				echo "<td>";
 					echo $row["WindowColor"];
-				echo "</td>";
+				echo "</td>";			
+			} //end row 11
 			
-			} //end row 9
-			
-			
+			//Row 12, Interior Color
 			echo "<tr><td>Interior Color</td>";
-			
-			
-			//Row 10, Interior Color
-			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
@@ -253,17 +235,11 @@
 			
 				echo "<td>";
 					echo $row["InteriorColor"];
-				echo "</td>";
-			
-			} //end row 10
-			
-			
-			
+				echo "</td>";		
+			} //end row 12
+					
+			//Row 13, Base Material
 			echo "<tr><td>Base Material</td>";
-			
-			
-			//Row 11, Base Material
-			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
@@ -273,16 +249,11 @@
 			
 				echo "<td>";
 					echo $row["Base1Material"];
-				echo "</td>";
-			
-			} //end row 11
-			
-			
+				echo "</td>";		
+			} //end row 13
+					
+			//Row 14, Base Color
 			echo "<tr><td>Base Color</td>";
-			
-			
-			//Row 12, Base Color
-			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
@@ -292,16 +263,11 @@
 			
 				echo "<td>";
 					echo $row["Base1Color"];
-				echo "</td>";
-			
-			} //end row 12
-			
-			
+				echo "</td>";		
+			} //end row 14		
+					
+			//Row 15, Finish
 			echo "<tr><td>Finish</td>";
-			
-			
-			//Row 13, Finish
-			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
@@ -312,53 +278,219 @@
 				echo "<td>";
 					echo $row["Finish"];
 				echo "</td>";
-			
-			} //end row 13
-			
-			
-			echo "<tr><td>Color Var</td>";
-			
-			
-			//Row 14, Color Var
-			
-			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
-			$result = mysql_query($query);
-			$rows= mysql_num_rows($result);
-			
-			for ($i=1; $i<=$rows; $i++) {
-				$row = mysql_fetch_array($result);
-			
-				echo "<td>";
-					echo $row["ColorVar"];
-				echo "</td>";
-			
-			} //end row 14
-			
-			
-			echo "<tr><td>Tampo Var</td>";
-			
-			
-			//Row 15, Tampo Var
-			
-			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
-			$result = mysql_query($query);
-			$rows= mysql_num_rows($result);
-			
-			for ($i=1; $i<=$rows; $i++) {
-				$row = mysql_fetch_array($result);
-			
-				echo "<td>";
-					echo $row["TempaVar"];
-				echo "</td>";
-			
 			} //end row 15
+		
+			//Row 16, Color Var
+			$IsColorVar="0";
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				if ($row["ColorVar"]) {
+					$IsColorVar="1";
+				}
+			}
+			if ($IsColorVar=="1") {
+				echo "<tr><td>Color Var</td>";
+				$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+				$result = mysql_query($query);
+				$rows= mysql_num_rows($result);
+				for ($i=1; $i<=$rows; $i++) {
+					$row = mysql_fetch_array($result);
+					echo "<td>";
+						echo $row["ColorVar"];
+					echo "</td>";
+				} 
+			}
+			//end row 16
+			
+			//Row 17, Tampo Var	
+			$IsTampoVar="0";
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				if ($row["TempaVar"]) {
+					$IsTampoVar="1";
+				}
+			}
+			if ($IsTampoVar=="1") {
+				echo "<tr><td>Tampo Var</td>";
+				$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+				$result = mysql_query($query);
+				$rows= mysql_num_rows($result);
+				for ($i=1; $i<=$rows; $i++) {
+					$row = mysql_fetch_array($result);
+					echo "<td>";
+						echo $row["TempaVar"];
+					echo "</td>";
+				} 
+			}
+			//end row 17	
+
+			//Row 18, Det1	
+			$IsDet1="0";
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				if ($row["Det1Typ"]) {
+					$IsDet1="1";
+					$Det1Type=$row["Det1Typ"];
+				}
+			}
+			if ($IsDet1=="1") {
+				echo "<tr><td>$Det1Type</td>";
+				$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+				$result = mysql_query($query);
+				$rows= mysql_num_rows($result);
+				for ($i=1; $i<=$rows; $i++) {
+					$row = mysql_fetch_array($result);
+					echo "<td>";
+						echo $row["Det1Var"];
+					echo "</td>";
+				} 
+			}
+			//end row 18	
+
+			//Row 19, Det2	
+			$IsDet2="0";
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				if ($row["Det2Typ"]) {
+					$IsDet2="1";
+					$Det2Type=$row["Det2Typ"];
+				}
+			}
+			if ($IsDet2=="1") {
+				echo "<tr><td>$Det2Type</td>";
+				$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+				$result = mysql_query($query);
+				$rows= mysql_num_rows($result);
+				for ($i=1; $i<=$rows; $i++) {
+					$row = mysql_fetch_array($result);
+					echo "<td>";
+						echo $row["Det2Var"];
+					echo "</td>";
+				} 
+			}
+			//end row 19	
+	
+			//Row 20, Det3	
+			$IsDet3="0";
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				if ($row["Det3Typ"]) {
+					$IsDet3="1";
+					$Det3Type=$row["Det3Typ"];
+				}
+			}
+			if ($IsDet3=="1") {
+				echo "<tr><td>$Det3Type</td>";
+				$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+				$result = mysql_query($query);
+				$rows= mysql_num_rows($result);
+				for ($i=1; $i<=$rows; $i++) {
+					$row = mysql_fetch_array($result);
+					echo "<td>";
+						echo $row["Det3Var"];
+					echo "</td>";
+				} 
+			}
+			//end row 20
+			
+			//Row 21, Det4	
+			$IsDet4="0";
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				if ($row["Det4Typ"]) {
+					$IsDet4="1";
+					$Det4Type=$row["Det4Typ"];
+				}
+			}
+			if ($IsDet4=="1") {
+				echo "<tr><td>$Det4Type</td>";
+				$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+				$result = mysql_query($query);
+				$rows= mysql_num_rows($result);
+				for ($i=1; $i<=$rows; $i++) {
+					$row = mysql_fetch_array($result);
+					echo "<td>";
+						echo $row["Det4Var"];
+					echo "</td>";
+				} 
+			}
+			//end row 21
+			
+			//Row 22, Det5	
+			$IsDet5="0";
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				if ($row["Det5Typ"]) {
+					$IsDet5="1";
+					$Det2Type=$row["Det5Typ"];
+				}
+			}
+			if ($IsDet5=="1") {
+				echo "<tr><td>$Det5Type</td>";
+				$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+				$result = mysql_query($query);
+				$rows= mysql_num_rows($result);
+				for ($i=1; $i<=$rows; $i++) {
+					$row = mysql_fetch_array($result);
+					echo "<td>";
+						echo $row["Det5Var"];
+					echo "</td>";
+				} 
+			}
+			//end row 22
+			
+			//Row 23, Var Comm	
+			$IsComm="0";
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				if ($row["VarComment"]) {
+					$IsComm="1";
+				}
+			}
+			if ($IsComm=="1") {
+				echo "<tr><td>Comment</td>";
+				$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+				$result = mysql_query($query);
+				$rows= mysql_num_rows($result);
+				for ($i=1; $i<=$rows; $i++) {
+					$row = mysql_fetch_array($result);
+					echo "<td>";
+						echo $row["VarComment"];
+					echo "</td>";
+				} 
+			}
+			//end row 23	
+			
 			
 			
 			echo "</tr></table>";
 			
 			//END NEW COMPARISON CHART
-			
-		
+				
 			//Cancel button			
 			$model_for_detail=$row["UMID"];
 		    $url= "Models_Detail_and_Ver_Listing.php?model=".$model_for_detail;
