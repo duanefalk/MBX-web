@@ -9,8 +9,8 @@
 			<h2>Differences Among NASCAR Lumina Models</h2>
 			<p>Matchbox released 3 Chevrolet Lumina models. In 1990 NASCAR was suddenly popular with the success of the movie &#34;Days of Thunder&#34; and the diecast company Racing Champions got its start making models from the movie. Matchbox wanted to get into the game as well and initially used some of the Racing Champion models, released under the Matchbox name. These are not Matchbox models though (they say Racing Champions on the base) and are not listed in the database, though there is a note regarding them in the SF0362 model record.</p></p>
                         <p>The model is distinctive- actually a poor quality mold- and needs no detail listing to tell it apart:</p>
-			<img src="Images/Similar_Models/RC Lumina_1.jpg" width=200>
-			<img src="Images/Similar_Models/RC Lumina_2.jpg" width=200>
+			<img src="images/similar_models/RC Lumina_1.jpg" width=200>
+			<img src="images/similar_models/RC Lumina_2.jpg" width=200>
 			<p></p>  
 			<p>MB224 / SF0360<p>
 
@@ -23,9 +23,9 @@
 				<li>The side windows are shaped differently. The front window is narrower and the back is longer (left to right) than other models.</li>
 				<li>The base is similar to MAN221, with 4 engine pipes and the Matchbox logo printed normally (not compressed as in MB267)</li>
 			</ol>
- 			<img src="Images/Similar_Models/MAN 224_1.jpg" width=340>
-                        <img src="Images/Similar_Models/MAN 224_2.jpg" width=340>
-                        <img src="Images/Similar_Models/MAN 224_3.jpg" width=340>
+ 			<img src="images/similar_models/MAN 224_1.jpg" width=340>
+                        <img src="images/similar_models/MAN 224_2.jpg" width=340>
+                        <img src="images/similar_models/MAN 224_3.jpg" width=340>
 			<p></p>	
 
 			
@@ -38,9 +38,9 @@
 				<li>Base details are very different from MB267 (i.e. 4 pipes coming out of the engine base). Particularly- note that the Matchbox logo is a normal shape and is located mid-right of the base. This isn&#39;t the case, below with the later model. Note- this base is very similar to MB224 (SF0362)</li>
 			</ol>
 
- 			<img src="Images/Similar_Models/MAN 221_1.jpg" width=340>
-                        <img src="Images/Similar_Models/MAN 221_2.jpg" width=340>
-                        <img src="Images/Similar_Models/MAN 221_3.jpg" width=340>			
+ 			<img src="images/similar_models/MAN 221_1.jpg" width=340>
+                        <img src="images/similar_models/MAN 221_2.jpg" width=340>
+                        <img src="images/similar_models/MAN 221_3.jpg" width=340>			
 			<p></p>
 			<p>MB267 (SF0396)</p>
 			<ol>
@@ -51,9 +51,9 @@
 			</ol>
 			<p></p>
 			                      
- 			<img src="Images/Similar_Models/MAN 267_1.jpg" width=340>
-			<img src="Images/Similar_Models/MAN 267_2.jpg" width=340>
-			<img src="Images/Similar_Models/MAN 267_3.jpg" width=340>
+ 			<img src="images/similar_models/MAN 267_1.jpg" width=340>
+			<img src="images/similar_models/MAN 267_2.jpg" width=340>
+			<img src="images/similar_models/MAN 267_3.jpg" width=340>
 			<p></p>
 
 		</td>

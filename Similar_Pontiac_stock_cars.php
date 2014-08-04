@@ -18,9 +18,9 @@
 				<li>flat spoiler</li>
 				<li>1991 Pontiac Grand Prix on base</li>
 			</ol>
- 			<img src="Images/Similar_Models/MAN 216_1.jpg" width=340>
-                        <img src="Images/Similar_Models/MAN 216_2.jpg" width=340>
-                        <img src="Images/Similar_Models/MAN 216_3.jpg" width=340>
+ 			<img src="images/similar_models/MAN 216_1.jpg" width=340>
+                        <img src="images/similar_models/MAN 216_2.jpg" width=340>
+                        <img src="images/similar_models/MAN 216_3.jpg" width=340>
 			<p></p>	
 
 			
@@ -33,9 +33,9 @@
 				<li>1992 Grand Prix Stock Car</li>
 			</ol>
 
- 			<img src="Images/Similar_Models/MAN 238_1.jpg" width=340>
-                        <img src="Images/Similar_Models/MAN 238_2.jpg" width=340>
-                        <img src="Images/Similar_Models/MAN 238_3.jpg" width=340>			
+ 			<img src="images/similar_models/MAN 238_1.jpg" width=340>
+                        <img src="images/similar_models/MAN 238_2.jpg" width=340>
+                        <img src="images/similar_models/MAN 238_3.jpg" width=340>			
 			<p></p>
 			
 			<p>MB269 / SF0398</p>
@@ -48,9 +48,9 @@
 			</ol>
 			<p></p>
 			                      
- 			<img src="Images/Similar_Models/MAN 269_1.jpg" width=340>
-			<img src="Images/Similar_Models/MAN 269_2.jpg" width=340>
-			<img src="Images/Similar_Models/MAN 269_3.jpg" width=340>
+ 			<img src="images/similar_models/MAN 269_1.jpg" width=340>
+			<img src="images/similar_models/MAN 269_2.jpg" width=340>
+			<img src="images/similar_models/MAN 269_3.jpg" width=340>
 			<p></p>
 
 			<p>WRP01 / SF0427</p>
@@ -61,9 +61,9 @@
 				<li>flat spoiler</li>
 				<li>1996 Grand Prix Pontiac</li>
 			</ol>
-			<img src="Images/Similar_Models/MAN WRP01_1.jpg" width=340>
-			<img src="Images/Similar_Models/MAN WRP01_2.jpg" width=340>
-			<img src="Images/Similar_Models/MAN WRP01_3.jpg" width=340>
+			<img src="images/similar_models/MAN WRP01_1.jpg" width=340>
+			<img src="images/similar_models/MAN WRP01_2.jpg" width=340>
+			<img src="images/similar_models/MAN WRP01_3.jpg" width=340>
 			<p></p>
 		</td>
 	</tr>

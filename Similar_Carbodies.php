@@ -13,8 +13,8 @@
 			<p>2)  The base dates reflect their release years</p>
 			<p>3)  The scale for MB174 is 1:60; for MB667 it's 1:63</p>
 			<p>4)  The undercarriage casting fo MB174 is simpler, with an 'open pliers' appearance and a single exhaust pipe to the rear. Dual exhaust pipes on the newer issue.</p>
-			<img src="Images/Similar_Models/MAN-174-2.jpg" width=340>
-			<img src="Images/Similar_Models/MAN-667-2.jpg" width=340>	
+			<img src="images/similar_models/MAN-174-2.jpg" width=340>
+			<img src="images/similar_models/MAN-667-2.jpg" width=340>	
 			<p></p>
                         <p>Other differentiating features are:</p> 
                         <p>1)  The rear door on MB174 opens; it is cast shut on MB667<p>
@@ -24,12 +24,12 @@
 
 			MB174:
 			<br></>
- 			<img src="Images/Similar_Models/MAN-174.jpg" width=340>
+ 			<img src="images/similar_models/MAN-174.jpg" width=340>
                        
 			<br></>	
                         MB667:
 			<br></>
-			<img src="Images/Similar_Models/MAN-667.jpg" width=340>
+			<img src="images/similar_models/MAN-667.jpg" width=340>
                         
 			<p></p>
 
