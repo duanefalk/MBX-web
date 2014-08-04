@@ -28,7 +28,7 @@
 			echo "<p>Ford T-Birds MB 212, 268 & WRP02</p>";
 			
 			$picture1= "images/similar_models/39_Chevy_Delivery.jpg";
-			$url1= "Similar_39_Chevy_deliv.php";
+			$url1= "Similar_39_Chevy_Deliv.php";
 			echo "<a href=\"".$url1."\">"."<img src=".$picture1." width=\"240\"></a>";
 			echo "<br />";
 			echo "<p>1939 Chevy Sedan Delivery MB 215 & 245</p>";
