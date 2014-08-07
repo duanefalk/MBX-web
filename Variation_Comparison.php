@@ -34,7 +34,7 @@
 			
 			//BEGIN NEW COMPARISON CHART
 
-			//Row 1, photos
+			//Rows 1,2 photos & refs
 			echo "<table><tr><td></td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
@@ -78,9 +78,9 @@
 				}
 			
 				echo "</td>";
-			} // end row 1
+			} // end rows 1,2
 						
-			//Row 2, Var ID
+			//Row 3, Var ID
 			echo "<tr><td>Variation ID</td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
@@ -92,9 +92,9 @@
 				echo "<td>";
 					echo $row["VarID"];
 				echo "</td>";			
-			} //end row 2
+			} //end row 3
 			
-			//Row 3, Mack ID
+			//Row 4, Mack ID
 			echo "<tr><td>Mack ID #</td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
@@ -106,49 +106,77 @@
 				echo "<td>";
 					echo $row["Mack_No"];
 				echo "</td>";
-			} //end row 3
+			} //end row 4
 					
-			//Row 4, Base name
+			//Row 5, Base name
 			echo "<tr><td>Base Name</td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
-			
+			//check if all same value
+			$diff=0;
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
-			
-				echo "<td>";
-					echo $row["BaseName"];
-				echo "</td>";
-			} //end row 4
+				$check[$i]=$row["BaseName"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				if ($diff==0) {
+					echo "<td>";
+						echo "<font color=\"gray\">". $row["BaseName"] ."</font>";
+					echo "</td>";
+				} else {
+					echo "<td>";
+						echo $row["BaseName"];
+					echo "</td>";
+					}
+				}
+			 //end row 5
 						
-			//Row 5, Manufactured In
+			//Row 6, Manufactured In
 			echo "<tr><td>Manu. Location</td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
-			
-			for ($i=1; $i<=$rows; $i++) {
-				$row = mysql_fetch_array($result);
-			
-				echo "<td>";
-					echo $row["ManufLoc"];
-				echo "</td>";		
-			} //end row 5
-					
-			//Row 6, Var Year
-			echo "<tr><td>Variation Year</td>";			
+			//check if all same value
+			$diff=0;
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
-			$rows= mysql_num_rows($result);
-			
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
-			
-				echo "<td>";
-					echo $row["VarYear"];
-				echo "</td>";		
-			} //end row 6
+				$check[$i]=$row["ManufLoc"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				if ($diff==0) {
+					echo "<td>";
+						echo "<font color=\"gray\">". $row["ManufLoc"] ."</font>";
+					echo "</td>";
+				} else {
+					echo "<td>";
+						echo $row["ManufLoc"];
+					echo "</td>";
+					}
+				}
+			//end row 6
 			
 			//Row 7, Front Wheel Photo
 			echo "<tr><td>Front Wheel</td>";			
@@ -172,13 +200,35 @@
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
-			
+			//check if all same value
+			$diff=0;
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
-				echo "<td>";
-					echo $row["FWhCd"];
-				echo "</td>";		
-			} //end row 8			
+				$check[$i]=$row["FWhCd"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				if ($diff==0) {
+					echo "<td>";
+						echo "<font color=\"gray\">". $row["FWhCd"] ."</font>";
+					echo "</td>";
+				} else {
+					echo "<td>";
+						echo $row["FWhCd"];
+					echo "</td>";
+					}
+				}		
+			//end row 8			
 		
 			//Row 9, Rear Wheel Photo
 			echo "<tr><td>Rear Wheel</td>";			
@@ -202,13 +252,35 @@
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
-			
+			//check if all same value
+			$diff=0;
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
-				echo "<td>";
-					echo $row["RWhCd"];
-				echo "</td>";		
-			} //end row 10		
+				$check[$i]=$row["RWhCd"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				if ($diff==0) {
+					echo "<td>";
+						echo "<font color=\"gray\">". $row["RWhCd"] ."</font>";
+					echo "</td>";
+				} else {
+					echo "<td>";
+						echo $row["RWhCd"];
+					echo "</td>";
+					}
+				}
+			//end row 10		
 
 			//Row 11, Window Color
 			echo "<tr><td>Window Color</td>";			
@@ -216,13 +288,35 @@
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
 			
+			//check if all same value
+			$diff=0;
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
-			
-				echo "<td>";
-					echo $row["WindowColor"];
-				echo "</td>";			
-			} //end row 11
+				$check[$i]=$row["WindowColor"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				if ($diff==0) {
+					echo "<td>";
+						echo "<font color=\"gray\">". $row["WindowColor"] ."</font>";
+					echo "</td>";
+				} else {
+					echo "<td>";
+						echo $row["WindowColor"];
+					echo "</td>";
+					}
+				}
+			//end row 11
 			
 			//Row 12, Interior Color
 			echo "<tr><td>Interior Color</td>";
@@ -230,13 +324,35 @@
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
 			
+			//check if all same value
+			$diff=0;
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
-			
-				echo "<td>";
-					echo $row["InteriorColor"];
-				echo "</td>";		
-			} //end row 12
+				$check[$i]=$row["InteriorColor"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				if ($diff==0) {
+					echo "<td>";
+						echo "<font color=\"gray\">". $row["InteriorColor"] ."</font>";
+					echo "</td>";
+				} else {
+					echo "<td>";
+						echo $row["InteriorColor"];
+					echo "</td>";
+					}
+				}			
+			//end row 12
 					
 			//Row 13, Base Material
 			echo "<tr><td>Base Material</td>";
@@ -244,13 +360,35 @@
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
 			
+			//check if all same value
+			$diff=0;
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
-			
-				echo "<td>";
-					echo $row["Base1Material"];
-				echo "</td>";		
-			} //end row 13
+				$check[$i]=$row["Base1Material"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				if ($diff==0) {
+					echo "<td>";
+						echo "<font color=\"gray\">". $row["Base1Material"] ."</font>";
+					echo "</td>";
+				} else {
+					echo "<td>";
+						echo $row["Base1Material"];
+					echo "</td>";
+					}
+				}
+			//end row 13
 					
 			//Row 14, Base Color
 			echo "<tr><td>Base Color</td>";
@@ -258,13 +396,35 @@
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
 			
+			//check if all same value
+			$diff=0;
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
-			
-				echo "<td>";
-					echo $row["Base1Color"];
-				echo "</td>";		
-			} //end row 14		
+				$check[$i]=$row["Base1Color"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				if ($diff==0) {
+					echo "<td>";
+						echo "<font color=\"gray\">". $row["Base1Color"] ."</font>";
+					echo "</td>";
+				} else {
+					echo "<td>";
+						echo $row["Base1Color"];
+					echo "</td>";
+					}
+				}	
+			//end row 14		
 					
 			//Row 15, Finish
 			echo "<tr><td>Finish</td>";
@@ -272,13 +432,35 @@
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
 			
+			//check if all same value
+			$diff=0;
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
-			
-				echo "<td>";
-					echo $row["Finish"];
-				echo "</td>";
-			} //end row 15
+				$check[$i]=$row["Finish"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				if ($diff==0) {
+					echo "<td>";
+						echo "<font color=\"gray\">". $row["Finish"] ."</font>";
+					echo "</td>";
+				} else {
+					echo "<td>";
+						echo $row["Finish"];
+					echo "</td>";
+					}
+				}
+			//end row 15
 		
 			//Row 16, Color Var
 			$IsColorVar="0";
