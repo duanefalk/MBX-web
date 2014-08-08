@@ -69,7 +69,7 @@
 
 			echo "<h2>Variations</h2>";
 			//find and display variations
-			$query2= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$query2= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
 			$result2 = mysql_query($query2);
 			$rows2= mysql_num_rows($result2);
 
