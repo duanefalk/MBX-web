@@ -1,5 +1,19 @@
 @import "settings";
 
+/* --
+Styles, by order
+
+Main
+Sidebar
+Home
+Login
+About
+Add Menu
+Models Detail
+Variation Comparison
+
+-- */
+
 /* -- Main -- */
 #main {padding-top:8em;
 	@media only screen and (max-width:480px){ padding-top:2em; font-size:90%; }
@@ -59,14 +73,11 @@
 			&:hover {background:$orange;}	
 		}
 	}
-		
 }
 
 
 /* -- Login Screen --------------- */
-#login {
-	
-	margin:6em auto 3em;
+#login { margin:6em auto 3em;
 	
 	form {
 		
@@ -81,15 +92,18 @@
 			&:hover {background:$orange;}
 		}
 	}
-	
 }
 
 
 /* -- About ----------------------- */
-.section { margin:1em auto 3em; padding-bottom:2em; border-bottom:.2em solid transparentize($black,.75);
-	h2 {}
-	
+.section { margin:1em auto 3em; padding-bottom:2em; border-bottom:.2em solid transparentize($black,.75);}
+
+
+/* -- Add Menu -- */
+#addMenu {
+	a.button {display:block;}
 }
+
 
 /* -- Models Detail --------------- */
 
@@ -122,3 +136,4 @@
 #varCompare {
 	table tr td:first-of-type {min-width:140px; @include headline; }
 }
+

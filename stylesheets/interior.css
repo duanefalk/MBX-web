@@ -1,99 +1,112 @@
 /* -- Fonts -- */
 /* -- Colors -- */
 /*$cream : #F3EECE;*/
+/* --
+Styles, by order
+
+Main
+Sidebar
+Home
+Login
+About
+Add Menu
+Models Detail
+Variation Comparison
+
+-- */
 /* -- Main -- */
-/* line 4, sass/interior.scss */
+/* line 18, sass/interior.scss */
 #main {
   padding-top: 8em;
 }
 @media only screen and (max-width: 480px) {
-  /* line 4, sass/interior.scss */
+  /* line 18, sass/interior.scss */
   #main {
     padding-top: 2em;
     font-size: 90%;
   }
 }
 
-/* line 8, sass/interior.scss */
+/* line 22, sass/interior.scss */
 .home #main {
   padding-top: 0;
 }
 
 /* -- Sidebar -- */
-/* line 12, sass/interior.scss */
+/* line 26, sass/interior.scss */
 .sidebar {
   margin-top: 3em;
   font-size: 120%;
 }
-/* line 16, sass/interior.scss */
+/* line 30, sass/interior.scss */
 .sidebar a {
   display: block;
   margin: .5em 0;
 }
 
 /* -- Home --------------- */
-/* line 22, sass/interior.scss */
+/* line 36, sass/interior.scss */
 #header-home {
   margin-bottom: 2em;
   background: #d45132 url("../images/banners/chalkboard.png") center center no-repeat;
 }
-/* line 24, sass/interior.scss */
+/* line 38, sass/interior.scss */
 #header-home * {
   color: #f6f3dd;
 }
 @media only screen and (max-width: 480px) {
-  /* line 26, sass/interior.scss */
+  /* line 40, sass/interior.scss */
   #header-home #logo {
     text-align: center;
   }
 }
-/* line 30, sass/interior.scss */
+/* line 44, sass/interior.scss */
 #header-home #banner {
   margin-top: 2em;
 }
-/* line 33, sass/interior.scss */
+/* line 47, sass/interior.scss */
 #header-home #banner #bannerText {
   margin-top: 2em;
 }
 @media only screen and (max-width: 480px) {
-  /* line 36, sass/interior.scss */
+  /* line 50, sass/interior.scss */
   #header-home #banner #bannerImage {
     text-align: center;
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 39, sass/interior.scss */
+  /* line 53, sass/interior.scss */
   #header-home #banner #bannerImage img {
     max-width: 60%;
     margin: 0 auto;
   }
 }
 
-/* line 44, sass/interior.scss */
+/* line 58, sass/interior.scss */
 #quick_search {
   padding: 1.5em;
   color: white;
   background: #087b80;
   border-radius: 1em;
 }
-/* line 47, sass/interior.scss */
+/* line 61, sass/interior.scss */
 #quick_search h3 {
   color: white;
 }
-/* line 48, sass/interior.scss */
+/* line 62, sass/interior.scss */
 #quick_search form {
   margin-bottom: 0;
 }
-/* line 51, sass/interior.scss */
+/* line 65, sass/interior.scss */
 #quick_search form label {
   color: white;
 }
-/* line 52, sass/interior.scss */
+/* line 66, sass/interior.scss */
 #quick_search form input {
   display: inline-block;
   margin-bottom: 0;
 }
-/* line 53, sass/interior.scss */
+/* line 67, sass/interior.scss */
 #quick_search form input[type=text] {
   width: 72%;
   margin-right: 2%;
@@ -101,35 +114,35 @@
   box-shadow: 0;
 }
 @media only screen and (max-width: 480px) {
-  /* line 53, sass/interior.scss */
+  /* line 67, sass/interior.scss */
   #quick_search form input[type=text] {
     width: 100%;
     margin: 0 auto 1em;
   }
 }
-/* line 56, sass/interior.scss */
+/* line 70, sass/interior.scss */
 #quick_search form input[type=submit] {
   width: 25%;
   font-size: 90%;
 }
 @media only screen and (max-width: 480px) {
-  /* line 56, sass/interior.scss */
+  /* line 70, sass/interior.scss */
   #quick_search form input[type=submit] {
     width: 100%;
     margin: 0 auto;
   }
 }
-/* line 59, sass/interior.scss */
+/* line 73, sass/interior.scss */
 #quick_search form input[type=submit]:hover {
   background: #d45132;
 }
 
 /* -- Login Screen --------------- */
-/* line 67, sass/interior.scss */
+/* line 80, sass/interior.scss */
 #login {
   margin: 6em auto 3em;
 }
-/* line 73, sass/interior.scss */
+/* line 84, sass/interior.scss */
 #login form input[type=submit] {
   cursor: pointer;
   display: block;
@@ -145,21 +158,27 @@
   border-radius: 5px;
   box-shadow: 0 none;
 }
-/* line 81, sass/interior.scss */
+/* line 92, sass/interior.scss */
 #login form input[type=submit]:hover {
   background: #d45132;
 }
 
 /* -- About ----------------------- */
-/* line 89, sass/interior.scss */
+/* line 99, sass/interior.scss */
 .section {
   margin: 1em auto 3em;
   padding-bottom: 2em;
-  border-bottom: 0.2em solid rgba(51, 51, 51, 0.25);
+  border-bottom: 0.2em solid rgba(68, 68, 68, 0.25);
+}
+
+/* -- Add Menu -- */
+/* line 104, sass/interior.scss */
+#addMenu a.button {
+  display: block;
 }
 
 /* -- Models Detail --------------- */
-/* line 96, sass/interior.scss */
+/* line 110, sass/interior.scss */
 .car-block {
   width: 240px;
   display: inline-block;
@@ -167,38 +186,38 @@
   margin: 1em 1.2em;
 }
 
-/* line 102, sass/interior.scss */
+/* line 116, sass/interior.scss */
 .car-block img {
   max-width: 100%;
   margin-bottom: .5em;
 }
 
-/* line 107, sass/interior.scss */
+/* line 121, sass/interior.scss */
 .car-block img.own {
   border-bottom: 10px solid #2E8B57;
 }
 
 /*green*/
-/* line 108, sass/interior.scss */
+/* line 122, sass/interior.scss */
 .car-block img.own-not {
   border-bottom: 10px solid #de3939;
 }
 
 /*red*/
-/* line 109, sass/interior.scss */
+/* line 123, sass/interior.scss */
 .car-block img.own-poor {
   border-bottom: 10px solid #ffde42;
 }
 
 /*yellow*/
-/* line 111, sass/interior.scss */
+/* line 125, sass/interior.scss */
 .car-block p {
   max-width: 95%;
   margin: 0 0 .4em;
   line-height: 120%;
 }
 
-/* line 117, sass/interior.scss */
+/* line 131, sass/interior.scss */
 #photoref {
   margin-bottom: .5em;
   font-size: x-small;
@@ -207,7 +226,7 @@
 }
 
 /* -- Variations Comparison -- */
-/* line 123, sass/interior.scss */
+/* line 137, sass/interior.scss */
 #varCompare table tr td:first-of-type {
   min-width: 140px;
   font-family: 'Lato', sans-serif;

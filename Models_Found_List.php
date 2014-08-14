@@ -1,39 +1,42 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
-<table id="structure">
 
-	<tr>
-		<td id="navigation">
-			<a href="Search_Models_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
-			<a href="Search_Releases_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
-			<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
-		</td>
-		<td id="page">
-			<h2>Matching Models</h2>
-			<br />
-			<!--<a href="http://localhost/~Falk/MBX_Web_Site_Test/IMAGES/TEST.doc"><p>CLICK TO DOWNLOAD FILE</p</a><br /> -->
-			<?php
-			$TexttoSearch=$_GET["tempatext"];
-			echo "You selected models with the text: ".$TexttoSearch."<br />";
+<div class="row">
+	<div class="large-12 columns">
+
+		<h2>Matching Models</h2>
+		
+		<?php
+			
+			$TexttoSearch = $_GET["tempatext"];
+			echo "<p>You searched models with the text: <strong>" . $TexttoSearch . "</strong></p>";
+			
 			$query= ("SELECT DISTINCT Matchbox_Versions.UMID, Matchbox_Versions.VerID, Matchbox_Versions.VerName, Matchbox_Versions.VerYrFirstRel, Matchbox_Versions.FAB_No, Matchbox_Versions.VerPhoto1Ref, Matchbox_Versions.Master_Mack_No
-							 FROM Matchbox_Versions
-							 LEFT JOIN Matchbox_Variations ON Matchbox_Versions.VerID=Matchbox_Variations.VerID
-							 WHERE Matchbox_Versions.TempaText LIKE '%$TexttoSearch%' OR Matchbox_Variations.TempaVar LIKE '%$TexttoSearch%'
-							 ORDER BY Matchbox_Versions.VerID ASC");	
+						 FROM Matchbox_Versions
+						 LEFT JOIN Matchbox_Variations ON Matchbox_Versions.VerID=Matchbox_Variations.VerID
+						 WHERE Matchbox_Versions.TempaText LIKE '%$TexttoSearch%' OR Matchbox_Variations.TempaVar LIKE '%$TexttoSearch%'
+						 ORDER BY Matchbox_Versions.VerID ASC");	
 			$result=0;
 			$rows=0;
-			// echo $result;
+			
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result); //print_r($result);
-			echo "Versions found: ".$rows."<br /><br />";
-			if(!$result) {
+			
+			echo "<p>Versions found: <strong>" . $rows . "</strong></p>";
+			
+			if (!$result) {
 				echo "No matching results found"; //mysql_error();
 				exit;
-				}					
-			for ($i=1; $i<=$rows; $i++)
-				{
-				echo "<div class=\"car-block\">";
+			}					
+			?>
+			
+			<ul class="large-block-grid-3">
+			
+			<?php
+			
+			for ($i=1; $i<=$rows; $i++) {
+				echo "<li class=\"carGrid\">";
 					$row=mysql_fetch_array($result);
 					$picture= IMAGE_URL . $row["VerID"]."_1.jpg";
 					$picture_loc=IMAGE_PATH. $row["VerID"]."_1.jpg";
@@ -57,18 +60,29 @@
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
-					} ELSE {
+					} else {
 						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 					}
 					echo "<p>Ver ID: ". $row["VerID"]."   MAN#: ". $row["FAB_No"]."</p>";
 					echo "<p>Ver Name: ".$row["VerName"]."</p>";
 					echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
-				echo "</div>";
+				echo "</li>";
 				}
 			?>
 			
-		</td>
-	</tr>
-</table>
+			</ul>
+
+	</div>
+</div>
+
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Search_Models_Menu.php">Search Models</a>
+		<a href="Search_Releases_Menu.php">Search Releases</a>
+	</div>
+</div>	
 
 <?php include("includes/footer.php"); ?>	

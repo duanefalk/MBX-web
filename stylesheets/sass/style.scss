@@ -122,3 +122,14 @@ dl.accordion { margin:0 auto 1em; @include body;
 		&:hover {background:lighten($teal,5%); }
 	}
 }
+
+/* -- Car Grids -- */
+.carGrid { margin:1em 0;
+	img {max-width:100%; margin-bottom:.5em;
+		&.own {border-bottom:10px solid #2E8B57;}	/*green*/
+		&.own-not {border-bottom:10px solid #de3939;}	/*red*/
+		&.own-poor {border-bottom:10px solid #ffde42;}	/*yellow*/
+	}
+
+	p { max-width:95%; margin:0 0 .4em; line-height:120%;}	
+}

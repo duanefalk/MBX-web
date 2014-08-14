@@ -105,7 +105,7 @@
 							$ID_String1=str_pad($ID_String1, 6,"SF", STR_PAD_LEFT);	
 						}
 					//should be just up to 4 numbers
-					} ELSE {
+					} else {
 						//make sure no other letters
 						if (!is_numeric($ID_String1)) {
 							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
@@ -115,7 +115,7 @@
 							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 							exit;
 						//pad if too short otherwise jsut right						
-						} ELSE {						
+						} else {						
 							$ID_String1=str_pad($ID_String1, 4, "0", STR_PAD_LEFT);
 							$ID_String1=str_pad($ID_String1, 6,"SF", STR_PAD_LEFT);
 						}
@@ -161,7 +161,7 @@
 								$ID_String2=str_pad($ID_String2, 6,"SF", STR_PAD_LEFT);	
 							}
 						//should be just up to 4 numbers
-						} ELSE {
+						} else {
 							//make sure no other letters
 							if (!is_numeric($ID_String2)) {
 								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
@@ -171,7 +171,7 @@
 								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 								exit;
 							//pad if too short otherwise jsut right						
-							} ELSE {						
+							} else {						
 								$ID_String2=str_pad($ID_String2, 4, "0", STR_PAD_LEFT);
 								$ID_String2=str_pad($ID_String2, 6,"SF", STR_PAD_LEFT);
 							}
@@ -218,7 +218,7 @@
 							 FROM Matchbox_Models
 							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
 							 WHERE Matchbox_Models.MakeofModel LIKE '%$VehicleMake%'";
-					} ELSE {
+					} else {
 					    //echo "type and make";
 					    $PrevModelCriteria="1";
 					    $query .= " AND Matchbox_Models.MakeofModel LIKE '%$VehicleMake%'";
@@ -237,14 +237,14 @@
 							 FROM Matchbox_Models
 							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
 							 WHERE Matchbox_Models.CountryofMake LIKE '%$MakeCountry%'";
-				       } ELSE {
+				       } else {
 					   $PrevModelCriteria="1";
 					   $query=$query . " AND Matchbox_Models.CountryofMake LIKE '%$MakeCountry%'";
 				       }                   
 				}
 				$query = "(".$query.")";
 				
-			} ELSE {
+			} else {
 				//go to separate page to search and display model details of multiple umids at ver level
 				$TempaText=$_POST['TempaText'];
 				$string_to_redirect="Models_Found_List.php?tempatext=".$TempaText;
@@ -301,7 +301,7 @@
 					$result2= mysql_query($query2);
 					$row2 =mysql_fetch_array($result2);
 					echo "<p>Photo by: ". $row2["RefName"]."</p>";
-				} ELSE {
+				} else {
 					echo "<p>Photo by: no reference listed"."</p>";
 				}
 	

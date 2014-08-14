@@ -7,7 +7,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #333333;
+  color: #444444;
   background: #fbfaf1 url("../images/bgTexture.jpg") repeat;
 }
 
@@ -16,13 +16,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #333333;
+  color: #444444;
   line-height: 115%;
 }
 
 /* line 9, sass/style.scss */
 p {
-  color: #333333;
+  color: #444444;
 }
 
 /* line 11, sass/style.scss */
@@ -33,7 +33,7 @@ img {
 
 /* line 13, sass/style.scss */
 a {
-  color: #333333;
+  color: #444444;
   border: none;
   outline: none;
 }
@@ -160,7 +160,7 @@ table tr:nth-of-type(2n) {
 #utilityNav {
   margin-bottom: .5em;
   text-align: right;
-  background: rgba(51, 51, 51, 0.25);
+  background: rgba(68, 68, 68, 0.25);
 }
 @media only screen and (max-width: 480px) {
   /* line 73, sass/style.scss */
@@ -217,8 +217,8 @@ table tr:nth-of-type(2n) {
   margin-top: 3em;
   padding: 0 .75em;
   font-size: .8em;
-  border-top: 0.3em solid rgba(51, 51, 51, 0.25);
-  border-bottom: 0.2em solid rgba(51, 51, 51, 0.25);
+  border-top: 0.3em solid rgba(68, 68, 68, 0.25);
+  border-bottom: 0.2em solid rgba(68, 68, 68, 0.25);
 }
 @media only screen and (max-width: 480px) {
   /* line 100, sass/style.scss */
@@ -240,8 +240,8 @@ table tr:nth-of-type(2n) {
   padding: .75em 2em .5em;
   line-height: 100%;
   font-size: 1em;
-  color: rgba(51, 51, 51, 0.5);
-  border-right: 0.2em solid rgba(51, 51, 51, 0.25);
+  color: rgba(68, 68, 68, 0.5);
+  border-right: 0.2em solid rgba(68, 68, 68, 0.25);
 }
 @media only screen and (max-width: 480px) {
   /* line 105, sass/style.scss */
@@ -254,11 +254,11 @@ table tr:nth-of-type(2n) {
 #subNav a {
   display: inline-block;
   padding: .75em 2em .5em;
-  color: rgba(51, 51, 51, 0.5);
+  color: rgba(68, 68, 68, 0.5);
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-style: normal;
-  border-right: 0.2em solid rgba(51, 51, 51, 0.25);
+  border-right: 0.2em solid rgba(68, 68, 68, 0.25);
 }
 @media only screen and (max-width: 480px) {
   /* line 108, sass/style.scss */
@@ -266,7 +266,7 @@ table tr:nth-of-type(2n) {
     display: block;
     padding: 1em 0 .75em;
     border-right: 0;
-    border-top: 0.2em solid rgba(51, 51, 51, 0.25);
+    border-top: 0.2em solid rgba(68, 68, 68, 0.25);
   }
 }
 /* line 111, sass/style.scss */
@@ -301,4 +301,36 @@ dl.accordion dd > a {
 /* line 122, sass/style.scss */
 dl.accordion dd > a:hover {
   background: #099298;
+}
+
+/* -- Car Grids -- */
+/* line 127, sass/style.scss */
+.carGrid {
+  margin: 1em 0;
+}
+/* line 128, sass/style.scss */
+.carGrid img {
+  max-width: 100%;
+  margin-bottom: .5em;
+  /*green*/
+  /*red*/
+  /*yellow*/
+}
+/* line 129, sass/style.scss */
+.carGrid img.own {
+  border-bottom: 10px solid #2E8B57;
+}
+/* line 130, sass/style.scss */
+.carGrid img.own-not {
+  border-bottom: 10px solid #de3939;
+}
+/* line 131, sass/style.scss */
+.carGrid img.own-poor {
+  border-bottom: 10px solid #ffde42;
+}
+/* line 134, sass/style.scss */
+.carGrid p {
+  max-width: 95%;
+  margin: 0 0 .4em;
+  line-height: 120%;
 }
