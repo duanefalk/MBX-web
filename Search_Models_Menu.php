@@ -12,10 +12,10 @@
 		<div class="large-4 columns">				
 			<h3 class="demoHeaders">Choose the ID You Want to Search by</h3>
 			<p>Search will use only last data entered; if you get unexpected results, click on 'cancel' and retry:</p>
-		
+
 			<dl class="accordion" data-accordion>
 				<dd>
-					<a href="#panel4">MAN (FAB) # <small>(i.e. '800'; enter one no. on the top line, or one on each line for a range)</small></a>
+					<a href="#panel4">Broad MAN (FAB) # <small>(i.e. '800'; enter one no. on the top line or one on each line for a range)</small></a>
 					<div id="panel4" class="content">
 						<input type="text" name="MAN_No_1" value="" id="MAN_No_1" />
 						<input type="text" name="MAN_No_2" value="" id="MAN_No_2" />
