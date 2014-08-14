@@ -9,7 +9,7 @@
 			$model_for_detail=$_GET["model"];
 			$UMID=substr($model_for_detail,0,6);
 			
-			echo "<a href=\"Models_Detail_and_Ver_Listing.php?model=".$UMID."\"><p onmouseover=\"this.style.color='orange'\" onmouseout=\"this.style.color='white'\">Return to Versions Listing Page</a>";
+			echo "<a class=\"button dark\"  href=\"Models_Detail_and_Ver_Listing.php?model=" . $UMID . "\">Return to Versions Listing Page</a>";
 		?>
 			
 	
