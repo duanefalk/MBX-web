@@ -226,10 +226,14 @@ Variation Comparison
 }
 
 /* -- Variations Comparison -- */
-/* line 137, sass/interior.scss */
+/* line 138, sass/interior.scss */
 #varCompare table tr td:first-of-type {
   min-width: 140px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+/* line 139, sass/interior.scss */
+#varCompare table tr td span {
+  color: #919191;
 }

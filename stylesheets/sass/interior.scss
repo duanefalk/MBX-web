@@ -134,6 +134,9 @@ Variation Comparison
 
 /* -- Variations Comparison -- */
 #varCompare {
-	table tr td:first-of-type {min-width:140px; @include headline; }
+	table tr td {
+		&:first-of-type {min-width:140px; @include headline; }
+		span {color:lighten($black,30%);}
+	}
 }
 

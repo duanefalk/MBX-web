@@ -131,16 +131,14 @@
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
 				//grey out if all same
-				if ($diff==0) {
-					echo "<td>";
-						echo "<font color=\"gray\">". $row["BaseName"] ."</font>";
-					echo "</td>";
-				} else {
-					echo "<td>";
-						echo $row["BaseName"];
-					echo "</td>";
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["BaseName"] ."</span>";
+					} 
+					else { 
+						echo $row["BaseName"]; }
 					}
-				}
+				echo "</td>";
 			 //end row 5
 						
 			//Row 6, Manufactured In
@@ -166,16 +164,14 @@
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
 				//grey out if all same
-				if ($diff==0) {
-					echo "<td>";
-						echo "<font color=\"gray\">". $row["ManufLoc"] ."</font>";
-					echo "</td>";
-				} else {
-					echo "<td>";
-						echo $row["ManufLoc"];
-					echo "</td>";
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["ManufLoc"] ."</span>";
+					} 
+					else { 
+						echo $row["ManufLoc"]; }
 					}
-				}
+				echo "</td>";
 			//end row 6
 			
 			//Row 7, Front Wheel Photo
@@ -218,16 +214,14 @@
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
 				//grey out if all same
-				if ($diff==0) {
-					echo "<td>";
-						echo "<font color=\"gray\">". $row["FWhCd"] ."</font>";
-					echo "</td>";
-				} else {
-					echo "<td>";
-						echo $row["FWhCd"];
-					echo "</td>";
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["FWhCd"] ."</span>";
+					} 
+					else { 
+						echo $row["FWhCd"]; }
 					}
-				}		
+				echo "</td>";
 			//end row 8			
 		
 			//Row 9, Rear Wheel Photo
@@ -270,16 +264,14 @@
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
 				//grey out if all same
-				if ($diff==0) {
-					echo "<td>";
-						echo "<font color=\"gray\">". $row["RWhCd"] ."</font>";
-					echo "</td>";
-				} else {
-					echo "<td>";
-						echo $row["RWhCd"];
-					echo "</td>";
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["RWhCd"] ."</span>";
+					} 
+					else { 
+						echo $row["RWhCd"]; }
 					}
-				}
+				echo "</td>";
 			//end row 10		
 
 			//Row 11, Window Color
@@ -306,16 +298,14 @@
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
 				//grey out if all same
-				if ($diff==0) {
-					echo "<td>";
-						echo "<font color=\"gray\">". $row["WindowColor"] ."</font>";
-					echo "</td>";
-				} else {
-					echo "<td>";
-						echo $row["WindowColor"];
-					echo "</td>";
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["WindowColor"] ."</span>";
+					} 
+					else { 
+						echo $row["WindowColor"]; }
 					}
-				}
+				echo "</td>";
 			//end row 11
 			
 			//Row 12, Interior Color
@@ -342,16 +332,14 @@
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
 				//grey out if all same
-				if ($diff==0) {
-					echo "<td>";
-						echo "<font color=\"gray\">". $row["InteriorColor"] ."</font>";
-					echo "</td>";
-				} else {
-					echo "<td>";
-						echo $row["InteriorColor"];
-					echo "</td>";
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["InteriorColor"] ."</span>";
+					} 
+					else { 
+						echo $row["InteriorColor"]; }
 					}
-				}			
+				echo "</td>";
 			//end row 12
 					
 			//Row 13, Base Material
@@ -378,16 +366,14 @@
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
 				//grey out if all same
-				if ($diff==0) {
-					echo "<td>";
-						echo "<font color=\"gray\">". $row["Base1Material"] ."</font>";
-					echo "</td>";
-				} else {
-					echo "<td>";
-						echo $row["Base1Material"];
-					echo "</td>";
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["Base1Material"] ."</span>";
+					} 
+					else { 
+						echo $row["Base1Material"]; }
 					}
-				}
+				echo "</td>";
 			//end row 13
 					
 			//Row 14, Base Color
@@ -414,16 +400,14 @@
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
 				//grey out if all same
-				if ($diff==0) {
-					echo "<td>";
-						echo "<font color=\"gray\">". $row["Base1Color"] ."</font>";
-					echo "</td>";
-				} else {
-					echo "<td>";
-						echo $row["Base1Color"];
-					echo "</td>";
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["Base1Color"] ."</span>";
+					} 
+					else { 
+						echo $row["Base1Color"]; }
 					}
-				}	
+				echo "</td>";
 			//end row 14		
 					
 			//Row 15, Finish
@@ -450,16 +434,14 @@
 			for ($i=1; $i<=$rows; $i++) {
 				$row = mysql_fetch_array($result);
 				//grey out if all same
-				if ($diff==0) {
-					echo "<td>";
-						echo "<font color=\"gray\">". $row["Finish"] ."</font>";
-					echo "</td>";
-				} else {
-					echo "<td>";
-						echo $row["Finish"];
-					echo "</td>";
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["Finish"] ."</span>";
+					} 
+					else { 
+						echo $row["Finish"]; }
 					}
-				}
+				echo "</td>";
 			//end row 15
 		
 			//Row 16, Color Var
