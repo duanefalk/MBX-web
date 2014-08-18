@@ -18,9 +18,9 @@
 
 	<div class="large-3 columns sidebar">
 	
-		<a href="Manage_Collections.php">Manage Collections</a>
+		<a href="Manage_Collections.php">Create/Configure Your Collections</a>
 		<a href="Manage_Models_in_Collection.php">Manage Models in Your Collection</a>
-		<a href="Collection_Reports.php">Info About Your Collection</a>
+		<a href="Collection_Reports.php">Collection Reports</a>
 		<a href="index.php">Return to Main Page</a>
 	
 	</div>

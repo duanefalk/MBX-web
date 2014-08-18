@@ -14,7 +14,7 @@
             
 <div class="row">
 	<div class="large-12 columns">
-		<h2>Manage Your Collections</h2>
+		<h2>Create/Configure Your Collections</h2>
 	</div>
 </div>
 
