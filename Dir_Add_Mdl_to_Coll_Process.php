@@ -1,6 +1,17 @@
+<?php
+	// we must never forget to start the session
+	ob_start();
+	session_start();
+?>
+
+
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
+
+<?php 	$Username=$_SESSION['Username'];
+	$SecLvl=$_SESSION['Sec_Lvl'];
+?>	
 
 <?php
     if (isset($_POST['var_coll_submit'])) {
@@ -80,8 +91,18 @@
 		<p>Variation ID to add: "<?php echo $_GET["model"]; ?>"</p>
 		<?php
                     $Var_to_Add=$_GET["model"];
-                    $User="duanefalk";
-                    $User_CollID="FALKCOLL1";
+                    //$User="duanefalk";
+		    $query1=("SELECT User_Coll_ID FROM Matchbox_User_Collections WHERE Username='$Username'");
+		    $result1=mysql_query($query1);
+		    //$rows1=mysql_num_rows($result1);
+		    if (!$result1) {
+			echo "No collection, create a collection first";
+			//redirect_to("Collections_Menu.php");
+		    }
+		    
+		    $row=mysql_fetch_array($result1);
+		    $User_CollID=$row['User_Coll_ID'];
+                    //$User_CollID="FALKCOLL1";
                     
                     $picture1= IMAGE_URL . $Var_to_Add."_1.jpg";
 		    $picture1_loc=IMAGE_PATH. $Var_to_Add."_1.jpg";
@@ -104,14 +125,15 @@
                         $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_to_Add'");								
 			$result=0;
 			$result=mysql_query($query);
-                        if ($result) {
+			$rows=mysql_num_rows($result);
+                        if ($rows!=0) {
                             $copy_to_show= (mysql_num_rows($result)+1);
                         } ELSE {
                             $copy_to_show= "1";
                         }          
                     ?>
 
-                    <p>Username: <input type="text" name="Coll_Username" value="<?php echo $User; ?>" size="20" id="Coll_Username"></p>
+                    <p>Username: <input type="text" name="Coll_Username" value="<?php echo $Username; ?>" size="20" id="Coll_Username"></p>
                     <p>Collection ID:  <input type="text" name="User_CollID" value="<?php echo $User_CollID; ?>" size="12" id="User_CollID"></p>
                     <p>UMID:          <input type="text" name="Coll_UMID" value="<?php echo $Coll_UMID;?>" size="6" id="Coll_UMID"></p>
                     <p>Version ID:    <input type="text" name="Coll_VerID" value="<?php echo $Coll_VerID;?>" size="10" id="Coll_VerID"></p>
@@ -213,7 +235,7 @@
                     <p>Purchase Date:      <input type="text" name="Coll_Purch_Dt" value="" size="8" id="Coll_Purch_Dt"></p>
                     <p>Seller:      
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Seller%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Seller%'
                                     AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									

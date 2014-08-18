@@ -5,7 +5,7 @@
 <?php
     if (isset($_POST['var_submit'])) {
 	$VarID=$_POST['Coll_VarID'];
-	$location="Dir_Add_Mdl_to_Coll_Process_old.php?model=".$VarID;
+	// $location="Dir_Add_Mdl_to_Coll_Process_old.php?model=".$VarID;
 	echo "ready to go";	
 	redirect_to("Dir_Add_Mdl_to_Coll_Process.php?model=".$VarID);
     }

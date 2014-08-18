@@ -62,7 +62,6 @@
 			<h3>Step 3 (optional): Set up lists of sellers and storage locations</h3>
 				<?php
 					//fake until set up
-					$Username;
 					$result=0;
 					$rows_count=0;
 					$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username= '$Username'");													
@@ -84,10 +83,12 @@
 	
 			<h3>Step 4: Add models to your collection</h3>
 				<?php
-					//fake until set up
+					$result_mdls=0;
+					$rows_count=0;
 					$query_mdls= ("SELECT * FROM Matchbox_Collection WHERE Username= '$Username'");
 					$result_mdls= mysql_query($query_mdls);
-					if ($result_mdls) {
+					$rows_count= mysql_num_rows($result);
+			                if ($rows_count == 0) {
 					//$Collection_not_null=0;
 					//if ($Collection_not_null) {
 						echo "<img src=".$check." width=\"40\">";
