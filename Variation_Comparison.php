@@ -225,7 +225,8 @@
 			//end row 8			
 		
 			//Row 9, Rear Wheel Photo
-			echo "<tr><td>Rear Wheel</td>";			
+			echo "<tr><td>Rear Wheel</td>";
+			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
@@ -239,7 +240,8 @@
 				echo "<td>";
 					echo "<img src=".$rwheel." width=\"100\"";
 				echo "</td>";			
-			} //end row 9
+			}
+			//end row 9
 	
 			//Row 10, Rear Wheel Code
 			echo "<tr><td></td>";			
@@ -607,7 +609,7 @@
 				$row = mysql_fetch_array($result);
 				if ($row["Det5Typ"]) {
 					$IsDet5="1";
-					$Det2Type=$row["Det5Typ"];
+					$Det5Type=$row["Det5Typ"];
 				}
 			}
 			if ($IsDet5=="1") {
