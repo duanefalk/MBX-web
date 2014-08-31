@@ -12,14 +12,14 @@
 
 <div class="row">
 	<div class="large-3 columns sidebar">
-		<a href="Collection Report_A">Collection Summary</a>
+		<a href="Collection_Report_A">Collection Summary</a>
 		<a href="Collection Report_B">Models from a Seller</a>
 		<a href="Collection Report_C">Summary for all Sellers</a>
 		<a href="Collection Report_D">List all variations of a Model- by UMID</a>
 		<a href="Collection Report_E">List all variations of a Model- by MAN#</a>
 		<a href="Collection Report_F">List all variations of a Model- by Mack #- regular wheels (i.e. 5-a)</a>
 		<a href="Collection Report_G">List all variations of a Model- by Mack #- superfast (i.e. 38-e)</a>
-		<a href="Collection Report_H">Summary for all Sellers</a>
+		<a href="Collection_Report_H">Summary for all Sellers</a>
 		<a href="Collection Report_I">Models in poor/fair condition</a>
 		<a href="Collection Report_J">Models by release Series</a>
 		<a href="Collection_Report_K.php">Collection by Year</a>
