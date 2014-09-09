@@ -16,16 +16,7 @@
 
 <div class="row">
 
-	<div class="large-3 columns sidebar">
-	
-		<a href="Manage_Collections.php">Create/Configure Your Collections</a>
-		<a href="Manage_Models_in_Collection.php">Manage Models in Your Collection</a>
-		<a href="Collection_Reports.php">Collection Reports</a>
-		<a href="index.php">Return to Main Page</a>
-	
-	</div>
-	
-	<div class="large-9 columns">
+	<div class="large-12 columns">
 	
 		<h2>Your Collections</h2>
 		<p>Steps to set up a collection using this web site and database:</p>
@@ -91,10 +82,11 @@
 			                if ($rows_count == 0) {
 					//$Collection_not_null=0;
 					//if ($Collection_not_null) {
-						echo "<img src=".$check." width=\"40\">";
+						//echo "<img src=/" . $check . " width=\"40\">";
+						echo "<img src=/" . $check . " width=\"40\">";
 						echo "You've already started adding models. Enjoy growing your collection!";
 					} else {
-						echo "<img src=".$X_out." width=\"40\">";
+						echo "<img src=" . $X_out . " width=\"40\">";
 						echo "No models yet added"."<br></>";
 						echo "There are two ways to add a model to your collection:"."<br></><br></>";
 						echo "Option 1: Do a model/release search, then add from the search result."."<br></>";
@@ -114,8 +106,18 @@
 				?>
 	
 	</div>
-
 </div>
+
+	
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Manage_Collections.php">Create/Configure Your Collections</a>
+		<a href="Manage_Models_in_Collection.php">Manage Models in Your Collection</a>
+		<a href="Collection_Reports.php">Collection Reports</a>
+	</div>
+</div>	
 
 
 <?php include("includes/footer.php"); ?>
