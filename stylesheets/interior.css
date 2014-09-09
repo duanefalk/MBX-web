@@ -17,7 +17,7 @@ Variation Comparison
 /* -- Main -- */
 /* line 18, sass/interior.scss */
 #main {
-  padding-top: 8em;
+  padding-top: 10em;
 }
 @media only screen and (max-width: 480px) {
   /* line 18, sass/interior.scss */
@@ -64,49 +64,49 @@ Variation Comparison
 #header-home #banner {
   margin-top: 2em;
 }
-/* line 47, sass/interior.scss */
+/* line 46, sass/interior.scss */
 #header-home #banner #bannerText {
   margin-top: 2em;
 }
 @media only screen and (max-width: 480px) {
-  /* line 50, sass/interior.scss */
+  /* line 49, sass/interior.scss */
   #header-home #banner #bannerImage {
     text-align: center;
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 53, sass/interior.scss */
+  /* line 52, sass/interior.scss */
   #header-home #banner #bannerImage img {
     max-width: 60%;
     margin: 0 auto;
   }
 }
 
-/* line 58, sass/interior.scss */
+/* line 57, sass/interior.scss */
 #quick_search {
   padding: 1.5em;
   color: white;
   background: #087b80;
   border-radius: 1em;
 }
-/* line 61, sass/interior.scss */
+/* line 60, sass/interior.scss */
 #quick_search h3 {
   color: white;
 }
-/* line 62, sass/interior.scss */
+/* line 61, sass/interior.scss */
 #quick_search form {
   margin-bottom: 0;
 }
-/* line 65, sass/interior.scss */
+/* line 64, sass/interior.scss */
 #quick_search form label {
   color: white;
 }
-/* line 66, sass/interior.scss */
+/* line 65, sass/interior.scss */
 #quick_search form input {
   display: inline-block;
   margin-bottom: 0;
 }
-/* line 67, sass/interior.scss */
+/* line 66, sass/interior.scss */
 #quick_search form input[type=text] {
   width: 72%;
   margin-right: 2%;
@@ -114,35 +114,35 @@ Variation Comparison
   box-shadow: 0;
 }
 @media only screen and (max-width: 480px) {
-  /* line 67, sass/interior.scss */
+  /* line 66, sass/interior.scss */
   #quick_search form input[type=text] {
     width: 100%;
     margin: 0 auto 1em;
   }
 }
-/* line 70, sass/interior.scss */
+/* line 69, sass/interior.scss */
 #quick_search form input[type=submit] {
   width: 25%;
   font-size: 90%;
 }
 @media only screen and (max-width: 480px) {
-  /* line 70, sass/interior.scss */
+  /* line 69, sass/interior.scss */
   #quick_search form input[type=submit] {
     width: 100%;
     margin: 0 auto;
   }
 }
-/* line 73, sass/interior.scss */
+/* line 72, sass/interior.scss */
 #quick_search form input[type=submit]:hover {
   background: #d45132;
 }
 
 /* -- Login Screen --------------- */
-/* line 80, sass/interior.scss */
+/* line 79, sass/interior.scss */
 #login {
   margin: 6em auto 3em;
 }
-/* line 84, sass/interior.scss */
+/* line 83, sass/interior.scss */
 #login form input[type=submit] {
   cursor: pointer;
   display: block;
@@ -158,13 +158,13 @@ Variation Comparison
   border-radius: 5px;
   box-shadow: 0 none;
 }
-/* line 92, sass/interior.scss */
+/* line 91, sass/interior.scss */
 #login form input[type=submit]:hover {
   background: #d45132;
 }
 
 /* -- About ----------------------- */
-/* line 99, sass/interior.scss */
+/* line 98, sass/interior.scss */
 .section {
   margin: 1em auto 3em;
   padding-bottom: 2em;
@@ -172,13 +172,13 @@ Variation Comparison
 }
 
 /* -- Add Menu -- */
-/* line 104, sass/interior.scss */
+/* line 103, sass/interior.scss */
 #addMenu a.button {
   display: block;
 }
 
 /* -- Models Detail --------------- */
-/* line 110, sass/interior.scss */
+/* line 109, sass/interior.scss */
 .car-block {
   width: 240px;
   display: inline-block;
@@ -186,38 +186,38 @@ Variation Comparison
   margin: 1em 1.2em;
 }
 
-/* line 116, sass/interior.scss */
+/* line 115, sass/interior.scss */
 .car-block img {
   max-width: 100%;
   margin-bottom: .5em;
 }
 
-/* line 121, sass/interior.scss */
+/* line 120, sass/interior.scss */
 .car-block img.own {
   border-bottom: 10px solid #2E8B57;
 }
 
 /*green*/
-/* line 122, sass/interior.scss */
+/* line 121, sass/interior.scss */
 .car-block img.own-not {
   border-bottom: 10px solid #de3939;
 }
 
 /*red*/
-/* line 123, sass/interior.scss */
+/* line 122, sass/interior.scss */
 .car-block img.own-poor {
   border-bottom: 10px solid #ffde42;
 }
 
 /*yellow*/
-/* line 125, sass/interior.scss */
+/* line 124, sass/interior.scss */
 .car-block p {
   max-width: 95%;
   margin: 0 0 .4em;
   line-height: 120%;
 }
 
-/* line 131, sass/interior.scss */
+/* line 130, sass/interior.scss */
 #photoref {
   margin-bottom: .5em;
   font-size: x-small;
@@ -226,14 +226,14 @@ Variation Comparison
 }
 
 /* -- Variations Comparison -- */
-/* line 138, sass/interior.scss */
+/* line 137, sass/interior.scss */
 #varCompare table tr td:first-of-type {
   min-width: 140px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-/* line 139, sass/interior.scss */
+/* line 138, sass/interior.scss */
 #varCompare table tr td span {
   color: #919191;
 }
