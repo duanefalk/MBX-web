@@ -58,6 +58,11 @@ table tr:nth-of-type(2n) {
   background: rgba(8, 123, 128, 0.075);
 }
 
+/* line 27, sass/style.scss */
+select {
+  height: auto;
+}
+
 /* line 29, sass/style.scss */
 .row {
   max-width: 62.5rem;

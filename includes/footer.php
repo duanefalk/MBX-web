@@ -8,8 +8,8 @@
     <footer id="footer">
     	<div class="row">
     		<div class="large-12 columns">
-    			<p>Copyright &copy; <?php echo date("Y"); ?> Matchbox University / D Falk, All Rights Reserved.</p>
-			<p>MBX-U is a private site in no way affiliated with Mattel, Inc. The MATCHBOX&copy; name and logo are the sole properties of Mattel, Inc.</p>
+    			<p>Copyright &copy; <?php echo date("Y"); ?> Matchbox University / D. Falk, All Rights Reserved.</p>
+				<p>MBX-U is a private site, in no way affiliated with Mattel, Inc. The MATCHBOX&copy; name and logo are the sole properties of Mattel, Inc.</p>
     		</div>
     	</div>  
     </footer>
