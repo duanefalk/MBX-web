@@ -89,7 +89,7 @@ $Username=$_SESSION['Username'];
 				// echo $result;
 				$result = mysql_query($query);
 				$rows= mysql_num_rows($result); //print_r($result);
-				echo "<h3>"."CODE 1 & 2 Versions found: ".$rows."</h3>";
+				echo "<h3>"."CODE 1 & 2/3 Versions found: ".$rows."</h3>";
 				if(!$result) {
 					echo "No matching results found"; //mysql_error();
 					exit;
@@ -104,7 +104,7 @@ $Username=$_SESSION['Username'];
 						$Version_to_detail=$row["VerID"];
 						$url= "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
 
-						//determine what to show fro version pics
+						//determine what to show for version pics
 						//check if have account
 						if ($Sec_Lvl >= "2") {	
 							//if have account, have collection?
@@ -265,14 +265,14 @@ $Username=$_SESSION['Username'];
 				}
 				//then check if to show code 2 also. if so sep srch for code 2
 				if (($Sec_Lvl >= "2") AND ($Code2_Pref == "1")) {
-					$query= ("SELECT * FROM Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='2' ORDER BY VerYrFirstRel,VerID ASC");
+					$query= ("SELECT * FROM Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='2/3' ORDER BY VerYrFirstRel,VerID ASC");
 					$result=0;
 					$rows=0;
 					// echo $result;
 					$result = mysql_query($query);
 					$rows= mysql_num_rows($result); //print_r($result);
 					echo "<br></>";						
-					echo "<br></>"."<h3>"."CODE 2 Versions found: ".$rows."</h3>";
+					echo "<br></>"."<h3>"."CODE 2/3 Versions found: ".$rows."</h3>";
 					if(!$result) {
 						echo "No matching results found"; //mysql_error();
 						exit;
