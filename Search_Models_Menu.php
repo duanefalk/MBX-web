@@ -15,7 +15,16 @@
 
 			<dl class="accordion" data-accordion>
 				<dd>
-					<a href="#panel4">Broad MAN (FAB) # <small>(i.e. '800'; enter one no. on the top line or one on each line for a range)</small></a>
+					<a href="#panel10">Specific MAN (FAB) # <small>Only versions matching that MAN#</small></a>
+					<div id="panel10" class="content">
+						<input type="text" name="Spec_MAN" value="" id="Spec_MAN" />
+					</div>
+				</dd>
+			</dl>
+						
+			<dl class="accordion" data-accordion>
+				<dd>
+					<a href="#panel4">Broad Search by MAN (FAB) # <small>SIngle or range of No's (i.e. '800'; enter one no. on the top line or one on each line for a range); shows all versions of the model that matches a MAN#</small></a>
 					<div id="panel4" class="content">
 						<input type="text" name="MAN_No_1" value="" id="MAN_No_1" />
 						<input type="text" name="MAN_No_2" value="" id="MAN_No_2" />
@@ -52,7 +61,7 @@
 			
 			<dl class="accordion" data-accordion>
 				<dd>
-					<a href="#panel8">UMID # <small>(LR and 3 numbers, e.g. 'LR025', or SF and 4 numbers, e.g. 'SF0858'. If LR or SF not specified will assume SF; enter one no. on the top line, or one on each line for a range</small></a>
+					<a href="#panel8">UMID # <small>LR and 3 numbers (e.g. 'LR025'), or SF and 4 numbers (e.g. 'SF0858'). If LR or SF not specified will assume SF; enter one no. on the top line, or one on each line for a range</small></a>
 					<div id="panel8" class="content">
 						<input type="text" name="UMID_1" value="" id="UMID_1"><input type="text" name="UMID_2" value="" id="UMID_2" />
 					</div>

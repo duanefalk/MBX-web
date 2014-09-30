@@ -12,9 +12,12 @@
 			$VehicleMake=$_POST['VehicleMake'];
 			$MakeCountry=$_POST['MakeCountry'];
 			$TempaText=$_POST['TempaText'];
+			
+			$Search_by_MAN="0";
 
 			if ((!$_POST['VehicleType_Check']) AND (!$_POST['VehicleMake_Check']) AND (!$_POST['MakeCountry_Check']) AND (!$_POST['TempaText'])) {	
-			
+				
+				// Search by ID
 				if ($_POST[MAN_No_1]) {
 					$ID_Value1=$_POST[MAN_No_1];
 					if (!$_POST[MAN_No_2]) {
@@ -38,6 +41,16 @@
 							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
 							 WHERE Matchbox_Versions.FAB_No>='$ID_Value1' AND Matchbox_Versions.FAB_No<='$ID_Value2'");
 					}
+				}
+				elseif ($_POST[Spec_MAN]) {
+					$ID_Value1=$_POST[Spec_MAN];
+					$Search_by_MAN="1";
+					echo "Searching for specific MAN#: ". $ID_Value1 ."<br />";
+					//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `Master_Mack_No`='$ID_Value1')");
+					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
+							 FROM Matchbox_Models
+							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
+							 WHERE Matchbox_Versions.FAB_No='$ID_Value1'");
 				}
 				elseif ($_POST[Mack_No]) {
 					$ID_Value1=$_POST[Mack_No];
@@ -190,9 +203,7 @@
 				}
 			} ELSEIF (!$_POST['TempaText']) {
 				
-
-				 //if model criteria checked
-				//echo "Made it to model info";
+				// Search by Type criteria
 				$PrevModelCriteria="";
 				if ($_POST['VehicleType_Check']) {
 					echo "Searching for:<br></>";
@@ -245,6 +256,7 @@
 				$query = "(".$query.")";
 				
 			} else {
+				// if search by text on model		
 				//go to separate page to search and display model details of multiple umids at ver level
 				$TempaText=$_POST['TempaText'];
 				$string_to_redirect="Models_Found_List.php?tempatext=".$TempaText;
@@ -276,10 +288,18 @@
 				echo "<div class=\"car-block\">";
 				
 				$row = mysql_fetch_array($result);
+
+				
 				//$picture= IMAGE_PATH . $row["UMID"].".jpg";
-				//make image clickable and send proper umid to model_detail page
-				$Model_to_detail=$row["UMID"];
-				$url= "Models_Detail_and_Ver_Listing.php?model=".$Model_to_detail;
+				//make image clickable and send proper id to model_detail page
+				if ($Search_by_MAN=="1") {
+					$Model_to_detail=$row["FAB_No"];
+					$url= "MAN_Details_and_Ver_Listing.php?model=".$Model_to_detail;
+				} else {
+					$Model_to_detail=$row["UMID"];
+					$url= "Models_Detail_and_Ver_Listing.php?model=".$Model_to_detail;
+				}	
+
 				$picture= IMAGE_URL . $row["UMID"].".jpg";
 				
 				$picture_loc= IMAGE_PATH . $row["UMID"].".jpg";
