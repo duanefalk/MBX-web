@@ -14,9 +14,9 @@
 	<div class="large-12 columns">
 	
 		<?php
-			$query= ("SELECT * FROM MBXU_USer_Accounts WHERE Username = '$Username'");
+			$query= ("SELECT * FROM MBXU_User_Accounts WHERE Username = '$Username'");
 			$result = mysql_query($query);
-			if (mysql_num_rows($result)==0) {			
+			if(!$result) {			
 				echo "<h3>Error - Cant find user record</h3>"; //mysql_error();
 				exit;
 			}
@@ -30,7 +30,7 @@
 		<hr>
 		
 		<form action="Create_User_Account_Process.php" method="post">
-<<<<<<< HEAD
+
 			
 			<div class="formRow">
 				<label>Username* (4-20 chars, alphanumeric only):</label>
