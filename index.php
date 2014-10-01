@@ -31,7 +31,7 @@ session_start();
 			<h3>Quick Search</h3>
 			<form action="Search_Models_Process.php" method="post">			
 				<label for="MAN_No_1">MAN (FAB) # (i.e. '800'):</label>
-				<input type="text" name="MAN_No_1" value="" id="MAN_No_1">
+				<input type="text" name="Spec_MAN" value="" id="Spec_MAN">
 				<input type="submit" class="button" name="submit" value="Search"/>
 			</form>
 		</div>

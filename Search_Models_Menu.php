@@ -12,19 +12,10 @@
 		<div class="large-4 columns">				
 			<h3 class="demoHeaders">Choose the ID You Want to Search by</h3>
 			<p>Search will use only last data entered; if you get unexpected results, click on 'cancel' and retry:</p>
-
-			<dl class="accordion" data-accordion>
-				<dd>
-					<a href="#panel10">Specific MAN (FAB) # <small>Only versions matching that MAN#</small></a>
-					<div id="panel10" class="content">
-						<input type="text" name="Spec_MAN" value="" id="Spec_MAN" />
-					</div>
-				</dd>
-			</dl>
 						
 			<dl class="accordion" data-accordion>
 				<dd>
-					<a href="#panel4">Broad Search by MAN (FAB) # <small>SIngle or range of No's (i.e. '800'; enter one no. on the top line or one on each line for a range); shows all versions of the model that matches a MAN#</small></a>
+					<a href="#panel4">MAN (FAB) # <small>Single or range of No's (i.e. '800'; enter one no. on the top line or one on each line for a range); shows all versions of the model that matches a MAN#</small></a>
 					<div id="panel4" class="content">
 						<input type="text" name="MAN_No_1" value="" id="MAN_No_1" />
 						<input type="text" name="MAN_No_2" value="" id="MAN_No_2" />
