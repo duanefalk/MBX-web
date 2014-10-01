@@ -47,7 +47,7 @@ Variation Comparison
 			margin-top:2em;
 		}
 		#bannerImage {
-			@media only screen and (max-width:480px){ text-align:center; }
+			@media only screen and (max-width:768px){ text-align:center; }
 			
 			img { @media only screen and (max-width:480px){ max-width:60%; margin:0 auto; } }
 		}

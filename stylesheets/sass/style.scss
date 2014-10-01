@@ -54,10 +54,12 @@ select {height:auto;}
 	@media only screen and (max-width:480px){ position:relative; top:auto; text-align:center; }
 }
 
-#logo {display:block;}
+#logo {display:block;
+	@media only screen and (max-width:768px){ text-align:center; }
+}
 
 #mainNav { list-style-type:none; margin:1em 0 0; text-align:right; @include headline; letter-spacing:.75px;
-	@media only screen and (max-width:480px){ text-align:center; }
+	@media only screen and (max-width:768px){ text-align:center; }
 	
 	li {display:inline-block;}
 	a {padding:.5em 1em; font-size:90%; color:$cream;
