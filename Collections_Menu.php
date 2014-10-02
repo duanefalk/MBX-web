@@ -10,8 +10,8 @@
 
 <?php 	$Username= $_SESSION['Username'];
 	$SecLvl=$_SESSION['Sec_Lvl'];
-	$check= IMAGE_URL . "IMG_Check.jpg";
-	$X_out= IMAGE_URL . "IMG_X.jpg";
+	$check= IMAGE_URL . "iconCheck.jpg";
+	$X_out= IMAGE_URL . "iconCross.jpg";
 ?>
 
 <div class="row">
