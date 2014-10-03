@@ -1,20 +1,45 @@
+<?php ob_start(); ?>
+<?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
+<?php include("includes/functions.php"); ?>
 
 <div class="row">
 	<div class="large-12 columns">
-	<a href="Reference_List.php" class="button dark">Photos Sources & Other Links</a>
-        <a href="Window_Colors.php" class="button dark">Window Colors</a>
-        <a href="Wheel_Types.php" class="button dark">Wheel Types</a>	
-	<a href="Theme_List.php" class="button dark">Release Themes</a>
-	<a href="Series_List.php" class="button dark">Release Series List</a>
-        <a href="Collections_Menu.php" class="button dark">Return to Collections Menu</a>	
+		<h2>Wheel Types</h2>
+		<p>Photo, code name and description of each whel type used in the database.</p>
 	</div>
 </div>
-
 <div class="row">
 	<div class="large-12 columns">
-		<h2>Reference Files</h2>
-		<p>Information about and photos of various components that are used in the database.</p>
+		<?php
+			$query="SELECT * FROM Matchbox_Wheels ORDER BY WheelCod ASC";
+			$result=0;
+			$rows=0;
+			// echo $result;
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
+			echo "<h5>"."Wheel Versions found: ".$rows."</h5>";
+			if(!$result) {
+				echo "No matching results found"; //mysql_error();
+				exit;
+			}					
+			for ($i=1; $i<=$rows; $i++) {
+				echo "<div class=\"car-block\">";
+				$row=mysql_fetch_array($result);
+				$wheelphoto= WHEEL_URL . $row["WheelCod"].".jpg";
+				echo "<td>";
+					echo "<img src=".$wheelphoto." width=\"100\"";
+				echo "</td>";
+				echo "<p>".$row["WheelCod"]."</p>";
+				echo "<p>".$row["WheelTyp"]."</p>";
+				echo "<p>".$row["WheelDescr"]."</p>";
+				echo "</div>";
+			}
+		?>
+		
+		
+		
+		
 	</div>
 </div>
 
