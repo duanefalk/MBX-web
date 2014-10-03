@@ -6,7 +6,7 @@
 <div class="row">
 	<div class="large-12 columns">
 		<h2>Wheel Types</h2>
-		<p>Photo, code name and description of each whel type used in the database.</p>
+		<p>Photo, code name and description of each wheel type used in the database.</p>
 	</div>
 </div>
 <div class="row">
@@ -15,30 +15,33 @@
 			$query="SELECT * FROM Matchbox_Wheels ORDER BY WheelCod ASC";
 			$result=0;
 			$rows=0;
-			// echo $result;
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
+			
 			echo "<h5>"."Wheel Versions found: ".$rows."</h5>";
+			
 			if(!$result) {
-				echo "No matching results found"; //mysql_error();
+				echo "<p><strong>No matching results found</strong></p>"; //mysql_error();
 				exit;
-			}					
-			for ($i=1; $i<=$rows; $i++) {
-				echo "<div class=\"car-block\">";
-				$row=mysql_fetch_array($result);
-				$wheelphoto= WHEEL_URL . $row["WheelCod"].".jpg";
-				echo "<td>";
-					echo "<img src=".$wheelphoto." width=\"100\"";
-				echo "</td>";
-				echo "<p>".$row["WheelCod"]."</p>";
-				echo "<p>".$row["WheelTyp"]."</p>";
-				echo "<p>".$row["WheelDescr"]."</p>";
-				echo "</div>";
 			}
-		?>
-		
-		
-		
+			else {
+				echo "<ul class='large-block-grid-3'>";
+				
+				for ($i=1; $i<=$rows; $i++) {
+					echo "<li class=\"carGrid\">";
+						$row = mysql_fetch_array($result);
+						$wheelphoto = WHEEL_URL . $row["WheelCod"] . ".jpg";
+						echo "<p><img src=" . $wheelphoto . "/></p>"; 
+						echo "<p>".$row["WheelCod"]."</p>";
+						echo "<p>".$row["WheelTyp"]."</p>";
+						echo "<p>".$row["WheelDescr"]."</p>";
+					echo "</li>";
+				}
+				
+				echo "</ul>";
+			}		
+			
+		?>	
 		
 	</div>
 </div>
