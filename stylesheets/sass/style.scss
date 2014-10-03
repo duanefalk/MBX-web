@@ -28,6 +28,8 @@ select {height:auto;}
 
 .row {max-width:62.5rem;}
 
+[class*="column"] + [class*="column"].end {float:left;}
+
 .clear {clear:both;}
 
 
