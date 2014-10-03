@@ -1,20 +1,28 @@
+<?php ob_start(); ?>
+<?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
-
-<div class="row">
-	<div class="large-12 columns">
-	<a href="Reference_List.php" class="button dark">Photos Sources & Other Links</a>
-        <a href="Window_Colors.php" class="button dark">Window Colors</a>
-        <a href="Wheel_Types.php" class="button dark">Wheel Types</a>	
-	<a href="Theme_List.php" class="button dark">Release Themes</a>
-	<a href="Series_List.php" class="button dark">Release Series List</a>
-        <a href="Collections_Menu.php" class="button dark">Return to Collections Menu</a>	
-	</div>
-</div>
+<?php include("includes/functions.php"); ?>
 
 <div class="row">
 	<div class="large-12 columns">
 		<h2>Reference Files</h2>
 		<p>Information about and photos of various components that are used in the database.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="large-12 columns">
+		<?php
+			$query="SELECT * FROM Matchbox_References";
+			$result= mysql_query($query);
+
+			echo "<h5>Reference Name      Reference Type      Details    Comments</h5>";
+			
+			$rows= mysql_num_rows($result);
+			for ($i=1; $i<=$rows; $i++) {
+				$row =mysql_fetch_array($result);
+				echo $row["RefName"]." ".$row["RefType"]." ".$row["RefDetails"]." ".$row["RefComment"];
+			}	
+		?>
 	</div>
 </div>
 
