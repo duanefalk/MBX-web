@@ -25,7 +25,7 @@
 						//echo "made connection ".$result."<br />";		
 					}
 					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
+					// echo "Rows Count: ".$rows_count."<br />";
 				?>
 				<select name="ModelPhotoRef">
 				<?php
@@ -50,7 +50,7 @@
 						//echo "made connection ".$result."<br />";		
 					}
 					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
+					// echo "Rows Count: ".$rows_count."<br />";
 				?>
 				<select name="VehicleType">
 				<?php
@@ -73,7 +73,7 @@
 						//echo "made connection ".$result."<br />";		
 					}
 					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
+					// echo "Rows Count: ".$rows_count."<br />";
 				?>
 				<select name="VehicleType2">
 				<?php
@@ -90,7 +90,7 @@
 			<label for="ModelComment">Model Comment:</label>
 				<textarea name="ModelComment" cols="45" rows="4">	
 				</textarea>
-			<label for="SimilarModels">imilar Models:</label>	
+			<label for="SimilarModels">Similar Models:</label>	
 				<textarea name="SimilarModels" cols="45" rows="4">			
 				</textarea>
 			<label for="MakeofModel">Make of Model:</label>	
@@ -106,7 +106,7 @@
 						//echo "made connection ".$result."<br />";		
 					}
 					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
+					// echo "Rows Count: ".$rows_count."<br />";
 				?>
 				<select name="MakeofModel">
 				<?php
@@ -129,7 +129,7 @@
 						//echo "made connection ".$result."<br />";		
 					}
 					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
+					// echo "Rows Count: ".$rows_count."<br />";
 				?>
 				<select name="CountryofMake">
 				<?php
