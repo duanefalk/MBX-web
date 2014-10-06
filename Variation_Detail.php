@@ -113,7 +113,6 @@ session_start();
 					echo "Detail 5 Variation: ". $row["Det5Var"]."<br />";
 				}
 
-				echo "Est. Value: ".$row["StdValue"]."<br /><br />";
 				echo "Comments: ". $row["VarComment"]."<br />";
 				echo "<br></>";
 

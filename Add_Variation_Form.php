@@ -43,7 +43,6 @@
 				Det5Var
 				CodeLvl
 				SecManuf
-				StdValue
 				VarComment
 				VarPhoto1Name
 				VarPhoto1Ref
@@ -352,7 +351,6 @@
 			<p>Detail 5 Type:     	  <input type="text" name="Det5Typ" value="" size="20" id="Det5Typ"</p>
 			<p>Detail 5 Variation:     	  <input type="text" name="Det5Var" value="" size="40" id="Det5Var"</p>
 			
-			<p>Standard Value:     	  <input type="number" name="StdValue" value="0.00" size="10" id="StdValue"</p>	
 			<p>Variation Comment: </p>
 				<textarea name="VarComment" cols="45" rows="4">	
 				</textarea>

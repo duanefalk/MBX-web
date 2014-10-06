@@ -35,7 +35,6 @@
     Det5Var
     CodeLvl
     SecManuf
-    StdValue
     VarComment
     VarPhoto1Name
     VarPhoto1Ref
@@ -84,7 +83,6 @@
     $Det5Var=$_POST['Det5Var'];
     $CodeLvl=$_POST['CodeLvl'];
     $SecManuf=$_POST['SecManuf'];
-    $StdValue=$_POST['StdValue'];
     $VarComment=$_POST['VarComment'];
     $VarPhoto1Name=$_POST['VarPhoto1Name'];
     $VarPhoto1Ref=$_POST['VarPhoto1Ref'];
@@ -132,10 +130,10 @@
     
     $query="INSERT INTO Matchbox_Variations (UMID, VERID, VARID, Mack_No, BaseName, BaseCompany, ManufLoc, VarYear, FWhCd, RWhCd, WindowColor, InteriorColor,
             Base1Material, Base1Color, Base2Type, Base2Material, Base2Color, Finish, ColorVar, TempaVar, Det1Typ, Det1Var, Det2Typ, Det2Var, Det3Typ, Det3Var, Det4Typ, Det4Var,
-            Det5Typ, Det5Var, StdValue, VarComment, VarPhoto1Name, VarPhoto1Ref, VarPhoto2Name, VarPhoto2Ref
+            Det5Typ, Det5Var, VarComment, VarPhoto1Name, VarPhoto1Ref, VarPhoto2Name, VarPhoto2Ref
             ) VALUES ('$UMID','$VERID','$VARID','$Mack_No','$BaseName', '$BaseCompany', '$ManufLoc','$VarYear','$FWhCd', '$RWhCd','$WindowColor', '$InteriorColor',
             '$Base1Material','$Base1Color','$Base2Type','$Base2Material','$Base2Color','$Finish','$ColorVar', '$TempaVar', '$Det1Typ', '$Det1Var', '$Det2Typ', '$Det2Var', '$Det3Typ', '$Det3Var', '$Det4Typ', '$Det4Var',
-            '$Det5Typ', '$Det5Var', '$StdValue', '$VarComment', '$VarPhoto1Name', '$VarPhoto1Ref', '$VarPhoto2Name','$VarPhoto2Ref')";
+            '$Det5Typ', '$Det5Var', '$VarComment', '$VarPhoto1Name', '$VarPhoto1Ref', '$VarPhoto2Name','$VarPhoto2Ref')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;
     // header("Location: Add_Variation_Form.php");

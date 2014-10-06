@@ -131,10 +131,6 @@
 					} else {
 						echo "<p id=\"photoref\">Photo by: no reference listed</p>";
 					}
-
-				//echo "Base Name: ". $row2["BaseName"]."<br />";
-				//echo "Var Year: ".$row2["VarYear"]." Origin: ".$row2["ManufLoc"];
-				//echo "Est. Value: ".$row2["StdValue"]."<br /><br />";
 				
 				//look up release info
 				$result3=0;
