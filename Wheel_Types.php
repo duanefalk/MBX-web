@@ -31,7 +31,7 @@
 					echo "<li class=\"carGrid\">";
 						$row = mysql_fetch_array($result);
 						$wheelphoto = WHEEL_URL . $row["WheelCod"] . ".jpg";
-						echo "<p><img src=" . $wheelphoto . "/></p>"; 
+						echo "<p><img src=" . $wheelphoto . " width=100></p>"; 
 						echo "<p>".$row["WheelCod"]."</p>";
 						echo "<p>".$row["WheelTyp"]."</p>";
 						echo "<p>".$row["WheelDescr"]."</p>";

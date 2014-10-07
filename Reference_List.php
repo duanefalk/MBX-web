@@ -5,8 +5,8 @@
 
 <div class="row">
 	<div class="large-12 columns">
-		<h2>Reference Files</h2>
-		<p>Information about and photos of various components that are used in the database.</p>
+		<h2>Photo Reference List & Links</h2>
+		<p>Information about the sources for photos and good Matchbox links.</p>
 	</div>
 </div>
 <div class="row">
