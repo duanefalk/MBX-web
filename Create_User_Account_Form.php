@@ -69,30 +69,30 @@
 				</select>
 				
 		<label for="User_is_Dealer">Are you a dealer (of Matchbox; anything else- TMI!)?:</label>     
-			<input type="radio" name="User_is_Dealer" value="0"> No<br>
-			<input type="radio" name="User_is_Dealer" value="1"> Yes<br>
+			<input type="radio" name="User_is_Dealer" id="User_is_Dealer1" value="0"> <label for="User_is_Dealer1">No</label><br>
+			<input type="radio" name="User_is_Dealer" id="User_is_Dealer2" value="1"> <label for="User_is_Dealer2">Yes</label><br>
 			
 		<label for="txtUser_Memberships">Matchbox clubs you belong to:</label>
 		<textarea name="User_Memberships" cols="45" rows="4" id="txtUser_Memberships"></textarea>
 			
 		<p>Preferred Scheme for Vehicle Condition</p>
 		<p>(alpha= MIB, Mint, Exc etc; num= 10, 9.5, 9 etc): </p>
-			<input type="radio" name="Veh_Cond_Scheme" value="0"> Alpha<br>
-			<input type="radio" name="Veh_Cond_Scheme" value="1"> Num<br>
+			<input type="radio" name="Veh_Cond_Scheme" id="Veh_Cond_Scheme1" value="0"> <label for="Veh_Cond_Scheme1">Alpha</label><br>
+			<input type="radio" name="Veh_Cond_Scheme" id="Veh_Cond_Scheme2" value="1"> <label for="Veh_Cond_Scheme2">Num</label><br>
 			
 		<p>Preferred Scheme for Pkg Condition (as above):</p>
-			<input type="radio" name="Pkg_Cond_Scheme" value="0"> Alpha<br>
-			<input type="radio" name="Pkg_Cond_Scheme" value="1"> Num<br>
+			<input type="radio" name="Pkg_Cond_Scheme" id="Pkg_Cond_Scheme1" value="0"> <label for="Pkg_Cond_Scheme1">Alpha</label><br>
+			<input type="radio" name="Pkg_Cond_Scheme" id="Pkg_Cond_Scheme2" value="1"> <label for="Pkg_Cond_Scheme2">Num</label><br>
 		
 		<p>Code 2 Preference:</p>
-			<input type="radio" name="Code2_Pref" value="0"> Combine Code 1 and Code 2 versions in displays<br>
-			<input type="radio" name="Code2_Pref" value="1"> Show both Code 1 and Code 2, but separate them<br>
-			<input type="radio" name="Code2_Pref" value="2"> Don't show Code 2 at all<br>
+			<input type="radio" name="Code2_Pref" id="Code2_Pref1" value="0"> <label for="Code2_Pref1">Combine Code 1 and Code 2 versions in displays</label><br>
+			<input type="radio" name="Code2_Pref" id="Code2_Pref2" value="1"> <label for="Code2_Pref2">Show both Code 1 and Code 2, but separate them</label><br>
+			<input type="radio" name="Code2_Pref" id="Code2_Pref3" value="2"> <label for="Code2_Pref3">Don't show Code 2 at all</label><br>
 
 		<input type="submit"  name="submit" class="button dark" value="Submit"/>
 	</form>			
 		
-	<a href="Create_User_Account_Form.php">Cancel</a>
+	<a href="Create_User_Account_Form.php">Reset</a>
 	
 	</div>
 </div>

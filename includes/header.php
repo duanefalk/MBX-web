@@ -3,7 +3,6 @@ ob_start();
 session_start();
 ?>
 
-
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -13,8 +12,7 @@ session_start();
 	<meta name="description" content="Matchbox Cars Database and Collections">
 	<meta name="keywords" content="Matchbox,Matchbox cars,Superfast,Regular Wheels,Matchbox packages,Matchbox wheels">
 	<meta name="author" content="Duane Falk">
-</head>
-	
+
 	<title>Matchbox University</title>
 		
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>

@@ -78,16 +78,13 @@ Variation Comparison
 
 
 /* -- Login Screen --------------- */
-#login { margin:6em auto 3em;
+#login { margin:3em auto;
 	
-	form {
-		
+	form {		
 		input[type=submit] {
 			cursor:pointer;
-			display:block;
-			width:100%;
-			padding:1em 2em;
-			@include headline; color:$white;  text-transform:uppercase;
+			margin:0; padding:1em 2em;
+			@include headline; color:$white;
 			background:$teal; border:none; border-radius:5px; box-shadow:0 none;
 			
 			&:hover {background:$orange;}

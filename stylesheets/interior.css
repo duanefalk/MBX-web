@@ -144,31 +144,29 @@ Variation Comparison
 /* -- Login Screen --------------- */
 /* line 81, sass/interior.scss */
 #login {
-  margin: 6em auto 3em;
+  margin: 3em auto;
 }
-/* line 85, sass/interior.scss */
+/* line 84, sass/interior.scss */
 #login form input[type=submit] {
   cursor: pointer;
-  display: block;
-  width: 100%;
+  margin: 0;
   padding: 1em 2em;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-style: normal;
   color: white;
-  text-transform: uppercase;
   background: #087b80;
   border: none;
   border-radius: 5px;
   box-shadow: 0 none;
 }
-/* line 93, sass/interior.scss */
+/* line 90, sass/interior.scss */
 #login form input[type=submit]:hover {
   background: #d45132;
 }
 
 /* -- About ----------------------- */
-/* line 100, sass/interior.scss */
+/* line 97, sass/interior.scss */
 .section {
   margin: 1em auto 3em;
   padding-bottom: 2em;
@@ -176,13 +174,13 @@ Variation Comparison
 }
 
 /* -- Add Menu -- */
-/* line 105, sass/interior.scss */
+/* line 102, sass/interior.scss */
 #addMenu a.button {
   display: block;
 }
 
 /* -- Models Detail --------------- */
-/* line 111, sass/interior.scss */
+/* line 108, sass/interior.scss */
 .car-block {
   width: 240px;
   display: inline-block;
@@ -190,38 +188,38 @@ Variation Comparison
   margin: 1em 1.2em;
 }
 
-/* line 117, sass/interior.scss */
+/* line 114, sass/interior.scss */
 .car-block img {
   max-width: 100%;
   margin-bottom: .5em;
 }
 
-/* line 122, sass/interior.scss */
+/* line 119, sass/interior.scss */
 .car-block img.own {
   border-bottom: 10px solid #2E8B57;
 }
 
 /*green*/
-/* line 123, sass/interior.scss */
+/* line 120, sass/interior.scss */
 .car-block img.own-not {
   border-bottom: 10px solid #de3939;
 }
 
 /*red*/
-/* line 124, sass/interior.scss */
+/* line 121, sass/interior.scss */
 .car-block img.own-poor {
   border-bottom: 10px solid #ffde42;
 }
 
 /*yellow*/
-/* line 126, sass/interior.scss */
+/* line 123, sass/interior.scss */
 .car-block p {
   max-width: 95%;
   margin: 0 0 .4em;
   line-height: 120%;
 }
 
-/* line 132, sass/interior.scss */
+/* line 129, sass/interior.scss */
 #photoref {
   margin-bottom: .5em;
   font-size: x-small;
@@ -230,14 +228,14 @@ Variation Comparison
 }
 
 /* -- Variations Comparison -- */
-/* line 139, sass/interior.scss */
+/* line 136, sass/interior.scss */
 #varCompare table tr td:first-of-type {
   min-width: 140px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-/* line 140, sass/interior.scss */
+/* line 137, sass/interior.scss */
 #varCompare table tr td span {
   color: #919191;
 }
