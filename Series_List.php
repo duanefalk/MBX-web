@@ -18,7 +18,7 @@
 			$rows= mysql_num_rows($result);
 			for ($i=1; $i<=$rows; $i++) {
 				$row =mysql_fetch_array($result);
-				echo $row["ValueListEntry"];
+				echo "<p>".$row["ValueListEntry"]."</>";
 			}	
 		?>
 	</div>

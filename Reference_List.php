@@ -20,7 +20,7 @@
 			$rows= mysql_num_rows($result);
 			for ($i=1; $i<=$rows; $i++) {
 				$row =mysql_fetch_array($result);
-				echo $row["RefName"]." ".$row["RefType"]." ".$row["RefDetails"]." ".$row["RefComment"];
+				echo "<p>".$row["RefName"]." ".$row["RefType"]." ".$row["RefDetails"]." ".$row["RefComment"]."</>";
 			}	
 		?>
 	</div>
