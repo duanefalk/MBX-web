@@ -27,9 +27,14 @@
 			for ($i=1; $i<=$rows; $i++) {
 				$row =mysql_fetch_array($result);
 				echo "<tr>";
-					echo "<td><b>".$row["RefName"]."</b></td>";
+					echo "<td><b>".$row["RefName"]."</b></td>";					
 					echo "<td>".$row["RefType"]."</td>";
-					echo "<td>".$row["RefDetails"]."</td>";
+					if ($row["RefType"] == "Web Site") {
+						echo "<td><a target='_blank' href='" . $row["RefDetails"] . "'>" . $row["RefDetails"] . "</a></td>";
+					}
+					else {
+						echo "<td>".$row["RefDetails"]."</td>";
+					}					
 					echo "<td>".$row["RefComment"]."</td>";
 				echo "</tr>";
 				
