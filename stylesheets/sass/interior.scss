@@ -18,7 +18,9 @@ Variation Comparison
 #main {padding-top:10em;
 	@media only screen and (max-width:480px){ padding-top:2em; font-size:90%; }
 	
-	h2 {margin-bottom:1em;}
+	.section {
+		h2:first-of-type {margin-bottom:1em;}
+	}
 }
 
 .home #main {padding-top:0;}
