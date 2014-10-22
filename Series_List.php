@@ -14,12 +14,18 @@
 		<?php
 			$query="SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE 'RelSeries' ORDER BY ValueDispOrder ASC";
 			$result= mysql_query($query);
-			echo "<h5>Series</h5>";		
+			echo "<table>";
+				echo "<tr>";
+					echo "<td><b>Series</b></td>";
+				echo "</tr>";
 			$rows= mysql_num_rows($result);
 			for ($i=1; $i<=$rows; $i++) {
 				$row =mysql_fetch_array($result);
-				echo "<p>".$row["ValueListEntry"]."</>";
-			}	
+				echo "<tr>";
+				echo "<td>".$row["ValueListEntry"]."</td>";
+				echo "</tr>";
+			}
+			echo "</table>";
 		?>
 	</div>
 </div>

@@ -14,14 +14,27 @@
 		<?php
 			$query="SELECT * FROM Matchbox_References";
 			$result= mysql_query($query);
-
-			echo "<h5>Reference Name      Reference Type      Details    Comments</h5>";
+			echo "<table>";
+			echo "<tr>";
+				echo "<td><b>Reference Name</b></td>";
+				echo "<td><b>Reference Type</b></td>";
+				echo "<td><b>Details</b></td>";
+				echo "<td><b>Comments</b></td>";
+			echo "</tr>";
 			
+
 			$rows= mysql_num_rows($result);
 			for ($i=1; $i<=$rows; $i++) {
 				$row =mysql_fetch_array($result);
-				echo "<p>".$row["RefName"]." ".$row["RefType"]." ".$row["RefDetails"]." ".$row["RefComment"]."</>";
-			}	
+				echo "<tr>";
+					echo "<td><b>".$row["RefName"]."</b></td>";
+					echo "<td>".$row["RefType"]."</td>";
+					echo "<td>".$row["RefDetails"]."</td>";
+					echo "<td>".$row["RefComment"]."</td>";
+				echo "</tr>";
+				
+			}
+			echo "</table>";
 		?>
 	</div>
 </div>
