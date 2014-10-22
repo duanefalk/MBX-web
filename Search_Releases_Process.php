@@ -40,7 +40,7 @@
 	                if ($_POST['MdlNameOnPkg_Check']) {
 	                    if ($PrevRelCriteria != "1") {
 	                        $PrevRelCriteria="1";
-	                        //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `MdlNameOnPkg` LIKE '%$MdlNameOnPkg%')");
+	                        
 	                        $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
 	                                       Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
 	                                       Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
@@ -58,7 +58,7 @@
 	                if ($_POST['PkgID_Check']) {
 	                    if ($PrevRelCriteria != "1") {
 	                        $PrevRelCriteria="1";
-	                        //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `MdlNameOnPkg` LIKE '%$MdlNameOnPkg%')");
+	                        
 	                        $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
 	                                       Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
 	                                       Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale

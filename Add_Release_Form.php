@@ -17,6 +17,7 @@
 		RelYr
 		CountryOfSale
 		Theme
+		Line
 		Series
 		SeriesID
 		ShowSeriesID
@@ -88,6 +89,29 @@
 					}	
 				?>
 				</select>
+			<p>Release Line: </p>
+				<?php
+					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%Line%' ORDER BY ValueDispOrder ASC");								
+					$result=0;
+					$rows_count=0;									
+					$result = mysql_query($query);
+					if (!result) {
+						echo "Database query failed";
+					}
+					else {
+						//echo "made connection ".$result."<br />";		
+					}
+					$rows_count= mysql_num_rows($result);
+					// echo "Rows COunt: ".$rows_count."<br />";
+				?>
+				<select name="Line">
+				<?php
+					for ($i=1; $i<=$rows_count; $i++) {
+						$row=mysql_fetch_array($result);
+						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+					}	
+				?>
+				</select>				
 			<p>Release Series: </p>
 				<?php
 					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%RelSeries%'");								

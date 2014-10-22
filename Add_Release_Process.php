@@ -9,6 +9,7 @@
         RelYr
         CountryofSale
         Theme
+        Line
         Series
         SeriesID
         ShowSeriesID
@@ -37,6 +38,7 @@
     $RelYr=$_POST['RelYr'];
     $CountryOfSale=$_POST['CountryOfSale'];
     $Theme=$_POST['Theme'];
+    $Line=$_POST['Line'];
     $Series=$_POST['Series'];
     $SeriesID=$_POST['SeriesID'];
     $ShowSeriesID=$_POST['ShowSeriesID'];
@@ -65,6 +67,7 @@
     echo $RelYr."<br />";
     echo $CountryOfSale."<br />";
     echo $Theme."<br />";
+    echo $Line."<br />";
     echo $Series."<br />";
     echo $SeriesID."<br />";
     echo $ShowSeriesID."<br />";
@@ -81,10 +84,10 @@
     echo $RelPkgPhotoRef."<br />";
     
    
-    $query="INSERT INTO Matchbox_Releases (UMID, VerID, VarID, RelID, RelYr, CountryOfSale, Theme, Series, SeriesID, ShowSeriesID,
+    $query="INSERT INTO Matchbox_Releases (UMID, VerID, VarID, RelID, RelYr, CountryOfSale, Theme, Line, Series, SeriesID, ShowSeriesID,
             PkgName, MdlNameOnPkg, SubSeries, SubSeriesID, ShowSubSeriesID, UnitTyp, PkgID, PkgVarCd, RelComm, RelPkgPhotoName,
             RelPkgPhotoRef)
-            VALUES ('$UMID','$VerID','$VarID','$RelID','$RelYr','$CountryOfSale','$Theme','$Series', '$SeriesID', '$ShowSeriesID',
+            VALUES ('$UMID','$VerID','$VarID','$RelID','$RelYr','$CountryOfSale','$Theme', '$Line', '$Series', '$SeriesID', '$ShowSeriesID',
             '$PkgName','$MdlNameOnPkg','$SubSeries','$SubSeriesID','$ShowSubSeriesID','$UnitTyp', '$PkgID', '$PkgVarCd', '$RelComm', '$RelPkgPhotoName',
             '$RelPkgPhotoRef')";
     // mysql_query($query);
