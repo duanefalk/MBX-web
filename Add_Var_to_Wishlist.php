@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php
 // we must never forget to start the session
 session_start();
@@ -71,7 +72,7 @@ session_start();
 		<br />
                 <?php
                     $Var_to_Add=$_GET["model"];
-                    $User="duanefalk";
+                    $User=$_SESSION['Username'];
                     echo "Variation Selected: ".$Var_to_Add."<br /><br />";
 
                     $picture1= IMAGE_URL . $Var_to_Add."_1.jpg";

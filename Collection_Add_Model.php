@@ -1,3 +1,8 @@
+<?php
+// we must never forget to start the session
+session_start();
+?>
+
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 <?php include("includes/header.php"); ?>
@@ -49,7 +54,7 @@
 	<td id="page">
 		<h2>Add a Model to Your Collection</h2>
 		<p>Note: you can have more than one collection if you desire. Info will NOT be shared across collections.</p>
-		<?php> $Username="duanefalk";?>
+		<?php> $Username=$_SESSION['Username'];?>
 		<form action="Create_Collection.php" method="post">
 			<p>Username:     	  <input type="text" name="Username" value="<? echo $Username?>" size="20" id="Username"</p>
 			<p>Collection Identifier:     	  <input type="text" name="User_Coll_ID" value="" size="8" id="User_Coll_ID"</p>

@@ -11,20 +11,15 @@
     }
 ?>
 
+
 <table id="structure">
-<tr>
-	<td id="navigation">
-                <a href="Search_Models.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
-		<a href="Search_Releases.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
-                <a href="Update_Mdls_in_Coll.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Update Models in Your Collection</p></a>
-		<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
-	</td>
+    <tr>
 	<td id="page">
 		<h2>Add Variation/Release to Collection</h2>
 		<br />            
 		<form name="Dir_Add_Mdl_to_Coll" action="Dir_Add_Mdl_to_Coll.php" method="post">
 		    <p>Enter Variation ID for model: <input type="text" name="Coll_VarID" value="" size="13" id="Coll_VarID"></p>
-		    <input type="submit" value="Submit" id="var_submit" name="var_submit"><br/>
+		    <input type="submit" class="button dark" value="Submit" id="var_submit" name="var_submit"><br/>
         	</form>
                 <?php
 		    $url= "Dir_Add_Mdl_to_Coll.php";
@@ -33,4 +28,16 @@
             </td>
 	</tr>
 </table>
+	
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Manage_Models_in_Collection.php">Manage Mdls in Collection</a>
+		<a href="Search_Models.php">Search Models</a>
+		<a href="Search_Releases.php">Search Releases</a>
+		<a href="index.php">Return to Main Page</a>
+	</div>
+</div>	
+
 <?php include("includes/footer.php"); ?>

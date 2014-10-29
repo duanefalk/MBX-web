@@ -112,7 +112,7 @@ session_start();
                     }
                 ?>
               
-		<form name="Add_Var_to_Coll" action="Add_Var_to_Coll.php" method="post">	
+		<form name="Add_Var_to_Coll" action="Add_Var_to_Coll.php" onsubmit="return validateForm()" method="post">	
                     <?php
                         
                         $Coll_VarID=$Var_to_Add;
@@ -136,7 +136,7 @@ session_start();
                     <p>UMID:          <input type="text" name="Coll_UMID" value="<?php echo $Coll_UMID;?>" size="6" id="Coll_UMID"></p>
                     <p>Version ID:    <input type="text" name="Coll_VerID" value="<?php echo $Coll_VerID;?>" size="10" id="Coll_VerID"></p>
                     <p>Variation ID:  <input type="text" name="Coll_VarID" value="<?php echo $Coll_VarID;?>" size="13" id="Coll_VarID"></p>
-                    <p>Release ID:    <input type="text" name="Coll_relID" value="" size="16" id="Coll_RelID"></p>
+                    <p>Release ID (use the variation ID, above, plus '-99' where 99 is the release no.):    <input type="text" name="Coll_relID" value="" size="16" id="Coll_RelID"></p>
                     <p>User-specific ID:   <input type="text" name="User_SpecID" value="" size="20" id="User_SpecID"></p>
                     <p>Copy No.:      <input type="text" name="Coll_Copy" value="<?php echo $copy_to_show; ?>" size="2" id="Coll_Copy"></p>
                     <p>Vehicle Condition: 
@@ -180,7 +180,7 @@ session_start();
 			    if ($Cond_scheme == "0") {
 				$Pkg_Cond_Scheme="Alpha_Pkg_Cond";
 			    } ELSE {
-				$Veh_Cond_Scheme="Num_cond";			
+				$Pkg_Cond_Scheme="Num_cond";			
 			    }
     
                             $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
@@ -245,7 +245,7 @@ session_start();
                             }
                         ?>
                             </select>
-                    <p>Purchase Date:      <input type="text" name="Coll_Purch_Dt" value="" size="8" id="Coll_Purch_Dt"></p>
+                    <p>Purchase Date:      <input type="date" name="Coll_Purch_Dt" value="" size="8" id="Coll_Purch_Dt"></p>
                     <p>Seller:      
 			<?php
 			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Seller%'
@@ -267,14 +267,34 @@ session_start();
 			    }
                         ?>
 			 </select>
-                    <p>Purchase Price:      <input type="text" name="Coll_Purch_Price" value="" size="10" id="Coll_Purch_Price"></p>
+                    <p>Purchase Price (format yyyy-mm-dd):      <input type="text" name="Coll_Purch_Price" value="" size="10" id="Coll_Purch_Price"></p>
                     <p>Flag to Sell?     <input type="checkbox" name="CollSellFlg"><P>
                     <p>Minimum Price to Sell: <input type="text" name="Coll_MinSell_Price" value="" size="10" id="Coll_MinSell_Price"></p>
                     <p>Comment: </p>
                         <textarea name="Coll_Comm" cols="45" rows="4" id="Coll_Comm">	
                         </textarea>
                     <input type="submit" name="var_coll_submit" value="Submit" id="var_coll_submit"/>
+		    
+		   
         	</form>
+		
+		 <script type="text/javascript">
+			<!--
+			// Form validation code will come here.
+			function validateForm()
+			    {
+ 
+			       if (document.Add_Var_to_Coll.Coll_Username.value == "")
+				{
+				    alert( "Please provide your Username!" );
+				    document.Add_Var_to_Coll.Coll_Usernam.focus() ;
+				    return false;
+				}
+ 
+				return( true );
+			    }
+			//-->			
+		    </script>
                 <?php
 		    $url= "Variation_Detail.php?model=".$Coll_VarID;
 		    echo "<a href=\"".$url."\">Cancel</a>";

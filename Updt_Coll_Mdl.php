@@ -1,3 +1,7 @@
+<?php
+// we must never forget to start the session
+session_start();
+?>
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
@@ -5,13 +9,15 @@
 <?php
     if (isset($_POST['var_submit'])) {
 	$VarID=$_POST['Coll_VarID'];
-        $User="duanefalk";
-        $User_CollID="FALKCOLL1";
-	$query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$VarID'");								
+        $User=$_SESSION['Username'];
+	// check for model in coll
+	$query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND VarID='$VarID'");								
 	$result=0;
 	$result=mysql_query($query);
 	if (mysql_num_rows($result) != 0) { 
 	    $No_Copies= (mysql_num_rows($result));
+	    //echo $No_Copies." ".$VarID;
+	    
 	    $location="Updt_Coll_Mdl_Get_Copy.php?model=".$VarID."&copy=".$No_Copies;
 	    //echo "ready to go";	
 	    redirect_to($location);
@@ -24,21 +30,16 @@
 
 <table id="structure">
 <tr>
-	<td id="navigation">
-                <a href="Search_Models.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
-		<a href="Search_Releases.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
-                <a href="Manage_Models_in_Collection.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Manage Models in Collection</p></a>
-		<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
-	</td>
+
 	<td id="page">
-		<h2>View/Update Model in Collection</h2>
+		<h2>View/Update/Delete Model in Collection</h2>
 		<br />            
 		<form name="Updt_Coll_Mdl" action="Updt_Coll_Mdl.php" method="post">
 		    <p>Enter Variation ID for model: <input type="text" name="Coll_VarID" value="" size="13" id="Coll_VarID"></p>
-		    <input type="submit" value="Submit" id="var_submit" name="var_submit"><br/>
+		    <input type="submit" value="Submit" class="button dark" id="var_submit" name="var_submit"><br/>
 		    <?php
-			$User="duanefalk";
-			$User_CollID="FALKCOLL1";
+			$User=$_SESSION['Username'];
+			//$User_CollID="FALKCOLL1";
 		    ?>
         	</form>
                 <?php
@@ -48,4 +49,16 @@
             </td>
 	</tr>
 </table>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Manage_Models_in_Collection.php">Manage Mdls in Collection</a>
+		<a href="Search_Models.php">Search Models</a>
+		<a href="Search_Releases.php">Search Releases</a>
+		<a href="index.php">Return to Main Page</a>
+	</div>
+</div>	
+
 <?php include("includes/footer.php"); ?>

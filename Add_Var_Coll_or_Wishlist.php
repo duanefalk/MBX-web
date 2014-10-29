@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php
 // we must never forget to start the session
 session_start();

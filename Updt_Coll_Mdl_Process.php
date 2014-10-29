@@ -1,3 +1,8 @@
+<?php ob_start(); ?>
+<?php
+// we must never forget to start the session
+session_start();
+?>
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
@@ -6,14 +11,14 @@
     if (isset($_POST['var_coll_submit'])) {
 
         //Fields:
-        $Coll_Username=$_POST['Coll_Username'];
-        $User_CollID=$_POST['User_CollID'];
+        
+        //$User_CollID=$_POST['User_CollID'];
         $UMID=$_POST['Coll_UMID'];
         $VerID=$_POST['Coll_VerID'];
-        $VarID=$_POST['Coll_VarID'];
+        $VarID=$_POST['Var_to_Updt'];
 	$RelID=$_POST['Coll_RelID'];
         $User_SpecID=$_POST['User_SpecID'];
-        $Copy=$_POST['Coll_Copy'];
+        $Copy=$_POST['Copy_to_Updt'];
         $VehCond=$_POST['VehCond'];
         $PkgCond=$_POST['PkgCond'];
         $ItemVal=$_POST['Coll_Value'];
@@ -26,7 +31,11 @@
         $MinSellPrice=$_POST['Coll_MinSell_Price'];
         $CollComm=$_POST['Coll_Comm'];
         $Coll_InactiveFlg="0";
-        
+        $User=$_SESSION['Username'];
+	echo "User is: ".$User;
+	echo "copies: ".$Copy;
+	echo "Var is: ".$VarID; 
+	//exit;
 	//update record, omit copy, username, coll id and var id since they are the keys for thesearch and cant change        
         $query=("UPDATE Matchbox_Collection SET
 		UMID='$UMID',
@@ -45,7 +54,7 @@
 		MinSellPrice='$MinSellPrice',
 		CollComm='$CollComm',
 		Coll_InactiveFlg='$Coll_InactiveFlg' 
-	    WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$VarID' AND Copy='$Copy'");
+	    WHERE Username='$User' AND VarID='$VarID' AND Copy= '$Copy' ");
    
         $outcome=mysql_query($query);
         if ($outcome) {
@@ -62,72 +71,59 @@
 
 <table id="structure">
 <tr>
-	<td id="navigation">
-                <a href="Search_Models.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Models</p></a>
-		<a href="Search_Releases.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Search Releases</p></a>
-                <a href="Manage_Models_in_Coll.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">return to Manage Collection</p></a>
-		<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
-	</td>
+
 	<td id="page">
-		<h2>View/Update Model in Collection</h2>
+
+		<h2>View/Update/Delete Model in Collection</h2>
 		<br />
-		<p>Variation ID to view/edit: <?php echo $_GET["model"]; ?>
-		<p>Copy to view.edit: <?php echo $_GET["copy"]; ?>
+		<p>Variation ID to view/edit: <?php echo $_GET["model"]; ?></p>
+		<p>Copy to view.edit: <?php echo $_GET["copy"]; ?></p>
 		<br />
 		<?php
                     $Var_to_Updt=$_GET["model"];
 		    $Copy_to_Updt=$_GET["copy"];
-                    $User="duanefalk";
-                    $User_CollID="FALKCOLL1";
+                    $User=$_SESSION['Username'];
+		    $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND VarID='$Var_to_Updt'");								
+		    $result=0;
+		    $result=mysql_query($query);
+		    if (mysql_num_rows($result) != 0) {
+			$row=mysql_fetch_array($result);
+			$User_CollID=$row['User_Coll_ID'];
+		    } ELSE {
+		        echo "You do not have a collection- please go to Create a Collection";
+		    }                   
                     
                     $picture1= IMAGE_URL . $Var_to_Updt."_1.jpg";
 		    $picture1_loc=IMAGE_PATH. $Var_to_Updt."_1.jpg";
                     if (file_exists($picture1_loc)) {
                         echo "<img src=".$picture1." width=\"240\">";
                     } else {
-                        //no photo, echo DEFAULT_IMAGE;
                         echo "<img src=".DEFAULT_IMAGE." width=\"240\">";
                     }
-
-		
 
                 ?>
 
 		<form name="Updt_Coll_Mdl_Process" action="Updt_Coll_Mdl_Process.php" method="post">
 		    <?php  
-                         echo "<br /><br />";
+                         echo "<br />";
                         
                         //determine what copy to default in field
-                        $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_to_Updt' AND Copy='$Copy_to_Updt'");								
+                        $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND VarID='$Var_to_Updt' AND Copy='$Copy_to_Updt'");								
 			$result=0;
 			$result=mysql_query($query);
-			echo "rows found: ".mysql_num_rows($result);
+			//echo "rows found: ".mysql_num_rows($result);
 			$row=mysql_fetch_array($result);
 
-			echo $User."<br />";
-			echo $User_CollID."<br />";
-			echo $Var_to_Updt."<br />";
-			echo $Copy_to_Updt."<br />";
-			echo $row["UMID"]."<br />";
-			echo $row["VerID"]."<br />";
-			echo $row["RelID"]."<br />";
-			echo $row["User_SpecID"]."<br />";
-			echo $row["VehCond"]."<br />";
-			echo $row["PkgCond"]."<br />";
-			echo $row["ItemVal"]."<br />";
-			echo $row["StorLoc"]."<br />";
-			echo $row["StorLoc2"]."<br />";
-			echo $row["PurchDt"]."<br />";
-			echo $row["Seller"]."<br />";
-
-
-
+			echo "Username: ".$User."<br />";
+			echo "User Collection Name: ".$User_CollID."<br />";
+			echo "Variation to View/Update: ".$Var_to_Updt."<br />";
+			echo "Copy to View/Update: ".$Copy_to_Updt."<br /><br />";
 
                     ?>
-		    <input type="hidden" name="Coll_Username" value="<?php echo $User;?>" id="Coll_Username">
-		    <input type="hidden" name="User_CollID" value="<?php echo $User_CollID;?>" id="User_CollID">
-		    <input type="hidden" name="Coll_VarID" value="<?php echo $Var_to_Updt;?>" id="Coll_VarID">
-		    <input type="hidden" name="Coll_Copy" value="<?php echo $Copy_to_Updt;?>" id="Coll_Copy">
+		    <!--<input type="hidden" name="User" value="<?php //echo $User;?>" id="User">
+		    //<input type="hidden" name="User_CollID" value="<?php //echo $User_CollID;?>" id="User_CollID">-->
+		    <input type="hidden" name="Var_to_Updt" value="<?php echo $Var_to_Updt;?>" id="Var_to_Updt">
+		    <input type="hidden" name="Copy_to_Updt" value="<?php echo $Copy_to_Updt;?>" id="Copy_to_Updt"> 
                     <p>UMID:          <input type="text" name="Coll_UMID" value="<?php echo $row["UMID"];?>" size="6" id="Coll_UMID"></p>
                     <p>Version ID:    <input type="text" name="Coll_VerID" value="<?php echo $row["VerID"];?>" size="10" id="Coll_VerID"></p>
                     <p>Release ID:    <input type="text" name="Coll_RelID" value="<?php echo $row["RelID"];?>" size="16" id="Coll_RelID"></p>
@@ -251,13 +247,28 @@
                     <p>Comment: </p>
                         <textarea name="Coll_Comm" cols="45" rows="4" value="<?php echo $row["CollComm"];?>" id="Coll_Comm">	
                         </textarea>
-                    <input type="submit" name="var_coll_submit" value="Submit" id="var_coll_submit"/>
+                    <input type="submit" name="var_coll_submit" class="button dark" value="Update" id="var_coll_submit"/>
         	</form>
                 <?php
-		    $url= "Variation_Detail.php?model=".$Coll_VarID;
-		    echo "<a href=\"".$url."\">Cancel</a>";
+		    $url1= "Del_Mdls_in_Coll.php?model=".$Var_to_Updt."&copy=".$Copy_to_Updt;
+		    echo "<a href=\"".$url1."\">DELETE THIS VAR/COPY</a>";
+		    echo "<br></><br></>";
+		    $url2= "Variation_Detail.php?model=".$Coll_VarID;
+		    echo "<a href=\"".$url2."\">Cancel</a>";
 		?>
             </td>
 	</tr>
 </table>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Manage_Models_in_Collection.php">Manage Mdls in Collection</a>
+		<a href="Search_Models.php">Search Models</a>
+		<a href="Search_Releases.php">Search Releases</a>
+		<a href="index.php">Return to Main Page</a>
+	</div>
+</div>	
+
 <?php include("includes/footer.php"); ?>
