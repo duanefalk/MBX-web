@@ -16,8 +16,8 @@
 				<dd>
 					<a href="#panel4">MAN (FAB) # <small>Single or range of No's (i.e. '800'; enter one no. on the top line or one on each line for a range); shows all versions of the model that matches a MAN#</small></a>
 					<div id="panel4" class="content">
-						<input type="text" name="MAN_No_1" value="" id="MAN_No_1" />
-						<input type="text" name="MAN_No_2" value="" id="MAN_No_2" />
+						<input type="text" name="MAN_No_1" value="" id="MAN_No_1" placeholder="Man # 1" />
+						<input type="text" name="MAN_No_2" value="" id="MAN_No_2" placeholder="Man # 2 (optional: if searching a range)" />
 					</div>
 				</dd>
 			</dl>
@@ -26,7 +26,7 @@
 				<dd>
 					<a href="#panel5">Mack # <small>(in format like '33-M')</small></a>
 					<div id="panel5" class="content">
-						<input type="text" name="Mack_No" value="" id="Mack_No" />
+						<input type="text" name="Mack_No" value="" id="Mack_No" placeholder="Mack #" />
 					</div>
 				</dd>
 			</dl>
@@ -35,7 +35,7 @@
 				<dd>
 					<a href="#panel6">Quick Name Search</a>
 					<div id="panel6" class="content">
-						<input type="text" name="QuickName" value="" id="QuickName" size=40 />
+						<input type="text" name="QuickName" value="" id="QuickName" placeholder="Quick Name Search" size="40" />
 					</div>
 				</dd>
 			</dl>
@@ -44,7 +44,7 @@
 				<dd>
 					<a href="#panel7">Complete Name Search <small>(searches model, version and base names- takes a few seconds!)</small></a>
 					<div id="panel7" class="content">
-						<input type="text" name="Name" value="" id="Name" size=40 />
+						<input type="text" name="Name" value="" id="Name" size="40" placeholder="Complete Name Search" />
 					</div>
 				</dd>
 			</dl>
@@ -53,7 +53,8 @@
 				<dd>
 					<a href="#panel8">UMID # <small>LR and 3 numbers (e.g. 'LR025'), or SF and 4 numbers (e.g. 'SF0858'). If LR or SF not specified will assume SF; enter one no. on the top line, or one on each line for a range</small></a>
 					<div id="panel8" class="content">
-						<input type="text" name="UMID_1" value="" id="UMID_1"><input type="text" name="UMID_2" value="" id="UMID_2" />
+						<input type="text" name="UMID_1" value="" id="UMID_1" placeholder="UMID #1">
+						<input type="text" name="UMID_2" value="" id="UMID_2" placeholder="UMID #2 (optional: if searching a range)">
 					</div>
 				</dd>
 			</dl>
@@ -167,7 +168,7 @@
 				<dd>
 					<a href="#panel9">Text</a>
 					<div id="panel9" class="content">
-						<input type="text" name="TempaText" value="" size="25" id="TempaText" />
+						<input type="text" name="TempaText" value="" size="25" id="TempaText" placeholder="Text" />
 					</div>
 				</dd>
 			</dl>
