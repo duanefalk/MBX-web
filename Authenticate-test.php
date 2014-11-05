@@ -12,7 +12,7 @@ $_SESSION['Sec_Lvl']=1;
 <title>Basic Login</title>
 
 <div class="row" id="login">
-	<div class="large-5 columns">
+	<div class="large-5 large-centered columns">
 		<h3>Log in</h3>
 			        
         <?php
@@ -88,11 +88,6 @@ $_SESSION['Sec_Lvl']=1;
         </form>
         
         <a href="guest_login.php">Log in as Guest</a>
-	</div>
-	<div class="large-5 large-offset-1 columns">
-		<h3>Signup for an Account</h3>
-		<p>Creating an account will allow you to get the most out of the MBX University. An account will allow you to track your own collection, as well as contribute to the greater MBX database.</p>	
-		<a href="Create_User_Account_Form.php" class="button dark">Create an Account</a>
 	</div>
 	
 </div>
