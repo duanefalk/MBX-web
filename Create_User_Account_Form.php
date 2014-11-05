@@ -97,6 +97,4 @@
 	</div>
 </div>
 
-<?php require("includes/footer.php"); ?>
-						
-			
+<?php require("includes/footer.php"); ?>		
