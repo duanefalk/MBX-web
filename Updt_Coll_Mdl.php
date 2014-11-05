@@ -16,8 +16,6 @@ session_start();
 	$result=mysql_query($query);
 	if (mysql_num_rows($result) != 0) { 
 	    $No_Copies= (mysql_num_rows($result));
-	    //echo $No_Copies." ".$VarID;
-	    
 	    $location="Updt_Coll_Mdl_Get_Copy.php?model=".$VarID."&copy=".$No_Copies;
 	    //echo "ready to go";	
 	    redirect_to($location);
@@ -39,7 +37,7 @@ session_start();
 		    <input type="submit" value="Submit" class="button dark" id="var_submit" name="var_submit"><br/>
 		    <?php
 			$User=$_SESSION['Username'];
-			//$User_CollID="FALKCOLL1";
+
 		    ?>
         	</form>
                 <?php

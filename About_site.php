@@ -26,11 +26,12 @@
 		<div class="section">
 			<h2>3) What kind of information is available on the site?</h2>
 			<p>The matchbox &#39;curriculum&#39; consists of a number of short write-ups on different topics pertinent to the hobby. It is geared more for newcomers to die-cast and Matchbox collecting, or for those who may have taken a hiatus, but recently returned to the hobby and need a quick refresher/catch-up.</p>
+			<p>As well, there is extensive information on each model that is listed, with a photo of that model. There are also reference file listing that show window colors, release series, package types, etc.</p>
 		</div>
 		
 		<div class="section">
 			<h2>4) What's in the database?</h2>
-			<p>There is a separate menu item that will take you to a page on the details of the MBX-U database approach and structure. Briefly though, MBX-U is built around a relational database rather than a text or excel listing. There are a variety of ways you can search for models or releases (how a model is packaged and sold). The database, for the foreseeable future, will be focused on Matchbox miniatures. Currently it covers the 1:64 vehicles such as those offered in the 1-120 series, 5-packs, etc. In the future I hope to expand to Skybusters and Convoys as well.</p>
+			<p>There is a separate menu item (&#39;About the Database&#39;, below)that will take you to a page on the details of the MBX-U database approach and structure. Briefly though, MBX-U is built around a relational database rather than a text or excel listing. There are a variety of ways you can search for models or releases (how a model is packaged and sold). The database, for the foreseeable future, will be focused on Matchbox miniatures. Currently it covers the 1:64 vehicles such as those offered in the 1-120 series, 5-packs, etc. In the future I hope to expand to Skybusters and Convoys as well.</p>
 		</div>
 	
 		<div class="section">
@@ -45,7 +46,7 @@
 		
 		<div class="section">
 			<h2>7) Do I <em>need</em> an account?</h2>
-			<p>Again, no. You can come to the site and do searches for models and releases or read the articles without creating an account or logging in. But, if you want to set some preferences on your searches, build and update your own collection, or provide feedback/input for the site, you will need to create an account. It&#39;s very simple, and of course no financial info is needed.</p>
+			<p>No. You can come to the site and do searches for models and releases or read the articles without creating an account or logging in. But, if you want to set some preferences on your searches, build and update your own collection, or provide feedback/input for the site, you will need to create an account. It&#39;s very simple, and of course no financial info is needed.  And... I will even send you a special MBX-u model when you set up your account!</p>
 		</div>
 		
 		<p>So, please look over the site and try out the functionality. My hope is that it provides newbies with some intro information on the hobby, and enthusiasts with some additional tools to help you better enjoy your collection. And remember, this is all for fun! When someone asks me why I collect toys, or anything really, I tell them, for the pleasure of:</p>					
@@ -53,7 +54,7 @@
             <li>Seeking: The excitement of filling in the holes in a collection, especially with that long sought-after model</li>
             <li>Learning: Matchbox has a rich history and knowledge base. There&#39;s lots to learn, even after years in the hobby, and the knowing the backstory makes collecting the models so much better</li>
             <li>Sharing: Matchbox collectors are great at passing along what they know about the hobby. Even the newest collector can find a new wheel variation at the store, or an unknown gem in an old collection. Tell us what you&#39;ve learned. </li>
-            <li>Enjoying! Make friends- join a club, go to collectors meets, and most of all have fun with those toys. Roll them, check them out from all angles, photograph them, move the moving parts. Remember- playing with them is what got you interested in the first place!! </li>
+            <li>Enjoying! Make friends- join a club, go to collectors meets, and most of all have fun with those toys. Roll them around, check them out from all angles, photograph them, move the moving parts. Remember- playing with them is what got you interested in the first place!! </li>
         </ul>
 				
 	</div>

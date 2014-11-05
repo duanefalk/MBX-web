@@ -76,8 +76,8 @@ session_start();
 
 		<h2>View/Update/Delete Model in Collection</h2>
 		<br />
-		<p>Variation ID to view/edit: <?php echo $_GET["model"]; ?></p>
-		<p>Copy to view.edit: <?php echo $_GET["copy"]; ?></p>
+		<p>Variation ID to view/edit/delete: <?php echo $_GET["model"]; ?></p>
+		<p>Copy to view.edit/delete: <?php echo $_GET["copy"]; ?></p>
 		<br />
 		<?php
                     $Var_to_Updt=$_GET["model"];
