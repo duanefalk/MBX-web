@@ -31,7 +31,7 @@
 			echo "<h3>Version ID: ". $row["VerID"]."</h3>";
 			$picture1= IMAGE_URL . $row["VerID"]."_1.jpg";
 			$picture1_loc=IMAGE_PATH. $row["VerID"]."_1.jpg";
-			$Version_to_detail= $row["VerID"];			
+			$Version_to_detail= $row["VerID"];
 			if (file_exists($picture1_loc)) {
 				//echo "picture exists";
 				echo "<img src=".$picture1." width=\"240\">";
@@ -45,6 +45,28 @@
 				//echo DEFAULT_IMAGE;
 				echo "<img src=".DEFAULT_IMAGE." width=\"240\">";
 			}
+			$PhotoRefCd1= $row["VerPhoto1Ref"];
+			$PhotoRefCd2= $row["VerPhoto2Ref"];
+			if ($PhotoRefCd1) {
+				$query2a= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
+				$result2a= mysql_query($query2a);
+				$row2a =mysql_fetch_array($result2a);
+				if ($PhotoRefCd2) {
+					$query2b= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
+					$result2b= mysql_query($query2b);
+					$row2b =mysql_fetch_array($result2b);
+					if ($row2b==$row2a) {
+						echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"] . "</p>";
+					} else {
+						echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"] . "</p>";
+					}
+				} else {
+					echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"] . "</p>";
+				}
+			} else {
+				echo "<p id=\"photoref\">Photo by: no reference listed</p>";
+			}
+				
 			echo "<br></>Version Name: ". $row["VerName"]. "<br></>";
 			echo "<br></>Version Mack#: ".$row["Master_Mack_No"]."    MAN#: ".$row["FAB_No"]."<br></>";
 			echo "First Prod.: ". $row["VerYrFirstRel"]."    Version Type: ".$row["VerTyp"]."<br></>";

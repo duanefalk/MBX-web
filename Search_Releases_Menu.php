@@ -125,7 +125,7 @@
 						<input type=checkbox name="RelSeries_Check" id="RelSeries_Check"  />
 						<label>Series:</label>
 						<?php
-							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%RelSeries%'");									
+							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%RelSeries%' ORDER BY ValueDispOrder ASC");									
 							$result=0;
 							$rows_count=0;									
 							$result = mysql_query($query);

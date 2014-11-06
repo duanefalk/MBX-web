@@ -32,7 +32,7 @@
 		<p>For 2003 and 2004 Mattel used the Hero City theme for its packaging, story lines and model selection and design. Among the least popular Matchbox productions, the theme presented its range of vehicles as the means of achieving heroic adventure in the fictional Hero City. Unfortunately, with the 2004 releases, Mattel reneged on their earlier commitment to Matchbox fans to differentiate the models from Hot Wheels by introducing fanciful or fantastic models under 'Ultra Hero' sub-series. These included animal-shaped models (i.e. the elephantine Jumbo Sweeper), hat or helmet models (Cap'n'Cop) and generally tacky design on the entire series. Several iterations of package designs were used, but all featured the Hero City logo. One bright light in 2004 was the re-introduction of a parallel 'Superfast' line. This series retained the swirl logo, but ropped Hero City altogether.</p>
 		<img src="images/ref_images/Hero_City.jpg" width=120>
 		<p></p>
-		<h4>Bureied Treasure</h4>
+		<h4>Buried Treasure</h4>
 		<p>For 2005 Mattel moved out of Hero City, and introduced a new theme for the 1-75 line- Buried Treasure. These packages continued to use the swirl logo and black/gold stripe on red packages, but featured a desert island and treasure chest background for the 1-75 models. In the US the treasure chest was actually a puffed out pocket that contained a chance to win a Pirate adventure trip. The Superfast series transitioned even farther from Hero City and returned to the lozenge logo  and old 'Superfast' typeface from the 70's.</p>
 		<img src="images/ref_images/Buried_Treasure.jpg" width=120>
 		<p></p>

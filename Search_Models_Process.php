@@ -320,11 +320,10 @@
 					$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 					$result2= mysql_query($query2);
 					$row2 =mysql_fetch_array($result2);
-					echo "<p>Photo by: ". $row2["RefName"]."</p>";
+					echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
 				} else {
-					echo "<p>Photo by: no reference listed"."</p>";
+					echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 				}
-	
 				echo "<p>Model UMID: ". $row["UMID"]."</p>";
 				echo "<p>MAN#: ".$row["FAB_No"]. "  Mack No.: ".$row["Master_Mack_No"]."</p>";
 				echo "<p>Master Name: ".$row["MasterModelName"]."</p>";

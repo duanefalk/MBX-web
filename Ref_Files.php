@@ -6,8 +6,7 @@
         <a href="Window_Colors.php" class="button dark">Window Colors</a>
         <a href="Wheel_Types.php" class="button dark">Wheel Types</a>	
 	<a href="Theme_List.php" class="button dark">Release Themes</a>
-	<a href="Series_List.php" class="button dark">Release Series List</a>
-        <a href="Collections_Menu.php" class="button dark">Return to Collections Menu</a>	
+	<a href="Series_List.php" class="button dark">Release Series List</a>	
 	</div>
 </div>
 
