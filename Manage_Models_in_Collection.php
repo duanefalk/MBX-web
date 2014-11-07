@@ -15,6 +15,7 @@
 	<div class="large-4 columns">
         <a href="Updt_Coll_Mdl.php" class="button dark">View/Update/Delete a Model</a>
     </div>
+
 </div>
 
 <div class="row">
