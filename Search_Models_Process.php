@@ -282,10 +282,12 @@
 
 <div class="row">
 	<div class="large-12 columns">
-			<?php
+		<ul class="large-block-grid-3">
+		
+		<?php
 			for ($i=1; $i<=$rows; $i++) {
 			
-				echo "<div class=\"car-block\">";
+				echo "<li class='carGrid'>";
 				
 				$row = mysql_fetch_array($result);
 
@@ -328,8 +330,10 @@
 				echo "<p>MAN#: ".$row["FAB_No"]. "  Mack No.: ".$row["Master_Mack_No"]."</p>";
 				echo "<p>Master Name: ".$row["MasterModelName"]."</p>";
 				echo "<p>First Rel Dt: ".$row["YrFirstProduced"]."</p>";
-			echo "</div>";
-			} ?>
+			echo "</li>";
+		} ?>
+		
+		</ul>
 	</div>
 </div>
 
