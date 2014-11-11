@@ -97,8 +97,7 @@ img {
 .start {
   float: left !important; }
 
-.end {
-  float: right !important; }
+/*.end { float: right !important; }*/
 
 .text-start {
   text-align: left !important; }

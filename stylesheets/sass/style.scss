@@ -53,7 +53,9 @@ select {height:auto;}
 }
 
 
-.row.actionButtons { margin-bottom:2em;
+.row.actionButtons {
+	&:last-of-type {margin-bottom:2em;}
+	
 	.button.dark{ display:block; padding:2em 1em; color:$white; background:$teal; border:0;
 		&:hover {background:$orange;}
 	}
