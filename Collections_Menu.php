@@ -7,7 +7,8 @@
 <?php include("includes/header.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 
-<?php 	$Username= $_SESSION['Username'];
+<?php 	
+	$Username= $_SESSION['Username'];
 	$SecLvl=$_SESSION['Sec_Lvl'];
 	$check = WEB_IMAGE_URL . "iconCheck.png";
 	$cross = WEB_IMAGE_URL . "iconCross.png";
@@ -36,12 +37,12 @@
 		<?php
 
 			if ($SecLvl > 1) { ?>
-				<p><img class='icon inline' src="<?php echo $check ?>"> You are all set with an account, proceed to step 2.</p>
+				<p><img class='icon inline' src="<?php echo $check ?>">You already have an account, proceed to step 2.</p>
 			<?php } else { ?>
-				<p><img class='icon inline' src="<?php echo $cross ?>"> Go to the Account option from the Main Menu and set up and account, then return here.</p>			
+				<p><img class='icon inline' src="<?php echo $cross ?>">Go to the Account option from the Main Menu and set up and account, then return here.</p>			
 			<?php } ?>
 	
-		<h3>Step 2: Create a Collection under your account</h3>
+		<h3>Step 2: Create a Collection</h3>
 		<?php
 			$result = 0;
 			$rows_count = 0;
@@ -50,9 +51,9 @@
 			$rows_count = mysql_num_rows($result);
 	        
 	        if ($rows_count == 0) { ?>
-				<p><img class='icon inline' src="<?php echo $cross ?>"> Go to <a href="Create_Collection.php">Create a Collection</a> and set up a new collection.</p>
-			<?php } else { ?>	
-				<p><img class='icon inline' src="<?php echo $check ?>"> You've already created a collection, proceed to step 3</p>		
+				<p><img class='icon inline' src="<?php echo $cross ?>">Go to <a href="Create_Collection.php">Create a Collection</a>.</p>
+			<?php } else { ?>
+				<p><img class='icon inline' src="<?php echo $check ?>">You've already created a collection, proceed to step 3</p>		
 			<?php } ?>
 
 		<h3>Step 3 (optional): Set up lists of sellers and storage locations</h3>
@@ -65,10 +66,10 @@
 			$rows_count= mysql_num_rows($result);
 	        
 	        if ($rows_count == 0) { ?>
-				<p><img class='icon inline' src="<?php echo $cross ?>"> No sellers or storage locations added yet.</p>
+				<p><img class='icon inline' src="<?php echo $cross ?>">No sellers or storage locations added yet.</p>
 				<p>If you want to have your own sellers and storage locations for your collection (and don't want to type them in each time), Go to 'Set Up Collection Value Lists' (from 'Manage Collections', on this page) and enter the values you desire. These will show up in drop-down lists that you can select from, for the appropriate fields when you are adding models rather than you needing to type them in.</p>
 			<?php } else { ?>
-				<p><img class='icon inline' src="<?php echo $check ?>"> You've already entered some collection value list items. You can add to your lists at any time from the 'Create Collection Value Lists menu option.</p>
+				<p><img class='icon inline' src="<?php echo $check ?>">You've already entered some collection value list items. You can add to your lists at any time from the 'Create Collection Value Lists menu option.</p>
 			<?php } ?>
 
 		<h3>Step 4: Add models to your collection</h3>
@@ -80,9 +81,9 @@
 			$rows_count= mysql_num_rows($result);
 	        
 	        if ($rows_count == 0) { ?>
-				<p><img class='icon inline' src="<?php echo $check ?>"> You've already started adding models. Enjoy growing your collection!</p>
+				<p><img class='icon inline' src="<?php echo $check ?>">You've already started adding models. Enjoy growing your collection!</p>
 			<?php } else { ?>
-				<p><img class='icon inline' src="<?php echo $cross ?>"> No models yet added</p>
+				<p><img class='icon inline' src="<?php echo $cross ?>">No models yet added</p>
 				<p>There are two ways to add a model to your collection:</p>
 				<p><strong>Option 1:</strong> Do a model/release search, then add from the search result.</p>
 				<p>First look up the model you have from the 'Search Models' or 'Search Releases' menu options ('Main' page).</p>

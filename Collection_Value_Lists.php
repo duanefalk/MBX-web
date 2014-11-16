@@ -2,10 +2,23 @@
 <?php include("includes/header.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 
-<div class="row">
+<div class="row">	
 	<div class="large-12 columns">
-	
         <h2>Manage Your Code Lists</h2>
+        
+        <div class="row actionButtons">
+			<div class="large-4 columns">
+				<a href="Add_User_Coll_Value.php" class="button dark">Add a New Seller or Location Code</a>
+			</div>
+			<div class="large-4 columns">
+		    	<a href="Updt_User_Coll_Value.php" class="button dark">View/Update Codes</a>
+		    </div>
+		    <div class="large-4 columns">   
+		        <a href="Del_User_Coll_Value.php" class="button dark">Delete a Code</a>
+		    </div>
+		</div>
+        
+        
         <p>Collection code lists can speed up adding models to your collection by letting you select from a drop-down list of sellers and storage locations, rather than having to type those in with each model. In the add/update/delete functions you will first be asked whether you want to work with 'Sellers' or 'Locations'</p>
 
         <p>Sellers are, of course the people or companies from whom you buy your models. Typically there will be a core group of sellers you use repeatedly, so selecting them from a list will be quicker than typing out their names. There are two fields to enter for sellers:</p>
@@ -25,9 +38,6 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Add_User_Coll_Value.php">Add a New Seller or Location Code</a>
-		<a href="Updt_User_Coll_Value.php">View/Update Codes</a>
-		<a href="Del_User_Coll_Value.php">Delete a Code</a>
 		<a href="Manage_Collections.php">Manage Collections</a>
 	</div>
 </div>
