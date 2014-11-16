@@ -21,12 +21,8 @@
 		    
 		    <input type="submit" class="button dark" value="Submit" id="var_submit" name="var_submit"><br/>
         </form>
-       
-		<?php
-		    $url = "Dir_Add_Mdl_to_Coll.php";
-		?>		
 		
-		<a href="<?php echo $url; ?>" class="button dark">Cancel</a>
+		<a href="Dir_Add_Mdl_to_Coll.php" class="button dark">Cancel</a>
 	</div>
 </div>
 
