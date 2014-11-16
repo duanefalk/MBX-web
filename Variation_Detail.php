@@ -166,23 +166,26 @@ session_start();
 				    }	
 				}
 			?>
-			<p>Add variation to wishlist, or to collection? (cancel to do neither)</>
-			<br />
-			<input type="radio" name="Coll_or_wishlist_Choice" value="Coll">Collection<br>
-			<input type="radio" name="Coll_or_wishlist_Choice" value="Wishlist">Wishlist<br>	
-			<input type="submit" value="<?php echo $row["VarID"]?>" id="submit" name="Var_to_Add">Add<br/>
+			<p>Add variation to wishlist, or to collection? (cancel to do neither)</p>
 			
-			<?php   // cancel button
-				$Version_to_list=$row["VerID"];
-				//echo $Version_to_detail;
-				$url= "Ver_Detail_and_Var_Listing.php?model=".$Version_to_list;
-				echo "<a href=\"".$url."\">Cancel</a>";
-			?>
-			</form>
+			<input type="radio" id="Coll_Choice" name="Coll_or_wishlist_Choice" value="Coll">
+			<label for="Coll_Choice">Collection</label>
+			
+			<input type="radio" id="Wishlist_Choice" name="Coll_or_wishlist_Choice" value="Wishlist">
+			<label for="Wishlist_Choice">Wishlist</label>
+				
+			<input type="submit" class="button dark" value="Add <?php echo $row["VarID"]?>" id="submit" name="Var_to_Add">
+			
 			<?php
-			}
-		?>
-	
+				// cancel button
+				$Version_to_list = $row["VerID"];
+				//echo $Version_to_detail;
+				$url = "Ver_Detail_and_Var_Listing.php?model=" . $Version_to_list;
+			?>
+			<a href="<?php echo $url; ?>" class="button dark">Cancel</a>
+			
+			</form>
+		<?php } ?>
 	</div>
 </div>
 
