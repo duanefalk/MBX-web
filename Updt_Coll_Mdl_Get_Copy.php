@@ -18,12 +18,10 @@ session_start();
 //if post not set do initial form 
 ?>
 
-<table id="structure">
-<tr>
-
+<div class="row">
+	<div class="large-12 columns">
 		<h2>View/Update/Delete Model in Collection</h2>
-		<br />
-
+		
 		<?php
 		    $Var_to_Updt=$_GET["model"];
 		    $No_of_Copies= $_GET["copy"];
@@ -38,28 +36,32 @@ session_start();
 		    echo "<br />";
 		    
 		    if ($No_of_Copies=="1") {
-			//echo "in 1 copy loop";
-			//echo $Var_to_Updt." ".$No_of_Copies;
-			//exit;
-			$location="Updt_Coll_Mdl_Process.php?model=".$Var_to_Updt."&copy=".$No_of_Copies;
-			redirect_to($location);
+				//echo "in 1 copy loop";
+				//echo $Var_to_Updt." ".$No_of_Copies;
+				//exit;
+				$location="Updt_Coll_Mdl_Process.php?model=".$Var_to_Updt."&copy=".$No_of_Copies;
+				redirect_to($location);
 		    } else {
-			echo "Variation to view/edit: ".$Var_to_Updt."<br />";
-			echo "You have ".$No_of_Copies." copies in your collection, select the copy to view/edit";
-		    }
-		    ?> 
+				echo "<p>Variation to view/edit: " . $Var_to_Updt . "</p>";
+				echo "<p>You have " . $No_of_Copies . " copies in your collection, select the copy to view/edit</p>";
+		    } 
+		?> 
+		    
 		    <form name="Updt_Coll_Mdl_Get_Copy" action="Updt_Coll_Mdl_Get_Copy.php" method="post">
-			<input type="hidden" name="Coll_VarID" value="<?php echo $_GET["model"]; ?>" size="13" id="Coll_VarID"></p>
-			<p>Copy No.:      <input type="text" name="Coll_Copy" value="1" size="2" id="Coll_Copy"></p>
-			<input type="submit" name="var_copy_submit" class="button dark" value="Submit" id="var_copy_submit"/>
+				<input type="hidden" name="Coll_VarID" value="<?php echo $_GET["model"]; ?>" size="13" id="Coll_VarID">
+				
+				<label for="Coll_Copy">Copy No.:</label>
+				<input type="text" id="Coll_Copy" name="Coll_Copy" value="1" size="2" id="Coll_Copy">
+				
+				<input type="submit" name="var_copy_submit" class="button dark" value="Submit" id="var_copy_submit"/>
 		    </form>
+		    
 		    <?php
-			$url= "Updt_Coll_mdl.php?model=".$_GET["model"];
-			echo "<a href=\"".$url."\">Cancel</a>";
-		    ?>
-            </td>
-	</tr>
-</table>
+				$url= "Updt_Coll_mdl.php?model=".$_GET["model"];
+			?>
+			<a href="<?php echo $url; ?>" class="button dark">Cancel</a>
+    </div>
+</div>
 
 <!-- Sub Menu -->
 <div class="row" id="subNav">
