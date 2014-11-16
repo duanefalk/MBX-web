@@ -2,21 +2,20 @@
 <?php include("includes/header.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 
-<table id="structure">
-    <tr>
-            <td id="navigation">
+<div class="row">
+	<div class="large-12 columns">
+		<h2>View/Update/Delete a Collection Value</h2>
+		<p>[insert code here]</p>		
+	</div>
+</div>
 
-                    <a href="Collection_Value_Lists.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Manage Collection Value Lists</p></a>
-                    <a href="Manage_Collections.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Manage Collections</p></a>
-                    <a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>	
-            </td>
-            <td id="page">
-                <h2>View/Update a Collection Value</h2>
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Collection_Value_Lists.php">Manage Collection Value Lists</a>
+		<a href="Manage_Collections.php">Manage Collections</a>
+	</div>
+</div>
 
-
-
-                <a href="Updt_User_Coll_Value.php">Cancel</a>
-            </td>
-    </tr>
-</table>
 <?php include("includes/footer.php"); ?>
