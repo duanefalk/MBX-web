@@ -10,11 +10,8 @@
 			<div class="large-4 columns">
 				<a href="Add_User_Coll_Value.php" class="button dark">Add a New Seller or Location Code</a>
 			</div>
-			<div class="large-4 columns">
+			<div class="large-4 columns end">
 		    	<a href="Updt_User_Coll_Value.php" class="button dark">View/Update/Delete Codes</a>
-		    </div>
-		    <div class="large-4 columns">   
-		        <a href="Del_User_Coll_Value.php" class="button dark">Delete a Code</a>
 		    </div>
 		</div>
         
