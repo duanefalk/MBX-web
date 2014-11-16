@@ -67,9 +67,9 @@
 	        
 	        if ($rows_count == 0) { ?>
 				<p><img class='icon inline' src="<?php echo $cross ?>">No sellers or storage locations added yet.</p>
-				<p>If you want to have your own sellers and storage locations for your collection (and don't want to type them in each time), Go to 'Set Up Collection Value Lists' (from 'Manage Collections', on this page) and enter the values you desire. These will show up in drop-down lists that you can select from, for the appropriate fields when you are adding models rather than you needing to type them in.</p>
+				<p>If you want to have your own sellers and storage locations for your collection (and don't want to type them in each time), Go to <a href="Collection_Code_Lists.php">Set Up Collection Code Lists</a> and enter the values you desire. These will show up in drop-down lists that you can select from, for the appropriate fields when you are adding models rather than you needing to type them in.</p>
 			<?php } else { ?>
-				<p><img class='icon inline' src="<?php echo $check ?>">You've already entered some collection value list items. You can add to your lists at any time from the 'Create Collection Value Lists menu option.</p>
+				<p><img class='icon inline' src="<?php echo $check ?>">You've already entered some Collection Code List items. You can add to your lists at any time from the <a href="Collection_Code_Lists.php">Create Collection Code Lists</a> menu option.</p>
 			<?php } ?>
 
 		<h3>Step 4: Add models to your collection</h3>
@@ -80,19 +80,25 @@
 			$result_mdls= mysql_query($query_mdls);
 			$rows_count= mysql_num_rows($result);
 	        
-	        if ($rows_count == 0) { ?>
+	        if ($rows_count != 0) { ?>
 				<p><img class='icon inline' src="<?php echo $check ?>">You've already started adding models. Enjoy growing your collection!</p>
 			<?php } else { ?>
 				<p><img class='icon inline' src="<?php echo $cross ?>">No models yet added</p>
 				<p>There are two ways to add a model to your collection:</p>
-				<p><strong>Option 1:</strong> Do a model/release search, then add from the search result.</p>
-				<p>First look up the model you have from the 'Search Models' or 'Search Releases' menu options ('Main' page).</p>
-				<p>Then drill down to the variation record that matches your model. On the 'Variations Detail' page, check the box marked 'Add to Collection' next to the photo of the correct variation. Fill in the collection information in the resulting form, and submit it.</p>
-				<p>The model is now added to your collection.</p>
-				<p>Note: you can search by any criteria on the search pages to get to the variation you want.</p>
-				<br></br>
-				<p><strong>Option 2:</strong> Direct entry.</p>
-				<p>If you know the database 'Variation ID' (also called 'VarID') of the model you have (for instance, 'SF0484-003-a') you can enter it directly from the 'Manage Your Collection' menu. Using this option, you MUST have this ID- you cannot use just the MAN#, Mack# or other ID for this method. You can print listings of models with the VarID's to use as reference if you prefer this method.</p>
+				<p><strong>Option 1:</strong></p>
+				<ul>
+					<li>Look up a model you using either the <a href="Search_Models_Menu.php">Search Models</a> or <a href="Search_Releases_Menu.php">Search Releases</a> menu options.</li>
+					<li>Drill down to the variation record that matches your model.</li>
+					<li>On the <em>Variations Detail</em> page, check the box marked <em>Add to Collection</em>.</li>
+					<li>Fill in the collection information in the resulting form and submit it (the model is now added to your collection).</li>
+					<li>Note: you can search by any criteria on the search pages to get to the variation you want.</li>
+				</ul>
+				<p><strong>Option 2:</strong></p>
+				<ul>
+					<li>Direct entry: If you know the database 'Variation ID' (also called 'VarID') of the model you have (for instance, 'SF0484-003-a') you can enter it directly from the <a href="Manage_Collections.php">Manage Your Collection</a> menu.</li>
+					<li>Using this option, you MUST have this ID- you cannot use just the MAN#, Mack# or other ID for this method.</li>
+					<li>You can print listings of models with the VarID's to use as reference if you prefer this method.</li>
+				</ul>
 			<?php } ?>	
 		
 	</div>
