@@ -13,7 +13,7 @@
 
 
 
-                <a href="Updt_User_Coll_Value.php">Cancel</a>
+                <a href="Updt_User_Coll_Code.php">Cancel</a>
             </td>
     </tr>
 </table>

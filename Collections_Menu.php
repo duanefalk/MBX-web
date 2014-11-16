@@ -99,21 +99,8 @@
 					<li>Using this option, you MUST have this ID- you cannot use just the MAN#, Mack# or other ID for this method.</li>
 					<li>You can print listings of models with the VarID's to use as reference if you prefer this method.</li>
 				</ul>
-			<?php } ?>	
-		
+			<?php } ?>			
 	</div>
 </div>
-
-	
-<!-- Sub Menu -->
-<!--div class="row" id="subNav">
-	<div class="large-12 columns">
-		<p class="tip">related pages:</p>
-		<a href="Manage_Collections.php">Create/Configure Your Collections</a>
-		<a href="Manage_Models_in_Collection.php">Manage Models in Your Collection</a>
-		<a href="Collection_Reports.php">Collection Reports</a>
-	</div>
-</div-->	
-
 
 <?php include("includes/footer.php"); ?>

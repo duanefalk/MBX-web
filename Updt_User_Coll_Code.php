@@ -4,7 +4,7 @@
 
 <div class="row">
 	<div class="large-12 columns">
-		<h2>View/Update/Delete a Collection Value</h2>
+		<h2>View/Update/Delete a Collection Code</h2>
 		<p>[insert code here]</p>		
 	</div>
 </div>
@@ -13,7 +13,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Collection_Value_Lists.php">Manage Collection Value Lists</a>
+		<a href="Collection_Code_Lists.php">Manage Collection Code Lists</a>
 		<a href="Manage_Collections.php">Manage Collections</a>
 	</div>
 </div>
