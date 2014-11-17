@@ -37,9 +37,15 @@ session_start();
 
 		<h2>Add a Collection Code</h2>
 		<form name="Add_User_Coll_Code" action="Add_User_Coll_Code.php" method="post">
-            <?php echo "User: ".$_SESSION['Username']."<br />"; ?>
-            <p>Collection ID: <input type="text" name="User_Coll_ID" value="" size="20" id="User_Coll_ID"></p><br />
-            <p>Value Type: </p>
+		<?php echo "User: ".$_SESSION['Username']."<br />"; 
+		$Username=$_SESSION['Username'];
+		$query2="SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'";
+		$result2=mysql_query($query2);
+		$row2=mysql_fetch_array($result2);
+		echo"Collection Name: ".$row2['User_Coll_ID'];
+		?>
+		
+		<p>Value Type: </p>
                 <?php
                         $query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UserCollValType%'");								
                         $result=0;

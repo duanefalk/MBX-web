@@ -42,7 +42,7 @@ session_start();
         	</form>
                 <?php
 		    $url= "Updt_Coll_Mdl.php";
-		    echo "<a href=\"".$url."\">Cancel</a>";
+		    echo "<a href=\"Updt_Coll_Mdl.php\">Cancel</a>";
 		?>
             </td>
 	</tr>
