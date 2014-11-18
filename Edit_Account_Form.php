@@ -159,11 +159,9 @@
 				<input type="radio" name="Code2_Pref" value="0" id="code3" /><label for="code3">Don't show Code 2 at all</label>
 			</div>
 
-		<input type="submit"  name="submit" value="Submit"/>
+			<input type="submit" class="button dark" name="submit" value="Submit"/>
+			<a class="button cancel" href="Edit_Account_Process.php">Cancel</a>
 		</form>			
-		<a href="Edit_Account_Process.php">Cancel</a>
-		<p></p>	
-	
 	</div>
 </div>
 
