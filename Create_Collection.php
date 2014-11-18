@@ -6,7 +6,7 @@ session_start();
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 <?php include("includes/header.php"); ?>
-
+    
 <?php
     //if the form was filled out already, process it				
     if (isset($_POST['Create_Coll_Submit'])) {
@@ -31,12 +31,11 @@ session_start();
 		$outcome=mysql_query($query);
 		if ($outcome) {
 			//finished, go back to manage collections
-			?>						
-					
-			<p>You have created a collection. You can go to View/Update to see the details on this collection.
-			<a href="Manage_Collections.php"><p onmouseover=\"this.style.color='orange'\" onmouseout=\"this.style.color='white'\">
-					Manage collections</p></a>
-			<?php		
+		?>						
+			<p>You have created a collection. You can go to View/Update to see the details on this collection.</p>
+			<a href="Manage_Collections.php">Manage collections</a>
+			
+		<?php		
 			Exit; 			
 		} else {
 		    echo "Subject creation failed. Please review entries.";
@@ -45,20 +44,15 @@ session_start();
 		}
 
     }
-?> 
-    
-    
+?>     
 
-<table id="structure">
-<tr>
-	<td id="navigation">
-		<a href="Manage_Collections.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Manage Collections</p></a>
-		<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
-	</td>
-	<td id="page">
+    
+    
+<div class="row">
+	<div class="large-12 columns">
 		<h2>Create a Collection</h2>
 		<p>Note: currently each account-holder can only have one collection. A future feature will allow you to have more than one collection if you desire.</>
-		<br></><br></>
+		
 		<?php
 			//check for existing collection	
 			//hard coding username for now					
@@ -75,18 +69,30 @@ session_start();
 			}	
 		?>		
 		<form action="Create_Collection.php" method="post">
-			<p>Username:     	  <input type="text" name="Username" value="<? echo $Username?>" size="20" id="Username"</p>
-			<p>Collection Identifier:     	  <input type="text" name="User_Coll_ID" value="" size="20" id="User_Coll_ID"</p>
-			<p>Collection Description:</p>
-				<textarea name="User_Coll_Desc" cols="45" rows="4">
-				</textarea>	
-			<p>Date Created: 	  <input type="text" name="User_Coll_Created_Date" value="<?php echo date('Y-m-d'); ?>" id="User_Coll_Created_Date"</p>
+			<label for="Username">Username:</label>
+			<input type="text" name="Username" value="<? echo $Username?>" size="20" id="Username">
 			
-			<br></>	
-			<input type="submit" name="Create_Coll_Submit" value="Submit"/>
-		</form>			
-		<a href="Create_Collection.php">Cancel</a>						 						
-	</td>
-</tr>
-</table>
+			<label for="User_Coll_ID">Collection Identifier:</label>
+			<input type="text" name="User_Coll_ID" value="" size="20" id="User_Coll_ID">
+			
+			<label for="User_Coll_Desc">Collection Description:</label>
+			<textarea name="User_Coll_Desc" id="User_Coll_Desc" cols="45" rows="4"></textarea>
+			
+			<label for="User_Coll_Created_Date">Date Created:</label>
+			<input type="text" name="User_Coll_Created_Date" value="<?php echo date('Y-m-d'); ?>" id="User_Coll_Created_Date">
+			
+			<input type="submit" class="button dark" name="Create_Coll_Submit" value="Submit"/>
+			<a class="button cancel" href="Create_Collection.php">Cancel</a>	
+		</form>	
+	</div>
+</div>
+	
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Manage_Collections.php">Manage Collections</a>
+	</div>
+</div>
+
 <?php require("includes/footer.php"); ?>
