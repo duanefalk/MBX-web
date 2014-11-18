@@ -11,41 +11,40 @@ session_start();
     //if the form was filled out already, process it				
     if (isset($_POST['Create_Coll_Submit'])) {
 
-	//Fields:
-	$Username=$_POST['Username'];
-	$User_Coll_ID=$_POST['User_Coll_ID'];
-	$User_Coll_Desc=$_POST['User_Coll_Desc'];
-	$User_Coll_Created_Date=$_POST['User_Coll_Created_Date'];
+		//Fields:
+		$Username=$_POST['Username'];
+		$User_Coll_ID=$_POST['User_Coll_ID'];
+		$User_Coll_Desc=$_POST['User_Coll_Desc'];
+		$User_Coll_Created_Date=$_POST['User_Coll_Created_Date'];
+	
+		echo $Username;
+		echo $User_Coll_ID;
+		echo $User_Coll_Desc;
+		echo $User_Coll_Created_Date;
+	
+		//Add the collection record
+		//$query="INSERT INTO Matchbox_User_Collections (Username, User_Coll_ID, User_Coll_Desc, User_Coll_Created_Date) 
+		//    VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
+		$query="INSERT INTO Matchbox_User_Collections VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
+	    
+					
+		$outcome=mysql_query($query);
+		if ($outcome) {
+			//finished, go back to manage collections
+			?>						
+					
+			<p>You have created a collection. You can go to View/Update to see the details on this collection.
+			<a href="Manage_Collections.php"><p onmouseover=\"this.style.color='orange'\" onmouseout=\"this.style.color='white'\">
+					Manage collections</p></a>
+			<?php		
+			Exit; 			
+		} else {
+		    echo "Subject creation failed. Please review entries.";
+		    echo "<p>".mysql_error()."</p>";
+		    //drop down to form again
+		}
 
-	echo $Username;
-	echo $User_Coll_ID;
-	echo $User_Coll_Desc;
-	echo $User_Coll_Created_Date;
-
-	//Add the collection record
-	//$query="INSERT INTO Matchbox_User_Collections (Username, User_Coll_ID, User_Coll_Desc, User_Coll_Created_Date) 
-	//    VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
-	$query="INSERT INTO Matchbox_User_Collections VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
-    
-				
-	$outcome=mysql_query($query);
-	if ($outcome) {
-		//finished, go back to manage collections
-		?>						
-				
-		<p>You have created a collection. You can go to View/Update to see the details on this collection.</>
-		<a href="Manage_Collections.php"><p onmouseover=\"this.style.color='orange'\" onmouseout=\"this.style.color='white'\">
-				Manage collections</p></a>
-		<?php		
-		Exit; 			
-	} else {
-	    echo "Subject creation failed. Please review entries.";
-	    echo "<p>".mysql_error()."</p>";
-	    //drop down to form again
-	}
-
-     }
-   
+    }
 ?> 
     
     
