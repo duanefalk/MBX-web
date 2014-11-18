@@ -45,6 +45,7 @@
 			
 			<a href="#" class="button">.button</a>
 			<a href="#" class="button dark">.button .dark</a>
+			<a href="#" class="button cancel">.button .cancel</a>
 			<a href="#" class="button dark block">.button .block</a>
 			
 			<hr />

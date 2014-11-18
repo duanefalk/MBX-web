@@ -217,8 +217,7 @@
 		
 		<input type="submit" class="button dark" name="submit" value="Submit"/>
 			
-		<a href="Search_Releases_Menu.php">Cancel/Clear</a>
-			
+		<a class="button cancel" href="Search_Releases_Menu.php">Clear</a>
 			
 	</div>
 
@@ -227,88 +226,85 @@
 </form>			
 				
 			
-			<script>
-				var stringBuilt=false;					
-				function onCheckQuery() {
-					var browseString=document.getElementById("querybox");
-					if (stringBuilt) {
-						browseString.innerHTML="";
-						browseString.appendChild(document.createElement("br"));
-						browseString.appendChild(document.createElement("br"));
-						browseString.appendChild(document.createElement("br"));
-					}					
-					
-					if (document.getElementById("ReleaseTheme_Check").checked) {
-					//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-					
-					//	$("browseString.innerHTML").append("Appended text")
-					//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-						browseString.innerHTML=browseString.innerHTML+"THEME= "+document.getElementById("ReleaseTheme").value+"  ";
-						stringBuilt=true;
-					}
-					if (document.getElementById("RelSeries_Check").checked) {
-					//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-					
-					//	$("browseString.innerHTML").append("Appended text")
-					//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-						browseString.innerHTML=browseString.innerHTML+"SERIES= "+document.getElementById("RelSeries").value+"  ";
-						stringBuilt=true;
-					}
-					if (document.getElementById("SeriesID_Check").checked) {
-					//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-					
-					//	$("browseString.innerHTML").append("Appended text")
-					//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-						browseString.innerHTML=browseString.innerHTML+"SERIES ID= "+document.getElementById("SeriesID").value+"  ";
-						stringBuilt=true;
-					}
-					if (document.getElementById("RelYr_Check").checked) {
-					//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-					
-					//	$("browseString.innerHTML").append("Appended text")
-					//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-						browseString.innerHTML=browseString.innerHTML+"REL YR= "+document.getElementById("RelYr").value+"  ";
-						stringBuilt=true;
-					}	
-					if (document.getElementById("CountryOfSale_Check").checked) {
-					//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-					
-					//	$("browseString.innerHTML").append("Appended text")
-					//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-						browseString.innerHTML=browseString.innerHTML+"SOLD IN= "+document.getElementById("CountryOfSale").value+"  ";
-						stringBuilt=true;
-					}	
-					if (document.getElementById("PkgName_Check").checked) {
-					//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-					
-					//	$("browseString.innerHTML").append("Appended text")
-					//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-						browseString.innerHTML=browseString.innerHTML+"PKG NAME= "+document.getElementById("PkgName").value+"  ";
-						stringBuilt=true;
-					}	
-					if (document.getElementById("MdlNameOnPkg_Check").checked) {
-					//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-					
-					//	$("browseString.innerHTML").append("Appended text")
-					//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-						browseString.innerHTML=browseString.innerHTML+"MDL NAME ON PKG= "+document.getElementById("MdlNameOnPkg").value+"  ";
-						stringBuilt=true;
-					}								
-					if (document.getElementById("PkgID_Check").checked) {
-					//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-					
-					//	$("browseString.innerHTML").append("Appended text")
-					//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-						browseString.innerHTML=browseString.innerHTML+"PKG ID= "+document.getElementById("PkgID").value+"  ";
-						stringBuilt=true;
-					}		
-
-					//browseString.innerHTML=vTyp+vMake;
-				}
-							
-			</script>
+<script>
+	var stringBuilt=false;					
+	function onCheckQuery() {
+		var browseString=document.getElementById("querybox");
+		if (stringBuilt) {
+			browseString.innerHTML="";
+			browseString.appendChild(document.createElement("br"));
+			browseString.appendChild(document.createElement("br"));
+			browseString.appendChild(document.createElement("br"));
+		}					
 		
-					
+		if (document.getElementById("ReleaseTheme_Check").checked) {
+		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
+		
+		//	$("browseString.innerHTML").append("Appended text")
+		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
+			browseString.innerHTML=browseString.innerHTML+"THEME= "+document.getElementById("ReleaseTheme").value+"  ";
+			stringBuilt=true;
+		}
+		if (document.getElementById("RelSeries_Check").checked) {
+		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
+		
+		//	$("browseString.innerHTML").append("Appended text")
+		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
+			browseString.innerHTML=browseString.innerHTML+"SERIES= "+document.getElementById("RelSeries").value+"  ";
+			stringBuilt=true;
+		}
+		if (document.getElementById("SeriesID_Check").checked) {
+		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
+		
+		//	$("browseString.innerHTML").append("Appended text")
+		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
+			browseString.innerHTML=browseString.innerHTML+"SERIES ID= "+document.getElementById("SeriesID").value+"  ";
+			stringBuilt=true;
+		}
+		if (document.getElementById("RelYr_Check").checked) {
+		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
+		
+		//	$("browseString.innerHTML").append("Appended text")
+		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
+			browseString.innerHTML=browseString.innerHTML+"REL YR= "+document.getElementById("RelYr").value+"  ";
+			stringBuilt=true;
+		}	
+		if (document.getElementById("CountryOfSale_Check").checked) {
+		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
+		
+		//	$("browseString.innerHTML").append("Appended text")
+		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
+			browseString.innerHTML=browseString.innerHTML+"SOLD IN= "+document.getElementById("CountryOfSale").value+"  ";
+			stringBuilt=true;
+		}	
+		if (document.getElementById("PkgName_Check").checked) {
+		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
+		
+		//	$("browseString.innerHTML").append("Appended text")
+		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
+			browseString.innerHTML=browseString.innerHTML+"PKG NAME= "+document.getElementById("PkgName").value+"  ";
+			stringBuilt=true;
+		}	
+		if (document.getElementById("MdlNameOnPkg_Check").checked) {
+		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
+		
+		//	$("browseString.innerHTML").append("Appended text")
+		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
+			browseString.innerHTML=browseString.innerHTML+"MDL NAME ON PKG= "+document.getElementById("MdlNameOnPkg").value+"  ";
+			stringBuilt=true;
+		}								
+		if (document.getElementById("PkgID_Check").checked) {
+		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
+		
+		//	$("browseString.innerHTML").append("Appended text")
+		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
+			browseString.innerHTML=browseString.innerHTML+"PKG ID= "+document.getElementById("PkgID").value+"  ";
+			stringBuilt=true;
+		}		
 
+		//browseString.innerHTML=vTyp+vMake;
+	}
+				
+</script>
 			
 <?php include("includes/footer.php"); ?>

@@ -183,7 +183,7 @@
 		<div class="large-12 columns">
 			<input type="submit" class="button dark" name="submit" value="Search" />
 		
-			<a href="Search_Models_Menu.php">Cancel / Clear</a>
+			<a class="button cancel" href="Search_Models_Menu.php">Clear</a>
 		</div>
 		
 	</div>
