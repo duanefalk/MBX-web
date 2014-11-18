@@ -54,8 +54,8 @@
 				<dd>	
 					<a href="#panela">Package Name, i.e. Construction Playset</a>
 					<div id="panela" class="content">
-						<input type=checkbox name="PkgName_Check"  id= "PkgName_Check" />
-						<label>Package Name:</label>
+						<input type=checkbox name="PkgName_Check" id="PkgName_Check" />
+						<label for="PkgName_Check">Package Name:</label>
 						<input type="text" name="PkgName" id="PkgName" value="" size="40" id="PkgName" />		
 					</div>
 				</dd>
@@ -64,8 +64,8 @@
 				<dd>
 					<a href="#panelb">Model Name on Package</a>
 					<div id="panelb" class="content">
-						<input type=checkbox name="MdlNameOnPkg_Check"  id="MdlNameOnPkg_Check" />
-						<label>Model Name on the Package:</label>
+						<input type=checkbox name="MdlNameOnPkg_Check" id="MdlNameOnPkg_Check" />
+						<label for="MdlNameOnPkg_Check">Model Name on the Package:</label>
 						<input type="text" name="MdlNameOnPkg" id="MdlNameOnPkg" value="" size="40" id="MdlNameOnPkg" />	
 					</div>
 				</dd>
@@ -74,8 +74,8 @@
 				<dd>
 				<a href="#panelc">Package ID#</a>
 				<div id="panelc" class="content">	
-					<input type=checkbox name="PkgID_Check" id="PkgID_Check"  />
-					<label>Package ID#:</label>
+					<input type=checkbox name="PkgID_Check" id="PkgID_Check" />
+					<label for="PkgID_Check">Package ID#:</label>
 					<input type="text" name="PkgID" id="PkgID" value="" size="40" />	
 				</div>
 				</dd>
@@ -91,7 +91,7 @@
 					<a href="#panel1">Theme</a>
 					<div id="panel1" class="content">
 						<input type=checkbox name="ReleaseTheme_Check" id="ReleaseTheme_Check" />
-						<label>Release Theme:</label>
+						<label for="ReleaseTheme_Check">Release Theme:</label>
 						<?php
 							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%ReleaseTheme%'");								
 							$result=0;
@@ -123,7 +123,7 @@
 					<a href="#panel2">Series</a>
 					<div id="panel2" class="content">
 						<input type=checkbox name="RelSeries_Check" id="RelSeries_Check"  />
-						<label>Series:</label>
+						<label for="RelSeries_Check">Series:</label>
 						<?php
 							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%RelSeries%' ORDER BY ValueDispOrder ASC");									
 							$result=0;
@@ -155,7 +155,7 @@
 					<a href="#panel3">No. in Series</a>
 					<div id="panel3" class="content">
 						<input type=checkbox name="SeriesID_Check" id="SeriesID_Check" />
-						<label># in Series:</label>
+						<label for="SeriesID_Check"># in Series:</label>
 						<input type="text" name="SeriesID" id="SeriesID" value="" size="20" id="SeriesID" />										
 					</div>
 				</dd>
@@ -166,7 +166,7 @@
 					<a href="#panel4">Release Year</a>
 					<div id="panel4" class="content">
 						<input type=checkbox name="RelYr_Check" id="RelYr_Check" />
-						<label>Release Yr:</label>
+						<label for="RelYr_Check">Release Yr:</label>
 						<input type="text" name="RelYr" id= "RelYr" value="" size="4" id="RelYr" />										
 					</div>
 				</dd>
@@ -177,7 +177,7 @@
 					<a href="#panel5">Country of Release</a>
 					<div id="panel5" class="content">
 						<input type=checkbox name="CountryOfSale_Check" id="CountryOfSale_Check"  />
-						<label>Country Where Released:</label>
+						<label for="CountryOfSale_Check">Country Where Released:</label>
 						<?php
 							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%CountryOfSale%'");									
 							$result=0;
