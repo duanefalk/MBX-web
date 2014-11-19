@@ -206,8 +206,8 @@
 				// Search by Type criteria
 				$PrevModelCriteria="";
 				if ($_POST['VehicleType_Check']) {
-					echo "Searching for:<br></>";
-					echo "Vehicle Type= ".$VehicleType."<br />";
+					echo "<p>Searching for:</p>";
+					echo "<p>Vehicle Type= " . $VehicleType . "</p>";
 					$VehicleType=$_POST['TypeofVehicle'];
 					$PrevModelCriteria="1";
 					//$query= "SELECT * FROM Matchbox_Models WHERE `VehicleType` LIKE '%$VehicleType%'  OR `VehicleType2` LIKE '%$VehicleType%'";
@@ -266,12 +266,12 @@
 			//echo $query."<br />";
 			$result=0;
 			$rows=0;
-			// echo $result;
+			
 			$result = mysql_query($query);
 			$rows= mysql_num_rows($result);
-			//print_r($result);
-			//exit;
-			echo "No. Found: ".$rows."<br /><br />";
+			
+			
+			echo "<p>No. Found: " . $rows . "</p>";
 			if(!$result) {
 				echo "No matching results found"; //mysql_error();
 				exit;
@@ -334,22 +334,11 @@
 		} ?>
 		
 		</ul>
+		
+		
+		<?php mysql_free_result($result); ?>
 	</div>
 </div>
-
-<div class="row">
-	<div class="large-12 columns">
-
-		<?php 
-			echo "<br /> Query Completed </br /><br />";
-			//echo "* see 'References' page for full source info"."<br /><br />";
-			mysql_free_result($result);
-			// echo $result;
-			
-			?>
-			<a href="Search_Models_Menu.php">Cancel</a>
-	</div>
-</div>	
 
 <!-- Sub Menu -->
 <div class="row" id="subNav">

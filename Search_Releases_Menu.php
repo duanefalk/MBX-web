@@ -41,9 +41,7 @@
 </head>
 
 <form name="SearchReleases" action="Search_Releases_Process.php" method="post">
-
 <div class="row">
-	
 	<div class="large-12 columns">
 	
 		<h2 class="demoHeaders">Search by Package Info</h2>
@@ -207,102 +205,63 @@
 		</div>
 		
 		<input type="button" name="testcheckbox" class="button dark" id="testcheckbox" value="Check Query" onclick="onCheckQuery()">
-					
-		<h2>Your Query So Far:</h2>
-		<div id="querybox">
-			<br />
-			<p></p>
-			<br />
-		</div>
+		
+		<h5>Your Query So Far:</h5>
+		<div id="querybox"></div>
 		
 		<input type="submit" class="button dark" name="submit" value="Submit"/>
 			
 		<a class="button cancel" href="Search_Releases_Menu.php">Clear</a>
 			
 	</div>
-
-</div>
-			
-</form>			
+</div>	
+</form>		
 				
 			
 <script>
-	var stringBuilt=false;					
+	var stringBuilt = false;					
 	function onCheckQuery() {
-		var browseString=document.getElementById("querybox");
+		var browseString = document.getElementById("querybox");
+		
 		if (stringBuilt) {
-			browseString.innerHTML="";
-			browseString.appendChild(document.createElement("br"));
-			browseString.appendChild(document.createElement("br"));
-			browseString.appendChild(document.createElement("br"));
+			browseString.innerHTML = "";
+			//browseString.appendChild(document.createElement("br"));
+			//browseString.appendChild(document.createElement("br"));
+			//browseString.appendChild(document.createElement("br"));
 		}					
 		
 		if (document.getElementById("ReleaseTheme_Check").checked) {
-		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-		
-		//	$("browseString.innerHTML").append("Appended text")
-		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-			browseString.innerHTML=browseString.innerHTML+"THEME= "+document.getElementById("ReleaseTheme").value+"  ";
-			stringBuilt=true;
+			browseString.innerHTML = browseString.innerHTML + "<p>THEME: <strong>" + document.getElementById("ReleaseTheme").value + "</strong></p>";
+			stringBuilt = true;
 		}
 		if (document.getElementById("RelSeries_Check").checked) {
-		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-		
-		//	$("browseString.innerHTML").append("Appended text")
-		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-			browseString.innerHTML=browseString.innerHTML+"SERIES= "+document.getElementById("RelSeries").value+"  ";
-			stringBuilt=true;
+			browseString.innerHTML = browseString.innerHTML + "<p>SERIES: <strong>" + document.getElementById("RelSeries").value + "</strong></p>";
+			stringBuilt = true;
 		}
 		if (document.getElementById("SeriesID_Check").checked) {
-		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-		
-		//	$("browseString.innerHTML").append("Appended text")
-		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-			browseString.innerHTML=browseString.innerHTML+"SERIES ID= "+document.getElementById("SeriesID").value+"  ";
-			stringBuilt=true;
+			browseString.innerHTML = browseString.innerHTML + "<p>SERIES ID: <strong>" + document.getElementById("SeriesID").value + "</strong></p>";
+			stringBuilt = true;
 		}
 		if (document.getElementById("RelYr_Check").checked) {
-		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-		
-		//	$("browseString.innerHTML").append("Appended text")
-		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-			browseString.innerHTML=browseString.innerHTML+"REL YR= "+document.getElementById("RelYr").value+"  ";
-			stringBuilt=true;
+			browseString.innerHTML = browseString.innerHTML + "<p>REL YR: <strong>" + document.getElementById("RelYr").value + "</strong></p>";
+			stringBuilt = true;
 		}	
 		if (document.getElementById("CountryOfSale_Check").checked) {
-		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-		
-		//	$("browseString.innerHTML").append("Appended text")
-		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-			browseString.innerHTML=browseString.innerHTML+"SOLD IN= "+document.getElementById("CountryOfSale").value+"  ";
-			stringBuilt=true;
+			browseString.innerHTML = browseString.innerHTML + "<p>SOLD IN: <strong>" + document.getElementById("CountryOfSale").value + "</strong></p>";
+			stringBuilt = true;
 		}	
 		if (document.getElementById("PkgName_Check").checked) {
-		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-		
-		//	$("browseString.innerHTML").append("Appended text")
-		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-			browseString.innerHTML=browseString.innerHTML+"PKG NAME= "+document.getElementById("PkgName").value+"  ";
-			stringBuilt=true;
+			browseString.innerHTML = browseString.innerHTML + "<p>PKG NAME: <strong>" + document.getElementById("PkgName").value + "</strong></p>";
+			stringBuilt = true;
 		}	
 		if (document.getElementById("MdlNameOnPkg_Check").checked) {
-		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-		
-		//	$("browseString.innerHTML").append("Appended text")
-		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-			browseString.innerHTML=browseString.innerHTML+"MDL NAME ON PKG= "+document.getElementById("MdlNameOnPkg").value+"  ";
-			stringBuilt=true;
+			browseString.innerHTML = browseString.innerHTML + "<p>MDL NAME ON PKG: <strong>" + document.getElementById("MdlNameOnPkg").value + "</strong></p>";
+			stringBuilt = true;
 		}								
 		if (document.getElementById("PkgID_Check").checked) {
-		//	browseString.innerHTML=browseString.innerHTML+"replaced by next";	
-		
-		//	$("browseString.innerHTML").append("Appended text")
-		//	var vMake= "Veh Make= "+document.getElementById("VehicleMake").value+" ";
-			browseString.innerHTML=browseString.innerHTML+"PKG ID= "+document.getElementById("PkgID").value+"  ";
-			stringBuilt=true;
-		}		
-
-		//browseString.innerHTML=vTyp+vMake;
+			browseString.innerHTML = browseString.innerHTML + "<p>PKG ID: <strong>" + document.getElementById("PkgID").value + "</strong></p>";
+			stringBuilt = true;
+		}
 	}
 				
 </script>

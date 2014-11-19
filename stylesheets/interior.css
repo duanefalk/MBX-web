@@ -239,3 +239,13 @@ Variation Comparison
 #varCompare table tr td span {
   color: #919191;
 }
+
+/* -- Search Releases ----- */
+/* line 143, sass/interior.scss */
+#querybox {
+  margin-bottom: 2em;
+}
+/* line 144, sass/interior.scss */
+#querybox p {
+  margin-bottom: 0;
+}
