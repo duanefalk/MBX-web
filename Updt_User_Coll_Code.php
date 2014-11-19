@@ -8,43 +8,35 @@ session_start();
 
 <?php
     if (isset($_POST['var_submit'])) {
-	$VarID=$_POST['Coll_VarID'];
+	$CollCode=$_POST['Coll_Code'];
         $User=$_SESSION['Username'];
-	// check for model in coll
-	$query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND VarID='$VarID'");								
+	echo $User." ".$CollCode;
+
 	$result=0;
+	$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Value='$CollCode' AND Coll_List_Val_InactivFlg=\"0\"");								
 	$result=mysql_query($query);
-	if (mysql_num_rows($result) != 0) { 
-	    $No_Copies= (mysql_num_rows($result));
-	    $location="Updt_Coll_Mdl_Get_Copy.php?model=".$VarID."&copy=".$No_Copies;
+	if (mysql_num_rows($result) != 0) {
+	    $location="Updt_User_Coll_Code_Process.php?code=".$CollCode;
 	    //echo "ready to go";	
 	    redirect_to($location);
 	} ELSE {
-	    echo "You do not have that model in your collection";
+	    echo "You do not have that code in your collection<br></><br></>";
 	}
 
     }
 ?>
 
 <table id="structure">
-<tr>
-
-	<td id="page">
-		<h2>View/Update/Delete Seller or Location Codes</h2>
-		<br />            
-		<form name="Updt_User_Coll_Code" action="Updt_User_Coll_Code.php" method="post">
-		    <p>Enter Variation ID for model: <input type="text" name="Coll_VarID" value="" size="13" id="Coll_VarID"></p>
-		    <input type="submit" value="Submit" class="button dark" id="var_submit" name="var_submit"><br/>
-		    <?php
-			$User=$_SESSION['Username'];
-
-		    ?>
-        	</form>
-                <?php
-		    $url= "Updt_Coll_Mdl.php";
-		    echo "<a href=\"Updt_Coll_Mdl.php\">Cancel</a>";
-		?>
-            </td>
+	<tr>
+		<td id="page">
+			<h2>Update/Delete Seller or Location Codes</h2>
+			<br />            
+			<form name="Updt_User_Coll_Code" action="Updt_User_Coll_Code.php" method="post">
+				<p>Enter Seller or Location Code to Update/Delete: <input type="text" name="Coll_Code" value="" size="60" id="Coll_Code"></p>
+				<input type="submit" value="Submit" class="button dark" id="var_submit" name="var_submit"><br/>
+				<a href=\"Updt_Coll_Mdl.php\">Cancel</a>
+	        	</form>
+	            </td>
 	</tr>
 </table>
 
@@ -52,9 +44,7 @@ session_start();
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Manage_Models_in_Collection.php">Manage Mdls in Collection</a>
-		<a href="Search_Models.php">Search Models</a>
-		<a href="Search_Releases.php">Search Releases</a>
+		<a href="Manage_Collections.php">Manage Collection</a>
 		<a href="index.php">Return to Main Page</a>
 	</div>
 </div>	

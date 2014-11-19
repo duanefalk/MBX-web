@@ -54,7 +54,7 @@ session_start();
 			$row=mysql_fetch_array($result);
 			$User_CollID=$row['User_Coll_ID'];
 		    } ELSE {
-		        echo "You do not have a collection- please go to Create a Collection";
+		        echo "Database problem- please email info@MBX-u.com";
 		    }                   
                     
                     $picture1= IMAGE_URL . $Var_to_Updt."_1.jpg";
