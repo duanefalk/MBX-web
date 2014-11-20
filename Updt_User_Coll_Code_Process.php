@@ -41,7 +41,7 @@ session_start();
             echo "<p>".mysql_error()."</p>";
             //drop down to form again
         }   
-    }
+    } else {
 //if post not set do initial form 
 ?>
 
@@ -91,6 +91,7 @@ session_start();
             </td>
 	</tr>
 </table>
+<?php } ?>
 
 <!-- Sub Menu -->
 <div class="row" id="subNav">

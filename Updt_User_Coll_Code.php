@@ -10,7 +10,6 @@ session_start();
     if (isset($_POST['var_submit'])) {
 	$CollCode=$_POST['Coll_Code'];
         $User=$_SESSION['Username'];
-	echo $User." ".$CollCode;
 
 	$result=0;
 	$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Value='$CollCode' AND Coll_List_Val_InactivFlg=\"0\"");								
@@ -19,11 +18,11 @@ session_start();
 	    $location="Updt_User_Coll_Code_Process.php?code=".$CollCode;
 	    //echo "ready to go";	
 	    redirect_to($location);
-	} ELSE {
+	} else {
 	    echo "You do not have that code in your collection<br></><br></>";
 	}
 
-    }
+    } else {
 ?>
 
 <table id="structure">
@@ -34,11 +33,13 @@ session_start();
 			<form name="Updt_User_Coll_Code" action="Updt_User_Coll_Code.php" method="post">
 				<p>Enter Seller or Location Code to Update/Delete: <input type="text" name="Coll_Code" value="" size="60" id="Coll_Code"></p>
 				<input type="submit" value="Submit" class="button dark" id="var_submit" name="var_submit"><br/>
-				<a href=\"Updt_Coll_Mdl.php\">Cancel</a>
+				<a href=\"Updt_User_Coll_Code.php\">Cancel</a>
 	        	</form>
 	            </td>
 	</tr>
 </table>
+
+	<?php } ?>
 
 <!-- Sub Menu -->
 <div class="row" id="subNav">
