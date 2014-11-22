@@ -272,10 +272,20 @@
 			
 			
 			echo "<p>No. Found: " . $rows . "</p>";
-			if(!$result) {
-				echo "No matching results found"; //mysql_error();
-				exit;
-			} ?>
+			if ($rows==0) {
+				?>
+				<h3>Why Were No Matches Found?</h3>
+				<ul>
+				<li>The Database is still being built! Only post-Lesney models from approx. <b>MAN# 150</b> and up are currently in the db. I am adding these constantly and will continue to update the progress here.</li>
+				<li>Your query may have been too specific- try searching a portion of the name. The name you are looking at may be just the model name used on the package, which can be searched also under <a href="Search_Releases_Menu.php">Search Releases</a></li>
+				<li>Check for misspellings or incorrect format, i.e. MAN#s are up to 3 digits, with no '#'</li>
+				<li>There may be a database error! If you are certain the outcome is incorrect, please send details to me at info@mbx-u.com (or using the <a href="User_Upload.php">Upload</a> feature available if you have an account)</li>
+				</ul>
+				<p>Additional tips for searching are contained on the 'Tips' related page listed below</p>
+			<?php
+			}
+			?>
+		
 			
 	</div>
 </div>
