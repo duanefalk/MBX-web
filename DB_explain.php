@@ -66,7 +66,7 @@
 			<li>The color(s), tampo deisgn and tampo text on the version</li>
 			<li>Version attachments, when appropriate</li>
 			<li>Code Level and Secondary Manufacturer when appropriate: Code 1, made by Mattel (or LEsney etc), Code 2 design applied by an approved secondary company (i.e. CCI). I have not included code 3 (custom models made without approval of Mattel)</li>
-		
+		<p></p>
 		<h4>VARIATION</h4>
 		<h6>What is a Variation?</h6>
 		<p>Within a version there may be smaller differences that form variations of that version. Details such as:</p>
@@ -103,7 +103,7 @@
 			<li>Release Year</li>
 			<li>Country of sale: If sold in a particular country it can be listed as such (i.e. promos only sold in Belgium). USA is the biggest example of this. Aggregations of markets include ROW- rest of world (anywhere but USA), LA- Latin America, and if generally available, CORE- offered in all major markets.</li>
 			<li>Line: Miniatures, SKybusters, King/Superking, COnoys etc. The highest level distinction of releases. This site focuses on miniatures, but many miniature models are offered under SKybusters etc, and those are included.</li>
-			<li>Theme: Matchbox has sometimes used a particular theme for its packaging and sales across different series and years. Examples include the Tyco 'Fast Lane' theme, the much-loved 'Hero City' theme, and starting in 2014, 'On a Mission'. A list of themes can be reviewed at <a href="Theme_List.php" class="button dark">RELEASE THEMES</a></li>	
+			<li>Theme: Matchbox has sometimes used a particular theme for its packaging and sales across different series and years. Examples include the Tyco 'Fast Lane' theme, the much-loved 'Hero City' theme, and starting in 2014, 'On a Mission'. Check them out at <a href="Theme_List.php" class="button dark">RELEASE THEMES</a></li>	
 			<li>Series: 1-75, Multi-packs, Gift Sets, Premiere models etc. A list can be found in <a href="Series_List.php" class="button dark">RELEASE SERIES LIST</a></li>
 			<li>Series ID: if a series is numbered, such as the 1-75 models, that number.</li>
 			<li>Subseries and subseries ID: In recent years Mattel has dividede the 1-7 set into various subsets, Emergency, Construction etc. Other example sinclude the various 'World Class Series' under Premiere models</li>
@@ -111,7 +111,7 @@
 			<li>Package name: What the package is called, if it is unqieuly identified. Not to be confused with the series or subseries name listed on the package, For instance, 'Exotic Rides' on a 5-pack is a package name, whereas Premiere and World Class Series 5 are series and subseries names on a premiere model.</li>
 			<li>Model Name on Package: What the model is called on the specific package, This often differs by country and differs from the nam on the car itself.</li	
 		</ul>
-		
+		<p></p>
 		<h4>COLLECTIONS</h4>
 		<p>Every model you enter into your collection uses the UMID, VerID, VarID and optionally the RelID. In addition you can enter info on the purchase, value, storage location, date of purchase etc.</p>
 		
