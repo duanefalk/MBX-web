@@ -1,0 +1,27 @@
+<?php include("includes/header.php"); ?>
+
+<div class="row">
+	<div class="large-12 columns">
+		<h2>Dedication & Thanks</h2>
+		<p>This site is dedicated to all Matchbox collectors. I hope you find it useful and informative.</p>
+		<p>Almost universally, folks in the community that I've met at shows or on-line have been friendly and helpful and willing to share their knowledge. There are a few folks though I'd like to specifically thank:</p>
+		<ul type="I">
+			<li>Christian Falkensteiner, for his in-depth categorization and cataloging of everything from models to packages and wheel types. His documents were of inestimable help in building this database.</li>		
+			<li>John Nijhuis for his guidance on many topics and constant patience in answering dumb questions!</li>
+			<li>Steve Schutte for his friendship and helping me track down many of the ROW code 2's I'd never otherwise have found.</li>
+			<li>And last but certainly not least, Charlie Mack for so much he's done for the hobby.</li>
+			
+		</ul>
+	
+	</div>
+</div>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="About_site.php">About the Site</a>
+	</div>
+</div>
+
+<?php include("includes/footer.php"); ?>

@@ -80,7 +80,7 @@
 		<p>Each variation in the database has these characteristics:</p>
 		<ul>
 			<li>Unique Variation ID (VARID) made up of the UMID + VerID + a letter for the variation, i.e. SF550-001-a and SF550-001-b are 2 variations of the same model.</li>
-			<li>Specific Mack# form C. Mack;s latest catalog versions</li>
+			<li>Specific Mack# from C. Mack's latest catalog versions</li>
 			<li>Model name on the base- this often differs among versions and even sometimes among variations</li>
 			<li>Manufactourer location: Where the model was made- England, China etc.</li>
 			<li>Wheel styles- front and back</li>
