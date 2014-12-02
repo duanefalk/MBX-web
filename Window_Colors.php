@@ -109,6 +109,10 @@
 	<div class="large-3 columns start text-center">
 		<h5>Chrome</h5>
 		<p><img src="images/ref_images/chrome.jpg" width="120"></p>
+	</div>
+	<div class="large-3 columns start text-center">
+		<h5>Silver/Grey</h5>
+		<p><img src="images/ref_images/silver.jpg" width="120"></p>
 	</div>	
 </div>
 
