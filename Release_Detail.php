@@ -101,9 +101,6 @@
 				} else {
 					echo "Pkg Type:  UNKNOWN"."<br />";
 				}
-				if ($row["PkgValAdj"] != 0) {
-					echo "Value Adj. for this pkg: ".$row["PkgValAdj"]."<br />";
-				}
 				if ($row["RelComm"]) {
 					echo "Comments:   ".$row["RelComm"]."<br />";
 				}
