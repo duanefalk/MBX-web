@@ -36,37 +36,36 @@
 				//look up and hsow photos
 				$picture1= IMAGE_URL . $row["RelID"]."_1.jpg";
 				$picture1_loc=IMAGE_PATH. $row["RelID"]."_1.jpg";
-				//echo $picture1."<br />";
-				$picture2= IMAGE_URL . $row["RelID"]."_2.jpg";
-				$picture2_loc=IMAGE_PATH. $row["RelID"]."_2.jpg";
-				//echo $picture2."<br />";					
+				
+				$PhotoRefCd = $row["RelPkgPhotoRef"];
+				$query2a = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+				$result2a = mysql_query($query2a);
+				$row2a = mysql_fetch_array($result2a);				
+				
 				echo "<h3>Release ID: ". $row["RelID"]."</h3><br></>";			
-				if (file_exists($picture1_loc)) {
-					//echo "picture exists";
-					echo "<img src=".$picture1." width=\"240\">";
-				} else {
-					//echo "cant find picture";
-					//echo DEFAULT_IMAGE;
+				if (file_exists($picture1_loc)) { ?>
+					<a href="<?php echo $picture1; ?>" class="imagePopup" title="<?php echo $row2a["RefName"]; ?>"><img src="<?php echo $picture1; ?>" width="240"></a>
+				<?php } else {
 					echo "<img src=".DEFAULT_REL_IMAGE." width=\"240\">";
 				}
-				if (file_exists($picture2_loc)) {
-					//echo "picture exists";
-					echo "<img src=".$picture2." width=\"240\">";
-				} else {
+				
+				$picture2= IMAGE_URL . $row["RelID"]."_2.jpg";
+				$picture2_loc=IMAGE_PATH. $row["RelID"]."_2.jpg";
+				
+				
+				if (file_exists($picture2_loc)) { ?>
+					<a href="<?php echo $picture2; ?>" class="imagePopup" title="<?php echo $row2a["RefName"]; ?>"><img src="<?php echo $picture2; ?>" width="240"></a>
+				<?php } else {
 					//ignore, dont put up a default for 2nd one	
 				}			
 	
 				//get photo ref codes and lookup names
-				$PhotoRefCd= $row["RelPkgPhotoRef"];
-				if ($PhotoRefCd) {
-					$query2a= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
-					$result2a= mysql_query($query2a);
-					$row2a =mysql_fetch_array($result2a);
-					echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"]."</p>";
-				} else {
-					echo "<p id=\"photoref\">Photo by: no reference listed</p>";
-				}
-	
+				$PhotoRefCd = $row["RelPkgPhotoRef"];
+				$query2a= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+				$result2a= mysql_query($query2a);
+				$row2a =mysql_fetch_array($result2a);
+				echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"]."</p>";
+				
 				//display remainder of rel info
 				//echo "<br />";
 				echo "Rel Yr:   ".$row["RelYr"]."<br />";

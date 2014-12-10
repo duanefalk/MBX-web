@@ -6,4 +6,11 @@ $( document ).ready(function() {
 		captions: false
 	});
 	
+	$(document).ready(function() {
+		$('.imagePopup').magnificPopup({
+			type:'image',
+			gallery:{enabled:true}
+		});
+	});
+	
 });

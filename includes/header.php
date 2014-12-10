@@ -18,6 +18,7 @@ session_start();
 		
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="stylesheets/foundation.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/lightbox.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/jquery.bxslider.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/interior.css" media="all" rel="stylesheet" type="text/css" />

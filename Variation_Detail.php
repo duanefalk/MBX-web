@@ -30,21 +30,34 @@ session_start();
 
 				$picture1 = IMAGE_URL . $row["VarID"]."_1.jpg";
 				$picture1_loc = IMAGE_PATH. $row["VarID"]."_1.jpg";
-				$picture2 = IMAGE_URL . $row["VarID"]."_2.jpg";
-				$picture2_loc = IMAGE_PATH. $row["VarID"]."_2.jpg";	
-			
+				$PhotoRefCd1= $row["VarPhoto1Ref"];
+				$query2a = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
+				$result2a = mysql_query($query2a);
+				$row2a = mysql_fetch_array($result2a);
+				
+				
 				$Variation_to_detail= $row["VarID"];
 				$url= "Variation_Detail.php?model=".$Variation_to_detail;				
-				if (file_exists($picture1_loc)) {
-					echo "<img src=" . $picture1 . " width=\"240\">";
-				} else {
-					echo "<img src=" . DEFAULT_IMAGE . " width=\"240\">";
-				}
-
-				if (file_exists($picture2_loc)) {
-					//echo "picture exists";
-					echo "<img src=".$picture2." width=\"240\">";
-				} else {
+				
+				if (file_exists($picture1_loc)) { ?>
+					<a href="<?php echo $picture1; ?>" class="imagePopup" title="<?php echo $row2a["RefName"]; ?>"><img src="<?php echo $picture1; ?>" width="240"></a>
+				<?php } else { ?>
+					<img src="<?php echo DEFAULT_IMAGE; ?>" width="240" />
+				<?php } ?>
+				
+				<?php
+					
+				$picture2 = IMAGE_URL . $row["VarID"]."_2.jpg";
+				$picture2_loc = IMAGE_PATH. $row["VarID"]."_2.jpg";	
+				$PhotoRefCd2= $row["VarPhoto2Ref"];
+				$query2b= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
+				$result2b= mysql_query($query2b);
+				$row2b =mysql_fetch_array($result2b);
+				
+				
+				if (file_exists($picture2_loc)) { ?>
+					<a href="<?php echo $picture2; ?>" class="imagePopup" title="<?php echo $row2b["RefName"]; ?>"><img src="<?php echo $picture2; ?>" width="240"></a>
+				<?php } else { 
 					//ignore, dont put up a default for 2nd one	
 				}
 												

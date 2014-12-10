@@ -22,6 +22,8 @@
   $(document).foundation();
 </script>
 
+
+<script src="js/lightbox.js"></script>
 <script src="js/jquery.bxslider.min.js"></script>
 <script src="js/utility.js"></script>
 

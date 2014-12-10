@@ -6,12 +6,11 @@
 	<div class="large-12 columns">
 	
 		<?php
-			$model_for_detail=$_GET["model"];
-			$UMID=substr($model_for_detail,0,6);
-			
-			echo "<a href=\"Models_Detail_and_Ver_Listing.php?model=".$UMID."\"><p onmouseover=\"this.style.color='orange'\" onmouseout=\"this.style.color='white'\">Return to Versions Listing Page</a>";
+			$model_for_detail = $_GET["model"];
+			$UMID = substr($model_for_detail,0,6);
 		?>
-			
+		
+		<p><a href="Models_Detail_and_Ver_Listing.php?model=<?php echo $UMID; ?>">Return to Versions Listing Page</a></p>
 	
 		<h2>Version Details Page</h2>
 		
@@ -21,41 +20,60 @@
 			$model_for_detail=$_GET["model"];
 			//find and display version details
 			//echo "The picture you clicked on was: ".$model_for_detail."<br />";
+			
 			$query= ("SELECT * FROM Matchbox_Versions WHERE VerID LIKE '%$model_for_detail%'");
 			$result = mysql_query($query);
 			if(!$result) {
 				echo "Database error: No matching results found"; //mysql_error();
 				exit;
 				}
-			$row=mysql_fetch_array($result);
+			$row = mysql_fetch_array($result);
 			echo "<h3>Version ID: ". $row["VerID"]."</h3>";
-			$picture1= IMAGE_URL . $row["VerID"]."_1.jpg";
-			$picture1_loc=IMAGE_PATH. $row["VerID"]."_1.jpg";
-			$Version_to_detail= $row["VerID"];
-			if (file_exists($picture1_loc)) {
-				//echo "picture exists";
-				echo "<img src=".$picture1." width=\"240\">";
-				$picture2=IMAGE_URL . $row["VerID"]."_2.jpg";
-				$picture2_loc=IMAGE_PATH. $row["VerID"]."_2.jpg";
-				if (file_exists($picture2_loc)) {
-					echo "<img src=".$picture2." width=\"240\">";
-				}
+			
+			$picture1 = IMAGE_URL . $row["VerID"]."_1.jpg";
+			$picture1_loc = IMAGE_PATH. $row["VerID"]."_1.jpg";
+			
+			$Version_to_detail = $row["VerID"];
+			
+			if ( file_exists($picture1_loc) ) {
+			
+				$PhotoRefCd1 = $row["VerPhoto1Ref"];
+				$query2a = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
+				$result2a = mysql_query($query2a);
+				$row2a = mysql_fetch_array($result2a);
+				
+			?>
+				<a class="imagePopup" title="<?php echo $row2a["RefName"]; ?>" href="<?php echo $picture1; ?>"><img src="<?php echo $picture1; ?>" width="240"></a>
+				<?php
+					$picture2 = IMAGE_URL . $row["VerID"] . "_2.jpg";
+					$picture2_loc = IMAGE_PATH . $row["VerID"] . "_2.jpg";
+					
+					if (file_exists($picture2_loc)) { 
+						$PhotoRefCd2 = $row["VerPhoto2Ref"];
+						$query2b = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
+						$result2b = mysql_query($query2b);
+						$row2b = mysql_fetch_array($result2b);
+					?>
+					
+						<a class="imagePopup" title="<?php echo $row2b["RefName"]; ?>" href="<?php echo $picture2; ?>"><img src="<?php echo $picture2; ?>" width="240"></a>
+					<?php }
 			} else {
-				//echo "cant find picture";
-				//echo DEFAULT_IMAGE;
-				echo "<img src=".DEFAULT_IMAGE." width=\"240\">";
+				echo "<img src=" . DEFAULT_IMAGE . " width=\"240\">";
 			}
-			$PhotoRefCd1= $row["VerPhoto1Ref"];
-			$PhotoRefCd2= $row["VerPhoto2Ref"];
+			
+			$PhotoRefCd1 = $row["VerPhoto1Ref"];
+			$PhotoRefCd2 = $row["VerPhoto2Ref"];
+			
 			if ($PhotoRefCd1) {
-				$query2a= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
-				$result2a= mysql_query($query2a);
-				$row2a =mysql_fetch_array($result2a);
+				$query2a = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
+				$result2a = mysql_query($query2a);
+				$row2a = mysql_fetch_array($result2a);
+				
 				if ($PhotoRefCd2) {
-					$query2b= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
-					$result2b= mysql_query($query2b);
-					$row2b =mysql_fetch_array($result2b);
-					if ($row2b==$row2a) {
+					$query2b = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
+					$result2b = mysql_query($query2b);
+					$row2b = mysql_fetch_array($result2b);
+					if ($row2b == $row2a) {
 						echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"] . "</p>";
 					} else {
 						echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"] . "</p>";
