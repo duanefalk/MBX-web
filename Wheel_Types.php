@@ -45,14 +45,25 @@
 				for ($i=1; $i<=$rows; $i++) {
 					echo "<li class=\"carGrid\">";
 						$row = mysql_fetch_array($result);
+						
+						
 						$wheelphoto = WHEEL_URL . $row["WheelCod"] . ".jpg";
-						echo "<p><img src=" . $wheelphoto . " width=100></p>"; 
+						$wheel_loc = WHEEL_PATH . $row["WheelCod"] . ".jpg";
+						if ( file_exists($wheel_loc) ) {
+							//echo "picture exists";
+							echo "<a href=\"" . $url . "\">"."<img src=" . $wheelphoto . " width=\"100\"></a>";
+						} else {
+							//echo "cant find picture";
+							//echo DEFAULT_IMAGE;
+							echo "<a href=\"" . $url . "\">"."<img src=" . DEFAULT_WHEEL_IMAGE . " width=\"100\"></a>";
+						}
+
 						echo "<p>".$row["WheelCod"]."</p>";
 						echo "<p>".$row["WheelTyp"]."</p>";
 						echo "<p>".$row["WheelDescr"]."</p>";
 					echo "</li>";
 				}
-				
+			
 				echo "</ul>";
 			}		
 			
