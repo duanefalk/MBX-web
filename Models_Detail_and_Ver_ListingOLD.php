@@ -10,6 +10,7 @@ $Username=$_SESSION['Username'];
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
 
+
 <div class="row">
 	<div class="large-12 columns">
 	
@@ -70,22 +71,12 @@ $Username=$_SESSION['Username'];
 			$query4=("SELECT * FROM Matchbox_Model_Microvariations WHERE Matchbox_Model_Microvariations.UMID='$model_for_detail'");
 			$result4 = mysql_query($query4);
 			$rowcount4=mysql_num_rows($result4);
-		?>
-	</div>	
-	<div class="row">
-	<div class="large-12 columns">
-	<?php
-		if ($rowcount4!=0) {
-			
-			echo "<a href=\"All_Variations.php?model=$model_for_detail\" class=\"button dark\">See All Variations</a>";
-			echo "<a href=\"Display_Microvariations.php?model=$model_for_detail\" class=\"button dark\">See Microvariationss</a>";		
-		} else {
-			echo "<a href=\"All_Variations.php?model=$model_for_detail\" class=\"button dark\">See All Variations</a>";
-		}
-	?>
-	</div>
-	<div class="large-12 columns">
-		<?php
+			if ($rowcount4!=0) {
+			//if ($result4) {
+				echo "<a href=\"Display_Microvariations.php?model=$model_for_detail\">See Microvariations</a>";
+				echo "<br></>";
+			}
+
 			$row2=mysql_fetch_array($result2);
 
 			//check user code2 display preference
@@ -127,18 +118,18 @@ $Username=$_SESSION['Username'];
 								$rows_own= mysql_num_rows($result_own);
 								//$rows_own= mysql_num_rows($result_own);
 								//check if pic exists and apply colors
-								
+								echo $picture_loc;
 								if (file_exists($picture_loc)) {									
 									if ($rows_own !="0") {
 										echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
 									} else {
-										echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." width=\"240\"></a>";
+										echo "<a href=\"".$url."\">"."<img class='own not' src=".$picture." width=\"240\"></a>";
 									}	
 								} else {
 									if ($rows_own !="0") {
 										echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"240\"></a>";
 									} else {
-										echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+										echo "<a href=\"".$url."\">"."<img class='own not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
 									}
 								}	
 							} else {
@@ -530,7 +521,8 @@ $Username=$_SESSION['Username'];
 				}
 			}
 			
-		?>			
+
+			?>			
 	</div>
 </div>
 

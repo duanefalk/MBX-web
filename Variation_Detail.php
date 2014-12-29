@@ -187,7 +187,8 @@ session_start();
 			<input type="radio" id="Wishlist_Choice" name="Coll_or_wishlist_Choice" value="Wishlist">
 			<label for="Wishlist_Choice">Wishlist</label>
 				
-			<input type="submit" class="button dark" value="Add <?php echo $row["VarID"]?>" id="submit" name="Var_to_Add">
+			<input type="hidden" id="Var_to_Add" value= "<?php echo $row["VarID"]?>" name="Var_to_Add">	
+			<input type="submit" class="button dark" value="Add <?php echo $row["VarID"]?>" id="submit" name="submit">
 			
 			<?php
 				// cancel button
