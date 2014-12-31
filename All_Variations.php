@@ -25,16 +25,16 @@ $Username=$_SESSION['Username'];
 			}
 			$rows= mysql_num_rows($result);
 			echo "<h3>"."CODE 1 & 2/3 Versions found: ".$rows."</h3>";
-			echo "<ul class='large-block-grid-5'>";
+			echo "<ul class='large-block-grid-6'>";
 			
 			for ($i=1; $i<=$rows; $i++) {
 				echo "<li class='carGrid'>";
 				//make image clickable and send proper umid to variation_detail page
-				$row=mysql_fetch_array($result);
-				$picture= IMAGE_URL . $row["VarID"]."_1.jpg";
-				$picture_loc=IMAGE_PATH. $row["VarID"]."_1.jpg";
-				$Variation_to_detail=$row["VarID"];
-				$url= "Variation_Detail.php?model=".$Variation_to_detail;
+				$row = mysql_fetch_array($result);
+				$picture = IMAGE_URL . $row["VarID"] . "_1.jpg";
+				$picture_loc = IMAGE_PATH . $row["VarID"] . "_1.jpg";
+				$Variation_to_detail = $row["VarID"];
+				$url = "Variation_Detail.php?model=" . $Variation_to_detail;
 
 				//determine what to show for version pics
 				//check if have account
@@ -60,57 +60,54 @@ $Username=$_SESSION['Username'];
 						if (file_exists($picture_loc)) {									
 							if ($rows_own !="0") {
 								if ($cond_scheme=="0") {
-									if ($row_own_cond=="MIB" or $row_own_cond=="Mint" or $row_own_cond=="NM" or $row_own_cond=="Excellent" or $row_own_cond=="Very Good")	
-									{
-										echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"100\"></a>";
+									if ($row_own_cond=="MIB" or $row_own_cond=="Mint" or $row_own_cond=="NM" or $row_own_cond=="Excellent" or $row_own_cond=="Very Good") {
+										echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." /></a>";
 									} else {
-										echo "<a href=\"".$url."\">"."<img class='own-poor' src=".$picture." width=\"100\"></a>";
+										echo "<a href=\"".$url."\">"."<img class='own-poor' src=".$picture." /></a>";
 									}
 								} else {
-									if ($row_own_cond=="10" or $row_own_cond=="9.5" or $row_own_cond=="9.0" or $row_own_cond=="8.5" or $row_own_cond=="8.0")	
-									{
-										echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"100\"></a>";
+									if ($row_own_cond=="10" or $row_own_cond=="9.5" or $row_own_cond=="9.0" or $row_own_cond=="8.5" or $row_own_cond=="8.0") {
+										echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." /></a>";
 									} else {
-										echo "<a href=\"".$url."\">"."<img class='own-poor' src=".$picture." width=\"100\"></a>";
+										echo "<a href=\"".$url."\">"."<img class='own-poor' src=".$picture." /></a>";
 									}
 								}
 							} else {
-								echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." width=\"100\"></a>";
+								echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." /></a>";
 							}	
 						} else {
 							if ($rows_own !="0") {
 								if ($cond_scheme=="0") {
 									if ($row_own_cond=="MIB" or $row_own_cond=="Mint" or $row_own_cond=="NM" or $row_own_cond=="Excellent" or $row_own_cond=="Very Good")	
 									{
-										echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"100\"></a>";
+										echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." /></a>";
 									} else {
-										echo "<a href=\"".$url."\">"."<img class='own-poor' src=".DEFAULT_IMAGE." width=\"100\"></a>";
+										echo "<a href=\"".$url."\">"."<img class='own-poor' src=".DEFAULT_IMAGE." /></a>";
 									}
 								} else {
-									if ($row_own_cond=="10" or $row_own_cond=="9.5" or $row_own_cond=="9.0" or $row_own_cond=="8.5" or $row_own_cond=="8.0")	
-									{
-										echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"100\"></a>";
+									if ($row_own_cond=="10" or $row_own_cond=="9.5" or $row_own_cond=="9.0" or $row_own_cond=="8.5" or $row_own_cond=="8.0") {
+										echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." /></a>";
 									} else {
-										echo "<a href=\"".$url."\">"."<img class='own-poor' src=".DEFAULT_IMAGE." width=\"100\"></a>";
+										echo "<a href=\"".$url."\">"."<img class='own-poor' src=".DEFAULT_IMAGE." /></a>";
 									}
 								}
-								echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"100\"></a>";
+								echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." /></a>";
 							} else {
-								echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"100\"></a>";
+								echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." /></a>";
 							}
 						}	
 					} else {
 						if (file_exists($picture_loc)) {									
-							echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"100\"></a>";			
+							echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";			
 						} else {
-							echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"100\"></a>";
+							echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
 						}	
 					}	
 				} else {
 					if (file_exists($picture_loc)) {									
-						echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"100\"></a>";
+						echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
 					} else {
-						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"100\"></a>";
+						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
 					}
 				}			
 				
@@ -119,13 +116,13 @@ $Username=$_SESSION['Username'];
 					$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 					$result2= mysql_query($query2);
 					$row2 =mysql_fetch_array($result2);
-					echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
+					echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
 				} else {
-					echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
+					echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 				}
-				echo "<p>Var Yr: ". $row["VarYear"]."</p>";
-				echo "<p>Var ID: ". $row["VarID"]."</p>";
-				echo "<p>Mack#: ". $row["Mack_No"]."</p>";
+				echo "<p><strong>Variation Year:</strong> " . $row["VarYear"] . "</p>";
+				echo "<p><strong>Variation ID:</strong> " . $row["VarID"] . "</p>";
+				echo "<p><strong>Mack #:</strong> " . $row["Mack_No"] . "</p>";
 				
 				echo "</li>";
 			}	

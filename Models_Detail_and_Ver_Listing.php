@@ -83,14 +83,14 @@ $Username=$_SESSION['Username'];
 		<div class="row actionButtons">			
 			<?php if ($rowcount4 != 0) { ?>
 				<div class="large-6 columns">	
-					<a href="All_Variations.php?model=$model_for_detail" class="button dark">See All Variations</a>
+					<a href="All_Variations.php?model=<?php echo $model_for_detail; ?>" class="button dark">See All Variations</a>
 				</div>
 				<div class="large-6 columns">
-					<a href="Display_Microvariations.php?model=$model_for_detail" class="button dark">See Microvariations</a>
+					<a href="Display_Microvariations.php?model=<?php echo $model_for_detail; ?>" class="button dark">See Microvariations</a>
 				</div>
 			<?php } else { ?>
 				<div class="large-6 columns end">
-					<a href="All_Variations.php?model=$model_for_detail\" class="button dark">See All Variations</a>
+					<a href="All_Variations.php?model=<?php echo $model_for_detail; ?>" class="button dark">See All Variations</a>
 				</div>
 			<?php } ?>
 		</div>
