@@ -69,7 +69,7 @@
 					<a href="#panel1">Vehicle Type</a>
 					<div id="panel1" class="content">
 						<input type=checkbox name="VehicleType_Check" id="VehicleType_Check" />
-						<label>Vehicle Type:</label>
+						<label for="VehicleType_Check">Vehicle Type:</label>
 						<?php
 							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%VehicleType%'");								
 							$result=0;
@@ -101,7 +101,7 @@
 					<a href="#panel2">Make of Vehicle <small>(i.e. Ford)</small></a>
 					<div id="panel2" class="content">
 						<input type=checkbox name="VehicleMake_Check" id="VehicleMake_Check" />
-						<label>Make of Vehicle:</label>
+						<label for="VehicleMake_Check">Make of Vehicle:</label>
 						<?php
 							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%VehMake%'");								
 							$result=0;
@@ -133,7 +133,7 @@
 					<a href="#panel3">Country of Make <small>(i.e. Ford is made in the US)</small></a>
 					<div id="panel3" class="content">
 						<input type=checkbox name="MakeCountry_Check" id="MakeCountry_Check" />
-						<label>Country of Make:</label>
+						<label for="MakeCountry_Check">Country of Make:</label>
 						<?php
 							$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%MakeCountry%'");								
 							$result=0;
