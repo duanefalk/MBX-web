@@ -381,30 +381,56 @@ dl.accordion dd > a:hover {
 /* line 167, sass/style.scss */
 .carGrid {
   margin: 1em 0;
+  font-size: 80%;
 }
 /* line 168, sass/style.scss */
+.carGrid a {
+  display: block;
+}
+/* line 169, sass/style.scss */
 .carGrid img {
+  display: block;
   max-width: 100%;
-  margin-bottom: .5em;
+  margin-bottom: .25em;
   /*green*/
   /*red*/
   /*yellow*/
 }
-/* line 169, sass/style.scss */
+/* line 170, sass/style.scss */
 .carGrid img.own {
   border-bottom: 10px solid #2E8B57;
 }
-/* line 170, sass/style.scss */
+/* line 171, sass/style.scss */
 .carGrid img.own-not {
   border-bottom: 10px solid #de3939;
 }
-/* line 171, sass/style.scss */
+/* line 172, sass/style.scss */
 .carGrid img.own-poor {
   border-bottom: 10px solid #ffde42;
 }
 /* line 174, sass/style.scss */
+.carGrid .photoref {
+  margin: .5em 0 1.5em;
+  font-size: 80%;
+  font-style: italic;
+  line-height: 100%;
+}
+/* line 177, sass/style.scss */
+.carGrid h6 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 120%;
+}
+/* line 178, sass/style.scss */
 .carGrid p {
-  max-width: 95%;
-  margin: 0 0 .4em;
+  margin: 0 0 .75em;
   line-height: 120%;
+  font-size: 90%;
+}
+/* line 179, sass/style.scss */
+.carGrid .carDetails {
+  margin-top: 1em;
+  padding: 1em;
+  border-top: 0.25em solid rgba(8, 123, 128, 0.5);
+  background: rgba(8, 123, 128, 0.05);
 }

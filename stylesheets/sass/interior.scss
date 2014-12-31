@@ -131,10 +131,16 @@ Variation Comparison
 	margin-bottom:.5em; font-size:x-small; font-style:italic; line-height:100%;
 }
 
-
+/*
 .tag { display:inline-block; padding:.15em 1em; font-size:80%; border:1px solid $black; @include roundedCorners; text-transform:lowercase;
 	
 	&.black {color:$white; background:#000;}
+	&.black.white {
+		color:$orange;
+		background-color: #000000; // Old browsers
+		@include filter-gradient(#000000, #ffffff, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #000000 0%,#000000 50%,#ffffff 50%,#ffffff 100%));
+	}
 	&.blue {color:$white; background-color:#0033CC;}
 	&.blue.white {
 		color:$black; 
@@ -157,7 +163,7 @@ Variation Comparison
 		@include filter-gradient(#00ff00, #000000, horizontal); // IE6-9
 		@include background-image(linear-gradient(left,  #00ff00 0%,#00ff00 50%,#000000 50%,#000000 99%));
 	}
-	&.lt.blue {background-color:#66CCFF;}
+	&.lt.blue {color:$black; background-color:#66CCFF;}
 	&.red {color:$white; background-color:#CC0000;}
 	&.red.white {
 		color:$black;
@@ -188,7 +194,7 @@ Variation Comparison
 		@include background-image(linear-gradient(left,  #ffcc00 0%,#ffcc00 50%,#ffffff 50%,#ffffff 99%));
 	}
 }
-
+*/
 
 /* -- Variations Comparison -- */
 #varCompare {

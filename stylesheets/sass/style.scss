@@ -164,12 +164,23 @@ dl.accordion { margin:0 auto 1em; @include body;
 }
 
 /* -- Car Grids -- */
-.carGrid { margin:1em 0;
-	img {max-width:100%; margin-bottom:.5em;
+.carGrid { margin:1em 0; font-size:80%;
+	a {display:block;}
+	img {display:block; max-width:100%; margin-bottom:.25em;
 		&.own {border-bottom:10px solid #2E8B57;}	/*green*/
 		&.own-not {border-bottom:10px solid #de3939;}	/*red*/
 		&.own-poor {border-bottom:10px solid #ffde42;}	/*yellow*/
 	}
-
-	p { max-width:95%; margin:0 0 .4em; line-height:120%;}	
+	.photoref {
+		margin:.5em 0 1.5em; font-size:80%; font-style:italic; line-height:100%;
+	}
+	h6 {text-transform:uppercase; letter-spacing:1px; font-size:120%;}
+	p { margin:0 0 .75em; line-height:120%; font-size:90%;}
+	.carDetails {
+		margin-top:1em; padding:1em;
+		border-top:.25em solid transparentize($teal,.5);
+		background:transparentize($teal,.95);
+		
+		p {}
+	}	
 }

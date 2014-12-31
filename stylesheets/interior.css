@@ -227,171 +227,89 @@ Variation Comparison
   line-height: 100%;
 }
 
-/* line 135, sass/interior.scss */
-.tag {
-  display: inline-block;
-  padding: .15em 1em;
-  font-size: 80%;
-  border: 1px solid #444444;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  text-transform: lowercase;
-}
-/* line 137, sass/interior.scss */
-.tag.black {
-  color: white;
-  background: #000;
-}
-/* line 138, sass/interior.scss */
-.tag.blue {
-  color: white;
-  background-color: #0033CC;
-}
-/* line 139, sass/interior.scss */
-.tag.blue.white {
-  color: #444444;
-  background-color: #316cf7;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF316CF7', endColorstr='#FFFFFFFF');
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #316cf7), color-stop(50%, #2989d8), color-stop(50%, #207cca), color-stop(50%, #ffffff), color-stop(100%, #ffffff));
-  background-image: -webkit-linear-gradient(left, #316cf7 0%, #2989d8 50%, #207cca 50%, #ffffff 50%, #ffffff 100%);
-  background-image: -moz-linear-gradient(left, #316cf7 0%, #2989d8 50%, #207cca 50%, #ffffff 50%, #ffffff 100%);
-  background-image: -o-linear-gradient(left, #316cf7 0%, #2989d8 50%, #207cca 50%, #ffffff 50%, #ffffff 100%);
-  background-image: linear-gradient(left, #316cf7 0%, #2989d8 50%, #207cca 50%, #ffffff 50%, #ffffff 100%);
-}
-/* line 145, sass/interior.scss */
-.tag.dk.blue.white {
-  color: #d45132;
-  background-color: #1b2f89;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF1B2F89', endColorstr='#FFFFFFFF');
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #1b2f89), color-stop(50%, #1b2f89), color-stop(50%, #ffffff), color-stop(100%, #ffffff));
-  background-image: -webkit-linear-gradient(left, #1b2f89 0%, #1b2f89 50%, #ffffff 50%, #ffffff 100%);
-  background-image: -moz-linear-gradient(left, #1b2f89 0%, #1b2f89 50%, #ffffff 50%, #ffffff 100%);
-  background-image: -o-linear-gradient(left, #1b2f89 0%, #1b2f89 50%, #ffffff 50%, #ffffff 100%);
-  background-image: linear-gradient(left, #1b2f89 0%, #1b2f89 50%, #ffffff 50%, #ffffff 100%);
-}
-/* line 152, sass/interior.scss */
-.tag.gold {
-  background-color: #CC9900;
-}
-/* line 153, sass/interior.scss */
-.tag.lime.green {
-  background-color: #00FF00;
-}
-/* line 154, sass/interior.scss */
-.tag.lime.green.black {
-  color: white;
-  background-color: #00ff00;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF00FF00', endColorstr='#FF000000');
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #00ff00), color-stop(50%, #00ff00), color-stop(50%, #000000), color-stop(99%, #000000));
-  background-image: -webkit-linear-gradient(left, #00ff00 0%, #00ff00 50%, #000000 50%, #000000 99%);
-  background-image: -moz-linear-gradient(left, #00ff00 0%, #00ff00 50%, #000000 50%, #000000 99%);
-  background-image: -o-linear-gradient(left, #00ff00 0%, #00ff00 50%, #000000 50%, #000000 99%);
-  background-image: linear-gradient(left, #00ff00 0%, #00ff00 50%, #000000 50%, #000000 99%);
-}
-/* line 160, sass/interior.scss */
-.tag.lt.blue {
-  background-color: #66CCFF;
-}
-/* line 161, sass/interior.scss */
-.tag.red {
-  color: white;
-  background-color: #CC0000;
-}
-/* line 162, sass/interior.scss */
-.tag.red.white {
-  color: #444444;
-  background-color: #cc0000;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFCC0000', endColorstr='#FFFFFFFF');
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #cc0000), color-stop(50%, #cc0000), color-stop(50%, #ffffff), color-stop(99%, #ffffff));
-  background-image: -webkit-linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffffff 50%, #ffffff 99%);
-  background-image: -moz-linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffffff 50%, #ffffff 99%);
-  background-image: -o-linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffffff 50%, #ffffff 99%);
-  background-image: linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffffff 50%, #ffffff 99%);
-}
-/* line 168, sass/interior.scss */
-.tag.red.yellow {
-  color: #444444;
-  background-color: #cc0000;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFCC0000', endColorstr='#FFFFCC00');
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #cc0000), color-stop(50%, #cc0000), color-stop(50%, #ffcc00), color-stop(100%, #ffcc00));
-  background-image: -webkit-linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffcc00 50%, #ffcc00 100%);
-  background-image: -moz-linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffcc00 50%, #ffcc00 100%);
-  background-image: -o-linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffcc00 50%, #ffcc00 100%);
-  background-image: linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffcc00 50%, #ffcc00 100%);
-}
-/* line 174, sass/interior.scss */
-.tag.orange {
-  background-color: #FF6600;
-}
-/* line 175, sass/interior.scss */
-.tag.purple {
-  color: white;
-  background-color: #6600CC;
-}
-/* line 176, sass/interior.scss */
-.tag.silver {
-  background-color: #D6D6D6;
-}
-/* line 177, sass/interior.scss */
-.tag.white {
-  background-color: white;
-}
-/* line 178, sass/interior.scss */
-.tag.white.orange {
-  background-color: #ffffff;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFFF6600');
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(50%, #ff6600), color-stop(99%, #ff6600));
-  background-image: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 50%, #ff6600 50%, #ff6600 99%);
-  background-image: -moz-linear-gradient(left, #ffffff 0%, #ffffff 50%, #ff6600 50%, #ff6600 99%);
-  background-image: -o-linear-gradient(left, #ffffff 0%, #ffffff 50%, #ff6600 50%, #ff6600 99%);
-  background-image: linear-gradient(left, #ffffff 0%, #ffffff 50%, #ff6600 50%, #ff6600 99%);
-}
-/* line 183, sass/interior.scss */
-.tag.yellow {
-  background-color: #FFCC00;
-}
-/* line 184, sass/interior.scss */
-.tag.yellow.green {
-  background-color: #CCFF33;
-}
-/* line 185, sass/interior.scss */
-.tag.yellow.white {
-  background-color: #ffcc00;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFCC00', endColorstr='#FFFFFFFF');
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffcc00), color-stop(50%, #ffcc00), color-stop(50%, #ffffff), color-stop(99%, #ffffff));
-  background-image: -webkit-linear-gradient(left, #ffcc00 0%, #ffcc00 50%, #ffffff 50%, #ffffff 99%);
-  background-image: -moz-linear-gradient(left, #ffcc00 0%, #ffcc00 50%, #ffffff 50%, #ffffff 99%);
-  background-image: -o-linear-gradient(left, #ffcc00 0%, #ffcc00 50%, #ffffff 50%, #ffffff 99%);
-  background-image: linear-gradient(left, #ffcc00 0%, #ffcc00 50%, #ffffff 50%, #ffffff 99%);
-}
+/*
+.tag { display:inline-block; padding:.15em 1em; font-size:80%; border:1px solid $black; @include roundedCorners; text-transform:lowercase;
+	
+	&.black {color:$white; background:#000;}
+	&.black.white {
+		color:$orange;
+		background-color: #000000; // Old browsers
+		@include filter-gradient(#000000, #ffffff, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #000000 0%,#000000 50%,#ffffff 50%,#ffffff 100%));
+	}
+	&.blue {color:$white; background-color:#0033CC;}
+	&.blue.white {
+		color:$black; 
+		background-color: #316cf7; // Old browsers
+		@include filter-gradient(#316cf7, #ffffff, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #316cf7 0%,#2989d8 50%,#207cca 50%,#ffffff 50%,#ffffff 100%));
+	}
+	&.dk.blue.white {
+		color:$orange;
+		background-color: #1b2f89; // Old browsers
+		@include filter-gradient(#1b2f89, #ffffff, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #1b2f89 0%,#1b2f89 50%,#ffffff 50%,#ffffff 100%));
 
+	}
+	&.gold {background-color:#CC9900;}
+	&.lime.green {background-color:#00FF00;}
+	&.lime.green.black {
+		color:$white;
+		background-color: #00ff00; // Old browsers
+		@include filter-gradient(#00ff00, #000000, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #00ff00 0%,#00ff00 50%,#000000 50%,#000000 99%));
+	}
+	&.lt.blue {color:$black; background-color:#66CCFF;}
+	&.red {color:$white; background-color:#CC0000;}
+	&.red.white {
+		color:$black;
+		background-color: #cc0000; // Old browsers
+		@include filter-gradient(#cc0000, #ffffff, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #cc0000 0%,#cc0000 50%,#ffffff 50%,#ffffff 99%));
+	}
+	&.red.yellow {
+		color:$black;
+		background-color: #cc0000; // Old browsers
+		@include filter-gradient(#cc0000, #ffcc00, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #cc0000 0%,#cc0000 50%,#ffcc00 50%,#ffcc00 100%));
+	}
+	&.orange {background-color:#FF6600;}
+	&.purple {color:$white; background-color:#6600CC;}
+	&.silver {background-color:#D6D6D6;}
+	&.white {background-color:$white;}
+	&.white.orange {
+		background-color: #ffffff; // Old browsers
+		@include filter-gradient(#ffffff, #ff6600, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #ffffff 0%,#ffffff 50%,#ff6600 50%,#ff6600 99%));
+	}
+	&.yellow {background-color:#FFCC00;}
+	&.yellow.green {background-color:#CCFF33;}
+	&.yellow.white {
+		background-color: #ffcc00; // Old browsers
+		@include filter-gradient(#ffcc00, #ffffff, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #ffcc00 0%,#ffcc00 50%,#ffffff 50%,#ffffff 99%));
+	}
+}
+*/
 /* -- Variations Comparison -- */
-/* line 196, sass/interior.scss */
+/* line 202, sass/interior.scss */
 #varCompare table tr td:first-of-type {
   min-width: 140px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-/* line 197, sass/interior.scss */
+/* line 203, sass/interior.scss */
 #varCompare table tr td span {
   color: #919191;
 }
 
 /* -- Search Releases ----- */
-/* line 203, sass/interior.scss */
+/* line 209, sass/interior.scss */
 #querybox {
   margin-bottom: 2em;
 }
-/* line 204, sass/interior.scss */
+/* line 210, sass/interior.scss */
 #querybox p {
   margin-bottom: 0;
 }

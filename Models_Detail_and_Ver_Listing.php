@@ -27,60 +27,73 @@ $Username=$_SESSION['Username'];
 				echo "<h3>Error - No matching results found</h3>"; //mysql_error();
 				exit;
 			}
-			$row2=mysql_fetch_array($result2);
-			echo "<h3>".$model_for_detail."  ".$row2['MasterModelName']."</h3>";
+			$row2 = mysql_fetch_array($result2);
+			
+			echo "<ul class='large-block-grid-3'>";
+			echo "<li class='carGrid'>";
+			
 			$picture= IMAGE_URL . $row2["UMID"].".jpg";
 			$picture_loc=IMAGE_PATH. $row2["UMID"].".jpg";
 			if (file_exists($picture_loc)) {
 				//echo "picture exists";
-				echo "<img class='own' src=".$picture." width=\"240\">";
+				echo "<img class='own' src=" . $picture . " />";
 			} else {
 				//echo "cant find picture";
 				//echo DEFAULT_IMAGE;
-				echo "<img class='own-poor' src=".DEFAULT_IMAGE." width=\"240\">";
+				echo "<img class='own-poor' src=" . DEFAULT_IMAGE . " />";
 			}	
-			echo "<br />";
+			
 			$PhotoRefCd= $row2["ModelPhotoRef"];
 			if ($PhotoRefCd) {
 				$query3= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 				$result3= mysql_query($query3);
 				$row3 =mysql_fetch_array($result3);
-				echo "<p id=\"photoref\">Photo by: ". $row3["RefName"]."</p>";
+				echo "<p class=\"photoref\">Photo by: ". $row3["RefName"]."</p>";
 			} else {
-				echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
+				echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 			}
 
-			echo "<p>First rel in ".$row2['YrFirstProduced']."</p>";
+			echo "<h6>".$model_for_detail."  ".$row2['MasterModelName']."</h6>";
+			echo "<p><strong>First release in:</strong> ".$row2['YrFirstProduced']."</p>";
 			if ($row2["VehicleType2"]) {	
-				echo "<p>Vehicles type(s): ".$row2["VehicleType"].",  ".$row2["VehicleType2"]."</p>";
+				echo "<p><strong>Vehicles type(s):</strong> ".$row2["VehicleType"].",  ".$row2["VehicleType2"]."</p>";
 			} else {
-				echo "<p>Vehicles type(s): ".$row2["VehicleType"]."</p>";				
+				echo "<p><strong>Vehicles type(s):</strong> ".$row2["VehicleType"]."</p>";				
 			}
 			if ($row2["ModelScale"]) {	
-				echo "<p>Scale:  ".$row2['ModelScale']."   Base Casting Dt: ".$row2['BaseCastYr']."</p>";
+				echo "<p><strong>Scale:</strong> ".$row2['ModelScale']."   Base Casting Dt: ".$row2['BaseCastYr']."</p>";
 			} else {
-				echo "<p>Scale: None shown ".$row2['ModelScale']."   Base Casting Dt: ".$row2['BaseCastYr']."</p>";				
+				echo "<p><strong>Scale: None shown</strong> ".$row2['ModelScale']."   Base Casting Dt: ".$row2['BaseCastYr']."</p>";				
 			}			
-			echo "<p>Vehicle Make: ".$row2['MakeofModel']."   Country of Make: ".$row2['CountryofMake']."</p>";
+			echo "<p><strong>Vehicle Make:</strong> ".$row2['MakeofModel']."   Country of Make: ".$row2['CountryofMake']."</p>";
 			if ($row2["ModelComment"]) {	
-				echo "<p>Comments: ".$row2["ModelComment"]."</p>";
+				echo "<p><strong>Comments:</strong> ".$row2["ModelComment"]."</p>";
 			}
-			echo "<br></>";
+			
 			//check if any microvar listings
 			$query4=("SELECT * FROM Matchbox_Model_Microvariations WHERE Matchbox_Model_Microvariations.UMID='$model_for_detail'");
 			$result4 = mysql_query($query4);
 			$rowcount4=mysql_num_rows($result4);
+			
+			echo "</li>";
+			echo "</ul>";
+			
 		?>
 	
-		<?php
-			if ($rowcount4!=0) {
-				
-				echo "<a href=\"All_Variations.php?model=$model_for_detail\" class=\"button dark\">See All Variations</a>";
-				echo "<a href=\"Display_Microvariations.php?model=$model_for_detail\" class=\"button dark\">See Microvariationss</a>";		
-			} else {
-				echo "<a href=\"All_Variations.php?model=$model_for_detail\" class=\"button dark\">See All Variations</a>";
-			}
-		?>
+		<div class="row actionButtons">			
+			<?php if ($rowcount4 != 0) { ?>
+				<div class="large-6 columns">	
+					<a href="All_Variations.php?model=$model_for_detail" class="button dark">See All Variations</a>
+				</div>
+				<div class="large-6 columns">
+					<a href="Display_Microvariations.php?model=$model_for_detail" class="button dark">See Microvariations</a>
+				</div>
+			<?php } else { ?>
+				<div class="large-6 columns end">
+					<a href="All_Variations.php?model=$model_for_detail\" class="button dark">See All Variations</a>
+				</div>
+			<?php } ?>
+		</div>
 	</div>
 </div>
 <div class="row">
@@ -105,10 +118,10 @@ $Username=$_SESSION['Username'];
 				if(!$result) {
 					echo "No matching results found"; //mysql_error();
 					exit;
-				}					
-				for ($i=1; $i<=$rows; $i++)
-					{
-					echo "<div class=\"car-block\">";
+				}			
+				echo "<ul class='large-block-grid-3'>";		
+				for ($i=1; $i<=$rows; $i++) {
+					echo "<li class='carGrid'>";
 						//make image clickable and send proper umid to model_detail pa
 						$row=mysql_fetch_array($result);
 						$picture= IMAGE_URL . $row["VerID"]."_1.jpg";
@@ -165,9 +178,9 @@ $Username=$_SESSION['Username'];
 							$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 							$result2= mysql_query($query2);
 							$row2 =mysql_fetch_array($result2);
-							echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
+							echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
 						} else {
-							echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
+							echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 						}
 						echo "<p>".$row["VerName"]."</p>";
 						echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
@@ -188,8 +201,9 @@ $Username=$_SESSION['Username'];
 						if ($row["CodeLvl"]=="2") {
 							echo " C2 Manuf.: ".$row["SecManuf"]."</p>";
 						}
-					echo "</div>";
-					}	
+					echo "</li>";
+					}
+				echo "</ul>";
 			} else {
 				//start by showing code1
 				$query= ("SELECT * FROM Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='1' ORDER BY VerYrFirstRel,VerID ASC");
@@ -203,84 +217,89 @@ $Username=$_SESSION['Username'];
 				if(!$result) {
 					echo "No matching results found"; //mysql_error();
 					exit;
-					}					
+				}					
+				echo "<ul class='large-block-grid-3'>";
 				for ($i=1; $i<=$rows; $i++) {
-					echo "<div class=\"car-block\">";
+					echo "<li class='carGrid'>";
+					
 					$row=mysql_fetch_array($result);
 					$picture= IMAGE_URL . $row["VerID"]."_1.jpg";
 					$picture_loc=IMAGE_PATH. $row["VerID"]."_1.jpg";
 		
 					//make image clickable and send proper umid to model_detail page
-					$Version_to_detail=$row["VerID"];
-					$url= "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
+					$Version_to_detail = $row["VerID"];
+					$url = "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
 					
 					if ($Sec_Lvl >= "2") {	
 						//if have account, have collection?
 						$query_coll=("SELECT * FROM Matchbox_Collection WHERE Username='$Username'");
 						$result_coll = mysql_query($query_coll);
-						if ($result_coll) {
-								
+						
+						if ($result_coll) {								
 							//if so, check if have in collection
 							$query_own=("SELECT * FROM Matchbox_Collection WHERE Username='$Username' AND VerID='$Version_to_detail'");
 							$result_own = mysql_query($query_own);
 							$rows_own= mysql_num_rows($result_own);
-							//$rows_own= mysql_num_rows($result_own);
+							
 							//check if pic exists and apply colors
 							if (file_exists($picture_loc)) {									
-								if ($rows_own !="0") {
-									
-									echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
+								if ($rows_own !="0") {									
+									echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." /></a>";
 								} else {
-									echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." width=\"240\"></a>";
+									echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." /></a>";
 								}	
 							} else {
 								if ($rows_own !="0") {
-									echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+									echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." /></a>";
 								} else {
-									echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+									echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." /></a>";
 								}
 							}	
-						} else {
-								
+						} else {								
 							if (file_exists($picture_loc)) {									
-								echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
+								echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
 							} else {
-								echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
+								echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
 							}	
 						}	
 					} else {
 						if (file_exists($picture_loc)) {									
-							echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
+							echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
 						} else {
-							echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
+							echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
 						}
 					}	
-					echo "<br />";
-					$PhotoRefCd= $row["VerPhoto1Ref"];
+					
+					$PhotoRefCd = $row["VerPhoto1Ref"];
 					if ($PhotoRefCd) {
 						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
-						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
+						echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
 					} else {
-						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
+						echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 					}
-					echo "<p>".$row["VerName"]."</p>";
-					echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
+					echo "<h6>" . $row["VerName"] . "</h6>";
+					echo "<p><strong>Version ID:</strong> ". $row["VerID"] . "</p>";
+					echo "<p><strong>MAN#:</strong> ". $row["FAB_No"]."</p>";
 					
 					//getting body color; then turning body color into a lowercase string (for uniformity)
 					$bodyColorLowercase = $row["BodyColor"];
 					$bodyColorLowercase = strtolower($bodyColorLowercase);
 					
-					echo "<p class='tag " . $bodyColorLowercase . "'>" . $bodyColorLowercase . "</p>";
-					echo "<p>";
-					if (!empty($row["TempaDesign"])) {
-						echo $row["TempaDesign"].", ";
-					}
-					echo $row["TempaText"]."</p>";	
-					echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
+					echo "<div class='carDetails'>";
+						echo "<p class='tag " . $bodyColorLowercase . "'><strong>Body Color:</strong> " . $bodyColorLowercase . "</p>";
+						echo "<p>";
+						if (!empty($row["TempaDesign"])) {
+							echo $row["TempaDesign"].", ";
+						}
+						echo $row["TempaText"]."</p>";	
+						echo "<p><strong>First Release Date:</strong> ".$row["VerYrFirstRel"]."</p>";
 					echo "</div>";
+					echo "</li>";
 				}
+				echo "</ul>";
+				
 				//then check if to show code 2 also. if so sep srch for code 2
 				if (($Sec_Lvl >= "2") AND ($Code2_Pref == "1")) {
 					$query = ("SELECT * FROM Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='2/3' ORDER BY VerYrFirstRel,VerID ASC");
@@ -294,9 +313,11 @@ $Username=$_SESSION['Username'];
 					if(!$result) {
 						echo "No matching results found"; //mysql_error();
 						exit;
-					}					
+					}
+					echo "<ul class='large-block-grid-3'>";		
 					for ($i=1; $i<=$rows; $i++) {
-						echo "<div class=\"car-block\">";
+						echo "<li class='carGrid'>";
+						
 						$row = mysql_fetch_array($result);
 						$picture = IMAGE_URL . $row["VerID"] . "_1.jpg";
 						$picture_loc = IMAGE_PATH . $row["VerID"] . "_1.jpg";
@@ -308,6 +329,7 @@ $Username=$_SESSION['Username'];
 						//have collection?
 						$query_coll = ("SELECT * FROM Matchbox_Collection WHERE Username='$Username'");
 						$result_coll = mysql_query($query_coll);
+						
 						if ($result_coll) {
 							//if so, check if have in collection
 							$query_own = ("SELECT * FROM Matchbox_Collection WHERE Username='$Username' AND VerID='$Version_to_detail'");
@@ -318,48 +340,56 @@ $Username=$_SESSION['Username'];
 							
 							if (file_exists($picture_loc)) {									
 								if ($rows_own !="0") {
-									echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
+									echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." /></a>";
 								} else {
-									echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." width=\"240\"></a>";
+									echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." /></a>";
 								}	
 							} else {
 								if ($rows_own !="0") {
-									echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+									echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." /></a>";
 								} else {
-									echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+									echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." /></a>";
 								}
 							}	
 						}				
-							echo "<br />";
-							$PhotoRefCd = $row["VerPhoto1Ref"];
-							if ($PhotoRefCd) {
-								$query2 = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
-								$result2 = mysql_query($query2);
-								$row2 = mysql_fetch_array($result2);
-								echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
-							} else {
-								echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
-							}
-							echo "<p>".$row["VerName"]."</p>";
-							echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
+							
+						$PhotoRefCd = $row["VerPhoto1Ref"];
+						if ($PhotoRefCd) {
+							$query2 = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+							$result2 = mysql_query($query2);
+							$row2 = mysql_fetch_array($result2);
+							echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
+						} else {
+							echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
+						}
+						
+						echo "<h6>".$row["VerName"]."</h6>";
+						echo "<p><strong>Version ID:</strong> " . $row["VerID"] . "</p>";
+						echo "<p><strong>MAN#:</strong> " . $row["FAB_No"] . "</p>";
 							
 							//getting body color; then turning body color into a lowercase string (for uniformity)
 							$bodyColorLowercase = $row["BodyColor"];
 							$bodyColorLowercase = strtolower($bodyColorLowercase);
 							
-							echo "<p class='tag " . $bodyColorLowercase . "'>" . $bodyColorLowercase . "</p>";
+						echo "<div class='carDetails'>";
+							echo "<p class='tag " . $bodyColorLowercase . "'><strong>Body Color</strong>: " . $bodyColorLowercase . "</p>";
 							echo "<p>";
 							if (!empty($row["TempaDesign"])) {
 								echo $row["TempaDesign"].", ";
 								}
 							echo $row["TempaText"]."</p>";	
-							echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
-							echo "<p>Code level: ".$row["CodeLvl"].", C2 Manuf.: ".$row["SecManuf"]."</p>";
+							echo "<p><strong>First Release Date:</strong> ".$row["VerYrFirstRel"]."</p>";
+							echo "<p><strong>Code level:</strong> " . $row["CodeLvl"] . "</p>";
+							echo "<p><strong>C2 Manufacturer:</strong> " . $row["SecManuf"] . "</p>";
 						echo "</div>";
-						}
-				}		
+							
+						echo "</li>";		
+					}
+					echo "</ul>";
+				}	
 			}
-				//if chose no code2 just drop down without doing code 2 search
+			
+			//if chose no code2 just drop down without doing code 2 search
 			// display releases for this umid
 			$rel_result=0;
 			$rel_rows=0;
@@ -368,45 +398,53 @@ $Username=$_SESSION['Username'];
 			$rel_result = mysql_query($rel_query);
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {
-				echo "<br></><h2>1-75 series</h2>";
+				echo "<h2>1-75 series</h2>";
+				echo "<ul class='large-block-grid-3'>";
+				
 				for ($i=1; $i<=$rel_rows; $i++) {
-					echo "<div class=\"car-block\">";
-					$rel_row=mysql_fetch_array($rel_result);
-					$curr_yr=$rel_row["RelYr"];
+					
+					$rel_row = mysql_fetch_array($rel_result);
+					$curr_yr = $rel_row["RelYr"];
 	
 					if ($i==1) {
-						$last_yr=$curr_yr;
-						echo "<h3>".$rel_row["RelYr"]."</h3>";
+						$last_yr = $curr_yr;
+						echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
 					}
-					//echo $curr_yr."...".$last_yr;
-					if ($curr_yr!=$last_yr) {
-						echo "<h3>".$rel_row["RelYr"]."</h3>";
+					if ($curr_yr != $last_yr) {
+						echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
 					}
+					
+					echo "<li class='carGrid'>";
+					
 					//print info
-					$picture= IMAGE_URL . $rel_row["RelID"]."_1.jpg";
-					$picture_loc=IMAGE_PATH. $rel_row["RelID"]."_1.jpg";
-					$url= "Release_Detail.php?model=".$rel_row["RelID"];
+					$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
+					$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
+					$url = "Release_Detail.php?model=" . $rel_row["RelID"];
+					
 					if (file_exists($picture_loc)) {
-						echo "<a href=\"".$url."\">"."<img src=".$picture." height=\"400\"></a>";
+						echo "<a href='" . $url . "'><img src=" . $picture . " /></a>";
 					} else {	
-						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
+						echo "<a href='" . $url . "'><img src=" . DEFAULT_IMAGE . " /></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
-						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
-						$result2= mysql_query($query2);
-						$row2 =mysql_fetch_array($result2);
-						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
+						$query2 = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+						$result2 = mysql_query($query2);
+						$row2 = mysql_fetch_array($result2);
+						echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
 					} else {
-						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
+						echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 					}
-					echo "<p>Country:  ".$rel_row["CountryOfSale"]."</p>";
-					echo "<p>Rel ID: ". $rel_row["RelID"]."</p>";
-					echo "<p>Series ID: ".$rel_row["SeriesID"]."</p>";
-					echo "<p>Name on Pkg: ".$rel_row["MdlNameOnPkg"]."</p>";	
-					$last_yr=$curr_yr;
-					echo "</div>";
+					echo "<p><strong>Country:</strong> ".$rel_row["CountryOfSale"]."</p>";
+					echo "<p><strong>Rel ID:</strong> ". $rel_row["RelID"]."</p>";
+					echo "<p><strong>Series ID:</strong> ".$rel_row["SeriesID"]."</p>";
+					echo "<p><strong>Name on Pakage:</strong> ".$rel_row["MdlNameOnPkg"]."</p>";	
+					$last_yr = $curr_yr;
+					
+					echo "</li>";
 				}
 			}
+			echo "</ul>";
+			
 			//Search for Superfast
 			$rel_query=("SELECT * FROM Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND Series='Superfast' ORDER BY RelYr, CountryofSale, SeriesID, RelID");
 			$rel_result = mysql_query($rel_query);
@@ -439,9 +477,9 @@ $Username=$_SESSION['Username'];
 						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
-						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
+						echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
 					} else {
-						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
+						echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 					}
 					echo "<p>Country:  ".$rel_row["CountryOfSale"]."</p>";
 					echo "<p>Rel ID: ". $rel_row["RelID"]."</p>";
@@ -484,9 +522,9 @@ $Username=$_SESSION['Username'];
 						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
-						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
+						echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
 					} else {
-						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
+						echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 					}
 					echo "<p>Country:  ".$rel_row["CountryOfSale"]."</p>";
 					echo "<p>Rel ID: ". $rel_row["RelID"]."</p>";
@@ -502,20 +540,25 @@ $Username=$_SESSION['Username'];
 			$rel_result = mysql_query($rel_query);
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {	
-				echo "<br></><h2>OTHER CODE 1 RELEASES</h2>";
+				echo "<h2>OTHER CODE 1 RELEASES</h2>";
+				echo "<ul class='large-block-grid-3'>";
+				
 				for ($i=1; $i<=$rel_rows; $i++) {
-					echo "<div class=\"car-block\">";
-					$rel_row=mysql_fetch_array($rel_result);
-					$curr_yr=$rel_row["RelYr"];
+					
+					$rel_row = mysql_fetch_array($rel_result);
+					$curr_yr = $rel_row["RelYr"];
 	
 					if ($i==1) {
-						$last_yr=$curr_yr;
-						echo "<h3>".$rel_row["RelYr"]."</h3>";
+						$last_yr = $curr_yr;
+						echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
 					}
-					//echo $curr_yr."...".$last_yr;
-					if ($curr_yr!=$last_yr) {
-						echo "<h3>".$rel_row["RelYr"]."</h3>";
+					if ($curr_yr != $last_yr) {
+						echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
 					}
+					
+					
+					echo "<li class='carGrid'>";
+					
 					//print info
 					$picture= IMAGE_URL . $rel_row["RelID"]."_1.jpg";
 					$picture_loc=IMAGE_PATH. $rel_row["RelID"]."_1.jpg";
@@ -529,17 +572,20 @@ $Username=$_SESSION['Username'];
 						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
-						echo "<p id=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
+						echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
 					} else {
-						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
+						echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 					}
-					echo "<p>Country:  ".$rel_row["CountryOfSale"]."</p>";
-					echo "<p>Rel ID: ". $rel_row["RelID"]."</p>";
-					echo "<p>Series ID: ".$rel_row["SeriesID"]."</p>";
-					echo "<p>Name on Pkg: ".$rel_row["MdlNameOnPkg"]."</p>";	
-					$last_yr=$curr_yr;
-					echo "</div>";
+					echo "<p><strong>Country:</strong> ".$rel_row["CountryOfSale"]."</p>";
+					echo "<p><strong>Rel ID:</strong> ". $rel_row["RelID"]."</p>";
+					echo "<p><strong>Series ID:</strong> ".$rel_row["SeriesID"]."</p>";
+					echo "<p><strong>Name on Package:</strong> ".$rel_row["MdlNameOnPkg"]."</p>";	
+					$last_yr = $curr_yr;
+					
+					echo "</li>";
 				}
+				
+				echo "</ul>";
 			}
 			
 		?>			
