@@ -15,3 +15,9 @@ $orange : #d45132;
 $teal : #087b80;
 $brown : #503f2d;
 $babyBlue : #d6eae9;
+
+@mixin roundedCorners {
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}

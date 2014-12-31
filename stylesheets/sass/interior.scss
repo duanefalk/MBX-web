@@ -1,4 +1,5 @@
 @import "settings";
+@import "compass";
 
 /* --
 Styles, by order
@@ -129,6 +130,65 @@ Variation Comparison
 #photoref {
 	margin-bottom:.5em; font-size:x-small; font-style:italic; line-height:100%;
 }
+
+
+.tag { display:inline-block; padding:.15em 1em; font-size:80%; border:1px solid $black; @include roundedCorners; text-transform:lowercase;
+	
+	&.black {color:$white; background:#000;}
+	&.blue {color:$white; background-color:#0033CC;}
+	&.blue.white {
+		color:$black; 
+		background-color: #316cf7; // Old browsers
+		@include filter-gradient(#316cf7, #ffffff, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #316cf7 0%,#2989d8 50%,#207cca 50%,#ffffff 50%,#ffffff 100%));
+	}
+	&.dk.blue.white {
+		color:$orange;
+		background-color: #1b2f89; // Old browsers
+		@include filter-gradient(#1b2f89, #ffffff, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #1b2f89 0%,#1b2f89 50%,#ffffff 50%,#ffffff 100%));
+
+	}
+	&.gold {background-color:#CC9900;}
+	&.lime.green {background-color:#00FF00;}
+	&.lime.green.black {
+		color:$white;
+		background-color: #00ff00; // Old browsers
+		@include filter-gradient(#00ff00, #000000, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #00ff00 0%,#00ff00 50%,#000000 50%,#000000 99%));
+	}
+	&.lt.blue {background-color:#66CCFF;}
+	&.red {color:$white; background-color:#CC0000;}
+	&.red.white {
+		color:$black;
+		background-color: #cc0000; // Old browsers
+		@include filter-gradient(#cc0000, #ffffff, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #cc0000 0%,#cc0000 50%,#ffffff 50%,#ffffff 99%));
+	}
+	&.red.yellow {
+		color:$black;
+		background-color: #cc0000; // Old browsers
+		@include filter-gradient(#cc0000, #ffcc00, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #cc0000 0%,#cc0000 50%,#ffcc00 50%,#ffcc00 100%));
+	}
+	&.orange {background-color:#FF6600;}
+	&.purple {color:$white; background-color:#6600CC;}
+	&.silver {background-color:#D6D6D6;}
+	&.white {background-color:$white;}
+	&.white.orange {
+		background-color: #ffffff; // Old browsers
+		@include filter-gradient(#ffffff, #ff6600, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #ffffff 0%,#ffffff 50%,#ff6600 50%,#ff6600 99%));
+	}
+	&.yellow {background-color:#FFCC00;}
+	&.yellow.green {background-color:#CCFF33;}
+	&.yellow.white {
+		background-color: #ffcc00; // Old browsers
+		@include filter-gradient(#ffcc00, #ffffff, horizontal); // IE6-9
+		@include background-image(linear-gradient(left,  #ffcc00 0%,#ffcc00 50%,#ffffff 50%,#ffffff 99%));
+	}
+}
+
 
 /* -- Variations Comparison -- */
 #varCompare {

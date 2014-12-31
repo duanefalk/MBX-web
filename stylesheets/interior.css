@@ -15,102 +15,102 @@ Variation Comparison
 
 -- */
 /* -- Main -- */
-/* line 18, sass/interior.scss */
+/* line 19, sass/interior.scss */
 #main {
   padding-top: 10em;
 }
 @media only screen and (max-width: 480px) {
-  /* line 18, sass/interior.scss */
+  /* line 19, sass/interior.scss */
   #main {
     padding-top: 2em;
     font-size: 90%;
   }
 }
-/* line 21, sass/interior.scss */
+/* line 22, sass/interior.scss */
 #main h2:first-of-type {
   margin-bottom: 1em;
 }
 
-/* line 24, sass/interior.scss */
+/* line 25, sass/interior.scss */
 .home #main {
   padding-top: 0;
 }
 
 /* -- Sidebar -- */
-/* line 28, sass/interior.scss */
+/* line 29, sass/interior.scss */
 .sidebar {
   margin-top: 3em;
   font-size: 120%;
 }
-/* line 32, sass/interior.scss */
+/* line 33, sass/interior.scss */
 .sidebar a {
   display: block;
   margin: .5em 0;
 }
 
 /* -- Home --------------- */
-/* line 38, sass/interior.scss */
+/* line 39, sass/interior.scss */
 #header-home {
   margin-bottom: 2em;
   background: #d45132 url("../images/banners/chalkboard.png") center center no-repeat;
 }
-/* line 40, sass/interior.scss */
+/* line 41, sass/interior.scss */
 #header-home * {
   color: #f6f3dd;
 }
 @media only screen and (max-width: 480px) {
-  /* line 42, sass/interior.scss */
+  /* line 43, sass/interior.scss */
   #header-home #logo {
     text-align: center;
   }
 }
-/* line 46, sass/interior.scss */
+/* line 47, sass/interior.scss */
 #header-home #banner {
   margin-top: 2em;
 }
-/* line 48, sass/interior.scss */
+/* line 49, sass/interior.scss */
 #header-home #banner #bannerText {
   margin-top: 2em;
 }
 @media only screen and (max-width: 1024px) {
-  /* line 51, sass/interior.scss */
+  /* line 52, sass/interior.scss */
   #header-home #banner #bannerImage {
     text-align: center;
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 54, sass/interior.scss */
+  /* line 55, sass/interior.scss */
   #header-home #banner #bannerImage img {
     max-width: 60%;
     margin: 0 auto;
   }
 }
 
-/* line 59, sass/interior.scss */
+/* line 60, sass/interior.scss */
 #quick_search {
   padding: 1.5em;
   color: white;
   background: #087b80;
   border-radius: 1em;
 }
-/* line 62, sass/interior.scss */
+/* line 63, sass/interior.scss */
 #quick_search h3 {
   color: white;
 }
-/* line 63, sass/interior.scss */
+/* line 64, sass/interior.scss */
 #quick_search form {
   margin-bottom: 0;
 }
-/* line 66, sass/interior.scss */
+/* line 67, sass/interior.scss */
 #quick_search form label {
   color: white;
 }
-/* line 67, sass/interior.scss */
+/* line 68, sass/interior.scss */
 #quick_search form input {
   display: inline-block;
   margin-bottom: 0;
 }
-/* line 68, sass/interior.scss */
+/* line 69, sass/interior.scss */
 #quick_search form input[type=text] {
   width: 72%;
   margin-right: 2%;
@@ -118,35 +118,35 @@ Variation Comparison
   box-shadow: 0;
 }
 @media only screen and (max-width: 480px) {
-  /* line 68, sass/interior.scss */
+  /* line 69, sass/interior.scss */
   #quick_search form input[type=text] {
     width: 100%;
     margin: 0 auto 1em;
   }
 }
-/* line 71, sass/interior.scss */
+/* line 72, sass/interior.scss */
 #quick_search form input[type=submit] {
   width: 25%;
   font-size: 90%;
 }
 @media only screen and (max-width: 480px) {
-  /* line 71, sass/interior.scss */
+  /* line 72, sass/interior.scss */
   #quick_search form input[type=submit] {
     width: 100%;
     margin: 0 auto;
   }
 }
-/* line 74, sass/interior.scss */
+/* line 75, sass/interior.scss */
 #quick_search form input[type=submit]:hover {
   background: #d45132;
 }
 
 /* -- Login Screen --------------- */
-/* line 81, sass/interior.scss */
+/* line 82, sass/interior.scss */
 #login {
   margin: 3em auto;
 }
-/* line 84, sass/interior.scss */
+/* line 85, sass/interior.scss */
 #login form input[type=submit] {
   cursor: pointer;
   margin: 0;
@@ -160,13 +160,13 @@ Variation Comparison
   border-radius: 5px;
   box-shadow: 0 none;
 }
-/* line 90, sass/interior.scss */
+/* line 91, sass/interior.scss */
 #login form input[type=submit]:hover {
   background: #d45132;
 }
 
 /* -- About ----------------------- */
-/* line 97, sass/interior.scss */
+/* line 98, sass/interior.scss */
 .section {
   margin: 1em auto 3em;
   padding-bottom: 2em;
@@ -174,13 +174,13 @@ Variation Comparison
 }
 
 /* -- Add Menu -- */
-/* line 102, sass/interior.scss */
+/* line 103, sass/interior.scss */
 #addMenu a.button {
   display: block;
 }
 
 /* -- Models Detail --------------- */
-/* line 108, sass/interior.scss */
+/* line 109, sass/interior.scss */
 .car-block {
   width: 240px;
   display: inline-block;
@@ -188,38 +188,38 @@ Variation Comparison
   margin: 1em 1.2em;
 }
 
-/* line 114, sass/interior.scss */
+/* line 115, sass/interior.scss */
 .car-block img {
   max-width: 100%;
   margin-bottom: .5em;
 }
 
-/* line 119, sass/interior.scss */
+/* line 120, sass/interior.scss */
 .car-block img.own {
   border-bottom: 10px solid #2E8B57;
 }
 
 /*green*/
-/* line 120, sass/interior.scss */
+/* line 121, sass/interior.scss */
 .car-block img.own-not {
   border-bottom: 10px solid #de3939;
 }
 
 /*red*/
-/* line 121, sass/interior.scss */
+/* line 122, sass/interior.scss */
 .car-block img.own-poor {
   border-bottom: 10px solid #ffde42;
 }
 
 /*yellow*/
-/* line 123, sass/interior.scss */
+/* line 124, sass/interior.scss */
 .car-block p {
   max-width: 95%;
   margin: 0 0 .4em;
   line-height: 120%;
 }
 
-/* line 129, sass/interior.scss */
+/* line 130, sass/interior.scss */
 #photoref {
   margin-bottom: .5em;
   font-size: x-small;
@@ -227,25 +227,171 @@ Variation Comparison
   line-height: 100%;
 }
 
+/* line 135, sass/interior.scss */
+.tag {
+  display: inline-block;
+  padding: .15em 1em;
+  font-size: 80%;
+  border: 1px solid #444444;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: lowercase;
+}
+/* line 137, sass/interior.scss */
+.tag.black {
+  color: white;
+  background: #000;
+}
+/* line 138, sass/interior.scss */
+.tag.blue {
+  color: white;
+  background-color: #0033CC;
+}
+/* line 139, sass/interior.scss */
+.tag.blue.white {
+  color: #444444;
+  background-color: #316cf7;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF316CF7', endColorstr='#FFFFFFFF');
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #316cf7), color-stop(50%, #2989d8), color-stop(50%, #207cca), color-stop(50%, #ffffff), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(left, #316cf7 0%, #2989d8 50%, #207cca 50%, #ffffff 50%, #ffffff 100%);
+  background-image: -moz-linear-gradient(left, #316cf7 0%, #2989d8 50%, #207cca 50%, #ffffff 50%, #ffffff 100%);
+  background-image: -o-linear-gradient(left, #316cf7 0%, #2989d8 50%, #207cca 50%, #ffffff 50%, #ffffff 100%);
+  background-image: linear-gradient(left, #316cf7 0%, #2989d8 50%, #207cca 50%, #ffffff 50%, #ffffff 100%);
+}
+/* line 145, sass/interior.scss */
+.tag.dk.blue.white {
+  color: #d45132;
+  background-color: #1b2f89;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF1B2F89', endColorstr='#FFFFFFFF');
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #1b2f89), color-stop(50%, #1b2f89), color-stop(50%, #ffffff), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(left, #1b2f89 0%, #1b2f89 50%, #ffffff 50%, #ffffff 100%);
+  background-image: -moz-linear-gradient(left, #1b2f89 0%, #1b2f89 50%, #ffffff 50%, #ffffff 100%);
+  background-image: -o-linear-gradient(left, #1b2f89 0%, #1b2f89 50%, #ffffff 50%, #ffffff 100%);
+  background-image: linear-gradient(left, #1b2f89 0%, #1b2f89 50%, #ffffff 50%, #ffffff 100%);
+}
+/* line 152, sass/interior.scss */
+.tag.gold {
+  background-color: #CC9900;
+}
+/* line 153, sass/interior.scss */
+.tag.lime.green {
+  background-color: #00FF00;
+}
+/* line 154, sass/interior.scss */
+.tag.lime.green.black {
+  color: white;
+  background-color: #00ff00;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF00FF00', endColorstr='#FF000000');
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #00ff00), color-stop(50%, #00ff00), color-stop(50%, #000000), color-stop(99%, #000000));
+  background-image: -webkit-linear-gradient(left, #00ff00 0%, #00ff00 50%, #000000 50%, #000000 99%);
+  background-image: -moz-linear-gradient(left, #00ff00 0%, #00ff00 50%, #000000 50%, #000000 99%);
+  background-image: -o-linear-gradient(left, #00ff00 0%, #00ff00 50%, #000000 50%, #000000 99%);
+  background-image: linear-gradient(left, #00ff00 0%, #00ff00 50%, #000000 50%, #000000 99%);
+}
+/* line 160, sass/interior.scss */
+.tag.lt.blue {
+  background-color: #66CCFF;
+}
+/* line 161, sass/interior.scss */
+.tag.red {
+  color: white;
+  background-color: #CC0000;
+}
+/* line 162, sass/interior.scss */
+.tag.red.white {
+  color: #444444;
+  background-color: #cc0000;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFCC0000', endColorstr='#FFFFFFFF');
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #cc0000), color-stop(50%, #cc0000), color-stop(50%, #ffffff), color-stop(99%, #ffffff));
+  background-image: -webkit-linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffffff 50%, #ffffff 99%);
+  background-image: -moz-linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffffff 50%, #ffffff 99%);
+  background-image: -o-linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffffff 50%, #ffffff 99%);
+  background-image: linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffffff 50%, #ffffff 99%);
+}
+/* line 168, sass/interior.scss */
+.tag.red.yellow {
+  color: #444444;
+  background-color: #cc0000;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFCC0000', endColorstr='#FFFFCC00');
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #cc0000), color-stop(50%, #cc0000), color-stop(50%, #ffcc00), color-stop(100%, #ffcc00));
+  background-image: -webkit-linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffcc00 50%, #ffcc00 100%);
+  background-image: -moz-linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffcc00 50%, #ffcc00 100%);
+  background-image: -o-linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffcc00 50%, #ffcc00 100%);
+  background-image: linear-gradient(left, #cc0000 0%, #cc0000 50%, #ffcc00 50%, #ffcc00 100%);
+}
+/* line 174, sass/interior.scss */
+.tag.orange {
+  background-color: #FF6600;
+}
+/* line 175, sass/interior.scss */
+.tag.purple {
+  color: white;
+  background-color: #6600CC;
+}
+/* line 176, sass/interior.scss */
+.tag.silver {
+  background-color: #D6D6D6;
+}
+/* line 177, sass/interior.scss */
+.tag.white {
+  background-color: white;
+}
+/* line 178, sass/interior.scss */
+.tag.white.orange {
+  background-color: #ffffff;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFFF6600');
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(50%, #ff6600), color-stop(99%, #ff6600));
+  background-image: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 50%, #ff6600 50%, #ff6600 99%);
+  background-image: -moz-linear-gradient(left, #ffffff 0%, #ffffff 50%, #ff6600 50%, #ff6600 99%);
+  background-image: -o-linear-gradient(left, #ffffff 0%, #ffffff 50%, #ff6600 50%, #ff6600 99%);
+  background-image: linear-gradient(left, #ffffff 0%, #ffffff 50%, #ff6600 50%, #ff6600 99%);
+}
+/* line 183, sass/interior.scss */
+.tag.yellow {
+  background-color: #FFCC00;
+}
+/* line 184, sass/interior.scss */
+.tag.yellow.green {
+  background-color: #CCFF33;
+}
+/* line 185, sass/interior.scss */
+.tag.yellow.white {
+  background-color: #ffcc00;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFCC00', endColorstr='#FFFFFFFF');
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffcc00), color-stop(50%, #ffcc00), color-stop(50%, #ffffff), color-stop(99%, #ffffff));
+  background-image: -webkit-linear-gradient(left, #ffcc00 0%, #ffcc00 50%, #ffffff 50%, #ffffff 99%);
+  background-image: -moz-linear-gradient(left, #ffcc00 0%, #ffcc00 50%, #ffffff 50%, #ffffff 99%);
+  background-image: -o-linear-gradient(left, #ffcc00 0%, #ffcc00 50%, #ffffff 50%, #ffffff 99%);
+  background-image: linear-gradient(left, #ffcc00 0%, #ffcc00 50%, #ffffff 50%, #ffffff 99%);
+}
+
 /* -- Variations Comparison -- */
-/* line 136, sass/interior.scss */
+/* line 196, sass/interior.scss */
 #varCompare table tr td:first-of-type {
   min-width: 140px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-/* line 137, sass/interior.scss */
+/* line 197, sass/interior.scss */
 #varCompare table tr td span {
   color: #919191;
 }
 
 /* -- Search Releases ----- */
-/* line 143, sass/interior.scss */
+/* line 203, sass/interior.scss */
 #querybox {
   margin-bottom: 2em;
 }
-/* line 144, sass/interior.scss */
+/* line 204, sass/interior.scss */
 #querybox p {
   margin-bottom: 0;
 }
