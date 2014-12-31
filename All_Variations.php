@@ -15,7 +15,7 @@ $Username=$_SESSION['Username'];
 		<?php
 			$model_for_detail=$_GET["model"];
 			echo "<h3>All Variations of ".$model_for_detail."</h3>";
-			echo "If you have a collection, the colored bar under photo indicates whether that variation is in your collection.<br />";
+			echo "<p>If you have a collection, the colored bar under photo indicates whether that variation is in your collection.</p>";
 
 			$query= ("SELECT * FROM Matchbox_Variations WHERE UMID LIKE '%$model_for_detail%' ORDER BY VarYear, VarID ASC");
 			$result = mysql_query($query);
@@ -24,10 +24,11 @@ $Username=$_SESSION['Username'];
 				exit;
 			}
 			$rows= mysql_num_rows($result);
-			echo "<br />";
 			echo "<h3>"."CODE 1 & 2/3 Versions found: ".$rows."</h3>";
+			echo "<ul class='large-block-grid-5'>";
+			
 			for ($i=1; $i<=$rows; $i++) {
-				echo "<div class=\"car-block\">";
+				echo "<li class='carGrid'>";
 				//make image clickable and send proper umid to variation_detail page
 				$row=mysql_fetch_array($result);
 				$picture= IMAGE_URL . $row["VarID"]."_1.jpg";
@@ -113,7 +114,6 @@ $Username=$_SESSION['Username'];
 					}
 				}			
 				
-				echo "<br />";
 				$PhotoRefCd= $row["VerPhoto1Ref"];
 				if ($PhotoRefCd) {
 					$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
@@ -126,9 +126,10 @@ $Username=$_SESSION['Username'];
 				echo "<p>Var Yr: ". $row["VarYear"]."</p>";
 				echo "<p>Var ID: ". $row["VarID"]."</p>";
 				echo "<p>Mack#: ". $row["Mack_No"]."</p>";
-					
-				echo "</div>";
-			}		
+				
+				echo "</li>";
+			}	
+			echo "</ul>";	
 		?>
         </div>
 </div>
