@@ -121,7 +121,7 @@ $Username=$_SESSION['Username'];
 					echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 				}
 				echo "<p><strong>Variation Year:</strong> " . $row["VarYear"] . "</p>";
-				echo "<p><strong>Variation ID:</strong> " . $row["VarID"] . "</p>";
+				echo "<p><strong>Var ID:</strong> " . $row["VarID"] . "</p>";
 				echo "<p><strong>Mack #:</strong> " . $row["Mack_No"] . "</p>";
 				
 				echo "</li>";

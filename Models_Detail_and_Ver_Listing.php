@@ -281,6 +281,7 @@ $Username=$_SESSION['Username'];
 					}
 					echo "<h6>" . $row["VerName"] . "</h6>";
 					echo "<p><strong>Version ID:</strong> ". $row["VerID"] . "</p>";
+					echo "<p><strong>First Release Date:</strong> ".$row["VerYrFirstRel"]."</p>";
 					echo "<p><strong>MAN#:</strong> ". $row["FAB_No"]."</p>";
 					
 					//getting body color; then turning body color into a lowercase string (for uniformity)
@@ -294,7 +295,7 @@ $Username=$_SESSION['Username'];
 							echo $row["TempaDesign"].", ";
 						}
 						echo $row["TempaText"]."</p>";	
-						echo "<p><strong>First Release Date:</strong> ".$row["VerYrFirstRel"]."</p>";
+						
 					echo "</div>";
 					echo "</li>";
 				}
