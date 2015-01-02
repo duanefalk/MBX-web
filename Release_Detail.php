@@ -69,6 +69,8 @@
 				//display remainder of rel info
 				//echo "<br />";
 				echo "Rel Yr:   ".$row["RelYr"]."<br />";
+				echo "Country of Sale:  ".$row["CountryOfSale"]."<br />";
+				echo "Product Line:  ".$row["Line"]."<br />";
 				if ($row["Theme"]) {
 					echo "Rel Theme:   ".$row["Theme"]."<br />";
 				}
