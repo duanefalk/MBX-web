@@ -99,7 +99,7 @@ $Username=$_SESSION['Username'];
 <div class="row">
 	<div class="large-12 columns">
 		<?php
-			$row2=mysql_fetch_array($result2);
+			$row2 = mysql_fetch_array($result2);
 
 			//check user code2 display preference
 			//if logged as guest, or chose to mix then do code2 with code1
@@ -207,7 +207,7 @@ $Username=$_SESSION['Username'];
 				echo "</ul>";
 			} else {
 				//start by showing code1
-				$query= ("SELECT * FROM Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='1' ORDER BY VerYrFirstRel,VerID ASC");
+				$query = ("SELECT * FROM Matchbox_Versions WHERE UMID LIKE '%$model_for_detail%' AND CodeLvl='1' ORDER BY VerYrFirstRel,VerID ASC");
 				$result=0;
 				$rows=0;
 				// echo $result;
@@ -215,10 +215,10 @@ $Username=$_SESSION['Username'];
 				$rows= mysql_num_rows($result); //print_r($result);
 				echo "<h3>CODE 1</h3>";
 				echo "<h6>" . $rows . " versions found</h6>";
-				if(!$result) {
+				if (!$result) {
 					echo "No matching results found"; //mysql_error();
 					exit;
-				}					
+				}
 				echo "<ul class='large-block-grid-3'>";
 				for ($i=1; $i<=$rows; $i++) {
 					echo "<li class='carGrid'>";
