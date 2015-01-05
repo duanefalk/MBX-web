@@ -220,7 +220,7 @@
 				
 			$model_for_detail = $row["UMID"];
 			$url = "Models_Detail_and_Ver_Listing.php?model=" . $model_for_detail;
-			echo "<a href=\"" . $url . "\">Cancel</a>";
+			echo "<a href='" . $url . "'>Cancel</a>";
 		?>
 	</div>
 </div>
