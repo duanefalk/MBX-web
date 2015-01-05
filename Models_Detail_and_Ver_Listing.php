@@ -186,6 +186,12 @@ $Username=$_SESSION['Username'];
 						echo "<h6>" . $row["VerName"] . "</h6>";
 						echo "<p><strong>Version ID:</strong> " . $row["VerID"] . "</p>";
 						echo "<p><strong>MAN #:</strong> " . $row["FAB_No"] . "</p>";
+						echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
+						echo "<p>Code level: ".$row["CodeLvl"];
+						echo "<p>";
+						if ($row["CodeLvl"]=="2/3") {
+							echo " C2 Manuf.: ".$row["SecManuf"]."</p>";
+						}
 						
 						echo "<div class='carDetails'>";
 							echo "<p><strong>Body Color:</strong> " . $row["BodyColor"] . "</p>";
@@ -193,28 +199,20 @@ $Username=$_SESSION['Username'];
 							if (!empty($row["TempaDesign"])) {
 								echo $row["TempaDesign"].", ";
 							}
-							echo "<p>".$row["VerName"]."</p>";
-							echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
-							echo "<p>".$row["BodyColor"]."</p>";
-							echo "<p>";
-							if (!empty($row["TempaDesign"])) {
-								echo $row["TempaDesign"].", ";
-							}
+							//echo "<p>".$row["VerName"]."</p>";
+							//echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
+							//echo "<p>".$row["BodyColor"]."</p>";
+							//echo "<p>";
+							//if (!empty($row["TempaDesign"])) {
+							//	echo $row["TempaDesign"].", ";
+							//}
 							echo $row["TempaText"]."</p>";
 							echo "<p>";
-							echo "<p><strong>First Release Date:</strong> ".$row["VerYrFirstRel"]."</p>";
-							echo "<p><strong>Code level:</strong> " . $row["CodeLvl"] . "</p>";
-							if ($row["CodeLvl"]=="2") {
-								echo "<p><strong>C2 Manufacturer:</strong> " . $row["SecManuf"] . "</p>";
-							}
+
 						echo "</div>";
 						
-						echo $row["TempaText"]."</p>";	
-						echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
-						echo "<p>Code level: ".$row["CodeLvl"];
-						if ($row["CodeLvl"]=="2") {
-							echo " C2 Manuf.: ".$row["SecManuf"]."</p>";
-						}
+							
+			
 						
 					echo "</li>";
 					}
@@ -296,8 +294,9 @@ $Username=$_SESSION['Username'];
 					}
 					echo "<h6>" . $row["VerName"] . "</h6>";
 					echo "<p><strong>Version ID:</strong> ". $row["VerID"] . "</p>";
-					echo "<p><strong>First Release Date:</strong> ".$row["VerYrFirstRel"]."</p>";
 					echo "<p><strong>MAN#:</strong> ". $row["FAB_No"]."</p>";
+					echo "<p><strong>First Release Date:</strong> ".$row["VerYrFirstRel"]."</p>";
+
 					
 					//getting body color; then turning body color into a lowercase string (for uniformity)
 					$bodyColorLowercase = $row["BodyColor"];
@@ -383,6 +382,9 @@ $Username=$_SESSION['Username'];
 						echo "<h6>".$row["VerName"]."</h6>";
 						echo "<p><strong>Version ID:</strong> " . $row["VerID"] . "</p>";
 						echo "<p><strong>MAN#:</strong> " . $row["FAB_No"] . "</p>";
+						echo "<p><strong>First Release Date:</strong> ".$row["VerYrFirstRel"]."</p>";
+						echo "<p><strong>Code level:</strong> " . $row["CodeLvl"] . "</p>";
+						echo "<p><strong>C2 Manufacturer:</strong> " . $row["SecManuf"] . "</p>";						
 							
 							//getting body color; then turning body color into a lowercase string (for uniformity)
 							$bodyColorLowercase = $row["BodyColor"];
@@ -395,9 +397,7 @@ $Username=$_SESSION['Username'];
 								echo $row["TempaDesign"].", ";
 								}
 							echo $row["TempaText"]."</p>";	
-							echo "<p><strong>First Release Date:</strong> ".$row["VerYrFirstRel"]."</p>";
-							echo "<p><strong>Code level:</strong> " . $row["CodeLvl"] . "</p>";
-							echo "<p><strong>C2 Manufacturer:</strong> " . $row["SecManuf"] . "</p>";
+
 						echo "</div>";
 							
 						echo "</li>";		
