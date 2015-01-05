@@ -12,8 +12,9 @@ $Username=$_SESSION['Username'];
 
 <div class="row">
 	<div class="large-12 columns">
-	
+		<!-- ADDED COMMENT -->
 		<h2>Models Detail Page</h2>
+		
 			
 		<!--<p><a href="http://localhost/~Falk/MBX_Web_Site_Test/IMAGES/TEST.doc">CLICK TO DOWNLOAD FILE</a></p>-->
 			
