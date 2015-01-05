@@ -145,33 +145,34 @@ $Username=$_SESSION['Username'];
 								
 								if (file_exists($picture_loc)) {									
 									if ($rows_own !="0") {
-										echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." /></a>";
+										echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
 									} else {
-										echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." /></a>";
+										echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." width=\"240\"></a>";
 									}	
 								} else {
 									if ($rows_own !="0") {
-										echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." /></a>";
+										echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"240\"></a>";
 									} else {
-										echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." /></a>";
+										echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
 									}
 								}	
 							} else {
 								if (file_exists($picture_loc)) {									
-									echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
+									echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
 										
 								} else {
-									echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
+									echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
 								}	
 							}	
 						} else {
 							if (file_exists($picture_loc)) {									
-								echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
+								echo "<a href=\"".$url."\">"."<img src=".$picture." width=\"240\"></a>";
 							} else {
-								echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
+								echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
 							}
 						}			
 				
+						echo "<br />";
 						$PhotoRefCd= $row["VerPhoto1Ref"];
 						if ($PhotoRefCd) {
 							$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
@@ -181,24 +182,26 @@ $Username=$_SESSION['Username'];
 						} else {
 							echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 						}
-						echo "<h6>" . $row["VerName"] . "</h6>";
-						echo "<p><strong>Version ID:</strong> " . $row["VerID"] . "</p>";
-						echo "<p><strong>MAN #:</strong> " . $row["FAB_No"] . "</p>";
-						
-						echo "<div class='carDetails'>";
-							echo "<p><strong>Body Color:</strong> " . $row["BodyColor"] . "</p>";
-							echo "<p><strong>Design &amp; Text</strong>: ";
-							if (!empty($row["TempaDesign"])) {
-								echo $row["TempaDesign"].", ";
+						echo "<p>".$row["VerName"]."</p>";
+						echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
+						echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
+						echo "<p>Code level: ".$row["CodeLvl"];
+						if ($row["CodeLvl"]=="2") {
+							echo " C2 Manuf.: ".$row["SecManuf"]."</p>";
+						echo "<p>".$row["BodyColor"]."</p>";
+						echo "<p>";
+						if (!empty($row["TempaDesign"])) {
+							echo $row["TempaDesign"].", ";
 							}
-							echo $row["TempaText"]."</p>";
-							echo "<p>";
-							echo "<p><strong>First Release Date:</strong> ".$row["VerYrFirstRel"]."</p>";
-							echo "<p><strong>Code level:</strong> " . $row["CodeLvl"] . "</p>";
-							if ($row["CodeLvl"]=="2") {
-								echo "<p><strong>C2 Manufacturer:</strong> " . $row["SecManuf"] . "</p>";
+						echo $row["TempaText"]."</p>";	
+						echo "<p>".$row["BodyColor"]."</p>";
+						echo "<p>";
+						if (!empty($row["TempaDesign"])) {
+							echo $row["TempaDesign"].", ";
 							}
-						echo "</div>";
+						echo $row["TempaText"]."</p>";	
+
+						}
 					echo "</li>";
 					}
 				echo "</ul>";
@@ -288,12 +291,11 @@ $Username=$_SESSION['Username'];
 					
 					echo "<div class='carDetails'>";
 						echo "<p class='tag " . $bodyColorLowercase . "'><strong>Body Color:</strong> " . $bodyColorLowercase . "</p>";
-						echo "<p><strong>Design &amp; Text</strong>: ";
+						echo "<p>";
 						if (!empty($row["TempaDesign"])) {
 							echo $row["TempaDesign"].", ";
 						}
-						echo $row["TempaText"];
-						echo "</p>";	
+						echo $row["TempaText"]."</p>";	
 						
 					echo "</div>";
 					echo "</li>";
@@ -366,6 +368,9 @@ $Username=$_SESSION['Username'];
 						echo "<h6>".$row["VerName"]."</h6>";
 						echo "<p><strong>Version ID:</strong> " . $row["VerID"] . "</p>";
 						echo "<p><strong>MAN#:</strong> " . $row["FAB_No"] . "</p>";
+						echo "<p><strong>First Release Date:</strong> ".$row["VerYrFirstRel"]."</p>";
+						echo "<p><strong>Code level:</strong> " . $row["CodeLvl"] . "</p>";
+						echo "<p><strong>C2 Manufacturer:</strong> " . $row["SecManuf"] . "</p>";
 							
 							//getting body color; then turning body color into a lowercase string (for uniformity)
 							$bodyColorLowercase = $row["BodyColor"];
@@ -378,9 +383,7 @@ $Username=$_SESSION['Username'];
 								echo $row["TempaDesign"].", ";
 								}
 							echo $row["TempaText"]."</p>";	
-							echo "<p><strong>First Release Date:</strong> ".$row["VerYrFirstRel"]."</p>";
-							echo "<p><strong>Code level:</strong> " . $row["CodeLvl"] . "</p>";
-							echo "<p><strong>C2 Manufacturer:</strong> " . $row["SecManuf"] . "</p>";
+
 						echo "</div>";
 							
 						echo "</li>";		
@@ -450,31 +453,28 @@ $Username=$_SESSION['Username'];
 			$rel_result = mysql_query($rel_query);
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {	
-				echo "<h2>SUPERFAST</h2>";
-				echo "<ul class='large-block-grid-3'>";
-				
+				echo "<br></><h2>SUPERFAST</h2>";
 				for ($i=1; $i<=$rel_rows; $i++) {
-					echo "<li class='carGrid'>";
-					
+					echo "<div class=\"car-block\">";
 					$rel_row=mysql_fetch_array($rel_result);
 					$curr_yr=$rel_row["RelYr"];
 	
 					if ($i==1) {
-						$last_yr = $curr_yr;
-						echo "<div class='row'><div class='large-12 columns'><h3>" . $rel_row["RelYr"] . "</h3></div></div>";
+						$last_yr=$curr_yr;
+						echo "<h3>".$rel_row["RelYr"]."</h3>";
 					}
 					//echo $curr_yr."...".$last_yr;
-					if ($curr_yr != $last_yr) {
-						echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
+					if ($curr_yr!=$last_yr) {
+						echo "<h3>".$rel_row["RelYr"]."</h3>";
 					}
 					//print info
 					$picture= IMAGE_URL . $rel_row["RelID"]."_1.jpg";
 					$picture_loc=IMAGE_PATH. $rel_row["RelID"]."_1.jpg";
 					$url= "Release_Detail.php?model=".$rel_row["RelID"];
 					if (file_exists($picture_loc)) {
-						echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
+						echo "<a href=\"".$url."\">"."<img src=".$picture." height=\"400\"></a>";
 					} else {	
-						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
+						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
 						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
@@ -484,15 +484,13 @@ $Username=$_SESSION['Username'];
 					} else {
 						echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 					}
-					echo "<p><strong>Country:</strong> ".$rel_row["CountryOfSale"]."</p>";
-					echo "<p><strong>Rel ID:</strong> ". $rel_row["RelID"]."</p>";
-					echo "<p><strong>Series ID:</strong> ".$rel_row["SeriesID"]."</p>";
-					echo "<p><strong>Name on Package:</strong> ".$rel_row["MdlNameOnPkg"]."</p>";	
+					echo "<p>Country:  ".$rel_row["CountryOfSale"]."</p>";
+					echo "<p>Rel ID: ". $rel_row["RelID"]."</p>";
+					echo "<p>Series ID: ".$rel_row["SeriesID"]."</p>";
+					echo "<p>Name on Pkg: ".$rel_row["MdlNameOnPkg"]."</p>";	
 					$last_yr=$curr_yr;
-					
-					echo "</li>";
+					echo "</div>";
 				}
-				echo "</ul>";
 			}
 
 			//Search for Multipacks
@@ -500,30 +498,28 @@ $Username=$_SESSION['Username'];
 			$rel_result = mysql_query($rel_query);
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {
-				echo "<h2>MULTI-PACKS</h2>";
-				echo "<ul class='large-block-grid-3'>";
-				
+				echo "<br></><h2>MULTI-PACKS</h2>";
 				for ($i=1; $i<=$rel_rows; $i++) {
-					echo "<li class='carGrid'>";
+					echo "<div class=\"car-block\">";
 					$rel_row=mysql_fetch_array($rel_result);
 					$curr_yr=$rel_row["RelYr"];
 	
 					if ($i==1) {
-						$last_yr = $curr_yr;
-						echo "<div class='row'><div class='large-12 columns'><h3>" . $rel_row["RelYr"] . "</h3></div></div>";
+						$last_yr=$curr_yr;
+						echo "<h3>".$rel_row["RelYr"]."</h3>";
 					}
 					//echo $curr_yr."...".$last_yr;
-					if ($curr_yr != $last_yr) {
-						echo "<div class='row'><div class='large-12 columns'><h3>" . $rel_row["RelYr"] . "</h3></div></div>";						
+					if ($curr_yr!=$last_yr) {
+						echo "<h3>".$rel_row["RelYr"]."</h3>";
 					}
 					//print info
-					$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
-					$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
+					$picture= IMAGE_URL . $rel_row["RelID"]."_1.jpg";
+					$picture_loc=IMAGE_PATH. $rel_row["RelID"]."_1.jpg";
 					$url= "Release_Detail.php?model=".$rel_row["RelID"];
 					if (file_exists($picture_loc)) {
-						echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
+						echo "<a href=\"".$url."\">"."<img src=".$picture." height=\"400\"></a>";
 					} else {	
-						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
+						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
 						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
@@ -533,18 +529,13 @@ $Username=$_SESSION['Username'];
 					} else {
 						echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 					}
-					echo "<p><strong>Country:</strong> ".$rel_row["CountryOfSale"]."</p>";
-					echo "<p><strong>Rel ID:</strong> ". $rel_row["RelID"]."</p>";
-					if ($rel_row["SeriesID"]) {
-						echo "<p><strong>Series ID:</strong> ".$rel_row["SeriesID"]."</p>";
-					}
-					if ($rel_row["MdlNameOnPkg"]) {
-						echo "<p><strong>Name on Package:</strong> " . $rel_row["MdlNameOnPkg"] . "</p>";	
-					}
-					$last_yr = $curr_yr;
-					echo "</li>";
+					echo "<p>Country:  ".$rel_row["CountryOfSale"]."</p>";
+					echo "<p>Rel ID: ". $rel_row["RelID"]."</p>";
+					echo "<p>Series ID: ".$rel_row["SeriesID"]."</p>";
+					echo "<p>Name on Pkg: ".$rel_row["MdlNameOnPkg"]."</p>";	
+					$last_yr=$curr_yr;
+					echo "</div>";
 				}
-				echo "</ul>";
 			}
 			
 			//Search for Other Code 1
@@ -572,30 +563,26 @@ $Username=$_SESSION['Username'];
 					echo "<li class='carGrid'>";
 					
 					//print info
-					$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
-					$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
-					$url = "Release_Detail.php?model=" . $rel_row["RelID"];
+					$picture= IMAGE_URL . $rel_row["RelID"]."_1.jpg";
+					$picture_loc=IMAGE_PATH. $rel_row["RelID"]."_1.jpg";
+					$url= "Release_Detail.php?model=".$rel_row["RelID"];
 					if (file_exists($picture_loc)) {
-						echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
+						echo "<a href=\"".$url."\">"."<img src=".$picture." height=\"400\"></a>";
 					} else {	
-						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
+						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." height=\"400\"></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
 						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
-						echo "<p class=\"photoref\">Photo by: " . $row2["RefName"]."</p>";
+						echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
 					} else {
 						echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
 					}
 					echo "<p><strong>Country:</strong> ".$rel_row["CountryOfSale"]."</p>";
 					echo "<p><strong>Rel ID:</strong> ". $rel_row["RelID"]."</p>";
-					if ($rel_row["SeriesID"]) {
-						echo "<p><strong>Series ID:</strong> ".$rel_row["SeriesID"]."</p>";
-					}
-					if ($rel_row["MdlNameOnPkg"]) {
-						echo "<p><strong>Name on Package:</strong> " . $rel_row["MdlNameOnPkg"] . "</p>";	
-					}
+					echo "<p><strong>Series ID:</strong> ".$rel_row["SeriesID"]."</p>";
+					echo "<p><strong>Name on Package:</strong> ".$rel_row["MdlNameOnPkg"]."</p>";	
 					$last_yr = $curr_yr;
 					
 					echo "</li>";
