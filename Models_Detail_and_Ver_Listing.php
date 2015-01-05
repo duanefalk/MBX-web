@@ -36,11 +36,11 @@ $Username=$_SESSION['Username'];
 			$picture_loc=IMAGE_PATH. $row2["UMID"].".jpg";
 			if (file_exists($picture_loc)) {
 				//echo "picture exists";
-				echo "<img class='own' src=" . $picture . " />";
+				echo "<img src=" . $picture . " />";
 			} else {
 				//echo "cant find picture";
 				//echo DEFAULT_IMAGE;
-				echo "<img class='own-poor' src=" . DEFAULT_IMAGE . " />";
+				echo "<img src=" . DEFAULT_IMAGE . " />";
 			}	
 			
 			$PhotoRefCd= $row2["ModelPhotoRef"];
