@@ -15,7 +15,7 @@ $Username=$_SESSION['Username'];
 	
 		<h2>Models Detail Page</h2>
 			
-		<!--<a href="http://localhost/~Falk/MBX_Web_Site_Test/IMAGES/TEST.doc"><p>CLICK TO DOWNLOAD FILE</p</a><br /> -->
+		<!--<p><a href="http://localhost/~Falk/MBX_Web_Site_Test/IMAGES/TEST.doc">CLICK TO DOWNLOAD FILE</a></p>-->
 			
 		<?php
 			//show model header info
