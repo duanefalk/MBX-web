@@ -28,10 +28,12 @@
 				exit;
 				}
 			$row = mysql_fetch_array($result);
-			echo "<h3>Version ID: ". $row["VerID"]."</h3>";
+			echo "<h3>Version ID: " . $row["VerID"] . "</h3>";
+			echo "<ul class='large-block-grid-2'>";
+			echo "<li class='carGrid'>";
 			
-			$picture1 = IMAGE_URL . $row["VerID"]."_1.jpg";
-			$picture1_loc = IMAGE_PATH. $row["VerID"]."_1.jpg";
+			$picture1 = IMAGE_URL . $row["VerID"] . "_1.jpg";
+			$picture1_loc = IMAGE_PATH . $row["VerID"] . "_1.jpg";
 			
 			$Version_to_detail = $row["VerID"];
 			
@@ -43,7 +45,7 @@
 				$row2a = mysql_fetch_array($result2a);
 				
 			?>
-				<a class="imagePopup" title="<?php echo $row2a["RefName"]; ?>" href="<?php echo $picture1; ?>"><img src="<?php echo $picture1; ?>" width="240"></a>
+				<a class="imagePopup" title="<?php echo $row2a["RefName"]; ?>" href="<?php echo $picture1; ?>"><img src="<?php echo $picture1; ?>" /></a>
 				<?php
 					$picture2 = IMAGE_URL . $row["VerID"] . "_2.jpg";
 					$picture2_loc = IMAGE_PATH . $row["VerID"] . "_2.jpg";
@@ -55,10 +57,10 @@
 						$row2b = mysql_fetch_array($result2b);
 					?>
 					
-						<a class="imagePopup" title="<?php echo $row2b["RefName"]; ?>" href="<?php echo $picture2; ?>"><img src="<?php echo $picture2; ?>" width="240"></a>
+						<a class="imagePopup" title="<?php echo $row2b["RefName"]; ?>" href="<?php echo $picture2; ?>"><img src="<?php echo $picture2; ?>" /></a>
 					<?php }
 			} else {
-				echo "<img src=" . DEFAULT_IMAGE . " width=\"240\">";
+				echo "<img src=" . DEFAULT_IMAGE . " />";
 			}
 			
 			$PhotoRefCd1 = $row["VerPhoto1Ref"];
@@ -74,38 +76,41 @@
 					$result2b = mysql_query($query2b);
 					$row2b = mysql_fetch_array($result2b);
 					if ($row2b == $row2a) {
-						echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"] . "</p>";
+						echo "<p class=\"photoref\">Photos by: " . $row2a["RefName"] . "</p>";
 					} else {
-						echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"] . "</p>";
+						echo "<p class=\"photoref\">Photos by: " . $row2a["RefName"] . ", " . $row2b["RefName"] . "</p>";
 					}
 				} else {
-					echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"] . "</p>";
+					echo "<p class=\"photoref\">Photo by: " . $row2a["RefName"] . "</p>";
 				}
 			} else {
-				echo "<p id=\"photoref\">Photo by: no reference listed</p>";
+				echo "<p class=\"photoref\">Photo by: no reference listed</p>";
 			}
 				
-			echo "<br></>Version Name: ". $row["VerName"]. "<br></>";
-			echo "<br></>Version Mack#: ".$row["Master_Mack_No"]."    MAN#: ".$row["FAB_No"]."<br></>";
-			echo "First Prod.: ". $row["VerYrFirstRel"]."    Version Type: ".$row["VerTyp"]."<br></>";
-			echo $row["BodyColor"]."<br></>";
-			if (!empty($row["TempaDesign"])) {
-				echo "Design: ".$row["TempaDesign"]."<br></>";
+			echo "<p><strong>Version Name:</strong> " . $row["VerName"] . "</p>";
+			echo "<p><strong>Version Mack #:</strong> " . $row["Master_Mack_No"] . "</p>";
+			echo "<p><strong>MAN #:</strong> " . $row["FAB_No"] . "</p>";
+			echo "<p><strong>First Prod.:</strong> " . $row["VerYrFirstRel"] . "</p>";
+			echo "<p><strong>Version Type:</strong> " . $row["VerTyp"] . "</p>";
+			echo "<div class='carDetails'>";
+				echo "<p><strong>Body Color:</strong> " . $row["BodyColor"] . "</p>";
+				if (!empty($row["TempaDesign"])) {
+					echo "<p><strong>Design:</strong> " . $row["TempaDesign"] . "</p>";
 				}
-			if (!empty($row["TempaText"])) {
-				echo "Text: ".$row["TempaText"]."<br></>";
+				if (!empty($row["TempaText"])) {
+					echo "<p><strong>Text:</strong> " . $row["TempaText"] . "</p>";
 				}
-			echo "Code level: ".$row["CodeLvl"]."<br></>";
-			if ($row["CodeLvl"]=="2") {
-				echo " C2 Manuf.: ".$row["SecManuf"]."<br></>";
-			}
-			if ($row["VerAttachments"]) {
-				echo "Attachments: ".$row["VerAttachments"]."<br></>";
-			}			
-			if ($row["VerComm"]) {
-				echo "Comment: ".$row["VerComm"]."<br></>";
-			}	
-			echo "<br></>";
+				echo "<p><strong>Code level:</strong> " . $row["CodeLvl"] . "</p>";
+				if ($row["CodeLvl"]=="2") {
+					echo "<p><strong>C2 Manufacturer:</strong> ".$row["SecManuf"] . "</p>";
+				}
+				if ($row["VerAttachments"]) {
+					echo "<p><strong>Attachments:</strong> " . $row["VerAttachments"] . "</p>";
+				}			
+				if ($row["VerComm"]) {
+					echo "<p><strong>Comment:</strong> " . $row["VerComm"] . "</p>";
+				}	
+			echo "</li></ul>";
 
 			echo "<h2>Variations</h2>";
 			//find and display variations
@@ -122,32 +127,28 @@
 			        $url= "Variation_Comparison.php?model=".$Version_to_detail;
 				echo "<a class=\"button dark\" href=\"".$url."\">Var Comparison Chart</a><br></><br></>";
 			}
-			for ($i=1; $i<=$rows2; $i++)
-				{
-				$row2=mysql_fetch_array($result2);
-				echo "<h3>Var ID: ". $row2["VarID"]."</h3>";
-				$picture1= IMAGE_URL . $row2["VarID"]."_1.jpg";
-				$picture1_loc=IMAGE_PATH. $row2["VarID"]."_1.jpg";
-				//echo $picture1."<br />";
-				$picture2= IMAGE_URL . $row2["VarID"]."_2.jpg";
-				$picture2_loc=IMAGE_PATH. $row2["VarID"]."_2.jpg";	
+			for ($i=1; $i<=$rows2; $i++) {
+				$row2 = mysql_fetch_array($result2);
+				echo "<h3>Var ID: " . $row2["VarID"] . "</h3>";
+				$picture1 = IMAGE_URL . $row2["VarID"] . "_1.jpg";
+				$picture1_loc = IMAGE_PATH . $row2["VarID"] . "_1.jpg";
+				$picture2 = IMAGE_URL . $row2["VarID"] . "_2.jpg";
+				$picture2_loc = IMAGE_PATH . $row2["VarID"] . "_2.jpg";	
 				
 				$Variation_to_detail= $row2["VarID"];
 				$url= "Variation_Detail.php?model=".$Variation_to_detail;				
 				if (file_exists($picture1_loc)) {
 					//echo "picture exists";
-					echo "<a href=\"".$url."\">"."<img src=".$picture1." width=\"240\"></a>";
+					echo "<a href=\"".$url."\">"."<img src=".$picture1." /></a>";
 				} else {
 					//echo "cant find picture";
 					//echo DEFAULT_IMAGE;
-					echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
+					echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
 				}
 
 				if (file_exists($picture2_loc)) {
 					//echo "picture exists";
-					echo "<a href=\"".$url."\">"."<img src=".$picture2." width=\"240\"></a>";
-				} else {
-					//ignore, dont put up a default for 2nd one	
+					echo "<a href=\"".$url."\">"."<img src=".$picture2." /></a>";
 				}
 												
 				$PhotoRefCd1= $row2["VarPhoto1Ref"];
@@ -161,58 +162,66 @@
 							$result2b= mysql_query($query2b);
 							$row2b =mysql_fetch_array($result2b);
 							if ($row2b==$row2a) {
-								echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"] . "</p>";
+								echo "<p class=\"photoref\">Photos by: ". $row2a["RefName"] . "</p>";
 							} ELSE {
-								echo "<p id=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"] . "</p>";
+								echo "<p class=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"] . "</p>";
 							}
 						} else {
-							echo "<p id=\"photoref\">Photo by: ". $row2a["RefName"] . "</p>";
+							echo "<p class=\"photoref\">Photo by: ". $row2a["RefName"] . "</p>";
 						}
 					} else {
-						echo "<p id=\"photoref\">Photo by: no reference listed</p>";
+						echo "<p class=\"photoref\">Photo by: no reference listed</p>";
 					}
 				
 				//look up release info
 				$result3=0;
 				$rows3=0;
 				$variation_for_detail=$row2["VarID"];
-				echo "<br></>";
-				$query3= ("SELECT * FROM Matchbox_Releases WHERE VarID LIKE '%$variation_for_detail%' ORDER BY RelID ASC");
+				
+				$query3 = ("SELECT * FROM Matchbox_Releases WHERE VarID LIKE '%$variation_for_detail%' ORDER BY RelID ASC");
 				$result3 = mysql_query($query3);
 				$rows3= mysql_num_rows($result3);
-				if(!$result2) {
-				echo "No matching results found"; //mysql_error();
-				exit;
+				if (!$result2) {
+					echo "No matching results found"; //mysql_error();
+					exit;
 				}
 				//list releases
-				for ($i2=1; $i2<=$rows3; $i2++)
-					{
-					echo "<div class=\"car-block\">";
-						$row3=mysql_fetch_array($result3);
-						$rel_picture1= IMAGE_URL . $row3["RelID"]."_1.jpg";
-						$rel_picture1_loc= IMAGE_PATH. $row3["RelID"]."_1.jpg";
-						$Release_to_detail=$row3["RelID"];
-						$url2= "Release_Detail.php?model=".$Release_to_detail;	
+				echo "<ul class='large-block-grid-3'>";
+				
+				for ($i2=1; $i2<=$rows3; $i2++) {
+					echo "<li class='carGrid'>";
+						$row3 = mysql_fetch_array($result3);
+						$rel_picture1 = IMAGE_URL . $row3["RelID"] . "_1.jpg";
+						$rel_picture1_loc = IMAGE_PATH . $row3["RelID"] . "_1.jpg";
+						$Release_to_detail = $row3["RelID"];
+						$url2 = "Release_Detail.php?model=" . $Release_to_detail;	
+						
 						if (file_exists($rel_picture1_loc)) {
-						//echo "picture exists";
-						echo "<a href=\"".$url2."\">"."<img src=".$rel_picture1." width=\"180\"></a>";
+							//echo "picture exists";
+							echo "<a href=\"" . $url2 . "\">" . "<img src=" . $rel_picture1 . " /></a>";
 						} else {
 							//echo "cant find picture";
-							echo "<a href=\"".$url2."\">"."<img src=".DEFAULT_REL_IMAGE." width=\"180\"></a>";
+							echo "<a href=\"" . $url2 . "\">" . "<img src=" . DEFAULT_REL_IMAGE . " /></a>";
 						}
-						echo "<p>Release Yr: ". $row3["RelYr"]."</p>";
-						echo "<p>Country: ". $row3["CountryOfSale"]."</p>";
-						echo "<p>Series: ".$row3["Series"]." Series#: ".$row3["SeriesID"]."</p>";
-						echo "<p>Model Name: ".$row3["MdlNameOnPkg"]."</p>";
-						echo "<p>Package Name: ".$row3["PkgName"]."</p>";
-					echo "</div>";					
-					}
-					echo "<br />";
+						echo "<p><strong>Release Year:</strong> ". $row3["RelYr"]."</p>";
+						echo "<p><strong>Country:</strong> ". $row3["CountryOfSale"]."</p>";
+						echo "<p><strong>Series:</strong> ".$row3["Series"]." Series#: ".$row3["SeriesID"]."</p>";
+						if ($row3["MdlNameOnPkg"]) {
+							echo "<p><strong>Model Name:</strong> ".$row3["MdlNameOnPkg"]."</p>";
+						}
+						if ($row3["PkgName"]) {
+							echo "<p><strong>Package Name:</strong> ".$row3["PkgName"]."</p>";
+						}						
+					echo "</li>";					
 				}
-				$model_for_detail=$row["UMID"];
-			        $url= "Models_Detail_and_Ver_Listing.php?model=".$model_for_detail;
-				echo "<a href=\"".$url."\">Cancel</a>";
-			?>
+				
+				echo "</ul>";
+			}
+				
+			$model_for_detail = $row["UMID"];
+			$url = "Models_Detail_and_Ver_Listing.php?model=" . $model_for_detail;
+			echo "<a href=\"" . $url . "\">Cancel</a>";
+		?>
 	</div>
 </div>
 
