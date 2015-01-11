@@ -31,7 +31,7 @@
 		PkgVarCd
 		
 		RelComm
-		RelPkgPhotoName
+		
 		RelPkgPhotoRef
 	-->
 		<h2>Add a Release</h2>
@@ -194,7 +194,7 @@
 			<p>Release Comments:     </p>
 				<textarea name="RelComm" cols="45" rows="4">			
 				</textarea>
-			<p>Package Photo Name:     	  <input type="text" name="RelPkgPhotoName" value="" size="40" id="RelPkgPhotoName"</p>	
+			<!-- <p>Package Photo Name:     	  <input type="text" name="RelPkgPhotoName" value="" size="40" id="RelPkgPhotoName"</p>	-->
 			<p>Package Photo Reference: </p>
 				<?php
 					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								

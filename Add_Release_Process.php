@@ -23,18 +23,18 @@
         PkgVarCd
         
         RelComm
-        RelPkgPhotoName
+        
         RelPkgPhotoRef
 -->
 
 <?php
     $UMID=$_POST['UMID'];
-    $VERID1=$_POST['VERID1'];
-    $VerID= $UMID.'-'.$VERID1;
-    $VARID1=$_POST['VARID1'];
-    $VarID=$VerID.'-'.$VARID1;
-    $RELID1=$_POST['RELID1'];
-    $RelID=$VarID.'-'.$RELID1;
+    $VerID=$_POST['VERID1'];
+    //$VerID= $UMID.'-'.$VERID1;
+    $VarID=$_POST['VARID1'];
+    //$VarID=$VerID.'-'.$VARID1;
+    $RelID=$_POST['RELID1'];
+    //$RelID=$VarID.'-'.$RELID1;
     $RelYr=$_POST['RelYr'];
     $CountryOfSale=$_POST['CountryOfSale'];
     $Theme=$_POST['Theme'];
@@ -56,39 +56,39 @@
     $PkgID=$_POST['PkgID'];
     $PkgVarCd=$_POST['PkgVarCd'];
     $RelComm=$_POST['RelComm'];
-    $RelPkgPhotoName=$_POST['RelPkgPhotoName'];
+    //$RelPkgPhotoName=$_POST['RelPkgPhotoName'];
     $RelPkgPhotoRef=$_POST['RelPkgPhotoRef'];
     
 
-    echo $UMID."<br />";
-    echo $VerID."<br />";
-    echo $VarID."<br />";
-    echo $RelID."<br />";
-    echo $RelYr."<br />";
-    echo $CountryOfSale."<br />";
-    echo $Theme."<br />";
-    echo $Line."<br />";
-    echo $Series."<br />";
-    echo $SeriesID."<br />";
-    echo $ShowSeriesID."<br />";
-    echo $PkgName."<br />";
-    echo $MdlNameOnPkg."<br />";
-    echo $SubSeries."<br />";
-    echo $SubSeriesID."<br />";
-    echo $ShowSubSeriesID."<br />";
-    echo $UnitTyp."<br />";
-    echo $PkgID."<br />";
-    echo $PkgVarCd."<br />";
-    echo $RelComm."<br />";
-    echo $RelPkgPhotoName."<br />";
-    echo $RelPkgPhotoRef."<br />";
+    //echo $UMID."<br />";
+    //echo $VerID."<br />";
+    //echo $VarID."<br />";
+    //echo $RelID."<br />";
+    //echo $RelYr."<br />";
+    //echo $CountryOfSale."<br />";
+    //echo $Theme."<br />";
+    //echo $Line."<br />";
+    //echo $Series."<br />";
+    //echo $SeriesID."<br />";
+    //echo $ShowSeriesID."<br />";
+    //echo $PkgName."<br />";
+    //echo $MdlNameOnPkg."<br />";
+    //echo $SubSeries."<br />";
+    //echo $SubSeriesID."<br />";
+    //echo $ShowSubSeriesID."<br />";
+    //echo $UnitTyp."<br />";
+    //echo $PkgID."<br />";
+    //echo $PkgVarCd."<br />";
+    //echo $RelComm."<br />";
+    //echo $RelPkgPhotoName."<br />";
+    //echo $RelPkgPhotoRef."<br />";
     
    
     $query="INSERT INTO Matchbox_Releases (UMID, VerID, VarID, RelID, RelYr, CountryOfSale, Theme, Line, Series, SeriesID, ShowSeriesID,
-            PkgName, MdlNameOnPkg, SubSeries, SubSeriesID, ShowSubSeriesID, UnitTyp, PkgID, PkgVarCd, RelComm, RelPkgPhotoName,
+            PkgName, MdlNameOnPkg, SubSeries, SubSeriesID, ShowSubSeriesID, UnitTyp, PkgID, PkgVarCd, RelComm,
             RelPkgPhotoRef)
             VALUES ('$UMID','$VerID','$VarID','$RelID','$RelYr','$CountryOfSale','$Theme', '$Line', '$Series', '$SeriesID', '$ShowSeriesID',
-            '$PkgName','$MdlNameOnPkg','$SubSeries','$SubSeriesID','$ShowSubSeriesID','$UnitTyp', '$PkgID', '$PkgVarCd', '$RelComm', '$RelPkgPhotoName',
+            '$PkgName','$MdlNameOnPkg','$SubSeries','$SubSeriesID','$ShowSubSeriesID','$UnitTyp', '$PkgID', '$PkgVarCd', '$RelComm',
             '$RelPkgPhotoRef')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;

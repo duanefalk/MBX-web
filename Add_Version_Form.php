@@ -24,9 +24,9 @@
 				TempaDesign
 				TempaText
 				VerAttachments
-				VerPhoto1Name
+				
 				VerPhoto1Ref
-				VerPhoto2Name
+				
 				VerPhoto2Ref
 				VerComm
 		-->		
@@ -115,7 +115,7 @@
 				<textarea name="TempaText" cols="45" rows="4">			
 				</textarea>
 			<p>Version Attachments:     	  <input type="text" name="VerAttachments" value="" size="60" id="VerAttachments"</p>	
-			<p>Version Photo 1 Name:     	  <input type="text" name="VerPhoto1Name" value="" size="40" id="VerPhoto1Name"</p>
+			<!--<p>Version Photo 1 Name:     	  <input type="text" name="VerPhoto1Name" value="" size="40" id="VerPhoto1Name"</p> -->
 			<p>Version Photo 1 Reference: </p>
 				<?php
 					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
@@ -139,7 +139,7 @@
 					}	
 				?>
 				</select>
-			<p>Version Photo 2 Name:     	  <input type="text" name="VerPhoto2Name" value="" size="40" id="VerPhoto2Name"</p>
+			<!--<p>Version Photo 2 Name:     	  <input type="text" name="VerPhoto2Name" value="" size="40" id="VerPhoto2Name"</p> -->
 			<p>Version Photo 2 Reference: </p>
 				<?php
 					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								

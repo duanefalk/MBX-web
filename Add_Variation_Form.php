@@ -44,9 +44,9 @@
 				CodeLvl
 				SecManuf
 				VarComment
-				VarPhoto1Name
+				
 				VarPhoto1Ref
-				VarPhoto2Name
+				
 				VarPhoto2Ref		
 				-->		
 				
@@ -354,7 +354,7 @@
 			<p>Variation Comment: </p>
 				<textarea name="VarComment" cols="45" rows="4">	
 				</textarea>
-			<p>Variation Photo 1 Name:     	  <input type="text" name="VarPhoto1Name" value="" size="40" id="VarPhoto1Name"</p>
+			<!-- <p>Variation Photo 1 Name:     	  <input type="text" name="VarPhoto1Name" value="" size="40" id="VarPhoto1Name"</p> -->
 			<p>Variation Photo 1 Reference: </p>
 				<?php
 					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
@@ -378,7 +378,7 @@
 					}	
 				?>
 				</select>
-			<p>Variation Photo 2 Name:     	  <input type="text" name="VarPhoto2Name" value="" size="40" id="VarPhoto2Name"</p>
+			<!-- <p>Variation Photo 2 Name:     	  <input type="text" name="VarPhoto2Name" value="" size="40" id="VarPhoto2Name"</p> -->
 			<p>Variation Photo 2 Reference: </p>
 				<?php
 					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								

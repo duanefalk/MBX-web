@@ -16,10 +16,10 @@
     TempaDesign
     TempaText
     VerAttachments
-    VerPhoto1Name
+    
     VerPhoto1Path
     VerPhoto1Ref
-    VerPhoto2Name
+    
     VerPhoto2Path
     VerPhoto2Ref
     VerComm
@@ -27,8 +27,8 @@
 
 <?php
     $UMID=$_POST['UMID'];
-    $VERID1=$_POST['VERID1'];
-    $VERID= $UMID.'-'.$VERID1;
+    $VERID=$_POST['VERID1'];
+    //$VERID= $UMID.'-'.$VERID1;
     $FAB_No=$_POST['FAB_No'];
     $Master_Mack_No=$_POST['Master_Mack_No'];
     $VerName=$_POST['VerName'];
@@ -40,13 +40,13 @@
     $TempaDesign=$_POST['TempaDesign'];
     $TempaText=$_POST['TempaText'];
     $VerAttachments=$_POST['VerAttachments'];
-    $VerPhoto1Name=$_POST['VerPhoto1Name'];
+    // $VerPhoto1Name=$_POST['VerPhoto1Name'];
     $VerPhoto1Ref=$_POST['VerPhoto1Ref'];
-    $VerPhoto2Name=$_POST['VerPhoto2Name'];
-    if (!ISSET($_POST['VerPhoto2Name'])) {
+    //$VerPhoto2Name=$_POST['VerPhoto2Name'];
+    if (!ISSET($_POST['VerPhoto2Ref'])) {
         $VerPhoto2Ref=""; 
     } else {
-    $VerPhoto2Ref=$_POST['VerPhoto2Ref'];
+        $VerPhoto2Ref=$_POST['VerPhoto2Ref'];
     }
     $VerComm=$_POST['VerComm'];
     
@@ -64,17 +64,17 @@
     //echo $TempaDesign."<br />";
     //echo $TempaText."<br />";
     //echo $VerAttachments."<br />";
-    //echo $VerPhoto1Name."<br />";
+    
     //echo $VerPhoto1Ref."<br />";
-    //echo $VerPhoto2Name."<br />";
+    
     //echo $VerPhoto2Ref."<br />";
     //echo $VerComm."<br />";
  
     
     $query="INSERT INTO Matchbox_Versions (UMID, VERID, FAB_No, Master_Mack_No, VerName, VerYrFirstRel, VerTyp, CodeLvl, SecManuf, BodyColor, TempaDesign, TempaText,
-            VerAttachments, VerPhoto1Name, VerPhoto1Ref, VerPhoto2Name, VerPhoto2Ref, VerComm
+            VerAttachments, VerPhoto1Ref, VerPhoto2Ref, VerComm
             ) VALUES ('$UMID','$VERID','$FAB_No','$Master_Mack_No','$VerName','$VerYrFirstRel','$VerTyp', '$CodeLvl', '$SecManuf', '$BodyColor','$TempaDesign', '$TempaText',
-            '$VerAttachments','$VerPhoto1Name','$VerPhoto1Ref','$VerPhoto2Name','$VerPhoto2Ref', '$VerComm')";
+            '$VerAttachments','$VerPhoto1Ref','$VerPhoto2Ref', '$VerComm')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;
     // header("Location: Add_Version_Form.php");
