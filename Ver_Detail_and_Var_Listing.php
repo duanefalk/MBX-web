@@ -92,6 +92,10 @@
 			echo "<p><strong>MAN #:</strong> " . $row["FAB_No"] . "</p>";
 			echo "<p><strong>First Prod.:</strong> " . $row["VerYrFirstRel"] . "</p>";
 			echo "<p><strong>Version Type:</strong> " . $row["VerTyp"] . "</p>";
+			echo "<p><strong>Code level:</strong> " . $row["CodeLvl"] . "</p>";
+			if ($row["CodeLvl"]=="2") {
+				echo "<p><strong>C2 Manufacturer:</strong> ".$row["SecManuf"] . "</p>";
+			}
 			echo "<div class='carDetails'>";
 				echo "<p><strong>Body Color:</strong> " . $row["BodyColor"] . "</p>";
 				if (!empty($row["TempaDesign"])) {
@@ -100,10 +104,7 @@
 				if (!empty($row["TempaText"])) {
 					echo "<p><strong>Text:</strong> " . $row["TempaText"] . "</p>";
 				}
-				echo "<p><strong>Code level:</strong> " . $row["CodeLvl"] . "</p>";
-				if ($row["CodeLvl"]=="2") {
-					echo "<p><strong>C2 Manufacturer:</strong> ".$row["SecManuf"] . "</p>";
-				}
+
 				if ($row["VerAttachments"]) {
 					echo "<p><strong>Attachments:</strong> " . $row["VerAttachments"] . "</p>";
 				}			
