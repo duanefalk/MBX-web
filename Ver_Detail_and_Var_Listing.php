@@ -29,7 +29,7 @@
 				}
 			$row = mysql_fetch_array($result);
 			echo "<h3>Version ID: " . $row["VerID"] . "</h3>";
-			echo "<ul class='large-block-grid-2'>";
+			echo "<ul class='large-block-grid-3'>";
 			echo "<li class='carGrid'>";
 			
 			$picture1 = IMAGE_URL . $row["VerID"] . "_1.jpg";
@@ -126,7 +126,7 @@
 				}
 			if ($rows2>1) {
 			        $url= "Variation_Comparison.php?model=".$Version_to_detail;
-				echo "<a class=\"button dark\" href=\"".$url."\">Var Comparison Chart</a><br></><br></>";
+				echo "<a class=\"button dark\" href=\"".$url."\">Var Comparison Chart</a>";
 			}
 			for ($i=1; $i<=$rows2; $i++) {
 				$row2 = mysql_fetch_array($result2);
@@ -136,21 +136,28 @@
 				$picture2 = IMAGE_URL . $row2["VarID"] . "_2.jpg";
 				$picture2_loc = IMAGE_PATH . $row2["VarID"] . "_2.jpg";	
 				
-				$Variation_to_detail= $row2["VarID"];
-				$url= "Variation_Detail.php?model=".$Variation_to_detail;				
+				$Variation_to_detail = $row2["VarID"];
+				$url = "Variation_Detail.php?model=".$Variation_to_detail;
+				
+				echo "<div class='row'>";
+				echo "<div class='large-4 columns'>";
+							
 				if (file_exists($picture1_loc)) {
 					//echo "picture exists";
-					echo "<a href=\"".$url."\">"."<img src=".$picture1." /></a>";
+					echo "<a href=\"".$url."\"><img src=".$picture1." /></a>";
 				} else {
 					//echo "cant find picture";
 					//echo DEFAULT_IMAGE;
-					echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
+					echo "<a href=\"".$url."\"><img src=".DEFAULT_IMAGE." /></a>";
 				}
 
 				if (file_exists($picture2_loc)) {
 					//echo "picture exists";
-					echo "<a href=\"".$url."\">"."<img src=".$picture2." /></a>";
+					echo "<a href=\"".$url."\"><img src=".$picture2." /></a>";
 				}
+				
+				echo "</div>";
+				echo "</div>";
 												
 				$PhotoRefCd1= $row2["VarPhoto1Ref"];
 				$PhotoRefCd2= $row2["VarPhoto2Ref"];
