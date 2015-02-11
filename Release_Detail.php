@@ -137,7 +137,8 @@
 					$rows_count4a = 0;									
 					$result4a = mysql_query($query4a);
 					$rows4a = mysql_num_rows($result4a);
-					echo $result4a;
+		
+	
 					
 					$query4b=("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_for_detail'");								
 					$result4b=0;
@@ -178,12 +179,15 @@
 						</div>
 						<div class="large-6 columns">
 							<h5>Wishlist</h5>
-							<?php if ($rows4a == 0) {
-							    echo "<p>You already have this release on your wishlist.</p>";
-							    $Wishlist_option = 0;
+							
+							<?php
+							echo $rows4a;
+							if ($rows4a) {
+								echo "<p><You already have this release on your wishlist.</p>";
+								$Wishlist_option = 1;
 							} else {
-							    echo "<p><You do not have this release on your wishlist.</p>";
-							    $Wishlist_option = 1;
+							        echo "<p>You do not have this release on your wishlist.</p>";
+								$Wishlist_option = 0;
 							} ?>
 							<p>Would you like to add this variation to your wishlist? (cancel to do neither)</p>
 							<input type="radio" name="Coll_or_wishlist_Choice" id="rblWishlist" value="Wishlist"><label for="rblWishlist">Wishlist</label>
