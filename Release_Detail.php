@@ -29,7 +29,7 @@
 			}
 		?>
 	
-		<form action="Add_Rel_Coll_or_Wishlist" action="Add_Rel_Coll_or_Wishlist.php" method="post">
+		<form action="Add_Rel_Coll_or_Wishlist.php" method="post">
 			<ul class="large-block-grid-2">
 				<li class="carGrid">
 					<?php	
@@ -78,137 +78,126 @@
 					<p>Rel Yr: <?php echo $row["RelYr"]; ?></p>
 					
 					<?php
-					echo "Country of Sale:  ".$row["CountryOfSale"]."<br />";
-					echo "Product Line:  ".$row["Line"]."<br />";
+					echo "<p><strong>Country of Sale:</strong> ".$row["CountryOfSale"]."</p>";
+					echo "<p><strong>Product Line:</strong> ".$row["Line"]."</p>";
 					if ($row["Theme"]) {
-						echo "Rel Theme:   ".$row["Theme"]."<br />";
+						echo "<p><strong>Rel Theme:</strong> ".$row["Theme"]."</p>";
 					}
 					if ($row["SeriesID"] AND ($row["ShowSeriesID"]=1)) {
-						echo "Series:   ".$row["Series"]."  Series ID:  ".$row["SeriesID"]."<br />";
+						echo "<p><strong>Series:</strong> ".$row["Series"]."  Series ID:  ".$row["SeriesID"]."</p>";
 					} else {
-						echo "Series:   ".$row["Series"]."<br />";
+						echo "<p><strong>Series:</strong> " . $row["Series"] . "</p>";
 					}
 					if ($row["SubSeries"]) {
 						if ($row["SubSeriesID"] AND ($row["ShowSubSeriesID"]=1)) {
-							echo "SubSeries:   ".$row["SubSeries"]."  SubSeries ID:  ".$row["SubSeriesID"]."<br />";
+							echo "<p><strong>SubSeries:</strong> " . $row["SubSeries"] . "  SubSeries ID: " . $row["SubSeriesID"] . "</p>";
 						} else {
-							echo "SubSeries:   ".$row["SubSeries"]."<br />";
+							echo "<p><strong>SubSeries:</strong> ".$row["SubSeries"]."</p>";
 						}
 					}
 					if ($row["PkgName"]) {
-						echo "Name of the Pkg:   ".$row["PkgName"]."<br />";
+						echo "<p><strong>Name of the Pkg:</strong> ".$row["PkgName"]."</p>";
 					}
 					if ($row["MdlNameOnPkg"]) {
-						echo "Model Name on the Pkg:   ".$row["MdlNameOnPkg"]."<br />";
+						echo "<p><strong>Model Name on the Pkg:</strong> ".$row["MdlNameOnPkg"]."</p>";
 					}
 					
 					echo "<div class='carDetails'>";
 						
-						if ($row["PkgID"]) {
-							echo "Pkg ID#:   ".$row["PkgID"]."<br />";
-						} else {
-							echo "Pkg ID#:  UNKNOWN"."<br />";
+						if ($row["PkgID"]) { ?>
+							<p><strong>Package ID#:</strong> <?php echo $row["PkgID"]; ?></strong></p>
+						<?php } else {
+							echo "<p><strong>Package ID#:</strong>  UNKNOWN" . "</p>";
 						}
 						if ($row["SeriesID"] AND ($row["ShowSeriesID"]=1)) {
-							echo "Pkg Type Cd:   ".$row["PkgVarCd"]."<br />";
+							echo "<p><strong>Package Type Code:</strong> " . $row["PkgVarCd"] . "</p>";
 						} else {
-							echo "Pkg Type:  UNKNOWN"."<br />";
+							echo "<p><strong>Package Type:</strong> UNKNOWN" . "</p>";
 						}
 						if ($row["RelComm"]) {
-							echo "Comments:   ".$row["RelComm"]."<br />";
-						}						
+							echo "<p><strong>Comments:</strong> " . $row["RelComm"] . "</p>";
+						}
 						
-						//check on existing collection or wishlist records
-						$User = "duanefalk";
-						//get the collection ID
-						$query3 = ("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");								
-						$result3 = 0;
-						$rows_count3 = 0;									
-						$result3 = mysql_query($query3);
-						$row3 = mysql_fetch_array($result3);
-						$User_CollID = $row3['User_Coll_ID']; 
-			    
-						//see if rel or variation exist in wish list and advise user
-						echo "Variation Selected: ".$Var_to_Add."<br /><br />";
-						$query4a = ("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND RelID='$Release_for_detail'");								
-						$result4a = 0;
-						$rows_count4a = 0;									
-						$result4a = mysql_query($query4a);
+					echo "</div>";					
 						
+					//check on existing collection or wishlist records
+					$User = "duanefalk";
+					//get the collection ID
+					$query3 = ("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");								
+					$result3 = 0;
+					$rows_count3 = 0;									
+					$result3 = mysql_query($query3);
+					$row3 = mysql_fetch_array($result3);
+					$User_CollID = $row3['User_Coll_ID']; 
+		    
+					//see if rel or variation exist in wish list and advise user
+					echo "<p><strong>Variation Selected:</strong> " . $Var_for_detail . "</p>";
+					$query4a = ("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND RelID='$Release_for_detail'");								
+					$result4a = 0;
+					$rows_count4a = 0;									
+					$result4a = mysql_query($query4a);
+					$rows4a = mysql_num_rows($result4a);
+					echo $result4a;
+					
+					$query4b=("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_for_detail'");								
+					$result4b=0;
+					$rows_count4b=0;									
+					$result4b = mysql_query($query4b);
+					//can only have a var in wishlist once, see if have already, set option to add                    
+		    
+					$query5a = ("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND RelID='$Release_for_detail'");								
+					$result5a = 0;
+					$rows_count5a = 0;									
+					$result5a = mysql_query($query5a);
+					$rows5a = mysql_num_rows($result5a);
+		
+					$query5b = ("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_for_detail'");								
+					$result5b = 0;
+					$rows_count5b = 0;									
+					$result5b = mysql_query($query5b);
+					$rows5b = mysql_num_rows($result5b);
 			
-						$query4b=("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_for_detail'");								
-						$result4b=0;
-						$rows_count4b=0;									
-						$result4b = mysql_query($query4b);			
-						//can only have a var in wishlist once, see if have already, set option to add                    
-			    
-						$query5a=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND RelID='$Release_for_detail'");								
-						$result5a = 0;
-						$rows_count5a = 0;									
-						$result5a = mysql_query($query5a);
-			
-						$query5b=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_for_detail'");								
-						$result5b = 0;
-						$rows_count5b = 0;									
-						$result5b = mysql_query($query5b);
-			
-						if ($result4a!=false) {
-						    echo "<p>You already have this release on your wishlist.</p>";
-						    $Wishlist_option = 0;
-			    
-						    if ($result5a != false) {
+					?>
+					
+					<div class="row">
+						<div class="large-6 columns">
+							<h5>Collection</h5>							
+							<?php if ($rows5a != false) {
 								echo "<p>You have " . mysql_num_rows($result5a) . " copy/copies of release " . $Rel_to_Add . " in your collection.</p>";
 								echo "<p>If you want to edit an existing record, select 'Update Models in Your Collection' from the menu bar on this page.</p>";
-								echo "<p>Continue below if you want to add a new copy of this release to your collection.</p>";
-						    } else {
-								echo "You do not have this release in your collection.";
-								if ($result5b != false) {
-									echo "Nor do you have this model variation in your collection."."<br />";
-									echo "Continue below if you want to add a new copy of this release to your collection."."<br /><br />";
-								} else {
-									echo "You do have ".mysql_num_rows($result5b)." copy/copies of the variation ".$Var_to_Add." in your collection however."."<br />";
-									echo "Continue below if you want to add this release to your collection as well."."<br /><br />";
-								}
-						    }
-						} else {
-						    echo "You do not have this release on your wishlist."."<br />";
-						    $Wishlist_option=1;
-			
-						    if ($result5a != false) {
-								echo "<p>You have " . mysql_num_rows($result5a) . " copy/copies of release " . $Rel_to_Add . " in your collection.</p>";
-								echo "<p>If you want to edit an existing record, select 'Update Models in Your Collection' from the menu bar on this page.</p>";
-						    } else {
+							} else {
 								echo "<p>You do not have this release in your collection.</p>";
-							
-								if ($result5b === false) { ?>
-									<p>Nor do you have this model variation in your collection.</p>
-								<?php } else {
-									echo "<p>You do have " . mysql_num_rows($result5b) . " copy/copies of the variation " . $Var_to_Add . " in your collection however.</p>";
-									echo "<p>Continue below if you want to add this release to your collection as well.</p>";
+								if ($rows5b != false) {
+									echo "<p>You do have " . mysql_num_rows($result5b) . " copy/copies of the variation " . $Var_to_Add . " in your collection however.</p>";							
+								} else {
+									echo "<p>Nor do you have this model variation in your collection.</p>";
 								}
-						    }
-						} ?>
-						
-						<p>Add variation to wishlist, or to collection? (cancel to do neither)</p>
-						
-						<div class="row">
-							<div class="large-6 columns">
-								<input type="radio" name="Coll_or_wishlist_Choice" id="rblCollection" value="Coll" /><label for="rblCollection">Collection</label>
-							</div>
-							<div class="large-6 columns">
-								<input type="radio" name="Coll_or_wishlist_Choice" id="rblWishlist" value="Wishlist"><label for="rblWishlist">Wishlist</label>
-							</div>
+							} ?>
+							<p>Would you like to add this release to your collection? (cancel to do neither)</p>
+							<input type="radio" name="Coll_or_wishlist_Choice" id="rblCollection" value="Coll" /><label for="rblCollection">Collection</label>
 						</div>
-						<div class="row">
-							<div class="large-6 columns">
-								<input class="button dark" type="submit" value="Add <?php echo $row["RelID"]?>" id="submit" name="Rel_to_Add" />
-							</div>
-							<div class="large-6 columns">
-								<?php $url = "Ver_Detail_and_Var_Listing.php?model = ".$row["VerID"]; ?>
-								<a class="button cancel" href="<?php echo $url; ?>">Cancel</a>
-							</div>
-						</div>	
-					</div>				
+						<div class="large-6 columns">
+							<h5>Wishlist</h5>
+							<?php if ($rows4a == 0) {
+							    echo "<p>You already have this release on your wishlist.</p>";
+							    $Wishlist_option = 0;
+							} else {
+							    echo "<p><You do not have this release on your wishlist.</p>";
+							    $Wishlist_option = 1;
+							} ?>
+							<p>Would you like to add this variation to your wishlist? (cancel to do neither)</p>
+							<input type="radio" name="Coll_or_wishlist_Choice" id="rblWishlist" value="Wishlist"><label for="rblWishlist">Wishlist</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="large-6 columns">
+							<input class="button dark" type="submit" value="<?php echo $row["RelID"]?>" id="submit" name="Rel_to_Add" />
+						</div>
+						<div class="large-6 columns">
+							<?php $url = "Ver_Detail_and_Var_Listing.php?model = ".$row["VerID"]; ?>
+							<a class="button cancel" href="<?php echo $url; ?>">Cancel</a>
+						</div>
+					</div>			
 				</li>
 			</ul>
 		</form>

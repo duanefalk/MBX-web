@@ -425,10 +425,11 @@ dl.accordion dd > a:hover {
 .carGrid p {
   margin: 0 0 .75em;
   line-height: 120%;
-  font-size: 90%;
+  font-size: 95%;
 }
 /* line 179, sass/style.scss */
 .carGrid .carDetails {
+  margin-bottom: 1em;
   margin-top: 1em;
   padding: 1em;
   border-top: 0.25em solid rgba(8, 123, 128, 0.5);
