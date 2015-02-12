@@ -1,4 +1,12 @@
 <div id="utilityNav">
+	<div id="warningLocal">
+		<div class="row">
+			<div class="large-12 columns">
+				<p>Achtung! This is your <em>local</em> version of MBX</p>
+			</div>
+		</div>
+	</div>
+	
 	<div class="row">
 		<div class="large-12 columns">
 	

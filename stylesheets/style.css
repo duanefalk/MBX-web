@@ -164,18 +164,15 @@ select {
 }
 
 /* -- Header --------------- */
-/* line 91, sass/style.scss */
+/* line 90, sass/style.scss */
 #header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  top: 0;
+  /*position:fixed; z-index:2; width:100%; top:0;*/
   margin: 0;
   padding: 0 0 2em;
   background: #d45132 url("../images/bgHeaderBottom.jpg") bottom center repeat-x;
 }
 @media only screen and (max-width: 480px) {
-  /* line 91, sass/style.scss */
+  /* line 90, sass/style.scss */
   #header {
     position: relative;
     top: auto;
@@ -183,18 +180,18 @@ select {
   }
 }
 
-/* line 95, sass/style.scss */
+/* line 93, sass/style.scss */
 #logo {
   display: block;
 }
 @media only screen and (max-width: 1024px) {
-  /* line 95, sass/style.scss */
+  /* line 93, sass/style.scss */
   #logo {
     text-align: center;
   }
 }
 
-/* line 99, sass/style.scss */
+/* line 96, sass/style.scss */
 #mainNav {
   list-style-type: none;
   margin: 1em 0 0;
@@ -205,23 +202,23 @@ select {
   letter-spacing: .75px;
 }
 @media only screen and (max-width: 1024px) {
-  /* line 99, sass/style.scss */
+  /* line 96, sass/style.scss */
   #mainNav {
     text-align: center;
   }
 }
-/* line 102, sass/style.scss */
+/* line 99, sass/style.scss */
 #mainNav li {
   display: inline-block;
 }
-/* line 103, sass/style.scss */
+/* line 100, sass/style.scss */
 #mainNav a {
   padding: .5em 1em;
   font-size: 90%;
   color: #f6f3dd;
 }
 @media only screen and (max-width: 480px) {
-  /* line 103, sass/style.scss */
+  /* line 100, sass/style.scss */
   #mainNav a {
     padding: .5em .25em;
     font-size: 80%;
@@ -229,17 +226,39 @@ select {
 }
 
 /* -- Navigation ------------- */
-/* line 113, sass/style.scss */
+/* line 107, sass/style.scss */
 #utilityNav {
   margin-bottom: .5em;
   text-align: right;
   background: rgba(68, 68, 68, 0.25);
 }
 @media only screen and (max-width: 480px) {
-  /* line 113, sass/style.scss */
+  /* line 107, sass/style.scss */
   #utilityNav {
     text-align: center;
   }
+}
+/* line 110, sass/style.scss */
+#utilityNav #warningLocal {
+  display: none;
+  padding: .5em 0;
+  text-align: center;
+  background: #087b80;
+}
+/* line 111, sass/style.scss */
+#utilityNav #warningLocal p {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+/* line 112, sass/style.scss */
+#utilityNav #warningLocal p em {
+  color: #d6eae9;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 /* line 116, sass/style.scss */
 #utilityNav a {
@@ -265,7 +284,7 @@ select {
 }
 
 /* -- Footer ------------- */
-/* line 132, sass/style.scss */
+/* line 131, sass/style.scss */
 #footer {
   margin: 4em 0 0;
   padding: 3em 0;
@@ -273,20 +292,20 @@ select {
   color: #f6f3dd;
   background: #087b80 url("../images/bgGrit.jpg") top repeat;
 }
-/* line 134, sass/style.scss */
+/* line 133, sass/style.scss */
 #footer p {
   margin-bottom: .25em;
   color: #f6f3dd;
 }
 @media only screen and (max-width: 480px) {
-  /* line 134, sass/style.scss */
+  /* line 133, sass/style.scss */
   #footer p {
     font-size: 80%;
   }
 }
 
 /* -- Subnav -- */
-/* line 140, sass/style.scss */
+/* line 139, sass/style.scss */
 #subNav {
   margin-top: 3em;
   padding: 0 .75em;
@@ -295,19 +314,19 @@ select {
   border-bottom: 0.2em solid rgba(68, 68, 68, 0.25);
 }
 @media only screen and (max-width: 480px) {
-  /* line 140, sass/style.scss */
+  /* line 139, sass/style.scss */
   #subNav {
     padding: 0;
     text-align: center;
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 143, sass/style.scss */
+  /* line 142, sass/style.scss */
   #subNav .large-12.columns {
     padding: 0;
   }
 }
-/* line 145, sass/style.scss */
+/* line 144, sass/style.scss */
 #subNav p.tip {
   display: inline-block;
   margin: 0;
@@ -318,13 +337,13 @@ select {
   border-right: 0.2em solid rgba(68, 68, 68, 0.25);
 }
 @media only screen and (max-width: 480px) {
-  /* line 145, sass/style.scss */
+  /* line 144, sass/style.scss */
   #subNav p.tip {
     display: block;
     border-right: 0;
   }
 }
-/* line 148, sass/style.scss */
+/* line 147, sass/style.scss */
 #subNav a {
   display: inline-block;
   padding: .75em 2em .5em;
@@ -335,7 +354,7 @@ select {
   border-right: 0.2em solid rgba(68, 68, 68, 0.25);
 }
 @media only screen and (max-width: 480px) {
-  /* line 148, sass/style.scss */
+  /* line 147, sass/style.scss */
   #subNav a {
     display: block;
     padding: 1em 0 .75em;
@@ -343,13 +362,13 @@ select {
     border-top: 0.2em solid rgba(68, 68, 68, 0.25);
   }
 }
-/* line 151, sass/style.scss */
+/* line 150, sass/style.scss */
 #subNav a:hover {
   color: #d45132;
 }
 
 /* -- Forms -- */
-/* line 156, sass/style.scss */
+/* line 155, sass/style.scss */
 .formRow {
   margin-bottom: 1em;
   padding-bottom: .5em;
@@ -357,14 +376,14 @@ select {
 }
 
 /* -- Accordions -- */
-/* line 159, sass/style.scss */
+/* line 158, sass/style.scss */
 dl.accordion {
   margin: 0 auto 1em;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-/* line 161, sass/style.scss */
+/* line 160, sass/style.scss */
 dl.accordion dd > a {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -372,22 +391,22 @@ dl.accordion dd > a {
   color: white;
   background: #087b80;
 }
-/* line 162, sass/style.scss */
+/* line 161, sass/style.scss */
 dl.accordion dd > a:hover {
   background: #099298;
 }
 
 /* -- Car Grids -- */
-/* line 167, sass/style.scss */
+/* line 166, sass/style.scss */
 .carGrid {
   margin: 1em 0;
   font-size: 80%;
 }
-/* line 168, sass/style.scss */
+/* line 167, sass/style.scss */
 .carGrid a {
   display: block;
 }
-/* line 169, sass/style.scss */
+/* line 168, sass/style.scss */
 .carGrid img {
   display: block;
   max-width: 100%;
@@ -396,38 +415,38 @@ dl.accordion dd > a:hover {
   /*red*/
   /*yellow*/
 }
-/* line 170, sass/style.scss */
+/* line 169, sass/style.scss */
 .carGrid img.own {
   border-bottom: 10px solid #2E8B57;
 }
-/* line 171, sass/style.scss */
+/* line 170, sass/style.scss */
 .carGrid img.own-not {
   border-bottom: 10px solid #de3939;
 }
-/* line 172, sass/style.scss */
+/* line 171, sass/style.scss */
 .carGrid img.own-poor {
   border-bottom: 10px solid #ffde42;
 }
-/* line 174, sass/style.scss */
+/* line 173, sass/style.scss */
 .carGrid .photoref {
   margin: .5em 0 1.5em;
   font-size: 80%;
   font-style: italic;
   line-height: 100%;
 }
-/* line 177, sass/style.scss */
+/* line 176, sass/style.scss */
 .carGrid h6 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 120%;
 }
-/* line 178, sass/style.scss */
+/* line 177, sass/style.scss */
 .carGrid p {
   margin: 0 0 .75em;
   line-height: 120%;
   font-size: 95%;
 }
-/* line 179, sass/style.scss */
+/* line 178, sass/style.scss */
 .carGrid .carDetails {
   margin-bottom: 1em;
   margin-top: 1em;
