@@ -36,12 +36,14 @@ $Username=$_SESSION['Username'];
 				$result = mysql_query($query);
 				$rows= mysql_num_rows($result); //print_r($result);
 				echo "<h3>"."CODE 1 & 2/3 Versions found: ".$rows."</h3>";
-				if(!$result) {
-
-					}					
-				for ($i=1; $i<=$rows; $i++)
-					{
-					echo "<div class=\"car-block\">";
+				if(!$result) {}	
+			?>
+			
+				<ul class="large-block-grid-3 small-block-grid-2">
+				
+			<?php
+				for ($i=1; $i<=$rows; $i++) {
+					echo "<li class='carGrid'>";
 						//make image clickable and send proper umid to model_detail pa
 						$row=mysql_fetch_array($result);
 						$picture= IMAGE_URL . $row["VerID"]."_1.jpg";
@@ -121,8 +123,9 @@ $Username=$_SESSION['Username'];
 						if ($row["CodeLvl"]=="2") {
 							echo " C2 Manuf.: ".$row["SecManuf"]."</p>";
 						}
-					echo "</div>";
-					}	
+					echo "</li>";
+					}
+					echo "</ul>";	
 			} else {
 				//start by showing code1
 				$query= ("SELECT * FROM Matchbox_Versions WHERE FAB_No LIKE '%$model_for_detail%' AND CodeLvl='1' ORDER BY VerYrFirstRel,VerID ASC");
