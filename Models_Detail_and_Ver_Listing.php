@@ -120,7 +120,7 @@ $Username=$_SESSION['Username'];
 					echo "No matching results found"; //mysql_error();
 					exit;
 				}			
-				echo "<ul class='large-block-grid-3'>";		
+				echo "<ul class='large-block-grid-5'>";		
 				for ($i=1; $i<=$rows; $i++) {
 					echo "<li class='carGrid'>";
 						//make image clickable and send proper umid to model_detail pa
@@ -231,7 +231,7 @@ $Username=$_SESSION['Username'];
 					echo "No matching results found"; //mysql_error();
 					exit;
 				}
-				echo "<ul class='large-block-grid-3'>";
+				echo "<ul class='large-block-grid-5'>";
 				for ($i=1; $i<=$rows; $i++) {
 					echo "<li class='carGrid'>";
 					
@@ -330,7 +330,7 @@ $Username=$_SESSION['Username'];
 						echo "No matching results found"; //mysql_error();
 						exit;
 					}
-					echo "<ul class='large-block-grid-3'>";		
+					echo "<ul class='large-block-grid-5'>";		
 					for ($i=1; $i<=$rows; $i++) {
 						echo "<li class='carGrid'>";
 						
@@ -416,46 +416,46 @@ $Username=$_SESSION['Username'];
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {
 				echo "<h2>1-75 series</h2>";
-				echo "<ul class='large-block-grid-3'>";
+				echo "<ul class='large-block-grid-5'>";
 				
 				for ($i=1; $i<=$rel_rows; $i++) {
 					
-					$rel_row = mysql_fetch_array($rel_result);
-					$curr_yr = $rel_row["RelYr"];
-	
-					if ($i==1) {
-						$last_yr = $curr_yr;
-						echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
-					}
-					if ($curr_yr != $last_yr) {
-						echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
-					}
-					
 					echo "<li class='carGrid'>";
 					
-					//print info
-					$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
-					$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
-					$url = "Release_Detail.php?model=" . $rel_row["RelID"];
+						$rel_row = mysql_fetch_array($rel_result);
+						$curr_yr = $rel_row["RelYr"];
+		
+						if ($i==1) {
+							$last_yr = $curr_yr;
+							echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
+						}
+						if ($curr_yr != $last_yr) {
+							echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
+						}					
 					
-					if (file_exists($picture_loc)) {
-						echo "<a href='" . $url . "'><img src=" . $picture . " /></a>";
-					} else {	
-						echo "<a href='" . $url . "'><img src=" . DEFAULT_IMAGE . " /></a>";
-					}
-					if ($rel_row["RelPkgPhotoRef"]) {
-						$query2 = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
-						$result2 = mysql_query($query2);
-						$row2 = mysql_fetch_array($result2);
-						echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
-					} else {
-						echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
-					}
-					echo "<p><strong>Country:</strong> ".$rel_row["CountryOfSale"]."</p>";
-					echo "<p><strong>Rel ID:</strong> ". $rel_row["RelID"]."</p>";
-					echo "<p><strong>Series ID:</strong> ".$rel_row["SeriesID"]."</p>";
-					echo "<p><strong>Name on Pakage:</strong> ".$rel_row["MdlNameOnPkg"]."</p>";	
-					$last_yr = $curr_yr;
+						//print info
+						$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
+						$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
+						$url = "Release_Detail.php?model=" . $rel_row["RelID"];
+						
+						if (file_exists($picture_loc)) {
+							echo "<a href='" . $url . "'><img src=" . $picture . " /></a>";
+						} else {	
+							echo "<a href='" . $url . "'><img src=" . DEFAULT_IMAGE . " /></a>";
+						}
+						if ($rel_row["RelPkgPhotoRef"]) {
+							$query2 = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+							$result2 = mysql_query($query2);
+							$row2 = mysql_fetch_array($result2);
+							echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
+						} else {
+							echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
+						}
+						echo "<p><strong>Country:</strong> ".$rel_row["CountryOfSale"]."</p>";
+						echo "<p><strong>Rel ID:</strong> ". $rel_row["RelID"]."</p>";
+						echo "<p><strong>Series ID:</strong> ".$rel_row["SeriesID"]."</p>";
+						echo "<p><strong>Name on Pakage:</strong> ".$rel_row["MdlNameOnPkg"]."</p>";	
+						$last_yr = $curr_yr;
 					
 					echo "</li>";
 				}
@@ -468,7 +468,7 @@ $Username=$_SESSION['Username'];
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {	
 				echo "<h2>SUPERFAST</h2>";
-				echo "<ul class='large-block-grid-3'>";
+				echo "<ul class='large-block-grid-5'>";
 				
 				for ($i=1; $i<=$rel_rows; $i++) {
 					echo "<li class='carGrid'>";
@@ -518,7 +518,7 @@ $Username=$_SESSION['Username'];
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {
 				echo "<h2>MULTI-PACKS</h2>";
-				echo "<ul class='large-block-grid-3'>";
+				echo "<ul class='large-block-grid-5'>";
 				
 				for ($i=1; $i<=$rel_rows; $i++) {
 					echo "<li class='carGrid'>";
@@ -570,50 +570,49 @@ $Username=$_SESSION['Username'];
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {	
 				echo "<h2>OTHER CODE 1 RELEASES</h2>";
-				echo "<ul class='large-block-grid-3'>";
+				echo "<ul class='large-block-grid-5'>";
 				
 				for ($i=1; $i<=$rel_rows; $i++) {
 					
-					$rel_row = mysql_fetch_array($rel_result);
-					$curr_yr = $rel_row["RelYr"];
-	
-					if ($i==1) {
-						$last_yr = $curr_yr;
-						echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
-					}
-					if ($curr_yr != $last_yr) {
-						echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
-					}
-					
-					
 					echo "<li class='carGrid'>";
 					
-					//print info
-					$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
-					$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
-					$url = "Release_Detail.php?model=" . $rel_row["RelID"];
-					if (file_exists($picture_loc)) {
-						echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
-					} else {	
-						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
-					}
-					if ($rel_row["RelPkgPhotoRef"]) {
-						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
-						$result2= mysql_query($query2);
-						$row2 =mysql_fetch_array($result2);
-						echo "<p class=\"photoref\">Photo by: " . $row2["RefName"]."</p>";
-					} else {
-						echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
-					}
-					echo "<p><strong>Country:</strong> ".$rel_row["CountryOfSale"]."</p>";
-					echo "<p><strong>Rel ID:</strong> ". $rel_row["RelID"]."</p>";
-					if ($rel_row["SeriesID"]) {
-						echo "<p><strong>Series ID:</strong> ".$rel_row["SeriesID"]."</p>";
-					}
-					if ($rel_row["MdlNameOnPkg"]) {
-						echo "<p><strong>Name on Package:</strong> " . $rel_row["MdlNameOnPkg"] . "</p>";	
-					}
-					$last_yr = $curr_yr;
+						$rel_row = mysql_fetch_array($rel_result);
+						$curr_yr = $rel_row["RelYr"];
+		
+						if ($i==1) {
+							$last_yr = $curr_yr;
+							echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
+						}
+						if ($curr_yr != $last_yr) {
+							echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
+						}
+					
+						//print info
+						$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
+						$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
+						$url = "Release_Detail.php?model=" . $rel_row["RelID"];
+						if (file_exists($picture_loc)) {
+							echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
+						} else {	
+							echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
+						}
+						if ($rel_row["RelPkgPhotoRef"]) {
+							$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+							$result2= mysql_query($query2);
+							$row2 =mysql_fetch_array($result2);
+							echo "<p class=\"photoref\">Photo by: " . $row2["RefName"]."</p>";
+						} else {
+							echo "<p class=\"photoref\">Photo by: no reference listed"."</p>";
+						}
+						echo "<p><strong>Country:</strong> ".$rel_row["CountryOfSale"]."</p>";
+						echo "<p><strong>Rel ID:</strong> ". $rel_row["RelID"]."</p>";
+						if ($rel_row["SeriesID"]) {
+							echo "<p><strong>Series ID:</strong> ".$rel_row["SeriesID"]."</p>";
+						}
+						if ($rel_row["MdlNameOnPkg"]) {
+							echo "<p><strong>Name on Package:</strong> " . $rel_row["MdlNameOnPkg"] . "</p>";	
+						}
+						$last_yr = $curr_yr;
 					
 					echo "</li>";
 				}
