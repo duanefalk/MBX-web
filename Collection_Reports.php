@@ -10,8 +10,11 @@
 				<a href="Collection_Report_A" class="button dark">Collection Summary</a>
 			</div>
 			<div class="large-4 columns end">   
-		        <a href="Collection_Report_H" class="button dark">Summary for all Sellers</a>
-		    </div>
+				<a href="Collection_Report_H" class="button dark">Summary for all Sellers</a>
+			</div>
+			<div class="large-4 columns end">   
+				<a href="Collection_Report_W" class="button dark">Wishlist Report</a>
+			</div>			
 		</div>
 		<!--div class="large-4 columns">
 	    	<a href="Collection Report_B" class="button dark">Models from a Seller</a>
