@@ -9,6 +9,8 @@ session_start();
 
 <div class="row">
 	<div class="large-12 columns">
+	    <a href="Collection_Reports.php" class="button dark">Return to Collection Reports Menu</a>
+            <a href="index.php" class="button dark">Return to Main Page</a>	
             <?php  
 		echo "<h2>Collection Summary</h2>";
 		$Username=$_SESSION['Username'];
@@ -24,12 +26,24 @@ session_start();
 		echo "<td width='200' align='center'># of Sellers Defined</td>";  
 		echo "<td width='200' align='center'># of Locations Defined</td>";
 		echo "</tr>";
-	
-		$result2 = mysql_query("SELECT COUNT(DISTINCT(Coll_List_Value)) FROM Matchbox_User_Coll_Value_List WHERE Username='$Username' AND Coll_List_Type='Seller'"); 
-                $row2=mysql_fetch_array($result2);
-		echo "<h5>No. of Sellers Set Up: ".$row2['COUNT(DISTINCT(Coll_List_Value)']."</h5>";	
-                   
-            e
+		
+		echo "<tr style='font-weight: bold;'>";
+		$result2 = mysql_query("SELECT COUNT(DISTINCT(Coll_List_Value)) FROM Matchbox_User_Coll_Value_List WHERE Username='$Username' AND Coll_List_Type='Seller'"); 		
+		if ($result2) {
+			$row2 = mysql_fetch_array($result2);			 
+			echo "<td align='center' width='200'>" . $row2['COUNT(DISTINCT(Coll_List_Value)'] . "</td>";
+		} else {
+			echo "<td align='center' width='200'>" . "no sellers defined</td>";
+		}
+		$result3 = mysql_query("SELECT COUNT(DISTINCT(Coll_List_Value)) FROM Matchbox_User_Coll_Value_List WHERE Username='$Username' AND Coll_List_Type='Location'");
+		if ($result3) {
+			$row3 = mysql_fetch_array($result3);			 
+			echo "<td align='center' width='200'>" . $row3['COUNT(DISTINCT(Coll_List_Value)'] . "</td>";
+		} else {
+			echo "<td align='center' width='200'>" . "no locations defined</td>";
+		}
+		echo "</tr>";
+		echo "</table>";
             ?>
 	</div>
 </div>

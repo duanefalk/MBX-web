@@ -13,6 +13,9 @@
 				<a href="Collection_Report_H" class="button dark">Summary for all Sellers</a>
 			</div>
 			<div class="large-4 columns end">   
+				<a href="Collection_Report_M" class="button dark">Models in Collection</a>
+			</div>					
+			<div class="large-4 columns end">   
 				<a href="Collection_Report_W" class="button dark">Wishlist Report</a>
 			</div>			
 		</div>

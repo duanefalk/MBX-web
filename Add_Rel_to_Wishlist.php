@@ -1,3 +1,10 @@
+<?php ob_start(); ?>
+<?php
+// we must never forget to start the session
+session_start();
+?>
+
+
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
@@ -13,13 +20,20 @@
 				$RelID=$_POST["rel_to_add"];
 				$VarID=substr($RelID,0,12);
 				$VerID=substr($VarID,0,10);
-				$UMID=substr($VerID,0,6);        
-				$Coll_Username="duanefalk";
-				$User_Coll_ID="FALKCOLL1";
+				$UMID=substr($VerID,0,6);
+				
+				//Get user and coll id
+				$User=$_SESSION['Username'];
+				$query3=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");								
+				$result3=0;
+				$rows_count3=0;									
+				$result3 = mysql_query($query3);
+				$row3=mysql_fetch_array($result3);
+				$User_Coll_ID=$row3["User_Coll_ID"];
 				$Wishlist_InactivFlg="0";
 			
 				$query="INSERT INTO Matchbox_User_Wishlist (Username, User_Coll_ID, UMID, VerID, VarID, RelID, Wishlist_InactivFlg) 
-				VALUES ('$Coll_Username', '$User_Coll_ID', '$UMID','$VerID', '$VarID', '$RelID', '$Wishlist_InactivFlg')";
+				VALUES ('$User', '$User_Coll_ID', '$UMID','$VerID', '$VarID', '$RelID', '$Wishlist_InactivFlg')";
 			
 				$outcome=mysql_query($query);
 			

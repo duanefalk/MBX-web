@@ -11,19 +11,13 @@ session_start();
 
 <?php
     if (isset($_POST['var_to_add'])) {
-        echo "sees as post set";
-        //open db
-        //require_once("includes/db_connection.php");
-        //Do collection table updates
-        //Fields:
     	$User=$_SESSION['Username'];
 	$query3=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");								
 	$result3=0;
 	$rows_count3=0;									
 	$result3 = mysql_query($query3);
 	$row3=mysql_fetch_array($result3);
-	$User_CollID=$row3["User_Coll_ID"];
-
+	$User_Coll_ID=$row3["User_Coll_ID"];
 
 	$VarID=$_POST["var_to_add"];
         $VerID=substr($VarID,0,10);
@@ -31,19 +25,15 @@ session_start();
 
 	$Wishlist_InactivFlg="0";
 
-	echo $VarID."<br />";
-	echo $VerID."<br />";
-	echo $UMID."<br />";
-	echo $User."<br />";
-	echo $User_Coll_ID."<br />";
-	echo $Wishlist_InactivFlg."<br />";
+
      
         $query="INSERT INTO Matchbox_User_Wishlist (Username, User_Coll_ID, UMID, VerID, VarID, Wishlist_InactivFlg) 
-            VALUES ('$User', '$User_CollID', '$UMID','$VerID', '$VarID', '$Wishlist_InactivFlg')";
+            VALUES ('$User', '$User_Coll_ID', '$UMID','$VerID', '$VarID', '$Wishlist_InactivFlg')";
    
         $outcome=mysql_query($query);
         if ($outcome) {
         //if ((mysql_query($query)) == true)
+	    echo "Added variation ".$VarID." to wishlist for ".$User." in collection ".$User_Coll_ID."<br />";
             echo "<p>Done and returning</p>";
             //require_once("includes/close_db_connection.php");
             //Return;

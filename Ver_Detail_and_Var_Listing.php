@@ -228,6 +228,7 @@
 				
 			$model_for_detail = $row["UMID"];
 			$url = "Models_Detail_and_Ver_Listing.php?model=" . $model_for_detail;
+			
 		?>
 		<a class="button cancel" href="<?php echo $url; ?>">Cancel</a>
 	</div>

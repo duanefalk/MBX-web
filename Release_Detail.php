@@ -121,75 +121,72 @@
 					echo "</div>";					
 						
 					//check on existing collection or wishlist records
-					$User = "duanefalk";
+					$User=$_SESSION['Username'];
+					
 					//get the collection ID
 					$query3 = ("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");								
 					$result3 = 0;
 					$rows_count3 = 0;									
 					$result3 = mysql_query($query3);
 					$row3 = mysql_fetch_array($result3);
-					$User_CollID = $row3['User_Coll_ID']; 
+					$User_Coll_ID = $row3['User_Coll_ID']; 
 		    
 					//see if rel or variation exist in wish list and advise user
 					echo "<p><strong>Variation Selected:</strong> " . $Var_for_detail . "</p>";
-					$query4a = ("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND RelID='$Release_for_detail'");								
-					$result4a = 0;
-					$rows_count4a = 0;									
-					$result4a = mysql_query($query4a);
-					$rows4a = mysql_num_rows($result4a);
-		
-	
 					
-					$query4b=("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_for_detail'");								
-					$result4b=0;
-					$rows_count4b=0;									
+					//scrap this option, just vars in wishlist
+					//$query4a = ("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_Coll_ID' AND RelID='$Release_for_detail'");								
+					//$result4a = 0;
+					//$rows_count4a = 0;									
+					//$result4a = mysql_query($query4a);
+					//$rows4a = mysql_num_rows($result4a);
+	
+					$query4b=("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_Coll_ID' AND VarID='$Var_for_detail'");																
 					$result4b = mysql_query($query4b);
-					//can only have a var in wishlist once, see if have already, set option to add                    
+					
+					//can only have a var in wishlist once, see if have already, set option to add release to it                   
 		    
-					$query5a = ("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND RelID='$Release_for_detail'");								
-					$result5a = 0;
-					$rows_count5a = 0;									
+					$query5a = ("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_Coll_ID' AND RelID='$Release_for_detail'");														
 					$result5a = mysql_query($query5a);
-					$rows5a = mysql_num_rows($result5a);
 		
-					$query5b = ("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_for_detail'");								
-					$result5b = 0;
-					$rows_count5b = 0;									
+					$query5b = ("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_Coll_ID' AND VarID='$Var_for_detail'");																	
 					$result5b = mysql_query($query5b);
-					$rows5b = mysql_num_rows($result5b);
+
 			
-					?>
+					?> 
 					
 					<div class="row">
 						<div class="large-6 columns">
-							<h5>Collection</h5>							
-							<?php if ($rows5a != false) {
-								echo "<p>You have " . mysql_num_rows($result5a) . " copy/copies of release " . $Rel_to_Add . " in your collection.</p>";
-								echo "<p>If you want to edit an existing record, select 'Update Models in Your Collection' from the menu bar on this page.</p>";
-							} else {
-								echo "<p>You do not have this release in your collection.</p>";
-								if ($rows5b != false) {
-									echo "<p>You do have " . mysql_num_rows($result5b) . " copy/copies of the variation " . $Var_to_Add . " in your collection however.</p>";							
+							<h5>Collection</h5>
+							<?php
+								$rows5a= mysql_num_rows($result5a);
+								$rows5b= mysql_num_rows($result5b);
+								if ($rows5a >0) {
+									echo "<p>You have ". $rows5a." copy/copies of this release in your collection.</p>";
+									echo "<p>If you want to edit one of those, select Manage Models in Collection under Your Collections. Click the button below to add another, or cancel to return to version details.</p>";
+								} elseif ($rows5b >0) {
+									echo "<p>You have this variation, but not this release. If you want to add the release to the existing variation record, go to 'Update Models in Your Collection' from the menu bar on this page. To add another record with this release, click the burron below below.</p>";
 								} else {
-									echo "<p>Nor do you have this model variation in your collection.</p>";
+									echo "<p>You don't have this variation/release in your collection. To add it click the button below.</p>";
 								}
-							} ?>
-							<p>Would you like to add this release to your collection? (cancel to do neither)</p>
+							?>
+							<br></><br></>
 							<input type="radio" name="Coll_or_wishlist_Choice" id="rblCollection" value="Coll" /><label for="rblCollection">Collection</label>
 						</div>
 						<div class="large-6 columns">
-							<h5>Wishlist</h5>
-							
+							<h5>Wishlist</h5>		
 							<?php
-							echo $rows4a;
-							if ($rows4a) {
-								echo "<p><You already have this release on your wishlist.</p>";
-								$Wishlist_option = 1;
+							
+							$rows4b= mysql_num_rows($result4b);
+							if ($rows4b > 0) {
+								echo "You already have this variation/release on your wishlist /(you can only have one entry for a variation on the wishlist/). Cancel, below, to return to search page.";
 							} else {
-							        echo "<p>You do not have this release on your wishlist.</p>";
-								$Wishlist_option = 0;
-							} ?>
-							<p>Would you like to add this variation to your wishlist? (cancel to do neither)</p>
+								
+							        echo "<p>You do not have this variation/release on your wishlist.</p>";
+								echo "<p>Would you like to add it to your wishlist? (cancel to return to version details)</p>";
+							}
+							?>
+							<br></><br></>
 							<input type="radio" name="Coll_or_wishlist_Choice" id="rblWishlist" value="Wishlist"><label for="rblWishlist">Wishlist</label>
 						</div>
 					</div>
@@ -198,7 +195,11 @@
 							<input class="button dark" type="submit" value="<?php echo $row["RelID"]?>" id="submit" name="Rel_to_Add" />
 						</div>
 						<div class="large-6 columns">
-							<?php $url = "Ver_Detail_and_Var_Listing.php?model = ".$row["VerID"]; ?>
+							<?php
+							$Ver_for_detail= substr($Release_for_detail,0,10);
+							//$url = "Ver_Detail_and_Var_Listing.php?model = ".$Ver_for_detail;
+							$url="Search_Models_Menu.php";
+							?>
 							<a class="button cancel" href="<?php echo $url; ?>">Cancel</a>
 						</div>
 					</div>			

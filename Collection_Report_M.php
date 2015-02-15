@@ -12,7 +12,7 @@ session_start();
             <a href="Collection_Reports.php" class="button dark">Return to Collection Reports Menu</a>
             <a href="index.php" class="button dark">Return to Main Page</a>
 
-                <h2>Wishlist for <?php echo $_SESSION["Username"]; ?></h2>
+                <h2>Models in Collection of <?php echo $_SESSION["Username"]; ?></h2>
             <?php
 		$User=$_SESSION["Username"];
                 echo "<table border='1' style='border-collapse: collapse;border-color: silver;'>";  
@@ -23,7 +23,7 @@ session_start();
 		
 		
 			
-                $result = mysql_query("SELECT * FROM Matchbox_User_Wishlist WHERE Username = '$User' ORDER BY VarID ASC, RelID ASC");
+                $result = mysql_query("SELECT * FROM Matchbox_Collection WHERE Username = '$User' ORDER BY VarID ASC, RelID ASC");
 		if ($result) {
 			$rows= mysql_num_rows($result);
 			echo "rows: ".$rows;
@@ -37,7 +37,7 @@ session_start();
 			echo "</table>";
 		} else {
 			echo "</table>"; 
-			echo "No items in your wishlist";
+			echo "No models in your collection";
 		}
 		
             ?>

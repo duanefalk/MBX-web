@@ -340,8 +340,8 @@
 				echo "<p>MAN#: ".$row["FAB_No"]. "  Mack No.: ".$row["Master_Mack_No"]."</p>";
 				echo "<p>Master Name: ".$row["MasterModelName"]."</p>";
 				echo "<p>First Rel Dt: ".$row["YrFirstProduced"]."</p>";
-			echo "</li>";
-		} ?>
+				echo "</li>";
+			} ?>
 		
 		</ul>
 		

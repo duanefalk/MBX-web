@@ -8,9 +8,10 @@
         //open db
 
         //Fields:
-        $Coll_Username=$_POST['Coll_Username'];
-	$User_CollID=$_POST['User_CollID'];
-        $UMID=$_POST['Coll_UMID'];
+        $User=$_POST['Coll_Username'];
+	//$User_Coll_ID=$_POST['User_Coll_ID'];
+        $User_Coll_ID="DuncMB";
+	$UMID=$_POST['Coll_UMID'];
         $VerID=$_POST['Coll_VerID'];
         $VarID=$_POST['Coll_VarID'];
 	$RelID=$_POST['Coll_RelID'];
@@ -35,8 +36,8 @@
         //echo $VerID;
         //echo $VarID;
         //echo $RelID;
-	//echo  "from the post: ".$_POST['CollID'];       
-	//echo "collID= ".$UserCollID;
+	//echo  "from the post: ".$_POST['Coll_ID'];       
+	//echo "collID= ".$UserColl_ID;
         //echo $Copy;
         //echo $VehCond;
         //echo $PkgCond;
@@ -54,12 +55,33 @@
        
         $query="INSERT INTO Matchbox_Collection (Username, User_Coll_ID, UMID, VerID, VarID, RelID, User_SpecID, Copy, VehCond, PkgCond, ItemVal, StorLoc,
             StorLoc2, PurchDt, Seller, PurchPrice, SellFlag, MinSellPrice, CollComm, Coll_InactiveFlg) 
-            VALUES ('$Coll_Username','$User_CollID','$UMID','$VerID', '$VarID', '$RelID', '$User_SpecID', '$Copy', '$VehCond', '$PkgCond', '$ItemVal', '$StorLoc',
+            VALUES ('$User','$User_Coll_ID','$UMID','$VerID', '$VarID', '$RelID', '$User_SpecID', '$Copy', '$VehCond', '$PkgCond', '$ItemVal', '$StorLoc',
             '$StorLoc2', '$PurchDt', '$Seller', '$PurchPrice', '$SellFlg', '$MinSellPric', '$CollComm', '$Coll_InactiveFlg')";
    
         $outcome=mysql_query($query);
         if ($outcome) {
         //if ((mysql_query($query)) == true)
+	echo "Posted release ".$RelID. " to Collection<br></>";
+	//echo $Coll_Username;
+        //echo $UMID;
+        //echo $VerID;
+        //echo $VarID;
+        //echo $RelID;     
+	//echo $User_Coll_ID;
+        //echo $Copy;
+        //echo $VehCond;
+        //echo $PkgCond;
+        //echo $ItemVal;
+        //echo $StorLoc;
+        //echo $StorLoc2;
+        //echo $PurchDt;
+        //echo $Seller;
+        //echo $PurchPrice;
+        //echo $SellFlg;
+        //echo $MinSellPrice;
+        //echo $CollComm;
+        //echo $Coll_InactiveFlg;
+	echo "<br></>";
             echo "<p>Done and returning</p>";
             //require_once("includes/close_db_connection.php");
             //Return;
@@ -89,8 +111,11 @@
                 <?php
                     $Rel_to_Add=$_GET["model"];
 		    $Var_to_Add=substr($Rel_to_Add,0,12);
-                    $User="duanefalk";
-		    $CollID="FALKCOLL1";
+		    $User=$_SESSION['Username'];
+		    $query3=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");																
+		    $result3 = mysql_query($query3);
+		    $row3=mysql_fetch_array($result3);
+		    $User_Coll_ID=$row3["User_Coll_ID"];
                     echo "Release Selected: ".$Rel_to_Add."<br />";
 		    
 		    //get and display photo
@@ -113,8 +138,7 @@
                         echo "<br /><br />";
 
                         //determine what copy to default in field
-                        $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND RelID='$Rel_to_Add'");								
-			$result=0;
+                        $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_Coll_ID' AND RelID='$Rel_to_Add'");								
 			$result=mysql_query($query);
                         if ($result) {
                             $copy_to_show= (mysql_num_rows($result)+1);
@@ -122,8 +146,8 @@
                             $copy_to_show= "1";
                         }     
                     ?>
-                    <p>Username: <input type="text" name="Coll_Username" value="duanefalk" size="20" id="Coll_Username"></p>
-		    <p>Collection ID:  <input type="text" name="User_CollID" value="FALKCOLL1" size="12" id="User_CollID"></p>
+                    <p>Username: <input type="text" name="Coll_Username" value="<?php echo $User;?>" size="20" id="Coll_Username"></p>
+		    <p>Collection ID:  <input type="text" name="User_Coll_ID" value="<?php echo $User_Coll_ID;?>" size="12" id="User_Coll_ID"></p>
                     <p>UMID:     	  <input type="text" name="Coll_UMID" value="<?php echo $Coll_UMID;?>" size="6" id="Coll_UMID"></p>
                     <p>Version ID:    <input type="text" name="Coll_VerID" value="<?php echo $Coll_VerID;?>" size="10" id="Coll_VerID"></p>
                     <p>Variation ID:  <input type="text" name="Coll_VarID" value="<?php echo $Coll_VarID;?>" size="13" id="Coll_VarID"></p>
@@ -180,7 +204,7 @@
                     <p>Item Value:      <input type="text" name="Coll_Value" value="" size="10" id="Coll_Value"></p>
                     <p>Storage Location 1:     
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_Coll_ID%' AND Coll_List_Type LIKE '%Location%'
                                     AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -201,7 +225,7 @@
                             </select>
                     <p>Storage Location 2:    
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_Coll_ID%' AND Coll_List_Type LIKE '%Location%'
                                     AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -223,7 +247,7 @@
                     <p>Purchase Date:      <input type="text" name="Coll_Purch_Dt" value="" size="8" id="Coll_Purch_Dt"></p>
                     <p>Seller:      
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Seller%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_Coll_ID%' AND Coll_List_Type LIKE '%Seller%'
                                     AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -251,7 +275,8 @@
                     <input type="submit" name="rel_coll_submit" value="Submit" id="rel_coll_submit"/>
         	</form>
                 <?php
-		    $url= "Release_Detail.php?model=".$Coll_RelID;
+		    
+		    $url= "Version_Detail.php?model=".$Coll_VerID;
 		    echo "<a href=\"".$url."\">Cancel</a>";
 		?>
             </td>
