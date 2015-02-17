@@ -178,7 +178,9 @@
 							
 							$rows4b= mysql_num_rows($result4b);
 							if ($rows4b > 0) {
-								echo "<p>You already have this variation/release on your wishlist (you can only have one entry for a variation on the wishlist). <a href='Search_Models_Menu'>Return to search page</a>.</p>";
+								echo "<p>You already have this variation/release on your wishlist (you can only have one entry for a variation on the wishlist).</p>";
+								echo "<p><a href='Collection_Report_W.php'>View Wishlist</a></p>";
+								echo "<p><a href='Search_Models_Menu.php'>Return to search page</a></p>";
 							} else {								
 							    echo "<p>You do not have this variation/release on your wishlist.</p>";
 								echo "<p>Would you like to add it to your wishlist? (cancel to return to version details)</p>";
