@@ -170,7 +170,6 @@
 									echo "<p>You don't have this variation/release in your collection. To add it click the button below.</p>";
 								}
 							?>
-							<br></><br></>
 							<input type="radio" name="Coll_or_wishlist_Choice" id="rblCollection" value="Coll" /><label for="rblCollection">Collection</label>
 						</div>
 						<div class="large-6 columns">
@@ -179,15 +178,13 @@
 							
 							$rows4b= mysql_num_rows($result4b);
 							if ($rows4b > 0) {
-								echo "You already have this variation/release on your wishlist /(you can only have one entry for a variation on the wishlist/). Cancel, below, to return to search page.";
-							} else {
-								
-							        echo "<p>You do not have this variation/release on your wishlist.</p>";
+								echo "<p>You already have this variation/release on your wishlist (you can only have one entry for a variation on the wishlist). <a href='Search_Models_Menu'>Return to search page</a>.</p>";
+							} else {								
+							    echo "<p>You do not have this variation/release on your wishlist.</p>";
 								echo "<p>Would you like to add it to your wishlist? (cancel to return to version details)</p>";
-							}
 							?>
-							<br></><br></>
-							<input type="radio" name="Coll_or_wishlist_Choice" id="rblWishlist" value="Wishlist"><label for="rblWishlist">Wishlist</label>
+								<input type="radio" name="Coll_or_wishlist_Choice" id="rblWishlist" value="Wishlist"><label for="rblWishlist">Wishlist</label>
+							<?php } ?>
 						</div>
 					</div>
 					<div class="row">
@@ -217,8 +214,6 @@
 		<a href="Search_Models_Menu.php">Search Models</a>
 		<a href="Search_Releases_Menu.php">Search Releases</a>
 	</div>
-</div>	
-			
-			
+</div>		
 			
 <?php include("includes/footer.php"); ?>

@@ -174,7 +174,9 @@ dl.accordion { margin:0 auto 1em; @include body;
 		margin:.5em 0 1.5em; font-size:80%; font-style:italic; line-height:100%;
 	}
 	h6 {text-transform:uppercase; letter-spacing:1px; font-size:120%;}
-	p { margin:0 0 .75em; line-height:120%; font-size:95%;}
+	p { margin:0 0 .75em; line-height:120%; font-size:95%;
+		a {display:inline;}
+	}
 	.carDetails {margin-bottom:1em;
 		margin-top:1em; padding:1em;
 		border-top:.25em solid transparentize($teal,.5);

@@ -447,6 +447,10 @@ dl.accordion dd > a:hover {
   font-size: 95%;
 }
 /* line 178, sass/style.scss */
+.carGrid p a {
+  display: inline;
+}
+/* line 180, sass/style.scss */
 .carGrid .carDetails {
   margin-bottom: 1em;
   margin-top: 1em;
