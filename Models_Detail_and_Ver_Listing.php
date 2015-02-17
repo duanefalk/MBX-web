@@ -120,7 +120,7 @@ $Username=$_SESSION['Username'];
 					echo "No matching results found"; //mysql_error();
 					exit;
 				}			
-				echo "<ul class='large-block-grid-5'>";		
+				echo "<ul class='large-block-grid-3'>";		
 				for ($i=1; $i<=$rows; $i++) {
 					echo "<li class='carGrid'>";
 						//make image clickable and send proper umid to model_detail pa
@@ -231,7 +231,7 @@ $Username=$_SESSION['Username'];
 					echo "No matching results found"; //mysql_error();
 					exit;
 				}
-				echo "<ul class='large-block-grid-5'>";
+				echo "<ul class='large-block-grid-3'>";
 				for ($i=1; $i<=$rows; $i++) {
 					echo "<li class='carGrid'>";
 					
@@ -330,7 +330,7 @@ $Username=$_SESSION['Username'];
 						echo "No matching results found"; //mysql_error();
 						exit;
 					}
-					echo "<ul class='large-block-grid-5'>";		
+					echo "<ul class='large-block-grid-3'>";		
 					for ($i=1; $i<=$rows; $i++) {
 						echo "<li class='carGrid'>";
 						
