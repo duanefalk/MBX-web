@@ -13,6 +13,7 @@ session_start();
 	<meta name="keywords" content="Matchbox,Matchbox cars,Superfast,Regular Wheels,Matchbox packages,Matchbox wheels">
 	<meta name="author" content="Duane Falk">
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
 	<title>Matchbox University</title>
 		
