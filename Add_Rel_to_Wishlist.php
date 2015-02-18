@@ -43,7 +43,7 @@ session_start();
 					//require_once("includes/close_db_connection.php");
 					//Return;
 			
-					$url= "Variation_Listing.php?model=".$VerID;
+					$url= "Ver_Detail_and_Var_Listing.php?model=".$VerID;
 					echo "<a href=\"".$url."\">Return to Listing</a>";
 					exit;
 				} else {
