@@ -25,9 +25,8 @@ a:focus {color:$orange; text-decoration:none;}
 a.imagePopup {cursor:zoom-in;}
 
 table {
-	
-	tr td {padding:5px 6px; vertical-align:top;}
-	
+	thead {background:transparentize($orange,.85);}	
+	tr td {padding:5px 6px; vertical-align:top; font-size:.85rem;}
 	tr.even,
 	tr.alt,
 	tr:nth-of-type(2n) {background:transparentize($teal,.925);}

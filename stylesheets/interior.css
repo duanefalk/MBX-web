@@ -314,3 +314,9 @@ Variation Comparison
 #querybox p {
   margin-bottom: 0;
 }
+
+/* -- Collection Reports: Wishlist -- */
+/* line 215, sass/interior.scss */
+#overflow {
+  overflow-x: scroll;
+}
