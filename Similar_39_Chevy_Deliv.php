@@ -16,12 +16,12 @@
                         <p>1)  MB215 has a distinct rear bumper; MB245 has no rear bumper</p>
                         <p>2)  Axle covers at the wheels are cast differently. MB215 has plastic covers cast to the wheels themselves. MB245 has covers cast as par tof the base. </p>
 
-			MB215:
+			MB215 (SF0399):
 			<br></>
  			<img src="images/similar_models/MAN-215.jpg" width=340>
                         <img src="images/similar_models/MAN-215-2.jpg" width=340>
 			<br></>	
-                        MB245:
+                        MB245 (SF0375):
 			<br></>
 			<img src="images/similar_models/MAN-245.jpg" width=340>
                         <img src="images/similar_models/MAN-245-2.jpg" width=340>
