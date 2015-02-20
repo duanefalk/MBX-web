@@ -48,6 +48,9 @@ session_start();
 					<td></td>
 					<td></td>
 					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
 	            </tr>
 			</thead>
             
@@ -77,9 +80,9 @@ session_start();
 					
 						if (file_exists($picture_loc)) {
 							//echo "picture exists";
-							echo "<td align='center' width='400'><img src=" . $picture . " /></td>";
+							echo "<td><img src=" . $picture . " /></td>";
 						} else {
-							echo "<td align='center'></td>";	
+							echo "<td><img src=" . DEFAULT_IMAGE . " /></td>";	
 						}
 						
 						echo "<td>" . $row['VarID'] . "</td>"; 
