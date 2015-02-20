@@ -23,31 +23,31 @@ session_start();
 		<table>
 			<thead>
 	        	<tr>
-					<td width='400'>Photo</td>
-	                <td width='200'>Variations</td>
-	                <td width='200'>MAN</td>
-					<td width='200'>Mack</td>
-					<td width='200'>Name</td>
-					<td width='200'>Origin</td>
-					<td width='200'>F Wh</td>
-					<td width='200'>R Wh</td>
-					<td width='200'>Window</td>
-					<td width='200'>Interior</td>
-					<td width='200'>Finish</td>
-					<td width='200'>Color Var</td>
-					<td width='200'>Tampo Var</td>
-					<td width='200'>Base Mat</td>
-					<td width='200'>Base Color</td>
-					<td width='200'>Detail Vars</td>
-					<td width='200'></td>
-					<td width='200'></td>
-					<td width='200'></td>
-					<td width='200'></td>
-					<td width='200'></td>
-					<td width='200'></td>
-					<td width='200'></td>
-					<td width='200'></td>
-					<td width='200'></td>
+					<td>Photo</td>
+	                <td>Variations</td>
+	                <td>MAN</td>
+					<td>Mack</td>
+					<td>Name</td>
+					<td>Origin</td>
+					<td>F Wh</td>
+					<td>R Wh</td>
+					<td>Window</td>
+					<td>Interior</td>
+					<td>Finish</td>
+					<td>Color Var</td>
+					<td>Tampo Var</td>
+					<td>Base Mat</td>
+					<td>Base Color</td>
+					<td>Detail Vars</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
 	            </tr>
 			</thead>
             
