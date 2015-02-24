@@ -415,6 +415,21 @@ dl.accordion dd > a:hover {
   display: block;
 }
 /* line 169, sass/style.scss */
+.carGrid a.thumb {
+  position: relative;
+}
+/* line 170, sass/style.scss */
+.carGrid a.thumb h6 {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  margin: 0;
+  padding: .25em .35em;
+  color: white;
+  font-size: .7rem;
+  background: #087b80;
+}
+/* line 172, sass/style.scss */
 .carGrid img {
   display: block;
   max-width: 100%;
@@ -423,38 +438,38 @@ dl.accordion dd > a:hover {
   /*red*/
   /*yellow*/
 }
-/* line 170, sass/style.scss */
+/* line 173, sass/style.scss */
 .carGrid img.own {
   border-bottom: 10px solid #2E8B57;
 }
-/* line 171, sass/style.scss */
+/* line 174, sass/style.scss */
 .carGrid img.own-not {
   border-bottom: 10px solid #de3939;
 }
-/* line 172, sass/style.scss */
+/* line 175, sass/style.scss */
 .carGrid img.own-poor {
   border-bottom: 10px solid #ffde42;
 }
-/* line 174, sass/style.scss */
+/* line 177, sass/style.scss */
 .carGrid .photoref {
   margin: .5em 0 1.5em;
   font-size: 80%;
   font-style: italic;
   line-height: 100%;
 }
-/* line 177, sass/style.scss */
+/* line 180, sass/style.scss */
 .carGrid h6 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 120%;
 }
-/* line 178, sass/style.scss */
+/* line 181, sass/style.scss */
 .carGrid p {
   margin: 0 0 .75em;
   line-height: 120%;
   font-size: 95%;
 }
-/* line 181, sass/style.scss */
+/* line 184, sass/style.scss */
 .carGrid .carDetails {
   margin-bottom: 1em;
   margin-top: 1em;

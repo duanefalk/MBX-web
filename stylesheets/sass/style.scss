@@ -166,6 +166,9 @@ dl.accordion { margin:0 auto 1em; @include body;
 /* -- Car Grids -- */
 .carGrid { margin:1em 0; font-size:80%;
 	a {display:block;}
+	a.thumb {position:relative;
+		h6 {position:absolute; left:0; top:8px; margin:0; padding:.25em .35em; color:$white; font-size:.7rem; background:$teal;}
+	}
 	img {display:block; max-width:100%; margin-bottom:.25em;
 		&.own {border-bottom:10px solid #2E8B57;}	/*green*/
 		&.own-not {border-bottom:10px solid #de3939;}	/*red*/

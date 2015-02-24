@@ -424,24 +424,26 @@ $Username=$_SESSION['Username'];
 					
 						$rel_row = mysql_fetch_array($rel_result);
 						$curr_yr = $rel_row["RelYr"];
-		
+						
+						/*
 						if ($i==1) {
 							$last_yr = $curr_yr;
-							echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
+							echo "<h6 class='" . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6>";
 						}
 						if ($curr_yr != $last_yr) {
-							echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
-						}					
-					
+							echo "<h6 class='" . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6>";
+						}	
+						*/
+						
 						//print info
 						$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
 						$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
 						$url = "Release_Detail.php?model=" . $rel_row["RelID"];
 						
 						if (file_exists($picture_loc)) {
-							echo "<a href='" . $url . "'><img src=" . $picture . " /></a>";
+							echo "<a class='thumb' href='" . $url . "'><img src=" . $picture . " /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 						} else {	
-							echo "<a href='" . $url . "'><img src=" . DEFAULT_IMAGE . " /></a>";
+							echo "<a class='thumb' href='" . $url . "'><img src=" . DEFAULT_IMAGE . " /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 						}
 						if ($rel_row["RelPkgPhotoRef"]) {
 							$query2 = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
@@ -476,6 +478,7 @@ $Username=$_SESSION['Username'];
 					$rel_row=mysql_fetch_array($rel_result);
 					$curr_yr=$rel_row["RelYr"];
 	
+					/*
 					if ($i==1) {
 						$last_yr = $curr_yr;
 						echo "<div class='row'><div class='large-12 columns'><h3>" . $rel_row["RelYr"] . "</h3></div></div>";
@@ -484,14 +487,16 @@ $Username=$_SESSION['Username'];
 					if ($curr_yr != $last_yr) {
 						echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
 					}
+					*/
+					
 					//print info
 					$picture= IMAGE_URL . $rel_row["RelID"]."_1.jpg";
 					$picture_loc=IMAGE_PATH. $rel_row["RelID"]."_1.jpg";
 					$url= "Release_Detail.php?model=".$rel_row["RelID"];
 					if (file_exists($picture_loc)) {
-						echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
+						echo "<a class='thumb' href=\"".$url."\">"."<img src=".$picture." /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 					} else {	
-						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
+						echo "<a class='thumb' href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
 						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
@@ -524,7 +529,8 @@ $Username=$_SESSION['Username'];
 					echo "<li class='carGrid'>";
 					$rel_row=mysql_fetch_array($rel_result);
 					$curr_yr=$rel_row["RelYr"];
-	
+					
+					/*
 					if ($i==1) {
 						$last_yr = $curr_yr;
 						echo "<div class='row'><div class='large-12 columns'><h3>" . $rel_row["RelYr"] . "</h3></div></div>";
@@ -533,14 +539,16 @@ $Username=$_SESSION['Username'];
 					if ($curr_yr != $last_yr) {
 						echo "<div class='row'><div class='large-12 columns'><h3>" . $rel_row["RelYr"] . "</h3></div></div>";						
 					}
+					*/
+					
 					//print info
 					$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
 					$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
 					$url= "Release_Detail.php?model=".$rel_row["RelID"];
 					if (file_exists($picture_loc)) {
-						echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
+						echo "<a class='thumb' href=\"".$url."\">"."<img src=".$picture." /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 					} else {	
-						echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
+						echo "<a class='thumb' href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
 						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
@@ -579,6 +587,7 @@ $Username=$_SESSION['Username'];
 						$rel_row = mysql_fetch_array($rel_result);
 						$curr_yr = $rel_row["RelYr"];
 		
+						/*
 						if ($i==1) {
 							$last_yr = $curr_yr;
 							echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
@@ -586,15 +595,16 @@ $Username=$_SESSION['Username'];
 						if ($curr_yr != $last_yr) {
 							echo "<div class='row'><div class='large-12 columns'><h3>".$rel_row["RelYr"]."</h3></div></div>";
 						}
+						*/
 					
 						//print info
 						$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
 						$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
 						$url = "Release_Detail.php?model=" . $rel_row["RelID"];
 						if (file_exists($picture_loc)) {
-							echo "<a href=\"".$url."\">"."<img src=".$picture." /></a>";
+							echo "<a class='thumb' href=\"".$url."\">"."<img src=".$picture." /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 						} else {	
-							echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /></a>";
+							echo "<a class='thumb' href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 						}
 						if ($rel_row["RelPkgPhotoRef"]) {
 							$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
