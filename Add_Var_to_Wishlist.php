@@ -39,12 +39,8 @@ session_start();
 				        
 				        if ($outcome) {
 				        	//if ((mysql_query($query)) == true)
-							echo "Added variation ".$VarID." to wishlist for ".$User." in collection ".$User_Coll_ID."<br />";
-				            echo "<p>Done and returning</p>";
-				            //require_once("includes/close_db_connection.php");
-				            //Return;
-				            $url= "Search_Models_Menu.php";
-							echo "<a href=\"".$url."\">Return to Search Models</a>";
+							echo "<p>Added variation ".$VarID." to wishlist for ".$User." in collection ".$User_Coll_ID."</p>";
+				            echo "<p><strong>Done</strong>. <a href='Search_Models_Menu.php'>Return to Search Models</a></p>";
 				            exit;
 				        } else {
 				            echo "<p>Subject creation failed. Please review entries.</p>";
@@ -91,7 +87,6 @@ session_start();
 		</ul>
 	</div>
 </div>
-
 	
 <!-- Sub Menu -->
 <div class="row" id="subNav">
