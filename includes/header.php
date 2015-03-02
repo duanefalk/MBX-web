@@ -15,8 +15,8 @@ session_start();
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-	<title>Matchbox University</title>
-		
+	<title>Matchbox University<?php if ($pageTitle) { echo " | " . $pageTitle; } ?></title>
+	
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="stylesheets/foundation.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/lightbox.css" media="all" rel="stylesheet" type="text/css" />
@@ -27,7 +27,14 @@ session_start();
 	<script src="js/vendor/modernizr.js"></script>	
 </head>
 
-<body>
+<?php
+	//Adding Page Title to <body> as a class="";
+	$pageTitle = strtolower($pageTitle);
+	$pageTitle = str_replace(' ', '_', $pageTitle);
+	$pageTitle = "class='" . $pageTitle . "'";
+?>
+
+<body <?php if ($pageTitle) { echo $pageTitle; } ?>>
 	
 	<div id="header">
 	

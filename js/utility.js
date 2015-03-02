@@ -21,4 +21,8 @@ $( document ).ready(function() {
 		});
 	});
 	
+	
+	//Search Models: 
+	//$('body.search_models #duplicateImages').css('display','block');
+	
 });

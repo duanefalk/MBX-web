@@ -305,18 +305,40 @@ Variation Comparison
   color: #919191;
 }
 
+/* -- Search Models -- */
+/* line 210, sass/interior.scss */
+body.search_models #duplicateImages {
+  display: none;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  max-width: 200px;
+  padding: 1em;
+  background: #d45132;
+}
+/* line 211, sass/interior.scss */
+body.search_models #duplicateImages p {
+  margin: 0 0 .5em;
+  color: white;
+  font-size: 70%;
+}
+/* line 212, sass/interior.scss */
+body.search_models #duplicateImages p:last-of-type {
+  margin-bottom: 0;
+}
+
 /* -- Search Releases ----- */
-/* line 209, sass/interior.scss */
+/* line 219, sass/interior.scss */
 #querybox {
   margin-bottom: 2em;
 }
-/* line 210, sass/interior.scss */
+/* line 220, sass/interior.scss */
 #querybox p {
   margin-bottom: 0;
 }
 
 /* -- Collection Reports: Wishlist -- */
-/* line 215, sass/interior.scss */
+/* line 225, sass/interior.scss */
 #overflow {
   overflow-x: scroll;
 }

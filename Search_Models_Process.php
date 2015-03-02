@@ -1,7 +1,13 @@
-<?php ob_start(); ?>
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header.php"); ?>
-<?php include("includes/functions.php"); ?>
+<?php 
+	ob_start();
+	require_once("includes/db_connection.php");
+	
+	$pageTitle = "Search Models";
+	include("includes/header.php");
+	
+	include("includes/functions.php"); 
+?>
+
 
 <div class="row">
 	<div class="large-12 column">
@@ -201,7 +207,7 @@
 					echo "ERROR no type selected";
 					exit;
 				}
-			} ELSEIF (!$_POST['TempaText']) {
+			} elseif (!$_POST['TempaText']) {
 				
 				// Search by Type criteria
 				$PrevModelCriteria="";
@@ -349,6 +355,11 @@
 		<?php mysql_free_result($result); ?>
 	</div>
 </div>
+
+<!--div id="duplicateImages">
+	<p>You might see duplicate images, keep in mind that the search results include multiple variations of a model.</p>
+	<p>Click a model to see further variations</p>
+</div-->
 
 <!-- Sub Menu -->
 <div class="row" id="subNav">
