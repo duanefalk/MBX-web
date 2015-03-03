@@ -298,7 +298,7 @@
 
 <div class="row">
 	<div class="large-12 columns">
-		<ul class="large-block-grid-3">
+		<ul class="large-block-grid-3 small-block-grid-3">
 		
 		<?php
 			for ($i=1; $i<=$rows; $i++) {
@@ -356,10 +356,15 @@
 	</div>
 </div>
 
-<!--div id="duplicateImages">
-	<p>You might see duplicate images, keep in mind that the search results include multiple variations of a model.</p>
-	<p>Click a model to see further variations</p>
-</div-->
+<!-- Duplicate Image message -->
+<div id="duplicateImages">
+	<div class="row">
+		<div class="large-12 columns">
+			<p>You might see duplicate images, keep in mind that the search results include multiple variations of a model.</p>
+			<p>Click a model to see further variations</p>
+		</div>
+	</div>
+</div>
 
 <!-- Sub Menu -->
 <div class="row" id="subNav">
