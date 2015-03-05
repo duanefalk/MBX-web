@@ -31,10 +31,9 @@ session_start();
 	//Adding Page Title to <body> as a class="";
 	$pageTitle = strtolower($pageTitle);
 	$pageTitle = str_replace(' ', '_', $pageTitle);
-	$pageTitle = "class='" . $pageTitle . "'";
 ?>
 
-<body <?php if ($pageTitle) { echo $pageTitle; } ?>>
+<body <?php if ($pageTitle) { echo "class='" . $pageTitle . "'"; } ?>>
 	
 	<div id="header">
 	
@@ -59,6 +58,21 @@ session_start();
 				</ul>
 			</div>
 		</div>
+		
+		<?php if ($pageTitle == 'home') { ?>
+			<div class="row" id="banner">
+				<div class="large-7 columns" id="bannerText">
+					<h2>What is the Matchbox University?</h2>
+					<p>The Matchbox University is an on-line database of Matchbox ‘miniatures’, from regular wheels models up through this year’s versions.</p>
+					<p>The listings are built in a relational database to catalog and categorize the models uniquely.</p>
+					<p><a href="About_site.php" class="button">Learn More</a></p>
+				</div>
+				<div class="large-5 columns" id="bannerImage">
+					<img src="images/banners/professor.png" />
+				</div>
+			</div>
+		<?php } ?>		
+		
 	</div>
 	
 	<div id="main">

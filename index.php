@@ -1,11 +1,12 @@
-<?php
-// we must never forget to start the session
-session_start();
+<?php 
+	session_start();
+	require_once("includes/functions.php");
+	require_once("includes/db_connection.php");
+	
+	$pageTitle = "Home";
+	//include("includes/header-home.php");
+	include("includes/header.php");
 ?>
-
-<?php require_once("includes/functions.php"); ?>
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header-home.php"); ?>
 
 
 <!--div class="row slider">

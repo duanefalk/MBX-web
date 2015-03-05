@@ -51,37 +51,37 @@ Variation Comparison
 
 /* -- Home --------------- */
 /* line 39, sass/interior.scss */
-#header-home {
+body.home #header {
   margin-bottom: 2em;
   background: #d45132 url("../images/banners/chalkboard.png") center center no-repeat;
 }
 /* line 41, sass/interior.scss */
-#header-home * {
+body.home #header * {
   color: #f6f3dd;
 }
 @media only screen and (max-width: 480px) {
   /* line 43, sass/interior.scss */
-  #header-home #logo {
+  body.home #header #logo {
     text-align: center;
   }
 }
 /* line 47, sass/interior.scss */
-#header-home #banner {
+body.home #header #banner {
   margin-top: 2em;
 }
 /* line 49, sass/interior.scss */
-#header-home #banner #bannerText {
+body.home #header #banner #bannerText {
   margin-top: 2em;
 }
 @media only screen and (max-width: 1024px) {
   /* line 52, sass/interior.scss */
-  #header-home #banner #bannerImage {
+  body.home #header #banner #bannerImage {
     text-align: center;
   }
 }
 @media only screen and (max-width: 480px) {
   /* line 55, sass/interior.scss */
-  #header-home #banner #bannerImage img {
+  body.home #header #banner #bannerImage img {
     max-width: 60%;
     margin: 0 auto;
   }
