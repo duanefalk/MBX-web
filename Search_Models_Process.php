@@ -360,8 +360,8 @@
 <div id="duplicateImages">
 	<div class="row">
 		<div class="large-12 columns">
-			<p>You might see duplicate images, keep in mind that the search results include multiple variations of a model.</p>
-			<p>Click a model to see further variations</p>
+			<p>You might see duplicate images here if there are multiple MAN#'s or Mack #'s covered by the same MBX-U model.</p>
+			<p>Click a model to see its versions and variations.</p>
 		</div>
 	</div>
 </div>

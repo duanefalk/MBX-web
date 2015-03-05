@@ -57,7 +57,7 @@
 					//echo "made connection ".$result."<br />";		
 				}
 				$rows_count= mysql_num_rows($result);
-				// echo "Rows COunt: ".$rows_count."<br />";
+				// echo "Rows Count: ".$rows_count."<br />";
 				?>
 				<select multiple size="10" name="Areas_of_Interest[]" id="ddlAreasOfInterest">
 				<?php

@@ -46,4 +46,3 @@ session_start();
 
 
 
-<?php include("includes/footer.php"); ?>
