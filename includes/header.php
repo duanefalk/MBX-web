@@ -1,6 +1,8 @@
 <?php
 ob_start(); 
 session_start();
+
+include_once("includes/analyticstracking.php");
 ?>
 
 <!doctype html>
