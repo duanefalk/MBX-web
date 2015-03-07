@@ -2,7 +2,6 @@
 
 <div class="row">
 	<div class="large-12 columns">
-	<a href="Reference_List.php" class="button dark">Photos Sources & Other Links</a>
         <a href="Window_Colors.php" class="button dark">Window Colors</a>
         <a href="Wheel_Types.php" class="button dark">Wheel Types</a>	
 	<a href="Theme_List.php" class="button dark">Release Themes</a>
