@@ -25,6 +25,7 @@ include_once("includes/analyticstracking.php");
 	<link href="stylesheets/jquery.bxslider.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/interior.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/print.css" media="all" rel="stylesheet" type="text/css" />
 	
 	<script src="js/vendor/modernizr.js"></script>	
 </head>

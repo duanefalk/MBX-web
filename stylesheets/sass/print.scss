@@ -1,0 +1,36 @@
+@import "settings";
+@import "compass";
+
+
+
+@media print {
+	body {width:90%; margin:0 auto;}
+	html * {-webkit-tap-highlight-color:$printBlack;}
+	
+	div:not(.reveal-modal) {display:block;}
+	
+	
+	#header {text-align:center;
+		a#logo { display:inline-block; padding:2em; background:$printBlack !important;
+			&:after {content:"";}
+		}
+	}
+	
+	.row.actionButtons .button.dark {padding:0;}
+	.button,
+	.button.dark {border-color:$printBlack;}
+	
+	/* -- WISHLIST TABLE -- */
+	#overflow {overflow-x:visible;
+		* {font-size:.7rem; color:red;}
+	}
+	
+	
+	/* -- HIDE -- */
+	#utilityNav,
+	ul#mainNav,
+	#quick_search,
+	#subNav {display:none;}
+	
+	
+}

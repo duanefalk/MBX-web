@@ -1,0 +1,66 @@
+/* -- Fonts -- */
+/* -- Colors -- */
+/*$cream : #F3EECE;*/
+@media print {
+  /* line 7, sass/print.scss */
+  body {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* line 8, sass/print.scss */
+  html * {
+    -webkit-tap-highlight-color: black;
+  }
+
+  /* line 10, sass/print.scss */
+  div:not(.reveal-modal) {
+    display: block;
+  }
+
+  /* line 13, sass/print.scss */
+  #header {
+    text-align: center;
+  }
+  /* line 14, sass/print.scss */
+  #header a#logo {
+    display: inline-block;
+    padding: 2em;
+    background: black !important;
+  }
+  /* line 15, sass/print.scss */
+  #header a#logo:after {
+    content: "";
+  }
+
+  /* line 19, sass/print.scss */
+  .row.actionButtons .button.dark {
+    padding: 0;
+  }
+
+  /* line 21, sass/print.scss */
+  .button,
+  .button.dark {
+    border-color: black;
+  }
+
+  /* -- WISHLIST TABLE -- */
+  /* line 24, sass/print.scss */
+  #overflow {
+    overflow-x: visible;
+  }
+  /* line 25, sass/print.scss */
+  #overflow * {
+    font-size: .7rem;
+    color: red;
+  }
+
+  /* -- HIDE -- */
+  /* line 33, sass/print.scss */
+  #utilityNav,
+  ul#mainNav,
+  #quick_search,
+  #subNav {
+    display: none;
+  }
+}

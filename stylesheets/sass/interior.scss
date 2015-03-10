@@ -16,12 +16,11 @@ Variation Comparison
 -- */
 
 /* -- Main -- */
-#main {/*padding-top:10em;*/ padding-top:2em;
+#main {padding-top:2em;
 	@media only screen and (max-width:480px){ padding-top:2em; font-size:90%; }
 	
 	h2:first-of-type {margin-bottom:1em;}
 }
-
 .home #main {padding-top:0;}
 
 
@@ -35,7 +34,7 @@ Variation Comparison
 
 
 
-/* -- Home --------------- */
+/* -- HOME ----------------------- */
 body.home #header { margin-bottom:2em; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;
 	
 	* {color:$cream;}
@@ -76,9 +75,10 @@ body.home #header { margin-bottom:2em; background:$orange url('../images/banners
 		}
 	}
 }
+/* -- end HOME ------------------- */
 
 
-/* -- Login Screen --------------- */
+/* -- LOGIN ---------------------- */
 #login { margin:3em auto;
 	
 	form {		
@@ -92,10 +92,12 @@ body.home #header { margin-bottom:2em; background:$orange url('../images/banners
 		}
 	}
 }
+/* -- end LOGIN ------------------ */
 
 
-/* -- About ----------------------- */
+/* -- ABOUT ---------------------- */
 .section { margin:1em auto 3em; padding-bottom:2em; border-bottom:.2em solid transparentize($black,.75);}
+/* -- end ABOUT ------------------ */
 
 
 /* -- Add Menu -- */
@@ -104,108 +106,32 @@ body.home #header { margin-bottom:2em; background:$orange url('../images/banners
 }
 
 
-/* -- Models Detail --------------- */
-
-.car-block {
-    width:240px;
-    display:inline-block; vertical-align:top;
-    margin:1em 1.2em;
-}
-
-.car-block img {
-    max-width:100%; 
-    margin-bottom:.5em;
-}
-
-.car-block img.own {border-bottom:10px solid #2E8B57;}	/*green*/
-.car-block img.own-not {border-bottom:10px solid #de3939;}	/*red*/
-.car-block img.own-poor {border-bottom:10px solid #ffde42;}	/*yellow*/
-
-.car-block p {
-    max-width:95%;
-    margin:0 0 .4em;
-    line-height:120%;
-}
-
-#photoref {
-	margin-bottom:.5em; font-size:x-small; font-style:italic; line-height:100%;
-}
-
-/*
-.tag { display:inline-block; padding:.15em 1em; font-size:80%; border:1px solid $black; @include roundedCorners; text-transform:lowercase;
+/* -- MODELS DETAIL -------------- */
+.car-block {display:inline-block; width:240px; vertical-align:top; margin:1em 1.2em;
+	img {max-width:100%; margin-bottom:.5em;
+		&.own {border-bottom:10px solid #2E8B57;}	/*green*/
+		&.own-not {border-bottom:10px solid #de3939;}	/*red*/
+		&.own-poor {border-bottom:10px solid #ffde42;}	/*yellow*/
+	}
 	
-	&.black {color:$white; background:#000;}
-	&.black.white {
-		color:$orange;
-		background-color: #000000; // Old browsers
-		@include filter-gradient(#000000, #ffffff, horizontal); // IE6-9
-		@include background-image(linear-gradient(left,  #000000 0%,#000000 50%,#ffffff 50%,#ffffff 100%));
-	}
-	&.blue {color:$white; background-color:#0033CC;}
-	&.blue.white {
-		color:$black; 
-		background-color: #316cf7; // Old browsers
-		@include filter-gradient(#316cf7, #ffffff, horizontal); // IE6-9
-		@include background-image(linear-gradient(left,  #316cf7 0%,#2989d8 50%,#207cca 50%,#ffffff 50%,#ffffff 100%));
-	}
-	&.dk.blue.white {
-		color:$orange;
-		background-color: #1b2f89; // Old browsers
-		@include filter-gradient(#1b2f89, #ffffff, horizontal); // IE6-9
-		@include background-image(linear-gradient(left,  #1b2f89 0%,#1b2f89 50%,#ffffff 50%,#ffffff 100%));
-
-	}
-	&.gold {background-color:#CC9900;}
-	&.lime.green {background-color:#00FF00;}
-	&.lime.green.black {
-		color:$white;
-		background-color: #00ff00; // Old browsers
-		@include filter-gradient(#00ff00, #000000, horizontal); // IE6-9
-		@include background-image(linear-gradient(left,  #00ff00 0%,#00ff00 50%,#000000 50%,#000000 99%));
-	}
-	&.lt.blue {color:$black; background-color:#66CCFF;}
-	&.red {color:$white; background-color:#CC0000;}
-	&.red.white {
-		color:$black;
-		background-color: #cc0000; // Old browsers
-		@include filter-gradient(#cc0000, #ffffff, horizontal); // IE6-9
-		@include background-image(linear-gradient(left,  #cc0000 0%,#cc0000 50%,#ffffff 50%,#ffffff 99%));
-	}
-	&.red.yellow {
-		color:$black;
-		background-color: #cc0000; // Old browsers
-		@include filter-gradient(#cc0000, #ffcc00, horizontal); // IE6-9
-		@include background-image(linear-gradient(left,  #cc0000 0%,#cc0000 50%,#ffcc00 50%,#ffcc00 100%));
-	}
-	&.orange {background-color:#FF6600;}
-	&.purple {color:$white; background-color:#6600CC;}
-	&.silver {background-color:#D6D6D6;}
-	&.white {background-color:$white;}
-	&.white.orange {
-		background-color: #ffffff; // Old browsers
-		@include filter-gradient(#ffffff, #ff6600, horizontal); // IE6-9
-		@include background-image(linear-gradient(left,  #ffffff 0%,#ffffff 50%,#ff6600 50%,#ff6600 99%));
-	}
-	&.yellow {background-color:#FFCC00;}
-	&.yellow.green {background-color:#CCFF33;}
-	&.yellow.white {
-		background-color: #ffcc00; // Old browsers
-		@include filter-gradient(#ffcc00, #ffffff, horizontal); // IE6-9
-		@include background-image(linear-gradient(left,  #ffcc00 0%,#ffcc00 50%,#ffffff 50%,#ffffff 99%));
-	}
+	p {max-width:95%; margin:0 0 .4em; line-height:120%;}
 }
-*/
 
-/* -- Variations Comparison -- */
+#photoref {margin-bottom:.5em; font-size:x-small; font-style:italic; line-height:100%;}
+/* -- end MODELS DETAIL ---------- */
+
+
+/* -- VARIATIONS COMPARISON ------ */
 #varCompare {
 	table tr td {
 		&:first-of-type {min-width:140px; @include headline; }
 		span {color:lighten($black,30%);}
 	}
 }
+/* -- end VARIATIONS COMPARISON -- */
 
 
-/* -- Search Models -- */
+/* -- SEARCH MODELS -------------- */
 body.search_models {
 	#duplicateImages {z-index:10; opacity:0; position:fixed; bottom:0; width:100%; padding:1em; background:$orange; transition:opacity 3s ease; -webkit-transition-delay:1s; transition-delay:1s;
 		p {margin:0 0 .5em; color:$white; font-size:80%;
@@ -213,13 +139,16 @@ body.search_models {
 		}		
 	}
 }
+/* -- end SEARCH MODELS --------- */
 
 
-/* -- Search Releases ----- */
+/* -- SEARCH RELEASES ----------- */
 #querybox { margin-bottom:2em;
 	p {margin-bottom:0;}
 }
+/* -- end SEARCH RELEASES ------- */
 
 
-/* -- Collection Reports: Wishlist -- */
+/* -- COLLECTION REPORTS: WISHLIST -- */
 #overflow {overflow-x:scroll;}
+/* -- end COLLECTION REPORTS: WISHLIST -- */
