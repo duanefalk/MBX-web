@@ -16,6 +16,8 @@
 		}
 	}
 	
+	#footer {margin:1em 0; padding:0;}
+	
 	.row.actionButtons .button.dark {padding:0;}
 	.button,
 	.button.dark {border-color:$printBlack;}
@@ -23,6 +25,7 @@
 	/* -- WISHLIST TABLE -- */
 	#overflow {overflow-x:visible;
 		* {font-size:.7rem; color:red;}
+		img {max-width:140px !important;}
 	}
 	
 	
@@ -30,7 +33,7 @@
 	#utilityNav,
 	ul#mainNav,
 	#quick_search,
-	#subNav {display:none;}
-	
+	#subNav,
+	#printThis {display:none;}	
 	
 }

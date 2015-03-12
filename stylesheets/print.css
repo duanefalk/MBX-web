@@ -34,33 +34,44 @@
   }
 
   /* line 19, sass/print.scss */
-  .row.actionButtons .button.dark {
+  #footer {
+    margin: 1em 0;
     padding: 0;
   }
 
   /* line 21, sass/print.scss */
+  .row.actionButtons .button.dark {
+    padding: 0;
+  }
+
+  /* line 23, sass/print.scss */
   .button,
   .button.dark {
     border-color: black;
   }
 
   /* -- WISHLIST TABLE -- */
-  /* line 24, sass/print.scss */
+  /* line 26, sass/print.scss */
   #overflow {
     overflow-x: visible;
   }
-  /* line 25, sass/print.scss */
+  /* line 27, sass/print.scss */
   #overflow * {
     font-size: .7rem;
     color: red;
   }
+  /* line 28, sass/print.scss */
+  #overflow img {
+    max-width: 140px !important;
+  }
 
   /* -- HIDE -- */
-  /* line 33, sass/print.scss */
+  /* line 37, sass/print.scss */
   #utilityNav,
   ul#mainNav,
   #quick_search,
-  #subNav {
+  #subNav,
+  #printThis {
     display: none;
   }
 }

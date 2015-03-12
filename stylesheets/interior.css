@@ -281,6 +281,7 @@ body.search_models #duplicateImages p:last-of-type {
 /* line 153, sass/interior.scss */
 #overflow {
   overflow-x: scroll;
+  margin-bottom: 2em;
 }
 
 /* -- end COLLECTION REPORTS: WISHLIST -- */
