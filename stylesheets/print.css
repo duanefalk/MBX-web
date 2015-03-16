@@ -13,60 +13,69 @@
     -webkit-tap-highlight-color: black;
   }
 
+  /* line 9, sass/print.scss */
+  .row {
+    max-width: 100%;
+  }
   /* line 10, sass/print.scss */
+  .row .columns {
+    padding: 0;
+  }
+
+  /* line 14, sass/print.scss */
   div:not(.reveal-modal) {
     display: block;
   }
 
-  /* line 13, sass/print.scss */
+  /* line 17, sass/print.scss */
   #header {
     text-align: center;
   }
-  /* line 14, sass/print.scss */
+  /* line 18, sass/print.scss */
   #header a#logo {
     display: inline-block;
     padding: 2em;
     background: black !important;
   }
-  /* line 15, sass/print.scss */
+  /* line 19, sass/print.scss */
   #header a#logo:after {
     content: "";
   }
 
-  /* line 19, sass/print.scss */
+  /* line 23, sass/print.scss */
   #footer {
     margin: 1em 0;
     padding: 0;
   }
 
-  /* line 21, sass/print.scss */
+  /* line 25, sass/print.scss */
   .row.actionButtons .button.dark {
     padding: 0;
   }
 
-  /* line 23, sass/print.scss */
+  /* line 27, sass/print.scss */
   .button,
   .button.dark {
     border-color: black;
   }
 
   /* -- WISHLIST TABLE -- */
-  /* line 26, sass/print.scss */
+  /* line 30, sass/print.scss */
   #overflow {
     overflow-x: visible;
   }
-  /* line 27, sass/print.scss */
+  /* line 31, sass/print.scss */
   #overflow * {
     font-size: .7rem;
     color: red;
   }
-  /* line 28, sass/print.scss */
+  /* line 32, sass/print.scss */
   #overflow img {
     max-width: 140px !important;
   }
 
   /* -- HIDE -- */
-  /* line 37, sass/print.scss */
+  /* line 41, sass/print.scss */
   #utilityNav,
   ul#mainNav,
   #quick_search,

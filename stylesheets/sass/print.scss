@@ -6,6 +6,10 @@
 @media print {
 	body {width:90%; margin:0 auto;}
 	html * {-webkit-tap-highlight-color:$printBlack;}
+	.row {max-width:100%; 
+		.columns {padding:0;}
+	}
+	
 	
 	div:not(.reveal-modal) {display:block;}
 	
