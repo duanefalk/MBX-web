@@ -361,7 +361,7 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<p>You might see duplicate images here if there are multiple MAN#'s or Mack #'s covered by the same MBX-U model.</p>
-			<p>Clicking on any of the matches to see the versions and variations for that MBX-U model.</p>
+			<p>Click on any of the matches to see the versions and variations for that MBX-U model.</p>
 		</div>
 	</div>
 </div>
