@@ -151,7 +151,7 @@ session_start();
 			    if ($result_cond) {
                                 $rows_count= mysql_num_rows($result_cond);                 
                                 for ($i=1; $i<=$rows_count; $i++) {
-                                    $row=mysql_fetch_array($result);
+                                    $row=mysql_fetch_array($result_cond);
                                     $Cond_scheme= $row['Veh_Cond_Scheme'];
                                 }
                             } else {
@@ -159,7 +159,7 @@ session_start();
                             }
 			    
 			    //show conditions in approp scheme    
-			    if ($Cond_scheme == 0) {
+			    if ($Cond_scheme ==1) {
 				$Veh_Cond_Scheme="Alpha_cond";
 			    } else {
 				$Veh_Cond_Scheme="Num_cond";			
@@ -187,40 +187,48 @@ session_start();
 			
                     <p>Package Condition: 
                         <?php
-                            //Get this from session vars and add to user prefs hard code for now
-                            $query_cond=("SELECT * FROM MBXU_User_Accounts WHERE Username=$Username");
+                            //determine from account what scheme for pkg cond
+			    $query_cond=("SELECT * FROM MBXU_User_Accounts WHERE Username='$Username'");
 			    $result_cond = mysql_query($query_cond);
+			    if ($result_cond) {
+                                $rows_count= mysql_num_rows($result_cond);                 
+                                for ($i=1; $i<=$rows_count; $i++) {
+                                    $row=mysql_fetch_array($result);
+                                    $Cond_scheme= $row['Pkg_Cond_Scheme'];
+                                }
+                            } else {
+                                echo "Your account is corrupted, contact admin";
+                            }
 			    
-			    $Cond_scheme=$result_cond['Pkg_Cond_Scheme'];
-			    if ($Cond_scheme == "0") {
-				$Pkg_Cond_Scheme="Alpha_Pkg_Cond";
-			    } ELSE {
-				$Pkg_Cond_Scheme="Num_cond";			
+			    //show conditions in approp scheme    
+			    if ($Cond_scheme == "1") {
+				$Veh_Cond_Scheme="Alpha_cond";
+			    } else {
+				$Veh_Cond_Scheme="Num_cond";			
 			    }
-    
-                            $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
+			    //$Veh_Cond_Scheme="Alpha_cond";
+                            $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
-                            
-                            if (mysql_num_rows($result) == 0) {
+                            if ((mysql_num_rows($result) == 0)) {
                                 echo "Error condition query failed";
                                 exit;
                             } 
                             $rows_count= mysql_num_rows($result);
-                        ?>  
+                        ?>
                         <select name="PkgCond" id="PkgCond">
                         <?php
                             for ($i=1; $i<=$rows_count; $i++) {
-                                    $row=mysql_fetch_array($result);
-                                    echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+                                $row=mysql_fetch_array($result);
+                                echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
                             }	
                         ?>
-                        </select>
+                        </select>				
                     <p>Item Value:      <input type="text" name="Coll_Value" value="" size="10" id="Coll_Value"></p>
                     <p>Storage Location 1:     
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Location%'
                                     AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -241,12 +249,12 @@ session_start();
                             </select>
                     <p>Storage Location 2:    
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Location%'
                                     AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
-                            if ((mysql_num_rows($result) == 0)) {
+                            if (!$result) {
                                 echo "<input type=\"text\" name=\"Coll_Loc2\" value=\"\" size=\"20\" id=\"Coll_Loc2\"></p>";
                             } ELSE {
                                 ?>  
@@ -263,12 +271,12 @@ session_start();
                     <p>Purchase Date (format yyyy-mm-dd):      <input type="text" name="Coll_Purch_Dt" value="" size="8" id="Coll_Purch_Dt"></p>
                     <p>Seller:      
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Seller%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Seller%'
                                     AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
-                            if ((mysql_num_rows($result) == 0)) {
+			    if (!$result) {
                                 echo "<input type=\"text\" name=\"Coll_Seller\" value=\"\" size=\"40\" id=\"Coll_Seller\"></p>";
                             } ELSE {
 				?>  
