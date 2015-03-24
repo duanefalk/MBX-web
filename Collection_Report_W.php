@@ -10,7 +10,7 @@ session_start();
 <div class="row">
 	<div class="large-12 columns">
         <a href="Collection_Reports.php" class="button dark">Return to Collection Reports Menu</a>
-		<a href="index.php" class="button dark">Return to Main Page</a>
+	<a href="index.php" class="button dark">Return to Main Page</a>
 
         <h2>Wishlist for <?php echo $_SESSION["Username"]; ?></h2>
 
@@ -24,7 +24,7 @@ session_start();
 				<thead>
 		        	<tr>
 						<td>Photo</td>
-		                <td>Variations</td>
+		                <td>Variation</td>
 		                <td>MAN</td>
 						<td>Mack</td>
 						<td>Name</td>

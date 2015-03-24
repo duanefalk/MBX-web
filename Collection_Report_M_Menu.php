@@ -138,7 +138,7 @@ session_start();
 						<input type=checkbox name="Seller_Check" id="Seller_Check" />
 						<label for="Seller_Check">Seller:</label>
 						<?php
-							$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username= '$User' AND Coll_List_Type LIKE '%Seller%'");								
+							$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username= '$User' AND Coll_List_Type LIKE '%Seller%' ORDER BY Coll_List_Val_DisplOrd ASC");								
 									
 							$result = mysql_query($query);
 							if (result) {
@@ -167,12 +167,12 @@ session_start();
 					<a href="#panel22">Location</a>
 					<div id="panel22" class="content">
 						<input type=checkbox name="Location_Check" id="Location_Check" />
-						<label for="Location_Check">Seller:</label>
+						<label for="Location_Check">Primary Location:</label>
 						<?php
-							$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username= '$User' AND Coll_List_Type LIKE '%Location%'");								
+							$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username= '$User' AND Coll_List_Type LIKE '%Location%' ORDER BY Coll_List_Val_DisplOrd ASC");								
 									
 							$result = mysql_query($query);
-							if (result) {
+							if ($result) {
                                                             $rows_count= mysql_num_rows($result);
                                                             // echo "Rows Count: ".$rows_count."<br />";
                                                             ?>
@@ -218,7 +218,7 @@ session_start();
 					<a href="#panel25">Vehicle Condition</a>
 					<div id="panel25" class="content">
 						<input type=checkbox name="Cond_Check" id="Cond_Check" />
-						<label for="Cond_Check">Vehicles in equal or worse condition than:</label>
+						<label for="Cond_Check">Vehicles with condition of:</label>
 						<?php
                                                         //find users cond scheme
                                                         $query=("SELECT * FROM MBXU_User_Accounts WHERE Username= '$User'");
@@ -262,29 +262,42 @@ session_start();
                 
                 <div class="large-4 columns">
 			<h3 class="demoHeaders">Sort Criteria</h3>
-                        <p>(if none chosen will sort by UMID#):</p>
+                        
                         
                         <h4 class="demoHeaders">Sort Criterion 1</h4>
-			<input type=radio name="Sort1" id="Sort1" value="UMID" checked>UMID#<br>
-			<input type=radio name="Sort1" id="Sort1" value="MAN">MAN#<br>
-			<input type=radio name="Sort1" id="Sort1" value="Mack">Mack#<br>
-			<input type=radio name="Sort1" id="Sort1" value="Location">Seller<br>
-			<input type=radio name="Sort1" id="Sort1" value="Seller">Location<br>
-			<input type=radio name="Sort1" id="Sort1" value="MdlValue"">Value<br>
-			<input type=radio name="Sort1" id="Sort1" value="PurchDt">Purchase Date<br>
+			<input type="radio" name="Sort1" id="Sort1" value="UMID" checked>UMID#<br>
+			<input type="radio" name="Sort1" id="Sort1" value="MAN">MAN#<br>
+			<input type="radio" name="Sort1" id="Sort1" value="Mack">Mack#<br>
+			<input type="radio" name="Sort1" id="Sort1" value="Location">Seller<br>
+			<input type="radio" name="Sort1" id="Sort1" value="Seller">Location<br>
+			<input type="radio" name="Sort1" id="Sort1" value="MdlValue"">Value<br>
+			<input type="radio" name="Sort1" id="Sort1" value="PurchPrice">Purchase Price<br>
+			<input type="radio" name="Sort1" id="Sort1" value="PurchDt">Purchase Date<br>
 
 			<h4 class="demoHeaders">Sort Criterion 2</h4>
-			<input type=radio name="Sort2" id="Sort2" value="UMID" checked>UMID#<br>
-			<input type=radio name="Sort2" id="Sort2" value="MAN">MAN#<br>
-			<input type=radio name="Sort2" id="Sort2" value="Mack">Mack#<br>
-			<input type=radio name="Sort2" id="Sort2" value="Location">Seller<br>
-			<input type=radio name="Sort2" id="Sort2" value="Seller">Location<br>
-			<input type=radio name="Sort2" id="Sort2" value="MdlValue"">Value<br>
-			<input type=radio name="Sort2" id="Sort2" value="PurchDt">Purchase Date<br>
+			<input type="radio" name="Sort2" id="Sort2" value="UMID" checked>UMID#<br>
+			<input type="radio" name="Sort2" id="Sort2" value="MAN">MAN#<br>
+			<input type="radio" name="Sort2" id="Sort2" value="Mack">Mack#<br>
+			<input type="radio" name="Sort2" id="Sort2" value="Location">Seller<br>
+			<input type="radio" name="Sort2" id="Sort2" value="Seller">Location<br>
+			<input type="radio" name="Sort2" id="Sort2" value="MdlValue"">Value<br>
+			<input type="radio" name="Sort2" id="Sort2" value="PurchPrice">Purchase Price<br>
+			<input type="radio" name="Sort2" id="Sort2" value="PurchDt">Purchase Date<br>
                 </div>    
                         
     
-        </div>                
+        </div>
+	
+	<!-- Search Submit -->
+	<div class="row">
+		
+		<div class="large-12 columns">
+			<input type="submit" class="button dark" name="submit" value="Search" />
+		
+			<a class="button cancel" href="Search_Models_Menu.php">Clear</a>
+		</div>
+		
+	</div>
 </form>
 
 

@@ -29,7 +29,11 @@ session_start();
         $PurchDt=$_POST['Coll_Purch_Dt'];
         $Seller=$_POST['Coll_Seller'];
         $PurchPrice=$_POST['Coll_Purch_Price'];
-        $SellFlg=$_POST['CollSellFlg'];
+	If ($_POST['CollSellFlg']) {
+		$SellFlg=1;
+	} else {
+		$SellFlg=0;
+	}	
         $MinSellPrice=$_POST['Coll_MinSell_Price'];
         $CollComm=$_POST['Coll_Comm'];
         $Coll_InactiveFlg="0";
@@ -58,7 +62,7 @@ session_start();
         $query="INSERT INTO Matchbox_Collection (Username, User_Coll_ID, UMID, VerID, VarID, User_SpecID, Copy, VehCond, PkgCond, ItemVal, StorLoc,
             StorLoc2, PurchDt, Seller, PurchPrice, SellFlag, MinSellPrice, CollComm, Coll_InactiveFlg) 
             VALUES ('$Coll_Username','$User_CollID','$UMID', '$VerID', '$VarID', '$User_SpecID', '$Copy', '$VehCond', '$PkgCond', '$ItemVal', '$StorLoc',
-            '$StorLoc2', '$PurchDt', '$Seller', '$PurchPrice', '$SellFlg', '$MinSellPric', '$CollComm', '$Coll_InactiveFlg')";
+            '$StorLoc2', '$PurchDt', '$Seller', '$PurchPrice', '$SellFlg', '$MinSellPrice', '$CollComm', '$Coll_InactiveFlg')";
    
         $outcome=mysql_query($query);
         if ($outcome) {
@@ -141,17 +145,26 @@ session_start();
                     <p>Copy No.:      <input type="text" name="Coll_Copy" value="<?php echo $copy_to_show; ?>" size="2" id="Coll_Copy"></p>
                     <p>Vehicle Condition: 
                         <?php
-                            //vehicle condition
-                            //Get this from session vars and add to user prefs hard code for now
-                            $query_cond=("SELECT * FROM MBXU_User_Accounts WHERE Username=$Username");
+                            //determine from account what scheme for vehicle condition
+                            $query_cond=("SELECT * FROM MBXU_User_Accounts WHERE Username='$Username'");
 			    $result_cond = mysql_query($query_cond);
+			    if ($result_cond) {
+                                $rows_count= mysql_num_rows($result_cond);                 
+                                for ($i=1; $i<=$rows_count; $i++) {
+                                    $row=mysql_fetch_array($result);
+                                    $Cond_scheme= $row['Veh_Cond_Scheme'];
+                                }
+                            } else {
+                                echo "Your account is corrupted, contact admin";
+                            }
 			    
-			    $Cond_scheme=$result_cond['Veh_Cond_Scheme'];
-			    if ($Cond_scheme == "0") {
-				$Veh_Cond_Scheme="Alpha_Mdl_Cond";
-			    } ELSE {
+			    //show conditions in approp scheme    
+			    if ($Cond_scheme == 0) {
+				$Veh_Cond_Scheme="Alpha_cond";
+			    } else {
 				$Veh_Cond_Scheme="Num_cond";			
 			    }
+			    //$Veh_Cond_Scheme="Alpha_cond";
                             $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -170,6 +183,8 @@ session_start();
                             }	
                         ?>
                         </select>
+			
+			
                     <p>Package Condition: 
                         <?php
                             //Get this from session vars and add to user prefs hard code for now
@@ -268,7 +283,7 @@ session_start();
                         ?>
 			 </select>
                     <p>Purchase Price:      <input type="text" name="Coll_Purch_Price" value="" size="10" id="Coll_Purch_Price"></p>
-                    <p>Flag to Sell?     <input type="checkbox" name="CollSellFlg"><P>
+                    <p>Flag to Sell?     <input type="checkbox" name="CollSellFlg" id="CollSellFlg"><p>
                     <p>Minimum Price to Sell: <input type="text" name="Coll_MinSell_Price" value="" size="10" id="Coll_MinSell_Price"></p>
                     <p>Comment: </p>
                         <textarea name="Coll_Comm" cols="45" rows="4" id="Coll_Comm">	
