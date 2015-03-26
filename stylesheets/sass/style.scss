@@ -106,7 +106,7 @@ select {height:auto;}
 
 /* -- Navigation ------------- */
 #utilityNav { margin-bottom:.5em; text-align:right; background:transparentize($black,.75);
-	@media only screen and (max-width:480px){ text-align:center; }
+	@media only screen and (max-width:1024px){ text-align:center; }
 	
 	#warningLocal {display:none; padding:.5em 0; text-align:center; background:$teal;
 		p {margin:0; @include body; color:$white;
@@ -124,8 +124,6 @@ select {height:auto;}
 	
 	em {color:$white;}
 }
-body.home #utilityNav {}
-
 
 
 /* -- Footer ------------- */
