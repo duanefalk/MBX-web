@@ -15,7 +15,7 @@ $Username=$_SESSION['Username'];
 	<div class="large-12 columns">
 	
 		<h2>MAN# Versions Listing</h2>
-		<p> Drill down on a version to see details, variations and releases</p>
+		<p>Drill down on a version to see details, variations and releases</p>
 			
 		<!--<a href="http://localhost/~Falk/MBX_Web_Site_Test/IMAGES/TEST.doc"><p>CLICK TO DOWNLOAD FILE</p</a><br /> -->
 			
@@ -105,12 +105,13 @@ $Username=$_SESSION['Username'];
 							echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 						}
 						echo "<p>".$row["VerName"]."</p>";
-						echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
+						echo "<p>Ver ID: " . $row["VerID"] . "</p>";
+						echo "<p>MAN #: " . $row["FAB_No"] . "</p>";
 						echo "<p>".$row["BodyColor"]."</p>";
 						echo "<p>";
 						if (!empty($row["TempaDesign"])) {
 							echo $row["TempaDesign"].", ";
-							}
+						}
 						echo $row["TempaText"]."</p>";	
 						echo "<p>".$row["BodyColor"]."</p>";
 						echo "<p>";
@@ -138,9 +139,14 @@ $Username=$_SESSION['Username'];
 				if(!$result) {
 					echo "No matching results found"; //mysql_error();
 					exit;
-					}					
+				}
+				?>
+				
+				<ul class="large-block-grid-3 small-block-grid-2">
+				
+				<?php									
 				for ($i=1; $i<=$rows; $i++) {
-					echo "<div class=\"car-block\">";
+					echo "<li class='carGrid'>";
 					$row=mysql_fetch_array($result);
 					$picture= IMAGE_URL . $row["VerID"]."_1.jpg";
 					$picture_loc=IMAGE_PATH. $row["VerID"]."_1.jpg";
@@ -201,7 +207,8 @@ $Username=$_SESSION['Username'];
 						echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 					}
 					echo "<p>".$row["VerName"]."</p>";
-					echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
+					echo "<p>Ver ID: ". $row["VerID"] . "</p>";
+					echo "<p>MAN #: ". $row["FAB_No"]."</p>";
 					echo "<p>".$row["BodyColor"]."</p>";
 					echo "<p>";
 					if (!empty($row["TempaDesign"])) {
@@ -209,8 +216,11 @@ $Username=$_SESSION['Username'];
 						}
 					echo $row["TempaText"]."</p>";	
 					echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
-					echo "</div>";
+					echo "</li>";
 				}
+				
+				echo "</ul>";
+				
 				//then check if to show code 2 also. if so sep srch for code 2
 				if (($Sec_Lvl >= "2") AND ($Code2_Pref == "1")) {
 					$query= ("SELECT * FROM Matchbox_Versions WHERE FAB_No LIKE '%$model_for_detail%' AND CodeLvl='2/3' ORDER BY VerYrFirstRel,VerID ASC");
@@ -219,15 +229,21 @@ $Username=$_SESSION['Username'];
 					// echo $result;
 					$result = mysql_query($query);
 					$rows= mysql_num_rows($result); //print_r($result);
-					echo "<br></>";						
-					echo "<br></>"."<h3>"."CODE 2/3 Versions found: ".$rows."</h3>";
+					
+					echo "<h3>"."CODE 2/3 Versions found: ".$rows."</h3>";
+					
 					if(!$result) {
 						echo "No matching results found"; //mysql_error();
 						exit;
-						}					
-					for ($i=1; $i<=$rows; $i++)
-						{
-						echo "<div class=\"car-block\">";
+					} else {} 
+					
+					if ($rows > 0) { ?>
+					
+						<ul class="large-block-grid-3 small-block-grid-2">
+						
+					<?php } 		
+					for ($i=1; $i<=$rows; $i++) {
+						echo "<li class=\"car-block\">";
 						$row=mysql_fetch_array($result);
 						$picture= IMAGE_URL . $row["VerID"]."_1.jpg";
 						$picture_loc=IMAGE_PATH. $row["VerID"]."_1.jpg";
@@ -263,6 +279,7 @@ $Username=$_SESSION['Username'];
 						}				
 							echo "<br />";
 							$PhotoRefCd= $row["VerPhoto1Ref"];
+							
 							if ($PhotoRefCd) {
 								$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 								$result2= mysql_query($query2);
@@ -271,19 +288,21 @@ $Username=$_SESSION['Username'];
 							} else {
 								echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 							}
+							
 							echo "<p>".$row["VerName"]."</p>";
 							echo "<p>Ver ID: ". $row["VerID"]." MAN#: ". $row["FAB_No"]."</p>";
 							echo "<p>".$row["BodyColor"]."</p>";
 							echo "<p>";
-							if (!empty($row["TempaDesign"])) {
-								echo $row["TempaDesign"].", ";
-								}
+								if (!empty($row["TempaDesign"])) {
+									echo $row["TempaDesign"].", ";
+								}							
 							echo $row["TempaText"]."</p>";	
+
 							echo "<p>First Rel Dt: ".$row["VerYrFirstRel"]."</p>";
 							echo "<p>Code level: ".$row["CodeLvl"].", C2 Manuf.: ".$row["SecManuf"]."</p>";
-						echo "</div>";
+						echo "</li>";
 						}
-				}		
+					}				
 			}
 				//if chose no code2 just drop down without doing code 2 search
 			// does not show releases for this FAB_No, need to drill down for those
