@@ -85,7 +85,7 @@
     
    
     $query="INSERT INTO Matchbox_Releases (UMID, VerID, VarID, RelID, RelYr, CountryOfSale, Theme, Line, Series, SeriesID, ShowSeriesID,
-            PkgName, MdlNameOnPkg, SubSeries, SubSeriesID, ShowSubSeriesID, UnitTyp, PkgID, PkgVarCd, RelComm,
+            PkgName, MdlNameOnPkg, SubSeries, SubSeriesID, ShowSubSeriesID, UnitTyp, PkgID, PkgVarCd, RelComm, 
             RelPkgPhotoRef)
             VALUES ('$UMID','$VerID','$VarID','$RelID','$RelYr','$CountryOfSale','$Theme', '$Line', '$Series', '$SeriesID', '$ShowSeriesID',
             '$PkgName','$MdlNameOnPkg','$SubSeries','$SubSeriesID','$ShowSubSeriesID','$UnitTyp', '$PkgID', '$PkgVarCd', '$RelComm',
