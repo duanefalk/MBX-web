@@ -25,19 +25,17 @@ session_start();
     }
 ?>
 
-<table id="structure">
-	<tr>
-		<td id="page">
-			<h2>Update/Delete Collection</h2>
-			<br />            
-			<form name="Updt_Coll" action="Updt_Coll.php" method="post">
-				<p>Enter ID of colection to Update/Delete: <input type="text" name="Coll_ID" value="" size="60" id="Coll_ID"></p>
-				<input type="submit" value="Submit" class="button dark" id="submit" name="submit"><br/>
-				<a href="Updt_Coll.php">Cancel</a>
-	        	</form>
-	            </td>
-	</tr>
-</table>
+<div class="row">
+	<div class="large-12 columns">
+		<h2>Update/Delete Collection</h2>
+		<br />            
+		<form name="Updt_Coll" action="Updt_Coll.php" method="post">
+			<p>Enter ID of collection to Update/Delete: <input type="text" name="Coll_ID" value="" size="60" id="Coll_ID"></p>
+			<input type="submit" value="Submit" class="button dark" id="submit" name="submit"><br/>
+			<a href="Updt_Coll.php">Cancel</a>
+    	</form>
+	</div>
+</div>
     
 <!-- Sub Menu -->
 <div class="row" id="subNav">

@@ -12,6 +12,12 @@ session_start();
 		
 		<h2>Add Variation to Collection</h2>
 		
+		<?php 
+			if (!empty($_POST)) {
+				echo "<h1>Success</h1>";
+			}
+		?>
+		
         <?php
             $Var_to_Add=$_GET["model"];
             $Username=$_SESSION['Username'];
@@ -38,7 +44,7 @@ session_start();
             }
         ?>
               
-		<form name="Add_Var_to_Coll" action="Add_Var_to_Coll.php" method="post">	
+		<form name="Add_Var_to_Coll" action="Add_Var_to_Coll_Outcome.php?model=<?php echo $Var_to_Add;?>" method="post">	
                  
             <?php               
 	            $Coll_VarID=$Var_to_Add;
@@ -66,16 +72,15 @@ session_start();
             <p>Release ID (use the variation ID, above, plus '-99' where 99 is the release no.):    <input type="text" name="Coll_relID" value="" size="16" id="Coll_RelID"></p>
             <p>User-specific ID:   <input type="text" name="User_SpecID" value="" size="20" id="User_SpecID"></p>
             <p>Copy No.:      <input type="text" name="Coll_Copy" value="<?php echo $copy_to_show; ?>" size="2" id="Coll_Copy"></p>
+            
             <p>Vehicle Condition: 
-
-            <?php
+			<?php
                 //determine from account what scheme for vehicle condition
                 $query_cond=("SELECT * FROM MBXU_User_Accounts WHERE Username='$Username'");
 			    $result_cond = mysql_query($query_cond);
 
 			    if ($result_cond) {
-                    $rows_count= mysql_num_rows($result_cond);                 
-
+                    $rows_count= mysql_num_rows($result_cond);
                     for ($i=1; $i<=$rows_count; $i++) {
                         $row=mysql_fetch_array($result_cond);
                         $Cond_scheme= $row['Veh_Cond_Scheme'];
@@ -85,10 +90,10 @@ session_start();
                 }
 			    
 			    //show conditions in approp scheme    
-			    if ($Cond_scheme ==1) {
-					$Veh_Cond_Scheme="Alpha_cond";
+			    if ($Cond_scheme == 1) {
+					$Veh_Cond_Scheme = "Alpha_cond";
 				} else {
-					$Veh_Cond_Scheme="Num_cond";			
+					$Veh_Cond_Scheme = "Num_cond";			
 			    }
 			    
 			    //$Veh_Cond_Scheme="Alpha_cond";
@@ -132,15 +137,14 @@ session_start();
 	                echo "Your account is corrupted, contact admin";
                 }
 			    
-			    //show conditions in approp scheme    
-			    if ($Cond_scheme == "1") {
-					$Veh_Cond_Scheme="Alpha_cond";
+			    //show conditions in approp scheme  
+			    if ($Cond_scheme == 1) {
+					$Pkg_Cond_Scheme="Alpha_cond";
 			    } else {
-					$Veh_Cond_Scheme="Num_cond";			
+					$Pkg_Cond_Scheme="Num_cond";			
 			    }
 			    
-			    //$Veh_Cond_Scheme="Alpha_cond";
-                $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
+			    $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
                 $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
@@ -161,14 +165,13 @@ session_start();
                     <p>Item Value:      <input type="text" name="Coll_Value" value="" size="10" id="Coll_Value"></p>
                     <p>Storage Location 1:     
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Location%'
-                                    AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");								
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Location%' AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
                             if ((mysql_num_rows($result) == 0)) {
                                 echo "<input type=\"text\" name=\"Coll_Loc1\" value=\"\" size=\"20\" id=\"Coll_Loc1\"></p>";
-                            } ELSE {
+                            } else {
                                 ?>  
                                 <select name="Coll_Loc1" id="Coll_Loc1">
                                 <?php
