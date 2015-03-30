@@ -140,23 +140,23 @@
 				$url = "Variation_Detail.php?model=".$Variation_to_detail;
 				
 				echo "<div class='row'>";
-				echo "<div class='large-4 columns'>";
-							
-				if (file_exists($picture1_loc)) {
-					//echo "picture exists";
-					echo "<a href=\"".$url."\"><img src=".$picture1." /></a>";
-				} else {
-					//echo "cant find picture";
-					//echo DEFAULT_IMAGE;
-					echo "<a href=\"".$url."\"><img src=".DEFAULT_IMAGE." /></a>";
-				}
-
-				if (file_exists($picture2_loc)) {
-					//echo "picture exists";
-					echo "<a href=\"".$url."\"><img src=".$picture2." /></a>";
-				}
-				
-				echo "</div>";
+					echo "<div class='large-4 columns'>";
+								
+					if (file_exists($picture1_loc)) {
+						//echo "picture exists";
+						echo "<a href=\"".$url."\"><img src=".$picture1." /></a>";
+					} else {
+						//echo "cant find picture";
+						//echo DEFAULT_IMAGE;
+						echo "<a href=\"".$url."\"><img src=".DEFAULT_IMAGE." /></a>";
+					}
+	
+					if (file_exists($picture2_loc)) {
+						//echo "picture exists";
+						echo "<a href=\"".$url."\"><img src=".$picture2." /></a>";
+					}
+					
+					echo "</div>";
 				echo "</div>";
 												
 				$PhotoRefCd1= $row2["VarPhoto1Ref"];
