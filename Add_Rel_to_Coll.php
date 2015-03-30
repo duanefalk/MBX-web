@@ -1,3 +1,8 @@
+<?php
+// we must never forget to start the session
+session_start();
+?>
+
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
@@ -63,6 +68,7 @@
 			$Rel_to_Add=$_GET["model"];
 			$Var_to_Add=substr($Rel_to_Add,0,12);
 			$User=$_SESSION['Username'];
+			$Username=$_SESSION['Username'];
 			$query3=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");																
 			$result3 = mysql_query($query3);
 			$row3=mysql_fetch_array($result3);
@@ -109,58 +115,94 @@
             <p>Release ID:    <input type="text" name="Coll_RelID" value="<?php echo $Coll_RelID;?>" size="16" id="Coll_RelID"></p>
             <p>User-specific ID:   <input type="text" name="User_SpecID" value="" size="20" id="User_SpecID"></p>
             <p>Copy No.:      <input type="text" name="Coll_Copy" value="<?php echo $copy_to_show; ?>" size="2" id="Coll_Copy"></p>
-            <p>Vehicle Condition: 
+            
+	    <p>Vehicle Condition: 
+	    <?php
+                //determine from account what scheme for vehicle condition
+                $query_cond=("SELECT * FROM MBXU_User_Accounts WHERE Username='$Username'");
+		$result_cond = mysql_query($query_cond);
 
-            <?php
-                //vehicle condition
-                //Get this from session vars and add to user prefs hard code for now
-                $Cond_scheme="Alpha_cond";
-
-                $query = ("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Cond_scheme%' ORDER BY ValueDispOrder ASC");								
-                $result = 0;
-                $rows_count = 0;									
+		if ($result_cond) {
+                    $rows_count= mysql_num_rows($result_cond);
+                    for ($i=1; $i<=$rows_count; $i++) {
+                        $row=mysql_fetch_array($result_cond);
+                        $Cond_scheme= $row['Veh_Cond_Scheme'];
+                    }
+                } else {
+                    echo "Your account is corrupted, contact admin";
+                }
+			    
+		//show condition in approp scheme    
+		if ($Cond_scheme == 1) {
+		    $Veh_Cond_Scheme = "Alpha_cond";
+		} else {
+		    $Veh_Cond_Scheme = "Num_cond";			
+		}
+			    
+                $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
+                $result=0;
+                $rows_count=0;									
                 $result = mysql_query($query);
-                if (!result) {
+
+                if ((mysql_num_rows($result) == 0)) {
+                    echo "Error condition query failed";
+                    exit;
+                } 
+
+                $rows_count= mysql_num_rows($result);
+            ?>
+           
+            <select name="VehCond" id="VehCond">
+                <?php
+	                for ($i=1; $i<=$rows_count; $i++) {
+                        $row=mysql_fetch_array($result);
+                        echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+                    }	
+                ?>
+            </select>
+	    
+            <p>Package Condition: 
+            <?php
+                //determine from account what scheme for pkg cond
+		$query_cond2=("SELECT * FROM MBXU_User_Accounts WHERE Username='$Username'");
+	        $result_cond2 = mysql_query($query_cond2);
+
+		if ($result_cond2) {
+                    $rows_count2= mysql_num_rows($result_cond2);                 
+                    for ($i=1; $i<=$rows_count2; $i++) {
+                        $row=mysql_fetch_array($result_cond2);
+                        $Cond_scheme2= $row['Pkg_Cond_Scheme'];
+                    }
+                } else {
+	                echo "Your account is corrupted, contact admin";
+                }
+			    
+		//show conditions in approp scheme  
+		if ($Cond_scheme2 == 1) {
+		    $Pkg_Cond_Scheme="Alpha_cond";
+		} else {
+		    $Pkg_Cond_Scheme="Num_cond";			
+		}
+			    
+		$query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
+                $result=0;
+                $rows_count=0;									
+                $result = mysql_query($query);
+                if ((mysql_num_rows($result) == 0)) {
                     echo "Error condition query failed";
                     exit;
                 } 
                 $rows_count= mysql_num_rows($result);
             ?>
-            <select name="VehCond" id="VehCond">
-	            <?php
+            <select name="PkgCond" id="PkgCond">
+            <?php
                 for ($i=1; $i<=$rows_count; $i++) {
-                    $row=mysql_fetch_array($result);
+                $row=mysql_fetch_array($result);
                     echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
                 }	
-	            ?>
-            </select>
-                    
-            <p>Package Condition: 
-                <?php
-                    //Get this from session vars and add to user prefs hard code for now
-                    $Cond_scheme="Alpha_cond";
+            ?>
+            </select>                    
 
-                    $query = ("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Cond_scheme%' ORDER BY ValueDispOrder ASC");
-                    $result = 0;
-                    $rows_count = 0;									
-                    $result = mysql_query($query);
-                    
-                    if (!result) {
-                        echo "Error condition query failed";
-                        exit;
-                    } 
-                    $rows_count= mysql_num_rows($result);
-                ?>  
-            </p>
-            
-			<select name="PkgCond" id="PkgCond">
-            	<?php
-	            for ($i=1; $i<=$rows_count; $i++) {
-                    $row = mysql_fetch_array($result);
-                    echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>'."<br />";
-                }	
-            	?>
-            </select>
             
             <p>Item Value: <input type="text" name="Coll_Value" value="" size="10" id="Coll_Value"></p>
 	        <p>Storage Location 1:     

@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php
 // we must never forget to start the session
 session_start();
@@ -6,48 +7,115 @@ session_start();
 <?php require_once("includes/db_connection.php"); ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
+<?php
+if (isset($_POST['var_coll_submit'])) {
+        //echo "sees as post set";
+
+        //Do collection table updates
+        //Fields:
+        $Coll_Username=$_POST['Coll_Username'];
+        $User_CollID=$_POST['User_CollID'];
+        $UMID=$_POST['Coll_UMID'];
+        $VerID=$_POST['Coll_VerID'];
+        $VarID=$_POST['Coll_VarID'];
+	$RelID=$_POST['Coll_RelID'];
+        $User_SpecID=$_POST['User_SpecID'];
+        $Copy=$_POST['Coll_Copy'];
+        $VehCond=$_POST['VehCond'];
+        $PkgCond=$_POST['PkgCond'];
+        $ItemVal=$_POST['Coll_Value'];
+        $StorLoc=$_POST['Coll_Loc1'];
+        $StorLoc2=$_POST['Coll_Loc2'];
+        $PurchDt=$_POST['Coll_Purch_Dt'];
+        $Seller=$_POST['Coll_Seller'];
+        $PurchPrice=$_POST['Coll_Purch_Price'];
+        $SellFlg=$_POST['CollSellFlg'];
+        $MinSellPrice=$_POST['Coll_MinSell_Price'];
+        $CollComm=$_POST['Coll_Comm'];
+        $Coll_InactiveFlg="0";
+        
+        //echo $Coll_Username;
+        //echo $UMID;
+        //echo $VerID;
+        //echo $VarID;
+        //echo $RelID;
+        //echo $UserCollID;
+        //echo $CollWishFlg;
+        //echo $Copy;
+        //echo $VehCond;
+        //echo $PkgCond;
+        //echo $ItemVal;
+        //echo $StorLoc;
+        //echo $StorLoc2;
+        //echo $PurchDt;
+        //echo $Seller;
+        //echo $PurchPrice;
+        //echo $SellFlg;
+        //echo $MinSellPrice;
+        //echo $CollComm;
+        //echo $Coll_InactiveFlg;
+       
+        $query="INSERT INTO Matchbox_Collection (Username, User_Coll_ID, UMID, VerID, VarID, RelID, User_SpecID, Copy, VehCond, PkgCond, ItemVal, StorLoc,
+            StorLoc2, PurchDt, Seller, PurchPrice, SellFlag, MinSellPrice, CollComm, Coll_InactiveFlg) 
+            VALUES ('$Coll_Username','$User_CollID','$UMID', '$VerID', '$VarID', '$RelID', '$User_SpecID', '$Copy', '$VehCond', '$PkgCond', '$ItemVal', '$StorLoc',
+            '$StorLoc2', '$PurchDt', '$Seller', '$PurchPrice', '$SellFlg', '$MinSellPric', '$CollComm', '$Coll_InactiveFlg')";
+ 
+	//Check if success, if so go out to success message and button to search again 
+        $outcome=mysql_query($query);
+        if ($outcome) {
+	    redirect_to("Add_Var_to_Coll_Outcome.php");
+        
+	    //if ((mysql_query($query)) == true)
+            //echo "<p>Done and returning</p>";
+            //require_once("includes/close_db_connection.php");
+            //Return;
+            //$url= "Ver_Detail_and_Var_Listing.php?model=".$VerID;
+	    //echo "<a href=\"".$url."\">Return to Listing</a>";
+            //exit;
+        } else {
+            echo "<p>Subject creation failed. Please review entries.</p>";
+            echo "<p>".mysql_error()."</p>";
+            //drop down to form again
+        }   
+    }
+?>
+
 
 <div class="row">
 	<div class="large-12 columns">
 		
-		<h2>Add Variation to Collection</h2>
+	    <h2>Add Variation to Collection</h2>
 		
-		<?php 
-			if (!empty($_POST)) {
-				echo "<h1>Success</h1>";
-			}
-		?>
-		
-        <?php
-            $Var_to_Add=$_GET["model"];
-            $Username=$_SESSION['Username'];
-		    $query=("SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'");
-		    $result=mysql_query($query);
-
-		    if (!$result) {
-				echo "<p>You have no collection. Please go to Manage Collections and follow the steps described there to create a collection.</p>";
-				exit;
-		    } 
-			
-		    $row=mysql_fetch_array($result);
-            $User_CollID=$row['User_Coll_ID'];
-            echo "<p>Variation Selected: ".$Var_to_Add."</p>";
-                   
-            $picture1 = IMAGE_URL . $Var_to_Add."_1.jpg";
-		    $picture1_loc = IMAGE_PATH. $Var_to_Add."_1.jpg";
-
-            if (file_exists($picture1_loc)) {
-                echo "<img src=".$picture1." />";
-            } else {
-                //no photo, echo DEFAULT_IMAGE;
-                echo "<img src=".DEFAULT_IMAGE." />";
-            }
-        ?>
+	    <?php
+		$Var_to_Add=$_GET["model"];
+		$Username=$_SESSION['Username'];
+			$query=("SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'");
+			$result=mysql_query($query);
+    
+			if (!$result) {
+				    echo "<p>You have no collection. Please go to Manage Collections and follow the steps described there to create a collection.</p>";
+				    exit;
+			} 
+			    
+			$row=mysql_fetch_array($result);
+		$User_CollID=$row['User_Coll_ID'];
+		echo "<p>Variation Selected: ".$Var_to_Add."</p>";
+		       
+		$picture1 = IMAGE_URL . $Var_to_Add."_1.jpg";
+			$picture1_loc = IMAGE_PATH. $Var_to_Add."_1.jpg";
+    
+		if (file_exists($picture1_loc)) {
+		    echo "<img src=".$picture1." />";
+		} else {
+		    //no photo, echo DEFAULT_IMAGE;
+		    echo "<img src=".DEFAULT_IMAGE." />";
+		}
+	    ?>
               
-		<form name="Add_Var_to_Coll" action="Add_Var_to_Coll_Outcome.php?model=<?php echo $Var_to_Add;?>" method="post">	
+	    <form name="Add_Var_to_Coll" action="Add_Var_to_Coll.php" method="post">	
                  
             <?php               
-	            $Coll_VarID=$Var_to_Add;
+	        $Coll_VarID=$Var_to_Add;
                 $Coll_VerID=substr($Coll_VarID,0,10);
                 $Coll_UMID=substr($Coll_VerID,0,6);
 
@@ -69,7 +137,7 @@ session_start();
             <p>UMID:          <input type="text" name="Coll_UMID" value="<?php echo $Coll_UMID;?>" size="6" id="Coll_UMID"></p>
             <p>Version ID:    <input type="text" name="Coll_VerID" value="<?php echo $Coll_VerID;?>" size="10" id="Coll_VerID"></p>
             <p>Variation ID:  <input type="text" name="Coll_VarID" value="<?php echo $Coll_VarID;?>" size="13" id="Coll_VarID"></p>
-            <p>Release ID (use the variation ID, above, plus '-99' where 99 is the release no.):    <input type="text" name="Coll_relID" value="" size="16" id="Coll_RelID"></p>
+            <p>Release ID (use the variation ID, above, plus '-99' where 99 is the release no.):    <input type="text" name="Coll_RelID" value="" size="16" id="Coll_RelID"></p>
             <p>User-specific ID:   <input type="text" name="User_SpecID" value="" size="20" id="User_SpecID"></p>
             <p>Copy No.:      <input type="text" name="Coll_Copy" value="<?php echo $copy_to_show; ?>" size="2" id="Coll_Copy"></p>
             
@@ -159,7 +227,8 @@ session_start();
                     echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
                 }	
             ?>
-            </select>				
+            </select>
+	    
             <p>Item Value:      <input type="text" name="Coll_Value" value="" size="10" id="Coll_Value"></p>
             <p>Storage Location 1:     
 	    <?php
@@ -233,13 +302,11 @@ session_start();
             <p>Minimum Price to Sell: <input type="text" name="Coll_MinSell_Price" value="" size="10" id="Coll_MinSell_Price"></p>
             <p>Comment: </p>
             <textarea name="Coll_Comm" cols="45" rows="4" id="Coll_Comm"></textarea>
-                        
 	        <input class="button dark" type="submit" name="var_coll_submit" value="Submit" id="var_coll_submit"/>
-
-		    <?php
-		    	$url = "Variation_Detail.php?model=".$Coll_VarID;
-		    ?>
-		    <a class="button dark cancel" href="<?php $url; ?>">Cancel</a>		   
+		<?php
+		    $url = "Variation_Detail.php?model=".$Coll_VarID;
+		?>
+		<a class="button dark cancel" href="<?php $url; ?>">Cancel</a>		   
     	</form>
     </div>
 </div>
