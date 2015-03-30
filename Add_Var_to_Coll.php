@@ -74,12 +74,12 @@ session_start();
             <p>Copy No.:      <input type="text" name="Coll_Copy" value="<?php echo $copy_to_show; ?>" size="2" id="Coll_Copy"></p>
             
             <p>Vehicle Condition: 
-			<?php
+	    <?php
                 //determine from account what scheme for vehicle condition
                 $query_cond=("SELECT * FROM MBXU_User_Accounts WHERE Username='$Username'");
-			    $result_cond = mysql_query($query_cond);
+		$result_cond = mysql_query($query_cond);
 
-			    if ($result_cond) {
+		if ($result_cond) {
                     $rows_count= mysql_num_rows($result_cond);
                     for ($i=1; $i<=$rows_count; $i++) {
                         $row=mysql_fetch_array($result_cond);
@@ -89,14 +89,13 @@ session_start();
                     echo "Your account is corrupted, contact admin";
                 }
 			    
-			    //show conditions in approp scheme    
-			    if ($Cond_scheme == 1) {
-					$Veh_Cond_Scheme = "Alpha_cond";
-				} else {
-					$Veh_Cond_Scheme = "Num_cond";			
-			    }
+		//show condition in approp scheme    
+		if ($Cond_scheme == 1) {
+		    $Veh_Cond_Scheme = "Alpha_cond";
+		} else {
+		    $Veh_Cond_Scheme = "Num_cond";			
+		}
 			    
-			    //$Veh_Cond_Scheme="Alpha_cond";
                 $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
                 $result=0;
                 $rows_count=0;									
@@ -121,50 +120,49 @@ session_start();
 			
 			
             <p>Package Condition: 
-                <?php
+            <?php
                 //determine from account what scheme for pkg cond
-			    $query_cond=("SELECT * FROM MBXU_User_Accounts WHERE Username='$Username'");
-			    $result_cond = mysql_query($query_cond);
+		$query_cond2=("SELECT * FROM MBXU_User_Accounts WHERE Username='$Username'");
+	        $result_cond2 = mysql_query($query_cond2);
 
-			    if ($result_cond) {
-                    $rows_count= mysql_num_rows($result_cond);                 
-
-                    for ($i=1; $i<=$rows_count; $i++) {
-                        $row=mysql_fetch_array($result);
-                        $Cond_scheme= $row['Pkg_Cond_Scheme'];
+		if ($result_cond2) {
+                    $rows_count2= mysql_num_rows($result_cond2);                 
+                    for ($i=1; $i<=$rows_count2; $i++) {
+                        $row=mysql_fetch_array($result_cond2);
+                        $Cond_scheme2= $row['Pkg_Cond_Scheme'];
                     }
                 } else {
 	                echo "Your account is corrupted, contact admin";
                 }
 			    
-			    //show conditions in approp scheme  
-			    if ($Cond_scheme == 1) {
-					$Pkg_Cond_Scheme="Alpha_cond";
-			    } else {
-					$Pkg_Cond_Scheme="Num_cond";			
-			    }
+		//show conditions in approp scheme  
+		if ($Cond_scheme2 == 1) {
+		    $Pkg_Cond_Scheme="Alpha_cond";
+		} else {
+		    $Pkg_Cond_Scheme="Num_cond";			
+		}
 			    
-			    $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
+		$query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
                 $result=0;
-                            $rows_count=0;									
-                            $result = mysql_query($query);
-                            if ((mysql_num_rows($result) == 0)) {
-                                echo "Error condition query failed";
-                                exit;
-                            } 
-                            $rows_count= mysql_num_rows($result);
-                        ?>
-                        <select name="PkgCond" id="PkgCond">
-                        <?php
-                            for ($i=1; $i<=$rows_count; $i++) {
-                                $row=mysql_fetch_array($result);
-                                echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-                            }	
-                        ?>
-                        </select>				
-                    <p>Item Value:      <input type="text" name="Coll_Value" value="" size="10" id="Coll_Value"></p>
-                    <p>Storage Location 1:     
-			<?php
+                $rows_count=0;									
+                $result = mysql_query($query);
+                if ((mysql_num_rows($result) == 0)) {
+                    echo "Error condition query failed";
+                    exit;
+                } 
+                $rows_count= mysql_num_rows($result);
+            ?>
+            <select name="PkgCond" id="PkgCond">
+            <?php
+                for ($i=1; $i<=$rows_count; $i++) {
+                $row=mysql_fetch_array($result);
+                    echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+                }	
+            ?>
+            </select>				
+            <p>Item Value:      <input type="text" name="Coll_Value" value="" size="10" id="Coll_Value"></p>
+            <p>Storage Location 1:     
+	    <?php
 			    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Location%' AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
