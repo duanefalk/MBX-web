@@ -152,6 +152,7 @@ select {height:auto;}
 
 /* -- Forms -- */
 .formRow {margin-bottom:1em; padding-bottom:.5em; border-bottom:.2em solid transparentize($brown,.85);}
+input[type="checkbox"] {}
 
 /* -- Accordions -- */
 dl.accordion { margin:0 auto 1em; @include body;

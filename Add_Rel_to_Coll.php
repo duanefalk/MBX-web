@@ -64,15 +64,14 @@ session_start();
 		
 		
 		<?php
-
-			$Rel_to_Add=$_GET["model"];
-			$Var_to_Add=substr($Rel_to_Add,0,12);
-			$User=$_SESSION['Username'];
-			$Username=$_SESSION['Username'];
-			$query3=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");																
+			$Rel_to_Add = $_GET["model"];
+			$Var_to_Add = substr($Rel_to_Add,0,12);
+			$User = $_SESSION['Username'];
+			$Username = $_SESSION['Username'];
+			$query3 = ("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");																
 			$result3 = mysql_query($query3);
-			$row3=mysql_fetch_array($result3);
-			$User_Coll_ID=$row3["User_Coll_ID"];
+			$row3 = mysql_fetch_array($result3);
+			$User_Coll_ID = $row3["User_Coll_ID"];
 			
 			echo "<p>Release Selected: " . $Rel_to_Add . "</p>";
 		    
@@ -81,10 +80,10 @@ session_start();
 		    $picture1_loc=IMAGE_PATH. $Rel_to_Add."_1.jpg";
             
             if (file_exists($picture1_loc)) {
-                echo "<img src=".$picture1.">";
+                echo "<img src=".$picture1." />";
             } else {
                 //no photo, echo DEFAULT_IMAGE;
-                echo "<img src=".DEFAULT_IMAGE.">";
+                echo "<img src=".DEFAULT_IMAGE." />";
             }
         ?>
         
@@ -107,41 +106,58 @@ session_start();
                 }     
             ?>
             
-            <p>Username: <input type="text" name="Coll_Username" value="<?php echo $User;?>" size="20" id="Coll_Username"></p>
-		    <p>Collection ID:  <input type="text" name="User_Coll_ID" value="<?php echo $User_Coll_ID;?>" size="12" id="User_Coll_ID"></p>
-            <p>UMID:     	  <input type="text" name="Coll_UMID" value="<?php echo $Coll_UMID;?>" size="6" id="Coll_UMID"></p>
-            <p>Version ID:    <input type="text" name="Coll_VerID" value="<?php echo $Coll_VerID;?>" size="10" id="Coll_VerID"></p>
-            <p>Variation ID:  <input type="text" name="Coll_VarID" value="<?php echo $Coll_VarID;?>" size="13" id="Coll_VarID"></p>
-            <p>Release ID:    <input type="text" name="Coll_RelID" value="<?php echo $Coll_RelID;?>" size="16" id="Coll_RelID"></p>
-            <p>User-specific ID:   <input type="text" name="User_SpecID" value="" size="20" id="User_SpecID"></p>
-            <p>Copy No.:      <input type="text" name="Coll_Copy" value="<?php echo $copy_to_show; ?>" size="2" id="Coll_Copy"></p>
+            <label for="Coll_Username">Username:</label>
+            <input type="text" name="Coll_Username" value="<?php echo $User;?>" size="20" id="Coll_Username"></p>
+		    
+		    <label for="User_Coll_ID">Collection ID:</label>
+		    <input type="text" name="User_Coll_ID" value="<?php echo $User_Coll_ID;?>" size="12" id="User_Coll_ID"></p>
             
-	    <p>Vehicle Condition: 
-	    <?php
-                //determine from account what scheme for vehicle condition
-                $query_cond=("SELECT * FROM MBXU_User_Accounts WHERE Username='$Username'");
-		$result_cond = mysql_query($query_cond);
+            <label for="Coll_UMID">UMID:</label>
+		    <input type="text" name="Coll_UMID" value="<?php echo $Coll_UMID;?>" size="6" id="Coll_UMID">
+		    
+		    <label for="Coll_VerID">Version ID:</label>
+		    <input type="text" name="Coll_VerID" value="<?php echo $Coll_VerID;?>" size="10" id="Coll_VerID"></p>
+		    
+		    <label for="Coll_VarID">Variation ID:</label>
+		     <input type="text" name="Coll_VarID" value="<?php echo $Coll_VarID;?>" size="13" id="Coll_VarID">
+		    
+		    <label for="Coll_RelID">Release ID:</label>
+		    <input type="text" name="Coll_RelID" value="<?php echo $Coll_RelID;?>" size="16" id="Coll_RelID">
+		    
+		    <label for="User_SpecID">User-specific ID:</label>
+		    <input type="text" name="User_SpecID" value="" size="20" id="User_SpecID">
+            
+            <label for="Coll_Copy">Copy No.:</label>
+		    <input type="text" name="Coll_Copy" value="<?php echo $copy_to_show; ?>" size="2" id="Coll_Copy">
+		    
+		    
+		    <label for="VehCond">Vehicle Condition:</label>
+			<?php
+	            //determine from account what scheme for vehicle condition
+				$query_cond = ("SELECT * FROM MBXU_User_Accounts WHERE Username='$Username'");
+				$result_cond = mysql_query($query_cond);
 
-		if ($result_cond) {
-                    $rows_count= mysql_num_rows($result_cond);
+				if ($result_cond) {
+                    $rows_count = mysql_num_rows($result_cond);
+                    
                     for ($i=1; $i<=$rows_count; $i++) {
-                        $row=mysql_fetch_array($result_cond);
-                        $Cond_scheme= $row['Veh_Cond_Scheme'];
+                        $row = mysql_fetch_array($result_cond);
+                        $Cond_scheme = $row['Veh_Cond_Scheme'];
                     }
                 } else {
                     echo "Your account is corrupted, contact admin";
                 }
 			    
-		//show condition in approp scheme    
-		if ($Cond_scheme == 1) {
-		    $Veh_Cond_Scheme = "Alpha_cond";
-		} else {
-		    $Veh_Cond_Scheme = "Num_cond";			
-		}
+				//show condition in approp scheme    
+				if ($Cond_scheme == 1) {
+				    $Veh_Cond_Scheme = "Alpha_cond";
+				} else {
+				    $Veh_Cond_Scheme = "Num_cond";			
+				}
 			    
-                $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
-                $result=0;
-                $rows_count=0;									
+                $query = ("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
+                $result = 0;
+                $rows_count = 0;									
                 $result = mysql_query($query);
 
                 if ((mysql_num_rows($result) == 0)) {
@@ -149,25 +165,25 @@ session_start();
                     exit;
                 } 
 
-                $rows_count= mysql_num_rows($result);
+                $rows_count = mysql_num_rows($result);
             ?>
            
             <select name="VehCond" id="VehCond">
                 <?php
 	                for ($i=1; $i<=$rows_count; $i++) {
                         $row=mysql_fetch_array($result);
-                        echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+                        echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
                     }	
                 ?>
             </select>
 	    
-            <p>Package Condition: 
+            <label for="PkgCond">Package Condition:</label>
             <?php
                 //determine from account what scheme for pkg cond
-		$query_cond2=("SELECT * FROM MBXU_User_Accounts WHERE Username='$Username'");
-	        $result_cond2 = mysql_query($query_cond2);
+				$query_cond2=("SELECT * FROM MBXU_User_Accounts WHERE Username='$Username'");
+				$result_cond2 = mysql_query($query_cond2);
 
-		if ($result_cond2) {
+				if ($result_cond2) {
                     $rows_count2= mysql_num_rows($result_cond2);                 
                     for ($i=1; $i<=$rows_count2; $i++) {
                         $row=mysql_fetch_array($result_cond2);
@@ -177,16 +193,16 @@ session_start();
 	                echo "Your account is corrupted, contact admin";
                 }
 			    
-		//show conditions in approp scheme  
-		if ($Cond_scheme2 == 1) {
-		    $Pkg_Cond_Scheme="Alpha_cond";
-		} else {
-		    $Pkg_Cond_Scheme="Num_cond";			
-		}
+				//show conditions in approp scheme  
+				if ($Cond_scheme2 == 1) {
+				    $Pkg_Cond_Scheme = "Alpha_cond";
+				} else {
+				    $Pkg_Cond_Scheme = "Num_cond";			
+				}
 			    
-		$query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
-                $result=0;
-                $rows_count=0;									
+				$query = ("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
+                $result = 0;
+                $rows_count = 0;									
                 $result = mysql_query($query);
                 if ((mysql_num_rows($result) == 0)) {
                     echo "Error condition query failed";
@@ -198,87 +214,95 @@ session_start();
             <?php
                 for ($i=1; $i<=$rows_count; $i++) {
                 $row=mysql_fetch_array($result);
-                    echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+                    echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
                 }	
             ?>
             </select>                    
 
             
-            <p>Item Value: <input type="text" name="Coll_Value" value="" size="10" id="Coll_Value"></p>
-	        <p>Storage Location 1:     
+            <label for="Coll_Value">Item Value:</label>
+            <input type="text" name="Coll_Value" value="" size="10" id="Coll_Value">
+            
+            
+            <label for="Coll_Loc1">Storage Location 1:</label>
 			<?php
 			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_Coll_ID%' AND Coll_List_Type LIKE '%Location%' AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");
                 $result = 0;
                 $rows_count = 0;									
                 $result = mysql_query($query);
 
-                if ((mysql_num_rows($result) == 0)) {
-                    echo "<input type=\"text\" name=\"Coll_Loc1\" value=\"\" size=\"20\" id=\"Coll_Loc1\"></p>";
-                } else { ?>  
-
-	            <select name="Coll_Loc1" id="Coll_Loc1">
-                <?php
-                $rows_count= mysql_num_rows($result);
-
-                for ($i=1; $i<=$rows_count; $i++) {
-                    $row=mysql_fetch_array($result);
-                    echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option>'."<br />";
-                }
-                ?>
-				</select>
+                if ((mysql_num_rows($result) == 0)) { ?>
+                    <input type="text" name="Coll_Loc1" value="" size="20" id="Coll_Loc1">
+                <?php } else { ?>
+		            <select name="Coll_Loc1" id="Coll_Loc1">
+	                	<?php
+							$rows_count= mysql_num_rows($result);
+	
+			                for ($i=1; $i<=$rows_count; $i++) {
+			                    $row=mysql_fetch_array($result);
+			                    echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option>';
+			                }
+		                ?>
+					</select>
 				<?php } ?>
 
-            <p>Storage Location 2:
+            <label for="Coll_Loc2">Storage Location 2:</label>
 				<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_Coll_ID%' AND Coll_List_Type LIKE '%Location%' AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");
+		    	$query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_Coll_ID%' AND Coll_List_Type LIKE '%Location%' AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+
+                if ((mysql_num_rows($result) == 0)) { ?>
+					<input type="text" name="Coll_Loc2" value="" size="20" id="Coll_Loc2">
+                <?php } else { ?>  
+                    <select name="Coll_Loc2" id="Coll_Loc2">
+                    <?php
+	                    $rows_count= mysql_num_rows($result);
+	                    for ($i=1; $i<=$rows_count; $i++) {
+	                        $row=mysql_fetch_array($result);
+	                        echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
+	                    }
+	                ?>
+					</select>
+                <?php } ?>
+                
+                
+            <label for="Coll_Purch_Dt">Purchase Date:</label>
+            <input type="text" name="Coll_Purch_Dt" value="" size="8" id="Coll_Purch_Dt">
+            
+            <label for="Coll_Seller">Seller:</label>					
+				<?php
+		    	$query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_Coll_ID%' AND Coll_List_Type LIKE '%Seller%' AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");
                 $result=0;
                 $rows_count=0;									
                 $result = mysql_query($query);
 
                 if ((mysql_num_rows($result) == 0)) {
-                    echo "<input type=\"text\" name=\"Coll_Loc2\" value=\"\" size=\"20\" id=\"Coll_Loc2\"></p>";
-                } else {
-                    ?>  
-                    <select name="Coll_Loc2" id="Coll_Loc2">
-                    <?php
+                    echo "<input type=\"text\" name=\"Coll_Seller\" value=\"\" size=\"40\" id=\"Coll_Seller\"></p>";
+                } else { ?>  
+				<select name="Coll_Seller" id="Coll_Seller">
+                	<?php
                     $rows_count= mysql_num_rows($result);
                     for ($i=1; $i<=$rows_count; $i++) {
                         $row=mysql_fetch_array($result);
-                        echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
-                    }
-                }
-            	?>
-	                </select>
-                
-                <p>Purchase Date: <input type="text" name="Coll_Purch_Dt" value="" size="8" id="Coll_Purch_Dt"></p>
-                <p>Seller:
+                        echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option>';
+					} ?>
+				</select>
+				<?php } ?>
 					
-				<?php
-			    	$query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_Coll_ID%' AND Coll_List_Type LIKE '%Seller%' AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");
-                    $result=0;
-                    $rows_count=0;									
-                    $result = mysql_query($query);
-
-                    if ((mysql_num_rows($result) == 0)) {
-                        echo "<input type=\"text\" name=\"Coll_Seller\" value=\"\" size=\"40\" id=\"Coll_Seller\"></p>";
-                    } else { ?>  
-					<select name="Coll_Seller" id="Coll_Seller">
-                    <?php
-                        $rows_count= mysql_num_rows($result);
-                        for ($i=1; $i<=$rows_count; $i++) {
-                            $row=mysql_fetch_array($result);
-                            echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
-						}
-				    }
-	                ?>
-					</select>
-                   
-                <p>Purchase Price:      <input type="text" name="Coll_Purch_Price" value="" size="10" id="Coll_Purch_Price"></p>
-                <p>Flag to Sell?     <input type="checkbox" name="CollSellFlg"></p>
-                <p>Minimum Price to Sell: <input type="text" name="Coll_MinSell_Price" value="" size="10" id="Coll_MinSell_Price"></p>
-                <label for="Coll_Comm">Comment:</label>
-                <textarea name="Coll_Comm" cols="45" rows="4" id="Coll_Comm"></textarea>
-                
+            <label for="Coll_Purch_Price">Purchase Price:</label>
+            <input type="text" name="Coll_Purch_Price" value="" size="10" id="Coll_Purch_Price">
+            
+            <input type="checkbox" name="CollSellFlg" id="CollSellFlg">
+            <label for="CollSellFlg">Flag to Sell?</label>
+            
+            <label for="Coll_MinSell_Price">Minimum Price to Sell:</label>
+            <input type="text" name="Coll_MinSell_Price" value="" size="10" id="Coll_MinSell_Price">
+            
+            <label for="Coll_Comm">Comment:</label>
+            <textarea name="Coll_Comm" cols="45" rows="4" id="Coll_Comm"></textarea>
+            
             <div class="row">
                 <div class="large-3 small-6 columns">
 	                <input type="submit" class="button dark" name="rel_coll_submit" value="Submit" id="rel_coll_submit"/>
