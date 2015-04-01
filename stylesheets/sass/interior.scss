@@ -35,7 +35,7 @@ Variation Comparison
 
 
 /* -- HOME ----------------------- */
-body.home #header { margin-bottom:2em; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;
+body.home #header { margin-bottom:2em; padding-bottom:0; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;
 	
 	* {color:$cream;}
 	

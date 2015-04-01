@@ -52,6 +52,7 @@ Variation Comparison
 /* line 38, sass/interior.scss */
 body.home #header {
   margin-bottom: 2em;
+  padding-bottom: 0;
   background: #d45132 url("../images/banners/chalkboard.png") center center no-repeat;
 }
 /* line 40, sass/interior.scss */
