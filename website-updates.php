@@ -1,6 +1,7 @@
 <?php 	
 	$pageTitle = "Website Updates";
 	include("includes/header.php");
+	require("includes/constants.php");
 ?>
 
 <div class="row">
@@ -14,9 +15,9 @@
 				<li>Added Status Update function</li>
 				<li>Fixed 'Create Account': on successful account creation it sends you directly to login page (fixes the 'Hello ___' problem in header)</li>
 				<li>Fixed 'Edit Account' to show previous field entries</li>
-				<li>New Model: Ford Mini Pickup (SF0242)</li>
-				<li>New Model: Audi Quattro (SF0243)</li>
-				<li>New Model: Volvo trucks (cable truck, zoo truck, container truck) (SF0244)</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0242">Ford Mini Pickup (SF0242)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0243">Audi Quattro (SF0243)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0244">Volvo trucks (cable truck, zoo truck, container truck) (SF0244)</a></li>
 			</ul>
 		</div>
 		

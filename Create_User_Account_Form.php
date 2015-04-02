@@ -116,6 +116,7 @@
 				<input type="radio" name="Code2_Pref" id="Code2_Pref2" value="1"> <label for="Code2_Pref2">Show both Code 1 and Code 2, but separate them</label><br>
 				<input type="radio" name="Code2_Pref" id="Code2_Pref3" value="2"> <label for="Code2_Pref3">Don't show Code 2 at all</label><br>
 			</div>
+			
 
 		<p>Upon selecting 'Submit' below, you will be sent to the login page. Please login under your new account.</p>	
 			
