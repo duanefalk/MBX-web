@@ -159,9 +159,9 @@ if (isset($_POST['var_coll_submit'])) {
 			    
 		//show condition in approp scheme    
 		if ($Cond_scheme == 1) {
-		    $Veh_Cond_Scheme = "Alpha_cond";
+		    $Veh_Cond_Scheme = "Num_cond";
 		} else {
-		    $Veh_Cond_Scheme = "Num_cond";			
+		    $Veh_Cond_Scheme = "Alpha_cond";			
 		}
 			    
                 $query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
@@ -205,9 +205,9 @@ if (isset($_POST['var_coll_submit'])) {
 			    
 		//show conditions in approp scheme  
 		if ($Cond_scheme2 == 1) {
-		    $Pkg_Cond_Scheme="Alpha_cond";
+		    $Pkg_Cond_Scheme="Num_cond";
 		} else {
-		    $Pkg_Cond_Scheme="Num_cond";			
+		    $Pkg_Cond_Scheme="Alpha_cond";			
 		}
 			    
 		$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								

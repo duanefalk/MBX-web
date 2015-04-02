@@ -38,7 +38,7 @@
 			<label for="User_Url">Home page url (if you have a web site):</label>
 			<input type="text" name="User_Url" value="" size="60" id="User_Url">
 			
-			<label for="User_Address">Address (please enter country at minimum):</label>
+			<label for="User_Address">Address (please enter country at minimum; need full address to send special code 2 model to you):</label>
 			<input type="text" name="User_Address" value="" size="60" id="User_Address">
 			
 			<label for="User_Phone">Phone:</label>
@@ -89,6 +89,8 @@
 			<input type="radio" name="Code2_Pref" id="Code2_Pref2" value="1"> <label for="Code2_Pref2">Show both Code 1 and Code 2, but separate them</label><br>
 			<input type="radio" name="Code2_Pref" id="Code2_Pref3" value="2"> <label for="Code2_Pref3">Don't show Code 2 at all</label><br>
 
+		<p>Upon selecting 'Submit' below, you will be sent to the login page. Please login under your new account.</p>	
+			
 		<input type="submit"  name="submit" class="button dark" value="Submit"/>
 	</form>			
 		

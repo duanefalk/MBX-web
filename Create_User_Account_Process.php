@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php
 // we must never forget to start the session
 session_start();
@@ -62,8 +63,10 @@ session_start();
     
     $outcome=mysql_query($query);
     if ($outcome) {
-         echo "<a href=\"index.php\">Success. Return to Main Page</a>";
-     } // success 
+        // success 
+        $location="authenticate-test.php";
+        redirect_to($location);
+     } 
      else {
          echo "<p>Account creation failed.</p>";
          echo "<p>".mysql_error()."</p>";
