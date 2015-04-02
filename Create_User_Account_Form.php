@@ -45,7 +45,7 @@
 			<label for="User_Phone">Phone:</label>
 			<input type="text" name="User_Phone" value="" size="20" id="User_Phone">
 			
-			<label for="ddlAreasOfInterest">Areas of Interest (choose as many as apply):</label>
+			<label for="ddlAreasOfInterest">Areas of Interest (hold down ctrl or cmd key to choose as many as apply):</label>
 			<?php
 				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UserInterest%' ORDER BY ValueDispOrder ASC");								
 				$result=0;
@@ -69,7 +69,7 @@
 				?>
 				</select>
 				
-		<label for="User_is_Dealer">Are you a dealer (of Matchbox; anything else- TMI!)?:</label>     
+		<label for="User_is_Dealer">Are you a Matchbox dealer?:</label>     
 			<input type="radio" name="User_is_Dealer" id="User_is_Dealer1" value="0"> <label for="User_is_Dealer1">No</label><br>
 			<input type="radio" name="User_is_Dealer" id="User_is_Dealer2" value="1"> <label for="User_is_Dealer2">Yes</label><br>
 			

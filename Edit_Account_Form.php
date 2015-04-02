@@ -78,7 +78,7 @@
 			</div>			
 				
 			<div class="formRow">
-				<label for="ddlInterests" id="lblInterests">Areas of Interest</label>
+				<label for="ddlInterests" id="lblInterests">Areas of Interest (hold down ctrl or cmd key to choose as many as apply); <?php if ($row['Areas_of_Interest']) { echo "you previously selected: ". $row['Areas_of_Interest'];}?></label>
 				<?php
 					$query2=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UserInterest%' ORDER BY ValueDispOrder ASC");								
 					$result2=0;
@@ -91,7 +91,7 @@
 						//echo "made connection ".$result."<br />";		
 					}
 					$rows_count2= mysql_num_rows($result2);
-					// echo "Rows COunt: ".$rows_count."<br />";
+					// echo "Rows Count: ".$rows_count."<br />";
 				?>
 				<select multiple size="10" name="Areas_of_Interest[]" id="ddlInterests">
 					<?php
@@ -100,6 +100,7 @@
 							echo '<option value="'.$row2["ValueListEntry"].'">'.$row2["ValueListEntry"].'</option>';
 						}	
 					?>
+				</select>
 			</div>	
 				
 			<div class="formRow">
@@ -107,12 +108,12 @@
 				<?php
 				if ($row['User_is_Dealer']==1) {
 					?>
-					<input type="radio" name="User_is_Dealer" value="0" id="dealer1" /><label for="dealer1">No</label>"
+					<input type="radio" name="User_is_Dealer" value="0" id="dealer1" /><label for="dealer1">No</label>
 					<input type="radio" name="User_is_Dealer" value="1" id="dealer2" checked/><label for="dealer2">Yes</label>
 				<?php
 				} else {
 					?>
-					<input type="radio" name="User_is_Dealer" value="0" id="dealer1" checked/><label for="dealer1">No</label>"
+					<input type="radio" name="User_is_Dealer" value="0" id="dealer1" checked/><label for="dealer1">No</label>
 					<input type="radio" name="User_is_Dealer" value="1" id="dealer2" /><label for="dealer2">Yes</label>
 					<?php
 				}
