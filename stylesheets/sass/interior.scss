@@ -55,7 +55,6 @@ body.home #header { margin-bottom:2em; padding-bottom:0; background:$orange url(
 		}
 	}
 }
-
 #quick_search {
 	padding:1.5em; color:$white; background:$teal; border-radius:1em;
 	
@@ -99,6 +98,15 @@ body.home #header { margin-bottom:2em; padding-bottom:0; background:$orange url(
 .section { margin:1em auto 3em; padding-bottom:2em; border-bottom:.2em solid transparentize($black,.75);}
 /* -- end ABOUT ------------------ */
 
+
+/* -- WEBSITE UPDATES ------------ */
+body.website_updates {
+	.section {margin-bottom:2em; padding-bottom:0; border-bottom:0;
+		p.date {margin-bottom:.5em; text-transform:uppercase; font-size:.8rem; color:$orange; border-bottom:2px solid $orange;}
+		ul {margin-bottom:0;}
+	}
+}
+/* -- end WEBSITE UPDATES -------- */
 
 /* -- Add Menu -- */
 #addMenu {
