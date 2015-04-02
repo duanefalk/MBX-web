@@ -164,7 +164,7 @@ if (isset($_POST['var_coll_submit'])) {
 		    $Veh_Cond_Scheme = "Num_cond";			
 		}
 			    
-                $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
+                $query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
                 $result=0;
                 $rows_count=0;									
                 $result = mysql_query($query);
