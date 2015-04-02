@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php
 // we must never forget to start the session
 session_start();
@@ -22,10 +23,10 @@ session_start();
 -->
 
 <?php
-    $Username=$_POST['Username'];
+    $Username=$_SESSION['Username'];
     $Password=$_POST['Password'];
-    $Sec_Lvl=2;
-    $User_Name=$_POST['User_Name'];
+    $First_Name=$_POST['First_Name'];
+    $Last_Name=$_POST['Last_Name'];
     $User_Email=$_POST['User_Email'];
     $User_Url=$_POST['User_Url'];
     $User_Address=$_POST['User_Address'];
@@ -48,22 +49,27 @@ session_start();
     $User_Code2_Pref=$_POST['Code2_Pref'];
 
 
-     $query="INSERT INTO MBXU_User_Accounts (Username, Password, Sec_Lvl, User_Name, User_Email, User_Url,
-            User_Address, User_Phone, Areas_of_Interest, User_is_Dealer, User_Memberships,
-            Veh_Cond_Scheme, Pkg_Cond_Scheme, Code2_Pref) 
-            VALUES ('$Username','$Password','$Sec_Lvl','$User_Name','$User_Email','$User_Url',
-            '$User_Address','$User_Phone', ' $InterestString','$User_is_Dealer', '$User_Memberships',
-            '$User_Veh_Cond_Scheme', '$User_Pkg_Cond_Scheme', '$User_Code2_Pref')";
+     $query="UPDATE MBXU_User_Accounts SET Password='$Password', First_Name='$First_Name', Last_Name='$Last_Name', User_Email='$User_Email', User_Url='$User_Url',
+            User_Address='$User_Address', User_Phone='$User_Phone', Areas_of_Interest='$InterestString', User_is_Dealer='$User_is_Dealer', User_Memberships='$User_Memberships',
+            Veh_Cond_Scheme='$User_Veh_Cond_Scheme', Pkg_Cond_Scheme='$User_Pkg_Cond_Scheme', Code2_Pref='$User_Code2_Pref' 
+            WHERE Username='$Username'";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;
     // header("Location: Add_Version.php");
     
     $outcome=mysql_query($query);
     if ($outcome) {
-         echo "<a href=\"index.php\">Success. Return to Main Page</a>";
+        ?>
+        <div class="row">
+            <div class="large-12 columns">		
+		<h2>Account updated!</h2>
+		<p><a class='button dark' href="index.php">Return to Main Menu</a></p>		
+            </div>
+        </div>
+        <?php
      } // success 
      else {
-         echo "<p>Account creation failed.</p>";
+         echo "<h2>Account creation failed.</h2>";
          echo "<p>".mysql_error()."</p>";
       }
     mysql_close($connection); ?>
