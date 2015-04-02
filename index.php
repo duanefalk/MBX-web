@@ -4,7 +4,6 @@
 	require_once("includes/db_connection.php");
 	
 	$pageTitle = "Home";
-	//include("includes/header-home.php");
 	include("includes/header.php");
 ?>
 
@@ -39,28 +38,4 @@
 	</div>
 </div>
 
-	<!--td id="navigation">
-		<a href="About_site.php">About the Site</a>
-		<a href="Search_Models_Menu.php">Search Models</a>
-		<a href="Search_Releases_Menu.php">Search Releases</a>
-		<?php
-			if ($_SESSION['Sec_Lvl'] > 1) {
-				echo "<a href=\"Collections_Menu.php\">Create/Manage Your Collections</a>";						
-			}						
-		?>	
-	
-		<a href="Create_User_Account_Form.php"> Account</a>
-		<a href="User_Upload.php"> Upload Photo or Comments</a>
-	
-		<?php
-			if ($_SESSION['Sec_Lvl'] == 3) {
-				echo "<a href=\"Add_Menu.php\">Add a New Record</a>";						
-			}						
-		?>							
-		
-		<a href="logout.php">Logout</p</a>
-	</td-->
-
-
 <?php require("includes/footer.php"); ?>
-
