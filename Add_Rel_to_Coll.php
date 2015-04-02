@@ -204,7 +204,7 @@ session_start();
                 $result = 0;
                 $rows_count = 0;									
                 $result = mysql_query($query);
-                if ((mysql_num_rows($result) == 0)) {
+                if (!$result) {
                     echo "Error condition query failed";
                     exit;
                 } 
