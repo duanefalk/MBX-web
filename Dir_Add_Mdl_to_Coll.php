@@ -19,10 +19,11 @@
 		    <label for="Coll_VarID">Enter Variation ID for model:</label>
 		    <input type="text" id="Coll_VarID" name="Coll_VarID" value="" size="13" id="Coll_VarID">
 		    
-		    <input type="submit" class="button dark" value="Submit" id="var_submit" name="var_submit"><br/>
+		    <input type="submit" class="button dark" value="Submit" id="var_submit" name="var_submit">
+		    <a href="Manage_Models_in_Collection.php" class="button dark">Cancel</a>
         </form>
 		
-		<a href="Manage_Models_in_Collection.php" class="button dark">Cancel</a>
+		
 	</div>
 </div>
 

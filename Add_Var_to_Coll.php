@@ -8,6 +8,7 @@ session_start();
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
 <?php
+
 if (isset($_POST['var_coll_submit'])) {
         //echo "sees as post set";
 
@@ -325,7 +326,7 @@ if (isset($_POST['var_coll_submit'])) {
                 </div>
                 <div class="large-3 small-6 columns end">
 	                 <?php
-		                $url = "Variation_Detail.php?model=".$Coll_VarID;
+		                $url = "Ver_Detal_and_Var_Listing.php?model=".$Coll_VarID;
 		            ?>
 		            <a class="button dark cancel" href="<?php $url; ?>">Cancel</a>
                 </div>

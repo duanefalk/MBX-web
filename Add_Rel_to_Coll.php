@@ -307,7 +307,7 @@ session_start();
                 </div>
                 <div class="large-3 small-6 columns end">
 	                 <?php
-		                $url = "Version_Detail.php?model=" . $Coll_VerID;
+		                $url = "Ver_Detail_and_Var_Listing.php?model=" . $Coll_VerID;
 		            ?>
 		            <a class="button dark cancel" href="<?php $url; ?>">Cancel</a>
                 </div>
