@@ -19,18 +19,18 @@ session_start();
 				    if (isset($_POST['var_to_add'])) {
 				    
 					    $User=$_SESSION['Username'];
-						$query3=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");								
-						$result3=0;
-						$rows_count3=0;									
-						$result3 = mysql_query($query3);
-						$row3=mysql_fetch_array($result3);
-						$User_Coll_ID=$row3["User_Coll_ID"];
+					    $query3=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");								
+					    $result3=0;
+					    $rows_count3=0;									
+					    $result3 = mysql_query($query3);
+					    $row3=mysql_fetch_array($result3);
+					    $User_Coll_ID=$row3["User_Coll_ID"];
 					
-						$VarID=$_POST["var_to_add"];
+					    $VarID=$_POST["var_to_add"];
 					    $VerID=substr($VarID,0,10);
 					    $UMID=substr($VerID,0,6);        
 					
-						$Wishlist_InactivFlg="0";
+					    $Wishlist_InactivFlg="0";
 				
 				
 				     
@@ -38,15 +38,20 @@ session_start();
 						$outcome=mysql_query($query);
 				        
 				        if ($outcome) {
-				        	//if ((mysql_query($query)) == true)
-							echo "<p>Added variation ".$VarID." to wishlist for ".$User." in collection ".$User_Coll_ID."</p>";
-				            echo "<p><strong>Done</strong>. <a href='Search_Models_Menu.php'>Return to Search Models</a></p>";
-				            exit;
-				        } else {
-				            echo "<p>Subject creation failed. Please review entries.</p>";
-				            echo "<p>".mysql_error()."</p>";
-				            //drop down to form again
-				        }   
+					    redirect_to("Add_Var_to_Coll_Outcome.php");
+        
+					    //if ((mysql_query($query)) == true)
+					    //echo "<p>Done and returning</p>";
+					    //require_once("includes/close_db_connection.php");
+					    //Return;
+					    //$url= "Ver_Detail_and_Var_Listing.php?model=".$VerID;
+					    //echo "<a href=\"".$url."\">Return to Listing</a>";
+					    //exit;
+					} else {
+					    echo "<p>Subject creation failed. Please review entries.</p>";
+					    echo "<p>".mysql_error()."</p>";
+					    //drop down to form again
+					}   
 				    }
 				//if post not set do initial form 
 				?>
@@ -60,7 +65,7 @@ session_start();
 		            echo "<p><strong>Variation Selected:</strong> ".$Var_to_Add."</p>";
 		
 		            $picture1= IMAGE_URL . $Var_to_Add."_1.jpg";
-				    $picture1_loc=IMAGE_PATH. $Var_to_Add."_1.jpg";
+			    $picture1_loc=IMAGE_PATH. $Var_to_Add."_1.jpg";
 		
 		            if (file_exists($picture1_loc)) {
 		                echo "<img src=".$picture1." />";
@@ -68,20 +73,20 @@ session_start();
 		                //no photo, echo DEFAULT_IMAGE;
 		                echo "<img src=".DEFAULT_IMAGE." />";
 		            } 
-				?>
+			?>
 				
-				<div class="row">
-			        <div class="large-6 columns">
-				        <form name="Add_var_to_Wishlist" action="Add_Var_to_Wishlist.php" method="post">
-							<input class="button dark" type="submit" value="<?php echo $Var_to_Add?>" id="submit" name="var_to_add">
-				        </form>
-			        </div>
-			        <div class="large-6 columns">
-						<?php
-						    $url= "Variation_Detail.php?model=".$Var_to_Add;
-						    echo "<a href=\"".$url."\">Cancel</a>";
-						?>
-			        </div>
+			<div class="row">
+			    <div class="large-6 columns">
+				<form name="Add_var_to_Wishlist" action="Add_Var_to_Wishlist.php" method="post">
+				    <input class="button dark" type="submit" value="<?php echo $Var_to_Add?>" id="submit" name="var_to_add">
+				</form>
+			    </div>
+			    <div class="large-6 columns">
+				<?php
+				    $url= "Variation_Detail.php?model=".$Var_to_Add;
+				    echo "<a href=\"".$url."\">Cancel</a>";
+				?>
+			    </div>
 		        </div>
 			</li>
 		</ul>
