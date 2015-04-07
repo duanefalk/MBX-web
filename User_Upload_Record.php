@@ -22,9 +22,10 @@
     //if (!empty($_FILES)) {
 
     // enter conditional logic
-            echo "there is a file";
+            // echo "there is a file";
+            //exit;
             // check file size first
-            if ($_FILES["upload"]["size"] < 4000000) {
+            if ($_FILES["upload"]["size"] < 5000000) {
                     // if size ok, check file type   , "doc"
                     $allowedExts = array("gif", "jpeg", "jpg", "png", "pdf", "doc", "txt", "xls", "xlsx");
                     $extension = end(explode(".", $_FILES['upload']['name']));
@@ -33,16 +34,22 @@
                             $destination = '/Users/Falk/Sites/MBX_Web_Site_Test/user_uploads/';
                             // add unique prefix to file name to match db record id
                             $unique_file_name=$new_input_id."_".$_FILES['upload']['name'];
+
                             //move file
-                            move_uploaded_file($_FILES['upload']['tmp_name'], $destination . $unique_file_name);
-                            echo $_FILES['upload']['name'] . " uploaded to " . $destination;
-                            $file_uploaded=1;
+                            if (move_uploaded_file($_FILES['upload']['tmp_name'], $destination . $unique_file_name)) {;
+                                echo $_FILES['upload']['name'] . " uploaded to " . $destination;
+                                //exit;
+                                $file_uploaded=1;
+                            } else {
+                                echo "error uploading file";
+                                exit;
+                            }
                     } else {
                             echo "Invalid file type";
                             exit;
                     }
             } else {
-                    echo "File too large- submit only files <4mb";
+                    echo "File too large- submit only files <5mb";
                     exit;
             }
     }
