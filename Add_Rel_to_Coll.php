@@ -251,7 +251,7 @@ session_start();
 				$rows_count=0;									
 				$result = mysql_query($query);
 
-                if ((mysql_num_rows($result) == 0)) { ?>
+                if (!$result) { ?>
 					<input type="text" name="Coll_Loc2" value="" size="20" id="Coll_Loc2">
                 <?php } else { ?>  
                     <select name="Coll_Loc2" id="Coll_Loc2">
