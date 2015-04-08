@@ -31,7 +31,7 @@
                     $extension = end(explode(".", $_FILES['upload']['name']));
                     if (in_array($extension, $allowedExts)) {
                             //set the destination dir
-                            $destination = '/Users/Falk/Sites/MBX_Web_Site_Test/user_uploads/';
+                            $destination = UPLOAD_URL;
                             // add unique prefix to file name to match db record id
                             $unique_file_name=$new_input_id."_".$_FILES['upload']['name'];
 

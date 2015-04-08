@@ -2,7 +2,7 @@
 
 <div class="row">
 	<div class="large-12 columns">
-		<h2>Matchbox 101- Learn About Matchbox and Diecast Cars!</h2>
+		<h2>COMING SOON: Matchbox 101- Learn About Matchbox and Diecast Cars!</h2>
 		<p>Select from the following 'core curriculum' for informational articles on Matchbox topics.</p>
 	</div>
 </div>
