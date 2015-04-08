@@ -221,7 +221,7 @@ select {
 }
 /* line 101, sass/style.scss */
 #mainNav a {
-  padding: .5em 1em;
+  padding: .5em .75em;
   font-size: 90%;
   color: #f6f3dd;
 }

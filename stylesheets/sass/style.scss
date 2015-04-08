@@ -98,7 +98,7 @@ select {height:auto;}
 	@media only screen and (max-width:1024px){ text-align:center; }
 	
 	li {display:inline-block;}
-	a {padding:.5em 1em; font-size:90%; color:$cream;
+	a {padding:.5em .75em; font-size:90%; color:$cream;
 		@media only screen and (max-width:480px){ padding:.5em .25em; font-size:80%;  }
 	}
 }
