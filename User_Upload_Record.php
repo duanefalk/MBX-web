@@ -36,7 +36,7 @@
                             $unique_file_name=$new_input_id."_".$_FILES['upload']['name'];
 
                             //move file
-                            if (move_uploaded_file($_FILES['upload']['tmp_name'], $destination . $unique_file_name)) {;
+                            if (move_uploaded_file($_FILES['upload']['tmp_name'], $destination.$unique_file_name)) {
                                 echo $_FILES['upload']['name'] . " uploaded to " . $destination;
                                 //exit;
                                 $file_uploaded=1;
