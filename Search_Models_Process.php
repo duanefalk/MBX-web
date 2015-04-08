@@ -318,9 +318,9 @@
 					$url= "Models_Detail_and_Ver_Listing.php?model=".$Model_to_detail;
 				}	
 
-				$picture= IMAGE_URL . $row["UMID"].".jpg";
+				$picture = IMAGE_URL . $row["UMID"].".jpg";
 				
-				$picture_loc= IMAGE_PATH . $row["UMID"].".jpg";
+				$picture_loc = IMAGE_PATH . $row["UMID"].".jpg";
 				
 				if ( file_exists($picture_loc) ) {
 						//echo "picture exists";
