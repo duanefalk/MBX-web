@@ -2,7 +2,7 @@
 
 <div class="row">
 	<div class="large-12 columns">
-		<h2>COMING SOON: Matchbox 101- Learn About Matchbox and Diecast Cars!</h2>
+		<h2>Matchbox 101- Learn About Matchbox and Diecast Cars!</h2>
 		<p>Select from the following 'core curriculum' for informational articles on Matchbox topics.</p>
 	</div>
 </div>
@@ -29,10 +29,10 @@
 
 <div class="row">
 	<div class="large-12 columns">
-        <a href="Window_Colors.php" class="button dark">A Brief History of the 'Matchbox' Brand</a>
-        <a href="Wheel_Types.php" class="button dark">Early Lesney Toys</a>	
-	<a href="Theme_List.php" class="button dark">What's the Difference? Regular & Superfast models</a>
-	<a href="Series_List.php" class="button dark">Ways of Organizing Matchbox Models</a>	
+        <a href="Matchbox_History.php" class="button dark">A Brief History of the 'Matchbox' Brand</a>
+        <a href="Early_Lesney.php" class="button dark">Early Lesney Toys</a>	
+	<a href="LR_vs_SF.php" class="button dark">What's the Difference? Regular & Superfast models</a>
+	<a href="MB_Organization.php" class="button dark">Ways of Organizing Matchbox Models</a>	
 	</div>
 </div>
 
