@@ -1,6 +1,9 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
+<?php 
+	$pageTitle = "Search Releases";
+	include("includes/header.php"); 
+?>
 
 <head>
 	<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">

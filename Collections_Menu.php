@@ -3,9 +3,13 @@
 	session_start();
 ?>
 
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header.php"); ?>
-<?php require_once("includes/functions.php"); ?>
+<?php 
+	require_once("includes/db_connection.php");
+	
+	$pageTitle = "Collections";
+	include("includes/header.php"); 
+	require_once("includes/functions.php");
+?>
 
 <?php 	
 	$Username= $_SESSION['Username'];

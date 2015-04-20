@@ -17,7 +17,7 @@ include_once("includes/analyticstracking.php");
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-	<title>Matchbox University<?php if ($pageTitle) { echo " | " . $pageTitle; } ?></title>
+	<title><?php if ($pageTitle) { echo $pageTitle . " | "; } ?>Matchbox University</title>
 	
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="stylesheets/foundation.css" media="all" rel="stylesheet" type="text/css" />

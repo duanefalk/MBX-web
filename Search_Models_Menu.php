@@ -1,6 +1,9 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
+<?php
+	$pageTitle = "Search Models";
+	include("includes/header.php"); 
+?>
 
 
 <form action="Search_Models_Process.php" method="post">
