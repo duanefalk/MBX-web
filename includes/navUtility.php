@@ -31,8 +31,9 @@
 						echo "<a href='Add_Menu.php'>Add a New Record</a>";						
 					}
 					
+					echo "<a href='website-updates.php'>Website Updates</a>";
 					echo "<a href='Edit_Account_Form.php'>Edit Account</a>";
-					echo "<a href='logout.php'>Logout</a>";					
+					echo "<a href='logout.php'>Logout</a>";
 				}
 				
 				

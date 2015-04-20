@@ -36,7 +36,7 @@ Variation Comparison
   padding-top: 0;
 }
 
-/* -- Sidebar -- */
+/* -- SIDEBAR -------------------- */
 /* line 28, sass/interior.scss */
 .sidebar {
   margin-top: 3em;
@@ -48,6 +48,7 @@ Variation Comparison
   margin: .5em 0;
 }
 
+/* -- end SIDEBAR ---------------- */
 /* -- HOME ----------------------- */
 /* line 38, sass/interior.scss */
 body.home #header {
