@@ -12,7 +12,7 @@
 		<div class="section">
 			<p class="date">April 2, 2015</p>
 			<ul>
-				<li>NOTE: CURRENT ISSUE WITH UPLOADING FILES. Creates database record but doesn't upload attached file. Please do not try upload of files until this is noted here as resolved.</li>	
+				<li>ISSUE RESOLUTION: The problem with uploading files has been corrected. Uploaded files are now received by the site administrator, and the database record for the upload is created correctly.</li>	
 				<li>Added Status Update function</li>
 				<li>Fixed 'Create Account': on successful account creation it sends you directly to login page (fixes the 'Hello ___' problem in header)</li>
 				<li>Fixed 'Edit Account' to show previous field entries</li>
