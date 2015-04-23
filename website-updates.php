@@ -10,7 +10,7 @@
 		<h2>Latest Website Updates</h2>
 			
 		<div class="section">
-			<p class="date">April 2, 2015</p>
+			<p class="date">April 22, 2015</p>
 			<ul>
 				<li>ISSUE RESOLUTION: The problem with uploading files has been corrected. Uploaded files are now received by the site administrator, and the database record for the upload is created correctly.</li>	
 				<li>Added Status Update function</li>
