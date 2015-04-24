@@ -22,6 +22,12 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0238">Ford Open Back Truck (SF0238)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0239">Leyland Artic. Tanker (SF0239)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0240">Leyland Titan London Bus (SF0240)</a></li>
+			</ul>
+		</div>
+		
+		<div class="section">
+			<p class="date">April 2, 2015</p>
+			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0241">Peterbilt Cement Truck (SF0241)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0242">Ford Mini Pickup (SF0242)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0243">Audi Quattro (SF0243)</a></li>
