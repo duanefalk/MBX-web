@@ -7,10 +7,12 @@ $( document ).ready(function() {
 	
 	
 	//Homepage Sliders
-	$('.bxslider').bxSlider({
+	/*$('.bxslider').bxSlider({
 		mode: 'fade',
 		captions: false
-	});
+	});*/
+	
+	$('body.home').
 	
 	
 	//Image Popup

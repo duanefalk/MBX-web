@@ -65,7 +65,7 @@ include_once("includes/analyticstracking.php");
 		
 		<?php if ($pageTitle == 'home') { ?>
 			<div class="row" id="banner">
-				<div class="banner one">
+				<div class="banner active">
 					<div class="large-7 columns" id="bannerText">
 						<h2>What is the Matchbox University?</h2>
 						<p>The Matchbox University is an on-line database of Matchbox ‘miniatures’, from regular wheels models up through this year’s versions.</p>
@@ -76,25 +76,25 @@ include_once("includes/analyticstracking.php");
 						<img src="images/banners/professor.png" />
 					</div>
 				</div>
-				<!--div class="banner two">
+				<!--div class="banner">
 					<h2>The Course Catalog </h2>
 					<p>Whether you are new to the Matchbox world or a long-time collector, check out the Matchbox University Course Catalog.</p>
 					<p>Matchbox University is open to all-The Professor invites you to click on the Matchbox 101 / Learn button above to see a list of topics.</p>
 					<p><a href="REPLACE" class="button">REPLACE</a></p>
 				</div>
-				<div class="banner three">
+				<div class="banner">
 					<h2>Manage your collection from anywhere!! </h2>
 					<p>MBX-U gives you the opportunity to create and build an on-line Matchbox collection, accessible from your PC, laptop, tablet or smart phone.</p>
 					<p>Click on the Enjoy / Manage Collection button, above, to learn more and start your collection.</p>
 					<p><a href="REPLACE" class="button">REPLACE</a></p>
 				</div>
-				<div class="banner four">
+				<div class="banner">
 					<h2>Create an Account on MBX-U</h2>
 					<p>There are several benefits to creating an account on the Matchbox University site including a free code 2 vehicle!</p>
 					<p>Click on Create an Account, above, to get set up.</p>
 					<p><a href="REPLACE" class="button">REPLACE</a></p>
 				</div>
-				<div class="banner four">
+				<div class="banner">
 					<h2>Connect to fellow collectors</h2>
 					<p>Through the Seek / Links option, you can check out an up-to-date list of many of the best Matchbox web sites out there.</p>
 					<p>Clubs, annual collectors’ meetings some of the popular Matchbox collecting guides are also listed.</p>
