@@ -35,23 +35,28 @@ Variation Comparison
 
 
 /* -- HOME ----------------------- */
-body.home #header { margin-bottom:2em; padding-bottom:0; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;
-	
-	* {color:$cream;}
-	
+body.home #header { margin-bottom:2em; padding-bottom:0; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;	
+	* {color:$cream;}	
 	#logo {
 		@media only screen and (max-width:480px){ text-align:center; }
-	}
-	
-	#banner { margin-top:2em;
-	
-		#bannerText {
-			margin-top:2em;
-		}
-		#bannerImage {
-			@media only screen and (max-width:1024px){ text-align:center; }
+	}	
+	#banner { margin-top:2em;	
+		.banner {
+			&.one {display:block;}
 			
-			img { @media only screen and (max-width:480px){ max-width:60%; margin:0 auto; } }
+			&.two,
+			&.three,
+			&.four,
+			&.five {display:none;}
+			
+			#bannerText {
+				margin-top:2em;
+			}
+			#bannerImage {
+				@media only screen and (max-width:1024px){ text-align:center; }
+				
+				img { @media only screen and (max-width:480px){ max-width:60%; margin:0 auto; } }
+			}
 		}
 	}
 }

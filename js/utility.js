@@ -1,21 +1,16 @@
 $( document ).ready(function() {
 	
-	//Local only: show "Local Only" message
+	// ---- LOCAL SITE WARNING ---------------------------------------- //
 	if (window.location.href.indexOf("localhost") > -1) {
 	    $('#warningLocal').css("display","block");
 	}
 	
 	
-	//Homepage Sliders
-	/*$('.bxslider').bxSlider({
-		mode: 'fade',
-		captions: false
-	});*/
-	
-	$('body.home').
+	// ---- HOME: BANNERS -------------------------------------------- //
+	setInterval(fadeBanners, 4000); //call it every 4 seconds
 	
 	
-	//Image Popup
+	// ---- IMAGE POPUP ---------------------------------------------- //
 	$(document).ready(function() {
 		$('.imagePopup').magnificPopup({
 			type:'image',
@@ -24,7 +19,7 @@ $( document ).ready(function() {
 	});
 	
 	
-	//Search Models: Duplicate images display
+	// ---- SEARCH MODELS: DUPLICATE IMAGES DISPLAY ------------------ //
 	var moreThanOne = haveDuplicateImages();
 	if (moreThanOne == true) {
 		$('body.search_models #duplicateImages').css('opacity','1');
@@ -32,7 +27,25 @@ $( document ).ready(function() {
 	
 });
 
-//Search Models: Duplicate images display function
+// ---- FUNCTIONS ---- //
+
+
+
+// ---- HOME: BANNERS -------------------------------------------- //
+function fadeBanners() {
+    var visibleDiv = $('.banner:visible:first'); //find first visible div
+	console.log(visibleDiv);
+    
+    visibleDiv.fadeOut(400, function () {  //fade out first visible div
+       var allDivs = visibleDiv.parent().children(); //all divs to fade out / in
+       var nextDivIndex = (allDivs.index(visibleDiv) + 1) % allDivs.length;  //index of next div that comes after visible div
+       var nextdiv = allDivs.eq(nextDivIndex); //find the next visible div
+       nextdiv.fadeIn(400); //fade it in
+    });
+};
+
+
+// ---- SEARCH MODELS: DUPLICATE IMAGES DISPLAY ------------------ //
 function haveDuplicateImages() {
 	var hasDupe = false;
 	var imgArr = [];
