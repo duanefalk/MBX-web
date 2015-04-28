@@ -1,4 +1,5 @@
 <?php
+ob_start();
 // we must never forget to start the session
 session_start();
 ?>
@@ -15,7 +16,7 @@ session_start();
 		<?php
 		    //if the form was filled out already, process it				
 		    if (isset($_POST['Create_Coll_Submit'])) {
-		
+
 				//Fields:
 				$Username = $_SESSION['Username'];
 				$User_Coll_ID = $_POST['User_Coll_ID'];
@@ -25,9 +26,7 @@ session_start();
 				//Add the collection record
 				//$query="INSERT INTO Matchbox_User_Collections (Username, User_Coll_ID, User_Coll_Desc, User_Coll_Created_Date) 
 				//    VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
-				$query = "INSERT INTO Matchbox_User_Collections VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";
-			    
-							
+				$query = "INSERT INTO Matchbox_User_Collections (Username, User_Coll_ID, User_Coll_Desc, User_Coll_Created_Date) VALUES ('$Username','$User_Coll_ID','$User_Coll_Desc', '$User_Coll_Created_Date')";						
 				$outcome = mysql_query($query);
 				
 				if ($outcome) {
