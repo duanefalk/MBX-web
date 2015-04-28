@@ -31,8 +31,14 @@ session_start();
 		<br />            
 		<form name="Updt_Coll" action="Updt_Coll.php" method="post">
 			<p>Enter ID of collection to Update/Delete: <input type="text" name="Coll_ID" value="" size="60" id="Coll_ID"></p>
-			<input type="submit" value="Submit" class="button dark" id="submit" name="submit"><br/>
-			<a href="Updt_Coll.php">Cancel</a>
+			<div class="row">
+				<div class="large-2 small-6 columns">
+					<input type="submit" value="Submit" class="button dark" id="submit" name="submit"><br/>
+				</div>
+				<div class="large-2 small-6 columns end">
+					<a class="button dark cancel" href="Manage_Collections.php">Cancel</a>
+				</div>
+			</div>			
     	</form>
 	</div>
 </div>
