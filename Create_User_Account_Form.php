@@ -27,7 +27,7 @@
 				<input type="text" name="Password" value="" maxlength="30" id="Password" required>
 			</div>
 		
-			<?php $_SESSION['Sec_Lvl']=2; ?> 
+			<?php //$_SESSION['Sec_Lvl']=2; ?> 
 		
 			<div class="formRow">		
 				<label for="First_Name">First Name*:</label>
