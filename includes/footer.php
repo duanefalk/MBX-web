@@ -18,8 +18,9 @@
 <script src="js/vendor/jquery.js"></script>
 <script src="js/vendor/fastclick.js"></script>
 <script src="js/foundation.min.js"></script>
+<script src="js/parsley.min.js"></script>
 <script>
-  $(document).foundation();
+	$(document).foundation();
 </script>
 
 

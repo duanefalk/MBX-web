@@ -151,7 +151,9 @@ select {height:auto;}
 }
 
 /* -- Forms -- */
-.formRow {margin-bottom:1em; padding-bottom:.5em; border-bottom:.2em solid transparentize($brown,.85);}
+.formRow {margin-bottom:1em; padding-bottom:.5em; border-bottom:.2em solid transparentize($brown,.85);
+	textarea {resize:none; max-width:100%; min-height:100px;}
+}
 input[type="checkbox"] {}
 
 /* -- Accordions -- */

@@ -1,8 +1,8 @@
 <?php
-ob_start(); 
-session_start();
+	ob_start(); 
+	session_start();
 
-include_once("includes/analyticstracking.php");
+	include_once("includes/analyticstracking.php");
 ?>
 
 <!doctype html>
@@ -21,6 +21,7 @@ include_once("includes/analyticstracking.php");
 	
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="stylesheets/foundation.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/parsley.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/lightbox.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/jquery.bxslider.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
