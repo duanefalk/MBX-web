@@ -62,15 +62,15 @@ session_start();
 			    <?php } else { ?>
 					<p>Note: currently each account-holder can only have one collection. A future feature will allow you to have more than one collection if you desire.</p>
 					
-					<form action="Create_Collection.php" method="post">
+					<form action="Create_Collection.php" method="post" data-parsley-validate>
 						<!--label for="Username">Username:</label>
 						<input type="text" name="Username" value="<? echo $Username?>" size="20" id="Username"-->
 						
-						<label for="User_Coll_ID">Collection Identifier:</label>
-						<input type="text" name="User_Coll_ID" value="" size="20" id="User_Coll_ID">
+						<label for="User_Coll_ID">Collection Identifier: <small>(alphanumeric only)</small></label>
+						<input type="text" name="User_Coll_ID" value="" size="20" id="User_Coll_ID" data-parsley-type="alphanum" required>
 						
-						<label for="User_Coll_Desc">Collection Description:</label>
-						<textarea name="User_Coll_Desc" id="User_Coll_Desc" cols="45" rows="4"></textarea>
+						<label for="User_Coll_Desc">Collection Description: <small>(alphanumeric only)</small></label>
+						<textarea name="User_Coll_Desc" id="User_Coll_Desc" cols="45" rows="4" data-parsley-type="alphanum" required></textarea>
 						
 						<label for="User_Coll_Created_Date">Date Created:</label>
 						<input type="text" name="User_Coll_Created_Date" value="<?php echo date('Y-m-d'); ?>" id="User_Coll_Created_Date">
