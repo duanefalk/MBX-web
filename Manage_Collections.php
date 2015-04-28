@@ -10,7 +10,7 @@
 		<a href="Create_Collection.php" class="button dark">Create a Collection</a>
             </div>
  	    <div class="large-4 columns">   
-	        <a href="Updt_Coll.php" class="button dark">Update/Delete Your Collection</a>
+	        <a href="Updt_Coll.php" class="button dark">View/Update/Delete Your Collection</a>
 	    </div>           
 	    <div class="large-4 columns">
 	    	<a href="Collection_Code_Lists.php" class="button dark">Set up Collection Code Lists</a>
