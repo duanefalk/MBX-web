@@ -24,7 +24,7 @@
 			
 			<div class="formRow">
 				<label for="Password">Password*:</label>
-				<input type="text" name="Password" value="" maxlength="30" id="Password" required>
+				<input type="text" name="Password" value="" maxlength="30" id="Password" data-parsley-minlength="4" data-parsley-minlength-message="For your own safety, please make your password at least 4 characters" required>
 			</div>
 		
 			<?php //$_SESSION['Sec_Lvl']=2; ?> 

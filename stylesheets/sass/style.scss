@@ -46,9 +46,7 @@ select {height:auto;}
 .button {
 	padding:.6em 1.4em;
 	@include headline; color:$white; 
-	background:none;
-	border:2px solid $white;
-	border-radius:5px;
+	background:none; border:2px solid $white; border-radius:5px;
 	transition:all .5s ease;
 	
 	&:hover {background:$teal;}
@@ -72,7 +70,6 @@ select {height:auto;}
 	}
 }
 
-
 .row.actionButtons {
 	&:last-of-type {margin-bottom:2em;}
 	
@@ -80,7 +77,6 @@ select {height:auto;}
 		&:hover {background:$orange;}
 	}
 }
-
 
 .icon {
 	&.inline {margin-right:.5em;}
@@ -154,11 +150,9 @@ select {height:auto;}
 .formRow {margin-bottom:1em; padding-bottom:.5em; border-bottom:.2em solid transparentize($brown,.85);
 	textarea {resize:none; max-width:100%; min-height:100px;}
 }
-input[type="checkbox"] {}
 
 /* -- Accordions -- */
 dl.accordion { margin:0 auto 1em; @include body;
-	
 	dd > a { @include body; color:$white; background:$teal; 
 		&:hover {background:lighten($teal,5%); }
 	}

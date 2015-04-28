@@ -5,25 +5,11 @@
 				<p>Achtung! This is your <em>local</em> version of MBX</p>
 			</div>
 		</div>
-	</div>
-	
+	</div>	
 	<div class="row">
 		<div class="large-12 columns">
-	
-			<!--a href="Search_Models_Menu.php">Search Models</a>
-			<a href="Search_Releases_Menu.php">Search Releases</a-->
-			
-			<?php
-			
-				// code 1 = guest
-				//if ($_SESSION['Sec_Lvl'] == 1) {
-				//	echo "<a href='Create_User_Account_Form.php'>Create an Account</a>";
-				//	echo "<a href='Authenticate-test.php'>Login</a>";			
-				//}
-				
-				//code 2,3 = users with profiles
+			<?php			
 				if ($_SESSION['Sec_Lvl'] > 1) {
-					
 					echo "<em>Hello, " . $_SESSION['First_Name'] . "</em>";
 					
 					//code 3 = Dad
@@ -34,10 +20,7 @@
 					echo "<a href='website-updates.php'>Website Updates</a>";
 					echo "<a href='Edit_Account_Form.php'>Edit Account</a>";
 					echo "<a href='logout.php'>Logout</a>";
-				}
-				
-				
-				else {
+				} else {
 					echo "<a href='Create_User_Account_Form.php'>Create an Account</a>";
 					echo "<a href='Authenticate-test.php'>Login</a>";			
 				}		
