@@ -59,7 +59,7 @@
 							echo "<li><a href='User_Upload.php'>Upload</a></li>";
 						}
 					?>					
-					<li><a href="MBX101_Menu.php">MBX 101</a></li>
+					<!--li><a href="MBX101_Menu.php">MBX 101</a></li-->
 				</ul>
 			</div>
 		</div>
