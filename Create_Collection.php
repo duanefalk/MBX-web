@@ -19,8 +19,8 @@ session_start();
 
 				//Fields:
 				$Username = $_SESSION['Username'];
-				$User_Coll_ID = $_POST['User_Coll_ID'];
-				$User_Coll_Desc = $_POST['User_Coll_Desc'];
+				$User_Coll_ID = mysql_real_escape_string($_POST['User_Coll_ID']);
+				$User_Coll_Desc = mysql_real_escape_string($_POST['User_Coll_Desc']);
 				$User_Coll_Created_Date = $_POST['User_Coll_Created_Date'];
 			
 				//Add the collection record
@@ -73,10 +73,10 @@ session_start();
 						<input type="text" name="Username" value="<? echo $Username?>" size="20" id="Username"-->
 						
 
-					<label for="User_Coll_ID">Collection Identifier: <small>(alphanumeric only)</small></label>
-					<input type="text" name="User_Coll_ID" value="" size="20" id="User_Coll_ID" data-parsley-type="alphanum" required>
+					<label for="User_Coll_ID">Collection Identifier: <small>(max 12 chars)</small></label>
+					<input type="text" name="User_Coll_ID" value="" size="12" id="User_Coll_ID" maxlength="12" required>
 						
-						<label for="User_Coll_Desc">Collection Description: <small>(alphanumeric only)</small></label>
+						<label for="User_Coll_Desc">Collection Description: <small></small></label>
 						<textarea name="User_Coll_Desc" id="User_Coll_Desc" cols="45" rows="4" required></textarea>
 
 					
