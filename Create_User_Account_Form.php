@@ -45,8 +45,8 @@
 			</div>
 			
 			<div class="formRow">
-				<label for="User_Url">Home page url (if you have a web site):</label>
-				<input type="text" name="User_Url" value="" size="60" id="User_Url">
+				<label for="User_Url">Website URL:</label>
+				<input type="url" name="User_Url" value="" size="60" id="User_Url">
 			</div>
 			
 			<div class="formRow">
