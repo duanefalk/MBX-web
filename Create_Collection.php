@@ -49,38 +49,42 @@ session_start();
 				}		
 		    } else {
 			    
-			    $Username = $_SESSION["Username"];
-				$rows_count = 0;
-				$query2 = ("SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'");
-				$result2 = mysql_query($query2);
-				$rows_count = mysql_num_rows($result2);
+				$Username = $_SESSION["Username"];
+				$rows_count = 0;				
+				$query = ("SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'");
+				$result = mysql_query($query);
 				
-				if ($rows_count != 0) { ?>
-					<p>You already have a collection. You can go to View/Update to see the details on this collection.</p>
-					<p><a href="Manage_Collections.php">Manage collections</a></p>
+				
+				if ($result) {
+					$rows= mysql_num_rows($result);
+					for ($i=1; $i<=$rows; $i++) {
+						$row = mysql_fetch_array($result);
+						if ($row['User_Coll_Inactiv_Flag']=="0") {?>
+							<p>You already have a collection. You can go to View/Update to see the details on this collection.</p>
+							<p><a href="Manage_Collections.php">Manage collections</a></p>
+							<?php exit;
+						}
+					}
+				} ?>	
+				<p>Note: currently each account-holder can only have one collection. A future feature will allow you to have more than one collection if you desire.</p>
 					
-			    <?php } else { ?>
-					<p>Note: currently each account-holder can only have one collection. A future feature will allow you to have more than one collection if you desire.</p>
-					
-					<form action="Create_Collection.php" method="post" data-parsley-validate>
+				<form action="Create_Collection.php" method="post" data-parsley-validate>
 						<!--label for="Username">Username:</label>
 						<input type="text" name="Username" value="<? echo $Username?>" size="20" id="Username"-->
 						
-						<label for="User_Coll_ID">Collection Identifier: <small>(alphanumeric only)</small></label>
-						<input type="text" name="User_Coll_ID" value="" size="20" id="User_Coll_ID" data-parsley-type="alphanum" required>
+					<label for="User_Coll_ID">Collection Identifier: <small>(alphanumeric only)</small></label>
+					<input type="text" name="User_Coll_ID" value="" size="20" id="User_Coll_ID" data-parsley-type="alphanum" required>
 						
-						<label for="User_Coll_Desc">Collection Description: <small>(alphanumeric only)</small></label>
-						<textarea name="User_Coll_Desc" id="User_Coll_Desc" cols="45" rows="4" data-parsley-type="alphanum" required></textarea>
-						
-						<label for="User_Coll_Created_Date">Date Created:</label>
-						<input type="text" name="User_Coll_Created_Date" value="<?php echo date('Y-m-d'); ?>" id="User_Coll_Created_Date">
-						
-						<input type="submit" class="button dark" name="Create_Coll_Submit" value="Submit"/>
-						<a class="button cancel" href="Create_Collection.php">Cancel</a>	
-					</form>	
+					<label for="User_Coll_Desc">Collection Description: <small>(alphanumeric only)</small></label>
+					<textarea name="User_Coll_Desc" id="User_Coll_Desc" cols="45" rows="4" data-parsley-type="alphanum" required></textarea>
 					
-				<?php }			    
-		    }
+					<label for="User_Coll_Created_Date">Date Created:</label>
+					<input type="text" name="User_Coll_Created_Date" value="<?php echo date('Y-m-d'); ?>" id="User_Coll_Created_Date">
+						
+					<input type="submit" class="button dark" name="Create_Coll_Submit" value="Submit"/>
+					<a class="button cancel" href="Create_Collection.php">Cancel</a>	
+				</form>				    
+		    <?php }
 		?>
 				
 	</div>

@@ -12,7 +12,7 @@ session_start();
         $User=$_SESSION['Username'];
 
 	$result=0;
-	$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Value='$CollCode' AND Coll_List_Val_InactivFlg=\"0\"");								
+	$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Val_InactivFlg=\"0\"");								
 	$result=mysql_query($query);
 	if (mysql_num_rows($result) != 0) {
 	    $location="Updt_User_Coll_Code_Process.php?code=".$CollCode;

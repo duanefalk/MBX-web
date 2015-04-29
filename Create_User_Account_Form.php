@@ -1,6 +1,7 @@
-<?php 
-	ob_start();
-	session_start(); // we must never forget to start the session
+<?php ob_start(); ?>
+<?php
+	// we must never forget to start the session
+	session_start();
 ?>
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>

@@ -1,4 +1,4 @@
-<?php
+<?php ob_start();
 	// we must never forget to start the session
 	session_start();
 ?>
@@ -51,59 +51,98 @@
 			$result = 0;
 			$rows_count = 0;
 			$query = ("SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'");													
-			$result = mysql_query($query);
-			$rows_count = mysql_num_rows($result);
-	        
-	        if ($rows_count == 0) { ?>
-				<p><img class='icon inline' src="<?php echo $cross ?>">Go to <a href="Create_Collection.php">Create a Collection</a>.</p>
-			<?php } else { ?>
-				<p><img class='icon inline' src="<?php echo $check ?>">You've already created a collection, proceed to step 3</p>		
-			<?php } ?>
+			$result = mysql_query($query);	
+			if ($result) {
+				$rows_count= mysql_num_rows($result);
+				if ($rows_count>0) {
+					$row = mysql_fetch_array($result);
+					if ($row['User_Coll_Inactiv_Flag']==0) { 
+						?> <p><img class='icon inline' src="<?php echo $check ?>">You've already created a collection, proceed to step 3</p>
+					<?php } else {
+						?> <p><img class='icon inline' src="<?php echo $cross ?>">Go to <a href="Create_Collection.php">Create a Collection</a>
+					<?php }
+				} else {
+					?> <p><img class='icon inline' src="<?php echo $cross ?>">Go to <a href="Create_Collection.php">Create a Collection</a>
+				<?php }	
+			} ?>
+					
+
 
 		<h3>Step 3 (optional): Set up lists of sellers and storage locations</h3>
 		<?php
-			//fake until set up
+			
 			$result=0;
 			$rows_count=0;
 			$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username= '$Username'");													
 			$result = mysql_query($query);
-			$rows_count= mysql_num_rows($result);
-	        
-	        if ($rows_count == 0) { ?>
-				<p><img class='icon inline' src="<?php echo $cross ?>">No sellers or storage locations added yet.</p>
-				<p>If you want to have your own sellers and storage locations for your collection (and don't want to type them in each time), Go to <a href="Collection_Code_Lists.php">Set Up Collection Code Lists</a> and enter the values you desire. These will show up in drop-down lists that you can select from, for the appropriate fields when you are adding models rather than you needing to type them in.</p>
-			<?php } else { ?>
-				<p><img class='icon inline' src="<?php echo $check ?>">You've already entered some Collection Code List items. You can add to your lists at any time from the <a href="Collection_Code_Lists.php">Create Collection Code Lists</a> menu option.</p>
-			<?php } ?>
+
+			if ($result) {
+				$rows_count= mysql_num_rows($result);
+				if ($rows_count>0) {
+					$row = mysql_fetch_array($result);
+					if ($row['Coll_List_Val_InactivFlg']==0) { 
+						?> <p><img class='icon inline' src="<?php echo $check ?>">You've already entered some Collection Code List items. You can add to your lists at any time from the <a href="Collection_Code_Lists.php">Create Collection Code Lists</a> menu option.</p>
+					<?php } else {
+						?> <p><img class='icon inline' src="<?php echo $cross ?>">No sellers or storage locations added yet.</p>
+					<?php }
+				} else {
+					?> <p><img class='icon inline' src="<?php echo $cross ?>">No sellers or storage locations added yet.</p>
+				<?php }	
+			} ?>
 
 		<h3>Step 4: Add models to your collection</h3>
 		<?php
-			$result_mdls=0;
+			
+			//$result_mdls=0;
 			$rows_count=0;
 			$query_mdls= ("SELECT * FROM Matchbox_Collection WHERE Username= '$Username'");
 			$result_mdls= mysql_query($query_mdls);
-			$rows_count= mysql_num_rows($result);
-	        
-	        if ($rows_count != 0) { ?>
-				<p><img class='icon inline' src="<?php echo $check ?>">You've already started adding models. Enjoy growing your collection!</p>
-			<?php } else { ?>
-				<p><img class='icon inline' src="<?php echo $cross ?>">No models yet added</p>
-				<p>There are two ways to add a model to your collection:</p>
-				<p><strong>Option 1:</strong></p>
-				<ul>
-					<li>Look up a model you using either the <a href="Search_Models_Menu.php">Search Models</a> or <a href="Search_Releases_Menu.php">Search Releases</a> menu options.</li>
-					<li>Drill down to the variation record that matches your model.</li>
-					<li>On the <em>Variations Detail</em> page, check the box marked <em>Add to Collection</em>.</li>
-					<li>Fill in the collection information in the resulting form and submit it (the model is now added to your collection).</li>
-					<li>Note: you can search by any criteria on the search pages to get to the variation you want.</li>
-				</ul>
-				<p><strong>Option 2:</strong></p>
-				<ul>
-					<li>Direct entry: If you know the database 'Variation ID' (also called 'VarID') of the model you have (for instance, 'SF0484-003-a') you can enter it directly from the <a href="Manage_Collections.php">Manage Your Collection</a> menu.</li>
-					<li>Using this option, you MUST have this ID- you cannot use just the MAN#, Mack# or other ID for this method.</li>
-					<li>You can print listings of models with the VarID's to use as reference if you prefer this method.</li>
-				</ul>
-			<?php } ?>			
+			//$rows_count= mysql_num_rows($result);
+
+			if ($result_mdls) {
+				$rows_count= mysql_num_rows($result_mdls);
+				if ($rows_count>0) {
+					$row = mysql_fetch_array($result_mdls);
+					if ($row['Coll_InactiveFlg']==0) { ?>
+						<p><img class='icon inline' src="<?php echo $check ?>">You've already started adding models. Enjoy growing your collection!</p>
+					<?php } else { ?>
+						<p><img class='icon inline' src="<?php echo $cross ?>">No models yet added</p>
+						<p>There are two ways to add a model to your collection:</p>
+						<p><strong>Option 1:</strong></p>
+						<ul>
+							<li>Look up a model you using either the <a href="Search_Models_Menu.php">Search Models</a> or <a href="Search_Releases_Menu.php">Search Releases</a> menu options.</li>
+							<li>Drill down to the variation record that matches your model.</li>
+							<li>On the <em>Variations Detail</em> page, check the box marked <em>Add to Collection</em>.</li>
+							<li>Fill in the collection information in the resulting form and submit it (the model is now added to your collection).</li>
+							<li>Note: you can search by any criteria on the search pages to get to the variation you want.</li>
+						</ul>
+						<p><strong>Option 2:</strong></p>
+						<ul>
+							<li>Direct entry: If you know the database 'Variation ID' (also called 'VarID') of the model you have (for instance, 'SF0484-003-a') you can enter it directly from the <a href="Manage_Collections.php">Manage Your Collection</a> menu.</li>
+							<li>Using this option, you MUST have this ID- you cannot use just the MAN#, Mack# or other ID for this method.</li>
+							<li>You can print listings of models with the VarID's to use as reference if you prefer this method.</li>
+						</ul>
+					<?php }
+				} else { ?>
+					<p><img class='icon inline' src="<?php echo $cross ?>">No models yet added</p>
+					<p>There are two ways to add a model to your collection:</p>
+					<p><strong>Option 1:</strong></p>
+					<ul>
+						<li>Look up a model you using either the <a href="Search_Models_Menu.php">Search Models</a> or <a href="Search_Releases_Menu.php">Search Releases</a> menu options.</li>
+						<li>Drill down to the variation record that matches your model.</li>
+						<li>On the <em>Variations Detail</em> page, check the box marked <em>Add to Collection</em>.</li>
+						<li>Fill in the collection information in the resulting form and submit it (the model is now added to your collection).</li>
+						<li>Note: you can search by any criteria on the search pages to get to the variation you want.</li>
+					</ul>
+					<p><strong>Option 2:</strong></p>
+					<ul>
+						<li>Direct entry: If you know the database 'Variation ID' (also called 'VarID') of the model you have (for instance, 'SF0484-003-a') you can enter it directly from the <a href="Manage_Collections.php">Manage Your Collection</a> menu.</li>
+						<li>Using this option, you MUST have this ID- you cannot use just the MAN#, Mack# or other ID for this method.</li>
+						<li>You can print listings of models with the VarID's to use as reference if you prefer this method.</li>
+					</ul>
+				<?php }
+			} ?>	
+			
 	</div>
 </div>
 
