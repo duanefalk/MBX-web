@@ -14,19 +14,21 @@ session_start();
 	$result=0;
 	$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Val_InactivFlg=\"0\"");								
 	$result=mysql_query($query);
-	if (mysql_num_rows($result) != 0) {
-	    $location="Updt_User_Coll_Code_Process.php?code=".$CollCode;
-	    //echo "ready to go";	
-	    redirect_to($location);
-	} else {
-	    echo "You do not have that code in your collection<br></><br></>";
+	if ($result) {
+	    $rows=mysql_num_rows($result);
+	    if ($rows > 0) {
+		$location="Updt_User_Coll_Code_Process.php?code=".$CollCode;
+		//echo "ready to go";	
+		redirect_to($location);
+	    } else {
+		echo "You have no codes for your collection<br></><br></>";
+	    }
 	}
 
-    } else {
-?>
+    } else { ?>
 
-<table id="structure">
-	<tr>
+	<table id="structure">
+	    <tr>
 		<td id="page">
 			<h2>Update/Delete Seller or Location Codes</h2>
 			<br />            
@@ -36,16 +38,16 @@ session_start();
 				<a href=\"Updt_User_Coll_Code.php\">Cancel</a>
 	        	</form>
 	            </td>
-	</tr>
-</table>
+		</tr>
+	</table>
 
-	<?php } ?>
+    <?php } ?>
 
 <!-- Sub Menu -->
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Manage_Collections.php">Manage Collection</a>
+		<a href="Collection_Code_Lists.php">Manage Code Lists</a>
 		<a href="index.php">Return to Main Page</a>
 	</div>
 </div>	

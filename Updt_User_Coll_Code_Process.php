@@ -24,13 +24,8 @@ session_start();
 	$Code_Order=$_POST['Coll_List_Val_DisplOrd'];
 	//no need to change inactivflg
 
-	//exit;
 	//update record, omit copy, username, coll id, inactivflg since they dont change        
-        $query=("UPDATE Matchbox_User_Coll_Value_Lists SET
-		Coll_List_Type='$Code_Type',
-		Coll_List_Value='$Code_to_Updt',
-		Coll_List_Val_DisplOrd='$Code_Order'
-	    WHERE Username='$User' AND Coll_List_Value='$Code_to_Updt'");
+        $query=("UPDATE Matchbox_User_Coll_Value_Lists SET Coll_List_Type='$Code_Type', Coll_List_Val_DisplOrd='$Code_Order' WHERE (Username='$User' AND Coll_List_Value LIKE '%$Code_to_Updt%')");
    
         $outcome=mysql_query($query);
         if ($outcome) {
@@ -56,16 +51,19 @@ session_start();
 		<?php
                     $User=$_SESSION['Username'];
 		    $Code_to_Updt=$_GET["code"];
-		    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Value='$Code_to_Updt'");								
+		    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Value LIKE'%$Code_to_Updt%'");								
 		    $result=0;
 		    $result=mysql_query($query);
-		    if (mysql_num_rows($result) != 0) {
-			$row=mysql_fetch_array($result);
-			$User_CollID=$row['User_Coll_ID'];
-			$Code_Type=$row['Coll_List_Type'];
-		    } ELSE {
-		        echo "There is a database error- please notify system admin";
-		    }                   
+		    if ($result) {
+			$rows=mysql_num_rows($result);
+			if ($rows > 0) {
+			    $row=mysql_fetch_array($result);
+			    $Code_Type=$row['Coll_List_Type'];
+			} else {
+			    echo "You don't have that code.";
+			    exit;
+			}
+		    }
                 ?>
 
 		<form name="Updt_User_Coll_Code_Process" action="Updt_User_Coll_Code_Process.php" method="post">
