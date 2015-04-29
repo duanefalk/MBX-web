@@ -271,7 +271,7 @@ session_start();
             
             <label for="Coll_Seller">Seller:</label>					
 				<?php
-		    	$query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_Coll_ID%' AND Coll_List_Type LIKE '%Seller%' AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");
+		    	$query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Seller%' AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");
                 $result=0;
                 $rows_count=0;									
                 $result = mysql_query($query);
