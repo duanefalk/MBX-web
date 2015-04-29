@@ -70,7 +70,7 @@ session_start();
 						<input type="text" name="User_Coll_ID" value="" size="20" id="User_Coll_ID" data-parsley-type="alphanum" required>
 						
 						<label for="User_Coll_Desc">Collection Description: <small>(alphanumeric only)</small></label>
-						<textarea name="User_Coll_Desc" id="User_Coll_Desc" cols="45" rows="4" data-parsley-type="alphanum" required></textarea>
+						<textarea name="User_Coll_Desc" id="User_Coll_Desc" cols="45" rows="4" required></textarea>
 						
 						<label for="User_Coll_Created_Date">Date Created:</label>
 						<input type="text" name="User_Coll_Created_Date" value="<?php echo date('Y-m-d'); ?>" id="User_Coll_Created_Date">
