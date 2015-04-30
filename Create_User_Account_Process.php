@@ -24,15 +24,15 @@ session_start();
 -->
 
 <?php
-    $Username=$_POST['Username'];
-    $Password=$_POST['Password'];
+    $Username=mysql_real_escape_string($_POST['Username']);
+    $Password=mysql_real_escape_string($_POST['Password']);
     $Sec_Lvl=2;
     $First_Name=$_POST['First_Name'];
     $Last_Name=$_POST['Last_Name'];
     $User_Email=$_POST['User_Email'];
-    $User_Url=$_POST['User_Url'];
-    $User_Address=$_POST['User_Address'];
-    $User_Phone=$_POST['User_Phone'];
+    $User_Url=Create_User_Account_Process($_POST['User_Url']);
+    $User_Address=Create_User_Account_Process)$_POST['User_Address']);
+    $User_Phone=Create_User_Account_Process($_POST['User_Phone']);
     $Areas_of_Interest=$_POST['Areas_of_Interest'];
         if(isset($Areas_of_Interest)) {
             $InterestString='';
@@ -45,7 +45,7 @@ session_start();
             }
   
     $User_is_Dealer=$_POST['User_is_Dealer'];
-    $User_Memberships= $_POST['User_Memberships'];
+    $User_Memberships=Create_User_Account_Process($_POST['User_Memberships']);
     $User_Veh_Cond_Scheme= $_POST['Veh_Cond_Scheme'];
     $User_Pkg_Cond_Scheme= $_POST['Pkg_Cond_Scheme'];
     $User_Code2_Pref=$_POST['Code2_Pref'];
