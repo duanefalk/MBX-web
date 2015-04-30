@@ -206,17 +206,17 @@ session_start();
 								
 								<div class="large-6 columns">
 									<?php
-									// cancel button
-									$Version_to_list = $row["VerID"];
-									//echo $Version_to_detail;
-									$url = "Ver_Detail_and_Var_Listing.php?model=" . $Version_to_list;
+										// cancel button
+										$Version_to_list = $row["VerID"];
+										//echo $Version_to_detail;
+										$url = "Ver_Detail_and_Var_Listing.php?model=" . $Version_to_list;
 									?>
 									<a class="button cancel" href="<?php echo $url; ?>">Cancel</a>
 								</div>
 							</div>	
-						<?php } else {
-							echo "In order to enter models in your collection or a wishlist, go to <a href=\"Collections_Menu.php\">Manage Collections </a> and create a collection. The option to add models to that collection or wishlist will then be availabel to you.";
-						}						
+						<?php } else { ?>
+							<p>In order to enter models in your collection or a wishlist, go to <a href="Collections_Menu.php">Manage Collections</a> and create a collection. The option to add models to that collection or wishlist will then be available to you.</p>
+						<?php }
 					}
 				} ?>
 			
