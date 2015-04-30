@@ -46,8 +46,9 @@ session_start();
 				$row2=mysql_fetch_array($result2);
 				echo"<p><strong>Collection Name:</strong> " . $row2['User_Coll_ID'] . "</p>";
 			?>
-		
-			<label for="UserCollValType">Value Type:</label>
+		    
+            <div class="formRow">			
+				<label for="UserCollValType">Value Type:</label>
                 <?php
                     $query = ("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UserCollValType%'");								
                     $result = 0;
@@ -69,12 +70,17 @@ session_start();
                     }	
                 ?>
                 </select>
-                
-            <label for="UserCollValue">Value:</label>
-            <input type="text" name="UserCollValue" value="" size="40" id="UserCollValue">
+			</div>
             
-            <label for="UserCollValueDisplOrd">Display Order:</label>
-            <input type="number" name="UserCollValueDisplOrd" value="" id="UserCollValueDisplOrd" data-parsley-type="integer" data-parsley-error-message="This value is required. and your value must be a number!" required>
+            <div class="formRow">			
+				<label for="UserCollValue">Value:</label>
+				<input type="text" name="UserCollValue" value="" size="40" id="UserCollValue">
+			</div>
+			
+			<div class="formRow">			
+				<label for="UserCollValueDisplOrd">Display Order:</label>
+				<input type="number" name="UserCollValueDisplOrd" value="" id="UserCollValueDisplOrd" data-parsley-type="integer" data-parsley-error-message="This value is required. and your value must be a number!" required>
+			</div>
             
             <div class="row">
 	            <div class="large-2 small-6 columns">
