@@ -23,8 +23,8 @@ $_SESSION['Sec_Lvl']=1;
 	        if (isset($_POST['txtUserId']) && isset($_POST['txtPassword'])) {
 	            
 	            //username and password variables
-	            $userId = $_POST['txtUserId'];
-	            $password = $_POST['txtPassword'];
+	            $userId = mysql_real_escape_string($_POST['txtUserId']);
+	            $password = mysql_real_escape_string($_POST['txtPassword']);
 	         
 	            // check if the user id and password combination exist in database
 	            $query = ("SELECT * FROM MBXU_User_Accounts WHERE Username = '$userId' AND Password = '$password'");   
