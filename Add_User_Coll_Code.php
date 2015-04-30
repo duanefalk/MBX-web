@@ -36,7 +36,7 @@ session_start();
 		?>
 
 		<h2>Add a Collection Code</h2>
-		<form name="Add_User_Coll_Code" action="Add_User_Coll_Code.php" method="post">
+		<form name="Add_User_Coll_Code" action="Add_User_Coll_Code.php" method="post" data-parsley-validate>
 			
 			<?php echo "User: ".$_SESSION['Username']."<br />"; 
 			$Username=$_SESSION['Username'];
