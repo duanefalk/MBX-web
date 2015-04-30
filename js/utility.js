@@ -7,7 +7,7 @@ $( document ).ready(function() {
 	
 	
 	// ---- HOME: BANNERS -------------------------------------------- //
-	setInterval(fadeBanners, 4000); //call it every 4 seconds
+	setInterval(fadeBanners, 5000); //call it every 5 seconds
 	
 	
 	// ---- IMAGE POPUP ---------------------------------------------- //
