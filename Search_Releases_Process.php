@@ -14,20 +14,31 @@
 	        //set variables for post data
 	
 	        $RelTheme=$_POST['ReleaseTheme'];
-	        $RelSeries=$_POST['RelSeries'];
-	        $SeriesID=$_POST['SeriesID'];
-	        $RelYr=$_POST['RelYr'];
-	        $CountryOfSale=$_POST['CountryOfSale'];
-	        $PkgName=$_POST['PkgName'];
-	        $MdlNameOnPkg=$_POST['MdlNameOnPkg'];
-	        $PkgID=$_POST['PkgID'];
+	        
+		$RelSeries=$_POST['RelSeries'];
+			
+		$OrigSeriesID=$_POST['SeriesID'];
+	        $SeriesID=mysql_real_escape_string($_POST['SeriesID']);
+	        
+		$RelYr=$_POST['RelYr'];
+	        
+		$CountryOfSale=$_POST['CountryOfSale'];
+	        
+		$OrigPkgName= $_POST['PkgName'];
+		$PkgName=mysql_real_escape_string($_POST['PkgName']);
+	        
+		$OrigMdlNameOnPkg=$_POST['MdlNameOnPkg'];
+		$MdlNameOnPkg=mysql_real_escape_string($_POST['MdlNameOnPkg']);
+	        
+		$OrigPkgID=$_POST['PkgID'];
+		$PkgID=mysql_real_escape_string($_POST['PkgID']);
 	        
 	        //check if search criteria selected
 	            
 	            if (($_POST['PkgName_Check']) OR ($_POST['MdlNameOnPkg_Check']) OR ($_POST['PkgID_Check'])) {
 	                //WORKS
 	                if ($_POST['PkgName_Check']) {
-	                    echo "Pkg name is: ".$PkgName."<br></> ";
+				echo "Pkg name is: ".$OrigPkgName."<br></> ";
 	                        $PrevRelCriteria="1";
 	                        $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
 	                                       Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
@@ -38,6 +49,7 @@
 	                }                       
 	                
 	                if ($_POST['MdlNameOnPkg_Check']) {
+				echo "Model Name on Package is: ".$OrigMdlNameOnPkg."<br></> ";
 	                    if ($PrevRelCriteria != "1") {
 	                        $PrevRelCriteria="1";
 	                        
@@ -56,6 +68,7 @@
 	                }
 	                
 	                if ($_POST['PkgID_Check']) {
+				echo "Package ID is: ".$OrigPkgID."<br></> ";
 	                    if ($PrevRelCriteria != "1") {
 	                        $PrevRelCriteria="1";
 	                        
@@ -110,6 +123,7 @@
 	                    }
 	
 	                    if ($_POST['SeriesID_Check']) {
+				echo "Series ID is: ".$OrigSeriesID."<br></> ";
 	                        if ($PrevRelCriteria != "1") {
 	                            $PrevRelCriteria="1";
 	                            //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `SeriesID`='$SeriesID' AND `ShowSeriesID`='1')");

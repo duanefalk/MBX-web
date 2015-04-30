@@ -9,8 +9,9 @@
 		
 		<?php
 			
-			$TexttoSearch = $_GET["tempatext"];
-			echo "<p>You searched models with the text: <strong>" . $TexttoSearch . "</strong></p>";
+			$OrigText=$_GET["tempatext"];
+			$TexttoSearch = mysql_real_escape_string($_GET["tempatext"]);
+			echo "<p>You searched models with the text: <strong>" . $OrigText . "</strong></p>";
 			
 			$query= ("SELECT DISTINCT Matchbox_Versions.UMID, Matchbox_Versions.VerID, Matchbox_Versions.VerName, Matchbox_Versions.VerYrFirstRel, Matchbox_Versions.FAB_No, Matchbox_Versions.VerPhoto1Ref, Matchbox_Versions.Master_Mack_No
 						 FROM Matchbox_Versions

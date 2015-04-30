@@ -163,10 +163,10 @@
 
 			<dl class="accordion" data-accordion>
 				<dd>	
-					<a href="#panel4">Release Year</a>
+					<a href="#panel4">Release Year </a>
 					<div id="panel4" class="content">
 						<input type=checkbox name="RelYr_Check" id="RelYr_Check" />
-						<label for="RelYr_Check">Release Yr:</label>
+						<label for="RelYr_Check">Release Yr (yyyy):</label>
 						<input type="text" name="RelYr" id= "RelYr" value="" size="4" id="RelYr" />										
 					</div>
 				</dd>

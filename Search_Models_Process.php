@@ -59,7 +59,7 @@
 							 WHERE Matchbox_Versions.FAB_No='$ID_Value1'");
 				}
 				elseif ($_POST[Mack_No]) {
-					$ID_Value1=$_POST[Mack_No];
+					$ID_Value1=mysql_real_escape_string($_POST[Mack_No]);
 					echo "Searching for Mack #: ". $ID_Value1 ."<br />";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `Master_Mack_No`='$ID_Value1')");
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
@@ -264,7 +264,7 @@
 			} else {
 				// if search by text on model		
 				//go to separate page to search and display model details of multiple umids at ver level
-				$TempaText=mysql_real_escape_string($_POST['TempaText']);
+				$TempaText=$_POST['TempaText'];
 				$string_to_redirect="Models_Found_List.php?tempatext=".$TempaText;
 				redirect_to($string_to_redirect);
 			}                   
@@ -282,7 +282,7 @@
 				?>
 				<h3>Why Were No Matches Found?</h3>
 				<ul>
-				<li>The Database is still being built! Only post-Lesney models from approx. <b>MAN# 150</b> and up are currently in the db. I am adding these constantly and will continue to update the progress here.</li>
+				<li>The Database is still being built! Check <a href="website-updates.php">Website Updates</a> to see current status.</li>
 				<li>Your query may have been too specific- try searching a portion of the name. The name you are looking at may be just the model name used on the package, which can be searched also under <a href="Search_Releases_Menu.php">Search Releases</a></li>
 				<li>Check for misspellings or incorrect format, i.e. MAN#s are up to 3 digits, with no '#'</li>
 				<li>There may be a database error! If you are certain the outcome is incorrect, please send details to me at info@mbx-u.com (or using the <a href="User_Upload.php">Upload</a> feature available if you have an account)</li>
