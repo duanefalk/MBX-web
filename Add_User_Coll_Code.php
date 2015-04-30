@@ -39,11 +39,11 @@ session_start();
 		<form name="Add_User_Coll_Code" action="Add_User_Coll_Code.php" method="post" data-parsley-validate>
 			
 			<?php echo "User: ".$_SESSION['Username']."<br />"; 
-			$Username=$_SESSION['Username'];
-			$query2="SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'";
-			$result2=mysql_query($query2);
-			$row2=mysql_fetch_array($result2);
-			echo"<p><strong>Collection Name:</strong> " . $row2['User_Coll_ID'] . "</p>";
+				$Username=$_SESSION['Username'];
+				$query2="SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'";
+				$result2=mysql_query($query2);
+				$row2=mysql_fetch_array($result2);
+				echo"<p><strong>Collection Name:</strong> " . $row2['User_Coll_ID'] . "</p>";
 			?>
 			
 			<div class="formRow">			
@@ -80,15 +80,17 @@ session_start();
 		
 			<div class="formRow">			
 				<label for="UserCollValueDisplOrd">Display Order:</label>
-				<input type="number" name="UserCollValueDisplOrd" value="" id="UserCollValueDisplOrd" data-parsley-type="integer" data-parsley-error-message="This value is required. and your value must be a number!" required>
+				<input type="number" name="UserCollValueDisplOrd" value="" id="UserCollValueDisplOrd" data-parsley-type="integer" data-parsley-error-message="This value is required and your value must be an integer!" required>
 			</div>
 			
-			<input type="submit" name="submit" value="Submit" id="submit"/>
-		</form>
-		
-		
-		<a href="Add_User_Coll_Code.php">Cancel</a>		
-	
+			<div class="row">
+				<div class="large-2 small-6 columns">
+					<input class="button dark" type="submit" name="submit" value="Submit" id="submit"/>
+				</div>
+				<div class="large-2 small-6 columns end">
+					<a class="button dark cancel" href="Add_User_Coll_Code.php">Cancel</a>	
+				</div>
+		</form>	
 	
 	</div>
 </div>
