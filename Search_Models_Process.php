@@ -68,7 +68,7 @@
 							 WHERE Matchbox_Versions.Master_Mack_No='$ID_Value1'");
 				}
 				elseif ($_POST[QuickName]) {
-					$ID_Value1=$_POST[QuickName];
+					$ID_Value1=mysql_real_escape_string($_POST[QuickName]);
 					echo "Searching for Version Name: ".$ID_Value1 ."<br />";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `TMatchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
@@ -77,7 +77,7 @@
 							 WHERE Matchbox_Versions.VerName LIKE '%$ID_Value1%'");	
 				}
 				elseif ($_POST[Name]) {
-					$ID_Value1=$_POST[Name];
+					$ID_Value1=mysql_real_escape_string($_POST[Name]);
 					echo "Searching for Any Name: ".$ID_Value1 ."<br />";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `Matchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
@@ -264,7 +264,7 @@
 			} else {
 				// if search by text on model		
 				//go to separate page to search and display model details of multiple umids at ver level
-				$TempaText=$_POST['TempaText'];
+				$TempaText=mysql_real_escape_string($_POST['TempaText']);
 				$string_to_redirect="Models_Found_List.php?tempatext=".$TempaText;
 				redirect_to($string_to_redirect);
 			}                   
