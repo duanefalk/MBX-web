@@ -135,89 +135,91 @@ session_start();
 					echo "<p><strong>Comments:</strong> ". $row["VarComment"]."</p>";
 					
 				echo "</div>"; ?>
+							
+				<?php
+				if ($_SESSION['Sec_Lvl'] > 1) {
 				
-			
-				
-				<?php				
 					$User = $_SESSION['Username'];
 					$query3 = ("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");								
 					$result3 = 0;
 					$rows_count3 = 0;									
 					$result3 = mysql_query($query3);
-					$row3 = mysql_fetch_array($result3);
-					$User_CollID = $row3["User_Coll_ID"];
-				?>
-			
-				<?php if ($_SESSION['Sec_Lvl'] > 1) { ?>
-				
-					<?php
-						//see if exists in wishlist and/or collection
-						echo "<p><strong>Variation Selected:</strong> " . $Variation_for_detail . "</p>";
+					if ($result3) {
+						$rows3= mysql_num_rows($result3);
+						if ($rows3 > 0) {
+							$row3 = mysql_fetch_array($result3);
+							$User_CollID = $row3["User_Coll_ID"];
+							
+							//see if exists in wishlist and/or collection
+							echo "<p><strong>Variation Selected:</strong> " . $Variation_for_detail . "</p>";
 						
-						$query4 = ("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Variation_for_detail'");								
-						$result4 = 0;
-						$rows_count4 = 0;									
-						$result4 = mysql_query($query4);
-						//can only have a var in wishlist once, see if have already, set option to add                    
+							$query4 = ("SELECT * FROM Matchbox_User_Wishlist WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Variation_for_detail'");								
+							$result4 = 0;
+							$rows_count4 = 0;									
+							$result4 = mysql_query($query4);
+							//can only have a var in wishlist once, see if have already, set option to add                    
 			    
-						$query5=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Variation_for_detail'");								
-						$result5 = 0;
-						$rows_count5 = 0;									
-						$result5 = mysql_query($query5);
-					?>
+							$query5=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Variation_for_detail'");								
+							$result5 = 0;
+							$rows_count5 = 0;									
+							$result5 = mysql_query($query5);
+							?>
 				
-					<div class="row">
-						<div class="large-6 columns">
-							<h5>Collection</h5>
-							<?php 
-								if (mysql_num_rows($result5) > 0) {
-									echo "<p>You Have ".mysql_num_rows($result5)." copy/copies of ".$Variation_for_detail." in your collection.</p>";
-									echo "<p>If you want to edit an existing record, select 'Update Models in Your Collection' from the menu bar on this page.</p>";
-									echo "<p>Continue below if you want to add a new copy of this variation to your collection.</p>";
-							    } else {
-									echo "<p>You do not have this variation in your collection. Continue below if you want to add it.</p>";
-							    }
-							?>
-							<p>Add variation to wishlist, or to collection? (cancel to do neither)</p>
-							<input type="radio" id="Coll_Choice" name="Coll_or_wishlist_Choice" value="Coll"><label for="Coll_Choice">Collection</label>		
-						</div>
+							<div class="row">
+								<div class="large-6 columns">
+									<h5>Collection</h5>
+									<?php 
+									if (mysql_num_rows($result5) > 0) {
+										echo "<p>You Have ".mysql_num_rows($result5)." copy/copies of ".$Variation_for_detail." in your collection.</p>";
+										echo "<p>If you want to edit an existing record, select 'Update Models in Your Collection' from the menu bar on this page.</p>";
+										echo "<p>Continue below if you want to add a new copy of this variation to your collection.</p>";
+									} else {
+										echo "<p>You do not have this variation in your collection. Continue below if you want to add it.</p>";
+									}
+									?>
+									<p>Add variation to wishlist, or to collection? (cancel to do neither)</p>
+									<input type="radio" id="Coll_Choice" name="Coll_or_wishlist_Choice" value="Coll"><label for="Coll_Choice">Collection</label>		
+								</div>
 						
-						<div class="large-6 columns">
-							<h5>Wishlist</h5>
-							<?php if (mysql_num_rows($result4) > 0) {
-							    echo "<p>You already have this variation on your wishlist (you can only have one entry for a variation on the wishlist).</p>";
-							    echo "<p><a href='Collection_Report_W.php'>View Wishlist</a></p>";
-								echo "<p><a href='Search_Models_Menu.php'>Return to search page</a></p>";
-							    $Wishlist_option = 0;
-							} else {
-								 $Wishlist_option = 1;
-								 echo "<p>You do not have this variation on your wishlist.</p>";							 
-								 echo "<p>Would you like to add it to your wishlist? (cancel to return to version details)</p>";
-							?>
-								<input type="radio" id="Wishlist_Choice" name="Coll_or_wishlist_Choice" value="Wishlist"><label for="Wishlist_Choice">Wishlist</label>
-							<?php } ?>
-						</div>
-					</div>
+								<div class="large-6 columns">
+									<h5>Wishlist</h5>
+									<?php if (mysql_num_rows($result4) > 0) {
+										echo "<p>You already have this variation on your wishlist (you can only have one entry for a variation on the wishlist).</p>";
+										echo "<p><a href='Collection_Report_W.php'>View Wishlist</a></p>";
+										echo "<p><a href='Search_Models_Menu.php'>Return to search page</a></p>";
+										$Wishlist_option = 0;
+									} else {
+										$Wishlist_option = 1;
+										echo "<p>You do not have this variation on your wishlist.</p>";							 
+										echo "<p>Would you like to add it to your wishlist? (cancel to return to version details)</p>";
+										?>
+										<input type="radio" id="Wishlist_Choice" name="Coll_or_wishlist_Choice" value="Wishlist"><label for="Wishlist_Choice">Wishlist</label>
+									<?php } ?>
+								</div>
+							</div>
 					
-					<div class="row">
-						<div class="large-6 columns">
-							<input type="hidden" id="Var_to_Add" value= "<?php echo $row["VarID"]?>" name="Var_to_Add">
-							<input type="submit" class="button dark" value="Add <?php echo $row["VarID"]?>" id="submit" name="submit">
-						</div>
-						<div class="large-6 columns">
-							<?php
-								// cancel button
-								$Version_to_list = $row["VerID"];
-								//echo $Version_to_detail;
-								$url = "Ver_Detail_and_Var_Listing.php?model=" . $Version_to_list;
-							?>
-							<a class="button cancel" href="<?php echo $url; ?>">Cancel</a>
-						</div>
-					</div>	
-				<?php } ?>
-		
-				</li>
-			</ul>	
+							<div class="row">
+								<div class="large-6 columns">
+									<input type="hidden" id="Var_to_Add" value= "<?php echo $row["VarID"]?>" name="Var_to_Add">
+									<input type="submit" class="button dark" value="Add <?php echo $row["VarID"]?>" id="submit" name="submit">
+								</div>
+								
+								<div class="large-6 columns">
+									<?php
+									// cancel button
+									$Version_to_list = $row["VerID"];
+									//echo $Version_to_detail;
+									$url = "Ver_Detail_and_Var_Listing.php?model=" . $Version_to_list;
+									?>
+									<a class="button cancel" href="<?php echo $url; ?>">Cancel</a>
+								</div>
+							</div>	
+						<?php } else {
+							echo "In order to enter models in your collection or a wishlist, go to Manage Collections and create a collection. The option to add models to that collection or wishlist will then be availabel to you.";
+						}						
+					}
+				} ?>
+			
 		</form>
 	</div>
 </div>
