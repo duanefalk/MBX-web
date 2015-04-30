@@ -76,12 +76,12 @@ session_start();
 					<input type="text" name="Username" value="<? echo $Username?>" size="20" id="Username"-->
 					
 					<div class="formRow">			
-						<label for="User_Coll_ID">Collection Identifier: <small>(max 12 chars)</small></label>
+						<label for="User_Coll_ID">Collection Identifier*: <small>(max 12 chars)</small></label>
 						<input type="text" name="User_Coll_ID" value="" size="12" id="User_Coll_ID" maxlength="12" required>
 					</div>	
 
 					<div class="formRow">
-						<label for="User_Coll_Desc">Collection Description: <small></small></label>
+						<label for="User_Coll_Desc">Collection Description*: <small></small></label>
 						<textarea name="User_Coll_Desc" id="User_Coll_Desc" cols="45" rows="4" required></textarea>
 					</div>
 					
