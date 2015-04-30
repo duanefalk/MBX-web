@@ -19,7 +19,9 @@ session_start();
 
 				//Fields:
 				$Username = $_SESSION['Username'];
+				$OrigColl_ID=$_POST['User_Coll_ID'];
 				$User_Coll_ID = mysql_real_escape_string($_POST['User_Coll_ID']);
+				$OrigcollDesc=$_POST['User_Coll_Desc'];
 				$User_Coll_Desc = mysql_real_escape_string($_POST['User_Coll_Desc']);
 				$User_Coll_Created_Date = $_POST['User_Coll_Created_Date'];
 			
@@ -35,8 +37,8 @@ session_start();
 					<p>You have created a collection.</p>
 					<h5>Your Collection summary</h5>
 					<p class="noMargin">Username: <?php echo $Username; ?></p>
-					<p class="noMargin">ID: <?php echo $User_Coll_ID; ?></p>
-					<p class="noMargin">Description: <?php echo $User_Coll_Desc; ?></p>
+					<p class="noMargin">ID: <?php echo $OrigColl_ID; ?></p>
+					<p class="noMargin">Description: <?php echo $OrigcollDesc; ?></p>
 					<p>Creation Date: <?php echo $User_Coll_Created_Date; ?></p>
 					
 					<p>You can go to <a href="Updt_Coll.php">View/Update</a> to see the details of this collection, or return to <a href="Manage_Collections.php">Manage collections</a></p>

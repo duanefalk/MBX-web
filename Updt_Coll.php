@@ -11,7 +11,7 @@ session_start();
     if (isset($_POST['coll_updt_submit'])) {
 
         $User=$_SESSION['Username'];
-	$User_Coll_Desc=$_POST['User_Coll_Desc'];
+	$User_Coll_Desc=mysql_real_escape_string($_POST['User_Coll_Desc']);
 	$result=0;
 	$query=("UPDATE Matchbox_User_Collections
 		SET User_Coll_Desc='$User_Coll_Desc'
