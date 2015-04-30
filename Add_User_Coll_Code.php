@@ -40,10 +40,23 @@ session_start();
 			
 			<?php echo "User: ".$_SESSION['Username']."<br />"; 
 				$Username=$_SESSION['Username'];
-				$query2="SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'";
-				$result2=mysql_query($query2);
-				$row2=mysql_fetch_array($result2);
-				echo"<p><strong>Collection Name:</strong> " . $row2['User_Coll_ID'] . "</p>";
+				$query="SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'";
+				$result=mysql_query($query);
+				if ($result) {
+					$rows=mysql_num_rows($result);
+					if ($rows>0) {
+					    $row = mysql_fetch_array($result);
+					    if ($row['User_Coll_Inactiv_Flag']=="1") {
+						echo "<p>You do not have a collection. Please create a collection first at <a href=\"Create_Collection.php\">Create Collection</a>.</p>";
+						exit;			
+					    }
+					} else {
+					    echo "You do not have a collection. Please create a collection first at <a href=\"Create_Collection.php\">Create Collection</a>.</p>.";
+					    exit;
+					}	
+				}
+	
+				echo"<p><strong>Collection Name:</strong> " . $row['User_Coll_ID'] . "</p>";
 			?>
 			
 			<div class="formRow">			
