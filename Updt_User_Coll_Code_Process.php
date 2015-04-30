@@ -74,8 +74,8 @@ session_start();
 			
                     ?>
 		    <input type="hidden" name="Code_to_Updt" value="<?php echo $Code_to_Updt;?>" id="Code_to_Updt">
-		    <p>Code Type:          <input type="text" name="Coll_List_Type" value="<?php echo $Code_Type;?>" size="60" id="Coll_List_Type"></p>
-		    <p>Code Display Order:          <input type="text" name="Coll_List_Val_DisplOrd" value="<?php echo $row["Coll_List_Val_DisplOrd"];?>" size="4" id="Coll_List_Val_DisplOrd"></p>
+		    <p>Code Type (either Location or Seller):          <input type="text" name="Coll_List_Type" value="<?php echo $Code_Type;?>" size="60" id="Coll_List_Type"></p>
+		    <p>Code Display Order (1-4 digit#):          <input type="text" name="Coll_List_Val_DisplOrd" value="<?php echo $row["Coll_List_Val_DisplOrd"];?>" size="4" id="Coll_List_Val_DisplOrd"></p>
 
                     <input type="submit" name="var_coll_code_submit" class="button dark" value="Update" id="var_coll_code_submit"/>
         	</form>
