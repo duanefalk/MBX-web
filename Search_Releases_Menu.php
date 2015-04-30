@@ -42,7 +42,7 @@
 
 </head>
 
-<form name="SearchReleases" action="Search_Releases_Process.php" method="post">
+<form name="SearchReleases" action="Search_Releases_Process.php" method="post" data-parsley-validate>
 <div class="row">
 	<div class="large-12 columns">
 	
@@ -167,7 +167,7 @@
 					<div id="panel4" class="content">
 						<input type=checkbox name="RelYr_Check" id="RelYr_Check" />
 						<label for="RelYr_Check">Release Yr (yyyy):</label>
-						<input type="text" name="RelYr" id= "RelYr" value="" size="4" id="RelYr" />										
+						<input type="number" name="RelYr" id= "RelYr" value="" size="4" id="RelYr" data-parsley-type="integer">										
 					</div>
 				</dd>
 			</dl>			
@@ -211,9 +211,14 @@
 		<h5>Your Query So Far:</h5>
 		<div id="querybox"></div>
 		
-		<input type="submit" class="button dark" name="submit" value="Submit"/>
-			
-		<a class="button cancel" href="Search_Releases_Menu.php">Clear</a>
+		<div class="row">
+			<div class="large-2 small-6 columns">
+				<input type="submit" class="button dark" name="submit" value="Submit"/>
+			</div>
+			<div class="large-2 small-6 columns end">
+				<a class="button cancel" href="Search_Releases_Menu.php">Clear</a>
+			</div>
+		</div>
 			
 	</div>
 </div>	
