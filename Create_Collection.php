@@ -83,10 +83,12 @@ session_start();
 						<textarea name="User_Coll_Desc" id="User_Coll_Desc" cols="45" rows="4" required></textarea>
 					</div>
 					
+
 					<div class="formRow">
-						<label for="User_Coll_Created_Date">Date Created:</label>
+						<label for="User_Coll_Created_Date">Date Created (yyyy-mm-dd):</label>
 						<input type="text" name="User_Coll_Created_Date" value="<?php echo date('Y-m-d'); ?>" id="User_Coll_Created_Date">
 					</div>
+
 						
 					<input type="submit" class="button dark" name="Create_Coll_Submit" value="Submit"/>
 					<a class="button cancel" href="Create_Collection.php">Cancel</a>	
