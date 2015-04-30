@@ -23,7 +23,6 @@
 	<link href="stylesheets/foundation.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/parsley.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/lightbox.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="stylesheets/jquery.bxslider.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/interior.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/print.css" media="all" rel="stylesheet" type="text/css" />

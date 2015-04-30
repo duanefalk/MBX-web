@@ -7,18 +7,6 @@
 	include("includes/header.php");
 ?>
 
-
-<!--div class="row slider">
-	<div class="large-12 columns">
-		<ul class="bxslider">
-			<li><img src="images/banner1.jpg" title="" /></li>
-			<li><img src="images/NoRelImageAvail.jpg" title="" /></li>
-			<li><img src="images/NoImageAvail.jpg" title="" /></li>
-		</ul>
-	</div>
-</div-->
-
-
 <div class="row">
 	<div class="large-5 columns">
 		<h4>The Matchbox Professor welcomes you to MBX University!!</h4>

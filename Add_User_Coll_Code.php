@@ -36,43 +36,56 @@ session_start();
 		?>
 
 		<h2>Add a Collection Code</h2>
-		<form name="Add_User_Coll_Code" action="Add_User_Coll_Code.php" method="post">
-		<?php echo "User: ".$_SESSION['Username']."<br />"; 
-		$Username=$_SESSION['Username'];
-		$query2="SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'";
-		$result2=mysql_query($query2);
-		$row2=mysql_fetch_array($result2);
-		echo"Collection Name: ".$row2['User_Coll_ID'];
-		?>
+		<form name="Add_User_Coll_Code" action="Add_User_Coll_Code.php" method="post" data-parsley-validate>
 		
-		<p>Value Type: </p>
+			<?php 
+				echo "<p><strong>User:</strong> " . $_SESSION['Username'] . "</p>"; 
+				$Username=$_SESSION['Username'];
+				$query2="SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'";
+				$result2=mysql_query($query2);
+				$row2=mysql_fetch_array($result2);
+				echo"<p><strong>Collection Name:</strong> " . $row2['User_Coll_ID'] . "</p>";
+			?>
+		
+			<label for="UserCollValType">Value Type:</label>
                 <?php
-                        $query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UserCollValType%'");								
-                        $result=0;
-                        $rows_count=0;									
-                        $result = mysql_query($query);
-                        if (!result) {
-                                echo "Database query failed";
-                        }
-                        else {
-                                //echo "made connection ".$result."<br />";		
-                        }
-                        $rows_count= mysql_num_rows($result);
-                        // echo "Rows COunt: ".$rows_count."<br />";
+                    $query = ("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UserCollValType%'");								
+                    $result = 0;
+                    $rows_count = 0;									
+                    $result = mysql_query($query);
+                    
+                    if (!result) {
+                        echo "Database query failed";
+                    }
+                    else {}
+                    
+                    $rows_count= mysql_num_rows($result);
                 ?>
-                <select name="UserCollValType">
+                <select name="UserCollValType" id="UserCollValType">
                 <?php
-                        for ($i=1; $i<=$rows_count; $i++) {
-                                $row=mysql_fetch_array($result);
-                                echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-                        }	
+                    for ($i=1; $i<=$rows_count; $i++) {
+                        $row = mysql_fetch_array($result);
+                        echo '<option value="'.$row["ValueListEntry"].'">' . $row["ValueListEntry"] . '</option>';
+                    }	
                 ?>
                 </select>
-            <p>Value:     	  <input type="text" name="UserCollValue" value="" size="40" id="UserCollValue"</p>
-            <p>Display Order:     <input type="text" name="UserCollValueDisplOrd" value="" size="4" id="UserCollValueDisplOrd"</p>
-            <input type="submit" name="submit" value="Submit" id="submit"/>
+                
+            <label for="UserCollValue">Value:</label>
+            <input type="text" name="UserCollValue" value="" size="40" id="UserCollValue">
+            
+            <label for="UserCollValueDisplOrd">Display Order:</label>
+            <input type="number" name="UserCollValueDisplOrd" value="" id="UserCollValueDisplOrd" data-parsley-type="integer" data-parsley-error-message="This value is required. and your value must be a number!" required>
+            
+            <div class="row">
+	            <div class="large-2 small-6 columns">
+		            <input class="button dark" type="submit" name="submit" value="Submit" id="submit" />
+	            </div>
+	            <div class="large-2 small-6 columns end">
+		             <a class="button dark cancel" href="Add_User_Coll_Code.php">Cancel</a>
+	            </div>
+            </div>		
 		</form>
-	    <a href="Add_User_Coll_Code.php">Cancel</a>		
+	   
 	
 	
 	</div>
