@@ -36,14 +36,11 @@ session_start();
 //if post not set do initial form 
 ?>
 
-<table id="structure">
-<tr>
-
-	<td id="page">
+<div class="row">
+	<div class="large-12 column">
 
 		<h2>Delete Your Collection</h2>
-		<br />
-
+		
 		<?php   
                     $User=$_SESSION['Username'];
 		    $query=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User' AND User_Coll_Inactiv_Flag=\"0\"");								
@@ -59,22 +56,18 @@ session_start();
                 ?>
 
 		<form name="Delete_Collection" action="Delete_Collection.php" method="post">
-		    <?php  
-                        
-			
-			echo "<p><strong>Username:</strong> " . $User . "</p>";
-			echo "<p><strong>Collection Name:</strong> " . $row["User_Coll_ID"] . "</p>";
-			echo "<p><strong>Collection Description:</strong> " . $row["User_Coll_Desc"] . "</p>";
-			echo "<p><strong>Date Created:</strong> " . $row["User_Coll_Created_Date"] . "</p>";
+		    <p><strong>Username:</strong> <?php echo $User; ?></p>
+		    <p><strong>Collection Name:</strong> <?php echo $row["User_Coll_ID"]; ?></p>
+			<p><strong>Collection Description:</strong> <?php echo $row["User_Coll_Desc"]; ?></p>
+			<p><strong>Date Created:</strong> <?php echo $row["User_Coll_Created_Date"]; ?></p>
 
-                        echo "<p><strong>NOTE: Deleting this collection will also delete any models and code values entered under it.</p>";
-			echo "<p><strong>If you have any questions about how to proceed, click Cancel, below and email info@mbx-u.com with your question.</p>";
-			echo "<br />";
-                    ?>
+			<h4>NOTE: Deleting this collection will also delete any models and code values entered under it.</h4>
+			<p>If you have any questions about how to proceed, click Cancel, below and email <a href="mailto:info@mbx-u.com">info@mbx-u.com</a> with your question.</p>
+		
 		    <input type="hidden" name="Coll_to_Del" value="<?php echo $Coll_to_Del;?>" id="Coll_to_Del">
 		    <div class="row">
 			    <div class="large-2 small-4 columns">
-				    <input type="submit" name="del_submit" class="button dark" value="DELETE?" id="del_submit"/>
+				    <input type="submit" name="del_submit" class="button dark" value="DELETE" id="del_submit"/>
 			    </div>
 			    <div class="large-2 small-4 columns end">
 				    <?php
@@ -83,11 +76,10 @@ session_start();
 					?>
 			    </div>
 		    </div>
-        	</form>
+        </form>
 
-            </td>
-	</tr>
-</table>
+	</div>
+</div>
 
 <!-- Sub Menu -->
 <div class="row" id="subNav">
