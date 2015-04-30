@@ -215,7 +215,7 @@ session_start();
 								</div>
 							</div>	
 						<?php } else {
-							echo "In order to enter models in your collection or a wishlist, go to Manage Collections and create a collection. The option to add models to that collection or wishlist will then be availabel to you.";
+							echo "In order to enter models in your collection or a wishlist, go to <a href=\"Collections_Menu.php\">Manage Collections </a> and create a collection. The option to add models to that collection or wishlist will then be availabel to you.";
 						}						
 					}
 				} ?>
