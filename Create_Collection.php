@@ -23,7 +23,7 @@ session_start();
 				$User_Coll_ID = mysql_real_escape_string($_POST['User_Coll_ID']);
 				$OrigcollDesc=$_POST['User_Coll_Desc'];
 				$User_Coll_Desc = mysql_real_escape_string($_POST['User_Coll_Desc']);
-				$User_Coll_Created_Date = $_POST['User_Coll_Created_Date'];
+				$User_Coll_Created_Date = mysql_real_escape_string($_POST['User_Coll_Created_Date']);
 			
 				//Add the collection record
 				//$query="INSERT INTO Matchbox_User_Collections (Username, User_Coll_ID, User_Coll_Desc, User_Coll_Created_Date) 
@@ -93,7 +93,7 @@ session_start();
 
 						
 					<input type="submit" class="button dark" name="Create_Coll_Submit" value="Submit"/>
-					<a class="button cancel" href="Create_Collection.php">Cancel</a>	
+					<a class="button cancel" href="Manage_Collections.php">Cancel</a>	
 				</form>				    
 		    <?php }
 		?>
