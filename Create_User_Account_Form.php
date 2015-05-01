@@ -32,12 +32,12 @@
 		
 			<div class="formRow">		
 				<label for="First_Name">First Name*:</label>
-				<input type="text" name="First_Name" value="" size="60" id="First_Name" required>
+				<input type="text" name="First_Name" value="" size="60" id="First_Name" data-parsley-type="alphanum" required>
 			</div>
 			
 			<div class="formRow">
 				<label for="Last_Name">Last Name*:</label>
-				<input type="text" name="Last_Name" value="" size="60" id="Last_Name" required>
+				<input type="text" name="Last_Name" value="" size="60" id="Last_Name" data-parsley-type="alphanum" required>
 			</div>
 			
 			<div class="formRow">
