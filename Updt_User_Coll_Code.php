@@ -6,6 +6,9 @@ session_start();
 <?php include("includes/header.php"); ?>
 <?php include("includes/functions.php"); ?>
 
+<div class="row">
+	<div class="large-12 columns">
+
 <?php
     if (isset($_POST['var_submit'])) {
 	$CollCode=$_POST['Coll_Code'];
@@ -21,27 +24,34 @@ session_start();
 		//echo "ready to go";	
 		redirect_to($location);
 	    } else {
-		echo "You have no codes for your collection<br></><br></>";
+		echo "<p>You have no codes for your collection</p>";
 	    }
 	}
 
     } else { ?>
 
-	<table id="structure">
-	    <tr>
-		<td id="page">
-			<h2>Update/Delete Seller or Location Codes</h2>
-			<br />            
-			<form name="Updt_User_Coll_Code" action="Updt_User_Coll_Code.php" method="post">
-				<p>Enter Seller or Location Code to Update/Delete: <input type="text" name="Coll_Code" value="" size="60" id="Coll_Code"></p>
-				<input type="submit" value="Submit" class="button dark" id="var_submit" name="var_submit"><br/>
-				<a href=\"Updt_User_Coll_Code.php\">Cancel</a>
-	        	</form>
-	            </td>
-		</tr>
-	</table>
+		<h2>Update/Delete Seller or Location Codes</h2>
+		<form name="Updt_User_Coll_Code" action="Updt_User_Coll_Code.php" method="post" data-parsley-validate>
+			<div class="formRow">
+				<label for="Coll_Code">Enter Seller or Location Code to Update/Delete:</label>
+				<input type="text" name="Coll_Code" value="" size="60" id="Coll_Code"  required>
+			</div>
+			
+			<div class="row">
+				<div class="large-2 small-6 columns">
+					<input type="submit" value="Submit" class="button dark" id="var_submit" name="var_submit">
+				</div>
+				<div class="large-2 small-6 columns end">
+					<a class="button dark cancel" href="Updt_User_Coll_Code.php">Cancel</a>
+				</div>
+			</div>
+    	</form>
 
     <?php } ?>
+
+	</div>
+</div>
+
 
 <!-- Sub Menu -->
 <div class="row" id="subNav">
