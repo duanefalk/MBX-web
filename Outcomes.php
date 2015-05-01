@@ -68,7 +68,7 @@ if ($source_string=="Rel_success") {
 		<p class="tip">related pages:</p>
 		<a href="Search_Models.php">Search Models</a>
 		<a href="Search_Releases.php">Search Releases</a>
-		<a href="Update_Mdls_in_Coll.php">Update Models in Your Collection</a>
+		<a href="Updt_Coll_Mdl.php">Update Models in Your Collection</a>
 		<a href="index.php">Return to Main Page</a>		
 	</div>
 </div>

@@ -92,7 +92,7 @@ session_start();
 			
 			<div class="formRow">			
 				<label for="UserCollValue">Value:</label>
-				<input type="text" name="UserCollValue" value="" size="40" id="UserCollValue">
+				<input type="text" name="UserCollValue" value="" size="40" id="UserCollValue" required>
 			</div>
 		
 			<div class="formRow">			

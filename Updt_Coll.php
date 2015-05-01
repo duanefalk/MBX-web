@@ -56,14 +56,14 @@ session_start();
 		    $Coll_Desc= $row['User_Coll_Desc'];
 		?>
 		
-		<form name="Updt_Coll" action="Updt_Coll.php" method="post">
-		<?php
-		    echo "<p><strong>Username:</strong> " . $User . "</p>";
-		    echo "<p><strong>Collection to Update / Delete:</strong> " . $Coll_ID . "</p>";
-		    echo "<p><strong>Current Description:</strong> " . $Coll_Desc . "</p>";
-		?>    
+		<form name="Updt_Coll" action="Updt_Coll.php" method="post"  data-parsley-validate>
+			<?php
+			    echo "<p><strong>Username:</strong> " . $User . "</p>";
+			    echo "<p><strong>Collection to Update / Delete:</strong> " . $Coll_ID . "</p>";
+			    echo "<p><strong>Current Description:</strong> " . $Coll_Desc . "</p>";
+			?>    
 		    <label for="User_Coll_Desc">New Coll Description:</label> 
-		    <textarea name="User_Coll_Desc" id="User_Coll_Desc" cols="45" rows="4"></textarea>	
+		    <textarea name="User_Coll_Desc" id="User_Coll_Desc" cols="45" rows="4" required></textarea>	
 		
 		
 		    <div class="row">
