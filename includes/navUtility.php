@@ -20,7 +20,12 @@
 					echo "<a href='website-updates.php'>Website Updates</a>";
 					echo "<a href='Edit_Account_Form.php'>Edit Account</a>";
 					echo "<a href='logout.php'>Logout</a>";
-				} else {
+				} else if ($_SESSION['Sec_Lvl'] == 1) {
+					echo "<em>Welcome Guest</em>";
+					echo "<a href='Create_User_Account_Form.php'>Create an Account</a>";
+					echo "<a href='Authenticate-test.php'>Go to Login</a>";
+				}	
+				else {
 					echo "<a href='Create_User_Account_Form.php'>Create an Account</a>";
 					echo "<a href='Authenticate-test.php'>Login</a>";			
 				}		
