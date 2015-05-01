@@ -28,21 +28,15 @@ session_start();
 		   
 		        $outcome=mysql_query($query);
 		        if (!$outcome) {
-				redirect_to("Outcomes.php?message=Code_fail&model=$UserCollValue");
-
+					redirect_to("Outcomes.php?message=Code_fail&model=$UserCollValue");
 		            //drop down to form again
 		        }  else {
-				redirect_to("Outcomes.php?message=Code_success&model=$UserCollValue");
-				exit;
-			}
+					redirect_to("Outcomes.php?message=Code_success&model=$UserCollValue");
+					exit;
+				}
 		    }
 		    
-		    
-		    
-		    
-		    
-		    
-		//if post not set do initial form 
+			//if post not set do initial form 
 		?>
 
 		<h2>Add a Collection Code</h2>
@@ -113,6 +107,7 @@ session_start();
 				<div class="large-2 small-6 columns end">
 					<a class="button dark cancel" href="Collection_Code_Lists.php">Cancel</a>	
 				</div>
+			</div>
 		</form>	
 	
 	</div>
