@@ -111,7 +111,7 @@ session_start();
 					<input class="button dark" type="submit" name="submit" value="Submit" id="submit"/>
 				</div>
 				<div class="large-2 small-6 columns end">
-					<a class="button dark cancel" href="Add_User_Coll_Code.php">Cancel</a>	
+					<a class="button dark cancel" href="Collection_Code_Lists.php">Cancel</a>	
 				</div>
 		</form>	
 	
