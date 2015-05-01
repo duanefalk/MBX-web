@@ -1,4 +1,5 @@
 <?php
+ob_start();
 // we must never forget to start the session
 session_start();
 ?>
@@ -46,8 +47,8 @@ session_start();
 		        $outcome=mysql_query($query);
 		
 		        if ($outcome) {
-			    echo "<p>Posted release ".$RelID. " to Collection</p>";
-					
+			    //echo "<p>Posted release ".$RelID. " to Collection</p>";
+			    redirect_to("Outcomes.php?message=Rel_success&model=$RelID");		
 		            //Return;
 		            $url = "Ver_Detail_and_Var_Listing.php?model=".$VerID;
 				    echo "<a class='button dark' href=\"".$url."\">Return to Listing</a>";

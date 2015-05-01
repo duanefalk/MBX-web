@@ -64,7 +64,7 @@ if (isset($_POST['var_coll_submit'])) {
 	//Check if success, if so go out to success message and button to search again 
         $outcome=mysql_query($query);
         if ($outcome) {
-	    redirect_to("Add_Var_to_Coll_Outcome.php");
+	    redirect_to("Outcomes.php?message=Var_success&model=$VarID");
         
 	    //if ((mysql_query($query)) == true)
             //echo "<p>Done and returning</p>";

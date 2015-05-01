@@ -1,4 +1,5 @@
 <?php
+ob_start();
 // we must never forget to start the session
 session_start();
 ?>
@@ -27,11 +28,20 @@ session_start();
 		   
 		        $outcome=mysql_query($query);
 		        if (!$outcome) {
-		            echo "<p>Subject creation failed. Please review entries.</p>";
-		            echo "<p>".mysql_error()."</p>";
+				redirect_to("Outcomes.php?message=Code_fail&model=$UserCollValue");
+
 		            //drop down to form again
-		        }   
+		        }  else {
+				redirect_to("Outcomes.php?message=Code_success&model=$UserCollValue");
+				exit;
+			}
 		    }
+		    
+		    
+		    
+		    
+		    
+		    
 		//if post not set do initial form 
 		?>
 

@@ -41,7 +41,7 @@ session_start();
 			    $outcome=mysql_query($query);
 			
 			    if ($outcome) {
-			        redirect_to("Add_Rel_to_Wish_or_Coll_Outcome.php");
+			        redirect_to("Outcomes.php?message=Rel_success&model=$RelID");
 			    } else {
 			        echo "<p>Subject creation failed. Please review entries.</p>";
 			        echo "<p>".mysql_error()."</p>";
