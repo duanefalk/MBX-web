@@ -166,7 +166,7 @@
 					<div id="panel4" class="content">
 						<input type=checkbox name="RelYr_Check" id="RelYr_Check" />
 						<label for="RelYr_Check">Release Yr (yyyy):</label>
-						<input type="text" name="RelYr" value="" size="4" id="RelYr" data-parsley-min="4" data-parsley-max="4" data-parsley-type="integer">										
+						<input type="text" name="RelYr" value="" size="4" id="RelYr" data-parsley-minlength="4" data-parsley-maxlength="4" data-parsley-type="integer">										
 					</div>
 				</dd>
 			</dl>			
