@@ -15,7 +15,7 @@ $Username=$_SESSION['Username'];
 		<?php
 			$model_for_detail=$_GET["model"];
 			echo "<h3>All Variations of ".$model_for_detail."</h3>";
-			echo "<p>If you have a collection, the colored bar under photo indicates whether that variation is in your collection. If so, but it is yellow, then the condition of the variation is less than Very Good or 8.0</p>";
+			echo "<p>If you have a collection, the colored bar under photo indicates whether that variation is in your collection. If the bar is yellow, then you have the variation, but it's condition is either unspecified or less than Very Good or 8.0</p>";
 
 			$query= ("SELECT * FROM Matchbox_Variations WHERE UMID LIKE '%$model_for_detail%' ORDER BY VarYear, VarID ASC");
 			$result = mysql_query($query);
