@@ -233,7 +233,7 @@ session_start();
                     <p>Storage Location 1:     
 			<?php
 			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND Coll_List_Type LIKE '%Location%'
-                                    AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
+                                    AND (Coll_List_Val_InactivFlg=\"0\") ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
@@ -256,7 +256,7 @@ session_start();
                     <p>Storage Location 2:    
 			<?php
 			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND Coll_List_Type LIKE '%Location%'
-                                    AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
+                                    AND (Coll_List_Val_InactivFlg=\"0\") ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
@@ -280,7 +280,7 @@ session_start();
                     <p>Seller:      
 			<?php
 			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND Coll_List_Type LIKE '%Seller%'
-                                    AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
+                                    AND (Coll_List_Val_InactivFlg=\"0\") ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
