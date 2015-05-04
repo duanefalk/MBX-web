@@ -232,7 +232,7 @@ session_start();
 		    
                     <p>Storage Location 1:     
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND Coll_List_Type LIKE '%Location%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Type LIKE '%Location%'
                                     ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -242,20 +242,23 @@ session_start();
 				    echo "<input type=\"text\" name=\"Coll_Loc1\" value=\"\" size=\"20\" id=\"Coll_Loc1\"></p>";
 				} ELSE {
 				    ?>  
-				    <select name="Coll_Loc1" value= "<?php echo $row["StorLoc"];?>" id="Coll_Loc1">
+				    <select name="Coll_Loc1" value= "" id="Coll_Loc1">
 				    <?php
 				        $rows_count= mysql_num_rows($result);
 				        for ($i=1; $i<=$rows_count; $i++) {
 				            $row=mysql_fetch_array($result);
 				            echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
 				        }
+				    ?>
+				    </select>
+				    <?php
 				}
 			    }
                         ?>
-                            </select>
+                            
                     <p>Storage Location 2:    
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND Coll_List_Type LIKE '%Location%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Type LIKE '%Location%'
                                     ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -279,7 +282,7 @@ session_start();
                     <p>Purchase Date:      <input type="text" name="Coll_Purch_Dt" value="<?php echo $PurchDt;?>" size="8" id="Coll_Purch_Dt"></p>
                     <p>Seller:      
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND Coll_List_Type LIKE '%Seller%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Type LIKE '%Seller%'
                                    ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
