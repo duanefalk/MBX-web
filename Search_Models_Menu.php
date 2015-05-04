@@ -19,8 +19,12 @@
 				<dd>
 					<a href="#panel4">MAN (FAB) # <small>Single or range of No's (i.e. '800'; enter one no. on the top line or one on each line for a range); shows all versions of the model that matches a MAN#</small></a>
 					<div id="panel4" class="content">
-						<input type="text" name="MAN_No_1" value="" id="MAN_No_1" placeholder="Man # 1" data-parsley-type="integer" />
-						<input type="text" name="MAN_No_2" value="" id="MAN_No_2" placeholder="Man # 2 (optional: if searching a range)" data-parsley-type="integer" />
+						<div class="formRow">
+							<input type="text" name="MAN_No_1" value="" id="MAN_No_1" placeholder="Man # 1" data-parsley-type="integer" />
+						</div>
+						<div class="formRow">
+							<input type="text" name="MAN_No_2" value="" id="MAN_No_2" placeholder="Man # 2 (optional: if searching a range)" data-parsley-type="integer" />
+						</div>
 					</div>
 				</dd>
 			</dl>
@@ -56,8 +60,12 @@
 				<dd>
 					<a href="#panel8">UMID # <small>LR and 3 numbers (e.g. 'LR025'), or SF and 4 numbers (e.g. 'SF0858'). If LR or SF not specified will assume SF; enter one no. on the top line, or one on each line for a range</small></a>
 					<div id="panel8" class="content">
-						<input type="text" name="UMID_1" value="" id="UMID_1" placeholder="UMID #1" data-parsley-type="alphanum" data-parsley-maxlength="6">
-						<input type="text" name="UMID_2" value="" id="UMID_2" placeholder="UMID #2 (optional: if searching a range)" data-parsley-type="alphanum" data-parsley-maxlength="6">
+						<div class="formRow">
+							<input type="text" name="UMID_1" value="" id="UMID_1" placeholder="UMID #1" data-parsley-type="alphanum" data-parsley-maxlength="6">
+						</div>
+						<div class="formRow">
+							<input type="text" name="UMID_2" value="" id="UMID_2" placeholder="UMID #2 (optional: if searching a range)" data-parsley-type="alphanum" data-parsley-maxlength="6">
+						</div>
 					</div>
 				</dd>
 			</dl>

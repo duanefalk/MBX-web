@@ -149,7 +149,7 @@ select {height:auto;}
 /* -- Forms -- */
 form {
 	ul.parsley-errors-list {
-		li {color:$orange;}
+		li {color:$orange; line-height:120%;}
 	}
 }
 .formRow {margin-bottom:1em; padding-bottom:.5em; border-bottom:.2em solid transparentize($brown,.85);
