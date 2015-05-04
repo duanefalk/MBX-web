@@ -33,8 +33,8 @@
 	            
 	            if ($rows_count == 0) {
 	                echo "<small class='error'>Sorry, wrong user id / password.</small>";	               
-					// the user id and password match, 
-		            // set the session	            
+		    // the user id and password match, 
+		    // set the session	            
 	            } else {
 	                $_SESSION['db_is_logged_in'] = true;
 	                // get sec lvl from db
@@ -55,7 +55,7 @@
 	                
 	                exit;
 	            } 
-	           include 'includes/close_db_connection.php';
+	          
 	        }
         ?>
         
