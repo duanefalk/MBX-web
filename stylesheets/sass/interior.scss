@@ -78,6 +78,8 @@ body.home #header { margin-bottom:2em; padding-bottom:0; background:$orange url(
 			&:hover,
 			&:focus {background:$orange;}	
 		}
+		
+		ul.parsley-errors-list li {color:$gold;}
 	}
 }
 /* -- end HOME ------------------- */
