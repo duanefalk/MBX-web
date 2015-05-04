@@ -79,9 +79,9 @@ session_start();
 		<p>Copy to view.edit/delete: <?php echo $_GET["copy"]; ?></p>
 		
 		<?php
-            $Var_to_Updt=$_GET["model"];
+		    $Var_to_Updt=$_GET["model"];
 		    $Copy_to_Updt=$_GET["copy"];
-            $User=$_SESSION['Username'];
+		    $User=$_SESSION['Username'];
 		    
 		    $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND VarID='$Var_to_Updt'");								
 		    $result=0;
@@ -94,33 +94,40 @@ session_start();
 		        echo "You do not have a collection- please go to Create a Collection";
 		    }                   
                     
-            $picture1= IMAGE_URL . $Var_to_Updt."_1.jpg";
+		    $picture1= IMAGE_URL . $Var_to_Updt."_1.jpg";
 		    $picture1_loc=IMAGE_PATH. $Var_to_Updt."_1.jpg";
 
-            if (file_exists($picture1_loc)) {
-                echo "<img src=".$picture1." width=\"240\">";
-            } else {
-                echo "<img src=".DEFAULT_IMAGE." width=\"240\">";
-            }
+		    if (file_exists($picture1_loc)) {
+		        echo "<img src=".$picture1." width=\"240\">";
+		    } else {
+		        echo "<img src=".DEFAULT_IMAGE." width=\"240\">";
+		    }
 		?>
 
 		<form name="Updt_Coll_Mdl_Process" action="Updt_Coll_Mdl_Process.php" method="post">
 		    <?php  
 	            echo "<br />";
                         
-                //determine what copy to default in field
-                $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND VarID='$Var_to_Updt' AND Copy='$Copy_to_Updt'");								
+		    //determine what copy to default in field
+		    $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND VarID='$Var_to_Updt' AND Copy='$Copy_to_Updt'");								
 				$result=0;
 				$result=mysql_query($query);
 				//echo "rows found: ".mysql_num_rows($result);
 				$row=mysql_fetch_array($result);
+				$ItemVal=$row['ItemVal'];
+				$PurchDt=$row['PurchDt'];
+				$PurchPrice=$row['PurchPrice'];
+				$SellFlg=$row["SellFlg"];
+				$MinSellPrice=$row["MinSellPrice"];
+				$Comment=$row['CollComm'];
+				
 
 				echo "Username: ".$User."<br />";
 				echo "User Collection Name: ".$User_CollID."<br />";
 				echo "Variation to View/Update: ".$Var_to_Updt."<br />";
 				echo "Copy to View/Update: ".$Copy_to_Updt."<br /><br />";
 
-            ?>
+		    ?>
 		    
 		    <!--<input type="hidden" name="User" value="<?php //echo $User;?>" id="User">
 		    //<input type="hidden" name="User_CollID" value="<?php //echo $User_CollID;?>" id="User_CollID">-->
@@ -131,58 +138,101 @@ session_start();
                     <p>Version ID:    <input type="text" name="Coll_VerID" value="<?php echo $row["VerID"];?>" size="10" id="Coll_VerID"></p>
                     <p>Release ID:    <input type="text" name="Coll_RelID" value="<?php echo $row["RelID"];?>" size="16" id="Coll_RelID"></p>
                     <p>User-specific ID:   <input type="text" name="User_SpecID" value="<?php echo $row["User_SpecID"];?>" size="20" id="User_SpecID"></p>
-                    <p>Vehicle Condition: 
-                        <?php
-                            //vehicle condition
-                            //Get this from session vars and add to user prefs hard code for now
-                            $Cond_scheme="Alpha_cond";
-    
-                            $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Cond_scheme%' ORDER BY ValueDispOrder ASC");								
-                            $result=0;
-                            $rows_count=0;									
-                            $result = mysql_query($query);
-                            if ((mysql_num_rows($result) == 0)) {
-                                echo "Error condition query failed";
-                                exit;
-                            } 
-                            $rows_count= mysql_num_rows($result);
-                        ?>
-                        <select name="VehCond" value="<?php echo $row["VehCond"];?>" id="VehCond">
-                        <?php
-                            for ($i=1; $i<=$rows_count; $i++) {
-                                $row=mysql_fetch_array($result);
-                                echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-                            }	
-                        ?>
-                        </select>
-                    <p>Package Condition: 
-                        <?php
-                            //Get this from session vars and add to user prefs hard code for now
-                            $Cond_scheme="Alpha_cond";
-    
-                            $query=("SELECT * FROM Matchbox_Value_lists WHERE ValueList LIKE '%$Cond_scheme%' ORDER BY ValueDispOrder ASC");								
-                            $result=0;
-                            $rows_count=0;									
-                            $result = mysql_query($query);
-                            
-                            if (mysql_num_rows($result) == 0) {
-                                echo "Error condition query failed";
-                                exit;
-                            } 
-                            $rows_count= mysql_num_rows($result);
-                        ?>  
-                        <select name="PkgCond" value="<?php echo $row["PkgCond"];?>" id="PkgCond">
-                        <?php
-                            for ($i=1; $i<=$rows_count; $i++) {
-                                    $row=mysql_fetch_array($result);
-                                    echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-                            }	
-                        ?>
-                        </select>
-                    <p>Item Value:      <input type="text" name="Coll_Value" value="<?php echo $row["ItemVal"];?>" size="10" id="Coll_Value"></p>
+ 
+			
+		    <label for="VehCond">Vehicle Condition:</label> 
+		    <?php
+		        //determine from account what scheme for vehicle condition
+		        $query_cond=("SELECT * FROM MBXU_User_Accounts WHERE Username='$User'");
+			$result_cond = mysql_query($query_cond);
+	
+			if ($result_cond) {
+		            $rows_count= mysql_num_rows($result_cond);
+		            for ($i=1; $i<=$rows_count; $i++) {
+		                $row=mysql_fetch_array($result_cond);
+		                $Cond_scheme= $row['Veh_Cond_Scheme'];
+		            }
+		        } else {
+		            echo "Your account is corrupted, contact admin";
+		        }
+			    
+			//show condition in approp scheme    
+			if ($Cond_scheme == 1) {
+			    $Veh_Cond_Scheme = "Num_cond";
+			} else {
+			    $Veh_Cond_Scheme = "Alpha_cond";			
+			}
+			    
+		        $query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%$Veh_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
+		        $result=0;
+		        $rows_count=0;									
+		        $result = mysql_query($query);
+
+		        if (!$result) {
+		            echo "Error condition query failed";
+		            exit;
+		        } 
+
+		        $rows_count= mysql_num_rows($result);
+		    ?>
+           
+		    <select name="VehCond" id="VehCond">
+		    <?php
+	                for ($i=1; $i<=$rows_count; $i++) {
+	                    $row=mysql_fetch_array($result);
+	                    echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+	                }	
+	            ?>
+		    </select>			
+			
+			
+                    <label for="PkgCond">Package Condition:</label>
+		     <?php
+		        //determine from account what scheme for pkg cond
+			$query_cond2=("SELECT * FROM MBXU_User_Accounts WHERE Username='$User'");
+		       $result_cond2 = mysql_query($query_cond2);
+
+			if ($result_cond2) {
+		            $rows_count2= mysql_num_rows($result_cond2);                 
+		            for ($i=1; $i<=$rows_count2; $i++) {
+		               $row=mysql_fetch_array($result_cond2);
+		               $Cond_scheme2= $row['Pkg_Cond_Scheme'];
+		           }
+		       } else {
+		               echo "Your account is corrupted, contact admin";
+		       }
+			    
+			//show conditions in approp scheme  
+			if ($Cond_scheme2 == 1) {
+			    $Pkg_Cond_Scheme="Num_cond";
+			} else {
+			    $Pkg_Cond_Scheme="Alpha_cond";			
+			}
+			    
+			$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%$Pkg_Cond_Scheme%' ORDER BY ValueDispOrder ASC");								
+		       $result=0;
+		       $rows_count=0;									
+		       $result = mysql_query($query);
+		       if (!$result) {
+		           echo "Error condition query failed";
+		           exit;
+		       } 
+		       $rows_count= mysql_num_rows($result);
+		    ?>
+		    <select name="PkgCond" id="PkgCond">
+		    <?php
+		        for ($i=1; $i<=$rows_count; $i++) {
+		        $row=mysql_fetch_array($result);
+		            echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+		        }	
+		    ?>
+		    </select>		
+			
+                    <p>Item Value:      <input type="text" name="Coll_Value" value="<?php echo $ItemVal;?>" size="10" id="Coll_Value"></p>
+		    
                     <p>Storage Location 1:     
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND Coll_List_Type LIKE '%Location%'
                                     AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -203,7 +253,7 @@ session_start();
                             </select>
                     <p>Storage Location 2:    
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Location%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND Coll_List_Type LIKE '%Location%'
                                     AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -222,10 +272,10 @@ session_start();
                             }
                         ?>
                             </select>
-                    <p>Purchase Date:      <input type="text" name="Coll_Purch_Dt" value="<?php echo $row["PurchDt"];?>" size="8" id="Coll_Purch_Dt"></p>
+                    <p>Purchase Date:      <input type="text" name="Coll_Purch_Dt" value="<?php echo $PurchDt;?>" size="8" id="Coll_Purch_Dt"></p>
                     <p>Seller:      
 			<?php
-			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND User_Coll_ID LIKE '%$User_CollID%' AND Coll_List_Type LIKE '%Seller%'
+			    $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$User' AND Coll_List_Type LIKE '%Seller%'
                                     AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
                             $result=0;
                             $rows_count=0;									
@@ -244,11 +294,23 @@ session_start();
 			    }
                         ?>
 			 </select>
-                    <p>Purchase Price:      <input type="text" name="Coll_Purch_Price" value="<?php echo $row["PurchPrice"];?>" size="10" id="Coll_Purch_Price"></p>
-                    <p>Flag to Sell?     <input type="checkbox" value="<?php echo $row["SellFlg"];?>" name="CollSellFlg"><P>
-                    <p>Minimum Price to Sell: <input type="text" name="Coll_MinSell_Price" value="<?php echo $row["MinSellPrice"];?>" size="10" id="Coll_MinSell_Price"></p>
+                    <p>Purchase Price:      <input type="text" name="Coll_Purch_Price" value="<?php echo $PurchPrice;?>" size="10" id="Coll_Purch_Price"></p>
+		    <?php
+			if ($SellFlg) {
+			    ?>
+			    <p>Flag to Sell?     <input type="checkbox" value="" name="CollSellFlg" checked><P>
+			    <?php
+			} else {
+			     ?>
+			    <p>Flag to Sell?     <input type="checkbox" value="" name="CollSellFlg"><P>
+			    <?php
+			}
+ 		    
+		    ?>
+
+                    <p>Minimum Price to Sell: <input type="text" name="Coll_MinSell_Price" value="<?php echo $MinSellPrice;?>" size="10" id="Coll_MinSell_Price"></p>
                     <p>Comment: </p>
-                        <textarea name="Coll_Comm" cols="45" rows="4" value="<?php echo $row["CollComm"];?>" id="Coll_Comm">	
+                        <textarea name="Coll_Comm" cols="45" rows="4" id="Coll_Comm"><?php echo $Comment;?>
                         </textarea>
                     <input type="submit" name="var_coll_submit" class="button dark" value="Update" id="var_coll_submit"/>
         	</form>
