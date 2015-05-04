@@ -68,14 +68,15 @@ body.home #header { margin-bottom:2em; padding-bottom:0; background:$orange url(
 		margin-bottom:0;
 	
 		label {color:$white;}
-		input {display:inline-block; margin-bottom:0;}
-		input[type=text] { width:72%; margin-right:2%; border:none; box-shadow:0;
+		input {display:block; width:100%; margin-bottom:0;}
+		input[type=text] { border:none; box-shadow:0;
 			@media only screen and (max-width:480px){ width:100%; margin:0 auto 1em; }
 		}
-		input[type=submit] { width:25%; font-size:90%;
+		input[type=submit] { font-size:90%;
 			@media only screen and (max-width:480px){ width:100%; margin:0 auto; }
 			
-			&:hover {background:$orange;}	
+			&:hover,
+			&:focus {background:$orange;}	
 		}
 	}
 }

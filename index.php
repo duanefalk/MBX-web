@@ -16,10 +16,16 @@
 	<div class="large-7 columns">
 		<div id="quick_search">
 			<h3>Quick Search</h3>
-			<form action="Search_Models_Process.php" method="post" data-parsley-validate>			
-				<label for="MAN_No_1">MAN (FAB) # (i.e. '800'):</label>
-				<input type="text" name="Spec_MAN" value="" id="Spec_MAN" data-parsley-type="integer" required>
-				<input type="submit" class="button" name="submit" value="Search"/>
+			<form action="Search_Models_Process.php" method="post" data-parsley-validate>
+				<label for="Spec_MAN">MAN (FAB) # (i.e. '800'):</label>
+				<div class="row">
+					<div class="large-9 columns">
+						<input type="text" name="Spec_MAN" value="" id="Spec_MAN" data-parsley-type="integer" required>
+					</div>
+					<div class="large-3 columns">
+						<input type="submit" class="button" name="submit" value="Search"/>
+					</div>
+				</div>
 			</form>
 		</div>
 	</div>

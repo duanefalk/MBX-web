@@ -42,8 +42,8 @@ select {height:auto;}
 
 .clear {clear:both;}
 
-
-.button {
+.button,
+button {
 	padding:.6em 1.4em;
 	@include headline; color:$white; 
 	background:none; border:2px solid $white; border-radius:5px;
