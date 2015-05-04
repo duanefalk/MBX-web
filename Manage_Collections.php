@@ -4,10 +4,10 @@
             
 <section class="row">
 	<h2>Create/Configure Your Collections</h2>
-	
+	<p>Currently each user can have only one collection. 'Create/View/Update' below will either allow to create a collection if you don't have one, or show you the collection you already have.</p>
 	<div class="row actionButtons">
 	    <div class="large-4 columns">
-		<a href="Create_Collection.php" class="button dark">Create a Collection</a>
+		<a href="Create_Collection.php" class="button dark">Create/View/Update a Collection</a>
             </div>
  	    <div class="large-4 columns">   
 	        <a href="Updt_Coll.php" class="button dark">View/Update/Delete Your Collection</a>

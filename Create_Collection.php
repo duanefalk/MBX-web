@@ -61,10 +61,8 @@ session_start();
 					$rows= mysql_num_rows($result);
 					for ($i=1; $i<=$rows; $i++) {
 						$row = mysql_fetch_array($result);
-						if ($row['User_Coll_Inactiv_Flag']=="0") {?>
-							<p>You already have a collection. You can go to View/Update to see the details on this collection.</p>
-							<p><a href="Manage_Collections.php">Manage collections</a></p>
-							<?php exit;
+						if ($row['User_Coll_Inactiv_Flag']=="0") {
+							redirect_to("Updt_Coll.php");
 						}
 					}
 				} ?>	
