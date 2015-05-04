@@ -237,18 +237,20 @@ session_start();
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
-                            if ((mysql_num_rows($result) == 0)) {
-                                echo "<input type=\"text\" name=\"Coll_Loc1\" value=\"\" size=\"20\" id=\"Coll_Loc1\"></p>";
-                            } ELSE {
-                                ?>  
-                                <select name="Coll_Loc1" value= "<?php echo $row["StorLoc"];?>" id="Coll_Loc1">
-                                <?php
-                                    $rows_count= mysql_num_rows($result);
-                                    for ($i=1; $i<=$rows_count; $i++) {
-                                        $row=mysql_fetch_array($result);
-                                        echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
-                                    }
-                            }
+			    if ($result) {
+				if ((mysql_num_rows($result) == 0)) {
+				    echo "<input type=\"text\" name=\"Coll_Loc1\" value=\"\" size=\"20\" id=\"Coll_Loc1\"></p>";
+				} ELSE {
+				    ?>  
+				    <select name="Coll_Loc1" value= "<?php echo $row["StorLoc"];?>" id="Coll_Loc1">
+				    <?php
+				        $rows_count= mysql_num_rows($result);
+				        for ($i=1; $i<=$rows_count; $i++) {
+				            $row=mysql_fetch_array($result);
+				            echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
+				        }
+				}
+			    }
                         ?>
                             </select>
                     <p>Storage Location 2:    
@@ -258,18 +260,20 @@ session_start();
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
-                            if ((mysql_num_rows($result) == 0)) {
-                                echo "<input type=\"text\" name=\"Coll_Loc2\" value=\"\" size=\"20\" id=\"Coll_Loc2\"></p>";
-                            } ELSE {
-                                ?>  
-                                <select name="Coll_Loc2" value= "<?php echo $row["StorLoc2"];?>" id="Coll_Loc2">
-                                <?php
-                                    $rows_count= mysql_num_rows($result);
-                                    for ($i=1; $i<=$rows_count; $i++) {
-                                        $row=mysql_fetch_array($result);
-                                        echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
-                                    }
-                            }
+			    if ($result) {
+				if ((mysql_num_rows($result) == 0)) {
+				    echo "<input type=\"text\" name=\"Coll_Loc2\" value=\"\" size=\"20\" id=\"Coll_Loc2\"></p>";
+				} ELSE {
+				    ?>  
+				    <select name="Coll_Loc2" value= "<?php echo $row["StorLoc2"];?>" id="Coll_Loc2">
+				    <?php
+				        $rows_count= mysql_num_rows($result);
+				        for ($i=1; $i<=$rows_count; $i++) {
+				            $row=mysql_fetch_array($result);
+				            echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
+				        }
+				}
+			    }
                         ?>
                             </select>
                     <p>Purchase Date:      <input type="text" name="Coll_Purch_Dt" value="<?php echo $PurchDt;?>" size="8" id="Coll_Purch_Dt"></p>
@@ -280,17 +284,19 @@ session_start();
                             $result=0;
                             $rows_count=0;									
                             $result = mysql_query($query);
-                            if ((mysql_num_rows($result) == 0)) {
-                                echo "<input type=\"text\" name=\"Coll_Seller\" value=\"\" size=\"40\" id=\"Coll_Seller\"></p>";
-                            } ELSE {
-				?>  
-				<select name="Coll_Seller" value="<?php echo $row["Seller"];?>" id="Coll_Seller">
-	                        <?php
-                                    $rows_count= mysql_num_rows($result);
-	                            for ($i=1; $i<=$rows_count; $i++) {
-                                        $row=mysql_fetch_array($result);
-                                        echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
-				    }
+			    if ($result) {
+			        if ((mysql_num_rows($result) == 0)) {
+			            echo "<input type=\"text\" name=\"Coll_Seller\" value=\"\" size=\"40\" id=\"Coll_Seller\"></p>";
+			        } ELSE {
+			    	?>  
+			    	<select name="Coll_Seller" value="<?php echo $row["Seller"];?>" id="Coll_Seller">
+			            <?php
+			                $rows_count= mysql_num_rows($result);
+			                for ($i=1; $i<=$rows_count; $i++) {
+			                    $row=mysql_fetch_array($result);
+			                    echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
+			        	}
+			        }
 			    }
                         ?>
 			 </select>
