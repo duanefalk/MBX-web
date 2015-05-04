@@ -43,7 +43,7 @@
 	$outcome = mysql_query($query);
         
         if ($outcome) {
-	    redirect_to("Add_Var_to_Coll_Outcome.php");
+	    redirect_to("Outcomes.php?message=Var_success&model=$VarID");
         } else {
             echo "<p>Subject creation failed. Please review entries.</p>";
             echo "<p>".mysql_error()."</p>";
