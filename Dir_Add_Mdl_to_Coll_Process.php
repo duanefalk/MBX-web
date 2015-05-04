@@ -92,16 +92,17 @@
 	            $Coll_UMID=substr($Coll_VerID,0,6);
                         
 		    //determine what copy to default in field
-		    $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND User_Coll_ID='$User_CollID' AND VarID='$Var_to_Add'");								
+		    $query=("SELECT * FROM Matchbox_Collection WHERE Username='$Username' AND VarID='$Var_to_Add'");								
 		    $result=0;
 		    $result=mysql_query($query);
-		    $rows=mysql_num_rows($result);
-
-                    if ($rows!=0) {
-	                $copy_to_show = (mysql_num_rows($result)+1);
-                    } else {
-	                $copy_to_show= "1";
-                    }          
+		    if ($result) {
+			$rows=mysql_num_rows($result);
+                        if ($rows!=0) {
+    	                $copy_to_show = (mysql_num_rows($result)+1);
+                        } else {
+    	                $copy_to_show= "1";
+                        }
+		    }
                 ?>
 
                 <label for="Coll_Username">Username</label>
@@ -222,7 +223,7 @@
 				
 		 <label for="Coll_Loc1">Storage Location 1:</label>     
 		<?php
-		    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Location%' AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");								
+		    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Location%' ORDER BY Coll_List_Val_DisplOrd ASC");								
                     $result = 0;
                     $rows_count = 0;									
                     $result = mysql_query($query);
@@ -242,7 +243,7 @@
 		    
             <label for="Coll_Loc2">Storage Location 2:</label>
 				<?php
-		    	$query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Location%' AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");
+		    	$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Location%' ORDER BY Coll_List_Val_DisplOrd ASC");
 				$result=0;
 				$rows_count=0;									
 				$result = mysql_query($query);
@@ -267,7 +268,7 @@
 				
 		<label for="Coll_Seller">Seller:</label>					
 		<?php
-	            $query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Seller%' AND (!Coll_List_Val_InactivFlg) ORDER BY Coll_List_Val_DisplOrd ASC");
+	            $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Seller%' ORDER BY Coll_List_Val_DisplOrd ASC");
 	            $result=0;
 	            $rows_count=0;									
 	            $result = mysql_query($query);

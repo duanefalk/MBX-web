@@ -265,7 +265,7 @@ if (isset($_POST['var_coll_submit'])) {
 		    
             <label for="Coll_Loc2">Storage Location 2:</label>
 				<?php
-		    	$query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Location%' AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");
+		    	$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Location%' AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");
 				$result=0;
 				$rows_count=0;									
 				$result = mysql_query($query);
@@ -290,7 +290,7 @@ if (isset($_POST['var_coll_submit'])) {
  
 	    <label for="Coll_Seller">Seller:</label>					
 		<?php
-	        	$query=("SELECT * FROM Matchbox_User_Coll_Value_lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Seller%' AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");
+	        	$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$Username' AND Coll_List_Type LIKE '%Seller%' AND Coll_List_Val_InactivFlg=0 ORDER BY Coll_List_Val_DisplOrd ASC");
 	            $result=0;
 	            $rows_count=0;									
 	            $result = mysql_query($query);
