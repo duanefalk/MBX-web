@@ -32,28 +32,29 @@ session_start();
 <div class="row">
 	<div class="large-12 columns">
 		<h2>View/Update/Delete Collection</h2>
-		<br />
+		
 		<?php
 		    $User=$_SESSION['Username'];
 		    $result=0;
 		    $query=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");
 		    $result=mysql_query($query);
 		    if ($result) {
-			$rows=mysql_num_rows($result);
-			if ($rows>0) {
-			    $row = mysql_fetch_array($result);
-			    if ($row['User_Coll_Inactiv_Flag']=="1") {
-				echo "You do not have a collection. Please create a collection first.";
-				exit;			
-			    }
-			} else {
-			    echo "You do not have a collection. Please create a collection first.";
-			    exit;
-			}	
+				$rows=mysql_num_rows($result);
+				
+				if ($rows>0) {
+				    $row = mysql_fetch_array($result);
+				    if ($row['User_Coll_Inactiv_Flag']=="1") {
+						echo "You do not have a collection. Please create a collection first.";
+						exit;			
+				    } else {}
+				} else {
+				    echo "You do not have a collection. Please create a collection first.";
+				    exit;
+				}	
 
 		    }
-		    $Coll_ID= $row['User_Coll_ID'];
-		    $Coll_Desc= $row['User_Coll_Desc'];
+		    $Coll_ID = $row['User_Coll_ID'];
+		    $Coll_Desc = $row['User_Coll_Desc'];
 		?>
 		
 		<form name="Updt_Coll" action="Updt_Coll.php" method="post"  data-parsley-validate>
