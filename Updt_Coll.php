@@ -72,15 +72,12 @@ session_start();
 			    </div>
 			    <div class="large-3 small-4 columns">
 				    <?php
-						$url1 = "Delete_Collection.php?coll=".$Coll_ID;
-						echo "<a class='button dark' href=\"".$url1."\">DELETE COLLECTION</a>";
+						$url1 = "Delete_Collection.php?coll=" . $Coll_ID;
 					?>
+					<a class="button dark" href="<?php echo $url1; ?>">DELETE COLLECTION</a>
 			    </div>
 			    <div class="large-2 small-4 columns end">
-				    <?php
-						$url2 = "Updt_Coll.php";
-						echo "<a class='button dark cancel' href=\"".$url2."\">Cancel</a>";
-					?>
+				    <a class="button dark cancel" href="Manage_Collections.php">Cancel</a>
 			    </div>
 		    </div>
 		</form>    
