@@ -10,6 +10,22 @@
 		<h2>Latest Website Updates</h2>
 			
 		<div class="section">
+			<p class="date">May 08, 2015</p>
+			<ul>
+				<li>FIXES: Collection Summary report now works correctly. Working on Summary for All Sellers.</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0220">Flat Car Side Tipper (SF0220)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0221">Motor-cycle Trailer (SF0221)</a></li>
+				<li>Note- SF0222 not used at present</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0223">S 2 Buccaneer Jet (SF0223)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0224">Rover 3500 (SF0224)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0225">Swing Wing Tomcat Jet (SF0225)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0226">Leyland Articulated Truck (SF0226)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0227">Atlas Excavator (SF0227)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0228">Chevy Pro Stocker (SF0228)</a></li>
+			</ul>
+		</div>	
+			
+		<div class="section">
 			<p class="date">May 02, 2015</p>
 			<ul>
 				<li>FIXES: Lots of work! Thanks to all 'beta testers' who found bugs for me.</li>
