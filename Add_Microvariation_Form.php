@@ -13,10 +13,10 @@
 			<input type="text" name="UMID" value="" size="6" id="UMID">
 			
 			<label for="Microvariation">Microvariation:</label>
-			<textarea name="Microvariation" cols="45" rows="4"></textarea>
+			<textarea name="Microvariation" cols="45" rows="4" id="Microvariation"></textarea>
 			
 			<label for="Microvar_Updt_Dt">Update Date:</label>
-			<input type="date" name="Microvar_Updt_Dt">
+			<input type="text" name="Microvar_Updt_Dt" id="Microvar_Updt_Dt">
 
 			<input type="submit" class="button dark" name="submit" value="Submit"/>
 		
@@ -36,5 +36,11 @@
 		<a href="index.php">Return to Main Page</a>		
 	</div>
 </div>
+
+<!--script>
+	$(function() {
+		$( "#Microvar_Updt_Dt" ).datepicker();
+	});
+</script-->
 
 <?php require("includes/footer.php"); ?>

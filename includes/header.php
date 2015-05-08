@@ -21,6 +21,7 @@
 	
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="stylesheets/foundation.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="stylesheets//ui-lightness/jquery-ui-1.10.3.custom.min.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/parsley.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/lightbox.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
