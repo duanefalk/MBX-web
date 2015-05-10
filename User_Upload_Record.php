@@ -62,6 +62,7 @@
     )";
     $outcome=mysql_query($query);
     if ($outcome) {
+        mail("duanejfalk@yahoo.com","Upload sent","Check for latest user upload");
         redirect_to("User_Upload.php");
         exit;
     } // success 
