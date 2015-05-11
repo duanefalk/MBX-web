@@ -4,11 +4,8 @@
 
 <div class="row">
 	<div class="large-12 columns">
-	
-		<h2>Add a Microvariation</h2>
-				
-		<form action="Add_Microvariation_Process.php" method="post">
-			
+		<h2>Add a Microvariation</h2>				
+		<form action="Add_Microvariation_Process.php" method="post">			
 			<label for="UMID">UMID:</label>
 			<input type="text" name="UMID" value="" size="6" id="UMID">
 			
@@ -18,13 +15,15 @@
 			<label for="Microvar_Updt_Dt">Update Date:</label>
 			<input type="text" name="Microvar_Updt_Dt" id="Microvar_Updt_Dt">
 
-			<input type="submit" class="button dark" name="submit" value="Submit"/>
-		
-		</form>			
-		
-		<a href="Add_Microvariation.php">Cancel</a>				 						
-
-	
+			<div class="row">
+				<div class="large-2 small-6 columns">
+					<input type="submit" class="button dark" name="submit" value="Submit"/>
+				</div>
+				<div class="large-2 small-6 columns end">
+					<a class="button dark cancel" href="Add_Microvariation.php">Cancel</a>
+				</div>
+			</div>		
+		</form>	
 	</div>
 </div>
 
