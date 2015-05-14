@@ -13,6 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Matchbox Cars Database and Collections">
 	<meta name="keywords" content="Matchbox,Matchbox cars,Superfast,Regular Wheels,Matchbox packages,Matchbox wheels">
+	<meta name="google-site-verification" content="02zRls87oZUf5kpb8jUNNGv5FojXuI3ozBCCfqr2CjY" />
 	<meta name="author" content="Duane Falk">
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
