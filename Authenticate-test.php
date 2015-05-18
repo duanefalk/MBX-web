@@ -3,6 +3,7 @@
 	// we must never forget to start the session
 	session_start();
 	$_SESSION['Sec_Lvl']=1;
+	$pageTitle = "Login";
 ?>
 
 <?php require_once("includes/db_connection.php"); ?>

@@ -1,4 +1,7 @@
-<?php include("includes/header.php"); ?>
+<?php 
+	$pageTitle = "Website Dedication";
+	include("includes/header.php"); 
+?>
 
 <div class="row">
 	<div class="large-12 columns">

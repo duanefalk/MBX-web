@@ -1,4 +1,7 @@
-<?php include("includes/header.php"); ?>
+<?php 
+	$pageTitle = "Reference Files";
+	include("includes/header.php");
+?>
 
 
 <div class="row">

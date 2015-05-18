@@ -2,6 +2,7 @@
 <?php
 	// we must never forget to start the session
 	session_start();
+	$pageTitle = "Create an Account";
 ?>
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>

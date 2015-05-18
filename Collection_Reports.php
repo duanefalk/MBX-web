@@ -1,4 +1,7 @@
-<?php include("includes/header.php"); ?>
+<?php 	
+	$pageTitle = "Collection Reports";
+	include("includes/header.php");
+?>
 
 <section class="row">
 	<div class="large-12 columns">

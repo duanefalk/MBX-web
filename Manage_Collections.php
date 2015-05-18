@@ -1,7 +1,7 @@
 <?php
-ob_start();
-// we must never forget to start the session
-session_start();
+	ob_start();
+	session_start();
+	$pageTitle = "Manage Collection";
 ?>
 
 <?php require_once("includes/db_connection.php"); ?>
