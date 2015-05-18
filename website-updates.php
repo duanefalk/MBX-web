@@ -10,6 +10,18 @@
 		<h2>Latest Website Updates</h2>
 			
 		<div class="section">
+			<p class="date">May 18, 2015</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0219">Cattle Trailer (SF0219)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0218">Porsche 928 (SF0218)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0217">Mobile Home/Command Vehicle (SF0217)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0216">Harley Davidson (SF0216)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0215">articulated Truck Trailer (SF0215)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0214">LFord Camper (SF0214)</a></li>
+			</ul>
+		</div>		
+			
+		<div class="section">
 			<p class="date">May 08, 2015</p>
 			<ul>
 				<li>FIXES: Collection Summary report now works correctly. Working on Summary for All Sellers.</li>
