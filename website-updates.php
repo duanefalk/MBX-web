@@ -8,6 +8,16 @@
 	<div class="large-12 columns">
 	
 		<h2>Latest Website Updates</h2>
+
+		<div class="section">
+			<p class="date">May 28, 2015</p>
+			<ul>
+				<li>2015 models to date have been entered! Code 1 models up through batch D, multi-packs, Jurassic World etc. Code 2/3's will come next week. Search releases with release year 2015 to see all.</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0213">Ford Refuse Truck (SF0213)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0212">Pontiac Firebird (SF0212)</a></li>
+			</ul>
+		</div>	
+
 			
 		<div class="section">
 			<p class="date">May 18, 2015</p>
