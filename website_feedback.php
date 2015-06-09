@@ -8,7 +8,7 @@
 	<div class="large-12 columns">
 	
 		<h2>Website Feedback</h2>
-		<p>replace</p>	
+		<p>Please email us with your feedback at <a href="mailto:info@mbx-u.com?bcc=djf@duncanfalk.com">info@mbx-u.com</a>.</p>
 		
 		<!--form action="<?php ROOTURL; ?>/includes/mail.php" method="POST">
 			
