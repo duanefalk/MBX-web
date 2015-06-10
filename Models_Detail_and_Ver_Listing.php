@@ -45,6 +45,7 @@ $Username=$_SESSION['Username'];
 			}	
 			
 			$PhotoRefCd= $row2["ModelPhotoRef"];
+			
 			if ($PhotoRefCd) {
 				$query3= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
 				$result3= mysql_query($query3);
@@ -410,6 +411,7 @@ $Username=$_SESSION['Username'];
 			// display releases for this umid
 			$rel_result=0;
 			$rel_rows=0;
+			
 			//Search for 1-75
 			$rel_query=("SELECT * FROM Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND Series='1-75' ORDER BY RelYr, CountryofSale, SeriesID, RelID");
 			$rel_result = mysql_query($rel_query);
@@ -436,6 +438,7 @@ $Username=$_SESSION['Username'];
 						*/
 						
 						//print info
+						$RelPhotoRefCd=$rel_row["RelPkgPhotoRef"];
 						$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
 						$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
 						$url = "Release_Detail.php?model=" . $rel_row["RelID"];
@@ -446,7 +449,7 @@ $Username=$_SESSION['Username'];
 							echo "<a class='thumb' href='" . $url . "'><img src=" . DEFAULT_IMAGE . " /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 						}
 						if ($rel_row["RelPkgPhotoRef"]) {
-							$query2 = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+							$query2 = ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$RelPhotoRefCd%'");
 							$result2 = mysql_query($query2);
 							$row2 = mysql_fetch_array($result2);
 							echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
@@ -490,6 +493,7 @@ $Username=$_SESSION['Username'];
 					*/
 					
 					//print info
+					$RelPhotoRefCd=$rel_row["RelPkgPhotoRef"];
 					$picture= IMAGE_URL . $rel_row["RelID"]."_1.jpg";
 					$picture_loc=IMAGE_PATH. $rel_row["RelID"]."_1.jpg";
 					$url= "Release_Detail.php?model=".$rel_row["RelID"];
@@ -499,7 +503,7 @@ $Username=$_SESSION['Username'];
 						echo "<a class='thumb' href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
-						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$RelPhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
@@ -542,6 +546,7 @@ $Username=$_SESSION['Username'];
 					*/
 					
 					//print info
+					$RelPhotoRefCd=$rel_row["RelPkgPhotoRef"];
 					$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
 					$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
 					$url= "Release_Detail.php?model=".$rel_row["RelID"];
@@ -551,7 +556,7 @@ $Username=$_SESSION['Username'];
 						echo "<a class='thumb' href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 					}
 					if ($rel_row["RelPkgPhotoRef"]) {
-						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+						$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$RelPhotoRefCd%'");
 						$result2= mysql_query($query2);
 						$row2 =mysql_fetch_array($result2);
 						echo "<p class=\"photoref\">Photo by: ". $row2["RefName"]."</p>";
@@ -598,6 +603,7 @@ $Username=$_SESSION['Username'];
 						*/
 					
 						//print info
+						$RelPhotoRefCd=$rel_row["RelPkgPhotoRef"];
 						$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
 						$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
 						$url = "Release_Detail.php?model=" . $rel_row["RelID"];
@@ -607,7 +613,7 @@ $Username=$_SESSION['Username'];
 							echo "<a class='thumb' href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 						}
 						if ($rel_row["RelPkgPhotoRef"]) {
-							$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd%'");
+							$query2= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$RelPhotoRefCd%'");
 							$result2= mysql_query($query2);
 							$row2 =mysql_fetch_array($result2);
 							echo "<p class=\"photoref\">Photo by: " . $row2["RefName"]."</p>";
