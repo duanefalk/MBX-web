@@ -7,13 +7,14 @@
     $result = mysql_query($query);
     $row=mysql_fetch_array($result);
     echo $row["user_input_id"];
+    
     $new_input_id=$row["user_input_id"];
     echo $new_input_id++; 
     
     //add fields to db
-    $upload_user_name=$_POST['user_name'];
-    $upload_comment=$_POST['user_comment'];
-    $file_uploaded=0;				
+    $upload_user_name = $_POST['user_name'];
+    $upload_comment = $_POST['user_comment'];
+    $file_uploaded = 0;				
 
     //check if a file has been uploaded
     if ($_FILES['upload']['error'] != UPLOAD_ERR_NO_FILE) {
@@ -21,8 +22,8 @@
     //if (file_exists(UPLOAD_PATH.$_FILES['upload']['name']))   { 
     //if (!empty($_FILES)) {
 
-    // enter conditional logic
-            // echo "there is a file";
+    //enter conditional logic
+            //echo "there is a file";
             //exit;
             // check file size first
             if ($_FILES["upload"]["size"] < 5000000) {
@@ -55,20 +56,23 @@
                     exit;
             }
     }
-    $query="INSERT INTO MBXU_User_Uploads (
-    user_input_id, user_name, user_comment, user_file_loaded
-    ) VALUES (
-    '$new_input_id', '$upload_user_name', '$upload_comment', '$file_uploaded'
-    )";
+    $query="INSERT INTO MBXU_User_Uploads (user_input_id, user_name, user_comment, user_file_loaded) VALUES ('$new_input_id', '$upload_user_name', '$upload_comment', '$file_uploaded')";
     $outcome=mysql_query($query);
+    
     if ($outcome) {
-        mail("duanejfalk@yahoo.com,djf@duncanfalk.com,info@mbx-u.com","Upload sent","Check for latest user upload");
+	    //Mail inputs
+	    $emails = "info@mbx-u.com,duanejfalk@yahoo.com";
+	    $subject = "MBX-U: New Upload";
+	    $message = "There's a new upload from " . $upload_user_name . ". Comment: " . $upload_comment . ".";
+	    
+        mail($emails,$subject,$message);
+        
         redirect_to("User_Upload.php");
         exit;
-    } // success 
-     else {
-        echo "<p>Subject creation failed.</p>";
-        echo "<p>".mysql_error()."</p>";
+    } 
+	else {
+	    echo "<p>Subject creation failed.</p>";
+        echo "<p>Error: ".mysql_error()."</p>";
         exit;
-     }
-        ?>	
+	 }
+?>	
