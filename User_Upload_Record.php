@@ -63,7 +63,7 @@
 	    //Mail inputs
 	    $emails = "info@mbx-u.com,duanejfalk@yahoo.com";
 	    $subject = "MBX-U: New Upload";
-	    $message = "There's a new upload from " . $upload_user_name . ". Comment: " . $upload_comment . ".";
+	    $message = "There's a new upload from " . $upload_user_name . ".\r\nComment: " . $upload_comment . ".";
 	    
         mail($emails,$subject,$message);
         
