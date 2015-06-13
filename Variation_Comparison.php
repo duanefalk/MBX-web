@@ -174,6 +174,40 @@
 				echo "</td>";
 			//end row 6
 			
+			//Row 6b, Company
+			echo "<tr><td>Company</td>";			
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);
+			//check if all same value
+			$diff=0;
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				$check[$i]=$row["BaseCompany"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["BaseCompany"] ."</span>";
+					} 
+					else { 
+						echo $row["BaseCompany"]; }
+					}
+				echo "</td>";
+			//end row 6b
+			
+			
 			//Row 7, Front Wheel Photo
 			echo "<tr><td>Front Wheel</td>";			
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
