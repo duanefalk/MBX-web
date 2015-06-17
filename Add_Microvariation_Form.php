@@ -13,7 +13,7 @@
 			<textarea name="Microvariation" cols="45" rows="4" id="Microvariation"></textarea>
 			
 			<label for="Microvar_Updt_Dt">Update Date:</label>
-			<input type="text" name="Microvar_Updt_Dt" id="Microvar_Updt_Dt">
+			<input type="date" name="Microvar_Updt_Dt" id="Microvar_Updt_Dt">
 
 			<div class="row">
 				<div class="large-2 small-6 columns">
