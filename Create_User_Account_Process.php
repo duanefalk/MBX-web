@@ -72,7 +72,7 @@ session_start();
 	    
         mail($emails,$subject,$message);
         
-        $location="authenticate-test.php";
+        $location="Authenticate-test.php";
         redirect_to($location);
      } 
      else {
