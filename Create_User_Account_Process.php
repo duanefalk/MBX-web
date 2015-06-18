@@ -69,8 +69,9 @@ session_start();
 	    $emails = "info@mbx-u.com,duanejfalk@yahoo.com";
 	    $subject = "MBX-U: New Member!";
 	    $message = "We have a new member of Matchbox University named " . $First_Name . " " . $Last_Name . ".\r\nTheir email is " . $User_Email . ".";
+	    $headers = 'From:info@mbx-u.com' . "\r\n" . 'Reply-To:info@mbx-u.com';
 	    
-        mail($emails,$subject,$message);
+        mail($emails,$subject,$message,$headers);
         
         $location="Authenticate-test.php";
         redirect_to($location);
