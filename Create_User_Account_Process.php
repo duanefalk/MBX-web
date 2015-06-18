@@ -64,6 +64,14 @@ session_start();
     $outcome=mysql_query($query);
     if ($outcome) {
         // success 
+        
+        //Mail inputs
+	    $emails = "info@mbx-u.com,duanejfalk@yahoo.com";
+	    $subject = "MBX-U: New Member!";
+	    $message = "We have a new member of Matchbox University named " . $First_Name . " " . $Last_Name . ".\r\nTheir email is " . $User_Email . ".";
+	    
+        mail($emails,$subject,$message);
+        
         $location="authenticate-test.php";
         redirect_to($location);
      } 

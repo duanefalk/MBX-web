@@ -20,7 +20,7 @@
 					<input type="submit" class="button dark" name="submit" value="Submit"/>
 				</div>
 				<div class="large-2 small-6 columns end">
-					<a class="button dark cancel" href="Add_Microvariation.php">Cancel</a>
+					<a class="button dark cancel" href="Add_Microvariation_Form.php">Cancel</a>
 				</div>
 			</div>		
 		</form>	
