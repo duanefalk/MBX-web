@@ -1,7 +1,9 @@
 @import "settings";
 
 html,
-body {@include body; color:$black; background:lighten($cream,5%) url('../images/bgTexture.jpg') repeat;}
+body {@include body; color:$black; background:lighten($cream,5%) url('../images/bgTexture.jpg') repeat;
+	@media only screen and (max-width:480px) { font-size:14px; }
+}
 
 h1,h2,h3,h4,h5,h6 {@include headline; color:$black; line-height:115%;}
 

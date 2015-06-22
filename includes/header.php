@@ -67,7 +67,7 @@
 		
 		<?php if ($pageTitle == 'home') { ?>
 			<div class="row" id="banner">
-				<div class="large-7 columns" id="bannerText">
+				<div class="large-7 medium-6 columns" id="bannerText">
 					<div class="banner one">
 						<h2>What is the Matchbox University?</h2>
 						<p>The Matchbox University is an on-line database of Matchbox ‘miniatures’, from regular wheels models up through this year’s versions.</p>
@@ -99,7 +99,7 @@
 						<p><a href="About_photos.php" class="button">Links &amp; References</a></p>
 					</div>					
 				</div>
-				<div class="large-5 columns" id="bannerImage">
+				<div class="large-5 medium-6 columns" id="bannerImage">
 					<img src="images/banners/professor.png" />
 				</div>
 			</div>
