@@ -12,6 +12,21 @@
 		<div class="section">
 			<p class="date">June20, 2015</p>
 			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0192">Freeway Gas Tanker Trailer(SF0192)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0193">Mitsubishi Gallant^Eterna / Dodge Challenger (SF0193)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0194">Datsun 260Z 2+2 (SF0194)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0195">Armored Truck (SF0195)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0196">Mercury COugar Villager (SF0196)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0197">Plymouth Gran Fury Police (SF0197)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0198">Citroen CX Break (SF0198)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0199">Nissan Fairlady Z (SF0199)</a></li>
+			</ul>
+		</div>
+		
+		
+		<div class="section">
+			<p class="date">June20, 2015</p>
+			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0200">Lincoln Continental Mk V (SF0200)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0201">Mazda RX 7 (SF0201)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0202">Rolls-Royce Silver Shadow II (SF0202)</a></li>
