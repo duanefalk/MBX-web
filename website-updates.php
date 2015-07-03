@@ -10,6 +10,24 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">June20, 2015</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0200">Lincoln Continental Mk V (SF0200)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0201">Mazda RX 7 (SF0201)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0202">Rolls-Royce Silver Shadow II (SF0202)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0203">Pannier Tank Loco (SF0203)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0204">Ford Cortina Mk IV (SF0204)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0205">Mercedes 450 SEL (SF0205)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0206">Chevrolet Corvette (SF0206)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0207">Caterpillar D 9 Tractor (SF0207)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0208">Chevy Van (SF0208)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0209">Bomag Road Roller (SF0209)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0210">Model A Ford Car (SF0210)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0211">1957 Chevy (SF0211)</a></li>
+			</ul>
+		</div>
+		
+		<div class="section">
 			<p class="date">May 28, 2015</p>
 			<ul>
 				<li>2015 models to date have been entered! Code 1 models up through batch D, multi-packs, Jurassic World etc. Code 2/3's will come next week. Search releases with release year 2015 to see all.</li>
