@@ -139,47 +139,48 @@
 				$Variation_to_detail = $row2["VarID"];
 				$url = "Variation_Detail.php?model=".$Variation_to_detail;
 				
-				echo "<div class='row'>";
-					echo "<div class='large-4 columns'>";
-								
-					if (file_exists($picture1_loc)) {
-						//echo "picture exists";
-						echo "<a href=\"".$url."\"><img src=".$picture1." /></a>";
-					} else {
-						//echo "cant find picture";
-						//echo DEFAULT_IMAGE;
-						echo "<a href=\"".$url."\"><img src=".DEFAULT_IMAGE." /></a>";
-					}
-	
-					if (file_exists($picture2_loc)) {
-						//echo "picture exists";
-						echo "<a href=\"".$url."\"><img src=".$picture2." /></a>";
-					}
-					
-					echo "</div>";
-				echo "</div>";
-												
-				$PhotoRefCd1= $row2["VarPhoto1Ref"];
-				$PhotoRefCd2= $row2["VarPhoto2Ref"];
-					if ($PhotoRefCd1) {
-						$query2a= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
-						$result2a= mysql_query($query2a);
-						$row2a =mysql_fetch_array($result2a);
-						if ($PhotoRefCd2) {
-							$query2b= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
-							$result2b= mysql_query($query2b);
-							$row2b =mysql_fetch_array($result2b);
-							if ($row2b==$row2a) {
-								echo "<p class=\"photoref\">Photos by: ". $row2a["RefName"] . "</p>";
-							} ELSE {
-								echo "<p class=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"] . "</p>";
+				echo "<ul class='large-block-grid-3'>";
+					echo "<li class='carGrid'>";
+						
+						if (file_exists($picture1_loc)) {
+							//echo "picture exists";
+							echo "<a href=\"".$url."\"><img src=".$picture1." /></a>";
+						} else {
+							//echo "cant find picture";
+							//echo DEFAULT_IMAGE;
+							echo "<a href=\"".$url."\"><img src=".DEFAULT_IMAGE." /></a>";
+						}
+		
+						if (file_exists($picture2_loc)) {
+							//echo "picture exists";
+							echo "<a href=\"".$url."\"><img src=".$picture2." /></a>";
+						}
+							
+						$PhotoRefCd1= $row2["VarPhoto1Ref"];
+						$PhotoRefCd2= $row2["VarPhoto2Ref"];
+
+						if ($PhotoRefCd1) {
+							$query2a= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
+							$result2a= mysql_query($query2a);
+							$row2a =mysql_fetch_array($result2a);
+							if ($PhotoRefCd2) {
+								$query2b= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd2%'");
+								$result2b= mysql_query($query2b);
+								$row2b =mysql_fetch_array($result2b);
+								if ($row2b==$row2a) {
+									echo "<p class=\"photoref\">Photos by: ". $row2a["RefName"] . "</p>";
+								} else {
+									echo "<p class=\"photoref\">Photos by: ". $row2a["RefName"].", ".$row2b["RefName"] . "</p>";
+								}
+							} else {
+								echo "<p class=\"photoref\">Photo by: ". $row2a["RefName"] . "</p>";
 							}
 						} else {
-							echo "<p class=\"photoref\">Photo by: ". $row2a["RefName"] . "</p>";
+							echo "<p class=\"photoref\">Photo by: no reference listed</p>";
 						}
-					} else {
-						echo "<p class=\"photoref\">Photo by: no reference listed</p>";
-					}
+						
+					echo "</li>";
+				echo "</ul>";
 				
 				//look up release info
 				$result3=0;
