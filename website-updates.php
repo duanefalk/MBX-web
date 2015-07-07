@@ -10,7 +10,7 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
-			<p class="date">June20, 2015</p>
+			<p class="date">July 3, 2015</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0192">Freeway Gas Tanker Trailer(SF0192)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0193">Mitsubishi Gallant^Eterna / Dodge Challenger (SF0193)</a></li>
@@ -25,7 +25,7 @@
 		
 		
 		<div class="section">
-			<p class="date">June20, 2015</p>
+			<p class="date">June 20, 2015</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0200">Lincoln Continental Mk V (SF0200)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0201">Mazda RX 7 (SF0201)</a></li>
