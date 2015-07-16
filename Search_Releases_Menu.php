@@ -39,7 +39,7 @@
 
 <form name="SearchReleases" action="Search_Releases_Process.php" method="post" data-parsley-validate>
 <div class="row">
-	<div class="large-12 columns">
+	<div class="large-6 medium-6 columns">
 	
 		<h2 class="demoHeaders">Search by Package Info</h2>
 		<p>Choose one or more package identifiers to search with.</p>
@@ -75,7 +75,10 @@
 				</div>
 				</dd>
 			</dl>
-		</div>				
+		</div>
+		
+	</div>
+	<div class="large-6 medium-6 columns">	
 				
 		<h2 class="demoHeaders">Or Browse Release Data</h2>
 		<p>Choose one or more criteria to browse with. Please be sure your selection is sufficently specific to provide meaningful results (i.e. specifying only 'released in USA' will produce a list too large to be useful. Note: These criteria will be ignored if you've selected a search above.</p>
@@ -191,7 +194,7 @@
 							<?php
 								for ($i=1; $i<=$rows_count; $i++) {
 									$row=mysql_fetch_array($result);
-									echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+									echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
 								}	
 							?>
 						</select>		
@@ -200,6 +203,13 @@
 			</dl>						
 		
 		</div>
+	</div>
+	
+</div>
+
+<div class="row">
+	
+	<div class="large-12 columns">
 		
 		<input type="button" name="testcheckbox" class="button dark" id="testcheckbox" value="Check Query" onclick="onCheckQuery()">
 		

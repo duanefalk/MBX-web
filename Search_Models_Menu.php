@@ -9,9 +9,8 @@
 <form action="Search_Models_Process.php" method="post" data-parsley-validate>
 
 	<!-- Search Options -->
-	<div class="row">
-		
-		<div class="large-4 columns">				
+	<div class="row">		
+		<div class="large-4 medium-4 columns">				
 			<h3 class="demoHeaders">Choose the ID You Want to Search by</h3>
 			<p>Search will use only last data entered; if you get unexpected results, click on 'cancel' and retry:</p>
 						
@@ -71,7 +70,7 @@
 			</dl>
 		</div>
 	
-		<div class="large-4 columns">					
+		<div class="large-4 medium-4 columns">					
 			<h3 class="demoHeaders">Or Search by General Model Information</h3>
 			<p>(you may choose more than one of these criteria):</p>	
 			
@@ -172,7 +171,7 @@
 			</dl>
 		</div>
 			
-		<div class="large-4 columns">
+		<div class="large-4 medium-4 columns">
 			<h3 class="demoHeaders">Or Search by Text on the Model</h3>	
 			
 			<dl class="accordion" data-accordion>
