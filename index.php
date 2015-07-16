@@ -19,10 +19,10 @@
 			<form action="Search_Models_Process.php" method="post" data-parsley-validate>
 				<label for="Spec_MAN">MAN (FAB) # (i.e. '800'):</label>
 				<div class="row">
-					<div class="large-9 columns">
+					<div class="large-9 small-7 columns">
 						<input type="text" name="Spec_MAN" value="" id="Spec_MAN" data-parsley-type="integer" required>
 					</div>
-					<div class="large-3 columns">
+					<div class="large-3 small-5 columns">
 						<input type="submit" class="button" name="submit" value="Search"/>
 					</div>
 				</div>
