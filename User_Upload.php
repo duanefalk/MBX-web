@@ -6,7 +6,7 @@
 ?>
 
 <div class="row">
-	<div class="large-12">
+	<div class="large-12 columns">
 		<h2>Upload a File</h2>		
 
 		<form action="User_Upload_Record.php" method="post" enctype="multipart/form-data">

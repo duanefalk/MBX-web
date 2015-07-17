@@ -19,32 +19,52 @@
 		
 		<form action="Create_User_Account_Process.php" method="post" id="signupForm" data-parsley-validate>
 			
-			<div class="formRow">			
-				<label for="Username">Username*:</label>
-				<input type="text" name="Username" value="" maxlength="30" id="Username" required>
-			</div>
-			
-			<div class="formRow">
-				<label for="Password">Password*:</label>
-				<input type="password" name="Password" value="" maxlength="30" id="Password" required>
-			</div>
+			<div class="row">
+		        <div class="large-6 medium-6 columns">
+			        <div class="formRow">			
+						<label for="Username">Username*:</label>
+						<input type="text" name="Username" value="" maxlength="30" id="Username" required>
+					</div>
+		        </div>
+		        <div class="large-6 medium-6 columns">
+			        <div class="formRow">
+						<label for="Password">Password*:</label>
+						<input type="password" name="Password" value="" maxlength="30" id="Password" required>
+					</div>
+		        </div>
+	        </div>	
 		
 			<?php //$_SESSION['Sec_Lvl']=2; ?> 
 		
-			<div class="formRow">		
-				<label for="First_Name">First Name*:</label>
-				<input type="text" name="First_Name" value="" size="60" id="First_Name" data-parsley-type="alphanum" required>
-			</div>
-			
-			<div class="formRow">
-				<label for="Last_Name">Last Name*:</label>
-				<input type="text" name="Last_Name" value="" size="60" id="Last_Name" data-parsley-type="alphanum" required>
-			</div>
-			
-			<div class="formRow">
-				<label for="User_Email">Email*:</label>
-				<input type="email" name="User_Email" value="" size="60" id="User_Email" data-parsley-trigger="change" required>
-			</div>
+			<div class="row">
+		        <div class="large-6 medium-6 columns">
+			        <div class="formRow">		
+						<label for="First_Name">First Name*:</label>
+						<input type="text" name="First_Name" value="" size="60" id="First_Name" data-parsley-type="alphanum" required>
+					</div>
+		        </div>
+		        <div class="large-6 medium-6 columns">
+			        <div class="formRow">
+						<label for="Last_Name">Last Name*:</label>
+						<input type="text" name="Last_Name" value="" size="60" id="Last_Name" data-parsley-type="alphanum" required>
+					</div>
+		        </div>
+	        </div>
+	        
+	        <div class="row">
+		        <div class="large-6 medium-6 columns">
+			        <div class="formRow">
+						<label for="User_Email">Email*:</label>
+						<input type="email" name="User_Email" value="" size="60" id="User_Email" data-parsley-trigger="change" required>
+					</div>
+		        </div>
+		        <div class="large-6 medium-6 columns">
+			        <div class="formRow">
+						<label for="User_Phone">Phone:</label>
+						<input type="text" name="User_Phone" value="" size="20" id="User_Phone">
+					</div>
+		        </div>
+	        </div>
 			
 			<div class="formRow">
 				<label for="User_Url">Website URL:</label>
@@ -54,12 +74,7 @@
 			<div class="formRow">
 				<label for="User_Address">Address (if you'd like a unique Code 2 Model sent to you please enter your full address):</label>
 				<input type="text" name="User_Address" value="" size="60" id="User_Address">
-			</div>
-			
-			<div class="formRow">
-				<label for="User_Phone">Phone:</label>
-				<input type="text" name="User_Phone" value="" size="20" id="User_Phone">
-			</div>
+			</div>	
 			
 			<div class="formRow">
 				<label for="ddlAreasOfInterest">Areas of Interest (hold down ctrl or cmd key to choose as many as apply):</label>
@@ -98,17 +113,22 @@
 				<textarea name="User_Memberships" cols="45" rows="6" id="txtUser_Memberships"></textarea>
 			</div>	
 			
-			<div class="formRow">
-				<label for="">Preferred Scheme for Vehicle Condition <small>(alpha= MIB, Mint, Exc etc; num= 10, 9.5, 9 etc)</small></label>
-				<input type="radio" name="Veh_Cond_Scheme" id="Veh_Cond_Scheme1" value="0" checked> <label for="Veh_Cond_Scheme1">Alpha</label><br>
-				<input type="radio" name="Veh_Cond_Scheme" id="Veh_Cond_Scheme2" value="1"> <label for="Veh_Cond_Scheme2">Num</label><br>
-			</div>	
-		
-			<div class="formRow">
-				<label for="">Preferred Scheme for Pkg Condition <small>(as above)</small></label>
-				<input type="radio" name="Pkg_Cond_Scheme" id="Pkg_Cond_Scheme1" value="0" checked> <label for="Pkg_Cond_Scheme1">Alpha</label><br>
-				<input type="radio" name="Pkg_Cond_Scheme" id="Pkg_Cond_Scheme2" value="1"> <label for="Pkg_Cond_Scheme2">Num</label><br>
-			</div>
+			<div class="row">
+		        <div class="large-6 medium-6 columns">
+			        <div class="formRow">
+						<label for="">Preferred Scheme for Vehicle Condition <small>(alpha= MIB, Mint, Exc etc; num= 10, 9.5, 9 etc)</small></label>
+						<input type="radio" name="Veh_Cond_Scheme" id="Veh_Cond_Scheme1" value="0" checked> <label for="Veh_Cond_Scheme1">Alpha</label><br>
+						<input type="radio" name="Veh_Cond_Scheme" id="Veh_Cond_Scheme2" value="1"> <label for="Veh_Cond_Scheme2">Num</label><br>
+					</div>
+		        </div>
+		        <div class="large-6 medium-6 columns">
+			       	<div class="formRow">
+						<label for="">Preferred Scheme for Pkg Condition <small>(as above)</small></label>
+						<input type="radio" name="Pkg_Cond_Scheme" id="Pkg_Cond_Scheme1" value="0" checked> <label for="Pkg_Cond_Scheme1">Alpha</label><br>
+						<input type="radio" name="Pkg_Cond_Scheme" id="Pkg_Cond_Scheme2" value="1"> <label for="Pkg_Cond_Scheme2">Num</label><br>
+					</div>
+		        </div>
+	        </div>
 			
 			<div class="formRow">
 				<label for="">Code 2 Preference</label>

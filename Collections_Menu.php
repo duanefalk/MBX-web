@@ -23,13 +23,13 @@
 	
 		<h2>Manage Your Collections</h2>
 		<div class="row actionButtons">
-			<div class="large-4 columns">
+			<div class="large-4 medium-4 columns">
 				<a href="Manage_Collections.php" class="button dark">Create/Configure Your Collections</a>
 			</div>
-			<div class="large-4 columns">
+			<div class="large-4 medium-4 columns">
 		        <a href="Manage_Models_in_Collection.php" class="button dark">Manage Models in Your Collection</a>
 		    </div>
-		    <div class="large-4 columns">   
+		    <div class="large-4 medium-4 columns">   
 		        <a href="Collection_Reports.php" class="button dark">Collection Reports</a>
 		    </div>
 		</div>		

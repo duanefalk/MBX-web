@@ -45,10 +45,20 @@
 				
 			<?php $_SESSION['Sec_Lvl']=2; ?> 
 							
-			<div class="formRow">
-				<label for="User_Email" id="lblEmail">Email*:</label>
-				<input type="text" name="User_Email" value="<?php echo $row['User_Email']; ?>" size="60" id="User_Email" />
-			</div>
+			<div class="row">
+				<div class="large-6 medium-6 columns">
+					<div class="formRow">
+						<label for="User_Email">Email*:</label>
+						<input type="text" name="User_Email" value="<?php echo $row['User_Email']; ?>" size="60" id="User_Email" />
+					</div>
+				</div>
+				<div class="large-6 medium-6 columns">
+					<div class="formRow">
+						<label for="User_Phone">Phone</label>
+						<input type="text" name="User_Phone" value="<?php echo $row['User_Phone']; ?>" size="20" id="User_Phone" />
+					</div>
+				</div>
+			</div>	
 				
 			<div class="formRow">
 				<label for="User_Url" id="lblURL">Your website:</label>
@@ -59,23 +69,21 @@
 				<label for="User_Address" id="lblAddress">Address</label>
 				<input type="text" name="User_Address" value="<?php echo $row['User_Address']; ?>" size="60" id="User_Address" />
 			</div>
-				
-			<div class="formRow">
-				<label for="User_Phone" id="lblPhone">Phone</label>
-				<input type="text" name="User_Phone" value="<?php echo $row['User_Phone']; ?>" size="20" id="User_Phone" />
-			</div>
-				
 			
-					
-			<div class="formRow">
-				<label for="First_Name" id="First_Name">First Name</label>
-				<input type="text" name="First_Name" value="<?php echo $row['First_Name']; ?>" size="60" id="First_Name" />
-			</div>
-	
-			<div class="formRow">
-				<label for="Last_Name" id="Last_Name">Last Name</label>
-				<input type="text" name="Last_Name" value="<?php echo $row['Last_Name']; ?>" size="60" id="Last_Name" />
-			</div>			
+			<div class="row">
+				<div class="large-6 medium-6 columns">
+					<div class="formRow">
+						<label for="First_Name">First Name</label>
+						<input type="text" id="First_Name" name="First_Name" value="<?php echo $row['First_Name']; ?>" size="60" id="First_Name" />
+					</div>
+				</div>
+				<div class="large-6 medium-6 columns">
+					<div class="formRow">
+						<label for="Last_Name">Last Name</label>
+						<input type="text" id="Last_Name" name="Last_Name" value="<?php echo $row['Last_Name']; ?>" size="60" id="Last_Name" />
+					</div>	
+				</div>
+			</div>	
 				
 			<div class="formRow">
 				<label for="ddlInterests" id="lblInterests">Areas of Interest (hold down ctrl or cmd key to choose as many as apply); <?php if ($row['Areas_of_Interest']) { echo "you previously selected: ". $row['Areas_of_Interest'];}?></label>
@@ -124,40 +132,46 @@
 				<label for="txtClubs">Matchbox clubs you belong to:</label>
 				<textarea id="txtClubs" name="User_Memberships" value="<?php echo $row['User_Memberships']; ?>"cols="45" rows="4"></textarea>
 			</div>
-				
-			<div class="formRow">
-				<label for="">Preferred Scheme for Vehicle Condition <small>(alpha= MIB, Mint, Exc etc; num= 10, 9.5, 9 etc)</small></label>
-				<?php
-				if ($row['Veh_Cond_Scheme']==1) {
-					?>
-					<input type="radio" name="Veh_Cond_Scheme" value="0" id="scheme1" /><label for="scheme1">Alpha</label>
-					<input type="radio" name="Veh_Cond_Scheme" value="1" id="scheme2" checked/><label for="scheme2">Num</label>
-				<?php
-				} else {
-					?>
-					<input type="radio" name="Veh_Cond_Scheme" value="0" id="scheme1" checked/><label for="scheme1">Alpha</label>
-					<input type="radio" name="Veh_Cond_Scheme" value="1" id="scheme2" /><label for="scheme2">Num</label>
-					<?php
-				}
-				?>
-			</div>	
 			
-			<div class="formRow">
-				<label for="">Preferred Scheme for Pkg Condition <small>(as above)</small></label>
-				<?php
-				if ($row['Pkg_Cond_Scheme']==1) {
-					?>
-					<input type="radio" name="Pkg_Cond_Scheme" value="0" id="condition1" /><label for="condition1">Alpha</label>
-					<input type="radio" name="Pkg_Cond_Scheme" value="1" id="condition2" checked/><label for="condition2">Num</label>
-				<?php
-				} else {
-					?>
-					<input type="radio" name="Pkg_Cond_Scheme" value="0" id="condition1" checked/><label for="condition1">Alpha</label>
-					<input type="radio" name="Pkg_Cond_Scheme" value="1" id="condition2" /><label for="condition2">Num</label>
-					<?php
-				}
-				?>							
-			</div>
+			<div class="row">
+				<div class="large-6 medium-6 columns">
+					<div class="formRow">
+						<label for="">Preferred Scheme for Vehicle Condition <small>(alpha= MIB, Mint, Exc etc; num= 10, 9.5, 9 etc)</small></label>
+						<?php
+						if ($row['Veh_Cond_Scheme']==1) {
+							?>
+							<input type="radio" name="Veh_Cond_Scheme" value="0" id="scheme1" /><label for="scheme1">Alpha</label>
+							<input type="radio" name="Veh_Cond_Scheme" value="1" id="scheme2" checked/><label for="scheme2">Num</label>
+						<?php
+						} else {
+							?>
+							<input type="radio" name="Veh_Cond_Scheme" value="0" id="scheme1" checked/><label for="scheme1">Alpha</label>
+							<input type="radio" name="Veh_Cond_Scheme" value="1" id="scheme2" /><label for="scheme2">Num</label>
+							<?php
+						}
+						?>
+					</div>	
+				</div>
+				<div class="large-6 medium-6 columns">
+					<div class="formRow">
+						<label for="">Preferred Scheme for Pkg Condition <small>(as above)</small></label>
+						<?php
+						if ($row['Pkg_Cond_Scheme']==1) {
+							?>
+							<input type="radio" name="Pkg_Cond_Scheme" value="0" id="condition1" /><label for="condition1">Alpha</label>
+							<input type="radio" name="Pkg_Cond_Scheme" value="1" id="condition2" checked/><label for="condition2">Num</label>
+						<?php
+						} else {
+							?>
+							<input type="radio" name="Pkg_Cond_Scheme" value="0" id="condition1" checked/><label for="condition1">Alpha</label>
+							<input type="radio" name="Pkg_Cond_Scheme" value="1" id="condition2" /><label for="condition2">Num</label>
+							<?php
+						}
+						?>							
+					</div>
+				</div>
+			</div>	
+					
 				
 			<div class="formRow">
 				<label for="">Code 2 Preference</label>

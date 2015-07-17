@@ -61,12 +61,20 @@
         ?>
         
         <form method="post" name="frmLogin" id="frmLogin" data-parsley-validate>
-        	<div class="formRow">
-			    <input name="txtUserId" type="text" id="txtUserId" placeholder="User ID" required>
-			</div>
-			<div class="formRow">
-				<input name="txtPassword" type="password" id="txtPassword" placeholder="Password" required>
-			</div>
+	        <div class="row">
+		        <div class="large-6 medium-6 columns">
+			        <div class="formRow">
+				        <label for="txtUserId">Username</label>
+					    <input name="txtUserId" type="text" id="txtUserId" required>
+					</div>
+		        </div>
+		        <div class="large-6 medium-6 columns">
+			        <div class="formRow">
+				        <label for="txtPassword">Password</label>
+						<input name="txtPassword" type="password" id="txtPassword" required>
+					</div>
+		        </div>
+	        </div>       	
 			<div class="row">
 				<div class="large-12 large-centered columns">
 			    	<input class="button" type="submit" name="btnLogin" value="Login">
