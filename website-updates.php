@@ -10,6 +10,21 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">July 20, 2015</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0191">Ford Wreck Truck (SF0191)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0190">Combine Harvester (SF0190)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0188">Railway Passenger Coach (SF0188)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0187">0-4-0 Steam Loco (SF0187)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0186">Chevrolet Ambulance (SF0186)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0185">Field Gun (SF0185)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0184">Toyota Celica (SF0184)</a></li>
+			</ul>
+		</div>
+		
+		
+		
+		<div class="section">
 			<p class="date">July 3, 2015</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0192">Freeway Gas Tanker Trailer(SF0192)</a></li>
