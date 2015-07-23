@@ -76,13 +76,17 @@
 		        </div>
 	        </div>       	
 			<div class="row">
-				<div class="large-12 large-centered columns">
+				<div class="large-6 medium-6 small-6 columns">
 			    	<input class="button" type="submit" name="btnLogin" value="Login">
 			    </div>
+			    <!--div class="large-6 medium-6 small-6 columns">
+				    <a href="REPLACE" class="forgot">I forgot my password</a>
+				    <a href="REPLACE" class="forgot">I forgot my username</a>
+			    </div-->
 			</div>
         </form>
         
-        <a href="guest_login.php">Log in as Guest</a>
+        <!--a href="guest_login.php">Log in as Guest</a-->
 	</div>
 	
 </div>

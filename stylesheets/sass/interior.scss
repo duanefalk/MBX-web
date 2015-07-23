@@ -15,7 +15,7 @@ Variation Comparison
 
 -- */
 
-/* -- Main -- */
+/* -- MAIN -- */
 #main {padding-top:2em;
 	@media only screen and (max-width:480px){ padding-top:2em; font-size:90%; }
 	
@@ -94,10 +94,12 @@ body.home #header { margin-bottom:2em; padding-bottom:0; background:$orange url(
 			cursor:pointer;
 			margin:0; padding:1em 2em;
 			@include headline; color:$white;
-			background:$teal; border:none; border-radius:5px; box-shadow:0 none;
+			background:$teal; border:none; border-radius:5px; box-shadow:none;
 			
 			&:hover {background:$orange;}
 		}
+		input.button {width:100%;}
+		a.forgot {display:block; margin:.15em 0; padding:.5em; color:$brown; font-size:.8rem; border-bottom:.2em solid transparentize($brown,.85);}
 	}
 }
 /* -- end LOGIN ------------------ */
