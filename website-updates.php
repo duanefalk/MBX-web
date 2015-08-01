@@ -10,6 +10,22 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">July 31, 2015</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0189">Ford Tractor (SF0189)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0183">Flat Car with Container (SF0183)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0182">Diesel Shunter (SF0182)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0181">Renault 5 TL (SF0181)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0180">(GMC) Snorkel Fire Engine (SF0180)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0179">Ford Escort RS 2000 (SF0179)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0178">Porsche (930) Turbo (SF0178)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0177">Glider Transport (SF0177)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0176">Seasprite Helicopter (SF0176)</a></li>
+				
+			</ul>
+		</div>		
+		
+		<div class="section">
 			<p class="date">July 20, 2015</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0191">Ford Wreck Truck (SF0191)</a></li>
