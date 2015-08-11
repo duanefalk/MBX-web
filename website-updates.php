@@ -10,6 +10,18 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">August 11, 2015</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0175">Ford Transit (SF0175)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0174">Airport Coach (SF0174)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0173">Holden Pick-Up (SF0173)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0172">Faun Dump Truck (SF0172)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0171">CJ 6 Jeep (SF0171)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0170">Sambron Jacklift (SF0170)</a></li>
+			</ul>
+		</div>	
+		
+		<div class="section">
 			<p class="date">July 31, 2015</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0189">Ford Tractor (SF0189)</a></li>
@@ -20,8 +32,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0179">Ford Escort RS 2000 (SF0179)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0178">Porsche (930) Turbo (SF0178)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0177">Glider Transport (SF0177)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0176">Seasprite Helicopter (SF0176)</a></li>
-				
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0176">Seasprite Helicopter (SF0176)</a></li>			
 			</ul>
 		</div>		
 		
