@@ -2,11 +2,34 @@
 <?php require_once("includes/functions.php"); ?>
 <?php
 	$pageTitle = "Search Models";
-	include("includes/header.php"); 
+	include("includes/header.php");
+	session_start();
+?>
+
+<?php
+    if (isset($_POST['submit'])) {
+	$_SESSION['MAN_No_1']=$_POST['MAN_No_1'];
+	$_SESSION['MAN_No_2']=$_POST['MAN_No_2'];
+	$_SESSION['Mack_No']=$_POST['Mack_No'];
+	$_SESSION['QuickName']=$_POST['QuickName'];
+	$_SESSION['Name']=$_POST['Name'];
+	$_SESSION['UMID_1']=$_POST['UMID_1'];
+	$_SESSION['UMID_2']=$_POST['UMID_2'];
+	$_SESSION['VehicleType_Check']=$_POST['VehicleType_Check'];
+	$_SESSION['TypeofVehicle']=$_POST['TypeofVehicle'];
+	$_SESSION['VehicleMake_Check']=$_POST['VehicleMake_Check'];
+	$_SESSION['VehicleMake']=$_POST['VehicleMake'];
+	$_SESSION['MakeCountry_Check']=$_POST['MakeCountry_Check'];
+	$_SESSION['MakeCountry']=$_POST['MakeCountry'];
+	$_SESSION['TempaText']=$_POST['TempaText'];
+    
+	redirect_to("Search_Models_Process.php");
+    }
 ?>
 
 
-<form action="Search_Models_Process.php" method="post" data-parsley-validate>
+
+<form action="Search_Models_Menu.php" method="post" data-parsley-validate>
 
 	<!-- Search Options -->
 	<div class="row">		

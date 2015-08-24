@@ -5,7 +5,8 @@
 	$pageTitle = "Search Models";
 	include("includes/header.php");
 	
-	include("includes/functions.php"); 
+	include("includes/functions.php");
+	session_start();
 ?>
 
 
@@ -14,19 +15,22 @@
 		<h2>Matching Models</h2>
 	 
 		<?php
-			$VehicleType=$_POST['TypeofVehicle'];
-			$VehicleMake=$_POST['VehicleMake'];
-			$MakeCountry=$_POST['MakeCountry'];
-			$TempaText=$_POST['TempaText'];
+			if ($_POST['Spec_MAN']) {
+				$_SESSION['Spec_MAN']=$_POST['Spec_MAN'];
+			}
+			$VehicleType=$_SESSION['TypeofVehicle'];
+			$VehicleMake=$_SESSION['VehicleMake'];
+			$MakeCountry=$_SESSION['MakeCountry'];
+			$TempaText=$_SESSION['TempaText'];
 			
 			$Search_by_MAN="0";
 
-			if ((!$_POST['VehicleType_Check']) AND (!$_POST['VehicleMake_Check']) AND (!$_POST['MakeCountry_Check']) AND (!$_POST['TempaText'])) {	
+			if ((!$_SESSION['VehicleType_Check']) AND (!$_SESSION['VehicleMake_Check']) AND (!$_SESSION['MakeCountry_Check']) AND (!$_SESSION['TempaText'])) {	
 				
 				// Search by ID
-				if ($_POST[MAN_No_1]) {
-					$ID_Value1=$_POST[MAN_No_1];
-					if (!$_POST[MAN_No_2]) {
+				if ($_SESSION['MAN_No_1']) {
+					$ID_Value1=$_SESSION['MAN_No_1'];
+					if (!$_SESSION['MAN_No_2']) {
 						echo "Searching for MAN#: ". $ID_Value1 ."<br />";
 						//SELECT *
 						//FROM categories
@@ -39,7 +43,7 @@
 							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
 							 WHERE Matchbox_Versions.FAB_No='$ID_Value1'");
 						} else {
-						$ID_Value2=$_POST[MAN_No_2];
+						$ID_Value2=$_SESSION['MAN_No_2'];
 						echo "Searching for MAN#s: ". $ID_Value1 ." to ".$ID_Value2 . "<br />";
 						//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `FAB_No`>='$ID_Value1' AND `FAB_No`<='$ID_Value2')");
 						$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
@@ -48,8 +52,8 @@
 							 WHERE Matchbox_Versions.FAB_No>='$ID_Value1' AND Matchbox_Versions.FAB_No<='$ID_Value2'");
 					}
 				}
-				elseif ($_POST[Spec_MAN]) {
-					$ID_Value1=$_POST[Spec_MAN];
+				elseif ($_SESSION['Spec_MAN']) {
+					$ID_Value1=$_SESSION['Spec_MAN'];
 					$Search_by_MAN="1";
 					echo "Searching for specific MAN#: ". $ID_Value1 ."<br />";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `Master_Mack_No`='$ID_Value1')");
@@ -58,8 +62,8 @@
 							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
 							 WHERE Matchbox_Versions.FAB_No='$ID_Value1'");
 				}
-				elseif ($_POST[Mack_No]) {
-					$ID_Value1=mysql_real_escape_string($_POST[Mack_No]);
+				elseif ($_SESSION['Mack_No']) {
+					$ID_Value1=mysql_real_escape_string($_SESSION['Mack_No']);
 					echo "Searching for Mack #: ". $ID_Value1 ."<br />";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `Master_Mack_No`='$ID_Value1')");
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
@@ -67,8 +71,8 @@
 							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
 							 WHERE Matchbox_Versions.Master_Mack_No='$ID_Value1'");
 				}
-				elseif ($_POST[QuickName]) {
-					$ID_Value1=mysql_real_escape_string($_POST[QuickName]);
+				elseif ($_SESSION['QuickName']) {
+					$ID_Value1=mysql_real_escape_string($_SESSION['QuickName']);
 					echo "Searching for Version Name: ".$ID_Value1 ."<br />";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `TMatchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
@@ -76,8 +80,8 @@
 							 LEFT JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
 							 WHERE Matchbox_Versions.VerName LIKE '%$ID_Value1%'");	
 				}
-				elseif ($_POST[Name]) {
-					$ID_Value1=mysql_real_escape_string($_POST[Name]);
+				elseif ($_SESSION['Name']) {
+					$ID_Value1=mysql_real_escape_string($_SESSION['Name']);
 					echo "Searching for Any Name: ".$ID_Value1 ."<br />";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `Matchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
@@ -86,8 +90,8 @@
 							 LEFT JOIN Matchbox_Variations ON Matchbox_Models.UMID=Matchbox_Variations.UMID
 							 WHERE Matchbox_Models.MasterModelName LIKE '%$ID_Value1%' OR Matchbox_Versions.VerName LIKE '%$ID_Value1%' OR Matchbox_Variations.BaseName LIKE '%$ID_Value1%'");	
 				}
-				elseif ($_POST[UMID_1]) {
-					$ID_String1= strval($_POST[UMID_1]);
+				elseif ($_SESSION['UMID_1']) {
+					$ID_String1= strval($_SESSION['UMID_1']);
 					$ID_Len=strlen($ID_String1);
 					//check if LR number
 					if (substr($ID_String1,0,2)=="LR") {
@@ -139,12 +143,12 @@
 							$ID_String1=str_pad($ID_String1, 6,"SF", STR_PAD_LEFT);
 						}
 					}	
-					if (!$_POST[UMID_2]) {
+					if (!$_SESSION['UMID_2']) {
 						//if searching by 1 umid, skip the search results and go right to model detail page
 						$string_to_redirect="Models_Detail_and_Ver_Listing.php?model=".$ID_String1;	
 						redirect_to($string_to_redirect);
 					} else {	
-						$ID_String2= strval($_POST[UMID_2]);
+						$ID_String2= strval($_SESSION['UMID_2']);
 						$ID_Len=strlen($ID_String2);
 
 						if (substr($ID_String2,0,2)=="LR") {
@@ -207,14 +211,14 @@
 					echo "ERROR no type selected";
 					exit;
 				}
-			} elseif (!$_POST['TempaText']) {
+			} elseif (!$_SESSION['TempaText']) {
 				
 				// Search by Type criteria
 				$PrevModelCriteria="";
-				if ($_POST['VehicleType_Check']) {
+				if ($_SESSION['VehicleType_Check']) {
 					echo "<p>Searching for:</p>";
 					echo "<p>Vehicle Type= " . $VehicleType . "</p>";
-					$VehicleType=$_POST['TypeofVehicle'];
+					$VehicleType=$_SESSION['TypeofVehicle'];
 					$PrevModelCriteria="1";
 					//$query= "SELECT * FROM Matchbox_Models WHERE `VehicleType` LIKE '%$VehicleType%'  OR `VehicleType2` LIKE '%$VehicleType%'";
 					$query= "SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
@@ -223,10 +227,10 @@
 							 WHERE (Matchbox_Models.VehicleType LIKE '%$VehicleType%' OR Matchbox_Models.VehicleType2 LIKE '%$VehicleType%')";
 				
 				}
-				if ($_POST['VehicleMake_Check']) {
+				if ($_SESSION['VehicleMake_Check']) {
 					
 					echo "  Make= ".$VehicleMake."<br></>";
-					$VehicleMake=$_POST['VehicleMake'];
+					$VehicleMake=$_SESSION['VehicleMake'];
 					if ($PrevModelCriteria != "1") {
 					    //echo "only vehicle make";
 					    $PrevModelCriteria="1";
@@ -243,10 +247,10 @@
 					    //exit;
 					}
 				}
-				if ($_POST['MakeCountry_Check']) {
+				if ($_SESSION['MakeCountry_Check']) {
 					
 					echo "  Country of Make= ".$$MakeCountry."<br></>";
-					$MakeCountry=$_POST['MakeCountry'];
+					$MakeCountry=$_SESSION['MakeCountry'];
 					if (!$PrevModelCriteria) {
 						$PrevModelCriteria="1";
 						//$query= "SELECT * FROM Matchbox_Models WHERE `CountryofMake` LIKE '%$MakeCountry%'";
@@ -264,7 +268,7 @@
 			} else {
 				// if search by text on model		
 				//go to separate page to search and display model details of multiple umids at ver level
-				$TempaText=$_POST['TempaText'];
+				$TempaText=$_SESSION['TempaText'];
 				$string_to_redirect="Models_Found_List.php?tempatext=".$TempaText;
 				redirect_to($string_to_redirect);
 			}                   
