@@ -13,31 +13,31 @@
 	        
 	        //set variables for post data
 	
-	        $RelTheme=$_POST['ReleaseTheme'];
+	        $RelTheme=$_SESSION['ReleaseTheme'];
 	        
-		$RelSeries=$_POST['RelSeries'];
+		$RelSeries=$_SESSION['RelSeries'];
 			
-		$OrigSeriesID=$_POST['SeriesID'];
-	        $SeriesID=mysql_real_escape_string($_POST['SeriesID']);
+		$OrigSeriesID=$_SESSION['SeriesID'];
+	        $SeriesID=mysql_real_escape_string($_SESSION['SeriesID']);
 	        
-		$RelYr=$_POST['RelYr'];
+		$RelYr=$_SESSION['RelYr'];
 	        
-		$CountryOfSale=$_POST['CountryOfSale'];
+		$CountryOfSale=$_SESSION['CountryOfSale'];
 	        
-		$OrigPkgName= $_POST['PkgName'];
-		$PkgName=mysql_real_escape_string($_POST['PkgName']);
+		$OrigPkgName= $_SESSION['PkgName'];
+		$PkgName=mysql_real_escape_string($_SESSION['PkgName']);
 	        
-		$OrigMdlNameOnPkg=$_POST['MdlNameOnPkg'];
-		$MdlNameOnPkg=mysql_real_escape_string($_POST['MdlNameOnPkg']);
+		$OrigMdlNameOnPkg=$_SESSION['MdlNameOnPkg'];
+		$MdlNameOnPkg=mysql_real_escape_string($_SESSION['MdlNameOnPkg']);
 	        
-		$OrigPkgID=$_POST['PkgID'];
-		$PkgID=mysql_real_escape_string($_POST['PkgID']);
+		$OrigPkgID=$_SESSION['PkgID'];
+		$PkgID=mysql_real_escape_string($_SESSION['PkgID']);
 	        
 	        //check if search criteria selected
 	            
-	            if (($_POST['PkgName_Check']) OR ($_POST['MdlNameOnPkg_Check']) OR ($_POST['PkgID_Check'])) {
+	            if (($_SESSION['PkgName_Check']) OR ($_SESSION['MdlNameOnPkg_Check']) OR ($_SESSION['PkgID_Check'])) {
 	                //WORKS
-	                if ($_POST['PkgName_Check']) {
+	                if ($_SESSION['PkgName_Check']) {
 				echo "Pkg name is: ".$OrigPkgName."<br></> ";
 	                        $PrevRelCriteria="1";
 	                        $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
@@ -48,7 +48,7 @@
 	                        WHERE Matchbox_Releases.PkgName LIKE '%$PkgName%' OR Matchbox_Releases.Series LIKE '%$PkgName%' OR Matchbox_Releases.SubSeries LIKE '%$PkgName%'");
 	                }                       
 	                
-	                if ($_POST['MdlNameOnPkg_Check']) {
+	                if ($_SESSION['MdlNameOnPkg_Check']) {
 				echo "Model Name on Package is: ".$OrigMdlNameOnPkg."<br></> ";
 	                    if ($PrevRelCriteria != "1") {
 	                        $PrevRelCriteria="1";
@@ -67,7 +67,7 @@
 	                    }
 	                }
 	                
-	                if ($_POST['PkgID_Check']) {
+	                if ($_SESSION['PkgID_Check']) {
 				echo "Package ID is: ".$OrigPkgID."<br></> ";
 	                    if ($PrevRelCriteria != "1") {
 	                        $PrevRelCriteria="1";
@@ -89,9 +89,9 @@
 	                
 	            } else {
 	                //Browse criteria selected
-	                if (($_POST['ReleaseTheme_Check']) OR ($_POST['RelSeries_Check']) OR ($_POST['RelYr_Check']) OR ($_POST['SeriesID_Check']) OR ($_POST['CountryOfSale_Check'])) {
+	                if (($_SESSION['ReleaseTheme_Check']) OR ($_SESSION['RelSeries_Check']) OR ($_SESSION['RelYr_Check']) OR ($_SESSION['SeriesID_Check']) OR ($_SESSION['CountryOfSale_Check'])) {
 	
-	                    if ($_POST['ReleaseTheme_Check']) {
+	                    if ($_SESSION['ReleaseTheme_Check']) {
 	                        $PrevRelCriteria="1";
 	                        //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `Theme` LIKE '%$RelTheme%')");
 	                        $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
@@ -102,7 +102,7 @@
 	                        WHERE Matchbox_Releases.Theme  LIKE '%$RelTheme%'");
 	                    }                    
 	
-	                    if ($_POST['RelSeries_Check']) {
+	                    if ($_SESSION['RelSeries_Check']) {
 	                        if ($PrevRelCriteria != "1") {
 	                            $PrevRelCriteria="1";
 	                            //note diff in single quotes on table name between this and one that works below :
@@ -122,7 +122,7 @@
 	                        }
 	                    }
 	
-	                    if ($_POST['SeriesID_Check']) {
+	                    if ($_SESSION['SeriesID_Check']) {
 				echo "Series ID is: ".$OrigSeriesID."<br></> ";
 	                        if ($PrevRelCriteria != "1") {
 	                            $PrevRelCriteria="1";
@@ -141,7 +141,7 @@
 	                        }
 	                    }
 	
-	                    if ($_POST['RelYr_Check']) {
+	                    if ($_SESSION['RelYr_Check']) {
 	                        if ($PrevRelCriteria != "1") {
 	                            $PrevRelCriteria="1";
 	                            //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `RelYr` LIKE '%$RelYr%')");
@@ -159,7 +159,7 @@
 	                        }
 	                    }
 	
-	                    if ($_POST['CountryOfSale_Check']) {
+	                    if ($_SESSION['CountryOfSale_Check']) {
 	                        //echo "outer if";
 	                        if ($PrevRelCriteria != "1") {
 	                            //echo "inner if";

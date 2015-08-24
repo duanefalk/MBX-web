@@ -2,8 +2,40 @@
 <?php require_once("includes/functions.php"); ?>
 <?php 
 	$pageTitle = "Search Releases";
-	include("includes/header.php"); 
+	include("includes/header.php");
+	session_start();
 ?>
+
+
+<?php
+    if (isset($_POST['submit'])) {
+	$_SESSION['PkgName_Check']=$_POST['PkgName_Check'];
+	$_SESSION['PkgName']=$_POST['PkgName'];
+	$_SESSION['MdlNameOnPkg_Check']=$_POST['MdlNameOnPkg_Check'];
+	$_SESSION['MdlNameOnPkg']=$_POST['MdlNameOnPkg'];
+	$_SESSION['PkgID_Check']=$_POST['PkgID_Check'];
+	$_SESSION['PkgID']=$_POST['PkgID'];
+	
+	$_SESSION['ReleaseTheme_Check']=$_POST['ReleaseTheme_Check'];
+	$_SESSION['ReleaseTheme']=$_POST['ReleaseTheme'];
+	$_SESSION['RelSeries_Check']=$_POST['RelSeries_Check'];
+	$_SESSION['RelSeries']=$_POST['RelSeries'];
+	$_SESSION['SeriesID_Check']=$_POST['SeriesID_Check'];
+	$_SESSION['SeriesID']=$_POST['SeriesID'];
+	$_SESSION['RelYr_Check']=$_POST['RelYr_Check'];
+	$_SESSION['RelYr']=$_POST['RelYr'];
+	$_SESSION['CountryOfSale_Check']=$_POST['CountryOfSale_Check'];
+	$_SESSION['CountryOfSale']=$_POST['CountryOfSale'];
+    
+	redirect_to("Search_Releases_Process.php");
+    }
+?>
+
+
+
+
+
+
 
 <head>
 	<script>
@@ -37,7 +69,7 @@
 	</script>
 </head>
 
-<form name="SearchReleases" action="Search_Releases_Process.php" method="post" data-parsley-validate>
+<form name="SearchReleases" action="Search_Releases_Menu.php" method="post" data-parsley-validate>
 <div class="row">
 	<div class="large-6 medium-6 columns">
 	
