@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 	
 	// ---- LOCAL SITE WARNING ---------------------------------------- //
-	if (window.location.href.indexOf("localhost") > -1) {
+	if (window.location.href.indexOf("localhost") > -1 || window.location.href.indexOf("dev") > -1) {
 	    $('#warningLocal').css("display","block");
 	}
 	
