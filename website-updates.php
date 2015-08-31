@@ -10,6 +10,23 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">August 28, 2015</p>
+			<ul>
+				<li>Fix: Corrected a problem with the back arrow on many browsers. Previously if you did a search, then drilled down on a model, then pressed the back arrow you would get a brower error rather than return to the search results. That has been fixed and you will now be returned to the search results page.</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0169">Mercedes Container Truck (SF0169)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0168">Bedford Horse Box (SF0168)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0166">Caravan (SF0166)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0163">S.P. Gun (SF0163)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0162">Fire Chief (SF0162)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0161">Personel Carrier (SF0161)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0160">Police Launch (SF0160)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0159">Crane Truck (SF0159)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0155">Swamp Rat (SF0155)</a></li>
+			</ul>
+		</div>	
+		
+		
+		<div class="section">
 			<p class="date">August 11, 2015</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0175">Ford Transit (SF0175)</a></li>
