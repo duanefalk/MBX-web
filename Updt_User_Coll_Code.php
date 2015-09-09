@@ -11,22 +11,24 @@ session_start();
 
 <?php
     if (isset($_POST['var_submit'])) {
-	$CollCode=$_POST['Coll_Code'];
+		$CollCode=$_POST['Coll_Code'];
         $User=$_SESSION['Username'];
 
-	$result=0;
-	$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Val_InactivFlg=\"0\"");								
-	$result=mysql_query($query);
-	if ($result) {
-	    $rows=mysql_num_rows($result);
-	    if ($rows > 0) {
-		$location="Updt_User_Coll_Code_Process.php?code=".$CollCode;
-		//echo "ready to go";	
-		redirect_to($location);
-	    } else {
-		echo "<p>You have no codes for your collection</p>";
-	    }
-	}
+		$result=0;
+		$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Val_InactivFlg=\"0\"");								
+		$result=mysql_query($query);
+
+		if ($result) {
+		    $rows=mysql_num_rows($result);
+		    
+		    if ($rows > 0) {
+				$location="Updt_User_Coll_Code_Process.php?code=".$CollCode;
+				//echo "ready to go";	
+				redirect_to($location);
+		    } else {
+				echo "<p>You have no codes for your collection</p>";
+		    }
+		}
 
     } else { ?>
 

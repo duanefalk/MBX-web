@@ -11,10 +11,7 @@
 <section class="row">
 	<div class="large-12 columns">
 		<h2>Create/Configure Your Collections</h2>
-		<p>Currently each user can have only one collection. 'Create/View/Update' below will either allow to create a collection if you don't have one, or show you the collection you already have.</p>
-	
-		<div class="row actionButtons">
-			
+		<div class="row actionButtons">			
 			<?php
 			    $User=$_SESSION['Username'];
 			    $result=0;
@@ -36,7 +33,7 @@
 						    <?php $Coll_ID = $row['User_Coll_ID']; ?>
 						    
 						    <div class="large-6 medium-6 columns">   
-						        <a href="Updt_Coll.php" class="button dark">View/Update/Delete Your <?php echo $Coll_ID; ?> Collection</a>
+						        <a href="Updt_Coll.php" class="button dark">View / Update / Delete Your <strong><em><?php echo $Coll_ID; ?></em></strong> Collection</a>
 						    </div> 
 					    <?php }
 					} else { ?>
@@ -52,6 +49,7 @@
 		    	<a href="Collection_Code_Lists.php" class="button dark">Set up Collection Code Lists</a>
 		    </div>
 		</div>
+		<p><em>*Currently each user can have only one collection.</em></p>
 	</div>
 </section>
 
