@@ -12,8 +12,8 @@ session_start();
 <?php
     $User=$_SESSION['Username'];
     if (isset($_POST['var_submit'])) {
-<<<<<<< Updated upstream
-		$CollCode=$_POST['Coll_Code'];
+
+	$CollCode=$_POST['Coll_Code'];
         $User=$_SESSION['Username'];
 
 		$result=0;
@@ -31,7 +31,7 @@ session_start();
 				echo "<p>You have no codes for your collection</p>";
 		    }
 		}
-=======
+
 	$CollCode=$_POST['Coll_Code'];
        
 
@@ -52,7 +52,7 @@ session_start();
 		echo "<p>You have no codes for your collection</p>";
 	    }
 	}
->>>>>>> Stashed changes
+
 
     } else { ?>
 	<h2>Update/Delete Seller or Location Codes</h2>
