@@ -17,60 +17,58 @@ session_start();
    
         $outcome=mysql_query($query);
         if ($outcome) {
-        //if ((mysql_query($query)) == true)
-
-	    redirect_to("Manage_Collections.php");
+        	//if ((mysql_query($query)) == true)
+			redirect_to("Manage_Collections.php");
         } else {
             echo "<p>Deletion failed. Please review entries.</p>";
             echo "<p>".mysql_error()."</p>";
             //drop down to form again
         }   
     }
-//if post not set do initial form 
+	//if post not set do initial form 
 ?>
 
-<table id="structure">
-<tr>
-
-	<td id="page">
-
+<div class="row">
+	<div class="large-12 columns">
 		<h2>Delete Seller or Location Code</h2>
-		<br />
 
 		<?php
-                    $Code_to_Updt=$_GET["code"];
-                    $User=$_SESSION['Username'];
+			$Code_to_Updt=$_GET["code"];
+            $User=$_SESSION['Username'];
 
 		    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Value='$Code_to_Updt'");								
 		    $result=0;
 		    $result=mysql_query($query);
+		   
 		    if (mysql_num_rows($result) != 0) {
-			$row=mysql_fetch_array($result);
-		    } ELSE {
+				$row=mysql_fetch_array($result);
+		    } else {
 		        echo "Database problem- please email info@MBX-u.com";
 		    }                   
-                ?>
+		?>
 
 		<form name="Del_Coll_Code" action="Del_Coll_Code.php" method="post">
 		    <?php  
-                        echo "<br />";
-			echo "Username: ".$User."<br />";
-			echo "User Collection Name: ".$row["User_Coll_ID"]."<br />";
-			echo "Code to Delete: ".$Code_to_Updt."<br />";
-			echo "Code Type: ".$row["Coll_List_Type"]."<br />";
-			echo "Code Display Order: ".$row["Coll_List_Val_DisplOrd"]."<br />";
-                    ?>
+            	echo "<p><strong>Username:</strong> ".$User."</p>";
+				echo "<p><strong>User Collection Name:</strong> ".$row["User_Coll_ID"]."</p>";
+				echo "<p><strong>Code to Delete:</strong> ".$Code_to_Updt."</p>";
+				echo "<p><strong>Code Type:</strong> ".$row["Coll_List_Type"]."</p>";
+				echo "<p><strong>Code Display Order:</strong> ".$row["Coll_List_Val_DisplOrd"]."</p>";
+            ?>
 		    
 		    <input type="hidden" name="Code_to_Updt" value="<?php echo $Code_to_Updt;?>" id="Code_to_Updt">
-                    <input type="submit" name="del_submit" class="button dark" value="DELETE?" id="del_submit"/>
-        	</form>
-                <?php
-		    $url2= "Collection_Code_Lists.php";
-		    echo "<a href=\"".$url2."\">Cancel</a>";
-		?>
-            </td>
-	</tr>
-</table>
+            <div class="row">
+	            <div class="large-3 columns">
+		            <input type="submit" name="del_submit" class="button dark" value="DELETE?" id="del_submit"/>
+	            </div>
+	            <div class="large-3 columns end">
+		            <a class="button dark cancel" href="Collection_Code_Lists.php">Cancel</a>
+	            </div>
+            </div>
+    	</form>
+        
+	</div>
+</div>
 
 <!-- Sub Menu -->
 <div class="row" id="subNav">

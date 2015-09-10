@@ -13,38 +13,39 @@ session_start();
 
 <?php
     if (isset($_POST['var_coll_code_submit'])) {
-
-        //Fields:
-        //Username
-	//User_Coll_ID
-	//Coll_List_Type
-	//Coll_List_Value
-	//Coll_List_Val_DisplOrd
-	//Coll_List_Val_InactivFlg
-        //$User_CollID=$_POST['User_CollID'];
-	$User=$_SESSION['Username'];
-        $Code_to_Updt=$_POST['Code_to_Updt'];
-	$Code_Type=$_POST['Coll_List_Type'];
-	$Code_Order=$_POST['Coll_List_Val_DisplOrd'];
-	//no need to change inactivflg
-
-	//update record, omit copy, username, coll id, inactivflg since they dont change        
-        $query=("UPDATE Matchbox_User_Coll_Value_Lists SET Coll_List_Type='$Code_Type', Coll_List_Val_DisplOrd='$Code_Order' WHERE (Username='$User' AND Coll_List_Value LIKE '%$Code_to_Updt%')");
-   
-        $outcome=mysql_query($query);
-        if ($outcome) {
-        //if ((mysql_query($query)) == true)
-	    redirect_to("Updt_User_Coll_Code.php");
-        } else {
-            echo "<p>Subject creation failed. Please review entries.</p>";
-            echo "<p>".mysql_error()."</p>";
-            //drop down to form again
-        }   
+		//Fields:
+		//Username
+		//User_Coll_ID
+		//Coll_List_Type
+		//Coll_List_Value
+		//Coll_List_Val_DisplOrd
+		//Coll_List_Val_InactivFlg
+	    //$User_CollID=$_POST['User_CollID'];
+	
+		$User=$_SESSION['Username'];
+	    $Code_to_Updt=$_POST['Code_to_Updt'];
+		$Code_Type=$_POST['Coll_List_Type'];
+		$Code_Order=$_POST['Coll_List_Val_DisplOrd'];
+		//no need to change inactivflg
+	
+		//update record, omit copy, username, coll id, inactivflg since they dont change        
+	    $query=("UPDATE Matchbox_User_Coll_Value_Lists SET Coll_List_Type='$Code_Type', Coll_List_Val_DisplOrd='$Code_Order' WHERE (Username='$User' AND Coll_List_Value LIKE '%$Code_to_Updt%')");
+	   
+	    $outcome=mysql_query($query);
+	
+	    if ($outcome) {
+	        //if ((mysql_query($query)) == true)
+		    redirect_to("Updt_User_Coll_Code.php");
+	    } else {
+	        echo "<p>Subject creation failed. Please review entries.</p>";
+	        echo "<p>".mysql_error()."</p>";
+	        //drop down to form again
+	    }   
     } else {
 	//if post not set do initial form 
 ?>
 
-	<h2>Update/Delete Seller or Location Codes</h2>
+	<h2>Update / Delete Seller or Location Codes</h2>
 	
 	<?php
 		$User=$_SESSION['Username'];
@@ -69,7 +70,7 @@ session_start();
 	<form name="Updt_User_Coll_Code_Process" action="Updt_User_Coll_Code_Process.php" method="post" data-parsley-validate>
 	    <?php  
         	echo "<p><strong>Username:</strong> ".$User."</p>";
-			echo "<p><strong>Code to Updt/delete:</strong> ".$Code_to_Updt."</p>";
+			echo "<p><strong>Code to Update / Delete:</strong> ".$Code_to_Updt."</p>";
 		?>
 	    
 	    <input type="hidden" name="Code_to_Updt" value="<?php echo $Code_to_Updt;?>" id="Code_to_Updt">
@@ -88,16 +89,20 @@ session_start();
 		    <input type="text" name="Coll_List_Val_DisplOrd" id="Coll_List_Val_DisplOrd" value="<?php echo $row["Coll_List_Val_DisplOrd"];?>" size="4" id="Coll_List_Val_DisplOrd" data-parsley-type="integer">
 	    </div>
 	    
-		<input type="submit" name="var_coll_code_submit" class="button dark" value="Update" id="var_coll_code_submit"/>
+	    <div class="row">
+		    <div class="large-3 columns">
+			    <input type="submit" name="var_coll_code_submit" class="button dark" value="Update" id="var_coll_code_submit"/>
+		    </div>
+		    <div class="large-3 columns">
+			    <a class="button dark" href="Del_Coll_Code.php?code=<?php echo $Code_to_Updt; ?>"><strong>DELETE</strong> this Code</a>
+		    </div>
+		    <div class="large-3 columns end">
+				<a class="button dark cancel" href="Updt_User_Coll_Code.php">Cancel</a>
+		    </div>
+	    </div>
     </form>
     
-    <?php
-	    $url1= "Del_Coll_Code.php?code=".$Code_to_Updt;
-	    echo "<a href=\"".$url1."\">DELETE THIS CODE</a>";
-	    echo "<br></><br></>";
-	    $url2= "Updt_User_Coll_Code.php";
-	    echo "<a href=\"".$url2."\">Cancel</a>";
-	?>
+    
 <?php } ?>
 
 	</div>
