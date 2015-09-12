@@ -10,6 +10,21 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">September 11, 2015</p>
+			<ul>
+				<li>Added feature: The 'Update/Delete Codes' function for collection locatiom and seller codes, now shows you all of the codes you have in the database before you enter one for editing or deletion. We are working on adding checkboxes that lets you directly select one from the list to edit- stay tuned.</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0167">Honda 750 Police Motorcycle (SF0167)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0165">Bedford Car Transporter (SF0165)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0164">Dodge Cattle Truck (SF0164)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0158">BMW 3.0 CSL (SF0158)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0156">Skip Truck (SF0156)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0149">Dodge Challenger (SF0149)</a></li>
+
+			</ul>
+		</div>	
+		
+		
+		<div class="section">
 			<p class="date">August 28, 2015</p>
 			<ul>
 				<li>Fix: Corrected a problem with the back arrow on many browsers. Previously if you did a search, then drilled down on a model, then pressed the back arrow you would get a brower error rather than return to the search results. That has been fixed and you will now be returned to the search results page.</li>
