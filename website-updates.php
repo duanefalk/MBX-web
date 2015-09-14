@@ -5,25 +5,21 @@
 ?>
 
 <div class="row">
-	<div class="large-12 columns">
+	<div class="large-9 columns">
 	
 		<h2>Latest Website Updates</h2>
-
 		<div class="section">
 			<p class="date">September 11, 2015</p>
 			<ul>
-				<li>Added feature: The 'Update/Delete Codes' function for collection locatiom and seller codes, now shows you all of the codes you have in the database before you enter one for editing or deletion. We are working on adding checkboxes that lets you directly select one from the list to edit- stay tuned.</li>
+				<li>Added feature: The <strong>Update / Delete Codes</strong> function for your collection's location and seller codes now shows you all of the codes you have in the database before you enter one for editing or deletion. We are working on adding checkboxes that lets you select directly from the list to edit - stay tuned.</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0167">Honda 750 Police Motorcycle (SF0167)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0165">Bedford Car Transporter (SF0165)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0164">Dodge Cattle Truck (SF0164)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0158">BMW 3.0 CSL (SF0158)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0156">Skip Truck (SF0156)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0149">Dodge Challenger (SF0149)</a></li>
-
 			</ul>
-		</div>	
-		
-		
+		</div>		
 		<div class="section">
 			<p class="date">August 28, 2015</p>
 			<ul>
@@ -38,9 +34,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0159">Crane Truck (SF0159)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0155">Swamp Rat (SF0155)</a></li>
 			</ul>
-		</div>	
-		
-		
+		</div>
 		<div class="section">
 			<p class="date">August 11, 2015</p>
 			<ul>
@@ -51,8 +45,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0171">CJ 6 Jeep (SF0171)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0170">Sambron Jacklift (SF0170)</a></li>
 			</ul>
-		</div>	
-		
+		</div>		
 		<div class="section">
 			<p class="date">July 31, 2015</p>
 			<ul>
@@ -66,8 +59,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0177">Glider Transport (SF0177)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0176">Seasprite Helicopter (SF0176)</a></li>			
 			</ul>
-		</div>		
-		
+		</div>	
 		<div class="section">
 			<p class="date">July 20, 2015</p>
 			<ul>
@@ -79,10 +71,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0185">Field Gun (SF0185)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0184">Toyota Celica (SF0184)</a></li>
 			</ul>
-		</div>
-		
-		
-		
+		</div>	
 		<div class="section">
 			<p class="date">July 3, 2015</p>
 			<ul>
@@ -95,9 +84,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0198">Citroen CX Break (SF0198)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0199">Nissan Fairlady Z (SF0199)</a></li>
 			</ul>
-		</div>
-		
-		
+		</div>		
 		<div class="section">
 			<p class="date">June 20, 2015</p>
 			<ul>
@@ -114,8 +101,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0210">Model A Ford Car (SF0210)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0211">1957 Chevy (SF0211)</a></li>
 			</ul>
-		</div>
-		
+		</div>		
 		<div class="section">
 			<p class="date">May 28, 2015</p>
 			<ul>
@@ -123,9 +109,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0213">Ford Refuse Truck (SF0213)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0212">Pontiac Firebird (SF0212)</a></li>
 			</ul>
-		</div>	
-
-			
+		</div>		
 		<div class="section">
 			<p class="date">May 18, 2015</p>
 			<ul>
@@ -136,8 +120,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0215">articulated Truck Trailer (SF0215)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0214">LFord Camper (SF0214)</a></li>
 			</ul>
-		</div>		
-			
+		</div>			
 		<div class="section">
 			<p class="date">May 08, 2015</p>
 			<ul>
@@ -152,8 +135,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0227">Atlas Excavator (SF0227)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0228">Chevy Pro Stocker (SF0228)</a></li>
 			</ul>
-		</div>	
-			
+		</div>			
 		<div class="section">
 			<p class="date">May 02, 2015</p>
 			<ul>
@@ -170,8 +152,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0233">Dodge Challenger (SF0233)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0234">4x4 Jeep (SF0234)</a></li>
 			</ul>
-		</div>
-		
+		</div>		
 		<div class="section">
 			<p class="date">April 22, 2015</p>
 			<ul>
@@ -186,8 +167,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0239">Leyland Artic. Tanker (SF0239)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0240">Leyland Titan London Bus (SF0240)</a></li>
 			</ul>
-		</div>
-		
+		</div>		
 		<div class="section">
 			<p class="date">April 2, 2015</p>
 			<ul>
@@ -196,21 +176,13 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0243">Audi Quattro (SF0243)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0244">Volvo trucks (cable truck, zoo truck, container truck) (SF0244)</a></li>
 			</ul>
-		</div>
-		
-		<!--div class="section">
-			<p class="date">April 2, 2015</p>
-			<ul>
-				<li>Added Status Update function</li>
-				<li>Fixed 'Create Account': on successful account creation it sends you directly to login page (fixes the 'Hello ___' problem in header)</li>
-				<li>Fixed 'Edit Account' to show previous field entries</li>
-				<li>New Model: Ford Mini Pickup (SF0242)</li>
-				<li>New Model: Audi Quattro (SF0243)</li>
-				<li>New Model: Volvo trucks (cable truck, zoo truck, container truck) (SF0244)</li>
-			</ul>
-		</div-->
-						
+		</div>						
 	</div>
+	<aside class="large-3 columns">
+		<h4>Would you rather <em>we</em> bring these updates to <em>you</em>?</h4>
+		<p>Matchbox University's twitter account can keep you up-to-date on the latest releases and website upgrades.</p>
+		<a href="https://twitter.com/matchboxu" target="_blank" class="button">Follow Matchbox University on Twitter</a>
+	</aside>
 </div>
 
 <!-- Sub Menu -->

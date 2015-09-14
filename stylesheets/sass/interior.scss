@@ -116,6 +116,11 @@ body.website_updates {
 		p.date {margin-bottom:.5em; text-transform:uppercase; font-size:.8rem; color:$orange; border-bottom:2px solid $orange;}
 		ul {margin-bottom:0;}
 	}
+	aside {padding:1em 1.5em; color:$white; background:$teal; border-radius:10px;
+		h4 {color:$white;}
+		p {color:$white;}
+		.button {background:$orange;}
+	}
 }
 /* -- end WEBSITE UPDATES -------- */
 
