@@ -9,3 +9,5 @@ phpinfo.php
 user_uploads/
 
 .sass-cache
+
+stylesheets/sass/
