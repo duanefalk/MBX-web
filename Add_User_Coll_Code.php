@@ -24,7 +24,7 @@ session_start();
 		
 		       
 		        $query="INSERT INTO Matchbox_User_Coll_Value_Lists (Username, User_Coll_ID, Coll_List_Type, Coll_List_Value, Coll_List_Val_DisplOrd, Coll_List_Val_InactivFlg) 
-		            VALUES ('$Username','$User_Coll_ID','$UserCollValType', '  $UserCollValue', '$UserCollValueDisplOrd', '$Coll_List_Val_InactivFlg')";
+		            VALUES ('$Username','$User_Coll_ID','$UserCollValType','$UserCollValue','$UserCollValueDisplOrd','$Coll_List_Val_InactivFlg')";
 		   
 		        $outcome=mysql_query($query);
 		        if (!$outcome) {

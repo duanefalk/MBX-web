@@ -60,7 +60,7 @@ session_start();
 			<td>Sort Order</td>
 		</thead>
 		<?php 
-			$result2=mysql_query("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' ORDER BY Coll_List_Type, Coll_List_Val_DisplOrd ASC");
+			$result2=mysql_query("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Val_InactivFlg=\"0\" ORDER BY Coll_List_Type, Coll_List_Val_DisplOrd ASC");
 					
 			if ($result2) {
 			    $rows_count2=mysql_num_rows($result2);
@@ -99,7 +99,7 @@ session_start();
 	    <div class="formRow">
 			<p>Select the Seller or Location Code to Update / Delete:</p>
 			<?php 
-				$result3 = mysql_query("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' ORDER BY Coll_List_Type, Coll_List_Val_DisplOrd ASC");
+				$result3 = mysql_query("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Val_InactivFlg=\"0\" ORDER BY Coll_List_Type, Coll_List_Val_DisplOrd ASC");
 							
 				if ($result3) {
 				    $rows_count3 = mysql_num_rows($result3);
