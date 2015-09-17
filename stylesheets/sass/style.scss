@@ -161,6 +161,10 @@ form {
 .formRow {margin-bottom:1em; padding-bottom:.5em; border-bottom:.2em solid transparentize($brown,.85);
 	textarea {resize:none; max-width:100%; min-height:100px;}
 }
+.radio {display:block; margin-bottom:1em;
+	input[type="radio"] {margin:0 1em 0 0;}
+}
+
 
 /* -- Accordions -- */
 dl.accordion { margin:0 auto 1em; @include body;
@@ -168,6 +172,7 @@ dl.accordion { margin:0 auto 1em; @include body;
 		&:hover {background:lighten($teal,5%); }
 	}
 }
+
 
 /* -- Car Grids -- */
 .carGrid { margin:1em 0; font-size:80%;

@@ -59,33 +59,56 @@ session_start();
 			<td>Value</td>
 			<td>Sort Order</td>
 		</thead>
-			
-	
-	<?php 
-		$result2=mysql_query("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' ORDER BY Coll_List_Type, Coll_List_Val_DisplOrd ASC");
-				
-		if ($result2) {
-		    $rows_count2=mysql_num_rows($result2);
-		    for ($i=1; $i<=$rows_count2; $i++) {
-		        echo "<tr>";
-		        	$row2=mysql_fetch_array($result2);
-					echo "<td>" . $row2['Coll_List_Type'] . "</td>";
-					echo "<td>" . $row2['Coll_List_Value'] . "</td>";
-					echo "<td>" . $row2['Coll_List_Val_DisplOrd'] . "</td>";
-				echo "</tr>";
-		    }
-		} else {
-		    echo "<tr><td>No codes defined</td></tr>";
-		}
-				
-		echo "</table>";
-	?>    
+		<?php 
+			$result2=mysql_query("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' ORDER BY Coll_List_Type, Coll_List_Val_DisplOrd ASC");
+					
+			if ($result2) {
+			    $rows_count2=mysql_num_rows($result2);
+			    for ($i=1; $i<=$rows_count2; $i++) {
+			        echo "<tr>";
+			        	$row2=mysql_fetch_array($result2);
+						echo "<td>" . $row2['Coll_List_Type'] . "</td>";
+						echo "<td>" . $row2['Coll_List_Value'] . "</td>";
+						echo "<td>" . $row2['Coll_List_Val_DisplOrd'] . "</td>";
+					echo "</tr>";
+			    }
+			} else {
+			    echo "<tr><td>No codes defined</td></tr>";
+			}
+		?>   
+	</table>
 
 		
-	<form name="Updt_User_Coll_Code" action="Updt_User_Coll_Code.php" method="post" data-parsley-validate>
+	<!--form name="Updt_User_Coll_Code" action="Updt_User_Coll_Code.php" method="post" data-parsley-validate>
 	    <div class="formRow">
 			<label for="Coll_Code">Enter Seller or Location Code to Update/Delete:</label>
-			<input type="text" name="Coll_Code" value="" size="60" id="Coll_Code"  required>
+			<input type="text" name="Coll_Code" value="" size="60" id="Coll_Code" required>
+	    </div>
+			
+	    <div class="row">
+			<div class="large-2 small-6 columns">
+			    <input type="submit" value="Submit" class="button dark" id="var_submit" name="var_submit">
+			</div>
+			<div class="large-2 small-6 columns end">
+			    <a class="button dark cancel" href="Updt_User_Coll_Code.php">Cancel</a>
+			</div>
+	    </div>
+	</form-->
+	
+	<form name="Updt_User_Coll_Code" action="Updt_User_Coll_Code.php" method="post" data-parsley-validate>
+	    <div class="formRow">
+			<p>Select the Seller or Location Code to Update / Delete:</p>
+			<?php 
+				$result3 = mysql_query("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' ORDER BY Coll_List_Type, Coll_List_Val_DisplOrd ASC");
+							
+				if ($result3) {
+				    $rows_count3 = mysql_num_rows($result3);
+				    for ($i=1; $i <= $rows_count3; $i++) {
+					    $row3 = mysql_fetch_array($result3);
+				        echo "<div class='radio'><input type='radio' name='Coll_Code' id='code" . $i . "' value='" . $row3['Coll_List_Value'] . "'><label for='code" . $i . "'>" . $row3['Coll_List_Value'] . "</label></div>";
+				    }
+				} else {}
+			?>
 	    </div>
 			
 	    <div class="row">
