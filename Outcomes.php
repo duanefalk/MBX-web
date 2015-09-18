@@ -48,11 +48,15 @@ if ($source_string=="Rel_success") {
 <?php } elseif ($source_string=="Code_success") { ?>
 	<div class="row">
 		<div class="large-12 columns">
-		
-			<h2>Code <?php echo $ID; ?> Successfully Added!</h2>
-			
-			<p><a class='button dark' href="Add_User_Coll_Code.php">Add Another Code</a></p>
-		
+			<h2>Code <strong><?php echo $ID; ?></strong> Successfully Added!</h2>
+			<div class="row">
+				<div class="large-3 columns">
+					<a class='button dark' href="Add_User_Coll_Code.php">Add Another Code</a>
+				</div>
+				<div class="large-6 columns end">
+					<a class='button dark' href="Collection_Code_Lists.php">back to Collection Code Lists</a>
+				</div>
+			</div>		
 		</div>
 	</div>	
 	

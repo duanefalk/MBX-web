@@ -1,13 +1,26 @@
 includes/constants.php
-
-images/models/
-
-images/Similar_Models
-
 phpinfo.php
 
+
+# Images
+images/models/
+images/Similar_Models
 user_uploads/
 
-.sass-cache
 
-stylesheets/sass/
+# Sass Cache remove
+*.sass-cache
+
+
+# Ignore CSS & Map File
+
+
+# OS generated files
+.DS_Store
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db

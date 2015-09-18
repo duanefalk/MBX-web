@@ -5,7 +5,9 @@ body {@include body; color:$black; background:lighten($cream,5%) url('../images/
 	@media only screen and (max-width:480px) { font-size:14px; }
 }
 
-h1,h2,h3,h4,h5,h6 {@include headline; color:$black; line-height:115%;}
+h1,h2,h3,h4,h5,h6 {@include headline; color:$black; line-height:115%;
+	em, i, strong, b {color:$orange;}
+}
 
 
 p {color:$black;
