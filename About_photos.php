@@ -23,7 +23,7 @@
 <div class="row">
 	<div class="large-12 columns">
 		<?php
-			$query="SELECT * FROM Matchbox_References";
+			$query="SELECT * FROM Matchbox_References ORDER BY RefName ASC";
 			$result= mysql_query($query);
 			echo "<table>";
 			echo "<thead>";
