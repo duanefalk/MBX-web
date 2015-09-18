@@ -33,27 +33,26 @@ session_start();
 		<h2>Delete Seller or Location Code</h2>
 
 		<?php
-			$Code_to_Updt=$_GET["code"];
-            $User=$_SESSION['Username'];
+		    $Code_to_Updt=$_GET["code"];
+		    $User=$_SESSION['Username'];
 
 		    $query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username='$User' AND Coll_List_Value='$Code_to_Updt'");								
-		    $result=0;
 		    $result=mysql_query($query);
 		   
-		    if (mysql_num_rows($result) != 0) {
-				$row=mysql_fetch_array($result);
+		    if ($result) {
+			$row=mysql_fetch_array($result);
 		    } else {
 		        echo "Database problem- please email info@MBX-u.com";
-		    }                   
+		    }               
 		?>
 
 		<form name="Del_Coll_Code" action="Del_Coll_Code.php" method="post">
 		    <?php  
-            	echo "<p><strong>Username:</strong> ".$User."</p>";
-				echo "<p><strong>User Collection Name:</strong> ".$row["User_Coll_ID"]."</p>";
-				echo "<p><strong>Code to Delete:</strong> ".$Code_to_Updt."</p>";
-				echo "<p><strong>Code Type:</strong> ".$row["Coll_List_Type"]."</p>";
-				echo "<p><strong>Code Display Order:</strong> ".$row["Coll_List_Val_DisplOrd"]."</p>";
+			echo "<p><strong>Username:</strong> ".$User."</p>";
+			echo "<p><strong>User Collection Name:</strong> ".$row["User_Coll_ID"]."</p>";
+			echo "<p><strong>Code to Delete:</strong> ".$Code_to_Updt."</p>";
+			echo "<p><strong>Code Type:</strong> ".$row["Coll_List_Type"]."</p>";
+			echo "<p><strong>Code Display Order:</strong> ".$row["Coll_List_Val_DisplOrd"]."</p>";
             ?>
 		    
 		    <input type="hidden" name="Code_to_Updt" value="<?php echo $Code_to_Updt;?>" id="Code_to_Updt">
