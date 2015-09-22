@@ -42,10 +42,17 @@
 					<a href="#panel4">MAN (FAB) # <small>Single or range of No's (i.e. '800'; enter one no. on the top line or one on each line for a range); shows all versions of the model that matches a MAN#</small></a>
 					<div id="panel4" class="content">
 						<div class="formRow">
-							<input type="text" name="MAN_No_1" value="" id="MAN_No_1" placeholder="Man # 1" data-parsley-type="integer" />
-						</div>
-						<div class="formRow">
-							<input type="text" name="MAN_No_2" value="" id="MAN_No_2" placeholder="Man # 2 (optional: if searching a range)" data-parsley-type="integer" />
+							<div class="row">
+								<div class="large-6 medium-12 small-6 columns">
+									<label for="MAN_No_1">Man #1</label>
+									<input type="text" name="MAN_No_1" value="" id="MAN_No_1" data-parsley-type="integer" />
+								</div>
+								<div class="large-6 medium-12 small-6 columns">
+									<label for="MAN_No_2">Man #2 <small>(optional)</small></label>
+									<input type="text" name="MAN_No_2" value="" id="MAN_No_2" data-parsley-type="integer" />
+								</div>
+							</div>
+							
 						</div>
 					</div>
 				</dd>
@@ -55,7 +62,8 @@
 				<dd>
 					<a href="#panel5">Mack # <small>(in format like '33-M')</small></a>
 					<div id="panel5" class="content">
-						<input type="text" name="Mack_No" value="" id="Mack_No" placeholder="Mack #" />
+						<label for="Mack_No">Mack #</label>
+						<input type="text" name="Mack_No" value="" id="Mack_No" />
 					</div>
 				</dd>
 			</dl>
@@ -64,7 +72,8 @@
 				<dd>
 					<a href="#panel6">Quick Name Search</a>
 					<div id="panel6" class="content">
-						<input type="text" name="QuickName" value="" id="QuickName" placeholder="Quick Name Search" size="40" />
+						<label for="QuickName">Quick Name Search</label>
+						<input type="text" name="QuickName" value="" id="QuickName" />
 					</div>
 				</dd>
 			</dl>
@@ -73,7 +82,8 @@
 				<dd>
 					<a href="#panel7">Complete Name Search <small>(searches model, version and base names- takes a few seconds!)</small></a>
 					<div id="panel7" class="content">
-						<input type="text" name="Name" value="" id="Name" size="40" placeholder="Complete Name Search" />
+						<label for="Name">Complete Name Search</label>
+						<input type="text" name="Name" value="" id="Name" />
 					</div>
 				</dd>
 			</dl>
@@ -83,10 +93,16 @@
 					<a href="#panel8">UMID # <small>LR and 3 numbers (e.g. 'LR025'), or SF and 4 numbers (e.g. 'SF0858'). If LR or SF not specified will assume SF; enter one no. on the top line, or one on each line for a range</small></a>
 					<div id="panel8" class="content">
 						<div class="formRow">
-							<input type="text" name="UMID_1" value="" id="UMID_1" placeholder="UMID #1" data-parsley-type="alphanum" data-parsley-maxlength="6">
-						</div>
-						<div class="formRow">
-							<input type="text" name="UMID_2" value="" id="UMID_2" placeholder="UMID #2 (optional: if searching a range)" data-parsley-type="alphanum" data-parsley-maxlength="6">
+							<div class="row">
+								<div class="large-6 medium-12 small-6 columns">
+									<label for="UMID_1">UMID #1</label>
+									<input type="text" name="UMID_1" value="" id="UMID_1" data-parsley-type="alphanum" data-parsley-maxlength="6">
+								</div>
+								<div class="large-6 medium-12 small-6 columns">
+									<label for="UMID_2">UMID #2 <small>(optional)</small></label>
+									<input type="text" name="UMID_2" value="" id="UMID_2" data-parsley-type="alphanum" data-parsley-maxlength="6">
+								</div>
+							</div>
 						</div>
 					</div>
 				</dd>
@@ -201,13 +217,13 @@
 				<dd>
 					<a href="#panel9">Text</a>
 					<div id="panel9" class="content">
-						<input type="text" name="TempaText" value="" size="25" id="TempaText" placeholder="Text" />
+						<label for="TempaText">Text on Model</label>
+						<input type="text" name="TempaText" value="" size="25" id="TempaText" />
 					</div>
 				</dd>
 			</dl>
 		
-		</div>
-		
+		</div>		
 	</div>
 	
 	<!-- Search Submit -->
