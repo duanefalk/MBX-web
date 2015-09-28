@@ -1,17 +1,11 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 <?php include("includes/header.php"); ?>
-<table id="structure">
-				<tr>
-					<td id="navigation">
-						<a href="Add_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Add New Record</p></a>
-						<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
-					</td>
-					<td id="page">
-						<h2>Add a Variation</h2>
-						<p></p>
 
-				<!-- fields:
+<div class="row">
+	<div class="large-12 columns">
+		<h2>Add a Variation</h2>
+			<!-- fields:
 				UMID
 				VERID
 				VARID
@@ -44,66 +38,75 @@
 				CodeLvl
 				SecManuf
 				VarComment
-				
 				VarPhoto1Ref
-				
 				VarPhoto2Ref		
-				-->		
+			-->		
 				
 		<form action="Add_Variation_Process.php" method="post">
-			<p>UMID:     	  <input type="text" name="UMID" value="" size="6" id="UMID"</p>
-			<p>Version ID:     	  <input type="text" name="VERID1" value="" size="4" id="VERID1"</p>
-			<p>Variation ID:          <input type="text" name="VARID1" value="" size="4" id="VARID1"</p>
-			<p>Mack#:     	  <input type="text" name="Mack_No" value="" size="8" id="Mack_No"</p>
-			<p>Base Name:     	  <input type="text" name="BaseName" value="" size="60" id="BaseName"</p>
-						<p>Company on Base: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseCompany%'");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="BaseCompany">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<p>Manufacture Location:    </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%ManufactureOrigin%'");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows Count: ".$rows_count."<br />";
-				?>
-				<select name="ManufLoc">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<p>Variation Year:     	  <input type="text" name="VarYear" value="" size="9" id="VarYear"</p>	
-			<p>Front Wheel Code: </p>
+			<label for="UMID">UMID:</label>
+			<input type="text" name="UMID" value="" id="UMID">
+			
+			<label for="VERID1">Version ID:</label>
+			<input type="text" name="VERID1" value="" size="4" id="VERID1">
+			
+			<label for="VARID1">Variation ID:</label>
+			<input type="text" name="VARID1" value="" size="4" id="VARID1">
+			
+			<label for="Mack_No">Mack #:</label>
+			<input type="text" name="Mack_No" value="" size="8" id="Mack_No">
+			
+			<label for="BaseName">Base Name:</label>
+			<input type="text" name="BaseName" value="" size="60" id="BaseName">
+			
+			<label for="BaseCompany">Company on Base:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseCompany%'");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				
+				if (!result) {
+					echo "Database query failed";
+				} else {}
+				
+				$rows_count= mysql_num_rows($result);
+			?>			
+			<select name="BaseCompany">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+				}	
+			?>
+			</select>
+			
+			<label for="ManufLoc">Manufacturer Location:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%ManufactureOrigin%'");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {
+					//echo "made connection ".$result."<br />";		
+				}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows Count: ".$rows_count."<br />";
+			?>
+			<select name="ManufLoc">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+				}	
+			?>
+			</select>
+			
+			
+			<p>Variation Year: <input type="text" name="VarYear" value="" size="9" id="VarYear"</p>	
+			<p>Front Wheel Code:</p>
 				<?php
 					$query=("SELECT * FROM Matchbox_Wheels");								
 					$result=0;
@@ -404,8 +407,16 @@
 				</select>	
 			<input type="submit"  name="submit" value="Submit"/>
 		</form>			
-		<a href="Add_Variation_Form.php">Cancel</a>						 						
-	</td>
-</tr>
-</table>
+		<a href="Add_Variation_Form.php">Cancel</a>
+	</div>
+</div>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Add_Menu.php">Add New Record</a>
+	</div>
+</div>
+		
 <?php require("includes/footer.php"); ?>						 						
