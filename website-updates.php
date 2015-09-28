@@ -8,6 +8,16 @@
 	<div class="large-9 columns">
 	
 		<h2>Latest Website Updates</h2>
+
+		<div class="section">
+			<p class="date">September 28, 2015</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0154">Muir Hill Tractor Shovel (SF0154)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0153">Site Dumper (SF0153)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0152">Cement Truck (SF0152)</a></li>
+			</ul>
+		</div>	
+
 		<div class="section">
 			<p class="date">September 11, 2015</p>
 			<ul>
