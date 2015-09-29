@@ -71,13 +71,13 @@
 				
 				$rows_count= mysql_num_rows($result);
 			?>			
-			<select name="BaseCompany">
-			<?php
-				for ($i=1; $i<=$rows_count; $i++) {
-					$row=mysql_fetch_array($result);
-					echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
-				}	
-			?>
+			<select name="BaseCompany" id="BaseCompany">
+				<?php
+					for ($i=1; $i<=$rows_count; $i++) {
+						$row=mysql_fetch_array($result);
+						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+					}	
+				?>
 			</select>
 			
 			<label for="ManufLoc">Manufacturer Location:</label>
@@ -95,7 +95,137 @@
 				$rows_count= mysql_num_rows($result);
 				// echo "Rows Count: ".$rows_count."<br />";
 			?>
-			<select name="ManufLoc">
+			<select name="ManufLoc" id="ManufLoc">
+				<?php
+					for ($i=1; $i<=$rows_count; $i++) {
+						$row=mysql_fetch_array($result);
+						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+					}	
+				?>
+			</select>
+			
+			<label for="VarYear">Variation Year:</label>
+			<input type="text" name="VarYear" value="" id="VarYear">
+			
+			<label for="FWhCd">Front Wheel Code:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Wheels");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="FWhCd" id="FWhCd">
+				<?php
+					for ($i=1; $i<=$rows_count; $i++) {
+						$row=mysql_fetch_array($result);
+						echo '<option value="'.$row["WheelCod"].'">'.$row["WheelCod"].'</option>';
+					}	
+				?>
+			</select>
+			
+			<label for="RWhCd">Rear Wheel Code:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Wheels");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="RWhCd" id="RWhCd">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["WheelCod"].'">'.$row["WheelCod"].'</option>';
+				}	
+			?>
+			</select>
+			
+			<label for="WindowColor">Window Color:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%WindowColor%' ORDER BY 'ValueDispOrder' ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="WindowColor" id="WindowColor">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+				}	
+			?>
+			</select>
+			
+			<label for="InteriorColor">Interior Color:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%InteriorColor%' ORDER BY ValueDispOrder ASC");
+				// $query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%InteriorColor%' ORDER BY 'ValueDispOrder' ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="InteriorColor" id="InteriorColor">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+				}	
+			?>
+			</select>
+				
+			<label for="Base1Material">Base (1) Material:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseType%' ORDER BY 'ValueDispOrder' ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="Base1Material" id="Base1Material">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+				}	
+			?>
+			</select>
+			
+			<label for="Base1Color">Base (1) Color:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseColor%' ORDER BY 'ValueDispOrder' ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="Base1Color" id="Base1Color">
 			<?php
 				for ($i=1; $i<=$rows_count; $i++) {
 					$row=mysql_fetch_array($result);
@@ -105,309 +235,191 @@
 			</select>
 			
 			
-			<p>Variation Year: <input type="text" name="VarYear" value="" size="9" id="VarYear"</p>	
-			<p>Front Wheel Code:</p>
-				<?php
-					$query=("SELECT * FROM Matchbox_Wheels");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="FWhCd">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["WheelCod"].'">'.$row["WheelCod"].'</option'."<br />";
-					}	
-				?>
-				</select>				
-			<p>Rear Wheel Code: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_Wheels");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="RWhCd">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["WheelCod"].'">'.$row["WheelCod"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<p>Window Color: </p>	
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%WindowColor%' ORDER BY 'ValueDispOrder' ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="WindowColor">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<p>Interior Color: </p>	
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%InteriorColor%' ORDER BY ValueDispOrder ASC");
-					// $query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%InteriorColor%' ORDER BY 'ValueDispOrder' ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="InteriorColor">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>	
-			<p>Base (1) Material: </p>	
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseType%' ORDER BY 'ValueDispOrder' ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="Base1Material">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<p>Base (1) Color: </p>	
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseColor%' ORDER BY 'ValueDispOrder' ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="Base1Color">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<p>Base (2) Type: </p>	
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%Base2Type%' ORDER BY 'ValueDispOrder' ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="Base2Type">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<p>Base (2) Material: </p>	
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseType%' ORDER BY 'ValueDispOrder' ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="Base2Material">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>	
-			<p>Base (2) Color: </p>	
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseColor%' ORDER BY 'ValueDispOrder' ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="Base2Color">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>	
-			<p>Finish: </p>	
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%Finish%'");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="Finish">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<p>Color Variation:     </p>
-				<textarea name="ColorVar" cols="45" rows="4">			
-				</textarea>	
-			<p>Tampo Variation:     </p>
-				<textarea name="TempaVar" cols="45" rows="4">			
-				</textarea>		
-			<p>Detail 1 Type:     	  <input type="text" name="Det1Typ" value="" size="20" id="Det1Typ"</p>
-			<p>Detail 1 Variation:     	  <input type="text" name="Det1Var" value="" size="40" id="Det1Var"</p>
-			<p>Detail 2 Type:     	  <input type="text" name="Det2Typ" value="" size="20" id="Det2Typ"</p>
-			<p>Detail 2 Variation:     	  <input type="text" name="Det2Var" value="" size="40" id="Det2Var"</p>
-			<p>Detail 3 Type:     	  <input type="text" name="Det3Typ" value="" size="20" id="Det3Typ"</p>
-			<p>Detail 3 Variation:     	  <input type="text" name="Det3Var" value="" size="40" id="Det3Var"</p>
-			<p>Detail 4 Type:     	  <input type="text" name="Det4Typ" value="" size="20" id="Det4Typ"</p>
-			<p>Detail 4 Variation:     	  <input type="text" name="Det4Var" value="" size="40" id="Det4Var"</p>
-			<p>Detail 5 Type:     	  <input type="text" name="Det5Typ" value="" size="20" id="Det5Typ"</p>
-			<p>Detail 5 Variation:     	  <input type="text" name="Det5Var" value="" size="40" id="Det5Var"</p>
+			<label for="Base2Type">Base (2) Type:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%Base2Type%' ORDER BY 'ValueDispOrder' ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {
+					//echo "made connection ".$result."<br />";		
+				}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select name="Base2Type" id="Base2Type">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+				}	
+			?>
+			</select>
+				
 			
-			<p>Variation Comment: </p>
-				<textarea name="VarComment" cols="45" rows="4">	
-				</textarea>
-			<!-- <p>Variation Photo 1 Name:     	  <input type="text" name="VarPhoto1Name" value="" size="40" id="VarPhoto1Name"</p> -->
-			<p>Variation Photo 1 Reference: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="VarPhoto1Ref">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["RefCode"].'">'.$row["RefCode"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<!-- <p>Variation Photo 2 Name:     	  <input type="text" name="VarPhoto2Name" value="" size="40" id="VarPhoto2Name"</p> -->
-			<p>Variation Photo 2 Reference: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="VarPhoto2Ref">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["RefCode"].'">'.$row["RefCode"].'</option'."<br />";
-					}	
-				?>
-				</select>	
-			<input type="submit"  name="submit" value="Submit"/>
+			<label for="Base2Material">Base (2) Material:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseType%' ORDER BY 'ValueDispOrder' ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="Base2Material" id="Base2Material">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+				}	
+			?>
+			</select>
+			
+			
+			<label for="Base2Color">Base (2) Color:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%BaseColor%' ORDER BY 'ValueDispOrder' ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {
+					//echo "made connection ".$result."<br />";		
+				}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select name="Base2Color" id="Base2Color">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+				}	
+			?>
+			</select>
+			
+			
+			<label for="Finish">Finish:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%Finish%'");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="Finish" id="Finish">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+				}	
+			?>
+			</select>
+			
+			
+			<label for="ColorVar">Color Variation:</label>
+			<textarea name="ColorVar" id="ColorVar" cols="45" rows="4"></textarea>
+
+			<label for="TempaVar">Tampo Variation:</label>
+			<textarea name="TempaVar" id="TempaVar" cols="45" rows="4"></textarea>
+			
+			<label for="Det1Typ">Detail 1 Type:</label>
+			<input type="text" name="Det1Typ" value="" size="20" id="Det1Typ">
+			
+			<label for="Det1Var">Detail 1 Variation:</label>
+			<input type="text" name="Det1Var" value="" size="40" id="Det1Var">
+			
+			<label for="Det2Typ">Detail 2 Type:</label>
+			<input type="text" name="Det2Typ" value="" size="20" id="Det2Typ">
+			
+			<label for="Det2Var">Detail 2 Variation:</label>
+			<input type="text" name="Det2Var" value="" size="40" id="Det2Var">
+			
+			<label for="Det3Typ">Detail 3 Type:</label>
+			<input type="text" name="Det3Typ" value="" size="20" id="Det3Typ">
+			
+			<label for="Det3Var">Detail 3 Variation:</label>
+			<input type="text" name="Det3Var" value="" size="40" id="Det3Var">
+			
+			<label for="Det4Typ">Detail 4 Type:</label>
+			<input type="text" name="Det4Typ" value="" size="20" id="Det4Typ">
+			
+			<label for="Det4Var">Detail 4 Variation:</label>
+			<input type="text" name="Det4Var" value="" size="40" id="Det4Var">
+			
+			<label for="Det5Typ">Detail 5 Type:</label>
+			<input type="text" name="Det5Typ" value="" size="20" id="Det5Typ">
+			
+			<label for="Det5Var">Detail 5 Variation:</label>
+			<input type="text" name="Det5Var" value="" size="40" id="Det5Var">
+			
+			<label for="VarComment">Variation Comment:</label>
+			<textarea name="VarComment" id="VarComment" cols="45" rows="4"></textarea>
+			
+			<label for="VarPhoto1Ref">Variation Photo 1 Reference:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="VarPhoto1Ref" id="VarPhoto1Ref">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["RefCode"].'">'.$row["RefCode"].'</option>';
+				}	
+			?>
+			</select>
+			
+			<label for="VarPhoto2Ref">Variation Photo 2 Reference:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="VarPhoto2Ref" id="VarPhoto2Ref">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["RefCode"].'">'.$row["RefCode"].'</option>';
+				}	
+			?>
+			</select>
+			
+			<div class="row">
+				<div class="large-3 columns">
+					<input class="button dark" type="submit" name="submit" value="Submit" />
+				</div>
+				<div class="large-3 columns end">
+					<a class="button dark cancel" href="Add_Menu.php">Cancel</a>
+				</div>
+			</div>
 		</form>			
-		<a href="Add_Variation_Form.php">Cancel</a>
+		
 	</div>
 </div>
 
