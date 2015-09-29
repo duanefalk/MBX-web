@@ -117,9 +117,13 @@ body.website_updates {
 		ul {margin-bottom:0;}
 	}
 	aside {padding:1em 1.5em; color:$white; background:$teal; border-radius:10px;
-		h4 {color:$white;}
+		h4 {color:$white;
+			em {color:lighten($gold,20%);}
+		}
 		p {color:$white;}
-		.button {background:$orange;}
+		.button {background:$orange;
+			&:hover {background:$gold;}
+		}
 	}
 }
 /* -- end WEBSITE UPDATES -------- */
