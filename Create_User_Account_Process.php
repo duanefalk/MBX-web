@@ -68,7 +68,7 @@ session_start();
         //Mail inputs
 	    $emails = "info@mbx-u.com,duanejfalk@yahoo.com";
 	    $subject = "MBX-U: New Member!";
-	    $message = "We have a new member of Matchbox University named " . $First_Name . " " . $Last_Name . ".\r\nTheir email is " . $User_Email . ".";
+	    $message = "We have a new member of Matchbox University named " . $First_Name . " " . $Last_Name . ".\r\n\r\nTheir email is " . $User_Email . ".\r\nTheir address is " . $User_Address . ".";
 	    $headers = 'From:info@mbx-u.com' . "\r\n" . 'Reply-To:info@mbx-u.com';
 	    
         mail($emails,$subject,$message,$headers);
