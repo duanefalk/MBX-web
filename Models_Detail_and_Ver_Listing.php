@@ -577,12 +577,12 @@ $Username=$_SESSION['Username'];
 				echo "</ul>";
 			}
 			
-			//Search for Other Code 1
+			//Search for Other releases
 			$rel_query=("SELECT * FROM Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND (Series!='Multi-Packs' AND Series!='Superfast' AND Series!='1-75' AND Series!='Code 2') ORDER BY Series, RelYr, CountryofSale, SeriesID, RelID");
 			$rel_result = mysql_query($rel_query);
 			$rel_rows= mysql_num_rows($rel_result);
 			if ($rel_rows!=0) {	
-				echo "<h2>OTHER CODE 1 RELEASES</h2>";
+				echo "<h2>OTHER RELEASES</h2>";
 				echo "<ul class='large-block-grid-5'>";
 				
 				for ($i=1; $i<=$rel_rows; $i++) {
