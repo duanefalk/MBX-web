@@ -10,6 +10,19 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">October 12, 2015</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0157">Jeep (SF0157)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0151">VW GOlf (SF0151)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0150">Rescue Hovercraft (SF0150)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0148">Cosmobile (SF0148)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0147">Planet Scout (SF0147)</a></li>
+				<li>For the next couple of weeks I will focus on updating 2015 models, and updating many of the model photos with those from my collection.</li>
+			</ul>
+		</div>	
+		
+		
+		<div class="section">
 			<p class="date">September 28, 2015</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0154">Muir Hill Tractor Shovel (SF0154)</a></li>

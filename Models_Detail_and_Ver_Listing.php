@@ -577,7 +577,7 @@ $Username=$_SESSION['Username'];
 				echo "</ul>";
 			}
 			
-			//Search for Other releases
+			//Search for Other Releases
 			$rel_query=("SELECT * FROM Matchbox_Releases WHERE UMID LIKE '%$model_for_detail%' AND (Series!='Multi-Packs' AND Series!='Superfast' AND Series!='1-75' AND Series!='Code 2') ORDER BY Series, RelYr, CountryofSale, SeriesID, RelID");
 			$rel_result = mysql_query($rel_query);
 			$rel_rows= mysql_num_rows($rel_result);
