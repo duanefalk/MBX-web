@@ -72,55 +72,33 @@
 			</div>
 			
 			<div class="formRow">
-				<h4>Address</h4>
-				<p>Enter your full address if you'd like us to send you a unique Code 2 Model</p>
-			</div>			
-
-			<div class="row">
-				<div class="large-6 medium-6 columns">
-			        <div class="formRow">
-						<label for="User_Address_1">Address Line 1: <small>Street address, PO Box, company name, c/o</small></label>
-						<input type="text" name="User_Address_1" value="" id="User_Address_1">
-					</div>
-		        </div>
-		        <div class="large-6 medium-6 columns">
-			        <div class="formRow">
-						<label for="User_Address_2">Address Line 2: <small>Apartment, suite, unit, building, floor, etc</small></label>
-						<input type="text" name="User_Address_2" value="" id="User_Address_2">
-					</div>
-		        </div>		
+				<label for="Addr_Line_1">Address (if you'd like a unique Code 2 Model sent to you please enter your full address):</label>
+				<input type="text" name="Addr_Line_1" value="" size="60" id="Addr_Line_1">
+			</div>
+			
+			<div class="formRow">
+				<input type="text" name="Addr_Line_2" value="" size="60" id="Addr_Line_2">
 			</div>
 
- 			<div class="row">
-		        <div class="large-6 medium-6 columns">
-			        <div class="formRow">
-						<label for="Address_City">City:</label>
-						<input type="text" name="Address_City" value="" id="Address_City">
-					</div>
-		        </div>
-		        <div class="large-6 medium-6 columns">
-			        <div class="formRow">
-						<label for="Address_Region">State / Province / Region:</label>
-						<input type="text" name="Address_Region" value="" id="Address_Region">
-					</div>
-		        </div>
-	        </div>
-
-			<div class="row">
-		        <div class="large-6 medium-6 columns">
-			        <div class="formRow">
-						<label for="Address_Code">ZIP / Postal Code:</label>
-						<input type="text" name="Address_Code" value="" id="Address_Code">
-					</div>
-		        </div>
-		        <div class="large-6 medium-6 columns">
-			        <div class="formRow">
-						<label for="Address_Country">Country:</label>
-						<input type="text" name="Address_Country" value="" id="Address_Country">
-					</div>
-		        </div>
-	        </div>
+			<div class="formRow">
+				<label for="City">City: </label>
+				<input type="text" name="City" value="" size="60" id="City">
+			</div>			
 			
+			<div class="formRow">
+				<label for="State_Prov_Regn">State/Province/Region: </label>
+				<input type="text" name="State_Prov_Regn" value="" size="60" id="State_Prov_Regn">
+			</div>
+			
+			<div class="formRow">
+				<label for="Country">Country:</label>
+				<input type="text" name="Country" value="" size="60" id="Country">
+			</div>			
+			
+			<div class="formRow">
+				<label for="Postal_Code">Postal Code:</label>
+				<input type="text" name="Country" value="" size="20" id="Postal_Code">
+			</div>
 			
 			<div class="formRow">
 				<label for="ddlAreasOfInterest">Areas of Interest (hold down ctrl or cmd key to choose as many as apply):</label>

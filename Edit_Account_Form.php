@@ -66,9 +66,29 @@
 			</div>
 				
 			<div class="formRow">
-				<label for="User_Address" id="lblAddress">Address</label>
-				<input type="text" name="User_Address" value="<?php echo $row['User_Address']; ?>" size="60" id="User_Address" />
+				<label for="Addr_Line_1" id="lblAddress">Address</label>
+				<input type="text" name="Addr_Line_1" value="<?php echo $row['Addr_Line_1']; ?>" size="60" id="Addr_Line_1" />
 			</div>
+			<div class="formRow">
+				<input type="text" name="Addr_Line_2" value="<?php echo $row['Addr_Line_2']; ?>" size="60" id="Addr_Line_2" />
+			</div>
+			<div class="formRow">
+				<label for="City" id="lblAddress">City</label>
+				<input type="text" name="City" value="<?php echo $row['City']; ?>" size="60" id="City" />
+			</div>
+			<div class="formRow">
+				<label for="State_Prov_Regn" id="lblAddress">State/Province/Region</label>
+				<input type="text" name="State_Prov_Regn" value="<?php echo $row['State_Prov_Regn']; ?>" size="60" id="State_Prov_Regn" />
+			</div>
+			<div class="formRow">
+				<label for="Country" id="lblAddress">Country</label>
+				<input type="text" name="Country" value="<?php echo $row['Country']; ?>" size="60" id="Country" />
+			</div>
+			<div class="formRow">
+				<label for="Postal_Code" id="lblAddress">Postal Code</label>
+				<input type="text" name="Postal_Code" value="<?php echo $row['Postal_Code']; ?>" size="60" id="Postal_Code" />
+			</div>
+		
 			
 			<div class="row">
 				<div class="large-6 medium-6 columns">
