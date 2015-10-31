@@ -79,14 +79,14 @@
 			<div class="row">
 				<div class="large-6 medium-6 columns">
 			        <div class="formRow">
-						<label for="User_Address_1">Address Line 1: <small>Street address, PO Box, company name, c/o</small></label>
-						<input type="text" name="User_Address_1" value="" id="User_Address_1">
+						<label for="Addr_Line_1">Address Line 1: <small>Street address, PO Box, company name, c/o</small></label>
+						<input type="text" name="Addr_Line_1" value="" id="Addr_Line_1">
 					</div>
 		        </div>
 		        <div class="large-6 medium-6 columns">
 			        <div class="formRow">
-						<label for="User_Address_2">Address Line 2: <small>Apartment, suite, unit, building, floor, etc</small></label>
-						<input type="text" name="User_Address_2" value="" id="User_Address_2">
+						<label for="Addr_Line_2">Address Line 2: <small>Apartment, suite, unit, building, floor, etc</small></label>
+						<input type="text" name="Addr_Line_2" value="" id="Addr_Line_2">
 					</div>
 		        </div>		
 			</div>
@@ -94,14 +94,14 @@
  			<div class="row">
 		        <div class="large-6 medium-6 columns">
 			        <div class="formRow">
-						<label for="Address_City">City:</label>
-						<input type="text" name="Address_City" value="" id="Address_City">
+						<label for="City">City:</label>
+						<input type="text" name="City" value="" id="City">
 					</div>
 		        </div>
 		        <div class="large-6 medium-6 columns">
 			        <div class="formRow">
-						<label for="Address_Region">State / Province / Region:</label>
-						<input type="text" name="Address_Region" value="" id="Address_Region">
+						<label for="State_Prov_Regn">State / Province / Region:</label>
+						<input type="text" name="State_Prov_Regn" value="" id="State_Prov_Regn">
 					</div>
 		        </div>
 	        </div>
@@ -109,14 +109,14 @@
 			<div class="row">
 		        <div class="large-6 medium-6 columns">
 			        <div class="formRow">
-						<label for="Address_Code">ZIP / Postal Code:</label>
-						<input type="text" name="Address_Code" value="" id="Address_Code">
+						<label for="Postal_Code">ZIP / Postal Code:</label>
+						<input type="text" name="Postal_Code" value="" id="Postal_Code">
 					</div>
 		        </div>
 		        <div class="large-6 medium-6 columns">
 			        <div class="formRow">
-						<label for="Address_Country">Country:</label>
-						<input type="text" name="Address_Country" value="" id="Address_Country">
+						<label for="Country">Country:</label>
+						<input type="text" name="Country" value="" id="Country">
 					</div>
 		        </div>
 	        </div>
