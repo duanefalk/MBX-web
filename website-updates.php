@@ -10,6 +10,16 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">November 2, 2015</p>
+			<ul>
+				<li>Functionality update: New accounts will now provide separate fields for street addr., city, state/region etc.</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0145">Formula 5000 (SF0145)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0142">Atlas Dump Truck (SF0142)</a></li>
+			</ul>
+		</div>
+		
+		
+		<div class="section">
 			<p class="date">October 12, 2015</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0157">Jeep (SF0157)</a></li>
