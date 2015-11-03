@@ -29,7 +29,6 @@ session_start();
 -->
 
 <?php
-	$Date=date("F j, Y, g:i a");
     $Username=mysql_real_escape_string($_POST['Username']);
     $Password=mysql_real_escape_string($_POST['Password']);
     $Sec_Lvl=2;
