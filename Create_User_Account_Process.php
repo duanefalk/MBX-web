@@ -59,16 +59,17 @@ session_start();
     $User_Veh_Cond_Scheme= $_POST['Veh_Cond_Scheme'];
     $User_Pkg_Cond_Scheme= $_POST['Pkg_Cond_Scheme'];
     $User_Code2_Pref=$_POST['Code2_Pref'];
+    $Acct_Create_Dt=date("Y-m-d");
 
 
      $query="INSERT INTO MBXU_User_Accounts (Username, Password, Sec_Lvl, First_Name, Last_Name, User_Email, User_Url,
             Addr_Line_1, Addr_Line_2, City, State_Prov_Regn, Country, Postal_Code,
             User_Phone, Areas_of_Interest, User_is_Dealer, User_Memberships,
-            Veh_Cond_Scheme, Pkg_Cond_Scheme, Code2_Pref) 
+            Veh_Cond_Scheme, Pkg_Cond_Scheme, Code2_Pref, Acct_Create_Dt) 
             VALUES ('$Username','$Password','$Sec_Lvl','$First_Name','$Last_Name', '$User_Email','$User_Url',
             '$User_Addr_1', '$User_Addr_2', '$User_City', '$User_State', '$User_Country', '$User_Postal_Code',
             '$User_Phone', ' $InterestString','$User_is_Dealer', '$User_Memberships',
-            '$User_Veh_Cond_Scheme', '$User_Pkg_Cond_Scheme', '$User_Code2_Pref')";
+            '$User_Veh_Cond_Scheme', '$User_Pkg_Cond_Scheme', '$User_Code2_Pref', '$Acct_Create_Dt')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;
     // header("Location: Add_Version.php");
