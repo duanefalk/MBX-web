@@ -1,16 +1,13 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 <?php include("includes/header.php"); ?>
-<table id="structure">
-<tr>
-	<td id="navigation">
-		<a href="Add_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Add New Record</p></a>
-		<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
-	</td>
-	<td id="page">
+
+<div class="row">
+	<div class="large-12 columns">
+		
 		<h2>Add a Wheel Variation</h2>
-		<br />
-			<form action="Add_Wheel_Process.php" method="post">
+	
+		<form action="Add_Wheel_Process.php" method="post">
 			<p>Wheel Type: </p>
 				<?php
 					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%WheelType%'");								
@@ -64,11 +61,25 @@
 				?>
 				</select>						
 			
-			<input type="submit"  name="submit" value="Submit"/>
-			</form>			
-			<a href="Add_Wheel_Form.php">Cancel</a>
-		<p></p>	
-	</td>
-</tr>
-</table>
+			<div class="row">
+				<div class="large-3 small-6 columns">
+					<input type="submit" class="button dark" name="submit" value="Submit"/>
+				</div>
+				<div class="large-3 small-6 columns end">
+					<a class="button dark cancel" href="Add_Wheel_Form.php">Cancel</a>
+				</div>
+			</div>		
+					
+		</form>		
+	</div>
+</div>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Add_Menu.php">Add New Record</a>
+	</div>
+</div>
+		
 <?php require("includes/footer.php"); ?>
