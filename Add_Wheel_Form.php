@@ -8,22 +8,22 @@
 		<h2>Add a Wheel Variation</h2>
 	
 		<form action="Add_Wheel_Process.php" method="post">
-			<p>Wheel Type: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%WheelType%'");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="WheelTyp">
+			<label for="WheelTyp">Wheel Type:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%WheelType%'");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {
+					//echo "made connection ".$result."<br />";		
+				}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select id="WheelTyp" name="WheelTyp">
 				<?php
 					for ($i=1; $i<=$rows_count; $i++) {
 						$row=mysql_fetch_array($result);
@@ -31,42 +31,50 @@
 					}
 					mysql_free_result($result);
 				?>
-				</select>	
-			<br />
-			<p>Wheel Code:     	  <input type="text" name="WheelCod" value="" size="20" id="WheelCod"</p>
-			<p>Wheel Description:     <input type="text" name="WheelDescr" value="" size="60" id="WheelDescr"</p>
-			<p>Wheel Photo Path:      <input type="text" name="WheelPhotoPath" value="" size="60" id="WheelPhotoPath"</p>
-			<p>Wheel Photo Name:      <input type="text" name="WheelPhotoName" value="" size="60" id="WheelPhotoName"</p>
-			<p>Wheel Photo Reference: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="WheelPhotoRef">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["RefCode"].'">'.$row["RefCode"].'</option'."<br />";
-					}	
-				?>
-				</select>						
+			</select>
+			
+			<label for="WheelCod">Wheel Code:</label>
+			<input type="text" name="WheelCod" value="" size="20" id="WheelCod">
+			
+			<label for="WheelDescr">Wheel Description:</label>
+			<input type="text" name="WheelDescr" value="" size="60" id="WheelDescr">
+			
+			<label for="WheelPhotoPath">Wheel Photo Path:</label>
+			<input type="text" name="WheelPhotoPath" value="" size="60" id="WheelPhotoPath">
+			
+			<label for="WheelPhotoName">Wheel Photo Name:</label>
+			<input type="text" name="WheelPhotoName" value="" size="60" id="WheelPhotoName">
+			
+			<label for="WheelPhotoRef">Wheel Photo Reference:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {
+					//echo "made connection ".$result."<br />";		
+				}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select name="WheelPhotoRef" id="WheelPhotoRef">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["RefCode"].'">'.$row["RefCode"].'</option'."<br />";
+				}	
+			?>
+			</select>						
 			
 			<div class="row">
 				<div class="large-3 small-6 columns">
 					<input type="submit" class="button dark" name="submit" value="Submit"/>
 				</div>
 				<div class="large-3 small-6 columns end">
-					<a class="button dark cancel" href="Add_Wheel_Form.php">Cancel</a>
+					<a class="button dark cancel" href="Add_Menu.php">Cancel</a>
 				</div>
 			</div>		
 					

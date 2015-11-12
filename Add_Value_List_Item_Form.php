@@ -41,7 +41,7 @@
 					<input type="submit" name="submit" value="Submit" class="button dark" />
 				</div>
 				<div class="large-4 small-6 columns end">
-					<a href="Add_Value_List_Item_Form.php" class="button dark cancel">Cancel</a>
+					<a href="Add_Menu.php" class="button dark cancel">Cancel</a>
 				</div>
 			</div>
 		</form>			
