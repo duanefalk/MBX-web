@@ -10,6 +10,19 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">November 16, 2015</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0146">Hellraiser (SF0146)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0144">Fandango (SF0144)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0143">Ford Mustang Vantastic (SF0143)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0141">Blaze Buster Fire Engine (SF0141)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0140">Range Rover Police Patrol (SF0140)</a></li>
+			</ul>
+		</div>
+				
+		
+		
+		<div class="section">
 			<p class="date">November 2, 2015</p>
 			<ul>
 				<li>Functionality update: New accounts will now provide separate fields for street addr., city, state/region etc.</li>
