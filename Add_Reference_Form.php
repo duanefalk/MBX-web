@@ -54,7 +54,7 @@
 					<input class="button dark" type="submit" name="submit" value="Submit"/>
 				</div>
 				<div class="large-3 medium-6 small-6 columns end">
-					<a class="button dark cancel" href="Add_Reference_Form.php">Cancel</a>
+					<a class="button dark cancel" href="Add_Menu.php">Cancel</a>
 				</div>
 			</div>
 		</form>

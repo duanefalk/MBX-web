@@ -154,7 +154,7 @@
 					<input type="submit" class="button dark" value="Submit"/>
 				</div>
 				<div class="large-3 small-6 columns end">
-					<a class="button dark cancel" href="Add_Model_Form.php">Cancel / Clear</a>
+					<a class="button dark cancel" href="Add_Menu.php">Cancel</a>
 				</div>
 			</div>	
 		</form>						 						
