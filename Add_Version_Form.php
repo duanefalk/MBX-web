@@ -1,176 +1,175 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 <?php include("includes/header.php"); ?>
-<table id="structure">
-<tr>
-	<td id="navigation">
-		<a href="Add_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Add New Record</p></a>
-		<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
-	</td>
-	<td id="page">
+
+<div class="row">
+	<div class="large-12 columns">
 		<h2>Add a Version</h2>
-		<!-- fields:
-				UMID
-				VERID
-				FAB_No
-				Master_Mack_No
-				VerName
-				VerYrFirstRel
-				VerTyp
-				CodeLvl
-				SecManuf
-				BaseCompany
-				BodyColor
-				TempaDesign
-				TempaText
-				VerAttachments
-				
-				VerPhoto1Ref
-				
-				VerPhoto2Ref
-				VerComm
-		-->		
-				
 		<form action="Add_Version_Process.php" method="post">
-			<p>UMID:     	  <input type="text" name="UMID" value="" size="6" id="UMID"</p>
-			<p>Version ID:     	  <input type="text" name="VERID1" value="" size="4" id="VERID1"</p>				
-			<p>MAN/FAB#:     	  <input type="text" name="FAB_No" value="" size="6" id="FAB_No"</p>
-			<p>Master Mack#:     	  <input type="text" name="Master_Mack_No" value="" size="8" id="Master_Mack_No"</p>
-			<p>Version Name:     	  <input type="text" name="VerName" value="" size="60" id="VerName"</p>
-			<p>Version Release Year:     	  <input type="text" name="VerYrFirstRel" value="" size="4" id="VerYrFirstRel"</p>
-			<p>Version Type: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%VersionType%'");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="VerType">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>				
-			<p>Code Level:    </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%CodeLevel%'");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows Count: ".$rows_count."<br />";
-				?>
-				<select name="CodeLvl">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<p>Secondary Manufacturer:    </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%SecondManufacturer%'");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows Count: ".$rows_count."<br />";
-				?>
-				<select name="SecManuf">
+			
+			<label for="UMID">UMID:</label>
+			<input type="text" name="UMID" value="" size="6" id="UMID">
+			
+			<label for="VERID1">Version ID:</label>
+			<input type="text" name="VERID1" value="" size="4" id="VERID1">
+			
+			<label for="FAB_No">MAN/FAB #:</label>
+			<input type="text" name="FAB_No" value="" size="6" id="FAB_No">
+			
+			<label for="Master_Mack_No">Master Mack #:</label>
+			<input type="text" name="Master_Mack_No" value="" size="8" id="Master_Mack_No">			
+			
+			<label for="VerName">Version Name:</label>
+			<input type="text" name="VerName" value="" size="60" id="VerName">			
+			
+			<label for="VerYrFirstRel">Version Release Year:</label>
+			<input type="text" name="VerYrFirstRel" value="" size="4" id="VerYrFirstRel">			
+			
+			<label for="VerType">Version Type:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%VersionType%'");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="VerType" id="VerType">
+			<?php
+				for ($i=1; $i<=$rows_count; $i++) {
+					$row=mysql_fetch_array($result);
+					echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+				}	
+			?>
+			</select>
+			
+			
+			<label for="CodeLvl">Code Level:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%CodeLevel%'");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="CodeLvl" id="CodeLvl">
 				<?php
 					for ($i=1; $i<=$rows_count; $i++) {
 						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
+						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
 					}	
 				?>
-				</select>		
-			<p>Body Color(s):     	  <input type="text" name="BodyColor" value="" size="40" id="BodyColor"</p>
-			<p>Tampo Design:     </p>
-				<textarea name="TempaDesign" cols="45" rows="4">			
-				</textarea>	
-			<p>Tampo Text:     </p>
-				<textarea name="TempaText" cols="45" rows="4">			
-				</textarea>
-			<p>Version Attachments:     	  <input type="text" name="VerAttachments" value="" size="60" id="VerAttachments"</p>	
-			<!--<p>Version Photo 1 Name:     	  <input type="text" name="VerPhoto1Name" value="" size="40" id="VerPhoto1Name"</p> -->
-			<p>Version Photo 1 Reference: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="VerPhoto1Ref">
+			</select>
+			
+			<label for="SecManuf">Secondary Manufacturer:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%SecondManufacturer%'");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {
+					//echo "made connection ".$result."<br />";		
+				}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows Count: ".$rows_count."<br />";
+			?>
+			<select name="SecManuf" id="SecManuf">
 				<?php
 					for ($i=1; $i<=$rows_count; $i++) {
 						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["RefCode"].'">'.$row["RefCode"].'</option'."<br />";
+						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
 					}	
 				?>
-				</select>
-			<!--<p>Version Photo 2 Name:     	  <input type="text" name="VerPhoto2Name" value="" size="40" id="VerPhoto2Name"</p> -->
-			<p>Version Photo 2 Reference: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="VerPhoto2Ref">
+			</select>		
+
+			<label for="BodyColor">Body Color(s):</label>
+			<input type="text" name="BodyColor" value="" size="40" id="BodyColor">
+			
+			<label for="TempaDesign">Tampo Design:</label>
+			<textarea name="TempaDesign" id="TempaDesign" cols="45" rows="4"></textarea>	
+			
+			<label for="TempaText">Tampo Text:</label>
+			<textarea name="TempaText" id="TempaText" cols="45" rows="4"></textarea>
+			
+			<label for="VerAttachments">Version Attachments:</label>
+			<input type="text" name="VerAttachments" value="" size="60" id="VerAttachments">
+			
+			<label for="VerPhoto1Ref">Version Photo 1 Reference:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+			?>
+			<select name="VerPhoto1Ref" id="VerPhoto1Ref">
 				<?php
 					for ($i=1; $i<=$rows_count; $i++) {
 						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["RefCode"].'">'.$row["RefCode"].'</option'."<br />";
+						echo '<option value="'.$row["RefCode"].'">'.$row["RefCode"].'</option>';
 					}	
 				?>
-				</select>	
-			<p>Version Comment: </p>
-				<textarea name="VerComm" cols="45" rows="4">	
-				</textarea>
+			</select>
+				
+			<label for="VerPhoto2Ref">Version Photo 2 Reference:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {
+					//echo "made connection ".$result."<br />";		
+				}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select name="VerPhoto2Ref" id="VerPhoto2Ref">
+				<?php
+					for ($i=1; $i<=$rows_count; $i++) {
+						$row=mysql_fetch_array($result);
+						echo '<option value="'.$row["RefCode"].'">'.$row["RefCode"].'</option>';
+					}	
+				?>
+			</select>	
+			
+			<label for="VerComm">Version Comment:</label>
+			<textarea name="VerComm" id="VerComm" cols="45" rows="4"></textarea>
 	
-			<input type="submit"  name="submit" value="Submit"/>
-		</form>			
-		<a href="Add_Version_Form.php">Cancel</a>						 						
-	</td>
-</tr>
-			</table>
+			<div class="row">
+				<div class="large-3 small-6 columns">
+					<input type="submit" name="submit" value="Submit" class="button dark" />
+				</div>
+				<div class="large-3 small-6 columns end">
+					<a href="Add_Menu.php" class="button dark cancel">Cancel</a>
+				</div>
+			</div>			
+		</form>		
+	</div>
+</div>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Add_Menu.php">Add New Record</a>
+	</div>
+</div>
+	
 <?php require("includes/footer.php"); ?>
