@@ -1,228 +1,234 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 <?php include("includes/header.php"); ?>
-<table id="structure">
-<tr>
-	<td id="navigation">
-		<a href="Add_Menu.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Add New Record</p></a>
-		<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>
-	</td>
-	<td id="page">
-				
-	<!--Fields:
-		UMID
-		VerID
-		VarID
-		RelID
-		RelYr
-		CountryOfSale
-		Theme
-		Line
-		Series
-		SeriesID
-		ShowSeriesID
-		PkgName
-		MdlNameOnPkg
-		SubSeries
-		SubSeriesID
-		ShowSubSeriesID
-		UnitTyp
-		PkgID
-		PkgVarCd
-		
-		RelComm
-		
-		RelPkgPhotoRef
-	-->
+
+<div class="row">
+	<div class="large-12 columns">
 		<h2>Add a Release</h2>
 		<form action="Add_Release_Process.php" method="post">
-			<p>UMID:     	  <input type="text" name="UMID" value="" size="6" id="UMID"</p>
-			<p>Version ID:     	  <input type="text" name="VERID1" value="" size="4" id="VERID1"</p>
-			<p>Variation ID:          <input type="text" name="VARID1" value="" size="4" id="VARID1"</p>
-			<p>Release ID:     <input type="text" name="RELID1" value="" size="2" id="RELID1"</p>
-
-			<p>Intended Release Year:     	  <input type="text" name="RelYr" value="" size="4" id="RelYr"</p>
-			<p>Country of Sale: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%CountryOfSale%'");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="CountryOfSale">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
-				
-			<p>Release Theme: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%ReleaseTheme%' ORDER BY ValueDispOrder ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="Theme">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<p>Release Line: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%Line%' ORDER BY ValueDispOrder ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="Line">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>				
-			<p>Release Series: </p>
-				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%RelSeries%'");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="Series">
-				<?php
-					for ($i=1; $i<=$rows_count; $i++) {
-						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
-					}	
-				?>
-				</select>
-			<p>ID in Series:     	  <input type="text" name="SeriesID" value="" size="20" id="SeriesID"</p>
-			<p>Show Series ID?:     	  <input type="text" name="ShowSeriesID" value="1" size="1" id="ShowSeriesID"</p>
-			<p>Subgroup Under Series:   <input type="text" name="SubSeries" value="" size="40" id="SubSeries"</p>  	
-			<p>ID in SubSeries:     	  <input type="text" name="SubSeriesID" value="" size="20" id="SubSeriesID"</p>
-			<p>Show SubSeries ID?:     	  <input type="text" name="ShowSubSeriesID" value="1" size="1" id="ShowSubSeriesID"</p>
+			<label for="UMID">UMID:</label>
+			<input type="text" name="UMID" value="" size="6" id="UMID">
 			
-			<p>Model Name on the Package:     	  <input type="text" name="MdlNameOnPkg" value="" size="40" id="MdlNameOnPkg"</p>
-			<p>Name of the Package:     	  <input type="text" name="PkgName" value="" size="40" id="PkgName"</p>
-			<p>Unit Size: </p>
+			<label for="VERID1">Version ID:</label>
+			<input type="text" name="VERID1" value="" size="4" id="VERID1">
+			
+			<label for="VARID1">Variation ID:</label>
+			<input type="text" name="VARID1" value="" size="4" id="VARID1">
+			
+			<label for="RELID1">Release ID:</label>
+			<input type="text" name="RELID1" value="" size="2" id="RELID1">
+			
+			<label for="RelYr">Intended Release Year:</label>
+			<input type="text" name="RelYr" value="" size="4" id="RelYr">
+			
+			<label for="CountryOfSale">Country of Sale:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%CountryOfSale%'");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select name="CountryOfSale" id="CountryOfSale">
 				<?php
-					$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UnitSize%'");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
+					for ($i=1; $i<=$rows_count; $i++) {
+						$row=mysql_fetch_array($result);
+						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+					}	
 				?>
-				<select name="UnitTyp">
+			</select>
+			
+			<label for="Theme">Release Theme:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%ReleaseTheme%' ORDER BY ValueDispOrder ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select name="Theme" id="Theme">
+				<?php
+					for ($i=1; $i<=$rows_count; $i++) {
+						$row=mysql_fetch_array($result);
+						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+					}	
+				?>
+			</select>
+			
+			<label for="Line">Release Line:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%Line%' ORDER BY ValueDispOrder ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {
+					//echo "made connection ".$result."<br />";		
+				}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select name="Line" id="Line">
+				<?php
+					for ($i=1; $i<=$rows_count; $i++) {
+						$row=mysql_fetch_array($result);
+						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
+					}	
+				?>
+			</select>
+			
+			<label for="Series">Release Series:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%RelSeries%'");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {
+					//echo "made connection ".$result."<br />";		
+				}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select name="Series" id="Series">
 				<?php
 					for ($i=1; $i<=$rows_count; $i++) {
 						$row=mysql_fetch_array($result);
 						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option'."<br />";
 					}	
 				?>
-				</select>
-			<p>Package ID#:     	  <input type="text" name="PkgID" value="" size="12" id="PkgID"</p>
-			<p>Type of Package: </p>
-				<?php
-					$query=("SELECT PkgVarCode FROM Matchbox_Package_Varieties");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
-				?>
-				<select name="PkgVarCd">
+			</select>
+			
+			<label for="SeriesID">ID in Series:</label>
+			<input type="text" name="SeriesID" value="" size="20" id="SeriesID">
+			
+			<label for="ShowSeriesID">Show Series ID?:</label>
+			<input type="text" name="ShowSeriesID" value="1" size="1" id="ShowSeriesID">
+			
+			<label for="SubSeries">Subgroup Under Series:</label>
+			<input type="text" name="SubSeries" value="" size="40" id="SubSeries">
+			
+			<label for="SubSeriesID">ID in SubSeries:</label>
+			<input type="text" name="SubSeriesID" value="" size="20" id="SubSeriesID">
+			
+			<label for="ShowSubSeriesID">Show SubSeries ID?:</label>
+			<input type="text" name="ShowSubSeriesID" value="1" size="1" id="ShowSubSeriesID">
+			
+			<label for="MdlNameOnPkg">Model Name on the Package:</label>
+			<input type="text" name="MdlNameOnPkg" value="" size="40" id="MdlNameOnPkg">
+			
+			<label for="PkgName">Name of the Package:</label>
+			<input type="text" name="PkgName" value="" size="40" id="PkgName">
+			
+			<label for="UnitTyp">Unit Size:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%UnitSize%'");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select name="UnitTyp" id="UnitTyp">
 				<?php
 					for ($i=1; $i<=$rows_count; $i++) {
 						$row=mysql_fetch_array($result);
-						echo '<option value="'.$row["PkgVarCode"].'">'.$row["PkgVarCode"].'</option'."<br />";
+						echo '<option value="'.$row["ValueListEntry"].'">'.$row["ValueListEntry"].'</option>';
 					}	
 				?>
-				</select>			
-					
-			<p>Release Comments:     </p>
-				<textarea name="RelComm" cols="45" rows="4">			
-				</textarea>
-			<!-- <p>Package Photo Name:     	  <input type="text" name="RelPkgPhotoName" value="" size="40" id="RelPkgPhotoName"</p>	-->
-			<p>Package Photo Reference: </p>
+			</select>
+			
+			<label for="PkgID">Package ID#:</label>
+			<input type="text" name="PkgID" value="" size="12" id="PkgID">
+			
+			<label for="PkgVarCd">Type of Package:</label>
+			<?php
+				$query=("SELECT PkgVarCode FROM Matchbox_Package_Varieties");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {
+					//echo "made connection ".$result."<br />";		
+				}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select name="PkgVarCd" id="PkgVarCd">
 				<?php
-					$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
-					$result=0;
-					$rows_count=0;									
-					$result = mysql_query($query);
-					if (!result) {
-						echo "Database query failed";
-					}
-					else {
-						//echo "made connection ".$result."<br />";		
-					}
-					$rows_count= mysql_num_rows($result);
-					// echo "Rows COunt: ".$rows_count."<br />";
+					for ($i=1; $i<=$rows_count; $i++) {
+						$row=mysql_fetch_array($result);
+						echo '<option value="'.$row["PkgVarCode"].'">'.$row["PkgVarCode"].'</option>';
+					}	
 				?>
-				<select name="RelPkgPhotoRef">
+			</select>			
+					
+			<label for="RelComm">Release Comments:</label>
+			<textarea name="RelComm" id="RelComm" cols="45" rows="4"></textarea>
+			
+			<label for="RelPkgPhotoRef">Package Photo Reference:</label>
+			<?php
+				$query=("SELECT * FROM Matchbox_References ORDER BY RefCode ASC");								
+				$result=0;
+				$rows_count=0;									
+				$result = mysql_query($query);
+				if (!result) {
+					echo "Database query failed";
+				}
+				else {
+					//echo "made connection ".$result."<br />";		
+				}
+				$rows_count= mysql_num_rows($result);
+				// echo "Rows COunt: ".$rows_count."<br />";
+			?>
+			<select name="RelPkgPhotoRef" id="RelPkgPhotoRef">
 				<?php
 					for ($i=1; $i<=$rows_count; $i++) {
 						$row=mysql_fetch_array($result);
 						echo '<option value="'.$row["RefCode"].'">'.$row["RefCode"].'</option'."<br />";
 					}	
 				?>
-				</select>
-	
-			<input type="submit"  name="submit" value="Submit"/>
-		</form>			
-		<a href="Add_Release_Form.php">Cancel</a>						 						
-	</td>
-</tr>
+			</select>
+			
+			<div class="row">
+				<div class="large-3 small-6 columns">
+					<input type="submit" name="submit" value="Submit" class="button dark" />
+				</div>
+				<div class="large-3 small-6 columns end">
+					<a href="Add_Menu.php" class="button dark cancel">Cancel</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+								 						
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Add_Menu.php">Add New Record</a>
+	</div>
+</div>
 			</table>
 <?php require("includes/footer.php"); ?>
