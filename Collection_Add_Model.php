@@ -41,31 +41,46 @@ session_start();
             //drop down to form again
         }
      }
-?> 
-    
-    
+?>
 
-<table id="structure">
-<tr>
-	<td id="navigation">
-		<a href="Collections.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Collections</p></a>
-		<a href="index.php"><p onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Return to Main Page</p></a>			
-	</td>
-	<td id="page">
+<div class="row">
+	<div class="large-12 columns">
+		
 		<h2>Add a Model to Your Collection</h2>
 		<p>Note: you can have more than one collection if you desire. Info will NOT be shared across collections.</p>
-		<?php> $Username=$_SESSION['Username'];?>
+		
+		<?php $Username=$_SESSION['Username']; ?>
 		<form action="Create_Collection.php" method="post">
-			<p>Username:     	  <input type="text" name="Username" value="<? echo $Username?>" size="20" id="Username"</p>
-			<p>Collection Identifier:     	  <input type="text" name="User_Coll_ID" value="" size="8" id="User_Coll_ID"</p>
-			<p>Collection Description:</p>     	  <textarea name="User_Coll_Desc" cols="45" rows="4" id="User_Coll_Desc"></textarea>	
-			<p>Date Created:    <input type="text" value="09/25/2013" id="User_Coll_Created_Date"</p>
-			<!-- </><?php echo date('Y-m-d'); ?> -->
-			<br></>	
-			<input type="submit" name="Create_Coll_Submit" value="Submit"/>
-		</form>			
-		<a href="Create_Collection.php">Cancel</a>						 						
-	</td>
-</tr>
-			</table>
+			<label for="Username">Username:</label>
+			<input type="text" name="Username" value="<? echo $Username?>" size="20" id="Username">
+			
+			<label for="User_Coll_ID">Collection Identifier:</label>
+			<input type="text" name="User_Coll_ID" value="" size="8" id="User_Coll_ID">
+			
+			<label for="User_Coll_Desc">Collection Description:</label>
+			<textarea name="User_Coll_Desc" cols="45" rows="4" id="User_Coll_Desc"></textarea>
+			
+			<label for="User_Coll_Created_Date">Date Created:</label>
+			<input type="text" value="09/25/2013" id="User_Coll_Created_Date">
+			
+			<div class="row">
+				<div class="large-3 small-6 columns">
+					<input class="button dark" type="submit" name="Create_Coll_Submit" value="Submit"/>
+				</div>
+				<div class="large-3 small-6 columns end">
+					<a class="button dark cancel" href="Create_Collection.php">Cancel</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- Sub Menu -->
+<div class="row" id="subNav">
+	<div class="large-12 columns">
+		<p class="tip">related pages:</p>
+		<a href="Collections.php">Return to Collections</a>
+	</div>
+</div>
+
 <?php require("includes/footer.php"); ?>
