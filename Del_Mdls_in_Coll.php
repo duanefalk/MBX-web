@@ -34,83 +34,78 @@ session_start();
 //if post not set do initial form 
 ?>
 
-<table id="structure">
-<tr>
-
-	<td id="page">
-
+<div class="row">
+	<div class="large-12 columns">
 		<h2>Delete Model from Collection</h2>
-		<br />
-
 		<?php
-                    $Var_to_Updt=$_GET["model"];
+            $Var_to_Updt=$_GET["model"];
 		    $Copy_to_Updt=$_GET["copy"];
-                    $User=$_SESSION['Username'];
+            $User=$_SESSION['Username'];
 
 		    $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND VarID='$Var_to_Updt'");								
 		    $result=0;
 		    $result=mysql_query($query);
+		    
 		    if (mysql_num_rows($result) != 0) {
-			$row=mysql_fetch_array($result);
-			$User_CollID=$row['User_Coll_ID'];
-		    } ELSE {
+				$row=mysql_fetch_array($result);
+				$User_CollID=$row['User_Coll_ID'];
+		    } else {
 		        echo "Database problem- please email info@MBX-u.com";
 		    }                   
                     
-                    $picture1= IMAGE_URL . $Var_to_Updt."_1.jpg";
+            $picture1= IMAGE_URL . $Var_to_Updt."_1.jpg";
 		    $picture1_loc=IMAGE_PATH. $Var_to_Updt."_1.jpg";
-                    if (file_exists($picture1_loc)) {
-                        echo "<img src=".$picture1." width=\"240\">";
-                    } else {
-                        echo "<img src=".DEFAULT_IMAGE." width=\"240\">";
-                    }
-
-                ?>
+            if (file_exists($picture1_loc)) {
+                echo "<img src=".$picture1." width=\"240\">";
+            } else {
+                echo "<img src=".DEFAULT_IMAGE." width=\"240\">";
+            }
+		?>
 
 		<form name="Del_Mdls_in_Coll" action="Del_Mdls_in_Coll.php" method="post">
 		    <?php  
-                         echo "<br />";
-                        
-                        //determine what copy to default in field
-                        $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND VarID='$Var_to_Updt' AND Copy='$Copy_to_Updt'");								
-			$result=0;
-			$result=mysql_query($query);
-			//echo "rows found: ".mysql_num_rows($result);
-			$row=mysql_fetch_array($result);
+                //determine what copy to default in field
+                $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND VarID='$Var_to_Updt' AND Copy='$Copy_to_Updt'");								
+				$result=0;
+				$result=mysql_query($query);
+				//echo "rows found: ".mysql_num_rows($result);
+				$row=mysql_fetch_array($result);
 
-			echo "Username: ".$User."<br />";
-			echo "User Collection Name: ".$User_CollID."<br />";
-			echo "Variation to Delete: ".$Var_to_Updt."<br />";
-			echo "Copy to delete: ".$Copy_to_Updt."<br /><br />";
-			
-			echo "UMID: ".$row["UMID"]."<br />";
-			echo "Version ID: ".$row["VerID"]."<br />";
-			echo "Release ID: ".$row["RelID"]."<br />";
-			echo "User-specific ID: ".$row["User_SpecID"]."<br />";
-			echo "Vehicle Condition:  ".$row["VehCond"]."<br />";
-			echo "Package Condition: ".$row["PkgCond"]."<br />";
-			echo "Item Value: ".$row["ItemVal"]."<br />";
-			echo "Storage Location 1: ".$row["StorLoc"]."<br />";
-			echo "Storage Location 2: ".$row["StorLoc2"]."<br />";
-			echo "Purchase Date: ".$row["PurchDt"]."<br />";
-			echo "Seller: ".$row["Seller"]."<br />";
-			echo "Purchase Price: ".$row["PurchPrice"]."<br />";
-			echo "Flag to Sell? ".$row["SellFlag"]."<br />";
-			echo "Minimum Price to Sell: ".$row["MinSellPrice"]."<br />";
-			echo "Comment: ".$row["CollComment"]."<br />";	
-                    ?>
+				echo "<p>Username: ".$User."</p>";
+				echo "<p>User Collection Name: ".$User_CollID."</p>";
+				echo "<p>Variation to Delete: ".$Var_to_Updt."</p>";
+				echo "<p>Copy to delete: ".$Copy_to_Updt."</p>";			
+				echo "<p>UMID: ".$row["UMID"]."</p>";
+				echo "<p>Version ID: ".$row["VerID"]."</p>";
+				echo "<p>Release ID: ".$row["RelID"]."</p>";
+				echo "<p>User-specific ID: ".$row["User_SpecID"]."</p>";
+				echo "<p>Vehicle Condition:  ".$row["VehCond"]."</p>";
+				echo "<p>Package Condition: ".$row["PkgCond"]."</p>";
+				echo "<p>Item Value: ".$row["ItemVal"]."</p>";
+				echo "<p>Storage Location 1: ".$row["StorLoc"]."</p>";
+				echo "<p>Storage Location 2: ".$row["StorLoc2"]."</p>";
+				echo "<p>Purchase Date: ".$row["PurchDt"]."</p>";
+				echo "<p>Seller: ".$row["Seller"]."</p>";
+				echo "<p>Purchase Price: ".$row["PurchPrice"]."</p>";
+				echo "<p>Flag to Sell? ".$row["SellFlag"]."</p>";
+				echo "<p>Minimum Price to Sell: ".$row["MinSellPrice"]."</p>";
+				echo "<p>Comment: ".$row["CollComment"]."</p>";	
+            ?>
 		    
 		    <input type="hidden" name="Var_to_Updt" value="<?php echo $Var_to_Updt;?>" id="Var_to_Updt">
 		    <input type="hidden" name="Copy_to_Updt" value="<?php echo $Copy_to_Updt;?>" id="Copy_to_Updt"> 
-                    <input type="submit" name="del_submit" class="button dark" value="DELETE?" id="del_submit"/>
-        	</form>
-                <?php
-		    $url2= "Manage_Models_in_Collection.php";
-		    echo "<a href=\"".$url2."\">Cancel</a>";
-		?>
-            </td>
-	</tr>
-</table>
+		    
+		    <div class="row">
+			    <div class="large-4 small-6 columns">
+				    <input type="submit" name="del_submit" class="button dark" value="DELETE?" id="del_submit" />
+			    </div>
+			    <div class="large-4 small-6 columns end">
+				    <a class="button dark cancel" href="Manage_Models_in_Collection.php">Cancel</a>
+			    </div>
+		    </div>
+    	</form>
+	</div>
+</div>
 
 <!-- Sub Menu -->
 <div class="row" id="subNav">
