@@ -32,7 +32,6 @@
 				echo "<th><strong>Details</strong></th>";
 				echo "<th><strong>Comments</strong></th>";
 			echo "</thead>";
-			
 
 			$rows= mysql_num_rows($result);
 			for ($i=1; $i<=$rows; $i++) {
