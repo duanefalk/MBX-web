@@ -1,7 +1,7 @@
-<?php ob_start(); ?>
-<?php
-	// we must never forget to start the session
+<?php 
+	ob_start();
 	session_start();
+	$pageTitle = "Edit Account";
 	$Sec_Lvl=$_SESSION['Sec_Lvl'];
 	$Username=$_SESSION['Username'];
 ?>

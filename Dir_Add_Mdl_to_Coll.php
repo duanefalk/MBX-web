@@ -1,6 +1,9 @@
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header.php"); ?>
-<?php include("includes/functions.php"); ?>
+<?php 
+	require_once("includes/db_connection.php");
+	$pageTitle = "Add Variation/Release to Collection";	
+	include("includes/header.php");
+	include("includes/functions.php"); 
+?>
 
 <?php
     if (isset($_POST['var_submit'])) {
