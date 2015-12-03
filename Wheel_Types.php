@@ -48,18 +48,18 @@
 				
 				for ($i=1; $i<=$rows; $i++) {
 					echo "<li class=\"carGrid\">";
-						$row = mysql_fetch_array($result);
-						
+						$row = mysql_fetch_array($result);						
 						
 						$wheelphoto = WHEEL_URL . $row["WheelCod"] . ".jpg";
 						$wheel_loc = WHEEL_PATH . $row["WheelCod"] . ".jpg";
+						
 						if ( file_exists($wheel_loc) ) {
 							//echo "picture exists";
-							echo "<a href=\"" . $url . "\">"."<img src=" . $wheelphoto . " width='160' /></a>";
+							echo "<a class='imagePopup' href=\"" . $wheelphoto . "\">"."<img src=" . $wheelphoto . " width='160' /></a>";
 						} else {
 							//echo "cant find picture";
 							//echo DEFAULT_IMAGE;
-							echo "<a href=\"" . $url . "\">"."<img src=" . DEFAULT_WHEEL_IMAGE . " width='160' /></a>";
+							echo "<img src=" . DEFAULT_WHEEL_IMAGE . " width='160' />";
 						}
 
 						echo "<p><strong>".$row["WheelCod"]."</strong></p>";
