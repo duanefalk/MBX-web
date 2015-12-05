@@ -10,6 +10,17 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">December 5, 2015</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0137">Big Bull Bulldozer(SF0137)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0134">Pontiac Firebird (SF0134)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0132">Renault 17 TL(SF0132)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0131">Hi-Tailer (SF0131)</a></li>
+			</ul>
+		</div>		
+		
+		
+		<div class="section">
 			<p class="date">November 16, 2015</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0146">Hellraiser (SF0146)</a></li>
