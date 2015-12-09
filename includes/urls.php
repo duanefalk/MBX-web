@@ -12,6 +12,10 @@
 	$router->map('GET','/about',function() {require 'About_site.php';});
 	$router->map('GET','/search-models',function() {require 'Search_Models_Menu.php';});
 	$router->map('GET','/search-releases',function() {require 'Search_Releases_Menu.php';});
+	$router->map('GET','/log-in',function() {require 'Authenticate-test.php';});
+	$router->map('GET','/create-account',function() {require 'Create_User_Account_Form.php';});
+	$router->map('GET','/your-collections',function() {require 'Collections_Menu.php';});
+	$router->map('GET','/upload',function() {require 'User_Upload.php';});	
 	
 	$match = $router->match();
 	
