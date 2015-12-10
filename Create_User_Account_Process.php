@@ -86,7 +86,7 @@ session_start();
 	    
         mail($emails,$subject,$message,$headers);
         
-        $location="Authenticate-test.php";
+        $location="/log-in";
         redirect_to($location);
      } 
      else {

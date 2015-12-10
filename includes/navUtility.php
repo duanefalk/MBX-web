@@ -8,28 +8,21 @@
 	</div>	
 	<div class="row">
 		<div class="large-12 columns">
-			<?php			
-				if ($_SESSION['Sec_Lvl'] > 1) {
-					echo "<em>Hello, " . $_SESSION['First_Name'] . "</em>";
-					
-					//code 3 = Dad
-					if ($_SESSION['Sec_Lvl'] == 3) {
-						echo "<a href='Add_Menu.php'>Add a New Record</a>";						
-					}
-					
-					echo "<a href='website-updates.php'>Website Updates</a>";
-					echo "<a href='Edit_Account_Form.php'>Edit Account</a>";
-					echo "<a href='logout.php'>Logout</a>";
-				} else if ($_SESSION['Sec_Lvl'] == 1) {
-					//echo "<em>Welcome Guest</em>";
-					echo "<a href='Create_User_Account_Form.php'>Create an Account</a>";
-					echo "<a href='Authenticate-test.php'>Go to Login</a>";
-				}	
-				else {
-					echo "<a href='Create_User_Account_Form.php'>Create an Account</a>";
-					echo "<a href='Authenticate-test.php'>Login</a>";			
-				}		
-			?>
+			<?php if ($_SESSION['Sec_Lvl'] > 1) { ?>
+				<em>Hello, <?php $_SESSION['First_Name'] ?></em>
+				<?php if ($_SESSION['Sec_Lvl'] == 3) { //code 3 = Dad ?>
+					<a href='Add_Menu.php'>Add a New Record</a>
+				<?php } ?>
+				<a href='/website-updates'>Website Updates</a>
+				<a href='/edit-account'>Edit Account</a>
+				<a href='/log-out'>Logout</a>
+			<?php } else if ($_SESSION['Sec_Lvl'] == 1) { ?>
+				<a href='/create-account'>Create an Account</a>
+				<a href='/log-in'>Go to Login</a>
+			<?php }	else { ?>
+				<a href='/create-account'>Create an Account</a>
+				<a href='/log-in'>Login</a>
+			<?php }	?>
 		</div>
 	</div>
 </div>
