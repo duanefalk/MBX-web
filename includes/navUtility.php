@@ -14,14 +14,14 @@
 					<a href='Add_Menu.php'>Add a New Record</a>
 				<?php } ?>
 				<a href='/website-updates'>Website Updates</a>
-				<a href='/edit-account'>Edit Account</a>
+				<a href='Edit_Account_Form.php'>Edit Account</a>
 				<a href='/log-out'>Logout</a>
 			<?php } else if ($_SESSION['Sec_Lvl'] == 1) { ?>
-				<a href='/create-account'>Create an Account</a>
-				<a href='/log-in'>Go to Login</a>
+				<a href='Create_User_Account_Form.php'>Create an Account</a>
+				<a href='Authenticate-test.php'>Go to Login</a>
 			<?php }	else { ?>
-				<a href='/create-account'>Create an Account</a>
-				<a href='/log-in'>Login</a>
+				<a href='Create_User_Account_Form.php'>Create an Account</a>
+				<a href='Authenticate-test.php'>Login</a>
 			<?php }	?>
 		</div>
 	</div>
