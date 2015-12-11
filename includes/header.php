@@ -54,12 +54,12 @@
 			
 			<div class="large-9 columns">
 				<ul id="mainNav">
-					<li><a href="/about">About</a></li>
-					<li><a href="/search-models">Search Models</a></li>
-					<li><a href="/search-releases">Search Releases</a></li>					
+					<li><a href="/About_site.php">About</a></li>
+					<li><a href="/Search_Models_Menu.php">Search Models</a></li>
+					<li><a href="/Search_Releases_Menu.php">Search Releases</a></li>					
 					<?php if ($_SESSION['Sec_Lvl'] > 1) { ?>
-						<li><a href='/your-collections'>Your Collections</a></li>
-						<li><a href='/upload'>Upload</a></li>
+						<li><a href='/Collections_Menu.php'>Your Collections</a></li>
+						<li><a href='/User_Upload.php'>Upload</a></li>
 					<?php } ?>
 				</ul>
 			</div>
