@@ -1,13 +1,10 @@
 <?php
 	ob_start(); 
 	session_start();
-
 	include_once("includes/analyticstracking.php");
 ?>
-
 <!doctype html>
 <html class="no-js" lang="en">
-
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
@@ -42,19 +39,14 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
 	<![endif]-->
 </head>
-
 <?php
 	//Adding Page Title to <body> as a class="";
 	$pageTitle = strtolower($pageTitle);
 	$pageTitle = str_replace(' ', '_', $pageTitle);
 ?>
-
-<body <?php if ($pageTitle) { echo "class='" . $pageTitle . "'"; } ?>>
-	
-	<div id="header">
-	
-		<?php include("includes/navUtility.php"); ?>
-		
+<body <?php if ($pageTitle) { echo "class='" . $pageTitle . "'"; } ?>>	
+	<div id="header">	
+		<?php include("includes/navUtility.php"); ?>		
 		<div class="row">
 			<div class="large-3 columns">
 				<a href="/" id="logo"><img src="images/logo.png" width="225" height="59" /></a>
@@ -71,8 +63,7 @@
 					<?php } ?>
 				</ul>
 			</div>
-		</div>
-		
+		</div>		
 		<?php if ($pageTitle == 'home') { ?>
 			<div class="row" id="banner">
 				<div class="large-7 medium-6 columns" id="bannerText">
@@ -112,7 +103,5 @@
 				</div>
 			</div>
 		<?php } ?>		
-		
-	</div>
-	
+	</div>	
 	<div id="main">
