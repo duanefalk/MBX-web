@@ -10,6 +10,13 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">December 18, 2015</p>
+			<ul>
+				<li>Added 2015 1-75's batches G, H and J</li>
+			</ul>
+		</div>
+		
+		<div class="section">
 			<p class="date">December 5, 2015</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0137">Big Bull Bulldozer(SF0137)</a></li>
