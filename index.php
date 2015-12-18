@@ -4,6 +4,7 @@
 	require_once("includes/functions.php");
 	require_once("includes/db_connection.php");	
 	$pageTitle = "Home";
+	$pageDescription = "An online database for finding and collecting Matchbox cars.";
 	include("includes/header.php");
 ?>
 
