@@ -1,6 +1,9 @@
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
+<?php 
+	require_once("includes/db_connection.php");
+	require_once("includes/functions.php");
+	$pageTitle = "Search Releases";
+	include("includes/header.php");
+?>
 
 <div class="row">
 	<div class="large-12 columns">
@@ -38,9 +41,9 @@
 	            if (($_SESSION['PkgName_Check']) OR ($_SESSION['MdlNameOnPkg_Check']) OR ($_SESSION['PkgID_Check'])) {
 	                //WORKS
 	                if ($_SESSION['PkgName_Check']) {
-				echo "Pkg name is: ".$OrigPkgName."<br></> ";
-	                        $PrevRelCriteria="1";
-	                        $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
+						echo "<p>Pkg name is: ".$OrigPkgName."</p>";
+                        $PrevRelCriteria="1";
+                        $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
 	                                       Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
 	                                       Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
 	                        FROM Matchbox_Variations
@@ -49,7 +52,7 @@
 	                }                       
 	                
 	                if ($_SESSION['MdlNameOnPkg_Check']) {
-				echo "Model Name on Package is: ".$OrigMdlNameOnPkg."<br></> ";
+						echo "<p>Model Name on Package is: ".$OrigMdlNameOnPkg."</p>";
 	                    if ($PrevRelCriteria != "1") {
 	                        $PrevRelCriteria="1";
 	                        
@@ -68,7 +71,7 @@
 	                }
 	                
 	                if ($_SESSION['PkgID_Check']) {
-				echo "Package ID is: ".$OrigPkgID."<br></> ";
+						echo "<p>Package ID is: ".$OrigPkgID."</p>";
 	                    if ($PrevRelCriteria != "1") {
 	                        $PrevRelCriteria="1";
 	                        
@@ -123,7 +126,7 @@
 	                    }
 	
 	                    if ($_SESSION['SeriesID_Check']) {
-				echo "Series ID is: ".$OrigSeriesID."<br></> ";
+							echo "<p>Series ID is: ".$OrigSeriesID."</p>";
 	                        if ($PrevRelCriteria != "1") {
 	                            $PrevRelCriteria="1";
 	                            //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `SeriesID`='$SeriesID' AND `ShowSeriesID`='1')");
@@ -142,6 +145,8 @@
 	                    }
 	
 	                    if ($_SESSION['RelYr_Check']) {
+		                    echo "<p>Release Year is: ".$RelYr."</p>";
+		                    //$pageTitle .= ": Release Year: " . $RelYr;
 	                        if ($PrevRelCriteria != "1") {
 	                            $PrevRelCriteria="1";
 	                            //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `RelYr` LIKE '%$RelYr%')");
@@ -187,8 +192,8 @@
 	                } else {              
 	                    echo "No Criteria Selected";
 	                    exit;
-	                        }
-	                }
+					}
+                }
 	 	
 	        $result=0;
 	        $rows=0;
@@ -249,8 +254,8 @@
 	            }
 	
 	            echo "<br />";
-	            $PhotoRefCd1= $row["VarPhoto1Ref"];
-		$PhotoRefCd2= $row["RelPkgPhotoRef"];
+	            	$PhotoRefCd1 = $row["VarPhoto1Ref"];
+					$PhotoRefCd2 = $row["RelPkgPhotoRef"];
 	            if ($PhotoRefCd1) {
 	                $query2a= ("SELECT * FROM Matchbox_References WHERE RefCode LIKE '%$PhotoRefCd1%'");
 	                $result2a= mysql_query($query2a);
