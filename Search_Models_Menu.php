@@ -27,10 +27,7 @@
     }
 ?>
 
-
-
 <form action="Search_Models_Menu.php" method="post" data-parsley-validate>
-
 	<!-- Search Options -->
 	<div class="row">		
 		<div class="large-4 medium-4 columns">				
@@ -107,8 +104,7 @@
 					</div>
 				</dd>
 			</dl>
-		</div>
-	
+		</div>	
 		<div class="large-4 medium-4 columns">					
 			<h3 class="demoHeaders">Or Search by General Model Information</h3>
 			<p>(you may choose more than one of these criteria):</p>	
@@ -208,8 +204,7 @@
 					</div>
 				</dd>
 			</dl>
-		</div>
-			
+		</div>			
 		<div class="large-4 medium-4 columns">
 			<h3 class="demoHeaders">Or Search by Text on the Model</h3>	
 			
@@ -227,16 +222,12 @@
 	</div>
 	
 	<!-- Search Submit -->
-	<div class="row">
-		
+	<div class="row">		
 		<div class="large-12 columns">
-			<input type="submit" class="button dark" name="submit" value="Search" />
-		
+			<input type="submit" class="button dark" name="submit" value="Search" />		
 			<a class="button cancel" href="Search_Models_Menu.php">Clear</a>
-		</div>
-		
-	</div>
-	
+		</div>		
+	</div>	
 </form>	
 
 <!-- Sub Menu -->

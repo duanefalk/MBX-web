@@ -1,10 +1,8 @@
 <?php 
 	ob_start();
 	require_once("includes/db_connection.php");
-	
-	$pageTitle = "Search Models";
-	include("includes/header.php");
-	
+	$pageTitle = "Search Models";	
+	include("includes/header.php");	
 	include("includes/functions.php");
 	session_start();
 ?>
@@ -101,28 +99,28 @@
 							exit;
 						//	$ID_String1="Invalid UMID, please retry";
 						//make sure not too long
-						} ELSEIF (strlen(substr($ID_String1,2))>3) {
+						} elseif (strlen(substr($ID_String1,2))>3) {
 							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 							exit;
 						//pad if too short						
-						} ELSEIF ($ID_Len<5) {
+						} elseif ($ID_Len<5) {
 							$ID_String_LRno= substr($ID_String1,2);
 							$ID_String_LRno=str_pad($ID_String_LRno, 3, "0", STR_PAD_LEFT);
 							$ID_String1=str_pad($ID_String_LRno, 5, "LR", STR_PAD_LEFT);
 						}
 						//otherwise just right
 					//if SF
-					} ELSEIF (substr($ID_String1,0,2)=="SF") {
+					} elseif (substr($ID_String1,0,2)=="SF") {
 						//make sure no other letters
 						if (!is_numeric(substr($ID_String1,2))) {
 							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 							exit;
 						//make sure not too long
-						} ELSEIF (strlen(substr($ID_String1,2))>4) {
+						} elseif (strlen(substr($ID_String1,2))>4) {
 							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 							exit;;
 						//pad if too short otherwise good						
-						} ELSEIF ($ID_Len<6) {						
+						} elseif ($ID_Len<6) {						
 							$ID_String_SFno= substr($ID_String1,2);
 							$ID_String1=str_pad($ID_String_SFno, 4, "0", STR_PAD_LEFT);
 							$ID_String1=str_pad($ID_String1, 6,"SF", STR_PAD_LEFT);	
@@ -134,7 +132,7 @@
 							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 							exit;
 						//make sure not too long
-						} ELSEIF ($ID_Len>4) {
+						} elseif ($ID_Len>4) {
 							echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 							exit;
 						//pad if too short otherwise jsut right						
@@ -157,28 +155,28 @@
 								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 								exit;
 							//make sure not too long
-							} ELSEIF (strlen(substr($ID_String2,2))>3) {
+							} elseif (strlen(substr($ID_String2,2))>3) {
 								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 								exit;
 							//pad if too short						
-							} ELSEIF ($ID_Len<5) {
+							} elseif ($ID_Len<5) {
 								$ID_String_LRno= substr($ID_String2,2);
 								$ID_String_LRno=str_pad($ID_String_LRno, 3, "0", STR_PAD_LEFT);
 								$ID_String2=str_pad($ID_String_LRno, 5, "LR", STR_PAD_LEFT);
 							}
 							//otherwise just right
 						//if SF
-						} ELSEIF (substr($ID_String2,0,2)=="SF") {
+						} elseif (substr($ID_String2,0,2)=="SF") {
 							//make sure no other letters
 							if (!is_numeric(substr($ID_String2,2))) {
 								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 								exit;
 							//make sure not too long
-							} ELSEIF (strlen(substr($ID_String2,2))>4) {
+							} elseif (strlen(substr($ID_String2,2))>4) {
 								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 								exit;
 							//pad if too short otherwise good						
-							} ELSEIF ($ID_Len<6) {						
+							} elseif ($ID_Len<6) {						
 								$ID_String_SFno= substr($ID_String2,2);
 								$ID_String2=str_pad($ID_String_SFno, 4, "0", STR_PAD_LEFT);
 								$ID_String2=str_pad($ID_String2, 6,"SF", STR_PAD_LEFT);	
@@ -190,7 +188,7 @@
 								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 								exit;
 							//make sure not too long
-							} ELSEIF ($ID_Len>4) {
+							} elseif ($ID_Len>4) {
 								echo "<h3>Invalid UMID, please re-enter</h3>"; //mysql_error();
 								exit;
 							//pad if too short otherwise jsut right						
@@ -218,6 +216,7 @@
 				if ($_SESSION['VehicleType_Check']) {
 					echo "<p>Searching for:</p>";
 					echo "<p>Vehicle Type= " . $VehicleType . "</p>";
+					$pageTitle .= ": Vehicle Type: " . $VehicleType;
 					$VehicleType=$_SESSION['TypeofVehicle'];
 					$PrevModelCriteria="1";
 					//$query= "SELECT * FROM Matchbox_Models WHERE `VehicleType` LIKE '%$VehicleType%'  OR `VehicleType2` LIKE '%$VehicleType%'";
@@ -282,8 +281,8 @@
 			
 			
 			echo "<p>No. Found: " . $rows . "</p>";
-			if ($rows==0) {
-				?>
+			?>
+			<?php if ($rows==0) { ?>
 				<h3>Why Were No Matches Found?</h3>
 				<ul>
 				<li>The Database is still being built! Check <a href="website-updates.php">Website Updates</a> to see current status.</li>
@@ -292,11 +291,7 @@
 				<li>There may be a database error! If you are certain the outcome is incorrect, please send details to me at info@mbx-u.com (or using the <a href="User_Upload.php">Upload</a> feature available if you have an account)</li>
 				</ul>
 				<p>Additional tips for searching are contained on the 'Tips' related page listed below</p>
-			<?php
-			}
-			?>
-		
-			
+			<?php } ?>			
 	</div>
 </div>
 
