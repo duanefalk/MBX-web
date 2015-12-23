@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "About";
+	$pageDescription = "Frequently Asked Questions about the Matchbox University website.";
 	include("includes/header.php");
 ?>
 

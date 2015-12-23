@@ -2,6 +2,7 @@
 	ob_start();
 	require_once("includes/db_connection.php");
 	$pageTitle = "Links &amp; References";
+	$pageDescription = "Credits to the many friends of Matchbox University who contribute their photos to our database.";
 	include("includes/header.php");
 	include("includes/functions.php"); 
 ?>
@@ -57,7 +58,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="/about">About the Site</a>
+		<a href="About_site.php">About the Site</a>
 		<a href="DB_explain.php">About the Database</a>
 		<a href="MB_Code_System.php">The Code System</a>
 		<a href="Ref_files.php">Reference Files</a>

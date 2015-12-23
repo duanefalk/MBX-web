@@ -23,7 +23,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="/about">About the Site</a>
+		<a href="About_site.php">About the Site</a>
 		<a href="DB_explain.php">About the Database</a>
 		<a href="MB_Code_System.php">The Code System</a>
 		<a href="About_photos.php">Links & Photo References</a>
