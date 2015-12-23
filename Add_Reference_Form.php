@@ -1,6 +1,9 @@
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
+<?php 
+	require_once("includes/db_connection.php");
+	require_once("includes/functions.php");
+	$pageTitle = "Add a Reference";
+	include("includes/header.php");
+?>
 
 <div class="row">
 	<div class="large-12 columns">

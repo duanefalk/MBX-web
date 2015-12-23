@@ -1,6 +1,10 @@
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
+<?php 
+	require_once("includes/db_connection.php");
+	require_once("includes/functions.php");
+	$pageTitle = "Processing a new Model";
+	include("includes/header.php");
+?>
+
 <?php
 
     // NOTE: CHECK OUT MYSQL_PREP FUNCTION TO CLEAN UP STRINGS

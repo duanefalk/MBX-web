@@ -1,6 +1,9 @@
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
+<?php 
+	require_once("includes/db_connection.php");
+	require_once("includes/functions.php");
+	$pageTitle = "Administrative Menu";
+	include("includes/header.php");
+?>
 
 <div class="row" id="addMenu">
 	<div class="large-12 columns">

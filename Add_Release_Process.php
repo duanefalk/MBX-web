@@ -1,32 +1,9 @@
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
-<!--Fields:
-        UMID
-        VerID
-        VarID
-        RelID
-        RelYr
-        CountryofSale
-        Theme
-        Line
-        Series
-        SeriesID
-        ShowSeriesID
-        PkgName
-        MdlNameOnPkg
-        SubSeries
-        SubSeriesID
-        ShowSubseriesID
-        UnitTyp
-        PkgID
-        PkgVarCd
-        
-        RelComm
-        
-        RelPkgPhotoRef
--->
-
+<?php 
+	require_once("includes/db_connection.php");
+	require_once("includes/functions.php");
+	$pageTitle = "Processing a new Release";
+	include("includes/header.php");
+?>
 <?php
     $UMID=$_POST['UMID'];
     $VerID=$_POST['VERID1'];
@@ -58,30 +35,6 @@
     $RelComm=$_POST['RelComm'];
     //$RelPkgPhotoName=$_POST['RelPkgPhotoName'];
     $RelPkgPhotoRef=$_POST['RelPkgPhotoRef'];
-    
-
-    //echo $UMID."<br />";
-    //echo $VerID."<br />";
-    //echo $VarID."<br />";
-    //echo $RelID."<br />";
-    //echo $RelYr."<br />";
-    //echo $CountryOfSale."<br />";
-    //echo $Theme."<br />";
-    //echo $Line."<br />";
-    //echo $Series."<br />";
-    //echo $SeriesID."<br />";
-    //echo $ShowSeriesID."<br />";
-    //echo $PkgName."<br />";
-    //echo $MdlNameOnPkg."<br />";
-    //echo $SubSeries."<br />";
-    //echo $SubSeriesID."<br />";
-    //echo $ShowSubSeriesID."<br />";
-    //echo $UnitTyp."<br />";
-    //echo $PkgID."<br />";
-    //echo $PkgVarCd."<br />";
-    //echo $RelComm."<br />";
-    //echo $RelPkgPhotoName."<br />";
-    //echo $RelPkgPhotoRef."<br />";
     
    
     $query="INSERT INTO Matchbox_Releases (UMID, VerID, VarID, RelID, RelYr, CountryOfSale, Theme, Line, Series, SeriesID, ShowSeriesID,

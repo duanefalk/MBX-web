@@ -1,15 +1,9 @@
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
-
-    <!-- fields:
-    RefType
-    RefCode
-    RefName
-    RefDetails
-    RefComment
-    -->	
-
+<?php 
+	require_once("includes/db_connection.php");
+	require_once("includes/functions.php");
+	$pageTitle = "Processing a new Package Type";
+	include("includes/header.php");
+?>
 <?php
     $RefCode=$_POST['RefCode'];
     $RefType=$_POST['RefType'];
@@ -17,17 +11,13 @@
     $RefDetails=$_POST['RefDetails'];
     $RefComment=$_POST['RefComment'];
 
- 
-    
     echo $RefCode."<br />";
     echo $RefType."<br />";
     echo $RefName."<br />";  
     echo $RefDetails."<br />";
     echo $RefComment."<br />";
 
-
-    
-    $query="INSERT INTO Matchbox_References (RefType, RefCode, RefName, RefDetails, RefComment)
+   $query="INSERT INTO Matchbox_References (RefType, RefCode, RefName, RefDetails, RefComment)
             VALUES ('$RefType','$RefCode','$RefName','$RefDetails','$RefComment')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;

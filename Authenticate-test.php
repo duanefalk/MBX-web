@@ -4,11 +4,11 @@
 	session_start();
 	$_SESSION['Sec_Lvl']=1;
 	$pageTitle = "Login";
+	require_once("includes/db_connection.php");
+	require_once("includes/functions.php");
+	$pageTitle = "Log In";
+	include("includes/header.php");
 ?>
-
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
 
 <title>Basic Login</title>
 

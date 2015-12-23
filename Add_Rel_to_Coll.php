@@ -1,18 +1,16 @@
 <?php
-ob_start();
-// we must never forget to start the session
-session_start();
+	ob_start();
+	session_start();
+	require_once("includes/db_connection.php");
+	$pageTitle = "Add Release to Collection";
+	include("includes/header.php");
+	include("includes/functions.php");
 ?>
-
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header.php"); ?>
-<?php include("includes/functions.php"); ?>
 
 <div class="row">
 	<div class="large-12 columns">
 		
-		<h2>Add a Release to Collection</h2>
-		
+		<h2>Add a Release to Collection</h2>		
 		
 		<?php
 		    if (isset($_POST['rel_coll_submit'])) {
