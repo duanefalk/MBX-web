@@ -1,12 +1,11 @@
-<?php ob_start(); ?>
-<?php
-// we must never forget to start the session
-session_start();
+<?php 
+	ob_start();
+	session_start();
+	$pageTitle = "Processing a new Account";
+	require_once("includes/db_connection.php");
+	require_once("includes/functions.php");
+	include("includes/header.php");
 ?>
-
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
 
 <!-- fields:
     Username

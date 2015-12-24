@@ -1,12 +1,8 @@
-<?php ob_start();
-	// we must never forget to start the session
-	session_start();
-?>
-
 <?php 
+	ob_start();
+	session_start();
 	require_once("includes/db_connection.php");
-	
-	$pageTitle = "Collections";
+	$pageTitle = "Manage Your Collection";
 	include("includes/header.php"); 
 	require_once("includes/functions.php");
 ?>

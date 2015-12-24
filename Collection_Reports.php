@@ -22,32 +22,6 @@
 				<a href="Collection_Report_W.php" class="button dark">Wishlist Report</a>
 			</div>			
 		</div>
-		<!--div class="large-4 columns">
-	    	<a href="Collection Report_B" class="button dark">Models from a Seller</a>
-	    </div-->
-	    <!--div class="large-4 columns">   
-	        <a href="Collection Report_C" class="button dark">Summary for all Sellers</a>
-	    </div-->
-		<!--div class="large-4 columns">   
-	        <a href="Collection Report_D" class="button dark">List all variations of a Model- by UMID</a>
-	    </div-->
-	    <!--div class="large-4 columns">   
-	        <a href="Collection Report_E" class="button dark">List all variations of a Model- by MAN#</a>
-	    </div-->
-	    <!--div class="large-4 columns">   
-	        <a href="Collection Report_F" class="button dark">List all variations of a Model by Mack #</a>
-	    </div-->
-		<!--div class="large-4 columns">   
-	        <a href="Collection Report_I" class="button dark">Models in poor/fair condition</a>
-	    </div-->
-	    <!--div class="large-4 columns">   
-	        <a href="Collection Report_J" class="button dark">Models by release Series</a>
-	    </div-->
-		<!--div class="large-4 columns end">   
-	        <a href="Collection_Report_K.php" class="button dark">Collection by Year</a>
-	    </div-->
-		
-		
 	</div>
 </section>
 		

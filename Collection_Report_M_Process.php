@@ -1,10 +1,10 @@
 <?php
-// we must never forget to start the session
-session_start();
+	session_start();
+	require_once("includes/db_connection.php");
+	$pageTitle = "Processing Your Collection Search";
+	include("includes/header.php");
+	include("includes/functions.php");
 ?>
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header.php"); ?>
-<?php include("includes/functions.php"); ?>
 
 
 <div class="row">

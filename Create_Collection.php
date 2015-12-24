@@ -1,13 +1,11 @@
 <?php
-ob_start();
-// we must never forget to start the session
-session_start();
-?>
-
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
-    
+	ob_start();
+	session_start();
+	require_once("includes/db_connection.php");
+	require_once("includes/functions.php");
+	$pageTitle = "Create a Collection";
+	include("includes/header.php");
+?>    
     
 <div class="row">
 	<div class="large-12 columns">

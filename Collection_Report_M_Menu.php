@@ -1,10 +1,10 @@
 <?php
-// we must never forget to start the session
-session_start();
+	session_start();
+	require_once("includes/db_connection.php");
+	$pageTitle = "Search Your Collection";
+	include("includes/header.php");
+	include("includes/functions.php");
 ?>
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header.php"); ?>
-<?php include("includes/functions.php"); ?>
 
 <?php $User=$_SESSION['Username']; ?>
 <div class="large-12 columns">
@@ -142,22 +142,22 @@ session_start();
 									
 							$result = mysql_query($query);
 							if (result) {
-                                                            $rows_count= mysql_num_rows($result);
-                                                            // echo "Rows Count: ".$rows_count."<br />";
-                                                            ?>
-                                                            <select name="Seller" id="Seller" >
-                                                            <?php
-                                                                for ($i=1; $i<=$rows_count; $i++) {
-                                                                    $row=mysql_fetch_array($result);
-                                                                    echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
-                                                                }
-                                                            ?>
-                                                            </select>     
-                                                        <?php
-                                                        } else {
-                                                            echo "You haven't defined any sellers";
-                                                        }     
-                                                        ?>        
+                                $rows_count= mysql_num_rows($result);
+                                // echo "Rows Count: ".$rows_count."<br />";
+                                ?>
+                                <select name="Seller" id="Seller" >
+                                <?php
+                                    for ($i=1; $i<=$rows_count; $i++) {
+                                        $row=mysql_fetch_array($result);
+                                        echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
+                                    }
+                                ?>
+                                </select>     
+                            <?php
+                            } else {
+                                echo "You haven't defined any sellers";
+                            }     
+                            ?>        
 					</div>
 				</dd>
 			</dl>
@@ -173,22 +173,22 @@ session_start();
 									
 							$result = mysql_query($query);
 							if ($result) {
-                                                            $rows_count= mysql_num_rows($result);
-                                                            // echo "Rows Count: ".$rows_count."<br />";
-                                                            ?>
-                                                            <select name="Location" id="Location" >
-                                                            <?php
-                                                                for ($i=1; $i<=$rows_count; $i++) {
-                                                                    $row=mysql_fetch_array($result);
-                                                                    echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
-                                                                }
-                                                            ?>
-                                                            </select>     
-                                                        <?php
-                                                        } else {
-                                                            echo "You haven't defined any locations";
-                                                        }     
-                                                        ?>        
+                                $rows_count= mysql_num_rows($result);
+                                // echo "Rows Count: ".$rows_count."<br />";
+                                ?>
+                                <select name="Location" id="Location" >
+                                <?php
+                                    for ($i=1; $i<=$rows_count; $i++) {
+                                        $row=mysql_fetch_array($result);
+                                        echo '<option value="'.$row["Coll_List_Value"].'">'.$row["Coll_List_Value"].'</option'."<br />";
+                                    }
+                                ?>
+                                </select>     
+                            <?php
+                            } else {
+                                echo "You haven't defined any locations";
+                            }     
+                            ?>        
 					</div>
 				</dd>
 			</dl>
@@ -220,21 +220,21 @@ session_start();
 						<input type=checkbox name="Cond_Check" id="Cond_Check" />
 						<label for="Cond_Check">Vehicles with condition of:</label>
 						<?php
-                                                        //find users cond scheme
-                                                        $query=("SELECT * FROM MBXU_User_Accounts WHERE Username= '$User'");
-                                                        $result = mysql_query($query);
-                                                        if ($result) {
-                                                            $row=mysql_fetch_array($result);
-                                                            $Veh_Cond_Scheme= $row['Veh_Cond_Scheme'];
-                                                            if ($Veh_Cond_Scheme=="1") {
-                                                                $Veh_Cond_Typ="Num_Cond";
-                                                            } else {
-                                                                $Veh_Cond_Typ="Alpha_Cond";
-                                                            }
-                                                        } else {
-                                                            echo "Database error- no account found";
-                                                            exit;
-                                                        }
+	                        //find users cond scheme
+	                        $query=("SELECT * FROM MBXU_User_Accounts WHERE Username= '$User'");
+	                        $result = mysql_query($query);
+	                        if ($result) {
+	                            $row=mysql_fetch_array($result);
+	                            $Veh_Cond_Scheme= $row['Veh_Cond_Scheme'];
+	                            if ($Veh_Cond_Scheme=="1") {
+	                                $Veh_Cond_Typ="Num_Cond";
+	                            } else {
+	                                $Veh_Cond_Typ="Alpha_Cond";
+	                            }
+	                        } else {
+	                            echo "Database error- no account found";
+	                            exit;
+	                        }
                                                 									
                                                         //display that list and get selection
 							$query2=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%$Veh_Cond_Typ%'");																	
@@ -244,15 +244,15 @@ session_start();
 								// echo "Rows Count: ".$rows_count."<br />";
 								echo "<select name=\"VehCond\" id=\"VehCond\" >";	                                                        
 								for ($i=1; $i<=$rows_count2; $i++) {
-                                                                    $row2=mysql_fetch_array($result2);
-                                                                    echo '<option value="'.$row2["ValueListEntry"].'">'.$row2["ValueListEntry"].'</option'."<br />";
-                                                                }
-								echo "</select>";     
-                                                        } else {
-                                                            echo "Database error- no condition entries found";
-                                                            exit;
-                                                        }     
-                                                ?>        
+                                    $row2=mysql_fetch_array($result2);
+                                    echo '<option value="'.$row2["ValueListEntry"].'">'.$row2["ValueListEntry"].'</option'."<br />";
+                                }
+									echo "</select>";     
+                                } else {
+		                            echo "Database error- no condition entries found";
+	                                exit;
+                                }     
+                            ?>        
 					</div>
 				</dd>
 			</dl> 
@@ -294,7 +294,7 @@ session_start();
 		<div class="large-12 columns">
 			<input type="submit" class="button dark" name="submit" value="Search" />
 		
-			<a class="button cancel" href="Search_Models_Menu.php">Clear</a>
+			<a class="button cancel" href="Collection_Report_M_Menu.php">Clear</a>
 		</div>
 		
 	</div>

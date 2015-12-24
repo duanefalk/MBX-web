@@ -1,5 +1,4 @@
 <?php
-
 define("DB_SERVER","localhost");
 define("DB_USER","root");
 define("DB_PASS","bandit");
@@ -7,7 +6,7 @@ define("DB_NAME","MBX DB");
 
 // 1. create connection
 $connection= mysql_connect(DB_SERVER,DB_USER,DB_PASS);
-if(!$connection) {
+if (!$connection) {
 	echo "Database connection failed ";
 }
 else {
