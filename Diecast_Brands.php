@@ -1,5 +1,7 @@
-<?php include("includes/header.php"); ?>
-
+<?php 
+	$pageTitle = "Brands of Diecast Cars";
+	include("includes/header.php");
+?>
 <div class="row">
 	<div class="large-12 columns">
 		<h2>MBX 101: Brands of Diecast Cars</h2>

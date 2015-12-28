@@ -1,5 +1,5 @@
 <?php 
-	$pageTitle = "The MBX Database";	
+	$pageTitle = "The MBX Database";
 	include("includes/header.php"); 
 ?>
 

@@ -1,12 +1,11 @@
-<?php ob_start(); ?>
-<?php
-// we must never forget to start the session
-session_start();
+<?php 
+	ob_start();
+	session_start();
+	$pageTitle = "Delete Model from Collection";
+	require_once("includes/db_connection.php");
+	include("includes/header.php");
+	include("includes/functions.php");
 ?>
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header.php"); ?>
-<?php include("includes/functions.php"); ?>
-
 <?php
     if (isset($_POST['del_submit'])) {
    

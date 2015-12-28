@@ -1,7 +1,7 @@
-<?php ob_start();
-	// we must never forget to start the session
+<?php 
+	ob_start();
 	session_start();
-
+	$pageTitle = "Processing new Variation/Release";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");

@@ -1,14 +1,12 @@
 <?php
-// we must never forget to start the session
-session_start();
-$Sec_Lvl=$_SESSION['Sec_Lvl'];
-$Code2_Pref=$_SESSION['Code2_Pref'];
-
+	session_start();
+	$Sec_Lvl=$_SESSION['Sec_Lvl'];
+	$Code2_Pref=$_SESSION['Code2_Pref'];
+	$pageTitle = "Microvariations";
+	require_once("includes/db_connection.php");
+	include("includes/header.php");
+	include("includes/functions.php");
 ?>
-
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header.php"); ?>
-<?php include("includes/functions.php"); ?>
 
 <div class="row">
 	<div class="large-12 columns">
