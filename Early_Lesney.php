@@ -1,13 +1,13 @@
-<?php include("includes/header.php"); ?>
+<?php 
+	$pageTitle = "Lesney Toys";
+	include("includes/header.php");
+?>
 
 <div class="row">
 	<div class="large-12 columns">
 		<h2>MBX 101: Lesney Toys Before Matchbox Cars</h2>
 		<p>Matchbox cars were not...</p>
-
-		<ul type="I">
-		</ul>
-	
+		<ul type="I"></ul>	
 	</div>
 </div>
 
