@@ -2,11 +2,10 @@
 	ob_start();
 	session_start();
 	$pageTitle = "Manage Collection";
+	require_once("includes/db_connection.php");
+	require_once("includes/functions.php");
+	include("includes/header.php");
 ?>
-
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
             
 <section class="row">
 	<div class="large-12 columns">

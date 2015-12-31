@@ -1,8 +1,11 @@
-<?php include("includes/header.php"); ?>
+<?php
+	$pageTitle = "Organizing Matchbox Cars";
+	include("includes/header.php"); 	
+?>
 
 <div class="row">
 	<div class="large-12 columns">
-		<h2>MBX 101: Qays of Organizing Matchbox Cars</h2>
+		<h2>MBX 101: Ways of Organizing Matchbox Cars</h2>
 		<p>So you have a pile of Matchbox cars...</p>
 
 		<ul type="I">
