@@ -1,13 +1,12 @@
-<?php include("includes/header.php"); ?>
-
+<?php 
+	$pageTitle = "How Diecast Cars Are Made";
+	include("includes/header.php");
+?>
 <div class="row">
 	<div class="large-12 columns">
 		<h2>MBX 101: How Are Diecast Cars Made?</h2>
 		<p>Diecast refers to a process where...</p>
-
-		<ul type="I">
-		</ul>
-	
+		<ul type="I"></ul>	
 	</div>
 </div>
 
