@@ -1,11 +1,10 @@
 <?php
-// we must never forget to start the session
-session_start();
+	session_start();
+	$pageTitle = "Add Model to Your Collection";
+	require_once("includes/db_connection.php");
+	require_once("includes/functions.php");
+	include("includes/header.php");
 ?>
-
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
-<?php include("includes/header.php"); ?>
 <?php
     require_once("includes/db_connection.php");
     if (isset($_POST['Create_Coll_Submit'])) {

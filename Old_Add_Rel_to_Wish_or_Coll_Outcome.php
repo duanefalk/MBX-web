@@ -1,22 +1,16 @@
 <?php
-// we must never forget to start the session
-session_start();
+	session_start();
+	$pageTitle = "Release Successfully Added";
+	require_once("includes/db_connection.php");
+	include("includes/header.php");
+	include("includes/functions.php");
 ?>
-
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header.php"); ?>
-<?php include("includes/functions.php"); ?>
-
 <div class="row">
 	<div class="large-12 columns">
-		
 		<h2>Release Successfully Added!</h2>
-		<p><a class='button dark' href="Search_Models_Menu.php">Return to Search</a></p>
-		
+		<p><a class='button dark' href="Search_Models_Menu.php">Return to Search</a></p>		
     </div>
 </div>
-
-
 <!-- Sub Menu -->
 <div class="row" id="subNav">
 	<div class="large-12 columns">
@@ -26,6 +20,5 @@ session_start();
 		<a href="Update_Mdls_in_Coll.php">Update Models in Your Collection</a>
 		<a href="index.php">Return to Main Page</a>		
 	</div>
-</div>
-         
+</div>         
 <?php include("includes/footer.php"); ?>
