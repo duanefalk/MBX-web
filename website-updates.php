@@ -8,7 +8,20 @@
 	<div class="large-9 columns">
 	
 		<h2>Latest Website Updates</h2>
-
+	
+		<div class="section">
+			<p class="date">January 4, 2016</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0139">Hondarora Motorcycle (SF0139)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0138">Mini-Ha-Ha (SF0138)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0136">De Tomaso Pantera (SF0136)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0135">Seafire Boat (SF0135)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0133">Weasel (SF0133)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0130">Stoat (SF0130)</a></li>
+			</ul>
+		</div>	
+		
+		
 		<div class="section">
 			<p class="date">December 18, 2015</p>
 			<ul>
