@@ -1,13 +1,11 @@
 <?php 
 	ob_start();
+	session_start();
+	$pageTitle = "Search Models";
 	require_once("includes/db_connection.php");
-	$pageTitle = "Search Models";	
 	include("includes/header.php");	
 	include("includes/functions.php");
-	session_start();
 ?>
-
-
 <div class="row">
 	<div class="large-12 column">
 		<h2>Matching Models</h2>

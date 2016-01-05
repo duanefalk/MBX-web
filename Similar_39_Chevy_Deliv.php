@@ -1,5 +1,7 @@
-<?php include("includes/header.php"); ?>
-
+<?php
+	$pageTitle = "Differences Between Superfast 1939 Chevy Sedan Delivery Models";
+	include("includes/header.php");
+?>
 <div class="row">
 	<div class="large-12 columns">
 		<h2>Differences Between Superfast 1939 Chevy Sedan Delivery Models</h2>

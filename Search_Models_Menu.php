@@ -1,9 +1,9 @@
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
 <?php
+	session_start();
 	$pageTitle = "Search Models";
 	include("includes/header.php");
-	session_start();
+	require_once("includes/db_connection.php");	
+	require_once("includes/functions.php");
 ?>
 
 <?php

@@ -1,7 +1,7 @@
 <?php 
+	$pageTitle = "Search Releases";
 	require_once("includes/db_connection.php");
 	require_once("includes/functions.php");
-	$pageTitle = "Search Releases";
 	include("includes/header.php");
 ?>
 
