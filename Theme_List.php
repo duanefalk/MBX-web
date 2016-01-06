@@ -1,5 +1,7 @@
-<?php include("includes/header.php"); ?>
-
+<?php 
+	$pageTitle = "Release Themes";
+	include("includes/header.php");
+?>
 <div class="row">
 	<div class="large-12 columns">
 	<a href="Reference_List.php" class="button dark">Photos Sources & Other Links</a>

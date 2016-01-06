@@ -1,5 +1,4 @@
 <?php 
-	//require_once("includes/urls.php");	
 	session_start();
 	require_once("includes/functions.php");
 	require_once("includes/db_connection.php");	

@@ -1,8 +1,8 @@
-<?php require_once("includes/db_connection.php"); ?>
-<?php require_once("includes/functions.php"); ?>
 <?php 
-	$pageTitle = "Upload";
+	$pageTitle = "Upload a File";
 	include("includes/header.php");
+	require_once("includes/db_connection.php");
+	require_once("includes/functions.php");
 ?>
 
 <div class="row">

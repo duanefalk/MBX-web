@@ -1,12 +1,11 @@
-<?php ob_start(); ?>
-<?php
-// we must never forget to start the session
-session_start();
+<?php 
+	ob_start();
+	$pageTitle = "Processing Collection Model Update";
+	session_start();
+	require_once("includes/db_connection.php");
+	include("includes/header.php");
+	include("includes/functions.php");
 ?>
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header.php"); ?>
-<?php include("includes/functions.php"); ?>
-
 <?php
     if (isset($_POST['var_coll_submit'])) {
 

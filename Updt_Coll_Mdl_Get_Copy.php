@@ -1,21 +1,19 @@
-<?php ob_start(); ?>
 <?php
-// we must never forget to start the session
-session_start();
+	ob_start();
+	session_start();
+	$pageTitle = "View/Update/Delete Model in Collection";
+	require_once("includes/db_connection.php");
+	include("includes/header.php");
+	include("includes/functions.php");
 ?>
-
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header.php"); ?>
-<?php include("includes/functions.php"); ?>
-
 <?php
     if (isset($_POST['var_copy_submit'])) {
-	$VarID=$_POST['Coll_VarID'];
-	$Copy=$_POST['Coll_Copy'];
-	$location="Updt_Coll_Mdl_Process.php?model=".$VarID."&copy=".$Copy;	
-	redirect_to($location);
+		$VarID=$_POST['Coll_VarID'];
+		$Copy=$_POST['Coll_Copy'];
+		$location="Updt_Coll_Mdl_Process.php?model=".$VarID."&copy=".$Copy;	
+		redirect_to($location);
 	} 
-//if post not set do initial form 
+	//if post not set do initial form 
 ?>
 
 <div class="row">
