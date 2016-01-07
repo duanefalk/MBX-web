@@ -1,24 +1,19 @@
 <?php 
-	$pageTitle = "About";
+	$pageTitle = "Website Feedback";
 	include("includes/header.php");
 ?>
-
-
 <div class="row">
 	<div class="large-12 columns">
 	
 		<h2>Website Feedback</h2>
 		<p>Please email us with your feedback at <a href="mailto:info@mbx-u.com?bcc=djf@duncanfalk.com">info@mbx-u.com</a>.</p>
 		
-		<!--form action="<?php ROOTURL; ?>/includes/mail.php" method="POST">
-			
-			[still working on this] : http://www.1stwebdesigner.com/custom-php-contact-forms/
-			
+		<!--form action="<?php ROOTURL; ?>/includes/mail.php" method="POST">			
+			[still working on this] : http://www.1stwebdesigner.com/custom-php-contact-forms/			
 		</form-->
 						
 	</div>
 </div>
-
 <!-- Sub Menu -->
 <div class="row" id="subNav">
 	<div class="large-12 columns">
@@ -30,5 +25,4 @@
 		<a href="Dedication.php">Dedication</a>
 	</div>
 </div>
-
 <?php include("includes/footer.php"); ?>

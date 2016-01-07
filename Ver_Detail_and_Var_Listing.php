@@ -1,6 +1,9 @@
-<?php require_once("includes/db_connection.php"); ?>
-<?php include("includes/header.php"); ?>
-<?php include("includes/functions.php"); ?>
+<?php 
+	$pageTitle = "Version Details Page";
+	require_once("includes/db_connection.php");
+	include("includes/header.php");
+	include("includes/functions.php");
+?>
 
 <div class="row">
 	<div class="large-12 columns">
