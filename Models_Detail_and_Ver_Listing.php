@@ -3,7 +3,8 @@
 	$Sec_Lvl=$_SESSION['Sec_Lvl'];
 	$Code2_Pref=$_SESSION['Code2_Pref'];
 	$Username=$_SESSION['Username'];
-	$pageTitle = "Models Detail Page";
+	$model_for_detail=$_GET["model"]; //get model number up here so we can use in Page's <title> (line 7)
+	$pageTitle = $model_for_detail . " Model Details";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
@@ -13,13 +14,10 @@
 	<div class="large-12 columns">
 		<!-- ADDED COMMENT -->
 		<h2>Models Detail Page</h2>
-		
-			
-		<!--<p><a href="http://localhost/~Falk/MBX_Web_Site_Test/IMAGES/TEST.doc">CLICK TO DOWNLOAD FILE</a></p>-->
 			
 		<?php
 			//show model header info
-			$model_for_detail=$_GET["model"];
+			
 			
 			$query2= ("SELECT * FROM Matchbox_Models WHERE UMID LIKE '%$model_for_detail%'");
 			$result2 = mysql_query($query2);
