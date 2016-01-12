@@ -2,6 +2,7 @@
 	require_once("includes/db_connection.php");
 	require_once("includes/functions.php");
 	$pageTitle = "Add a Package Type";
+	$pageDescription = "Add a new Package Type to the Matchbox University collector's database.";
 	include("includes/header.php");
 ?>
 

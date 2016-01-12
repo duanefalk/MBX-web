@@ -2,6 +2,7 @@
 	require_once("includes/db_connection.php");
 	require_once("includes/functions.php");
 	$pageTitle = "Add a Model";
+	$pageDescription = "Add a new Model to the Matchbox University collector's database.";
 	include("includes/header.php");
 ?>
 
