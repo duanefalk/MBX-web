@@ -2,6 +2,7 @@
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	$pageTitle = "Add Release to Wishlist or Collection";
+	$pageDescription = "Add this matchbox model release to your collection.";
 	include("includes/functions.php");
 ?>
 

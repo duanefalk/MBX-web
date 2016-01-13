@@ -3,6 +3,7 @@
 	session_start();
 	require_once("includes/db_connection.php");
 	$pageTitle = "Add Release to Collection";
+	$pageDescription = "Add this matchbox model release to your collection.";
 	include("includes/header.php");
 	include("includes/functions.php");
 ?>

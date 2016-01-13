@@ -3,6 +3,7 @@
 	session_start();
 	require_once("includes/db_connection.php");
 	$pageTitle = "Add a Collection Code";
+	$pageDescription = "Add a Location or Collector Collection Code to your collection.";
 	include("includes/header.php");
 	require_once("includes/functions.php");
 ?>

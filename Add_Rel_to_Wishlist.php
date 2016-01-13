@@ -3,6 +3,7 @@
 	session_start();
 	require_once("includes/db_connection.php");
 	$pageTitle = "Add Release to Wishlist";
+	$pageDescription = "Add a this matchbox model release to your wishlist collection.";
 	include("includes/header.php");
 	include("includes/functions.php");
 ?>
