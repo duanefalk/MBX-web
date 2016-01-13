@@ -89,6 +89,7 @@
 					<div class="banner four">
 						<h2>Create an Account on MBX-U</h2>
 						<p>There are several benefits to creating an account on the Matchbox University site including a free code 2 vehicle!</p>
+						<p>NOTE: We are currently out of code 2 cars. If you create an account, your name will be put on the pending list and a car will be sent as soon as we can have more made.</p>
 						<p>Click on Create an Account, above, to get set up.</p>
 						<p><a href="Create_User_Account_Form.php" class="button">Get Started</a></p>
 					</div>
