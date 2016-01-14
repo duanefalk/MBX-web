@@ -4,7 +4,7 @@
 	$Code2_Pref=$_SESSION['Code2_Pref'];
 	$Username=$_SESSION['Username'];
 	require_once("includes/db_connection.php");
-	$pageTitle = "All Variations";
+	$pageTitle = "All Variations within the Matchbox University database";
 	include("includes/header.php");
 	include("includes/functions.php");
 ?>

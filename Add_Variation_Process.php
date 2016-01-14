@@ -2,6 +2,7 @@
 	require_once("includes/db_connection.php");
 	require_once("includes/functions.php");
 	$pageTitle = "Processing a new Variation";
+	$pageDescription = "Processing the addition of a new Variation to the Matchbox University collector's database.";
 	include("includes/header.php");
 ?>
 

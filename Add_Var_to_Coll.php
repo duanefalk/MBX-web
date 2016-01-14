@@ -3,6 +3,7 @@
 	session_start();
 	require_once("includes/db_connection.php");
 	$pageTitle = "Add Variation to Collection";
+	$pageDescription = "Add this matchbox model Variation to your collection.";
 	include("includes/header.php");
 	include("includes/functions.php");
 ?>

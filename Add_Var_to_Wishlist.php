@@ -3,6 +3,7 @@
 	session_start();
 	require_once("includes/db_connection.php");
 	$pageTitle = "Add Variation to Wishlist";
+	$pageDescription = "Add this Variation to your collection wishlist.";
 	include("includes/header.php");
 	include("includes/functions.php");
 ?>
