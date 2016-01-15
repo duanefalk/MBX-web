@@ -339,10 +339,11 @@
 				} else {
 					echo "<p id=\"photoref\">Photo by: no reference listed"."</p>";
 				}
-				echo "<p>Model UMID: ". $row["UMID"]."</p>";
-				echo "<p>MAN#: ".$row["FAB_No"]. "  Mack No.: ".$row["Master_Mack_No"]."</p>";
-				echo "<p>Master Name: ".$row["MasterModelName"]."</p>";
-				echo "<p>First Rel Dt: ".$row["YrFirstProduced"]."</p>";
+				echo "<p><strong>Model UMID:</strong> ". $row["UMID"]."</p>";
+				echo "<p><strong>MAN#:</strong> ".$row["FAB_No"]. "</p>";
+				echo "<p><strong>Mack No.:</strong> ".$row["Master_Mack_No"]."</p>";
+				echo "<p><strong>Master Name:</strong> ".$row["MasterModelName"]."</p>";
+				echo "<p><strong>First Rel Dt:</strong> ".$row["YrFirstProduced"]."</p>";
 				echo "</li>";
 			} ?>
 		
