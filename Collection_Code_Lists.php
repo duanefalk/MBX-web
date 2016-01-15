@@ -1,6 +1,7 @@
 <?php 
-	require_once("includes/db_connection.php");
 	$pageTitle = "Manage Code Lists";
+	$pageDescription = "Manage your Matchbox University car collection Seller and Location codes.";
+	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	require_once("includes/functions.php");
 ?>

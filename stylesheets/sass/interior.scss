@@ -183,3 +183,10 @@ body.search_releases {
 /* -- COLLECTION REPORTS: WISHLIST -- */
 #overflow {overflow-x:scroll; margin-bottom:2em;}
 /* -- end COLLECTION REPORTS: WISHLIST -- */
+
+/* -- COLLECTION REPORT M MENU -- */
+body.search_your_collection {
+	.formRow {
+		label,input[type="radio"] {display:inline-block;}
+	}
+}

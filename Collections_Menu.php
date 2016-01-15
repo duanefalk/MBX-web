@@ -1,8 +1,9 @@
 <?php 
 	ob_start();
 	session_start();
-	require_once("includes/db_connection.php");
 	$pageTitle = "Manage Your Collection";
+	$pageDescription = "Manage your own Matchbox University car collection.";
+	require_once("includes/db_connection.php");
 	include("includes/header.php"); 
 	require_once("includes/functions.php");
 ?>

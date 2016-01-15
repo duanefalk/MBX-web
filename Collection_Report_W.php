@@ -1,7 +1,8 @@
 <?php
 	session_start();
-	require_once("includes/db_connection.php");
 	$pageTitle = "Collection Wishlist";
+	$pageDescription = "View a report of your Matchbox University car collection wishlist.";
+	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
 ?>

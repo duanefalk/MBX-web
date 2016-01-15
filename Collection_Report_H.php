@@ -2,6 +2,7 @@
 	session_start();
 	require_once("includes/db_connection.php");
 	$pageTitle = "Seller Summary";
+	$pageDescription = "View a report of your Matchbox University car collection Sellers.";
 	include("includes/header.php");
 	include("includes/functions.php");
 ?>

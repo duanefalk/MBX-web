@@ -1,5 +1,6 @@
 <?php 	
 	$pageTitle = "Collection Reports";
+	$pageDescription = "View reports about your own Matchbox University car collection.";
 	include("includes/header.php");
 ?>
 

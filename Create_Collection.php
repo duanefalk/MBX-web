@@ -1,9 +1,10 @@
 <?php
 	ob_start();
 	session_start();
+	$pageTitle = "Create a Collection";
+	$pageDescription = "Create your own Matchbox University car collection.";
 	require_once("includes/db_connection.php");
 	require_once("includes/functions.php");
-	$pageTitle = "Create a Collection";
 	include("includes/header.php");
 ?>    
     
