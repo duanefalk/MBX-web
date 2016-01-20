@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "The MBX Database";
+	$pageDescription = "The Matchbox University database adds the record-keeping consistency that Lesney, Mattel never provided. Here we describe how our Model, Version, Variation, and Releases cataloging will help organize your collection.";
 	include("includes/header.php"); 
 ?>
 

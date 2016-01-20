@@ -3,6 +3,7 @@
 	$Sec_Lvl=$_SESSION['Sec_Lvl'];
 	$Code2_Pref=$_SESSION['Code2_Pref'];
 	$pageTitle = "Microvariations";
+	$pageDescription = "These are the microvariations for this model.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");

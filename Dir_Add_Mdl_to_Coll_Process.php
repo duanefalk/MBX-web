@@ -2,6 +2,7 @@
 	ob_start();
 	session_start();
 	$pageTitle = "Processing new Variation/Release";
+	$pageDescription = "Processing the addition of a variation or release to your Matchbox University collection.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");

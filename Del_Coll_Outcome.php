@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	$pageTitle = "Collection Successfully Deleted";
+	$pageDescription = "Processing the deletion of a Seller or Location code from your Matchbox University collection.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php"); 

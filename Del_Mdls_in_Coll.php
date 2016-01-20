@@ -2,6 +2,7 @@
 	ob_start();
 	session_start();
 	$pageTitle = "Delete Model from Collection";
+	$pageDescription = "Delete a Model from your Matchbox University collection.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");

@@ -1,6 +1,7 @@
 <?php 
 	require_once("includes/db_connection.php");
-	$pageTitle = "Add Variation/Release to Collection";	
+	$pageTitle = "Add Variation/Release to Collection";
+	$pageDescription = "Add a variation or release to your Matchbox University collection.";
 	include("includes/header.php");
 	include("includes/functions.php"); 
 ?>

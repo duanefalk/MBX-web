@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Website Dedication";
+	$pageDescription = "Dedication and thanks to those who've inspired the Matchbox University database and website.";
 	include("includes/header.php"); 
 ?>
 

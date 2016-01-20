@@ -2,6 +2,7 @@
 	ob_start();
 	session_start();
 	$pageTitle = "Delete Collection";
+	$pageDescription = "Delete a collection from your Matchbox University account.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");

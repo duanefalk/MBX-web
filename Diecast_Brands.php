@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Brands of Diecast Cars";
+	$pageDescription = "These are the makers of Diecast cars.";
 	include("includes/header.php");
 ?>
 <div class="row">

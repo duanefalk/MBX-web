@@ -2,6 +2,7 @@
 	ob_start();
 	session_start();
 	$pageTitle = "Delete Seller or Location Code";
+	$pageDescription = "Delete a Seller or Location code from your Matchbox University collection.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
