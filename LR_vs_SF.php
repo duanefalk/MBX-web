@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Regular Wheel Models versus Superfast Models";
+	$pageDescription = "The history behind the great divide between regular wheel models and superfast models.";
 	include("includes/header.php");
 ?>
 

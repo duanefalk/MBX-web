@@ -2,6 +2,7 @@
 	ob_start();
 	session_start();
 	$pageTitle = "Processing Account Edit";
+	$pageDescription = "Processing your edited Matchbox University account information.";
 	require_once("includes/db_connection.php");
 	require_once("includes/functions.php");
 	include("includes/header.php");

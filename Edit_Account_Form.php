@@ -2,6 +2,7 @@
 	ob_start();
 	session_start();
 	$pageTitle = "Edit Account";
+	$pageDescription = "Edit and updated your Matchbox University account information.";
 	$Sec_Lvl=$_SESSION['Sec_Lvl'];
 	$Username=$_SESSION['Username'];
 ?>

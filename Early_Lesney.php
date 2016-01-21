@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Lesney Toys";
+	$pageDescription = "The history of Lesney Toys, before Matchbox Cars.";
 	include("includes/header.php");
 ?>
 

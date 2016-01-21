@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "How Diecast Cars Are Made";
+	$pageDescription = "The Matchbox University discusses how diecast cars are made.";
 	include("includes/header.php");
 ?>
 <div class="row">
