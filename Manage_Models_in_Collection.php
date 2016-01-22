@@ -1,6 +1,7 @@
 <?php 
 	require_once("includes/db_connection.php");	
-	$pageTitle = "Manage Models in Collection";	
+	$pageTitle = "Manage Models in Collection";
+	$pageDescription = "Add, view, update, or delete a matchbox car model from your Matchbox University collection.";
 	include("includes/header.php");
 	require_once("includes/functions.php"); 
 ?>

@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Tips on Searching Models";
+	$pageDescription = "Tips on searching for matchbox models within the Matchbox University database.";
 	include("includes/header.php");
 ?>
 	

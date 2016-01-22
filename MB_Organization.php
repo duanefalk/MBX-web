@@ -1,5 +1,6 @@
 <?php
 	$pageTitle = "Organizing Matchbox Cars";
+	$pageDescription = "An introduction to the different ways to organize matchbox cars.";
 	include("includes/header.php"); 	
 ?>
 

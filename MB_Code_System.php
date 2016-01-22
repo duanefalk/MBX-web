@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "MBX Code System";
+	$pageDescription = "An introduction to the Matchbox car code system, detailing the differences between Code 1, Code 2, Code 3, and Code 4 models.";
 	include("includes/header.php"); 
 ?>
 

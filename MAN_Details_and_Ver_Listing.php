@@ -4,6 +4,7 @@
 	$Code2_Pref=$_SESSION['Code2_Pref'];
 	$Username=$_SESSION['Username'];
 	$pageTitle = "MAN# Versions Listing";
+	$pageDescription = "Matching matchbox cars based on your MAN# search.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");

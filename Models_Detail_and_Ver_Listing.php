@@ -5,6 +5,7 @@
 	$Username=$_SESSION['Username'];
 	$model_for_detail=$_GET["model"]; //get model number up here so we can use in Page's <title> (line 7)
 	$pageTitle = $model_for_detail . " Model Details";
+	$pageDescription = "Matchbox car model details for the " . $model_for_detail . " model.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");

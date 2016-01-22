@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "A Short History of Matchbox";
+	$pageDescription = "A short history of Matchbox cars.";
 	include("includes/header.php");
 ?>
 

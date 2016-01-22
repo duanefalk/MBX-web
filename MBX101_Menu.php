@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Matchbox 101: Learn about Matchbox";
+	$pageDescription = "Select from the following informational articles about matchbox cars.";
 	include("includes/header.php");
 ?>
 

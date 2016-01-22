@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Matching Models";
+	$pageDescription = "Matchbox cars matching your search query.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
