@@ -46,8 +46,7 @@
                         //move file
 		
                         if (move_uploaded_file($_FILES['upload']['tmp_name'], $destination.$unique_file_name)) {
-                            echo "<p>Your " . $_FILES['upload']['name'] . " file was uploaded successfully.</p>";
-                            //echo "<p>" . $_FILES['upload']['name'] . " uploaded to " . $destination . "</p>";
+	                        echo "<h4>Success! Thank you for uploading the " . $_FILES['upload']['name'] . " file.</h4>";
                             //exit;
                             $file_uploaded=1;
                         } else {
@@ -68,20 +67,32 @@
 		    $query="INSERT INTO MBXU_User_Uploads (user_input_id, user_name, user_comment, user_file_loaded) VALUES ('$new_input_id', '$upload_user_name', '$upload_comment', '$file_uploaded')";
 		    $outcome=mysql_query($query);
 		    
+			$file_output_url =  ROOTURL . "/" . UPLOAD_URL . $unique_file_name;
+		    
 		    if ($outcome) {
+			    
 			    //Mail inputs
 			    $emails = "info@mbx-u.com,duanejfalk@yahoo.com";
-			    $subject = "MBX-U: New Upload";
-			    $message = "There's a new upload from " . $upload_user_name . ".\r\nComment: " . $upload_comment . ".";
+			    $subject = "MBX-U: New Upload!";
 			    
-		        mail($emails,$subject,$message);
+			    //$message = "<html><head></head><body>";
+			    //$message = "There's a new upload from " . $upload_user_name . ".\r\n\r\nComment: " . $upload_comment . ".\r\n\r\n<img src='" . $$file_output_url . "' alt='' />";
+			    //$message .= "</body></html>";
+			    $message = "There's a new upload from " . $upload_user_name . ".\r\n\r\nComment: " . $upload_comment . ".";
+			    
+			    $headers = 'From:info@mbx-u.com' . "\r\n" . 'Reply-To:info@mbx-u.com';
+			    
+		        mail($emails,$subject,$message,$headers);
 		        
 		        //redirect_to("User_Upload.php");
 		        //exit;
-		        ?>
-		        
-		        <h4>Success! Thank you for uploading the <?php echo $_FILES['upload']['name']; ?> file.</h4>
-		        <br />
+		        ?>						
+		    
+				<div class="row">
+			        <div class="large-12 columns">
+						<img src="<?php echo $file_output_url; ?>" style="margin-bottom:1em;" />
+			        </div>
+				</div>        
 		        
 		        <div class="row">
 					<div class="large-2 small-6 columns">
