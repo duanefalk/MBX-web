@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Reference Files";
+	$pageDescription = "A collection of matchbox car reference tools, use to identify window colors, wheel types, release themes, and release series.";
 	include("includes/header.php");
 ?>
 

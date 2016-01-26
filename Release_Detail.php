@@ -1,6 +1,8 @@
 <?php
 	session_start();
-	$pageTitle = "Release Details";
+	$Release_for_detail=$_GET["model"]; //get model's release id
+	$pageTitle = $Release_for_detail . " Release Details";
+	$pageDescription = "Matchbox car release details for the " . $Release_for_detail . " release ID.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
@@ -14,7 +16,7 @@
 		<?php
 			$result=0;
 			$rows=0;
-			$Release_for_detail=$_GET["model"];
+			
 			$Var_for_detail= substr($Release_for_detail,0,12);
 		
 			echo "The picture you clicked on was: ".$Release_for_detail."<br />";

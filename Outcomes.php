@@ -2,6 +2,7 @@
 	ob_start();
 	session_start();
 	$pageTitle = "Adding Releases, Variations, and Codes";
+	$pageDescription = "Adding a new release, variation, or code to the matchbox university car database.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
@@ -20,7 +21,7 @@ if ($source_string=="Rel_success") {
 			<p><a class='button dark' href="Search_Models_Menu.php">Return to Search Models</a></p>
 		
 		</div>
-	</
+	</div>
 	
 <?php } elseif ($source_string=="Var_success") { ?>
 	<div class="row">
