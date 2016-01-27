@@ -1,6 +1,7 @@
 <?php 
 	session_start();
 	$pageTitle = "Search Releases";
+	$pageDescription = "Search the Matchbox University database, by releases, find any matchbox car you're looking for";
 	include("includes/header.php");
 	require_once("includes/db_connection.php");
 	require_once("includes/functions.php");

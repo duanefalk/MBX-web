@@ -1,6 +1,7 @@
 <?php
 	ob_start();
 	$pageTitle = "List of Release Series";
+	$pageDescription = "The Matchbox University lists all of the matchbox car releases";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");

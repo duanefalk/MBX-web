@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Release Themes";
+	$pageDescription = "A list of all the Matchbox car themes released over the years. These include the Fast Lane, 50th Anniversary, Matchbox 50th birthday, Hero City, Buried Treasure, MBX Metal, 60th Anniversary, and On a Mission matchbox themes.";
 	include("includes/header.php");
 ?>
 <div class="row">

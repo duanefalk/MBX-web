@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Differences Between Superfast Carbodies Taxi Models";
+	$pageDescription = "The Matchbox University details the differences between Superfast Carbodies Taxi matchbox car models";
 	include("includes/header.php");
 ?>
 

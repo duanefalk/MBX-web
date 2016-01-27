@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Differences Among NASCAR Lumina Models";
+	$pageDescription = "The Matchbox University details the differences between NASCAR Lumina car models";
 	include("includes/header.php"); 
 ?>
 

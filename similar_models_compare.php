@@ -1,5 +1,6 @@
 <?php
 	$pageTitle = "Differences Among Similar Models";
+	$pageDescription = "The Matchbox University details the differences between similar car models";
 	include("includes/header.php");
 ?>
 

@@ -1,5 +1,6 @@
 <?php
 	$pageTitle = "Differences Between Superfast 1939 Chevy Sedan Delivery Models";
+	$pageDescription = "The Matchbox University details the differences between Superfast 1939 Chevy Sedan Delivery car models";
 	include("includes/header.php");
 ?>
 <div class="row">

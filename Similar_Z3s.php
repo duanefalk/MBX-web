@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Differences Between Superfast BMW Z3 Models";
+	$pageDescription = "The Matchbox University details the differences between BMW Z3 car models";
 	include("includes/header.php");
 ?>
 

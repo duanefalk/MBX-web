@@ -1,5 +1,6 @@
 <?php
 	$pageTitle = "Differences Among Superfast Ford GTs";
+	$pageDescription = "The Matchbox University details the differences between different Superfast Ford GT matchbox car models";
 	include("includes/header.php"); 
 ?>
 <div class="row">

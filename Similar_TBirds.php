@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Differences Among NASCAR Thunderbird Models";
+	$pageDescription = "The Matchbox University details the differences between NASCAR Thunderbird car models";
 	include("includes/header.php"); 
 ?>
 

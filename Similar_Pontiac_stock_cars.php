@@ -1,5 +1,6 @@
 <?php
 	$pageTitle = "Differences Among NASCAR Pontiac Models";
+	$pageDescription = "The Matchbox University details the differences between NASCAR Pontiac car models";
 	include("includes/header.php");
 ?>
 

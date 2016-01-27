@@ -2,6 +2,7 @@
 	ob_start();
 	session_start();
 	$pageTitle = "Search Models";
+	$pageDescription = "Search the Matchbox University database to find any matchbox car you're looking for";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");	
 	include("includes/functions.php");
