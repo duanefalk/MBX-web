@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Upload a File";
+	$pageDescription = "Contribute to the Matchbox University matchbox car database by uploading your own car photos.";
 	include("includes/header.php");
 	require_once("includes/db_connection.php");
 	require_once("includes/functions.php");

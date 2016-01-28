@@ -2,6 +2,7 @@
 	ob_start();
 	session_start();
 	$pageTitle = "View/Update/Delete Collection";
+	$pageDescription = "View, Update, or Delete your Matchbox University model collection.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");

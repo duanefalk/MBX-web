@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	$pageTitle = "Updating Collection";
+	$pageDescription = "Your Matchbox University collection was successfully updated.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");

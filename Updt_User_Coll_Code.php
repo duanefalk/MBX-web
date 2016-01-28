@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	$pageTitle = "Update/Delete Seller or Location Codes";
+	$pageDescription = "Update or delete your Matchbox University seller and collection codes.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
