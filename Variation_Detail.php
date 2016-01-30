@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	$pageTitle = "Variation Details";
+	$pageDescription = "The Matchbox University allows you to view the specifications of a specific matchbox car model variation.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");

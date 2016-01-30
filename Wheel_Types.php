@@ -1,6 +1,7 @@
 <?php 
 	ob_start(); 
-	$pageTitle = "Wheel Types";	
+	$pageTitle = "Wheel Types";
+	$pageDescription = "Photo, code name and description of each wheel type used in the Matchbox University matchbox car database.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");	

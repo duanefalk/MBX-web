@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Website Feedback";
+	$pageDescription = "Provide feedback to the Matchbox University.";
 	include("includes/header.php");
 ?>
 <div class="row">

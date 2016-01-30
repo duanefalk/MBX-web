@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Variation Comparison";
+	$pageDescription = "The Matchbox University allows you to compare the specifications of model variations.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");

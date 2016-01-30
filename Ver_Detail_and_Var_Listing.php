@@ -1,5 +1,6 @@
 <?php 
 	$pageTitle = "Version Details Page";
+	$pageDescription = "Matchbox model version and variation details.";
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
@@ -29,7 +30,7 @@
 			if(!$result) {
 				echo "Database error: No matching results found"; //mysql_error();
 				exit;
-				}
+			}
 			$row = mysql_fetch_array($result);
 			echo "<h3>Version ID: " . $row["VerID"] . "</h3>";
 			echo "<ul class='large-block-grid-3'>";

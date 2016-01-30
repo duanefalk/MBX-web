@@ -1,5 +1,6 @@
 <?php 	
 	$pageTitle = "Website Updates";
+	$pageDescription = "The Matchbox University stays up to date with consistent updates, see our latest database and matchbox model updates.";
 	include("includes/header.php");
 	require("includes/constants.php");
 ?>
