@@ -11,6 +11,23 @@
 		<h2>Latest Website Updates</h2>
 	
 		<div class="section">
+			<p class="date">February 1, 2016</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0129">Badger Radar Truck (SF0129)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0128">Mercedes 350 SL (SF0128)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0127">Jumbo Jet Chopper (SF0127)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0126">Turbo Fury (SF0126)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0125">Number not used (SF0125)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0124">Saab Sonett III (SF0124)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0123">Freeway Gas Tanker (SF0123)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0122">Ford Wild Life Truck (SF0122)</a></li>				
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0121">Articulated Truck (SF0121)</a></li>				
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0120">Chop Suey Chopper (SF0120)</a></li>				
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0117">The Stingeroo Chopper (SF0117)</a></li>				
+			</ul>
+		</div>	
+	
+		<div class="section">
 			<p class="date">January 4, 2016</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0139">Hondarora Motorcycle (SF0139)</a></li>
