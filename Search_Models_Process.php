@@ -28,7 +28,7 @@
 				if ($_SESSION['MAN_No_1']) {
 					$ID_Value1=$_SESSION['MAN_No_1'];
 					if (!$_SESSION['MAN_No_2']) {
-						echo "Searching for MAN#: ". $ID_Value1 ."<br />";
+						echo "<p>Searching for MAN#: ". $ID_Value1 ."</p>";
 						//SELECT *
 						//FROM categories
 						//LEFT JOIN user_category_subscriptions ON 
@@ -39,9 +39,9 @@
 							 FROM Matchbox_Models
 							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
 							 WHERE Matchbox_Versions.FAB_No='$ID_Value1'");
-						} else {
+					} else {
 						$ID_Value2=$_SESSION['MAN_No_2'];
-						echo "Searching for MAN#s: ". $ID_Value1 ." to ".$ID_Value2 . "<br />";
+						echo "<p>Searching for MAN#s: ". $ID_Value1 ." to ".$ID_Value2 . "</p>";
 						//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `FAB_No`>='$ID_Value1' AND `FAB_No`<='$ID_Value2')");
 						$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
 							 FROM Matchbox_Models
@@ -52,7 +52,7 @@
 				elseif ($_SESSION['Spec_MAN']) {
 					$ID_Value1=$_SESSION['Spec_MAN'];
 					$Search_by_MAN="1";
-					echo "Searching for specific MAN#: ". $ID_Value1 ."<br />";
+					echo "<p>Searching for specific MAN#: ". $ID_Value1 ."</p>";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `Master_Mack_No`='$ID_Value1')");
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
 							 FROM Matchbox_Models
@@ -61,7 +61,7 @@
 				}
 				elseif ($_SESSION['Mack_No']) {
 					$ID_Value1=mysql_real_escape_string($_SESSION['Mack_No']);
-					echo "Searching for Mack #: ". $ID_Value1 ."<br />";
+					echo "<p>Searching for Mack #: ". $ID_Value1 ."</p>";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `Master_Mack_No`='$ID_Value1')");
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
 							 FROM Matchbox_Models
@@ -70,7 +70,7 @@
 				}
 				elseif ($_SESSION['QuickName']) {
 					$ID_Value1=mysql_real_escape_string($_SESSION['QuickName']);
-					echo "Searching for Version Name: ".$ID_Value1 ."<br />";
+					echo "<p>Searching for Version Name: ".$ID_Value1 ."</p>";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `TMatchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
 							 FROM Matchbox_Models
@@ -79,7 +79,7 @@
 				}
 				elseif ($_SESSION['Name']) {
 					$ID_Value1=mysql_real_escape_string($_SESSION['Name']);
-					echo "Searching for Any Name: ".$ID_Value1 ."<br />";
+					echo "<p>Searching for Any Name: ".$ID_Value1 ."</p>";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `Matchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
 							 FROM Matchbox_Models
@@ -279,7 +279,7 @@
 			$rows= mysql_num_rows($result);
 			
 			
-			echo "<p>No. Found: " . $rows . "</p>";
+			echo "<p>Number Found: " . $rows . "</p>";
 			?>
 			<?php if ($rows==0) { ?>
 				<h3>Why Were No Matches Found?</h3>

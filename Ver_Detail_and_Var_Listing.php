@@ -1,37 +1,38 @@
 <?php 
-	$pageTitle = "Version Details Page";
-	$pageDescription = "Matchbox model version and variation details.";
 	require_once("includes/db_connection.php");
+	
+	$model_for_detail = $_GET["model"];
+	$UMID = substr($model_for_detail,0,6);
+	
+	$result=0;
+	$rows=0;
+	$model_for_detail=$_GET["model"];
+	
+	$query= ("SELECT * FROM Matchbox_Versions WHERE VerID LIKE '%$model_for_detail%'");
+	$result = mysql_query($query);
+	if(!$result) {
+		echo "Database error: No matching results found"; //mysql_error();
+		exit;
+	}
+	$row = mysql_fetch_array($result);
+	$versionID = $row["VerID"];
+	
+	if($versionID) {
+		$pageTitle = $versionID . " Version Details Page";
+		$pageDescription = "Matchbox model version and variation details about " . $versionID . ".";
+	} else {
+		$pageTitle = "Version Details Page";
+		$pageDescription = "Matchbox model version and variation details.";	
+	}	
 	include("includes/header.php");
 	include("includes/functions.php");
 ?>
 
 <div class="row">
 	<div class="large-12 columns">
-	
+		<p><a href="Models_Detail_and_Ver_Listing.php?model=<?php echo $UMID; ?>">Return to Versions Listing Page</a></p>	
+		<h2>Version Details Page</h2>		
 		<?php
-			$model_for_detail = $_GET["model"];
-			$UMID = substr($model_for_detail,0,6);
-		?>
-		
-		<p><a href="Models_Detail_and_Ver_Listing.php?model=<?php echo $UMID; ?>">Return to Versions Listing Page</a></p>
-	
-		<h2>Version Details Page</h2>
-		
-		<?php
-			$result=0;
-			$rows=0;
-			$model_for_detail=$_GET["model"];
-			//find and display version details
-			//echo "The picture you clicked on was: ".$model_for_detail."<br />";
-			
-			$query= ("SELECT * FROM Matchbox_Versions WHERE VerID LIKE '%$model_for_detail%'");
-			$result = mysql_query($query);
-			if(!$result) {
-				echo "Database error: No matching results found"; //mysql_error();
-				exit;
-			}
-			$row = mysql_fetch_array($result);
 			echo "<h3>Version ID: " . $row["VerID"] . "</h3>";
 			echo "<ul class='large-block-grid-3'>";
 			echo "<li class='carGrid'>";
