@@ -14,13 +14,13 @@
 			<input type="text" name="UMID" value="" size="6" id="UMID">
 			
 			<label for="VERID1">Version ID:</label>
-			<input type="text" name="VERID1" value="" size="4" id="VERID1">
+			<input type="text" name="VERID1" value="" size="10" id="VERID1">
 			
 			<label for="VARID1">Variation ID:</label>
-			<input type="text" name="VARID1" value="" size="4" id="VARID1">
+			<input type="text" name="VARID1" value="" size="13" id="VARID1">
 			
 			<label for="RELID1">Release ID:</label>
-			<input type="text" name="RELID1" value="" size="2" id="RELID1">
+			<input type="text" name="RELID1" value="" size="16" id="RELID1">
 			
 			<label for="RelYr">Intended Release Year:</label>
 			<input type="text" name="RelYr" value="" size="4" id="RelYr">

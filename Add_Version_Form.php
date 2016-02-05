@@ -15,13 +15,13 @@
 			<input type="text" name="UMID" value="" size="6" id="UMID">
 			
 			<label for="VERID1">Version ID:</label>
-			<input type="text" name="VERID1" value="" size="4" id="VERID1">
+			<input type="text" name="VERID1" value="" size="10" id="VERID1">
 			
 			<label for="FAB_No">MAN/FAB #:</label>
-			<input type="text" name="FAB_No" value="" size="6" id="FAB_No">
+			<input type="text" name="FAB_No" value="" size="10" id="FAB_No">
 			
 			<label for="Master_Mack_No">Master Mack #:</label>
-			<input type="text" name="Master_Mack_No" value="" size="8" id="Master_Mack_No">			
+			<input type="text" name="Master_Mack_No" value="" size="12" id="Master_Mack_No">			
 			
 			<label for="VerName">Version Name:</label>
 			<input type="text" name="VerName" value="" size="60" id="VerName">			

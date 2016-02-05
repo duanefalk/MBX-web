@@ -50,13 +50,13 @@
 			<input type="text" name="UMID" value="" id="UMID">
 			
 			<label for="VERID1">Version ID:</label>
-			<input type="text" name="VERID1" value="" size="4" id="VERID1">
+			<input type="text" name="VERID1" value="" size="10" id="VERID1">
 			
 			<label for="VARID1">Variation ID:</label>
-			<input type="text" name="VARID1" value="" size="4" id="VARID1">
+			<input type="text" name="VARID1" value="" size="13" id="VARID1">
 			
 			<label for="Mack_No">Mack #:</label>
-			<input type="text" name="Mack_No" value="" size="8" id="Mack_No">
+			<input type="text" name="Mack_No" value="" size="12" id="Mack_No">
 			
 			<label for="BaseName">Base Name:</label>
 			<input type="text" name="BaseName" value="" size="60" id="BaseName">
