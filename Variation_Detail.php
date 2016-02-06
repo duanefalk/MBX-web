@@ -100,7 +100,8 @@
 					echo "<p><strong>Interior Color:</strong> ". $row["InteriorColor"]."</p>";
 					echo "<p><strong>Base Material:</strong> ". $row["Base1Material"]."</p>";
 					echo "<p><strong>Base Color:</strong> ". $row["Base1Color"]."</p>";
-					if ($row["Base2Material"]) {
+					if ($row["Base2Type"]) {
+						echo "<p><strong>2nd Base Type:</strong> ". $row["Base2Type"]."</p>";
 						echo "<p><strong>2nd Base Material:</strong> ". $row["Base2Material"]."</p>";
 						echo "<p><strong>2nd Base Color:</strong> ". $row["Base2Color"]."</p>";
 					}

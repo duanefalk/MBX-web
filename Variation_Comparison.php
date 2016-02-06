@@ -450,7 +450,110 @@
 				echo "</td>";
 			//end row 14		
 					
-			//Row 15, Finish
+			//Row 15, Base 2 Type		
+			echo "<tr><td>Base 2 Type</td>";
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);		
+					
+			//check if all same value
+			$diff=0;
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				$check[$i]=$row["Base2Type"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["Base2Type"] ."</span>";
+					} 
+					else { 
+						echo $row["Base2Type"]; }
+					}
+				echo "</td>";
+			//end row 15					
+
+			//Row 16, Base 2 Material		
+			echo "<tr><td>Base 2 Material</td>";
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);		
+					
+			//check if all same value
+			$diff=0;
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				$check[$i]=$row["Base2Material"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["Base2Material"] ."</span>";
+					} 
+					else { 
+						echo $row["Base2Material"]; }
+					}
+				echo "</td>";
+			//end row 16
+			
+			//Row 17, Base 2 Color		
+			echo "<tr><td>Base 2 Color</td>";
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%'");
+			$result = mysql_query($query);
+			$rows= mysql_num_rows($result);		
+					
+			//check if all same value
+			$diff=0;
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				$check[$i]=$row["Base2Color"];
+				if ($i>1) {
+					if ($check[$i]!==$check[$i-1]) {
+						$diff=1;
+					}
+				}	
+			}
+			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
+			$result = mysql_query($query);
+			for ($i=1; $i<=$rows; $i++) {
+				$row = mysql_fetch_array($result);
+				//grey out if all same
+				echo "<td>";
+					if ($diff==0) { 
+						echo "<span>". $row["Base2Color"] ."</span>";
+					} 
+					else { 
+						echo $row["Base2Color"]; }
+					}
+				echo "</td>";
+			//end row 17			
+					
+					
+			//Row 18, Finish
 			echo "<tr><td>Finish</td>";
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
 			$result = mysql_query($query);
@@ -482,9 +585,9 @@
 						echo $row["Finish"]; }
 					}
 				echo "</td>";
-			//end row 15
+			//end row 18
 		
-			//Row 16, Color Var
+			//Row 19, Color Var
 			$IsColorVar="0";
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
 			$result = mysql_query($query);
@@ -507,9 +610,9 @@
 					echo "</td>";
 				} 
 			}
-			//end row 16
+			//end row 19
 			
-			//Row 17, Tampo Var	
+			//Row 20, Tampo Var	
 			$IsTampoVar="0";
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
 			$result = mysql_query($query);
@@ -532,9 +635,9 @@
 					echo "</td>";
 				} 
 			}
-			//end row 17	
+			//end row 20	
 
-			//Row 18, Det1	
+			//Row 21, Det1	
 			$IsDet1="0";
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
 			$result = mysql_query($query);
@@ -558,9 +661,9 @@
 					echo "</td>";
 				} 
 			}
-			//end row 18	
+			//end row 21	
 
-			//Row 19, Det2	
+			//Row 22, Det2	
 			$IsDet2="0";
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
 			$result = mysql_query($query);
@@ -584,9 +687,9 @@
 					echo "</td>";
 				} 
 			}
-			//end row 19	
+			//end row 22	
 	
-			//Row 20, Det3	
+			//Row 23, Det3	
 			$IsDet3="0";
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
 			$result = mysql_query($query);
@@ -610,9 +713,9 @@
 					echo "</td>";
 				} 
 			}
-			//end row 20
+			//end row 23
 			
-			//Row 21, Det4	
+			//Row 24, Det4	
 			$IsDet4="0";
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
 			$result = mysql_query($query);
@@ -636,9 +739,9 @@
 					echo "</td>";
 				} 
 			}
-			//end row 21
+			//end row 24
 			
-			//Row 22, Det5	
+			//Row 25, Det5	
 			$IsDet5="0";
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
 			$result = mysql_query($query);
@@ -662,9 +765,9 @@
 					echo "</td>";
 				} 
 			}
-			//end row 22
+			//end row 25
 			
-			//Row 23, Var Comm	
+			//Row 26, Var Comm	
 			$IsComm="0";
 			$query= ("SELECT * FROM Matchbox_Variations WHERE VerID LIKE '%$model_for_detail%' ORDER BY VarID ASC");
 			$result = mysql_query($query);
@@ -687,7 +790,7 @@
 					echo "</td>";
 				} 
 			}
-			//end row 23	
+			//end row 26	
 			
 			
 			
