@@ -65,7 +65,7 @@
 		
 		<?php
 			$Rel_to_Add = $_GET["model"];
-			$Var_to_Add = substr($Rel_to_Add,0,12);
+			$Var_to_Add = substr($Rel_to_Add,0,-3);
 			$User = $_SESSION['Username'];
 			$Username = $_SESSION['Username'];
 			$query3 = ("SELECT * FROM Matchbox_User_Collections WHERE Username='$User'");																
@@ -75,23 +75,24 @@
 			
 			echo "<p>Release Selected: " . $Rel_to_Add . "</p>";
 		    
-		    //get and display photo
-            $picture1= IMAGE_URL . $Rel_to_Add."_1.jpg";
-		    $picture1_loc=IMAGE_PATH. $Rel_to_Add."_1.jpg";
+			//get and display photo
+			$picture1= IMAGE_URL . $Rel_to_Add."_1.jpg";
+			$picture1_loc=IMAGE_PATH. $Rel_to_Add."_1.jpg";
             
-            if (file_exists($picture1_loc)) {
-                echo "<img src=".$picture1." /><br></br>";
-            } else {
-                //no photo, echo DEFAULT_IMAGE;
-                echo "<img src=".DEFAULT_IMAGE." /><br></br>";
-            }
-        ?>
+			if (file_exists($picture1_loc)) {
+				echo "<img src=".$picture1." /><br></br>";
+			} else {
+				//no photo, echo DEFAULT_IMAGE;
+				echo "<img src=".DEFAULT_IMAGE." /><br></br>";
+			}
+		?>
         
 		<form name="Add_Rel_to_Coll" action="Add_Rel_to_Coll.php" method="post">	
 	        <?php
                 //$Coll_Username="duanefalk";
-				$Coll_RelID=$Rel_to_Add;
-                $Coll_VarID=substr($Coll_RelID,0,12);
+		$Coll_RelID=$Rel_to_Add;
+
+                $Coll_VarID=substr($Coll_RelID,0,-3);
                 $Coll_VerID=substr($Coll_VarID,0,10);
                 $Coll_UMID=substr($Coll_VerID,0,6);
 

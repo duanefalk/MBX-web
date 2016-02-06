@@ -91,7 +91,7 @@
               
 		<form name="Add_Var_to_Coll" action="Add_Var_to_Coll.php" method="post">	
             <?php               
-		        $Coll_VarID=$Var_to_Add;
+		$Coll_VarID=$Var_to_Add;
                 $Coll_VerID=substr($Coll_VarID,0,10);
                 $Coll_UMID=substr($Coll_VerID,0,6);
                         
@@ -112,7 +112,7 @@
 	    <label for="User_Coll_ID">Collection ID:</label>
 		<input type="text" name="User_CollID" value="<?php echo $User_CollID;?>" size="12" id="User_CollID"></p>
         
-        <label for="Coll_UMID">UMID:</label>
+	    <label for="Coll_UMID">UMID:</label>
 		<input type="text" name="Coll_UMID" value="<?php echo $Coll_UMID;?>" size="6" id="Coll_UMID">	    
 	    
 	    <label for="Coll_VerID">Version ID:</label>

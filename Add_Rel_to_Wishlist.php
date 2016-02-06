@@ -28,7 +28,7 @@
 			    
 			    //Fields:
 			    $RelID=$_POST["rel_to_add"];
-			    $VarID=substr($RelID,0,12);
+			    $VarID=substr($RelID,0,-3);
 			    $VerID=substr($VarID,0,10);
 			    $UMID=substr($VerID,0,6);
 				
