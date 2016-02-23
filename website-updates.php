@@ -12,17 +12,15 @@
 		<div class="section">
 			<p class="date">February 21, 2016</p>
 			<ul>
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0129">Badger Radar Truck (SF0129)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0128">Mercedes 350 SL (SF0128)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0127">Jumbo Jet Chopper (SF0127)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0126">Turbo Fury (SF0126)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0125">Number not used (SF0125)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0124">Saab Sonett III (SF0124)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0123">Freeway Gas Tanker (SF0123)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0122">Ford Wild Life Truck (SF0122)</a></li>				
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0121">Articulated Truck (SF0121)</a></li>				
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0120">Chop Suey Chopper (SF0120)</a></li>				
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0117">The Stingeroo Chopper (SF0117)</a></li>				
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0119">Beach Hopper (SF0119)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0118">Clipper (SF0118)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0116">Datsun 126 X (SF0116)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0115">Lamborghini Countach (SF0115)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0114">Team Matchbox (SF0114)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0113">Rod Roller (SF0113)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0112">Fork Lift Truck (SF0112)</a></li>				
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0111">Ford Mustang Piston Popper (SF0111)</a></li>				
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0110">Monteverdi Hai (SF0110)</a></li>								
 			</ul>
 		</div>		
 	
