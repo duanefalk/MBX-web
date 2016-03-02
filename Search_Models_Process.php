@@ -28,7 +28,7 @@
 				if ($_SESSION['MAN_No_1']) {
 					$ID_Value1=$_SESSION['MAN_No_1'];
 					if (!$_SESSION['MAN_No_2']) {
-						echo "<p>Searching for MAN#: ". $ID_Value1 ."</p>";
+						echo "<h4>Searching for MAN#: ". $ID_Value1 ."</h4>";
 						//SELECT *
 						//FROM categories
 						//LEFT JOIN user_category_subscriptions ON 
@@ -41,7 +41,7 @@
 							 WHERE Matchbox_Versions.FAB_No='$ID_Value1'");
 					} else {
 						$ID_Value2=$_SESSION['MAN_No_2'];
-						echo "<p>Searching for MAN#s: ". $ID_Value1 ." to ".$ID_Value2 . "</p>";
+						echo "<h4>Searching for MAN#s: ". $ID_Value1 ." to ".$ID_Value2 . "</h4>";
 						//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `FAB_No`>='$ID_Value1' AND `FAB_No`<='$ID_Value2')");
 						$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
 							 FROM Matchbox_Models
@@ -52,7 +52,7 @@
 				elseif ($_SESSION['Spec_MAN']) {
 					$ID_Value1=$_SESSION['Spec_MAN'];
 					$Search_by_MAN="1";
-					echo "<p>Searching for specific MAN#: ". $ID_Value1 ."</p>";
+					echo "<h4>Searching for specific MAN#: ". $ID_Value1 ."</h4>";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `Master_Mack_No`='$ID_Value1')");
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
 							 FROM Matchbox_Models
@@ -61,7 +61,7 @@
 				}
 				elseif ($_SESSION['Mack_No']) {
 					$ID_Value1=mysql_real_escape_string($_SESSION['Mack_No']);
-					echo "<p>Searching for Mack #: ". $ID_Value1 ."</p>";
+					echo "<h4>Searching for Mack #: ". $ID_Value1 ."</h4>";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `Master_Mack_No`='$ID_Value1')");
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
 							 FROM Matchbox_Models
@@ -70,7 +70,7 @@
 				}
 				elseif ($_SESSION['QuickName']) {
 					$ID_Value1=mysql_real_escape_string($_SESSION['QuickName']);
-					echo "<p>Searching for Version Name: ".$ID_Value1 ."</p>";
+					echo "<h4>Searching for Version Name: ".$ID_Value1 ."</h4>";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `TMatchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
 							 FROM Matchbox_Models
@@ -79,7 +79,7 @@
 				}
 				elseif ($_SESSION['Name']) {
 					$ID_Value1=mysql_real_escape_string($_SESSION['Name']);
-					echo "<p>Searching for Any Name: ".$ID_Value1 ."</p>";
+					echo "<h4>Searching for Any Name: ".$ID_Value1 ."</h4>";
 					//$query= ("SELECT * FROM Matchbox_Models WHERE `MasterModelName` LIKE '%$ID_Value1%' OR `UMID` IN (SELECT `UMID` FROM `Matchbox_Versions` WHERE `VerName` LIKE '%$ID_Value1%' OR `VERID` IN (SELECT `VERID` FROM `Matchbox_Variations` WHERE `BaseName` LIKE '%$ID_Value1%'))");		
 					$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
 							 FROM Matchbox_Models
@@ -197,7 +197,7 @@
 							}
 						}	
 					
-						echo "Searching for UMIDs: ". $ID_String1 ." to ".$ID_String2 . "<br />";
+						echo "<h4>Searching for UMIDs: ". $ID_String1 ." to ".$ID_String2 . "</h4>";
 						//$query= ("SELECT * FROM Matchbox_Models WHERE UMID >='$ID_String1' AND UMID <='$ID_String2' ORDER BY UMID ASC");
 						$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
 							 FROM Matchbox_Models
@@ -213,8 +213,7 @@
 				// Search by Type criteria
 				$PrevModelCriteria="";
 				if ($_SESSION['VehicleType_Check']) {
-					echo "<p>Searching for:</p>";
-					echo "<p>Vehicle Type= " . $VehicleType . "</p>";
+					echo "<h4>Searching for Vehicle Type = " . $VehicleType . "</h4>";
 					$pageTitle .= ": Vehicle Type: " . $VehicleType;
 					$VehicleType=$_SESSION['TypeofVehicle'];
 					$PrevModelCriteria="1";
@@ -227,7 +226,7 @@
 				}
 				if ($_SESSION['VehicleMake_Check']) {
 					
-					echo "  Make= ".$VehicleMake."<br></>";
+					echo "<h4>Make = " . $VehicleMake . "</h4>";
 					$VehicleMake=$_SESSION['VehicleMake'];
 					if ($PrevModelCriteria != "1") {
 					    //echo "only vehicle make";
@@ -247,7 +246,7 @@
 				}
 				if ($_SESSION['MakeCountry_Check']) {
 					
-					echo "  Country of Make= ".$$MakeCountry."<br></>";
+					echo "<h4>Country of Make = " . $MakeCountry . "</h4>";
 					$MakeCountry=$_SESSION['MakeCountry'];
 					if (!$PrevModelCriteria) {
 						$PrevModelCriteria="1";
