@@ -1,9 +1,120 @@
 <?php 
 	ob_start();
 	session_start();
-	$pageTitle = "Search Models";
-	$pageDescription = "Search the Matchbox University database to find any matchbox car you're looking for";
 	require_once("includes/db_connection.php");
+	
+	//SEARCH LOGIC
+	if ($_POST['Spec_MAN']) {
+		$_SESSION['Spec_MAN']=$_POST['Spec_MAN'];
+	}
+	$VehicleType=$_SESSION['TypeofVehicle'];
+	$VehicleMake=$_SESSION['VehicleMake'];
+	$MakeCountry=$_SESSION['MakeCountry'];
+	$TempaText=$_SESSION['TempaText'];
+	$Search_by_MAN="0";
+	
+	//PAGE TITLE LOGIC
+	//all of this logic was copied from below, using it here allows us to supply a UNIQUE and SPECIFIC page title (good for search engines)
+	if ((!$_SESSION['VehicleType_Check']) AND (!$_SESSION['VehicleMake_Check']) AND (!$_SESSION['MakeCountry_Check']) AND (!$_SESSION['TempaText'])) {	
+		if ($_SESSION['MAN_No_1']) {
+			$ID_Value1 = $_SESSION['MAN_No_1'];
+			if (!$_SESSION['MAN_No_2']) {
+				$pageTitle = "Search for MAN# " . $ID_Value1;
+			} else {
+				$ID_Value2 = $_SESSION['MAN_No_2'];
+				$pageTitle = "Search MAN# " . $ID_Value1 . " to " . $ID_Value2;
+			}
+		} elseif ($_SESSION['Spec_MAN']) {
+			$ID_Value1 = $_SESSION['Spec_MAN'];
+			$pageTitle = "Search for " . $ID_Value1;
+		} elseif ($_SESSION['Mack_No']) {
+			$ID_Value1 = mysql_real_escape_string($_SESSION['Mack_No']);
+			$pageTitle = "Search for Mack # " . $ID_Value1;
+		} elseif ($_SESSION['QuickName']) {
+			$ID_Value1 = mysql_real_escape_string($_SESSION['QuickName']);
+			$pageTitle = "Search for " . $ID_Value1;
+		} elseif ($_SESSION['Name']) {
+			$ID_Value1 = mysql_real_escape_string($_SESSION['Name']);
+			$pageTitle = "Search for " . $ID_Value1;
+		} elseif ($_SESSION['UMID_1']) {
+			$ID_String1 = strval($_SESSION['UMID_1']);
+			$ID_Len = strlen($ID_String1);
+			if (substr($ID_String1,0,2)=="LR") {
+				if (!is_numeric(substr($ID_String1,2))) {					
+				} elseif (strlen(substr($ID_String1,2))>3) {					
+				} elseif ($ID_Len<5) {
+					$ID_String_LRno = substr($ID_String1,2);
+					$ID_String_LRno =str_pad($ID_String_LRno, 3, "0", STR_PAD_LEFT);
+					$ID_String1 = str_pad($ID_String_LRno, 5, "LR", STR_PAD_LEFT);
+				}
+			} elseif (substr($ID_String1,0,2)=="SF") {
+				if (!is_numeric(substr($ID_String1,2))) {					
+				} elseif (strlen(substr($ID_String1,2))>4) {									
+				} elseif ($ID_Len<6) {						
+					$ID_String_SFno = substr($ID_String1,2);
+					$ID_String1 = str_pad($ID_String_SFno, 4, "0", STR_PAD_LEFT);
+					$ID_String1 = str_pad($ID_String1, 6,"SF", STR_PAD_LEFT);	
+				}
+			} else {
+				if (!is_numeric($ID_String1)) {					
+				} elseif ($ID_Len>4) {										
+				} else {						
+					$ID_String1 = str_pad($ID_String1, 4, "0", STR_PAD_LEFT);
+					$ID_String1 = str_pad($ID_String1, 6,"SF", STR_PAD_LEFT);
+				}
+			}	
+			if (!$_SESSION['UMID_2']) {					
+				$pageTitle = "Search for UMID # " . $ID_String1;
+			} else {	
+				$ID_String2 = strval($_SESSION['UMID_2']);
+				$ID_Len = strlen($ID_String2);
+
+				if (substr($ID_String2,0,2)=="LR") {					
+					if (!is_numeric(substr($ID_String2,2))) {						
+					} elseif (strlen(substr($ID_String2,2))>3) {							
+					} elseif ($ID_Len<5) {
+						$ID_String_LRno = substr($ID_String2,2);
+						$ID_String_LRno = str_pad($ID_String_LRno, 3, "0", STR_PAD_LEFT);
+						$ID_String2 = str_pad($ID_String_LRno, 5, "LR", STR_PAD_LEFT);
+					}
+				} elseif (substr($ID_String2,0,2)=="SF") {					
+					if (!is_numeric(substr($ID_String2,2))) {					
+					} elseif (strlen(substr($ID_String2,2))>4) {											
+					} elseif ($ID_Len<6) {						
+						$ID_String_SFno = substr($ID_String2,2);
+						$ID_String2 = str_pad($ID_String_SFno, 4, "0", STR_PAD_LEFT);
+						$ID_String2 = str_pad($ID_String2, 6,"SF", STR_PAD_LEFT);	
+					}
+				} else {
+					if (!is_numeric($ID_String2)) {						
+					} elseif ($ID_Len>4) {											
+					} else {						
+						$ID_String2 = str_pad($ID_String2, 4, "0", STR_PAD_LEFT);
+						$ID_String2 = str_pad($ID_String2, 6,"SF", STR_PAD_LEFT);
+					}
+				}	
+				$pageTitle = "Search UMID # " . $ID_String1 . " to " . $ID_String2;
+			}
+		} else {}
+	} elseif (!$_SESSION['TempaText']) {
+		$PrevModelCriteria="";
+		if ($_SESSION['VehicleType_Check']) {
+			$VehicleType = $_SESSION['TypeofVehicle'];
+			$pageTitle = "Search for " . $VehicleType;
+		}
+		if ($_SESSION['VehicleMake_Check']) {			
+			$VehicleMake = $_SESSION['VehicleMake'];
+			$pageTitle = "Search for " . $VehicleMake;
+		}
+		if ($_SESSION['MakeCountry_Check']) {
+			$MakeCountry = $_SESSION['MakeCountry'];
+			$pageTitle = "Search for " . $MakeCountry;               
+		}		
+	} else {
+		$pageTitle = "Search Models";
+	}
+	$pageDescription = "Search the Matchbox University database to find any matchbox car you're looking for";
+	
 	include("includes/header.php");	
 	include("includes/functions.php");
 ?>
@@ -12,21 +123,11 @@
 		<h2>Matching Models</h2>
 	 
 		<?php
-			if ($_POST['Spec_MAN']) {
-				$_SESSION['Spec_MAN']=$_POST['Spec_MAN'];
-			}
-			$VehicleType=$_SESSION['TypeofVehicle'];
-			$VehicleMake=$_SESSION['VehicleMake'];
-			$MakeCountry=$_SESSION['MakeCountry'];
-			$TempaText=$_SESSION['TempaText'];
-			
-			$Search_by_MAN="0";
-
 			if ((!$_SESSION['VehicleType_Check']) AND (!$_SESSION['VehicleMake_Check']) AND (!$_SESSION['MakeCountry_Check']) AND (!$_SESSION['TempaText'])) {	
 				
 				// Search by ID
 				if ($_SESSION['MAN_No_1']) {
-					$ID_Value1=$_SESSION['MAN_No_1'];
+					$ID_Value1 = $_SESSION['MAN_No_1'];
 					if (!$_SESSION['MAN_No_2']) {
 						echo "<h4>Searching for MAN#: ". $ID_Value1 ."</h4>";
 						//SELECT *
@@ -40,7 +141,7 @@
 							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
 							 WHERE Matchbox_Versions.FAB_No='$ID_Value1'");
 					} else {
-						$ID_Value2=$_SESSION['MAN_No_2'];
+						$ID_Value2 = $_SESSION['MAN_No_2'];
 						echo "<h4>Searching for MAN#s: ". $ID_Value1 ." to ".$ID_Value2 . "</h4>";
 						//$query= ("SELECT * FROM Matchbox_Models WHERE `UMID` IN (SELECT `UMID` FROM Matchbox_Versions WHERE `FAB_No`>='$ID_Value1' AND `FAB_No`<='$ID_Value2')");
 						$query= ("SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.YrFirstProduced, Matchbox_Versions.FAB_No, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.Master_Mack_No
