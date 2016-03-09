@@ -34,12 +34,21 @@
 	            } else {
 		            // found user id or email address, now send password by email
 		            
-		            // email logic
-	          
-	                // after login we move to the main page
-	                //redirect_to('index.php');
-	                
-	                //exit;
+		            if ($userRetrievedEmail == an email address) {
+			            $to = $userRetrievedEmail;    
+		            } else {
+			            //input is equal to a username, so now we must
+			            //retrieve email address from username, and assign to $to
+			            $to = $userRetrievedEmail;
+		            }
+		            $subject = "MBX-U.com: Retrieve Password";
+				    $message = "Here is your lost password: " . $userRetrievedPassword . ".\r\n\r\nKeep it safe!\r\n\r\n\r\n\r\nLog in to http://mbx-u.com.";		   
+				    $headers = 'From:info@mbx-u.com' . "\r\n" . 'Reply-To:info@mbx-u.com';
+				    
+			        mail($to,$subject,$message,$headers);
+			        
+			        //redirect_to("Authenticate-test.php");
+			        //exit;
 	            } 
 	        }
         ?>
