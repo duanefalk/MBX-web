@@ -13,8 +13,8 @@
 <title>Basic Login</title>
 
 <div class="row" id="login">
-	<div class="large-5 large-centered columns">
-		<h3>Log in</h3>
+	<div class="large-6 large-centered columns">
+		<h2>Log in</h2>
 			        
         <?php
         	//$Message = $_GET["msg"];
