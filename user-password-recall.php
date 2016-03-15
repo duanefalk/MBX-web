@@ -19,21 +19,23 @@
 	        if (isset($_POST['txtUserId'])) {
 	            
 	            //username and password variables
-	            $userId = mysql_real_escape_string($_POST['txtUserId']);
-	            $userEmail = mysql_real_escape_string($_POST['txtUserId']);
+	            $userIdentity = mysql_real_escape_string($_POST['txtUserId']);
 	         
 	            // check if the user id exists in User ID column
 	            // FIX THIS!
-	            $query = ("SELECT * FROM MBXU_User_Accounts WHERE Username = '$userId' AND Password = '$password'");   
+	            $query = ("SELECT * FROM MBXU_User_Accounts WHERE (Username = '$userIdentity') OR (User_Email= '$userIdentity')");   
 	            $result = mysql_query($query);
 	            $rows_count_id = mysql_num_rows($result);
+		    $userAcctInfo =mysql_fetch_array($result);
 	            
-	            if ($rows_count_id == 0 && $rows_count_email == 0) {
+	            if ($rows_count_id == 0) {
 		            //User ID does not exist
-	                echo "<p class='error'>Sorry, this User ID or Email doesn't exist in our records.</p>";
+	                echo "<p class='error'>Sorry, this Username and Email doesn't exist in our records.</p>";
 	            } else {
 		            // found user id or email address, now send password by email
-		            
+		            $userEmail= $userAcctInfo["User_Email"];
+			    $password= $userAcctInfo["Password"];
+			    echo $userEmail." ".$password;
 		            // email logic
 	          
 	                // after login we move to the main page
