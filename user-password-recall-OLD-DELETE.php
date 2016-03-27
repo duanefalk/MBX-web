@@ -19,29 +19,36 @@
 	        if (isset($_POST['txtUserId'])) {
 	            
 	            //username and password variables
-	            $userIdentity = mysql_real_escape_string($_POST['txtUserId']);
+	            $userId = mysql_real_escape_string($_POST['txtUserId']);
+	            $userEmail = mysql_real_escape_string($_POST['txtUserId']);
 	         
 	            // check if the user id exists in User ID column
 	            // FIX THIS!
-	            $query = ("SELECT * FROM MBXU_User_Accounts WHERE (Username = '$userIdentity') OR (User_Email= '$userIdentity')");   
+	            $query = ("SELECT * FROM MBXU_User_Accounts WHERE Username = '$userId' AND Password = '$password'");   
 	            $result = mysql_query($query);
 	            $rows_count_id = mysql_num_rows($result);
-		    $userAcctInfo =mysql_fetch_array($result);
 	            
-	            if ($rows_count_id == 0) {
+	            if ($rows_count_id == 0 && $rows_count_email == 0) {
 		            //User ID does not exist
-	                echo "<p class='error'>Sorry, this Username and Email doesn't exist in our records.</p>";
+	                echo "<p class='error'>Sorry, this User ID or Email doesn't exist in our records.</p>";
 	            } else {
 		            // found user id or email address, now send password by email
-		            $userEmail= $userAcctInfo["User_Email"];
-			    $password= $userAcctInfo["Password"];
-			    echo $userEmail." ".$password;
-		            // email logic
-	          
-	                // after login we move to the main page
-	                //redirect_to('index.php');
-	                
-	                //exit;
+		            
+		            if ($userRetrievedEmail == an email address) {
+			            $to = $userRetrievedEmail;    
+		            } else {
+			            //input is equal to a username, so now we must
+			            //retrieve email address from username, and assign to $to
+			            $to = $userRetrievedEmail;
+		            }
+		            $subject = "MBX-U.com: Retrieve Password";
+				    $message = "Here is your lost password: " . $userRetrievedPassword . ".\r\n\r\nKeep it safe!\r\n\r\n\r\n\r\nLog in to http://mbx-u.com.";		   
+				    $headers = 'From:info@mbx-u.com' . "\r\n" . 'Reply-To:info@mbx-u.com';
+				    
+			        mail($to,$subject,$message,$headers);
+			        
+			        //redirect_to("Authenticate-test.php");
+			        //exit;
 	            } 
 	        }
         ?>
