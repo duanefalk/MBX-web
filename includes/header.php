@@ -6,7 +6,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<meta charset="UTF-8" />
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
 	<meta name="description" content="<?php if ($pageDescription) { echo $pageDescription; } else { echo "Matchbox Cars Database and Collections"; } ?>">
 	<meta name="keywords" content="Matchbox,Matchbox cars,Superfast,Regular Wheels,Matchbox packages,Matchbox wheels">
@@ -17,7 +17,7 @@
 
 	<title><?php if ($pageTitle) { echo $pageTitle . " | "; } ?>Matchbox University</title>
 	
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="stylesheets/foundation.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/ui-lightness/jquery-ui-1.10.3.custom.min.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/parsley.css" media="all" rel="stylesheet" type="text/css" />
