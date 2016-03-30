@@ -85,6 +85,11 @@ body.home #header { margin-bottom:2em; padding-bottom:0; background:$orange url(
 }
 /* -- end HOME ------------------- */
 
+/* -- USER VERIFICATION ---------- */
+body.verify_your_humanity {
+	h4 {margin-bottom:3em;}
+	form {margin-top:6em;}
+}
 
 /* -- LOGIN ---------------------- */
 #login { margin:3em auto;
