@@ -10,6 +10,25 @@
 	
 		<h2>Latest Website Updates</h2>
 		<div class="section">
+			<p class="date">March 30, 2016</p>
+			<ul>
+				<li>Functionality Change: Webiste Updates page made available to all users (previously required an account login)</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0099">Soopa Coopa (SF0099)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0098">Maserati Bora (SF0098)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0097">Big Banger (SF0097)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0096">Mod Tractor (SF0096)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0094">(VW) Flying Bug (SF0094)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0089">Slingshot Dragster (SF0089)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0088">Blue Shark (SF0088)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0087">Lotus Super Seven (SF0087)</a></li>				
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0085">Iron Fairy Crane (SF0085)</a></li>				
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0081">Beach Buggy (SF0081)</a></li>								
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0080">Foden Concrete Truck (SF0080)</a></li>
+			</ul>
+		</div>			
+		
+		
+		<div class="section">
 			<p class="date">March 2, 2016</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0109">Toe Joe Wreck Truck (SF0109)</a></li>
