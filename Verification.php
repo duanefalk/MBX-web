@@ -2,7 +2,7 @@
 	ob_start();
 	session_start();
 	$pageTitle = "Verify Your Humanity";
-	$pageDescription = "Create your own Matchbox University account.";
+	$pageDescription = "Please verify you're human before creating a Matchbox University account.";
 	require_once("includes/db_connection.php");
 	require_once("includes/functions.php");
 	include("includes/header.php");
