@@ -12,7 +12,10 @@
 		<div class="section">
 			<p class="date">March 30, 2016</p>
 			<ul>
-				<li>Functionality Change: Webiste Updates page made available to all users (previously required an account login)</li>
+				<li>Functionality Changes:</li>
+				<li>1 Website Updates page made available to all users (previously required an account login)</li>
+				<li>2 Added a password recovery function- if oyu forget your password, enter the email you have on your account and your password will be sent to you</li>
+				<li>3 Added a 'bot detection' function before creating a new account</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0099">Soopa Coopa (SF0099)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0098">Maserati Bora (SF0098)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0097">Big Banger (SF0097)</a></li>
