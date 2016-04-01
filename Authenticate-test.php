@@ -79,10 +79,10 @@
 				<div class="large-6 medium-6 small-6 columns">
 			    	<input class="button" type="submit" name="btnLogin" value="Login">
 			    </div>
-			    <!--div class="large-6 medium-6 small-6 columns">
-				    <a href="REPLACE" class="forgot">I forgot my password</a>
-				    <a href="REPLACE" class="forgot">I forgot my username</a>
-			    </div-->
+			    <div class="large-6 medium-6 small-6 columns">
+				    <!--a href="REPLACE" class="forgot">I forgot my password</a-->
+				    <a href="user-password-recall.php" class="forgot">I forgot my username</a>
+			    </div>
 			</div>
         </form>
         
