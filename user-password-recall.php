@@ -13,10 +13,7 @@
 	<div class="large-6 large-centered columns">
 		<h2>Retrieve My Password</h2>
 		
-		<?php if (isset($_POST['submit'])) { ?>
-			<p>We sent your password to your email address on file. Please check for the email and then <a href="<?php ROOTURL; ?>Authenticate-test.php">log in here</a>.</p>
-			<p>If you have any issues, reach out to us at <a href="mailto:info@mbx-u.com">info@mbx-u.com</a>.</p>
-		<?php } else { ?>
+		<?php if (isset($_POST['btnSendPassword'])) { ?>
 			<?php        
 				// If User ID & Password fields have entry
 		        if (isset($_POST['txtUserId'])) {
@@ -32,13 +29,22 @@
 				    $userAcctInfo =mysql_fetch_array($result);
 		            
 		            if ($rows_count_id == 0) {
-			            //User ID does not exist
-		                echo "<p class='error'>Sorry, this Username and Email doesn't exist in our records.</p>";
+			            //User ID does not exist			            
+			            ?>
+			            <p class='error'>Sorry, this Username and Email doesn't exist in our records.</p>
+			            <p><a href="<?php ROOTURL; ?>user-password-recall.php">Try again</a>.</p>
+			            <?php
+				            
 		            } else {
 			            // found user id or email address, now send password by email
 			            $userEmail = $userAcctInfo["User_Email"];
-					    $password = $userAcctInfo["Password"];		            
-			            
+					    $password = $userAcctInfo["Password"];
+					    
+					    ?>
+					    <p>We sent your password to your email address on file. Please check for the email and then <a href="<?php ROOTURL; ?>Authenticate-test.php">log in here</a>.</p>
+						<p>If you have any issues, reach out to us at <a href="mailto:info@mbx-u.com">info@mbx-u.com</a>.</p>
+			            <?php
+				            
 			            //Mail inputs
 					    $to = $userEmail;
 					    $subject = "MBX-U: Password Reset";
@@ -53,9 +59,11 @@
 		                //exit;
 		            } 
 		        }
-	        ?>	 
-	               
-	        <form action="user-password-recall.php" method="post" name="frmLogin" id="frmLogin" data-parsley-validate>
+	        ?>	
+		
+		
+		<?php } else { ?>
+			<form action="user-password-recall.php" method="post" name="frmLogin" id="frmLogin" data-parsley-validate>
 		        <div class="row">
 			        <div class="large-12 medium-12 columns">
 				        <p>Enter your username or email address to retrieve your password. We'll send it to you by email.</p>
