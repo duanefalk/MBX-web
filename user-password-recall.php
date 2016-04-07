@@ -49,7 +49,7 @@
 					    $to = $userEmail;
 					    $subject = "MBX-U: Password Reset";
 					    $message = "Your mbx-u.com password is " . $password . ".\r\n\r\n";
-					    $headers = 'From: Matchbox University <info@mbx-u.com>' . "\r\n" . 'Reply-To:info@mbx-u.com' . 'Bcc:info@mbx-u.com';
+					    $headers = 'From:Matchbox University<info@mbx-u.com>' . "\r\n" . 'Reply-To:info@mbx-u.com' . "\r\n" . 'Bcc:info@mbx-u.com';
 					    
 				        mail($to,$subject,$message,$headers);
 			            
