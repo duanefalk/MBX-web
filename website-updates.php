@@ -11,6 +11,16 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">March 13, 2016</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0086">Ford Capri (SF0086)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0084">Vauxhall Guildsman (SF0084)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0083">Ferrari Formula 1 Racing Car (SF0083)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0082">Volks-Dragon (SF0082)</a></li>
+			</ul>
+		</div>		
+		
+		<div class="section">
 			<p class="date">March 9, 2016</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0095">The Londoner Daimler Bus (SF0095)</a></li>
@@ -20,7 +30,6 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0090">Mazda RX 500 (SF0090)</a></li>
 			</ul>
 		</div>
-
 
 		<div class="section">
 			<p class="date">March 30, 2016</p>
