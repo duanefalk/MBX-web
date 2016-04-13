@@ -11,7 +11,7 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
-			<p class="date">March 13, 2016</p>
+			<p class="date">April 13, 2016</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0086">Ford Capri (SF0086)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0084">Vauxhall Guildsman (SF0084)</a></li>
@@ -21,7 +21,7 @@
 		</div>		
 		
 		<div class="section">
-			<p class="date">March 9, 2016</p>
+			<p class="date">April 9, 2016</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0095">The Londoner Daimler Bus (SF0095)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0093">AMX Javelin (SF0093)</a></li>
