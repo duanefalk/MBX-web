@@ -11,6 +11,24 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">April 14, 2016</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0073">Ferrari (250 GTL) Berlinetta (SF0073)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0069">Ford Heavy Wreck Truck (SF0069)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0068">Ford Grit Spreader (SF0068)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0066">(GMC) Greyhound Coach (SF0066)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0065">MG 1100 (SF0065)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0064">Dodge Crane Truck (SF0064)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0063">Mercury Cougar Dragster (SF0063)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0062">Leyland Site Truck Hut (SF0062)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0061">Ford Galaxie Fire Chief (SF0061)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0060">DAF Girder Truck (SF0060)</a></li>
+			</ul>
+		</div>
+		
+		
+		
+		<div class="section">
 			<p class="date">April 13, 2016</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0086">Ford Capri (SF0086)</a></li>
