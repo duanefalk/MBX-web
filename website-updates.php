@@ -9,7 +9,18 @@
 	<div class="large-9 columns">
 	
 		<h2>Latest Website Updates</h2>
-
+		
+		<div class="section">
+			<p class="date">April 21, 2016</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0074">Mod Rod (SF0074)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0072">Daimler Fleetline Bus (SF0072)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0071">Mercury Commuter (SF0071)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0070">Jeep (CJ 5) (SF0070)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0067">Porsche 910 (SF0067)</a></li>
+			</ul>
+		</div>					
+		
 		<div class="section">
 			<p class="date">April 14, 2016</p>
 			<ul>
@@ -25,8 +36,6 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0060">DAF Girder Truck (SF0060)</a></li>
 			</ul>
 		</div>
-		
-		
 		
 		<div class="section">
 			<p class="date">April 13, 2016</p>
