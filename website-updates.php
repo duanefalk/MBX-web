@@ -9,7 +9,33 @@
 	<div class="large-9 columns">
 	
 		<h2>Latest Website Updates</h2>
-		
+
+		<div class="section">
+			<p class="date">May 2, 2016</p>
+			<ul>
+				<li>Lots of models added, though I jumped around a bit among those remaining. Fewer than 50 Superfast to go!
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0079">Baja Buggy (SF0079)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0078">Setra (S 80) Coach (SF0078)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0077">Hairy Hustler (SF0077)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0076">Gruesome Twosome (SF0076)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0075">Jeep Hot Rod (SF0075)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0059">Eccles Trailer Caravan (SF0059)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0058">Land Rover Fire Truck (SF0058)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0056">S &#38 S Cadillac Ambulance (SF0056)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0055">Ford Zodiak MK. IV (SF0055)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0053">(AEC) 8 Wheel Tipper (SF0053)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0050">Dodge Dumper Truck (SF0050)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0049">DAF Tipper Container Truck (SF0049)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0048">Mercedes 300 SE (SF0048)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0046">G.M.C. Refrigerator Truck (SF0046)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0044">Honda Motor Cycle Trailer (SF0044)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0043">Dodge Cattle Truck (SF0043)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0039">Lincoln Continental (SF0039)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0038">Faun 8 Whee Crane (SF0038)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0009">Mercury Cougar (SF0009)</a></li>
+			</ul>
+		</div>					
+			
 		<div class="section">
 			<p class="date">April 21, 2016</p>
 			<ul>
