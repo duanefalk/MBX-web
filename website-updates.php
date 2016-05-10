@@ -10,6 +10,20 @@
 	
 		<h2>Latest Website Updates</h2>
 
+	
+		<div class="section">
+			<p class="date">May 9, 2016</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0033">G.M.C. Tipper Truck (SF0033)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0021">Mercedes Scaffolding Truck (SF0021)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0020">Leyland Pipe Truck (SF0020)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0017">Ford Refuse Truck (SF0017)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0016">Ford Pick-Up (SF0016)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0015">Dodge Stake Truck (SF0015)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0014">Mercedes Benz "Binz" Ambulance (SF0014)</a></li>
+			</ul>
+		</div>					
+		
 		<div class="section">
 			<p class="date">May 2, 2016</p>
 			<ul>
