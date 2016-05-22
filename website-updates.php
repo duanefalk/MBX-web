@@ -10,6 +10,14 @@
 	
 		<h2>Latest Website Updates</h2>
 
+		<div class="section">
+			<p class="date">May 22, 2016</p>
+			<ul>
+				<li>2016 1-75 models in batches A-D are online</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0026">Lotus MK 33 Racing Car (SF0026)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0006">Merryweather Fire Engine (SF0006)</a></li>
+			</ul>
+		</div>				
 	
 		<div class="section">
 			<p class="date">May 9, 2016</p>
