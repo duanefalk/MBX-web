@@ -11,6 +11,17 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">May 25, 2016</p>
+			<ul>
+				<li>2016 1-75 models in batch E & F are online</a></li>
+				<li>Also 2016 (and 2015) Jeep series, and 2016 Best of models</a></li>
+				<li>Also 2016 5-packs Fire Brigade, Jungle Crew, Construction Zone, Exotic and Desert</li>
+			</ul>
+		</div>	
+		
+		
+		
+		<div class="section">
 			<p class="date">May 22, 2016</p>
 			<ul>
 				<li>2016 1-75 models in batches A-D are online</a></li>
