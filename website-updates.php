@@ -11,6 +11,16 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">June 13, 2016</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0057">Dodge Charger Mk III (SF0057)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0052">Kennel Truck (SF0052)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0051">Mercedes Unimog (SF0051)</a></li>
+			</ul>
+		</div>			
+		
+		
+		<div class="section">
 			<p class="date">May 27, 2016</p>
 			<ul>
 				<li>2016 1-75 models in batch E & F are online</li>
