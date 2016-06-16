@@ -13,7 +13,8 @@
 		<div class="section">
 			<p class="date">June 13, 2016</p>
 			<ul>
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0057">Dodge Charger Mk III (SF0057)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0057">Mercury Park Lane Police (SF0057)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0054">Dodge Charger Mk III (SF0054)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0052">Kennel Truck (SF0052)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0051">Mercedes Unimog (SF0051)</a></li>
 			</ul>
