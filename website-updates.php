@@ -11,6 +11,23 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">June 27, 2016</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0036">Fire Pumper Truck (SF0036)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0032">Ford Cortina Mk II (SF0032)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0031">Rolls Royce Silver Shadow (SF0031)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0028">Pontiac GP Sports Coupe (SF0028)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0023">Dodge Wreck Truck (SF0023)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0022">Land Rover Safari (SF0022)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0019">Boat & Trailer (SF0019)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0013">Mercedes Trailer (SF0013)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0010">Volkswagen 1600 TL (SF0010)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0004">Lamborghini Marzal (SF0004)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0003">Volkswagen 1500 Saloon (SF0003)</a></li>
+			</ul>
+		</div>			
+			
+		<div class="section">
 			<p class="date">June 13, 2016</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0057">Mercury Park Lane Police (SF0057)</a></li>
