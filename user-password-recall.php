@@ -48,8 +48,8 @@
 			            //Mail inputs
 					    $to = $userEmail;
 					    $subject = "MBX-U: Password Reset";
-					    $message = "Your mbx-u.com password is <strong>" . $password . "</strong>.\r\n\r\n\r\n\r\n";
-					    $message .= "Use your password to log in here: <strong><a href='http://mbx-u.com/Authenticate-test.php'>log in to mbx-u.com</a></strong>.";
+					    $message = "Your mbx-u.com password is " . $password . ".\r\n\r\n";
+					    $message .= "Use your password to log in here: http://mbx-u.com/Authenticate-test.php.";
 					    $headers = 'From:Matchbox University<info@mbx-u.com>' . "\r\n" . 'Reply-To:info@mbx-u.com' . "\r\n" . 'Bcc:info@mbx-u.com';
 					    
 				        mail($to,$subject,$message,$headers);
