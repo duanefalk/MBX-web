@@ -75,7 +75,7 @@
 		        </div>       	
 				<div class="row">
 					<div class="large-6 medium-6 small-6 columns">
-				    	<input class="button" type="submit" name="btnSendPassword" value="Send Password">
+				    	<input class="button" type="submit" name="btnSendPassword" value="Retrieve Password">
 				    </div>
 				</div>
 	        </form>

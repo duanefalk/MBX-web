@@ -81,7 +81,7 @@
 			    </div>
 			    <div class="large-6 medium-6 small-6 columns">
 				    <!--a href="REPLACE" class="forgot">I forgot my password</a-->
-				    <a href="user-password-recall.php" class="forgot">I forgot my username</a>
+				    <a href="user-password-recall.php" class="forgot">I forgot my password.</a>
 			    </div>
 			</div>
         </form>
