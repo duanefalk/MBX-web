@@ -9,7 +9,15 @@
 	<div class="large-9 columns">
 	
 		<h2>Latest Website Updates</h2>
-
+			
+		<div class="section">
+			<p class="date">July 7, 2016</p>
+			<ul>
+				<li>2016 Code 2 models through June</li>
+				<li>2016 1-75 through batch G</li>
+				<li>2016 5 pack through 'Police Rescue'</li>
+			</ul>
+		</div>	
 		<div class="section">
 			<p class="date">June 27, 2016</p>
 			<ul>
