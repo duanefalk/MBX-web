@@ -9,6 +9,19 @@
 	<div class="large-9 columns">
 	
 		<h2>Latest Website Updates</h2>
+	
+		<div class="section">
+			<p class="date">July 15, 2016</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0011">Rolls Royce Silver Shadow Coupe (SF0011)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0008">BMC 1800 Pininfarina (SF0008)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0005">Lamborghini Miura (SF0005)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0002">Iso Grifo (SF0002)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0001">Lotus Europa (SF0001)</a></li>
+				
+				<li>Also! The new MBX-U code 2 models are being sent out. 17 of the 30 on the pending list are on their way. The remainder to follow soon.</li>
+			</ul>
+		</div>	
 			
 		<div class="section">
 			<p class="date">July 7, 2016</p>
