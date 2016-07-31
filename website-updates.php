@@ -9,6 +9,22 @@
 	<div class="large-9 columns">
 	
 		<h2>Latest Website Updates</h2>
+
+		<div class="section">
+			<p class="date">July 31, 2016</p>
+			<ul>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0045">Pony Trailer (SF0045)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0042">Draguar (SF0042)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0041">Opel Diplomat (SF0041)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0040">Leyland Petrol Tanker (SF0040)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0035">Mack Dump Truck (SF0035)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0034">Mercedes 230 SL (SF0034)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0029">Freeman Inter-City Commuter (SF0029)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0024">AEC Horse Box (SF0024)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0018">Ford Mustang (SF0018)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0012">Mercedes Truck (SF0012)</a></li>
+			</ul>
+		</div>	
 	
 		<div class="section">
 			<p class="date">July 15, 2016</p>
