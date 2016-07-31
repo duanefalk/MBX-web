@@ -9,7 +9,7 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<?php if ($_SESSION['Sec_Lvl'] > 1) { ?>
-				<em>Hello, <?php $_SESSION['First_Name'] ?></em>
+				<em>Hello, <?php echo $_SESSION['First_Name'] ?></em>
 				<?php if ($_SESSION['Sec_Lvl'] == 3) { //code 3 = Dad ?>
 					<a href='Add_Menu.php'>Add a New Record</a>
 				<?php } ?>
