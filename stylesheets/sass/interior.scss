@@ -35,8 +35,8 @@ Variation Comparison
 
 
 /* -- HOME ----------------------- */
-body.home #header { margin-bottom:2em; padding-bottom:0; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;	
-	* {color:$cream;}	
+body.home #header {margin-bottom:2em; padding-bottom:0; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;	
+	* {color:$cream;}
 	#logo {
 		@media only screen and (max-width:480px){ text-align:center; }
 	}	

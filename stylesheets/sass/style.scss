@@ -89,8 +89,10 @@ button {
 
 
 /* -- Header --------------- */
-#header { margin:0; padding:0 0 2em; background:$orange url('../images/bgHeaderBottom.jpg') bottom center repeat-x; 
+#header {margin:0; padding:0 0 2em; background:$orange url('../images/bgHeaderBottom.jpg') bottom center repeat-x; 
 	@media only screen and (max-width:480px){ position:relative; top:auto; text-align:center; }
+	
+	* {color:$cream;}
 }
 #logo {display:block;
 	@media only screen and (max-width:1024px){ text-align:center; }
@@ -122,8 +124,6 @@ button {
 		&:visited,
 		&:active { text-decoration:underline; }
 	}
-	
-	em {color:$white;}
 }
 
 
