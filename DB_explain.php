@@ -76,7 +76,7 @@
 		<p>Within a version there may be smaller differences that form variations of that version. Details such as:</p>
 		<ol>
 			<li>Wheel style: often Matchbox used different wheels for the same model, perhaps using up what was lying around the shop. Each different wheel style or combination is a variation. Note- both front wheel and rear wheels are considered. CHaracteristics include design of the hub, color of tire and hub, rubber or plastic tires.</li>
-			<li>Windows: There are often different colors of windows used for the same model. There is a separate page- <a href="Window_Colors.php" class="button dark">WINDOW COLORS</a> -that shows the most common vaiations</li>
+			<li>Windows: There are often different colors of windows used for the same model. There is a separate page- <a href="window-colors.php" class="button dark">WINDOW COLORS</a> -that shows the most common vaiations</li>
 			<li>Base Details: Plastic or Metal, color, details on the base etc. A model can have more than one base- an inset, a trailer base etc. and both are described.</li>
 			<li>Color or Tampo variations: small variations in color may occur for the same version. SImilarly, some models aare obviously of the same tampo design, but have a differece- ie. inclusion or lack of the MB2000, 50 or Hero City logos on models form 2000-2004.</li>
 			<li>Accessory differences: Whether or not the model has a tow hook, color of a driver etc.</li>
