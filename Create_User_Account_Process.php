@@ -92,7 +92,14 @@
         redirect_to($location);
      } 
      else {
-         echo "<p>Account creation failed.</p>";
-         echo "<p>".mysql_error()."</p>";
-      }
+?>
+	<div class="row">
+		<div class="large-12 columns">
+			<h1>Account creation failed.</h1>
+			<p><?php echo mysql_error(); ?></p>
+			<p><a href="Verification.php">Return to account creation</a>.</p>
+		</div>
+	</div>      
+<?php  
+	}
     mysql_close($connection); ?>
