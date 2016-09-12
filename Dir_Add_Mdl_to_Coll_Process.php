@@ -305,7 +305,7 @@
 		    </div>
                 <div class="large-3 small-6 columns end">
 	                 <?php
-		                $url = "Variation_Detail.php?model=".$Coll_VarID;
+		                $url = "variation-detail.php?model=".$Coll_VarID;
 		            ?>
 		            <a class="button dark cancel" href="<?php $url; ?>">Cancel</a>
                 </div>

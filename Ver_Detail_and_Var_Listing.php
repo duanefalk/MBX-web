@@ -130,7 +130,7 @@
 				exit;
 				}
 			if ($rows2>1) {
-			        $url= "Variation_Comparison.php?model=".$Version_to_detail;
+			        $url= "variation-comparison.php?model=".$Version_to_detail;
 				echo "<a class=\"button dark\" href=\"".$url."\">Var Comparison Chart</a>";
 			}
 			for ($i=1; $i<=$rows2; $i++) {
@@ -142,7 +142,7 @@
 				$picture2_loc = IMAGE_PATH . $row2["VarID"] . "_2.jpg";	
 				
 				$Variation_to_detail = $row2["VarID"];
-				$url = "Variation_Detail.php?model=".$Variation_to_detail;
+				$url = "variation-detail.php?model=".$Variation_to_detail;
 				
 				echo "<ul class='large-block-grid-3'>";
 					echo "<li class='carGrid'>";

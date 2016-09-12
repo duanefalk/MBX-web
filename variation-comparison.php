@@ -57,7 +57,7 @@
 				
 				//show photos
 				$Variation_to_detail= $row["VarID"];
-				$url= "Variation_Detail.php?model=".$Variation_to_detail;				
+				$url= "variation-detail.php?model=".$Variation_to_detail;				
 				
 				if (file_exists($picture1_loc)) {
 					//echo "picture exists";

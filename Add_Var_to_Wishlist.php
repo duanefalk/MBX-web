@@ -79,7 +79,7 @@
 			    </div>
 			    <div class="large-6 columns">
 				<?php
-				    $url= "Variation_Detail.php?model=".$Var_to_Add;
+				    $url= "variation-detail.php?model=".$Var_to_Add;
 				    echo "<a href=\"".$url."\">Cancel</a>";
 				?>
 			    </div>

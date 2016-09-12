@@ -41,7 +41,7 @@
 				
 				
 				$Variation_to_detail= $row["VarID"];
-				$url= "Variation_Detail.php?model=".$Variation_to_detail;				
+				$url= "variation-detail.php?model=".$Variation_to_detail;				
 				
 				if (file_exists($picture1_loc)) { ?>
 					<a href="<?php echo $picture1; ?>" class="imagePopup" title="<?php echo $row2a["RefName"]; ?>"><img src="<?php echo $picture1; ?>" /></a>

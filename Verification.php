@@ -57,7 +57,7 @@
 			$VerAns= $row2["VerAns"];
 		?>
 	
-			<form action="Verification.php" method="post" id="Verify" data-parsley-validate>		
+			<form action="verification.php" method="post" id="Verify" data-parsley-validate>		
 				<div class="row">
 					<div class="large-6 medium-6 columns">
 					        <div class="formRow">
@@ -74,7 +74,7 @@
 						<input type="submit"  name="submit" class="button dark" value="Submit"/>
 					</div>
 					<div class="large-2 small-6 columns end">
-						<a class="button dark cancel" href="Verification.php">Reset</a>
+						<a class="button dark cancel" href="verification.php">Reset</a>
 					</div>
 				</div>
 			</form>

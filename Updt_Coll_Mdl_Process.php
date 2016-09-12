@@ -330,7 +330,7 @@
 					<a href="<?php echo $url1; ?>" class="button dark cancel">Delete this Var/Copy</a>
 				</div>
 				<div class="large-4 small-4 columns">
-					<?php $url2 = "Variation_Detail.php?model=" . $Coll_VarID; ?>
+					<?php $url2 = "variation-detail.php?model=" . $Coll_VarID; ?>
 					<a href="<?php echo $url2; ?>" class="button dark cancel">Cancel</a>
 				</div>
 			</div>            

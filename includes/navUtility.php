@@ -17,11 +17,11 @@
 				<a href='logout.php'>Logout</a>
 			<?php } else if ($_SESSION['Sec_Lvl'] == 1) { ?>
 				<a href='website-updates.php'>Website Updates</a>
-				<a href='Verification.php'>Create an Account</a>
+				<a href='verification.php'>Create an Account</a>
 				<a href='Authenticate-test.php'>Go to Login</a>
 			<?php }	else { ?>
 				<a href='website-updates.php'>Website Updates</a>
-				<a href='Verification.php'>Create an Account</a>
+				<a href='verification.php'>Create an Account</a>
 				<a href='Authenticate-test.php'>Login</a>
 			<?php }	?>
 		</div>

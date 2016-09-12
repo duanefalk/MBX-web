@@ -97,7 +97,7 @@
 		<div class="large-12 columns">
 			<h1>Account creation failed.</h1>
 			<p><?php echo mysql_error(); ?></p>
-			<p><a href="Verification.php">Return to account creation</a>.</p>
+			<p><a href="verification.php">Return to account creation</a>.</p>
 		</div>
 	</div>      
 <?php  

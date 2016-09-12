@@ -33,7 +33,7 @@
 				$picture = IMAGE_URL . $row["VarID"] . "_1.jpg";
 				$picture_loc = IMAGE_PATH . $row["VarID"] . "_1.jpg";
 				$Variation_to_detail = $row["VarID"];
-				$url = "Variation_Detail.php?model=" . $Variation_to_detail;
+				$url = "variation-detail.php?model=" . $Variation_to_detail;
 
 				//determine what to show for version pics
 				//check if have account
