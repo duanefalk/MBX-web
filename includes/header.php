@@ -60,7 +60,7 @@
 					<li><a href="Search_Releases_Menu.php">Search Releases</a></li>					
 					<?php if ($_SESSION['Sec_Lvl'] > 1) { ?>
 						<li><a href='Collections_Menu.php'>Your Collections</a></li>
-						<li><a href='User_Upload.php'>Upload</a></li>
+						<li><a href='user-upload.php'>Upload</a></li>
 					<?php } ?>
 				</ul>
 			</div>

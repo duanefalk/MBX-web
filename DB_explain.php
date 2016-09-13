@@ -107,7 +107,7 @@
 			<li>Release Year</li>
 			<li>Country of sale: If sold in a particular country it can be listed as such (i.e. promos only sold in Belgium). USA is the biggest example of this. Aggregations of markets include ROW- rest of world (anywhere but USA), LA- Latin America, and if generally available, CORE- offered in all major markets.</li>
 			<li>Line: Miniatures, SKybusters, King/Superking, COnoys etc. The highest level distinction of releases. This site focuses on miniatures, but many miniature models are offered under SKybusters etc, and those are included.</li>
-			<li>Theme: Matchbox has sometimes used a particular theme for its packaging and sales across different series and years. Examples include the Tyco 'Fast Lane' theme, the much-loved 'Hero City' theme, and starting in 2014, 'On a Mission'. Check them out at <a href="Theme_List.php" class="button dark">RELEASE THEMES</a></li>	
+			<li>Theme: Matchbox has sometimes used a particular theme for its packaging and sales across different series and years. Examples include the Tyco 'Fast Lane' theme, the much-loved 'Hero City' theme, and starting in 2014, 'On a Mission'. Check them out at <a href="theme-list.php" class="button dark">RELEASE THEMES</a></li>	
 			<li>Series: 1-75, Multi-packs, Gift Sets, Premiere models etc. A list can be found in <a href="Series_List.php" class="button dark">RELEASE SERIES LIST</a></li>
 			<li>Series ID: if a series is numbered, such as the 1-75 models, that number.</li>
 			<li>Subseries and subseries ID: In recent years Mattel has dividede the 1-7 set into various subsets, Emergency, Construction etc. Other example sinclude the various 'World Class Series' under Premiere models</li>

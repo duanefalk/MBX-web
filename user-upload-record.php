@@ -84,7 +84,7 @@
 			    
 		        mail($emails,$subject,$message,$headers);
 		        
-		        //redirect_to("User_Upload.php");
+		        //redirect_to("user-upload.php");
 		        //exit;
 		        ?>						
 		    
@@ -96,7 +96,7 @@
 		        
 		        <div class="row">
 					<div class="large-2 small-6 columns">
-						<a href="<?php echo ROOTURL; ?>User_Upload.php" class="button dark">Upload Another File</a>
+						<a href="<?php echo ROOTURL; ?>user-upload.php" class="button dark">Upload Another File</a>
 					</div>
 					<div class="large-2 small-6 columns end">
 						<a href="<?php echo ROOTURL; ?>" class="button cancel">Return to Home</a>

@@ -12,7 +12,7 @@
 			<div class="large-12 columns">
 		        <a href="window-colors.php" class="button dark">Window Colors</a>
 		        <a href="wheel-types.php" class="button dark">Wheel Types</a>	
-			<a href="Theme_List.php" class="button dark">Release Themes</a>
+			<a href="theme-list.php" class="button dark">Release Themes</a>
 			<a href="Series_List.php" class="button dark">Release Series List</a>	
 			</div>
 		</div>

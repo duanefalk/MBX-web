@@ -8,7 +8,7 @@
 	<a href="Reference_List.php" class="button dark">Photos Sources & Other Links</a>
         <a href="window-colors.php" class="button dark">Window Colors</a>
         <a href="wheel-types.php" class="button dark">Wheel Types</a>	
-	<a href="Theme_List.php" class="button dark">Release Themes</a>
+	<a href="theme-list.php" class="button dark">Release Themes</a>
 	<a href="Series_List.php" class="button dark">Release Series List</a>
         <a href="Collections_Menu.php" class="button dark">Return to Collections Menu</a>	
 	</div>

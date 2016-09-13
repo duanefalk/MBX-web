@@ -387,7 +387,7 @@
 				<li>The Database is still being built! Check <a href="website-updates.php">Website Updates</a> to see current status.</li>
 				<li>Your query may have been too specific- try searching a portion of the name. The name you are looking at may be just the model name used on the package, which can be searched also under <a href="Search_Releases_Menu.php">Search Releases</a></li>
 				<li>Check for misspellings or incorrect format, i.e. MAN#s are up to 3 digits, with no '#'</li>
-				<li>There may be a database error! If you are certain the outcome is incorrect, please send details to me at info@mbx-u.com (or using the <a href="User_Upload.php">Upload</a> feature available if you have an account)</li>
+				<li>There may be a database error! If you are certain the outcome is incorrect, please send details to me at info@mbx-u.com (or using the <a href="user-upload.php">Upload</a> feature available if you have an account)</li>
 				</ul>
 				<p>Additional tips for searching are contained on the 'Tips' related page listed below</p>
 			<?php } ?>			
