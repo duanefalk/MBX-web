@@ -86,7 +86,7 @@
 			</div>
         </form>
         
-        <!--a href="guest_login.php">Log in as Guest</a-->
+        <!--a href="guest-login.php">Log in as Guest</a-->
 	</div>
 	
 </div>

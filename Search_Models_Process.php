@@ -367,7 +367,7 @@
 				// if search by text on model		
 				//go to separate page to search and display model details of multiple umids at ver level
 				$TempaText=$_SESSION['TempaText'];
-				$string_to_redirect="Models_Found_List.php?tempatext=".$TempaText;
+				$string_to_redirect="models-found-list.php?tempatext=".$TempaText;
 				redirect_to($string_to_redirect);
 			}                   
 

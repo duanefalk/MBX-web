@@ -19,7 +19,7 @@
 
 <div class="row">
 	<div class="large-12 columns">
-        <a href="How_Made.php" class="button dark">How are Diecast Cars Made?</a>
+        <a href="how-made.php" class="button dark">How are Diecast Cars Made?</a>
         <a href="Diecast_History.php" class="button dark">Short History of Diecast Toys</a>	
 	<a href="Diecast_Brands.php" class="button dark">A Plethora of Diecast Car Brands</a>
 	</div>
@@ -35,7 +35,7 @@
 	<div class="large-12 columns">
         <a href="Matchbox_History.php" class="button dark">A Brief History of the 'Matchbox' Brand</a>
         <a href="Early_Lesney.php" class="button dark">Early Lesney Toys</a>	
-	<a href="LR_vs_SF.php" class="button dark">What's the Difference? Regular & Superfast models</a>
+	<a href="lr-vs-sf.php" class="button dark">What's the Difference? Regular & Superfast models</a>
 	<a href="MB_Organization.php" class="button dark">Ways of Organizing Matchbox Models</a>	
 	</div>
 </div>
