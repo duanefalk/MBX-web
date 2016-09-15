@@ -13,7 +13,7 @@
 		        <a href="window-colors.php" class="button dark">Window Colors</a>
 		        <a href="wheel-types.php" class="button dark">Wheel Types</a>	
 			<a href="theme-list.php" class="button dark">Release Themes</a>
-			<a href="Series_List.php" class="button dark">Release Series List</a>	
+			<a href="series-list.php" class="button dark">Release Series List</a>	
 			</div>
 		</div>
 		<p>Information about and photos of various components that are used in the database.</p>
