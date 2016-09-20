@@ -78,7 +78,7 @@
 						<h2>The Course Catalog</h2>
 						<p>Whether you are new to the Matchbox world or a long-time collector, check out the Matchbox University Course Catalog.</p>
 						<p>Matchbox University is open to all. The Professor invites you to click on the MBX 101 button above to see a list of topics.</p>
-						<p><a href="MBX101_Menu.php" class="button">MBX 101</a></p>
+						<p><a href="mbx101-menu.php" class="button">MBX 101</a></p>
 					</div>
 					<div class="banner three">
 						<h2>Manage your collection from anywhere!!</h2>

@@ -40,7 +40,7 @@
 			    $outcome=mysql_query($query);
 			
 			    if ($outcome) {
-			        redirect_to("Outcomes.php?message=Rel_success&model=$RelID");
+			        redirect_to("outcomes.php?message=Rel_success&model=$RelID");
 			    } else {
 			        echo "<p>Subject creation failed. Please review entries.</p>";
 			        echo "<p>".mysql_error()."</p>";

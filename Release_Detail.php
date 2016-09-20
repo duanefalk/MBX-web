@@ -159,7 +159,7 @@
 											$rows5b= mysql_num_rows($result5b);
 											if ($rows5a >0) {
 												echo "<p>You have ". $rows5a." copy/copies of this release in your collection.</p>";
-												echo "<p>If you want to edit one of those, select <a href=\"Manage_Models_in_Collection.php\">Manage Models In Collection</a>Click the button below to add another, or cancel to return to version details.</p>";
+												echo "<p>If you want to edit one of those, select <a href=\"manage-models-in-collection.php\">Manage Models In Collection</a>Click the button below to add another, or cancel to return to version details.</p>";
 											} elseif ($rows5b >0) {
 												echo "<p>You have this variation, but not this release. If you want to add the release to the existing variation record, go to <a href=\"Updt_Coll_Mdl.php\">Update Models In Collection</a> from the menu bar on this page. To add another record with this release, click the burron below below.</p>";
 											} else {

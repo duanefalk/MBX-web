@@ -41,7 +41,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Manage_Collections.php">Manage Collections</a>
+		<a href="manage-collections.php">Manage Collections</a>
 	</div>
 </div>
 

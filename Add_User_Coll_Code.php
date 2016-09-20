@@ -27,10 +27,10 @@
 		   
 		        $outcome=mysql_query($query);
 		        if (!$outcome) {
-					redirect_to("Outcomes.php?message=Code_fail&model=$UserCollValue");
+					redirect_to("outcomes.php?message=Code_fail&model=$UserCollValue");
 		            //drop down to form again
 		        }  else {
-					redirect_to("Outcomes.php?message=Code_success&model=$UserCollValue");
+					redirect_to("outcomes.php?message=Code_success&model=$UserCollValue");
 					exit;
 				}
 		    }
@@ -117,7 +117,7 @@
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
 		<a href="Collection_Code_Lists.php">Manage Collection Code Lists</a>
-		<a href="Manage_Collections.php">Manage Collections</a>
+		<a href="manage-collections.php">Manage Collections</a>
 	</div>
 </div>
 <?php include("includes/footer.php"); ?>

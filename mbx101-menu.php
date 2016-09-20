@@ -33,10 +33,10 @@
 
 <div class="row">
 	<div class="large-12 columns">
-        <a href="Matchbox_History.php" class="button dark">A Brief History of the 'Matchbox' Brand</a>
+        <a href="matchbox-history.php" class="button dark">A Brief History of the 'Matchbox' Brand</a>
         <a href="Early_Lesney.php" class="button dark">Early Lesney Toys</a>	
 	<a href="lr-vs-sf.php" class="button dark">What's the Difference? Regular & Superfast models</a>
-	<a href="MB_Organization.php" class="button dark">Ways of Organizing Matchbox Models</a>	
+	<a href="mb-organization.php" class="button dark">Ways of Organizing Matchbox Models</a>	
 	</div>
 </div>
 

@@ -43,7 +43,7 @@
 	//Check if success, if so go out to success message and button to search again 
         $outcome=mysql_query($query);
         if ($outcome) {
-	    redirect_to("Outcomes.php?message=Var_success&model=$VarID");
+	    redirect_to("outcomes.php?message=Var_success&model=$VarID");
         
 	    //if ((mysql_query($query)) == true)
             //echo "<p>Done and returning</p>";

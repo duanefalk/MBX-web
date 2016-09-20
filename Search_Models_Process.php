@@ -410,7 +410,7 @@
 				//make image clickable and send proper id to model_detail page
 				if ($Search_by_MAN=="1") {
 					$Model_to_detail=$row["FAB_No"];
-					$url= "MAN_Details_and_Ver_Listing.php?model=".$Model_to_detail;
+					$url= "man-details-and-ver-listing.php?model=".$Model_to_detail;
 				} else {
 					$Model_to_detail=$row["UMID"];
 					$url= "Models_Detail_and_Ver_Listing.php?model=".$Model_to_detail;
@@ -471,7 +471,7 @@
 		<p class="tip">related pages:</p>
 		<a href="Search_Models_Menu.php">Search Models</a>
 		<a href="similar_models_compare.php">Differences Among Similar Models</a>
-		<a href="model_search_help.php">Tips on Searching for Models</a>
+		<a href="model-search-help.php">Tips on Searching for Models</a>
 	</div>
 </div>
 

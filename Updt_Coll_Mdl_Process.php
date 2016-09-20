@@ -342,7 +342,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Manage_Models_in_Collection.php">Manage Mdls in Collection</a>
+		<a href="manage-models-in-collection.php">Manage Mdls in Collection</a>
 		<a href="Search_Models.php">Search Models</a>
 		<a href="Search_Releases.php">Search Releases</a>
 		<a href="index.php">Return to Main Page</a>

@@ -813,7 +813,7 @@
 		<p class="tip">related pages:</p>
 		<a href="Search_Models_Menu.php">Search Models</a>
 		<a href="Search_Releases_Menu.php">Search Releases</a>
-		<a href="model_search_help.php">Tips on Searching for Models</a>
+		<a href="model-search-help.php">Tips on Searching for Models</a>
 	</div>
 </div>
 

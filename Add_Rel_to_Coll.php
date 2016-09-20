@@ -47,7 +47,7 @@
 		
 		        if ($outcome) {
 			    //echo "<p>Posted release ".$RelID. " to Collection</p>";
-			    redirect_to("Outcomes.php?message=Rel_success&model=$RelID");		
+			    redirect_to("outcomes.php?message=Rel_success&model=$RelID");		
 		            //Return;
 		            $url = "Ver_Detail_and_Var_Listing.php?model=".$VerID;
 				    echo "<a class='button dark' href=\"".$url."\">Return to Listing</a>";

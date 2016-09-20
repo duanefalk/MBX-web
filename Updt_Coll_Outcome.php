@@ -11,7 +11,7 @@
 	<div class="large-12 columns">
 		
 		<h2>Collection Successfully Updated!</h2>
-		<p><a class='button dark' href="Manage_Collections.php">Return to Manage Collection</a></p>
+		<p><a class='button dark' href="manage-collections.php">Return to Manage Collection</a></p>
 		
     </div>
 </div>
@@ -21,7 +21,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Manage_Collections.php">Manage Collection</a>
+		<a href="manage-collections.php">Manage Collection</a>
 		<a href="index.php">Return to Main Page</a>
 	</div>
 </div>	

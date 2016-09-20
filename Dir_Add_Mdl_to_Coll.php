@@ -24,7 +24,7 @@
 		    <input type="text" id="Coll_VarID" name="Coll_VarID" value="" size="13" id="Coll_VarID">
 		    
 		    <input type="submit" class="button dark" value="Submit" id="var_submit" name="var_submit">
-		    <a href="Manage_Models_in_Collection.php" class="button dark">Cancel</a>
+		    <a href="manage-models-in-collection.php" class="button dark">Cancel</a>
         </form>
 		
 		
@@ -35,7 +35,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Manage_Models_in_Collection.php">Manage Mdls in Collection</a>
+		<a href="manage-models-in-collection.php">Manage Mdls in Collection</a>
 		<a href="Search_Models.php">Search Models</a>
 		<a href="Search_Releases.php">Search Releases</a>
 		<a href="index.php">Return to Main Page</a>

@@ -60,7 +60,7 @@
 		<p class="tip">related pages:</p>
 		<a href="About_site.php">About the Site</a>
 		<a href="DB_explain.php">About the Database</a>
-		<a href="MB_Code_System.php">The Code System</a>
+		<a href="mb-code-system.php">The Code System</a>
 		<a href="Ref_files.php">Reference Files</a>
 		<a href="Dedication.php">Dedication</a>
 	</div>

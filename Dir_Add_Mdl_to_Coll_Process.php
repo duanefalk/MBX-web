@@ -44,7 +44,7 @@
 	$outcome = mysql_query($query);
         
         if ($outcome) {
-	    redirect_to("Outcomes.php?message=Var_success&model=$VarID");
+	    redirect_to("outcomes.php?message=Var_success&model=$VarID");
         } else {
             echo "<p>Subject creation failed. Please review entries.</p>";
             echo "<p>".mysql_error()."</p>";
@@ -322,7 +322,7 @@
 		<p class="tip">related pages:</p>
 		<a href="Search_Models.php">Search Models</a>
 		<a href="Search_Releases.php">Search Releases</a>
-		<a href="Manage_Models_in_Collection.php">Manage Models in Your Collection</a>
+		<a href="manage-models-in-collection.php">Manage Models in Your Collection</a>
 		<a href="index.php">Return to Main Page</a>
 	</div>
 </div>

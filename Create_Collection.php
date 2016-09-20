@@ -40,7 +40,7 @@
 					<p class="noMargin">Description: <?php echo $OrigcollDesc; ?></p>
 					<p>Creation Date: <?php echo $User_Coll_Created_Date; ?></p>
 					
-					<p>You can go to <a href="Updt_Coll.php">View/Update</a> to see the details of this collection, or return to <a href="Manage_Collections.php">Manage collections</a></p>
+					<p>You can go to <a href="Updt_Coll.php">View/Update</a> to see the details of this collection, or return to <a href="manage-collections.php">Manage collections</a></p>
 					
 				<?php		
 					//Exit;
@@ -90,7 +90,7 @@
 
 						
 					<input type="submit" class="button dark" name="Create_Coll_Submit" value="Submit"/>
-					<a class="button cancel" href="Manage_Collections.php">Cancel</a>	
+					<a class="button cancel" href="manage-collections.php">Cancel</a>	
 				</form>				    
 		    <?php }
 		?>
@@ -102,7 +102,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Manage_Collections.php">Manage Collections</a>
+		<a href="manage-collections.php">Manage Collections</a>
 	</div>
 </div>
 

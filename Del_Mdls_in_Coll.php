@@ -24,7 +24,7 @@
         if ($outcome) {
         //if ((mysql_query($query)) == true)
 
-	    redirect_to("Manage_Models_in_Collection.php");
+	    redirect_to("manage-models-in-collection.php");
         } else {
             echo "<p>Deletion failed. Please review entries.</p>";
             echo "<p>".mysql_error()."</p>";
@@ -100,7 +100,7 @@
 				    <input type="submit" name="del_submit" class="button dark" value="DELETE?" id="del_submit" />
 			    </div>
 			    <div class="large-4 small-6 columns end">
-				    <a class="button dark cancel" href="Manage_Models_in_Collection.php">Cancel</a>
+				    <a class="button dark cancel" href="manage-models-in-collection.php">Cancel</a>
 			    </div>
 		    </div>
     	</form>
@@ -111,7 +111,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Manage_Models_in_Collection.php">Manage Mdls in Collection</a>
+		<a href="manage-models-in-collection.php">Manage Mdls in Collection</a>
 		<a href="Search_Models.php">Search Models</a>
 		<a href="Search_Releases.php">Search Releases</a>
 		<a href="index.php">Return to Main Page</a>

@@ -79,7 +79,7 @@
 					<a class="button dark" href="<?php echo $url1; ?>">DELETE COLLECTION</a>
 			    </div>
 			    <div class="large-2 small-4 columns end">
-				    <a class="button dark cancel" href="Manage_Collections.php">Cancel</a>
+				    <a class="button dark cancel" href="manage-collections.php">Cancel</a>
 			    </div>
 		    </div>
 		</form>    
@@ -90,7 +90,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Manage_Collections.php">Manage Collection</a>
+		<a href="manage-collections.php">Manage Collection</a>
 		<a href="index.php">Return to Main Page</a>
 	</div>
 </div>	

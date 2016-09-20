@@ -19,7 +19,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="MBX101_Menu.php">MBX 101 Menu</a>
+		<a href="mbx101-menu.php">MBX 101 Menu</a>
 	</div>
 </div>
 

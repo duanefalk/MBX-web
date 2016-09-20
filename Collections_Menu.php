@@ -21,10 +21,10 @@
 		<h2>Manage Your Collections</h2>
 		<div class="row actionButtons">
 			<div class="large-4 medium-4 columns">
-				<a href="Manage_Collections.php" class="button dark">Create/Configure Your Collections</a>
+				<a href="manage-collections.php" class="button dark">Create/Configure Your Collections</a>
 			</div>
 			<div class="large-4 medium-4 columns">
-		        <a href="Manage_Models_in_Collection.php" class="button dark">Manage Models in Your Collection</a>
+		        <a href="manage-models-in-collection.php" class="button dark">Manage Models in Your Collection</a>
 		    </div>
 		    <div class="large-4 medium-4 columns">   
 		        <a href="Collection_Reports.php" class="button dark">Collection Reports</a>
@@ -115,7 +115,7 @@
 						</ul>
 						<p><strong>Option 2:</strong></p>
 						<ul>
-							<li>Direct entry: If you know the database 'Variation ID' (also called 'VarID') of the model you have (for instance, 'SF0484-003-a') you can enter it directly from the <a href="Manage_Collections.php">Manage Your Collection</a> menu.</li>
+							<li>Direct entry: If you know the database 'Variation ID' (also called 'VarID') of the model you have (for instance, 'SF0484-003-a') you can enter it directly from the <a href="manage-collections.php">Manage Your Collection</a> menu.</li>
 							<li>Using this option, you MUST have this ID- you cannot use just the MAN#, Mack# or other ID for this method.</li>
 							<li>You can print listings of models with the VarID's to use as reference if you prefer this method.</li>
 						</ul>
@@ -133,7 +133,7 @@
 					</ul>
 					<p><strong>Option 2:</strong></p>
 					<ul>
-						<li>Direct entry: If you know the database 'Variation ID' (also called 'VarID') of the model you have (for instance, 'SF0484-003-a') you can enter it directly from the <a href="Manage_Collections.php">Manage Your Collection</a> menu.</li>
+						<li>Direct entry: If you know the database 'Variation ID' (also called 'VarID') of the model you have (for instance, 'SF0484-003-a') you can enter it directly from the <a href="manage-collections.php">Manage Your Collection</a> menu.</li>
 						<li>Using this option, you MUST have this ID- you cannot use just the MAN#, Mack# or other ID for this method.</li>
 						<li>You can print listings of models with the VarID's to use as reference if you prefer this method.</li>
 					</ul>
