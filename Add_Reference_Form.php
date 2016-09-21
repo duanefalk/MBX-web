@@ -58,7 +58,7 @@
 					<input class="button dark" type="submit" name="submit" value="Submit"/>
 				</div>
 				<div class="large-3 medium-6 small-6 columns end">
-					<a class="button dark cancel" href="Add_Menu.php">Cancel</a>
+					<a class="button dark cancel" href="add-menu.php">Cancel</a>
 				</div>
 			</div>
 		</form>
@@ -69,7 +69,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Add_Menu.php">Add New Record</a>
+		<a href="add-menu.php">Add New Record</a>
 	</div>
 </div>
 

@@ -55,7 +55,7 @@
 			
 			<div class="large-9 columns">
 				<ul id="mainNav">
-					<li><a href="About_site.php">About</a></li>
+					<li><a href="about-site.php">About</a></li>
 					<li><a href="Search_Models_Menu.php">Search Models</a></li>
 					<li><a href="Search_Releases_Menu.php">Search Releases</a></li>					
 					<?php if ($_SESSION['Sec_Lvl'] > 1) { ?>
@@ -72,7 +72,7 @@
 						<h2>What is the Matchbox University?</h2>
 						<p>The Matchbox University is an on-line database of Matchbox ‘miniatures’, from regular wheels models up through this year’s versions.</p>
 						<p>The listings are built in a relational database to catalog and categorize the models uniquely.</p>
-						<p><a href="About_site.php" class="button">Learn More</a></p>
+						<p><a href="about-site.php" class="button">Learn More</a></p>
 					</div>
 					<div class="banner two">
 						<h2>The Course Catalog</h2>

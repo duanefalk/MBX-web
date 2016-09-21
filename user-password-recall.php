@@ -41,7 +41,7 @@
 					    $password = $userAcctInfo["Password"];
 					    
 					    ?>
-					    <p>We sent your password to your email address on file. Please check for the email and then <a href="<?php ROOTURL; ?>Authenticate-test.php">log in here</a>.</p>
+					    <p>We sent your password to your email address on file. Please check for the email and then <a href="<?php ROOTURL; ?>authenticate-test.php">log in here</a>.</p>
 						<p>If you have any issues, reach out to us at <a href="mailto:info@mbx-u.com">info@mbx-u.com</a>.</p>
 			            <?php
 				            
@@ -49,7 +49,7 @@
 					    $to = $userEmail;
 					    $subject = "MBX-U: Password Reset";
 					    $message = "Your mbx-u.com password is " . $password . ".\r\n\r\n";
-					    $message .= "Use your password to log in here: http://mbx-u.com/Authenticate-test.php.";
+					    $message .= "Use your password to log in here: http://mbx-u.com/authenticate-test.php.";
 					    $headers = 'From:Matchbox University<info@mbx-u.com>' . "\r\n" . 'Reply-To:info@mbx-u.com' . "\r\n" . 'Bcc:info@mbx-u.com';
 					    
 				        mail($to,$subject,$message,$headers);

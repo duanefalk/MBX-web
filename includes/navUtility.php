@@ -11,18 +11,18 @@
 			<?php if ($_SESSION['Sec_Lvl'] > 1) { ?>
 				<em>Hello, <?php echo $_SESSION['First_Name'] ?></em>
 				<?php if ($_SESSION['Sec_Lvl'] == 3) { //code 3 = Dad ?>
-					<a href='Add_Menu.php'>Add a New Record</a>
+					<a href='add-menu.php'>Add a New Record</a>
 				<?php } ?>
 				<a href='Edit_Account_Form.php'>Edit Account</a>
 				<a href='logout.php'>Logout</a>
 			<?php } else if ($_SESSION['Sec_Lvl'] == 1) { ?>
 				<a href='website-updates.php'>Website Updates</a>
 				<a href='verification.php'>Create an Account</a>
-				<a href='Authenticate-test.php'>Go to Login</a>
+				<a href='authenticate-test.php'>Go to Login</a>
 			<?php }	else { ?>
 				<a href='website-updates.php'>Website Updates</a>
 				<a href='verification.php'>Create an Account</a>
-				<a href='Authenticate-test.php'>Login</a>
+				<a href='authenticate-test.php'>Login</a>
 			<?php }	?>
 		</div>
 	</div>

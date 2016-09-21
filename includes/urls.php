@@ -9,10 +9,10 @@
 	$router = new AltoRouter();
 	
 	$router->map('GET','/',function() {require 'index.php';});
-	$router->map('GET','/about',function() {require 'About_site.php';});
+	$router->map('GET','/about',function() {require 'about-site.php';});
 	$router->map('GET','/search-models',function() {require 'Search_Models_Menu.php';});
 	$router->map('GET','/search-releases',function() {require 'Search_Releases_Menu.php';});
-	$router->map('GET','/log-in',function() {require 'Authenticate-test.php';});
+	$router->map('GET','/log-in',function() {require 'authenticate-test.php';});
 	$router->map('GET','/edit-account',function() {require 'Edit_Account_Form.php';});
 	$router->map('GET','/log-out',function() {require 'logout.php';});
 	$router->map('GET','/create-account',function() {require 'Create_User_Account_Form.php';});
