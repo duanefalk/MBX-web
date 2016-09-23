@@ -104,7 +104,7 @@
 					<input class="button dark" type="submit" name="submit" value="Submit" id="submit"/>
 				</div>
 				<div class="large-2 small-6 columns end">
-					<a class="button dark cancel" href="Collection_Code_Lists.php">Cancel</a>	
+					<a class="button dark cancel" href="collection-code-lists.php">Cancel</a>	
 				</div>
 			</div>
 		</form>	
@@ -116,7 +116,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Collection_Code_Lists.php">Manage Collection Code Lists</a>
+		<a href="collection-code-lists.php">Manage Collection Code Lists</a>
 		<a href="manage-collections.php">Manage Collections</a>
 	</div>
 </div>

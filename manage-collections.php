@@ -46,7 +46,7 @@
 			?>
 	 	              
 		    <div class="large-6 medium-6 columns">
-		    	<a href="Collection_Code_Lists.php" class="button dark">Set up Collection Code Lists</a>
+		    	<a href="collection-code-lists.php" class="button dark">Set up Collection Code Lists</a>
 		    </div>
 		</div>
 		<p><em>*Currently each user can have only one collection.</em></p>

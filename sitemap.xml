@@ -47,7 +47,7 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/DB_explain.php</loc>
+  <loc>http://mbx-u.com/db-explain.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
@@ -59,7 +59,7 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/Dedication.php</loc>
+  <loc>http://mbx-u.com/dedication.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
@@ -75,11 +75,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/Diecast_History.php</loc>
+  <loc>http://mbx-u.com/diecast-history.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/Diecast_Brands.php</loc>
+  <loc>http://mbx-u.com/diecast-brands.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
@@ -163,7 +163,7 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/Collection_Code_Lists.php</loc>
+  <loc>http://mbx-u.com/collection-code-lists.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>

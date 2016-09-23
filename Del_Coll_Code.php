@@ -62,7 +62,7 @@
 		            <input type="submit" name="del_submit" class="button dark" value="DELETE?" id="del_submit"/>
 	            </div>
 	            <div class="large-3 columns end">
-		            <a class="button dark cancel" href="Collection_Code_Lists.php">Cancel</a>
+		            <a class="button dark cancel" href="collection-code-lists.php">Cancel</a>
 	            </div>
             </div>
     	</form>

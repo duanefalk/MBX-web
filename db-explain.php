@@ -137,7 +137,7 @@
 		<a href="mb-code-system.php">The Code System</a>
 		<a href="About_photos.php">Links & Photo References</a>
 		<a href="Ref_files.php">Reference Files</a>
-		<a href="Dedication.php">Dedication</a>
+		<a href="dedication.php">Dedication</a>
 	</div>
 </div>
 

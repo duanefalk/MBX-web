@@ -59,10 +59,10 @@
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
 		<a href="about-site.php">About the Site</a>
-		<a href="DB_explain.php">About the Database</a>
+		<a href="db-explain.php">About the Database</a>
 		<a href="mb-code-system.php">The Code System</a>
 		<a href="Ref_files.php">Reference Files</a>
-		<a href="Dedication.php">Dedication</a>
+		<a href="dedication.php">Dedication</a>
 	</div>
 </div>
  

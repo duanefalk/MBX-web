@@ -78,7 +78,7 @@
 				if ($rows_count>0) {
 					$row = mysql_fetch_array($result);
 					if ($row['Coll_List_Val_InactivFlg']==0) { 
-						?> <p><img class='icon inline' src="<?php echo $check ?>">You've already entered some Collection Code List items. You can add to your lists at any time from the <a href="Collection_Code_Lists.php">Create Collection Code Lists</a> menu option.</p>
+						?> <p><img class='icon inline' src="<?php echo $check ?>">You've already entered some Collection Code List items. You can add to your lists at any time from the <a href="collection-code-lists.php">Create Collection Code Lists</a> menu option.</p>
 					<?php } else {
 						?> <p><img class='icon inline' src="<?php echo $cross ?>">No sellers or storage locations added yet.</p>
 					<?php }

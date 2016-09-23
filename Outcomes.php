@@ -40,7 +40,7 @@ if ($source_string=="Rel_success") {
 			<h2>Code <?php echo $ID; ?> Failed!</h2>
 			<p>Subject creation failed. Please review entries.</p>
 			
-			<p><a class='button dark' href="Collection_Code_Lists.php">Manage Your Code Lists</a></p>
+			<p><a class='button dark' href="collection-code-lists.php">Manage Your Code Lists</a></p>
 		
 		</div>
 	</div>	
@@ -54,7 +54,7 @@ if ($source_string=="Rel_success") {
 					<a class='button dark' href="Add_User_Coll_Code.php">Add Another Code</a>
 				</div>
 				<div class="large-6 columns end">
-					<a class='button dark' href="Collection_Code_Lists.php">back to Collection Code Lists</a>
+					<a class='button dark' href="collection-code-lists.php">back to Collection Code Lists</a>
 				</div>
 			</div>		
 		</div>

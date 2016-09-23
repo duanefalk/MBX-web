@@ -20,8 +20,8 @@
 <div class="row">
 	<div class="large-12 columns">
         <a href="how-made.php" class="button dark">How are Diecast Cars Made?</a>
-        <a href="Diecast_History.php" class="button dark">Short History of Diecast Toys</a>	
-	<a href="Diecast_Brands.php" class="button dark">A Plethora of Diecast Car Brands</a>
+        <a href="diecast-history.php" class="button dark">Short History of Diecast Toys</a>	
+	<a href="diecast-brands.php" class="button dark">A Plethora of Diecast Car Brands</a>
 	</div>
 </div>
 
