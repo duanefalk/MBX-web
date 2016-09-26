@@ -86,7 +86,7 @@
 					<a href="All_Variations.php?model=<?php echo $model_for_detail; ?>" class="button dark">See All Variations</a>
 				</div>
 				<div class="large-6 columns">
-					<a href="Display_Microvariations.php?model=<?php echo $model_for_detail; ?>" class="button dark">See Microvariations</a>
+					<a href="display-microvariations.php?model=<?php echo $model_for_detail; ?>" class="button dark">See Microvariations</a>
 				</div>
 			<?php } else { ?>
 				<div class="large-6 columns end">

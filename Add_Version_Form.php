@@ -9,7 +9,7 @@
 <div class="row">
 	<div class="large-12 columns">
 		<h2>Add a Version</h2>
-		<form action="Add_Version_Process.php" method="post">
+		<form action="add-version-process.php" method="post">
 			
 			<label for="UMID">UMID:</label>
 			<input type="text" name="UMID" value="" size="6" id="UMID">
