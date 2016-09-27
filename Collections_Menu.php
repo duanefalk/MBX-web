@@ -27,7 +27,7 @@
 		        <a href="manage-models-in-collection.php" class="button dark">Manage Models in Your Collection</a>
 		    </div>
 		    <div class="large-4 medium-4 columns">   
-		        <a href="Collection_Reports.php" class="button dark">Collection Reports</a>
+		        <a href="collection-reports.php" class="button dark">Collection Reports</a>
 		    </div>
 		</div>		
 		

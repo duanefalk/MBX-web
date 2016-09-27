@@ -11,16 +11,16 @@
 		
 		<div class="row actionButtons">
 			<div class="large-4 columns">
-				<a href="Collection_Report_A.php" class="button dark">Collection Summary</a>
+				<a href="collection-report-a.php" class="button dark">Collection Summary</a>
 			</div>
 			<div class="large-4 columns end">   
-				<a href="Collection_Report_H.php" class="button dark">Summary for all Sellers</a>
+				<a href="collection-report-h.php" class="button dark">Summary for all Sellers</a>
 			</div>
 			<div class="large-4 columns end">   
-				<a href="Collection_Report_M_Menu.php" class="button dark">Models in Collection</a>
+				<a href="collection-report-m-menu.php" class="button dark">Models in Collection</a>
 			</div>					
 			<div class="large-4 columns end">   
-				<a href="Collection_Report_W.php" class="button dark">Wishlist Report</a>
+				<a href="collection-report-w.php" class="button dark">Wishlist Report</a>
 			</div>			
 		</div>
 	</div>

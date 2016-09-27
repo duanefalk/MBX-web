@@ -9,11 +9,11 @@
 
 <?php $User=$_SESSION['Username']; ?>
 <div class="large-12 columns">
-<a href="Collection_Reports.php" class="button dark">Return to Collection Reports Menu</a>
+<a href="collection-reports.php" class="button dark">Return to Collection Reports Menu</a>
 <a href="index.php" class="button dark">Return to Main Page</a>
 </div>
 
-<form action="Collection_Report_M_Process.php" method="post">
+<form action="collection-report-m-process.php" method="post">
 
 <!-- Search Options -->
 <div class="row">
@@ -337,7 +337,7 @@
 		<div class="large-12 columns">
 			<input type="submit" class="button dark" name="submit" value="Search" />
 		
-			<a class="button cancel" href="Collection_Report_M_Menu.php">Clear</a>
+			<a class="button cancel" href="collection-report-m-menu.php">Clear</a>
 		</div>
 		
 	</div>

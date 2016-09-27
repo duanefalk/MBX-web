@@ -186,7 +186,7 @@
 									<h5>Wishlist</h5>
 									<?php if (mysql_num_rows($result4) > 0) {
 										echo "<p>You already have this variation on your wishlist (you can only have one entry for a variation on the wishlist).</p>";
-										echo "<p><a href='Collection_Report_W.php'>View Wishlist</a></p>";
+										echo "<p><a href='collection-report-w.php'>View Wishlist</a></p>";
 										echo "<p><a href='Search_Models_Menu.php'>Return to search page</a></p>";
 										$Wishlist_option = 0;
 									} else {

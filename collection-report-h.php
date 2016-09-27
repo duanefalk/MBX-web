@@ -10,7 +10,7 @@
 
 <div class="row">
 	<div class="large-12 columns">
-            <a href="Collection_Reports.php" class="button dark">Return to Collection Reports Menu</a>
+            <a href="collection-reports.php" class="button dark">Return to Collection Reports Menu</a>
             <a href="index.php" class="button dark">Return to Main Page</a>
             <?php
 		$User=$_SESSION['Username'];
