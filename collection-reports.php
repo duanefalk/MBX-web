@@ -30,7 +30,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Collections_Menu.php">Manage Your Collections</a>
+		<a href="collections-menu.php">Manage Your Collections</a>
 	</div>
 </div>
 		

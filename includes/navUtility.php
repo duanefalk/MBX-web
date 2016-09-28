@@ -13,7 +13,7 @@
 				<?php if ($_SESSION['Sec_Lvl'] == 3) { //code 3 = Dad ?>
 					<a href='add-menu.php'>Add a New Record</a>
 				<?php } ?>
-				<a href='Edit_Account_Form.php'>Edit Account</a>
+				<a href='edit-account-form.php'>Edit Account</a>
 				<a href='logout.php'>Logout</a>
 			<?php } else if ($_SESSION['Sec_Lvl'] == 1) { ?>
 				<a href='website-updates.php'>Website Updates</a>

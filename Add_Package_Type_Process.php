@@ -40,12 +40,12 @@ PkgTypePhotoRef
             VALUES ('$PkgVarCode','$PkgType','$PkgTypeYrs','$PkgTypeDescr','$PkgTypePhotoName','$PkgTypePhotoPath','$PkgTypePhotoRef')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;
-    // header("Location: Add_Package_Type_Form.php");
+    // header("Location: add-package-type-form.php");
     
     // for some reason this gives me error duplicate key primary, but also does the insert!
     $outcome=mysql_query($query);
     if ($outcome) {
-         redirect_to("Add_Package_Type_Form.php");
+         redirect_to("add-package-type-form.php");
          exit;
      } // success 
      else {

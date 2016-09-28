@@ -50,11 +50,11 @@
 					if ($rows>0) {
 					    $row = mysql_fetch_array($result);
 					    if ($row['User_Coll_Inactiv_Flag']=="1") {
-						echo "<p>You do not have a collection. Please create a collection first at <a href=\"Create_Collection.php\">Create Collection</a>.</p>";
+						echo "<p>You do not have a collection. Please create a collection first at <a href=\"create-collection.php\">Create Collection</a>.</p>";
 						exit;			
 					    }
 					} else {
-					    echo "You do not have a collection. Please create a collection first at <a href=\"Create_Collection.php\">Create Collection</a>.</p>.";
+					    echo "You do not have a collection. Please create a collection first at <a href=\"create-collection.php\">Create Collection</a>.</p>.";
 					    exit;
 					}	
 				}

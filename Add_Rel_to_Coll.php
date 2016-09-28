@@ -49,7 +49,7 @@
 			    //echo "<p>Posted release ".$RelID. " to Collection</p>";
 			    redirect_to("outcomes.php?message=Rel_success&model=$RelID");		
 		            //Return;
-		            $url = "Ver_Detail_and_Var_Listing.php?model=".$VerID;
+		            $url = "ver-detail-var-listing.php?model=".$VerID;
 				    echo "<a class='button dark' href=\"".$url."\">Return to Listing</a>";
 		            exit;
 		        } else {
@@ -308,7 +308,7 @@
                 </div>
                 <div class="large-3 small-6 columns end">
 	                 <?php
-		                $url = "Ver_Detail_and_Var_Listing.php?model=" . $Coll_VerID;
+		                $url = "ver-detail-var-listing.php?model=" . $Coll_VerID;
 		            ?>
 		            <a class="button dark cancel" href="<?php $url; ?>">Cancel</a>
                 </div>

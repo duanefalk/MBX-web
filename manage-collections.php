@@ -26,7 +26,7 @@
 					    if ($row['User_Coll_Inactiv_Flag']=="1") { ?>
 					    	<!-- has collection but it is inactive, show link to create collection button -->
 							<div class="large-6 medium-6 columns">
-								<a href="Create_Collection.php" class="button dark">Create a Collection</a>
+								<a href="create-collection.php" class="button dark">Create a Collection</a>
 							</div>
 							<?php } else { ?>
 						    <!-- has collection, show link to create collection button -->
@@ -39,7 +39,7 @@
 					} else { ?>
 						<!-- no collection, link to create button -->
 					    <div class="large-6 medium-6 columns">
-							<a href="Create_Collection.php" class="button dark">Create a Collection</a>
+							<a href="create-collection.php" class="button dark">Create a Collection</a>
 						</div>
 					<?php }	
 			    }		    

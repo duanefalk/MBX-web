@@ -226,7 +226,7 @@
 	            //make image clickable and send proper umid to model_detail page
 	            $Model_to_detail=$row["UMID"];
 	            $Rel_to_detail=$row["RelID"];
-	            $url= "Models_Detail_and_Ver_Listing.php?model=".$Model_to_detail;
+	            $url= "models-detail-ver-listing.php?model=".$Model_to_detail;
 	            $url2="Release_Detail.php?model=".$Rel_to_detail;
 	
 	            //break to new line on change of series, yr, country

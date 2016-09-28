@@ -49,7 +49,7 @@
             //echo "<p>Done and returning</p>";
             //require_once("includes/close_db_connection.php");
             //Return;
-            //$url= "Ver_Detail_and_Var_Listing.php?model=".$VerID;
+            //$url= "ver-detail-var-listing.php?model=".$VerID;
 	    //echo "<a href=\"".$url."\">Return to Listing</a>";
             //exit;
         } else {

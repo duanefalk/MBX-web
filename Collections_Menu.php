@@ -56,10 +56,10 @@
 					if ($row['User_Coll_Inactiv_Flag']==0) { 
 						?> <p><img class='icon inline' src="<?php echo $check ?>">You've already created a collection, proceed to step 3</p>
 					<?php } else {
-						?> <p><img class='icon inline' src="<?php echo $cross ?>">Go to <a href="Create_Collection.php">Create a Collection</a>
+						?> <p><img class='icon inline' src="<?php echo $cross ?>">Go to <a href="create-collection.php">Create a Collection</a>
 					<?php }
 				} else {
-					?> <p><img class='icon inline' src="<?php echo $cross ?>">Go to <a href="Create_Collection.php">Create a Collection</a>
+					?> <p><img class='icon inline' src="<?php echo $cross ?>">Go to <a href="create-collection.php">Create a Collection</a>
 				<?php }	
 			} ?>
 					

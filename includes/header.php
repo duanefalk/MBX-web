@@ -59,7 +59,7 @@
 					<li><a href="Search_Models_Menu.php">Search Models</a></li>
 					<li><a href="Search_Releases_Menu.php">Search Releases</a></li>					
 					<?php if ($_SESSION['Sec_Lvl'] > 1) { ?>
-						<li><a href='Collections_Menu.php'>Your Collections</a></li>
+						<li><a href='collections-menu.php'>Your Collections</a></li>
 						<li><a href='user-upload.php'>Upload</a></li>
 					<?php } ?>
 				</ul>
@@ -84,7 +84,7 @@
 						<h2>Manage your collection from anywhere!!</h2>
 						<p>MBX-U gives you the opportunity to create and build an on-line Matchbox collection, accessible from your PC, laptop, tablet or smart phone.</p>
 						<p>Sign in, then click on Your Collection to start and manage your collection.</p>
-						<p><a href="Collections_Menu.php" class="button">Your Collection</a></p>
+						<p><a href="collections-menu.php" class="button">Your Collection</a></p>
 					</div>
 					<div class="banner four">
 						<h2>Create an Account on MBX-U</h2>

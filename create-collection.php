@@ -67,7 +67,7 @@
 				} ?>	
 				<p>Note: currently each account-holder can only have one collection. A future feature will allow you to have more than one collection if you desire.</p>
 					
-				<form action="Create_Collection.php" method="post" data-parsley-validate>
+				<form action="create-collection.php" method="post" data-parsley-validate>
 					
 					<!--label for="Username">Username:</label>
 					<input type="text" name="Username" value="<? echo $Username?>" size="20" id="Username"-->

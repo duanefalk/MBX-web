@@ -10,7 +10,7 @@
         <a href="wheel-types.php" class="button dark">Wheel Types</a>	
 	<a href="theme-list.php" class="button dark">Release Themes</a>
 	<a href="series-list.php" class="button dark">Release Series List</a>
-        <a href="Collections_Menu.php" class="button dark">Return to Collections Menu</a>	
+        <a href="collections-menu.php" class="button dark">Return to Collections Menu</a>	
 	</div>
 </div>
 

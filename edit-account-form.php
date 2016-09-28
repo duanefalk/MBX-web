@@ -31,7 +31,7 @@
 		
 		<hr>
 		
-		<form action="Edit_Account_Process.php" method="post">
+		<form action="edit-account-process.php" method="post">
 
 			
 			<div class="formRow">
@@ -220,7 +220,7 @@
 			</div>
 
 			<input type="submit" class="button dark" name="submit" value="Submit"/>
-			<a class="button cancel" href="Edit_Account_Form.php">Cancel</a>
+			<a class="button cancel" href="edit-account-form.php">Cancel</a>
 		</form>			
 	</div>
 </div>

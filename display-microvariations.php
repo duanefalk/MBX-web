@@ -28,7 +28,7 @@
 			$row=mysql_fetch_array($result);
 			echo $row['Microvariations'];
 			echo "<br></>";
-			$url= "Models_Detail_and_Ver_Listing.php?model=".$Model_for_microvar;
+			$url= "models-detail-ver-listing.php?model=".$Model_for_microvar;
 		?>			
 	</div>
 </div>

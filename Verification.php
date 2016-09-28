@@ -24,7 +24,7 @@
 				//exit;
 				
 				if ($VerAnswer==$CorrAns) {
-					redirect_to("Create_User_Account_Form.php");
+					redirect_to("create-user-account-form.php");
 				} else {
 					echo "<h4>Incorrect. Please try again in order to advance to account creation.</h4>";
 					//exit;

@@ -13,7 +13,7 @@
 			$model_for_detail=$_GET["model"];
 			$UMID=substr($model_for_detail,0,6);
 			
-			echo "<a class=\"button dark\"  href=\"Models_Detail_and_Ver_Listing.php?model=" . $UMID . "\">Return to Versions Listing Page</a>";
+			echo "<a class=\"button dark\"  href=\"models-detail-ver-listing.php?model=" . $UMID . "\">Return to Versions Listing Page</a>";
 		?>
 			
 	
@@ -800,7 +800,7 @@
 				
 			//Cancel button			
 			$model_for_detail=$row["UMID"];
-		    $url= "Models_Detail_and_Ver_Listing.php?model=".$model_for_detail;
+		    $url= "models-detail-ver-listing.php?model=".$model_for_detail;
 			echo "<a href=\"".$url."\">Cancel</a>";
 		?>
 	</div>

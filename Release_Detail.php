@@ -193,14 +193,14 @@
 									<div class="large-6 columns">
 										<?php
 										$Ver_for_detail= substr($Release_for_detail,0,10);
-										//$url = "Ver_Detail_and_Var_Listing.php?model = ".$Ver_for_detail;
+										//$url = "ver-detail-var-listing.php?model = ".$Ver_for_detail;
 										$url="Search_Models_Menu.php";
 										?>
 										<a class="button cancel" href="<?php echo $url; ?>">Cancel</a>
 									</div>
 								</div>
 							<?php }	else { ?>
-								<p>In order to enter models in your collection or a wishlist, go to <a href="Collections_Menu.php">Manage Collections</a> and create a collection. The option to add models to that collection or wishlist will then be availabel to you.</p>
+								<p>In order to enter models in your collection or a wishlist, go to <a href="collections-menu.php">Manage Collections</a> and create a collection. The option to add models to that collection or wishlist will then be availabel to you.</p>
 							<?php }
 						}
 					} ?>	

@@ -83,14 +83,14 @@
 		<div class="row actionButtons">			
 			<?php if ($rowcount4 != 0) { ?>
 				<div class="large-6 columns">	
-					<a href="All_Variations.php?model=<?php echo $model_for_detail; ?>" class="button dark">See All Variations</a>
+					<a href="all-variations.php?model=<?php echo $model_for_detail; ?>" class="button dark">See All Variations</a>
 				</div>
 				<div class="large-6 columns">
 					<a href="display-microvariations.php?model=<?php echo $model_for_detail; ?>" class="button dark">See Microvariations</a>
 				</div>
 			<?php } else { ?>
 				<div class="large-6 columns end">
-					<a href="All_Variations.php?model=<?php echo $model_for_detail; ?>" class="button dark">See All Variations</a>
+					<a href="all-variations.php?model=<?php echo $model_for_detail; ?>" class="button dark">See All Variations</a>
 				</div>
 			<?php } ?>
 		</div>
@@ -127,7 +127,7 @@
 						$picture= IMAGE_URL . $row["VerID"]."_1.jpg";
 						$picture_loc=IMAGE_PATH. $row["VerID"]."_1.jpg";
 						$Version_to_detail=$row["VerID"];
-						$url= "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
+						$url= "ver-detail-var-listing.php?model=".$Version_to_detail;
 
 						//determine what to show for version pics
 						//check if have account
@@ -240,7 +240,7 @@
 		
 					//make image clickable and send proper umid to model_detail page
 					$Version_to_detail = $row["VerID"];
-					$url = "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
+					$url = "ver-detail-var-listing.php?model=".$Version_to_detail;
 					
 					if ($Sec_Lvl >= "2") {	
 						//if have account, have collection?
@@ -339,7 +339,7 @@
 			
 						//make image clickable and send proper umid to model_detail page
 						$Version_to_detail = $row["VerID"];
-						$url = "Ver_Detail_and_Var_Listing.php?model=".$Version_to_detail;
+						$url = "ver-detail-var-listing.php?model=".$Version_to_detail;
 							
 						//have collection?
 						$query_coll = ("SELECT * FROM Matchbox_Collection WHERE Username='$Username'");

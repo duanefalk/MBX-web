@@ -24,7 +24,7 @@
 
 <div class="row">
 	<div class="large-4 large-centered columns end">
-        <a href="Collections_Menu.php" class="button dark block">Return to Collections Menu</a>	
+        <a href="collections-menu.php" class="button dark block">Return to Collections Menu</a>	
 	</div>
 </div>
 

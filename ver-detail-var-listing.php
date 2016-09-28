@@ -30,7 +30,7 @@
 
 <div class="row">
 	<div class="large-12 columns">
-		<p><a href="Models_Detail_and_Ver_Listing.php?model=<?php echo $UMID; ?>">Return to Versions Listing Page</a></p>	
+		<p><a href="models-detail-ver-listing.php?model=<?php echo $UMID; ?>">Return to Versions Listing Page</a></p>	
 		<h2>Version Details Page</h2>		
 		<?php
 			echo "<h3>Version ID: " . $row["VerID"] . "</h3>";
@@ -233,7 +233,7 @@
 			}
 				
 			$model_for_detail = $row["UMID"];
-			$url = "Models_Detail_and_Ver_Listing.php?model=" . $model_for_detail;
+			$url = "models-detail-ver-listing.php?model=" . $model_for_detail;
 			
 		?>
 		<a class="button cancel" href="<?php echo $url; ?>">Cancel</a>

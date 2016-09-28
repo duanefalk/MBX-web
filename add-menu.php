@@ -21,7 +21,7 @@
 			</div>
 			<div class="large-4 columns">
 				<a class="button dark" href="Add_Release_Form.php">Release</a>
-		        <a class="button dark" href="Add_Package_Type_Form.php">Package Type</a>
+		        <a class="button dark" href="add-package-type-form.php">Package Type</a>
 		        <a class="button dark" href="add-wheel-form.php">Wheel Type</a>
 			</div>
 			<div class="large-4 columns">

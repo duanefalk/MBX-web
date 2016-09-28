@@ -243,7 +243,7 @@
 					}	
 					if (!$_SESSION['UMID_2']) {
 						//if searching by 1 umid, skip the search results and go right to model detail page
-						$string_to_redirect="Models_Detail_and_Ver_Listing.php?model=".$ID_String1;	
+						$string_to_redirect="models-detail-ver-listing.php?model=".$ID_String1;	
 						redirect_to($string_to_redirect);
 					} else {	
 						$ID_String2= strval($_SESSION['UMID_2']);
@@ -413,7 +413,7 @@
 					$url= "man-details-and-ver-listing.php?model=".$Model_to_detail;
 				} else {
 					$Model_to_detail=$row["UMID"];
-					$url= "Models_Detail_and_Ver_Listing.php?model=".$Model_to_detail;
+					$url= "models-detail-ver-listing.php?model=".$Model_to_detail;
 				}	
 
 				$picture = IMAGE_URL . $row["UMID"].".jpg";
