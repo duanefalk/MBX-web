@@ -11,7 +11,7 @@
 	$VarID=$_POST['Coll_VarID'];
 	// $location="Dir_Add_Mdl_to_Coll_Process_old.php?model=".$VarID;
 	echo "ready to go";	
-	redirect_to("Dir_Add_Mdl_to_Coll_Process.php?model=".$VarID);
+	redirect_to("dir-add-mdl-to-coll-process.php?model=".$VarID);
     }
 ?>
 
@@ -19,7 +19,7 @@
 	<div class="large-12 columns">
 		<h2>Add Variation/Release to Collection</h2>
 		
-		<form name="Dir_Add_Mdl_to_Coll" action="Dir_Add_Mdl_to_Coll.php" method="post">
+		<form name="Dir_Add_Mdl_to_Coll" action="dir-add-mdl-to-coll.php" method="post">
 		    <label for="Coll_VarID">Enter Variation ID for model:</label>
 		    <input type="text" id="Coll_VarID" name="Coll_VarID" value="" size="13" id="Coll_VarID">
 		    

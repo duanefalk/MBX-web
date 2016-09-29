@@ -86,7 +86,7 @@
 		}
 	    ?>
 
-	    <form name="Dir_Add_Mdl_to_Coll_Process" action="Dir_Add_Mdl_to_Coll_Process.php" method="post">
+	    <form name="Dir_Add_Mdl_to_Coll_Process" action="dir-add-mdl-to-coll-process.php" method="post">
 		<?php  
 	            $Coll_VarID=$Var_to_Add;
 	            $Coll_VerID=substr($Coll_VarID,0,10);

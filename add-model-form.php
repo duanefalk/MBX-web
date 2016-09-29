@@ -9,7 +9,7 @@
 <div class="row">
 	<div class="large-12 columns">
 		<h2>Add a Model</h2>
-		<form action="Add_Model_Process.php" method="post">
+		<form action="add-model-process.php" method="post">
 			<label for="UMID">UMID:</label>
 			<input type="text" name="UMID" value="" size="6" id="UMID">
 			

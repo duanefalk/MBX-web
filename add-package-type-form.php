@@ -9,7 +9,7 @@
 <div class="row">
 	<div class="large-12 columns">
 		<h2>Add a Package Type</h2>
-		<form action="Add_Package_Type_Process.php" method="post">
+		<form action="add-package-type-process.php" method="post">
 			<label for="PkgVarCode">Package Code:</label>
 			<input type="text" name="PkgVarCode" value="" size="20" id="PkgVarCode">
 			

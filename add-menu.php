@@ -15,7 +15,7 @@
 		
 		<div class="row">
 			<div class="large-4 columns">
-				<a class="button dark" href="Add_Model_Form.php">Model</a>
+				<a class="button dark" href="add-model-form.php">Model</a>
 				<a class="button dark" href="Add_Version_Form.php">Version</a>
 				<a class="button dark" href="Add_Variation_Form.php">Variation</a>
 			</div>
@@ -27,7 +27,7 @@
 			<div class="large-4 columns">
 				<a class="button dark" href="Add_Reference_Form.php">Reference</a>
 		        <a class="button dark" href="Add_Value_List_Item_Form.php">Value List Item</a>
-				<a class="button dark" href="Add_Microvariation_Form.php">Microvariation</a>
+				<a class="button dark" href="add-microvariation-form.php">Microvariation</a>
 			</div>
 		</div>
 		

@@ -26,7 +26,7 @@
 
     $outcome=mysql_query($query);
     if ($outcome) {
-         redirect_to("Add_Microvariation_Form.php");
+         redirect_to("add-microvariation-form.php");
          exit;
      } // success 
      else {

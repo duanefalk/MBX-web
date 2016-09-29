@@ -53,7 +53,7 @@
     $outcome=mysql_query($query);
     if ($outcome) {
     //if ((mysql_query($query)) == true) {
-         redirect_to("Add_Model_Form.php");
+         redirect_to("add-model-form.php");
          exit;
      } // success 
     
