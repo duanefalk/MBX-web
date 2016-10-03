@@ -11,6 +11,19 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">September 12, 2016</p>
+			<ul>
+				<li>SUPERFAST ARE COMPLETE!!! All models of Superfast (up through June 2016) are now in the database and on the site. The next goal is to catch up on 2016, then go back and add Mack no.'s to all of the models (i.e. models after 2004). Then- on to regular Wheels.</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0047">Ford Group 6 (SF0047)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0037">Racing Mini (SF0037)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0030">Volkswagen Camper / Dormobile (SF0030)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0027">Road Dragster (SF0027)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0025">Field Car (SF0025)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=SF0007">Ford G.T. (SF0007)</a></li>
+			</ul>
+		</div>
+		
+		<div class="section">
 			<p class="date">July 31, 2016</p>
 			<ul>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0045">Pony Trailer (SF0045)</a></li>
