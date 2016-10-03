@@ -811,8 +811,8 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Search_Models_Menu.php">Search Models</a>
-		<a href="Search_Releases_Menu.php">Search Releases</a>
+		<a href="search-models-menu.php">Search Models</a>
+		<a href="search-releases-menu.php">Search Releases</a>
 		<a href="model-search-help.php">Tips on Searching for Models</a>
 	</div>
 </div>

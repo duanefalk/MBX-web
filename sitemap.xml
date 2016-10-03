@@ -27,11 +27,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/Search_Models_Menu.php</loc>
+  <loc>http://mbx-u.com/search-models-menu.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/Search_Releases_Menu.php</loc>
+  <loc>http://mbx-u.com/search-releases-menu.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
@@ -171,7 +171,7 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/Updt_Coll_Mdl.php</loc>
+  <loc>http://mbx-u.com/update-collection-model.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
@@ -199,7 +199,7 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/Updt_User_Coll_Code.php</loc>
+  <loc>http://mbx-u.com/update-user-collection-code.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>

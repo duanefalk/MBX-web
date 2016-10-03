@@ -28,7 +28,7 @@
 	$_SESSION['CountryOfSale_Check']=$_POST['CountryOfSale_Check'];
 	$_SESSION['CountryOfSale']=$_POST['CountryOfSale'];
     
-	redirect_to("Search_Releases_Process.php");
+	redirect_to("search-releases-process.php");
     }
 ?>
 
@@ -70,7 +70,7 @@
 	</script>
 </head>
 
-<form name="SearchReleases" action="Search_Releases_Menu.php" method="post" data-parsley-validate>
+<form name="SearchReleases" action="search-releases-menu.php" method="post" data-parsley-validate>
 <div class="row">
 	<div class="large-6 medium-6 columns">
 	
@@ -254,7 +254,7 @@
 				<input type="submit" class="button dark" name="submit" value="Submit"/>
 			</div>
 			<div class="large-2 small-6 columns end">
-				<a class="button cancel" href="Search_Releases_Menu.php">Clear</a>
+				<a class="button cancel" href="search-releases-menu.php">Clear</a>
 			</div>
 		</div>
 			

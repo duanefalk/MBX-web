@@ -24,11 +24,11 @@
 	$_SESSION['MakeCountry']=$_POST['MakeCountry'];
 	$_SESSION['TempaText']=$_POST['TempaText'];
     
-	redirect_to("Search_Models_Process.php");
+	redirect_to("search-models-process.php");
     }
 ?>
 
-<form action="Search_Models_Menu.php" method="post" data-parsley-validate>
+<form action="search-models-menu.php" method="post" data-parsley-validate>
 	<!-- Search Options -->
 	<div class="row">		
 		<div class="large-4 medium-4 columns">				
@@ -226,7 +226,7 @@
 	<div class="row">		
 		<div class="large-12 columns">
 			<input type="submit" class="button dark" name="submit" value="Search" />		
-			<a class="button cancel" href="Search_Models_Menu.php">Clear</a>
+			<a class="button cancel" href="search-models-menu.php">Clear</a>
 		</div>		
 	</div>	
 </form>	

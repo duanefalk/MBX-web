@@ -439,7 +439,7 @@
 						$RelPhotoRefCd=$rel_row["RelPkgPhotoRef"];
 						$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
 						$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
-						$url = "Release_Detail.php?model=" . $rel_row["RelID"];
+						$url = "release-detail.php?model=" . $rel_row["RelID"];
 						
 						if (file_exists($picture_loc)) {
 							echo "<a class='thumb' href='" . $url . "'><img src=" . $picture . " /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
@@ -494,7 +494,7 @@
 					$RelPhotoRefCd=$rel_row["RelPkgPhotoRef"];
 					$picture= IMAGE_URL . $rel_row["RelID"]."_1.jpg";
 					$picture_loc=IMAGE_PATH. $rel_row["RelID"]."_1.jpg";
-					$url= "Release_Detail.php?model=".$rel_row["RelID"];
+					$url= "release-detail.php?model=".$rel_row["RelID"];
 					if (file_exists($picture_loc)) {
 						echo "<a class='thumb' href=\"".$url."\">"."<img src=".$picture." /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 					} else {	
@@ -547,7 +547,7 @@
 					$RelPhotoRefCd=$rel_row["RelPkgPhotoRef"];
 					$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
 					$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
-					$url= "Release_Detail.php?model=".$rel_row["RelID"];
+					$url= "release-detail.php?model=".$rel_row["RelID"];
 					if (file_exists($picture_loc)) {
 						echo "<a class='thumb' href=\"".$url."\">"."<img src=".$picture." /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 					} else {	
@@ -604,7 +604,7 @@
 						$RelPhotoRefCd=$rel_row["RelPkgPhotoRef"];
 						$picture = IMAGE_URL . $rel_row["RelID"] . "_1.jpg";
 						$picture_loc = IMAGE_PATH . $rel_row["RelID"] . "_1.jpg";
-						$url = "Release_Detail.php?model=" . $rel_row["RelID"];
+						$url = "release-detail.php?model=" . $rel_row["RelID"];
 						if (file_exists($picture_loc)) {
 							echo "<a class='thumb' href=\"".$url."\">"."<img src=".$picture." /><h6 class='year " . $rel_row["RelYr"] . "'>".$rel_row["RelYr"]."</h6></a>";
 						} else {	
@@ -642,8 +642,8 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Search_Models_Menu.php">Search Models</a>
-		<a href="Search_Releases_Menu.php">Search Releases</a>
+		<a href="search-models-menu.php">Search Models</a>
+		<a href="search-releases-menu.php">Search Releases</a>
 		<a href="model-search-help.php">Tips on Searching for Models</a>
 	</div>
 </div>

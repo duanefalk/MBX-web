@@ -18,7 +18,7 @@
 			RefComment
 		-->		
 				
-		<form action="Add_Reference_Process.php" method="post">
+		<form action="add-reference-process.php" method="post">
 			
 			<label for="RefCode">Reference Code:</label>
 			<input type="text" name="RefCode" value="" size="8" id="RefCode">

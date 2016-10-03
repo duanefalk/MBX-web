@@ -10,9 +10,9 @@
     $Rel_to_add=$_POST["Rel_to_Add"];	
     
     if ($_POST["Coll_or_wishlist_Choice"]=="Coll") {
-		$location = "Add_Rel_to_Coll.php?model=" . $Rel_to_add;
+		$location = "add-release-to-collection.php?model=" . $Rel_to_add;
     } else {
-		$location = "Add_Rel_to_Wishlist.php?model=" . $Rel_to_add;
+		$location = "add-release-to-wishlist.php?model=" . $Rel_to_add;
     }
     redirect_to($location);
 ?>

@@ -107,7 +107,7 @@
 						<p>There are two ways to add a model to your collection:</p>
 						<p><strong>Option 1:</strong></p>
 						<ul>
-							<li>Look up a model you using either the <a href="Search_Models_Menu.php">Search Models</a> or <a href="Search_Releases_Menu.php">Search Releases</a> menu options.</li>
+							<li>Look up a model you using either the <a href="search-models-menu.php">Search Models</a> or <a href="search-releases-menu.php">Search Releases</a> menu options.</li>
 							<li>Drill down to the variation record that matches your model.</li>
 							<li>On the <em>Variations Detail</em> page, check the box marked <em>Add to Collection</em>.</li>
 							<li>Fill in the collection information in the resulting form and submit it (the model is now added to your collection).</li>
@@ -125,7 +125,7 @@
 					<p>There are two ways to add a model to your collection:</p>
 					<p><strong>Option 1:</strong></p>
 					<ul>
-						<li>Look up a model you using either the <a href="Search_Models_Menu.php">Search Models</a> or <a href="Search_Releases_Menu.php">Search Releases</a> menu options.</li>
+						<li>Look up a model you using either the <a href="search-models-menu.php">Search Models</a> or <a href="search-releases-menu.php">Search Releases</a> menu options.</li>
 						<li>Drill down to the variation record that matches your model.</li>
 						<li>On the <em>Variations Detail</em> page, check the box marked <em>Add to Collection</em>.</li>
 						<li>Fill in the collection information in the resulting form and submit it (the model is now added to your collection).</li>

@@ -87,7 +87,7 @@
 			}
 		?>
         
-		<form name="Add_Rel_to_Coll" action="Add_Rel_to_Coll.php" method="post">	
+		<form name="Add_Rel_to_Coll" action="add-release-to-collection.php" method="post">	
 	        <?php
                 //$Coll_Username="duanefalk";
 		$Coll_RelID=$Rel_to_Add;

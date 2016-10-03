@@ -33,7 +33,7 @@
 						    <?php $Coll_ID = $row['User_Coll_ID']; ?>
 						    
 						    <div class="large-6 medium-6 columns">   
-						        <a href="Updt_Coll.php" class="button dark">View / Update / Delete Your <strong><em><?php echo $Coll_ID; ?></em></strong> Collection</a>
+						        <a href="update-collection.php" class="button dark">View / Update / Delete Your <strong><em><?php echo $Coll_ID; ?></em></strong> Collection</a>
 						    </div> 
 					    <?php }
 					} else { ?>

@@ -71,7 +71,7 @@
 			    </div>
 			    <div class="large-2 small-4 columns end">
 				    <?php
-						$url2 = "Updt_Coll.php";
+						$url2 = "update-collection.php";
 						echo "<a class='button dark cancel' href=\"".$url2."\">Cancel</a>";
 					?>
 			    </div>

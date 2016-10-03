@@ -60,7 +60,7 @@
         
         if ($outcome) {
         	//if ((mysql_query($query)) == true)
-			redirect_to("Updt_Coll_Mdl.php");
+			redirect_to("update-collection-model.php");
         } else {
             echo "<p>Subject creation failed. Please review entries.</p>";
             echo "<p>".mysql_error()."</p>";
@@ -103,7 +103,7 @@
 		    }
 		?>
 
-		<form name="Updt_Coll_Mdl_Process" action="Updt_Coll_Mdl_Process.php" method="post">
+		<form name="Updt_Coll_Mdl_Process" action="update-collection-model-process.php" method="post">
 		    <?php                        
 			    //determine what copy to default in field
 			    $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND VarID='$Var_to_Updt' AND Copy='$Copy_to_Updt'");								

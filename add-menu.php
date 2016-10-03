@@ -20,7 +20,7 @@
 				<a class="button dark" href="Add_Variation_Form.php">Variation</a>
 			</div>
 			<div class="large-4 columns">
-				<a class="button dark" href="Add_Release_Form.php">Release</a>
+				<a class="button dark" href="add-release-form.php">Release</a>
 		        <a class="button dark" href="add-package-type-form.php">Package Type</a>
 		        <a class="button dark" href="add-wheel-form.php">Wheel Type</a>
 			</div>

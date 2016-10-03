@@ -208,7 +208,7 @@
 						$rel_picture1 = IMAGE_URL . $row3["RelID"] . "_1.jpg";
 						$rel_picture1_loc = IMAGE_PATH . $row3["RelID"] . "_1.jpg";
 						$Release_to_detail = $row3["RelID"];
-						$url2 = "Release_Detail.php?model=" . $Release_to_detail;	
+						$url2 = "release-detail.php?model=" . $Release_to_detail;	
 						
 						if (file_exists($rel_picture1_loc)) {
 							//echo "picture exists";
@@ -244,8 +244,8 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Search_Models_Menu.php">Search Models</a>
-		<a href="Search_Releases_Menu.php">Search Releases</a>
+		<a href="search-models-menu.php">Search Models</a>
+		<a href="search-releases-menu.php">Search Releases</a>
 		<a href="model-search-help.php">Tips on Searching for Models</a>
 	</div>
 </div>

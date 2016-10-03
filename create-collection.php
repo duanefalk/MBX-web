@@ -40,7 +40,7 @@
 					<p class="noMargin">Description: <?php echo $OrigcollDesc; ?></p>
 					<p>Creation Date: <?php echo $User_Coll_Created_Date; ?></p>
 					
-					<p>You can go to <a href="Updt_Coll.php">View/Update</a> to see the details of this collection, or return to <a href="manage-collections.php">Manage collections</a></p>
+					<p>You can go to <a href="update-collection.php">View/Update</a> to see the details of this collection, or return to <a href="manage-collections.php">Manage collections</a></p>
 					
 				<?php		
 					//Exit;
@@ -61,7 +61,7 @@
 					for ($i=1; $i<=$rows; $i++) {
 						$row = mysql_fetch_array($result);
 						if ($row['User_Coll_Inactiv_Flag']=="0") {
-							redirect_to("Updt_Coll.php");
+							redirect_to("update-collection.php");
 						}
 					}
 				} ?>	

@@ -10,8 +10,8 @@
 	
 	$router->map('GET','/',function() {require 'index.php';});
 	$router->map('GET','/about',function() {require 'about-site.php';});
-	$router->map('GET','/search-models',function() {require 'Search_Models_Menu.php';});
-	$router->map('GET','/search-releases',function() {require 'Search_Releases_Menu.php';});
+	$router->map('GET','/search-models',function() {require 'search-models-menu.php';});
+	$router->map('GET','/search-releases',function() {require 'search-releases-menu.php';});
 	$router->map('GET','/log-in',function() {require 'authenticate-test.php';});
 	$router->map('GET','/edit-account',function() {require 'edit-account-form.php';});
 	$router->map('GET','/log-out',function() {require 'logout.php';});

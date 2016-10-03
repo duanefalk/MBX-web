@@ -7,7 +7,7 @@
 <div class="row">
 	<div class="large-12 columns">
 		<a href="index.php" class="button dark">Return to Main Page</a>
-		<a href="Search_Models_Menu.php" class="button dark">Return to Search Models</a>
+		<a href="search-models-menu.php" class="button dark">Return to Search Models</a>
 	</div>
 </div>
 

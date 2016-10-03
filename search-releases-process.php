@@ -227,7 +227,7 @@
 	            $Model_to_detail=$row["UMID"];
 	            $Rel_to_detail=$row["RelID"];
 	            $url= "models-detail-ver-listing.php?model=".$Model_to_detail;
-	            $url2="Release_Detail.php?model=".$Rel_to_detail;
+	            $url2="release-detail.php?model=".$Rel_to_detail;
 	
 	            //break to new line on change of series, yr, country
 	            //echo $i." ".$old_country." ".$row["CountryOfSale"];
@@ -321,7 +321,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Search_Releases_Menu.php">Search Releases</a>
+		<a href="search-releases-menu.php">Search Releases</a>
 	</div>
 </div>
 

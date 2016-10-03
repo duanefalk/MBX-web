@@ -385,7 +385,7 @@
 				<h3>Why Were No Matches Found?</h3>
 				<ul>
 				<li>The Database is still being built! Check <a href="website-updates.php">Website Updates</a> to see current status.</li>
-				<li>Your query may have been too specific- try searching a portion of the name. The name you are looking at may be just the model name used on the package, which can be searched also under <a href="Search_Releases_Menu.php">Search Releases</a></li>
+				<li>Your query may have been too specific- try searching a portion of the name. The name you are looking at may be just the model name used on the package, which can be searched also under <a href="search-releases-menu.php">Search Releases</a></li>
 				<li>Check for misspellings or incorrect format, i.e. MAN#s are up to 3 digits, with no '#'</li>
 				<li>There may be a database error! If you are certain the outcome is incorrect, please send details to me at info@mbx-u.com (or using the <a href="user-upload.php">Upload</a> feature available if you have an account)</li>
 				</ul>
@@ -469,7 +469,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Search_Models_Menu.php">Search Models</a>
+		<a href="search-models-menu.php">Search Models</a>
 		<a href="similar_models_compare.php">Differences Among Similar Models</a>
 		<a href="model-search-help.php">Tips on Searching for Models</a>
 	</div>

@@ -21,7 +21,7 @@
 	$outcome=mysql_query($query);
         if ($outcome) {
         //if ((mysql_query($query)) == true)
-	    redirect_to("Updt_Coll_Outcome.php");
+	    redirect_to("update-collection-outcome.php");
         } else {
             echo "<p>Subject creation failed. Please review entries.</p>";
             echo "<p>".mysql_error()."</p>";
@@ -58,7 +58,7 @@
 		    $Coll_Desc = $row['User_Coll_Desc'];
 		?>
 		
-		<form name="Updt_Coll" action="Updt_Coll.php" method="post"  data-parsley-validate>
+		<form name="Updt_Coll" action="update-collection.php" method="post"  data-parsley-validate>
 			<?php
 			    echo "<p><strong>Username:</strong> " . $User . "</p>";
 			    echo "<p><strong>Collection to Update / Delete:</strong> " . $Coll_ID . "</p>";

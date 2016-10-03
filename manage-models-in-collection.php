@@ -17,7 +17,7 @@
 		<a href="dir-add-mdl-to-coll.php" class="button dark">Add a Model</a>
 	</div>
 	<div class="large-4 columns end">
-        <a href="Updt_Coll_Mdl.php" class="button dark">View/Update/Delete a Model</a>
+        <a href="update-collection-model.php" class="button dark">View/Update/Delete a Model</a>
     </div>
 
 </div>

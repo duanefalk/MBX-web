@@ -56,8 +56,8 @@
 			<div class="large-9 columns">
 				<ul id="mainNav">
 					<li><a href="about-site.php">About</a></li>
-					<li><a href="Search_Models_Menu.php">Search Models</a></li>
-					<li><a href="Search_Releases_Menu.php">Search Releases</a></li>					
+					<li><a href="search-models-menu.php">Search Models</a></li>
+					<li><a href="search-releases-menu.php">Search Releases</a></li>					
 					<?php if ($_SESSION['Sec_Lvl'] > 1) { ?>
 						<li><a href='collections-menu.php'>Your Collections</a></li>
 						<li><a href='user-upload.php'>Upload</a></li>

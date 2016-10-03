@@ -187,7 +187,7 @@
 									<?php if (mysql_num_rows($result4) > 0) {
 										echo "<p>You already have this variation on your wishlist (you can only have one entry for a variation on the wishlist).</p>";
 										echo "<p><a href='collection-report-w.php'>View Wishlist</a></p>";
-										echo "<p><a href='Search_Models_Menu.php'>Return to search page</a></p>";
+										echo "<p><a href='search-models-menu.php'>Return to search page</a></p>";
 										$Wishlist_option = 0;
 									} else {
 										$Wishlist_option = 1;
@@ -229,8 +229,8 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Search_Models_Menu.php">Search Models</a>
-		<a href="Search_Releases_Menu.php">Search Releases</a>
+		<a href="search-models-menu.php">Search Models</a>
+		<a href="search-releases-menu.php">Search Releases</a>
 	</div>
 </div>
 

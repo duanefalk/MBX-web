@@ -18,7 +18,7 @@ if ($source_string=="Rel_success") {
 		<div class="large-12 columns">
 		
 			<h2>Release <?php echo $ID; ?> Successfully Added!</h2>
-			<p><a class='button dark' href="Search_Models_Menu.php">Return to Search Models</a></p>
+			<p><a class='button dark' href="search-models-menu.php">Return to Search Models</a></p>
 		
 		</div>
 	</div>
@@ -28,7 +28,7 @@ if ($source_string=="Rel_success") {
 		<div class="large-12 columns">
 		
 			<h2>Variation <?php echo $ID; ?> Successfully Added!</h2>
-			<p><a class='button dark' href="Search_Models_Menu.php">Return to Search Models</a></p>
+			<p><a class='button dark' href="search-models-menu.php">Return to Search Models</a></p>
 		
 		</div>
 	</div>
@@ -72,7 +72,7 @@ if ($source_string=="Rel_success") {
 		<p class="tip">related pages:</p>
 		<a href="Search_Models.php">Search Models</a>
 		<a href="Search_Releases.php">Search Releases</a>
-		<a href="Updt_Coll_Mdl.php">Update Models in Your Collection</a>
+		<a href="update-collection-model.php">Update Models in Your Collection</a>
 		<a href="index.php">Return to Main Page</a>		
 	</div>
 </div>

@@ -46,12 +46,12 @@
             '$RelPkgPhotoRef')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;
-    // header("Location: Add_Release_Form.php");
+    // header("Location: add-release-form.php");
     
     // for some reason this gives me error duplicate key primary- it executes the mysql_query rather than evaluating it, but also does the insert- from first one
     $outcome=mysql_query($query);
     if ($outcome) {
-        redirect_to("Add_Release_Form.php");
+        redirect_to("add-release-form.php");
          exit;
      } // success 
      else {

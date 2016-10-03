@@ -25,7 +25,7 @@
 		    $rows=mysql_num_rows($result);
 		    
 		    if ($rows > 0) {
-				$location="Updt_User_Coll_Code_Process.php?code=".$CollCode;
+				$location="update-user-collection-code-process.php?code=".$CollCode;
 				//echo "ready to go";	
 				redirect_to($location);
 		    } else {
@@ -42,7 +42,7 @@
 	if ($result) {
 	    $rows=mysql_num_rows($result);
 	    if ($rows > 0) {
-			$location="Updt_User_Coll_Code_Process.php?code=".$CollCode;
+			$location="update-user-collection-code-process.php?code=".$CollCode;
 			redirect_to($location);
 	    } else {
 			echo "<p>You have no codes for your collection</p>";
@@ -80,7 +80,7 @@
 	</table>
 
 		
-	<!--form name="Updt_User_Coll_Code" action="Updt_User_Coll_Code.php" method="post" data-parsley-validate>
+	<!--form name="Updt_User_Coll_Code" action="update-user-collection-code.php" method="post" data-parsley-validate>
 	    <div class="formRow">
 			<label for="Coll_Code">Enter Seller or Location Code to Update/Delete:</label>
 			<input type="text" name="Coll_Code" value="" size="60" id="Coll_Code" required>
@@ -91,12 +91,12 @@
 			    <input type="submit" value="Submit" class="button dark" id="var_submit" name="var_submit">
 			</div>
 			<div class="large-2 small-6 columns end">
-			    <a class="button dark cancel" href="Updt_User_Coll_Code.php">Cancel</a>
+			    <a class="button dark cancel" href="update-user-collection-code.php">Cancel</a>
 			</div>
 	    </div>
 	</form-->
 	
-	<form name="Updt_User_Coll_Code" action="Updt_User_Coll_Code.php" method="post" data-parsley-validate>
+	<form name="Updt_User_Coll_Code" action="update-user-collection-code.php" method="post" data-parsley-validate>
 	    <div class="formRow">
 			<p>Select the Seller or Location Code to Update / Delete:</p>
 			<?php 

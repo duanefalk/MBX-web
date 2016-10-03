@@ -16,7 +16,7 @@
 	<div class="large-7 columns">
 		<div id="quick_search">
 			<h3>Quick Search</h3>
-			<form action="Search_Models_Process.php" method="post" data-parsley-validate>
+			<form action="search-models-process.php" method="post" data-parsley-validate>
 				<label for="Spec_MAN">MAN (FAB) # (i.e. '800'):</label>
 				<div class="row">
 					<div class="large-9 small-7 columns">

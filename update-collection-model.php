@@ -24,7 +24,7 @@
 				
 				if (mysql_num_rows($result) != 0) { 
 				    $No_Copies= (mysql_num_rows($result));
-				    $location="Updt_Coll_Mdl_Get_Copy.php?model=".$VarID."&copy=".$No_Copies;
+				    $location="update-collection-model-get-copy.php?model=".$VarID."&copy=".$No_Copies;
 				    //echo "ready to go";	
 				    redirect_to($location);
 				} else {
@@ -34,7 +34,7 @@
 		?>
 		
 		
-		<form name="Updt_Coll_Mdl" action="Updt_Coll_Mdl.php" method="post">
+		<form name="Updt_Coll_Mdl" action="update-collection-model.php" method="post">
 		    <label for="Coll_VarID">Enter Variation ID for model:</label>
 		    <input type="text" name="Coll_VarID" placeholder="Variation ID" value="" id="Coll_VarID">
 		    <div class="row">

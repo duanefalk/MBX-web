@@ -15,7 +15,7 @@
 				<a href="Add_User_Coll_Code.php" class="button dark">Add a New Seller or Location Code</a>
 			</div>
 			<div class="large-4 columns end">
-		    	<a href="Updt_User_Coll_Code.php" class="button dark">Update/Delete Codes</a>
+		    	<a href="update-user-collection-code.php" class="button dark">Update/Delete Codes</a>
 		    </div>
 		</div>
         

@@ -34,7 +34,7 @@
 	
 	    if ($outcome) {
 	        //if ((mysql_query($query)) == true)
-		    redirect_to("Updt_User_Coll_Code.php");
+		    redirect_to("update-user-collection-code.php");
 	    } else {
 	        echo "<p>Subject creation failed. Please review entries.</p>";
 	        echo "<p>".mysql_error()."</p>";
@@ -66,7 +66,7 @@
 		}
     ?>
 
-	<form name="Updt_User_Coll_Code_Process" action="Updt_User_Coll_Code_Process.php" method="post" data-parsley-validate>
+	<form name="Updt_User_Coll_Code_Process" action="update-user-collection-code-process.php" method="post" data-parsley-validate>
 	    <?php  
         	echo "<p><strong>Username:</strong> ".$User."</p>";
 			echo "<p><strong>Code to Update / Delete:</strong> ".$Code_to_Updt."</p>";
@@ -96,7 +96,7 @@
 			    <a class="button dark" href="Del_Coll_Code.php?code=<?php echo $Code_to_Updt; ?>"><strong>DELETE</strong> this Code</a>
 		    </div>
 		    <div class="large-3 columns end">
-				<a class="button dark cancel" href="Updt_User_Coll_Code.php">Cancel</a>
+				<a class="button dark cancel" href="update-user-collection-code.php">Cancel</a>
 		    </div>
 	    </div>
     </form>

@@ -11,7 +11,7 @@
     if (isset($_POST['var_copy_submit'])) {
 		$VarID=$_POST['Coll_VarID'];
 		$Copy=$_POST['Coll_Copy'];
-		$location="Updt_Coll_Mdl_Process.php?model=".$VarID."&copy=".$Copy;	
+		$location="update-collection-model-process.php?model=".$VarID."&copy=".$Copy;	
 		redirect_to($location);
 	} 
 	//if post not set do initial form 
@@ -38,7 +38,7 @@
 				//echo "in 1 copy loop";
 				//echo $Var_to_Updt." ".$No_of_Copies;
 				//exit;
-				$location="Updt_Coll_Mdl_Process.php?model=".$Var_to_Updt."&copy=".$No_of_Copies;
+				$location="update-collection-model-process.php?model=".$Var_to_Updt."&copy=".$No_of_Copies;
 				redirect_to($location);
 		    } else {
 				echo "<p>Variation to view/edit: " . $Var_to_Updt . "</p>";
@@ -46,7 +46,7 @@
 		    } 
 		?> 
 		    
-		    <form name="Updt_Coll_Mdl_Get_Copy" action="Updt_Coll_Mdl_Get_Copy.php" method="post">
+		    <form name="Updt_Coll_Mdl_Get_Copy" action="update-collection-model-get-copy.php" method="post">
 				<input type="hidden" name="Coll_VarID" value="<?php echo $_GET["model"]; ?>" size="13" id="Coll_VarID">
 				
 				<label for="Coll_Copy">Copy No.:</label>

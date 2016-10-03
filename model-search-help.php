@@ -37,7 +37,7 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Search_Models_Menu.php">Search Models</a>
+		<a href="search-models-menu.php">Search Models</a>
 	</div>
 </div>
  

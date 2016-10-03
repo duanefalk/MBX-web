@@ -30,7 +30,7 @@
 			}
 		?>
 	
-		<form action="Add_Rel_Coll_or_Wishlist.php" method="post">
+		<form action="add-release-to-collection-or-wishlist.php" method="post">
 			<ul class="large-block-grid-2">
 				<li class="carGrid">
 					<?php	
@@ -161,7 +161,7 @@
 												echo "<p>You have ". $rows5a." copy/copies of this release in your collection.</p>";
 												echo "<p>If you want to edit one of those, select <a href=\"manage-models-in-collection.php\">Manage Models In Collection</a>Click the button below to add another, or cancel to return to version details.</p>";
 											} elseif ($rows5b >0) {
-												echo "<p>You have this variation, but not this release. If you want to add the release to the existing variation record, go to <a href=\"Updt_Coll_Mdl.php\">Update Models In Collection</a> from the menu bar on this page. To add another record with this release, click the burron below below.</p>";
+												echo "<p>You have this variation, but not this release. If you want to add the release to the existing variation record, go to <a href=\"update-collection-model.php\">Update Models In Collection</a> from the menu bar on this page. To add another record with this release, click the burron below below.</p>";
 											} else {
 												echo "<p>You don't have this variation/release in your collection. To add it click the button below.</p>";
 											}
@@ -176,7 +176,7 @@
 										if ($rows4b > 0) {
 											echo "<p>You already have this variation/release on your wishlist (you can only have one entry for a variation on the wishlist).</p>";
 											echo "<p><a href='collection-report-w.php'>View Wishlist</a></p>";
-											echo "<p><a href='Search_Models_Menu.php'>Return to search page</a></p>";
+											echo "<p><a href='search-models-menu.php'>Return to search page</a></p>";
 										} else {								
 										    echo "<p>You do not have this variation/release on your wishlist.</p>";
 											echo "<p>Would you like to add it to your wishlist? (cancel to return to version details)</p>";
@@ -194,7 +194,7 @@
 										<?php
 										$Ver_for_detail= substr($Release_for_detail,0,10);
 										//$url = "ver-detail-var-listing.php?model = ".$Ver_for_detail;
-										$url="Search_Models_Menu.php";
+										$url="search-models-menu.php";
 										?>
 										<a class="button cancel" href="<?php echo $url; ?>">Cancel</a>
 									</div>
@@ -215,8 +215,8 @@
 <div class="row" id="subNav">
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
-		<a href="Search_Models_Menu.php">Search Models</a>
-		<a href="Search_Releases_Menu.php">Search Releases</a>
+		<a href="search-models-menu.php">Search Models</a>
+		<a href="search-releases-menu.php">Search Releases</a>
 	</div>
 </div>		
 			
