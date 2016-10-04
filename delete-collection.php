@@ -1,4 +1,4 @@
-<?php 
+<?php
 	ob_start();
 	session_start();
 	$pageTitle = "Delete Collection";
@@ -9,10 +9,10 @@
 ?>
 <?php
     if (isset($_POST['del_submit'])) {
-   
+
 	$User=$_SESSION['Username'];
 	$Coll_to_Del=$_POST['Coll_to_Del'];
-        
+
         //mark collection inactive
         $query=("UPDATE Matchbox_User_Collections SET User_Coll_Inactiv_Flag=\"1\" WHERE Username='$User'");
         $outcome=mysql_query($query);
@@ -25,25 +25,25 @@
                 //mark all models inactive
                 $query3=("UPDATE Matchbox_Collection SET Coll_InactiveFlg=\"1\" WHERE Username='$User'");
                 $outcome3=mysql_query($query3);
-            }          
-	    redirect_to("Del_Coll_Outcome.php");
+            }
+	    redirect_to("delete-collection-outcome.php");
         } else {
             echo "<p>Deletion failed. Please review entries.</p>";
             echo "<p>".mysql_error()."</p>";
             //drop down to form again
-        }   
+        }
     }
-//if post not set do initial form 
+//if post not set do initial form
 ?>
 
 <div class="row">
 	<div class="large-12 column">
 
 		<h2>Delete Your Collection</h2>
-		
-		<?php   
+
+		<?php
                     $User=$_SESSION['Username'];
-		    $query=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User' AND User_Coll_Inactiv_Flag=\"0\"");								
+		    $query=("SELECT * FROM Matchbox_User_Collections WHERE Username='$User' AND User_Coll_Inactiv_Flag=\"0\"");
 		    $result=0;
 		    $result=mysql_query($query);
 		    if ($result) {
@@ -52,10 +52,10 @@
 		    } else {
 		        echo "Can't find your collection- possible database problem- please email info@MBX-u.com";
 			exit;
-		    }                   
+		    }
                 ?>
 
-		<form name="Delete_Collection" action="Delete_Collection.php" method="post">
+		<form name="Delete_Collection" action="delete-collection.php" method="post">
 		    <p><strong>Username:</strong> <?php echo $User; ?></p>
 		    <p><strong>Collection Name:</strong> <?php echo $row["User_Coll_ID"]; ?></p>
 			<p><strong>Collection Description:</strong> <?php echo $row["User_Coll_Desc"]; ?></p>
@@ -63,7 +63,7 @@
 
 			<h4>NOTE: Deleting this collection will also delete any models and code values entered under it.</h4>
 			<p>If you have any questions about how to proceed, click Cancel, below and email <a href="mailto:info@mbx-u.com">info@mbx-u.com</a> with your question.</p>
-		
+
 		    <input type="hidden" name="Coll_to_Del" value="<?php echo $Coll_to_Del;?>" id="Coll_to_Del">
 		    <div class="row">
 			    <div class="large-2 small-4 columns">
@@ -88,6 +88,6 @@
 		<a href="manage-collections.php">Manage Collection</a>
 		<a href="index.php">Return to Main Page</a>
 	</div>
-</div>	
+</div>
 
 <?php include("includes/footer.php"); ?>

@@ -93,7 +93,7 @@
 			    <input type="submit" name="var_coll_code_submit" class="button dark" value="Update" id="var_coll_code_submit"/>
 		    </div>
 		    <div class="large-3 columns">
-			    <a class="button dark" href="Del_Coll_Code.php?code=<?php echo $Code_to_Updt; ?>"><strong>DELETE</strong> this Code</a>
+			    <a class="button dark" href="delete-collection-code.php?code=<?php echo $Code_to_Updt; ?>"><strong>DELETE</strong> this Code</a>
 		    </div>
 		    <div class="large-3 columns end">
 				<a class="button dark cancel" href="update-user-collection-code.php">Cancel</a>

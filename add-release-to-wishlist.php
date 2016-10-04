@@ -70,13 +70,13 @@
 		
 		<div class="row">
 		    <div class="large-3 small-6 columns">
-		        <form name="Add_Rel_to_Wishlist" action="Add_Rel_to_Wishlist.php" method="post">
+		        <form name="Add_Rel_to_Wishlist" action="add-release-to-wishlist.php" method="post">
 			    <input class="button dark" type="submit" value="<?php echo $Rel_to_Add?>" id="submit" name="rel_to_add" />
 			</form>
 		</div>
 		<div class="large-6 columns">
 		    <?php
-			$url = "Release_Detail.php?model=" . $Rel_to_Add;
+			$url = "release-detail.php?model=" . $Rel_to_Add;
 			echo "<a href=\"".$url."\">Cancel</a>";
 		    ?>
 		</div>

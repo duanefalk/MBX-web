@@ -1,14 +1,14 @@
-<?php 
+<?php
 	ob_start();
 	session_start();
 	$pageTitle = "Manage Your Collection";
 	$pageDescription = "Manage your own Matchbox University car collection.";
 	require_once("includes/db_connection.php");
-	include("includes/header.php"); 
+	include("includes/header.php");
 	require_once("includes/functions.php");
 ?>
 
-<?php 	
+<?php
 	$Username= $_SESSION['Username'];
 	$SecLvl=$_SESSION['Sec_Lvl'];
 	$check = WEB_IMAGE_URL . "iconCheck.png";
@@ -17,7 +17,7 @@
 
 <div class="row">
 	<div class="large-12 columns">
-	
+
 		<h2>Manage Your Collections</h2>
 		<div class="row actionButtons">
 			<div class="large-4 medium-4 columns">
@@ -26,70 +26,70 @@
 			<div class="large-4 medium-4 columns">
 		        <a href="manage-models-in-collection.php" class="button dark">Manage Models in Your Collection</a>
 		    </div>
-		    <div class="large-4 medium-4 columns">   
+		    <div class="large-4 medium-4 columns">
 		        <a href="collection-reports.php" class="button dark">Collection Reports</a>
 		    </div>
-		</div>		
-		
-		<h2>Get Started with Your Collection</h2>	
+		</div>
+
+		<h2>Get Started with Your Collection</h2>
 		<p>Steps to set up a collection using this web site and database:</p>
-		
-		<h3>Step 1: Set up an Account</h3>	
+
+		<h3>Step 1: Set up an Account</h3>
 		<?php
 
 			if ($SecLvl > 1) { ?>
 				<p><img class='icon inline' src="<?php echo $check ?>">You already have an account, proceed to step 2.</p>
 			<?php } else { ?>
-				<p><img class='icon inline' src="<?php echo $cross ?>">Go to the Account option from the Main Menu and set up and account, then return here.</p>			
+				<p><img class='icon inline' src="<?php echo $cross ?>">Go to the Account option from the Main Menu and set up and account, then return here.</p>
 			<?php } ?>
-	
+
 		<h3>Step 2: Create a Collection</h3>
 		<?php
 			$result = 0;
 			$rows_count = 0;
-			$query = ("SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'");													
-			$result = mysql_query($query);	
+			$query = ("SELECT * FROM Matchbox_User_Collections WHERE Username='$Username'");
+			$result = mysql_query($query);
 			if ($result) {
 				$rows_count= mysql_num_rows($result);
 				if ($rows_count>0) {
 					$row = mysql_fetch_array($result);
-					if ($row['User_Coll_Inactiv_Flag']==0) { 
+					if ($row['User_Coll_Inactiv_Flag']==0) {
 						?> <p><img class='icon inline' src="<?php echo $check ?>">You've already created a collection, proceed to step 3</p>
 					<?php } else {
 						?> <p><img class='icon inline' src="<?php echo $cross ?>">Go to <a href="create-collection.php">Create a Collection</a>
 					<?php }
 				} else {
 					?> <p><img class='icon inline' src="<?php echo $cross ?>">Go to <a href="create-collection.php">Create a Collection</a>
-				<?php }	
+				<?php }
 			} ?>
-					
+
 
 
 		<h3>Step 3 (optional): Set up lists of sellers and storage locations</h3>
 		<?php
-			
+
 			$result=0;
 			$rows_count=0;
-			$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username= '$Username'");													
+			$query=("SELECT * FROM Matchbox_User_Coll_Value_Lists WHERE Username= '$Username'");
 			$result = mysql_query($query);
 
 			if ($result) {
 				$rows_count= mysql_num_rows($result);
 				if ($rows_count>0) {
 					$row = mysql_fetch_array($result);
-					if ($row['Coll_List_Val_InactivFlg']==0) { 
+					if ($row['Coll_List_Val_InactivFlg']==0) {
 						?> <p><img class='icon inline' src="<?php echo $check ?>">You've already entered some Collection Code List items. You can add to your lists at any time from the <a href="collection-code-lists.php">Create Collection Code Lists</a> menu option.</p>
 					<?php } else {
 						?> <p><img class='icon inline' src="<?php echo $cross ?>">No sellers or storage locations added yet.</p>
 					<?php }
 				} else {
 					?> <p><img class='icon inline' src="<?php echo $cross ?>">No sellers or storage locations added yet.</p>
-				<?php }	
+				<?php }
 			} ?>
 
 		<h3>Step 4: Add models to your collection</h3>
 		<?php
-			
+
 			//$result_mdls=0;
 			$rows_count=0;
 			$query_mdls= ("SELECT * FROM Matchbox_Collection WHERE Username= '$Username'");
@@ -138,8 +138,8 @@
 						<li>You can print listings of models with the VarID's to use as reference if you prefer this method.</li>
 					</ul>
 				<?php }
-			} ?>	
-			
+			} ?>
+
 	</div>
 </div>
 

@@ -326,7 +326,7 @@
 					<input type="submit" name="var_coll_submit" class="button dark" value="Update" id="var_coll_submit"/>
 				</div>
 				<div class="large-4 small-4 columns">
-					<?php $url1 = "Del_Mdls_in_Coll.php?model=" . $Var_to_Updt . "&copy=" . $Copy_to_Updt; ?>
+					<?php $url1 = "delete-models-in-collection.php?model=" . $Var_to_Updt . "&copy=" . $Copy_to_Updt; ?>
 					<a href="<?php echo $url1; ?>" class="button dark cancel">Delete this Var/Copy</a>
 				</div>
 				<div class="large-4 small-4 columns">

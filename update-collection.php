@@ -74,7 +74,7 @@
 			    </div>
 			    <div class="large-3 small-4 columns">
 				    <?php
-						$url1 = "Delete_Collection.php?coll=" . $Coll_ID;
+						$url1 = "delete-collection.php?coll=" . $Coll_ID;
 					?>
 					<a class="button dark" href="<?php echo $url1; ?>">DELETE COLLECTION</a>
 			    </div>
