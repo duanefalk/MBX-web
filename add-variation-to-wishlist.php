@@ -73,7 +73,7 @@
 				
 			<div class="row">
 			    <div class="large-6 columns">
-				<form name="Add_var_to_Wishlist" action="Add_Var_to_Wishlist.php" method="post">
+				<form name="Add_var_to_Wishlist" action="add-variation-to-wishlist.php" method="post">
 				    <input class="button dark" type="submit" value="<?php echo $Var_to_Add?>" id="submit" name="var_to_add">
 				</form>
 			    </div>

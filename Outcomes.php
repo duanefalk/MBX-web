@@ -51,7 +51,7 @@ if ($source_string=="Rel_success") {
 			<h2>Code <strong><?php echo $ID; ?></strong> Successfully Added!</h2>
 			<div class="row">
 				<div class="large-3 columns">
-					<a class='button dark' href="Add_User_Coll_Code.php">Add Another Code</a>
+					<a class='button dark' href="add-user-collection-code.php">Add Another Code</a>
 				</div>
 				<div class="large-6 columns end">
 					<a class='button dark' href="collection-code-lists.php">back to Collection Code Lists</a>

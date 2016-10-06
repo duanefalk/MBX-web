@@ -11,9 +11,9 @@
     $Var_to_add=$_POST["Var_to_Add"];	
     
     if ($_POST["Coll_or_wishlist_Choice"]=="Coll") {
-		$location="Add_Var_to_Coll.php?model=".$Var_to_add;
+		$location="add-variation-to-collection.php?model=".$Var_to_add;
     } else {
-		$location="Add_Var_to_Wishlist.php?model=".$Var_to_add;
+		$location="add-variation-to-wishlist.php?model=".$Var_to_add;
     }
     redirect_to($location);
 ?>

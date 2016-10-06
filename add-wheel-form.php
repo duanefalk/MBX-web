@@ -11,7 +11,7 @@
 		
 		<h2>Add a Wheel Variation</h2>
 	
-		<form action="Add_Wheel_Process.php" method="post">
+		<form action="add-wheel-process.php" method="post">
 			<label for="WheelTyp">Wheel Type:</label>
 			<?php
 				$query=("SELECT * FROM Matchbox_Value_Lists WHERE ValueList LIKE '%WheelType%'");								

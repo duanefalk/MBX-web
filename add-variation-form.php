@@ -45,7 +45,7 @@
 				VarPhoto2Ref		
 			-->		
 				
-		<form action="Add_Variation_Process.php" method="post">
+		<form action="add-variation-process.php" method="post">
 			<label for="UMID">UMID:</label>
 			<input type="text" name="UMID" value="" id="UMID">
 			

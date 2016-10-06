@@ -9,7 +9,7 @@
 <div class="row">
 	<div class="large-12 columns">
 		<h2>Add a Value List Item</h2>
-		<form action="Add_Value_List_Item_Process.php" method="post">
+		<form action="add-value-list-item-process.php" method="post">
 			
 			<label for="ValueList">Value Type:</label>
 			<?php

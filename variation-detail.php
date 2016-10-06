@@ -12,7 +12,7 @@
 
 		<h2>Variation Details</h2>
 			
-		<form name="Add_Var_to_Coll_or_Wishlist" action="Add_Var_Coll_or_Wishlist.php" method="post">
+		<form name="Add_Var_to_Coll_or_Wishlist" action="add-variation-collection-or-wishlist.php" method="post">
 			<ul class="large-block-grid-2">
 				<li class="carGrid">
 			

@@ -39,7 +39,7 @@
 		?>
 
 		<h2>Add a Collection Code</h2>
-		<form name="Add_User_Coll_Code" action="Add_User_Coll_Code.php" method="post" data-parsley-validate>
+		<form name="Add_User_Coll_Code" action="add-user-collection-code.php" method="post" data-parsley-validate>
 			
 			<?php echo "User: ".$_SESSION['Username']."<br />"; 
 				$Username=$_SESSION['Username'];

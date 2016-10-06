@@ -140,12 +140,12 @@
             '$Det5Typ', '$Det5Var', '$VarComment', '$VarPhoto1Ref', '$VarPhoto2Ref')";
     // mysql_query($query);
     // "turned output buffering on cause this was giving me errors- couldnt find the source in the includes;
-    // header("Location: Add_Variation_Form.php");
+    // header("Location: add-variation-form.php");
     
     // for some reason this gives me error duplicate key primary, but also does the insert!
     $outcome=mysql_query($query);
     if ($outcome) {
-         redirect_to("Add_Variation_Form.php");
+         redirect_to("add-variation-form.php");
          exit;
      } // success 
      else {

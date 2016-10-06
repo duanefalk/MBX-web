@@ -17,12 +17,12 @@
             )";
     //mysql_query($query);
     //turned output buffering on cause this was giving me errors- couldnt find the source in the includes 
-    //header("Location: Add_Value_List_Item_Form.php");
+    //header("Location: add-value-list-item-form.php");
     
     //for some reason this gives me error duplicate key primary, but also does the insert!
     $outcome=mysql_query($query);
     if ($outcome) {
-        redirect_to("Add_Value_List_Item_Form.php");
+        redirect_to("add-value-list-item-form.php");
         exit;
     } // success 
     else {

@@ -89,7 +89,7 @@
 			}
 	    ?>
               
-		<form name="Add_Var_to_Coll" action="Add_Var_to_Coll.php" method="post">	
+		<form name="Add_Var_to_Coll" action="add-variation-to-collection.php" method="post">	
             <?php               
 		$Coll_VarID=$Var_to_Add;
                 $Coll_VerID=substr($Coll_VarID,0,10);
