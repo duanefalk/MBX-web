@@ -1,7 +1,6 @@
 <?php
 	ob_start(); 
 	session_start();
-	include_once("includes/analyticstracking.php");
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -45,7 +44,8 @@
 	$pageTitle = strtolower($pageTitle);
 	$pageTitle = str_replace(' ', '_', $pageTitle);
 ?>
-<body <?php if ($pageTitle) { echo "class='" . $pageTitle . "'"; } ?>>	
+<body <?php if ($pageTitle) { echo "class='" . $pageTitle . "'"; } ?>>
+    <?php include_once("includes/analyticstracking.php"); ?>
 	<div id="header">	
 		<?php include("includes/navUtility.php"); ?>		
 		<div class="row">

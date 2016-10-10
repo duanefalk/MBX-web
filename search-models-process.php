@@ -470,7 +470,7 @@
 	<div class="large-12 columns">
 		<p class="tip">related pages:</p>
 		<a href="search-models-menu.php">Search Models</a>
-		<a href="similar_models_compare.php">Differences Among Similar Models</a>
+		<a href="similar-models-compare.php">Differences Among Similar Models</a>
 		<a href="model-search-help.php">Tips on Searching for Models</a>
 	</div>
 </div>

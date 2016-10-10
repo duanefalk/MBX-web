@@ -1,5 +1,5 @@
 <?php 
-	session_start();
+	//session_start();
 	require_once("includes/functions.php");
 	require_once("includes/db_connection.php");	
 	$pageTitle = "Home";
