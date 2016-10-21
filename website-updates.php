@@ -11,6 +11,15 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">October 21, 2016</p>
+			<ul>
+				<li>2016 5-packs Shark Week &  Monsters added</li>
+				<li>2016 1-75's: Batch L added</li>
+			</ul>
+		</div>	
+		
+		
+		<div class="section">
 			<p class="date">October 7, 2016</p>
 			<ul>
 				<li>2016 5-packs City &  Military added</li>
