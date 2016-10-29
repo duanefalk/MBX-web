@@ -11,6 +11,16 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">October 29, 2016</p>
+			<ul>
+				<li>2016 Land Rover 5-pack and singles added</li>
+				<li>2016 MCCD monthly club models through October added</li>
+			</ul>
+		</div>
+		
+		
+		
+		<div class="section">
 			<p class="date">October 21, 2016</p>
 			<ul>
 				<li>2016 5-packs Shark Week &  Monsters added</li>
