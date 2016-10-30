@@ -11,6 +11,13 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">October 30, 2016</p>
+			<ul>
+				<li>2016 MCCD Messe and Leipzig shows models added</li>
+			</ul>
+		</div>		
+		
+		<div class="section">
 			<p class="date">October 29, 2016</p>
 			<ul>
 				<li>2016 Land Rover 5-pack and singles added</li>
