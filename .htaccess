@@ -1,9 +1,9 @@
+<ifModule mod_rewrite.c>
+Options +FollowSymLinks
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule . index.php [L]
-
-
-Redirect 301 /About_photos.php /about-photos.php 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+Redirect 301 /About_photos.php /about-photos.php
 Redirect 301 /About_site.php /about-site.php 
 Redirect 301 /Add_Menu.php /add-menu.php 
 Redirect 301 /Add_Microvariation_Form.php /add-microvariation-form.php 
@@ -33,7 +33,6 @@ Redirect 301 /Add_Wheel_Form.php /add-wheel-form.php
 Redirect 301 /Add_Wheel_Process.php /add-wheel-process.php
 Redirect 301 /All_Variations.php /all-variations.php
 Redirect 301 /Authenticate_Test.php /authenticate-test.php
-
 Redirect 301 /CodeLvl_move.php /code-lvl-move.php
 Redirect 301 /Collection_Code_Lists.php /collection-code-lists.php
 Redirect 301 /Collection_Report_A.php /collection-report-a.php
@@ -46,7 +45,6 @@ Redirect 301 /Collections_Menu.php /collections-menu.php
 Redirect 301 /Create_Collection.php /create-collection.php
 Redirect 301 /Create_User_Account_Form.php /create-user-account-form.php
 Redirect 301 /Create_User_Account_Process.php /create-user-account-process.php
-
 Redirect 301 /DB_explain.php /db-explain.php
 Redirect 301 /Dedication.php /dedication.php
 Redirect 301 /Del_Coll_Code.php /delete-collection-code.php
@@ -58,18 +56,12 @@ Redirect 301 /Diecast_History.php /diecast-history.php
 Redirect 301 /Dir_Add_Mdl_to_Coll_Process.php /dir-add-mdl-to-coll-process.php
 Redirect 301 /Dir_Add_Mdl_to_Coll.php /dir-add-mdl-to-coll.php
 Redirect 301 /Display_Microvariations.php /display-microvariations.php
-
-
 Redirect 301 /Early_Lesney.php /early-lesney.php
 Redirect 301 /Edit_Account_Form.php /edit-account-form.php
 Redirect 301 /Edit_Account_Process.php /edit-account-process.php
-
 Redirect 301 /guest_login.php /guest-login.php
-
 Redirect 301 /How_Made.php /how-made.php
-
 Redirect 301 /LR_vs_SF.php /lr-vs-sf.php
-
 Redirect 301 /MAN_Details_and_Ver_Listing.php /man-details-and-ver-listing.php
 Redirect 301 /Manage_Collections.php /manage-collections.php
 Redirect 301 /Manage_Models_in_Collection.php /manage-models-in-collection.php
@@ -80,12 +72,9 @@ Redirect 301 /MBX101_Menu.php /mbx101-menu.php
 Redirect 301 /model_search_help.php /model-search-help.php
 Redirect 301 /Models_Detail_and_Ver_Listing.php /models-detail-ver-listing.php 
 Redirect 301 /Models_Found_List.php /models-found-list.php
-
 Redirect 301 /Outcomes.php /outcomes.php
-
 Redirect 301 /Ref_Files.php /ref-files.php
 Redirect 301 /Release_Detail.php /release-detail.php
-
 Redirect 301 /Search_Models_Menu.php /search-models-menu.php
 Redirect 301 /Search_Models_Process.php /search-models-process.php
 Redirect 301 /Search_Releases_Menu.php /search-releases-menu.php
@@ -99,9 +88,7 @@ Redirect 301 /similar_models_compare.php /similar-models-compare.php
 Redirect 301 /Similar_Pontiac_stock_cars.php /similar-pontiac-stock-cars.php
 Redirect 301 /Similar_TBirds.php /similar-tbirds.php
 Redirect 301 /Similar_Z3s.php /similar-z3s.php
-
 Redirect 301 /Theme_List.php /theme-list.php
-
 Redirect 301 /Updt_Coll_Mdl_Get_Copy.php /update-collection-model-get-copy.php
 Redirect 301 /Updt_Coll_Mdl_Process.php /update-collection-model-process.php
 Redirect 301 /Updt_Coll_Mdl.php /update-collection-model.php
@@ -111,11 +98,10 @@ Redirect 301 /Updt_User_Coll_Code_Process.php /update-user-collection-code-proce
 Redirect 301 /Updt_User_Coll_Code.php /update-user-collection-code.php
 Redirect 301 /User_Upload_Record.php /user-upload-record.php
 Redirect 301 /User_Upload.php /user-upload.php
-
 Redirect 301 /Variation_Comparison.php /variation-comparison.php
 Redirect 301 /Variation_Detail.php /variataion-detail.php
 Redirect 301 /Ver_Detail_and_Var_Listing.php /ver-detail-var-listing.php
 Redirect 301 /Verification.php /verification.php
-
 Redirect 301 /Wheel_Types.php /wheel-types.php
 Redirect 301 /Window_Colors.php /window-colors.php
+</ifModule>
