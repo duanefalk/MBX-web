@@ -11,6 +11,25 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">November 21, 2016</p>
+			<ul>
+				<li>I have started on Regular wheels models!</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR001">Aveling Barford Road Roller (LR001)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR002">Muir Hill Site Dumper (LR002)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR003">Cement Mixer (LR003)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR004">Massey Harris Tractor (LR004)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR005">AEC London Bus (LR005)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR006">Euclid Quarry Truck (LR006)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR007">Horsedrawn Milk FLoat (LR007)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR008">Caterpillar Tractor (LR008)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR009">Dennis Fire Escape (LR009)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR010">SCammel Mechanical Horse and Trailer (LR010)</a></li>
+			</ul>
+		</div>	
+		
+		
+		
+		<div class="section">
 			<p class="date">October 30, 2016</p>
 			<ul>
 				<li>2016 MCCD Messe and Leipzig shows models added</li>
