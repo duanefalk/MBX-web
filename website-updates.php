@@ -11,6 +11,23 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">November 23, 2016</p>
+			<ul>
+				<li>Please note: I doscovered that I have a number of the regular wheels models out of order with respect to release year. I am correcting those year by year as I go, so you will see the LR #'s change for models. Once you see versions, variations and releases for a model, then it's in the correct order and all set.</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR011">ERF Road Tanker (LR011)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR012">Land Rover (LR012)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR013">Bedford Wreck Truck (LR013)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR014">Daimler Ambulance (LR014)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR015">Diamond T Prime Mover (LR015)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR016">Transport Trailer (LR016)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR017">Bedford Removal Van (LR017)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR018">Caterpillar Bulldozer (LR018)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR019">Aveling Barford Road Roller (LR019)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR020">(MG TD) Sports Car (LR020)</a></li>
+			</ul>
+		</div>			
+		
+		<div class="section">
 			<p class="date">November 21, 2016</p>
 			<ul>
 				<li>I have started on Regular wheels models!</li>
@@ -23,7 +40,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR007">Horsedrawn Milk FLoat (LR007)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR008">Caterpillar Tractor (LR008)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR009">Dennis Fire Escape (LR009)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR010">SCammel Mechanical Horse and Trailer (LR010)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR010">Scammel Mechanical Horse and Trailer (LR010)</a></li>
 			</ul>
 		</div>	
 		
