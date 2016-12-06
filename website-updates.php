@@ -11,6 +11,24 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">December 5, 2016</p>
+			<ul>
+				<li>Please note: Regular wheels models should now be in correct order by release and catalog no.</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR021">(ERF) Transport Truck (LR021)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR022">Bedford Long Distance Coach (LR022)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR023">Vaxhall Cresta (LR023)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR024">Berkeley Cavalier Caravan (LR024)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR025">Weatherill Hydraulic Excavator (LR025)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR026">Bedford 12 cwt Van (LR026)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR027">(ERF) Cement Mixer (LR027)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR028">Bedford Low Loader (LR028)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR029">Bedford Compressor Truck (LR029)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR030">Bedford Milk Float (LR030)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR031">ford prefect (LR031)</a></li>
+			</ul>
+		</div>			
+		
+		<div class="section">
 			<p class="date">November 23, 2016</p>
 			<ul>
 				<li>Please note: I doscovered that I have a number of the regular wheels models out of order with respect to release year. I am correcting those year by year as I go, so you will see the LR #'s change for models. Once you see versions, variations and releases for a model, then it's in the correct order and all set.</li>
