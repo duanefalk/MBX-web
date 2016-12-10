@@ -11,6 +11,24 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">December 10, 2016</p>
+			<ul>
+				<li>Please note: Regular wheels models should now be in correct order by release and catalog no.</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR032">Muir Hill Site Dumper (LR032)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR033">Massey Harris Tractor (LR033)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR034">AEC London Bus (LR034)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR035">Scammel Mechanical Horse & Trailer (LR035)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR036">Berkeley Cavalier Caravan (LR036)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR037">American Ford Station Wagon (LR037)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR038">Jaguar XK 140 (LR038)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR039">Ford Zodiac Mk II (LR039)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR040">Volkswagen Microvan (LR040)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR041">ERF Marshall Horse Box (LR041)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR042">Austin A50 (LR042)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR043">Karrier Bantam "Coca-Cola" (LR043)</a></li>
+			</ul>
+		</div>	
+		<div class="section">
 			<p class="date">December 5, 2016</p>
 			<ul>
 				<li>Please note: Regular wheels models should now be in correct order by release and catalog no.</li>
@@ -24,7 +42,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR028">Bedford Low Loader (LR028)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR029">Bedford Compressor Truck (LR029)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR030">Bedford Milk Float (LR030)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR031">ford prefect (LR031)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>Models_Detail_and_Ver_Listing.php?model=LR031">ford Prefect (LR031)</a></li>
 			</ul>
 		</div>			
 		
