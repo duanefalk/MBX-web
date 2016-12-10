@@ -5,6 +5,7 @@
 	include("includes/header.php");
 	require_once("includes/db_connection.php");	
 	require_once("includes/functions.php");
+	$_SESSION['Spec_MAN']="";
 ?>
 
 <?php
@@ -23,6 +24,7 @@
 	$_SESSION['MakeCountry_Check']=$_POST['MakeCountry_Check'];
 	$_SESSION['MakeCountry']=$_POST['MakeCountry'];
 	$_SESSION['TempaText']=$_POST['TempaText'];
+	$_SESSION['FrstYr']=$_POST['FrstYr'];
     
 	redirect_to("search-models-process.php");
     }
@@ -219,6 +221,17 @@
 				</dd>
 			</dl>
 		
+			<h3 class="demoHeaders">Or Search by Models First Produced in a Year</h3>	
+			
+			<dl class="accordion" data-accordion>
+				<dd>
+					<a href="#pane20">Year</a>
+					<div id="pane20" class="content">
+						<label for="TempaText">Year first Produced</label>
+						<input type="text" name="FrstYr" value="" size="4" id="FrstYr" />
+					</div>
+				</dd>
+			</dl>
 		</div>		
 	</div>
 	

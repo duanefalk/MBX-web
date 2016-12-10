@@ -11,11 +11,12 @@
 	$VehicleMake=$_SESSION['VehicleMake'];
 	$MakeCountry=$_SESSION['MakeCountry'];
 	$TempaText=$_SESSION['TempaText'];
+	$FrstYr=$_SESSION['FrstYr'];
 	$Search_by_MAN="0";
 	
 	//PAGE TITLE LOGIC
 	//all of this logic was copied from below, using it here allows us to supply a UNIQUE and SPECIFIC page title (good for search engines)
-	if ((!$_SESSION['VehicleType_Check']) AND (!$_SESSION['VehicleMake_Check']) AND (!$_SESSION['MakeCountry_Check']) AND (!$_SESSION['TempaText'])) {	
+	if ((!$_SESSION['VehicleType_Check']) AND (!$_SESSION['VehicleMake_Check']) AND (!$_SESSION['MakeCountry_Check']) AND (!$_SESSION['FrstYr']) AND (!$_SESSION['TempaText'])) {	
 		if ($_SESSION['MAN_No_1']) {
 			$ID_Value1 = $_SESSION['MAN_No_1'];
 			if (!$_SESSION['MAN_No_2']) {
@@ -96,7 +97,7 @@
 				$pageTitle = "Search UMID # " . $ID_String1 . " to " . $ID_String2;
 			}
 		} else {}
-	} elseif (!$_SESSION['TempaText']) {
+	} elseif ((!$_SESSION['TempaText']) AND (!$_SESSION['FrstYr']))  {
 		$PrevModelCriteria="";
 		if ($_SESSION['VehicleType_Check']) {
 			$VehicleType = $_SESSION['TypeofVehicle'];
@@ -109,7 +110,10 @@
 		if ($_SESSION['MakeCountry_Check']) {
 			$MakeCountry = $_SESSION['MakeCountry'];
 			$pageTitle = "Search for " . $MakeCountry;               
-		}		
+		}
+	} elseif (!$_SESSION['TempaText'])  {	
+			$FrstYr = $_SESSION['FrstYr'];
+			$pageTitle = "Search for " . $FrstYr; 
 	} else {
 		$pageTitle = "Search Models";
 	}
@@ -123,7 +127,7 @@
 		<h2>Matching Models</h2>
 	 
 		<?php
-			if ((!$_SESSION['VehicleType_Check']) AND (!$_SESSION['VehicleMake_Check']) AND (!$_SESSION['MakeCountry_Check']) AND (!$_SESSION['TempaText'])) {	
+			if ((!$_SESSION['VehicleType_Check']) AND (!$_SESSION['VehicleMake_Check']) AND (!$_SESSION['MakeCountry_Check']) AND (!$_SESSION['FrstYr']) AND (!$_SESSION['TempaText'])) {	
 				
 				// Search by ID
 				if ($_SESSION['MAN_No_1']) {
@@ -309,7 +313,7 @@
 					echo "ERROR no type selected";
 					exit;
 				}
-			} elseif (!$_SESSION['TempaText']) {
+			} elseif ((!$_SESSION['TempaText']) AND (!$_SESSION['FrstYr'])) {
 				
 				// Search by Type criteria
 				$PrevModelCriteria="";
@@ -327,7 +331,7 @@
 				}
 				if ($_SESSION['VehicleMake_Check']) {
 					
-					echo "<h4>Make = " . $VehicleMake . "</h4>";
+					echo "<h4>Searching for Vehicle Make = " . $VehicleMake . "</h4>";
 					$VehicleMake=$_SESSION['VehicleMake'];
 					if ($PrevModelCriteria != "1") {
 					    //echo "only vehicle make";
@@ -347,7 +351,7 @@
 				}
 				if ($_SESSION['MakeCountry_Check']) {
 					
-					echo "<h4>Country of Make = " . $MakeCountry . "</h4>";
+					echo "<h4>Searching for Vehicle Country of Make = " . $MakeCountry . "</h4>";
 					$MakeCountry=$_SESSION['MakeCountry'];
 					if (!$PrevModelCriteria) {
 						$PrevModelCriteria="1";
@@ -362,6 +366,18 @@
 				       }                   
 				}
 				$query = "(".$query.")";
+				
+			} elseif (!$_SESSION['TempaText']) {
+				// Search by Year First Produced criteria
+					if ($_SESSION['FrstYr']) {
+						echo "<h4>Searching for Year First Produced = " . $FrstYr . "</h4>";
+					$pageTitle .= ": Yr First Prod.: " . $FrstYr;
+					$FrstYr=$_SESSION['FrstYr'];
+					$query= "SELECT DISTINCT Matchbox_Models.UMID, Matchbox_Models.MasterModelName, Matchbox_Models.ModelPhotoRef, Matchbox_Versions.FAB_No, Matchbox_Versions.Master_Mack_No
+							 FROM Matchbox_Models
+							 INNER JOIN Matchbox_Versions ON Matchbox_Models.UMID=Matchbox_Versions.UMID
+							 WHERE (Matchbox_Models.YrFirstProduced LIKE '%$FrstYr%')";
+				}				
 				
 			} else {
 				// if search by text on model		
