@@ -227,8 +227,8 @@
 				<dd>
 					<a href="#pane20">Year</a>
 					<div id="pane20" class="content">
-						<label for="TempaText">Year first Produced</label>
-						<input type="text" name="FrstYr" value="" size="4" id="FrstYr" />
+						<label for="TempaText">Year first produced (1953 and onward)</label>
+						<input type="text" name="FrstYr" value="" size="4" min="1953" id="FrstYr" />
 					</div>
 				</dd>
 			</dl>
