@@ -11,6 +11,13 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">December 12, 2016</p>
+			<ul>		
+				<li>New functionality: Added a new search criterion to the Search Models page (a request from one of our members).</li>
+				<li>'Search by Models First Produced in a Year' let's you enter a year (from 1953 on) and provides a list of all of the models that were first released that year by Matchbox. You can then click on any of the results to drill down and see the versions, variations etc.</li>
+			</ul>	
+				
+		<div class="section">
 			<p class="date">December 10, 2016</p>
 			<ul>
 				<li>Please note: Regular wheels models should now be in correct order by release and catalog no.</li>
