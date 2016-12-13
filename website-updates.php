@@ -13,8 +13,8 @@
 		<div class="section">
 			<p class="date">December 12, 2016</p>
 			<h3>New Functionality</h3>
-			<p>Added a new search criterion to the Search Models page (a request from one of our members).</p>
-			<p>Search by <strong>Models First Produced in a Year</strong> let's you enter a year (from 1953 on) and provides a list of all of the models that were first released that year by Matchbox. You can then click on any of the results to drill down and see the versions, variations etc.</p>
+			<p>Added a new search criterion to the <a href="search-models-menu.php">Search Models page</a> (a request from one of our members).</p>
+			<p>Search by <strong>Models First Produced in a Year</strong> let's you enter a year (from 1953 on) and provides a list of all of the models that were first released that year by Matchbox. You can then click on any of the results to drill down and see the versions, variations etc. <a href="search-models-menu.php">Try it now.</a></p>
 		</div>
 				
 		<div class="section">
