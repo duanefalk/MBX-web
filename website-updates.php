@@ -11,6 +11,19 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">December 15, 2016</p>
+			<ul>
+				<li>Finishing the lineup from 1957:</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR039">Karrier Refuse Collector (LR044)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR040">Ford Zodiak Mk II Convertible (LR045)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR041">Bedford 7 Ton Tipper (LR046)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR042">D Type Jaguar (LR047)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR043">Bedford Evening News Van (LR048)</a></li>
+			</ul>
+		</div>			
+		
+		
+		<div class="section">
 			<p class="date">December 12, 2016</p>
 			<h3>New Functionality</h3>
 			<p>Added a new search criterion to the <a href="search-models-menu.php">Search Models page</a> (a request from one of our members).</p>
