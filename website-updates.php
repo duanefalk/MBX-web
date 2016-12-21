@@ -10,15 +10,26 @@
 	
 		<h2>Latest Website Updates</h2>
 
+
+		<div class="section">
+			<p class="date">December 16, 2016</p>
+			<ul>
+				<li>Finishing the lineup from 2016:</li>
+				<li>New Version: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0892">#12 BMW 1M (SF0892)</a></li>
+				<li>New Version: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0924">#16 Meter Maid (SF0924)</a></li>
+				<li>New Version: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0873">#80 Ford Explorer (SF0873)</a></li>
+			</ul>
+		</div>			
+		
 		<div class="section">
 			<p class="date">December 15, 2016</p>
 			<ul>
 				<li>Finishing the lineup from 1957:</li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR039">Karrier Refuse Collector (LR044)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR040">Ford Zodiak Mk II Convertible (LR045)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR041">Bedford 7 Ton Tipper (LR046)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR042">D Type Jaguar (LR047)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR043">Bedford Evening News Van (LR048)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR044">Karrier Refuse Collector (LR044)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR045">Ford Zodiak Mk II Convertible (LR045)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR046">Bedford 7 Ton Tipper (LR046)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR047">D Type Jaguar (LR047)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR048">Bedford Evening News Van (LR048)</a></li>
 			</ul>
 		</div>			
 		
