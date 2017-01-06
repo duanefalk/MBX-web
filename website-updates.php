@@ -15,7 +15,7 @@
 			<ul>
 				<li>Batch A of 2017 1-75 added</li>
 				<li>2017 Best of Matchbox added</li>
-				<li>Note: Corrected an error in database. The blue model of M-ATV was incorrectly listed under the S.W.A.T. Truck. That is now corrected (and is model SF0868-005.</li>
+				<li>Note: Corrected an error in database. The blue model of M-ATV was incorrectly listed under the S.W.A.T. Truck. That is now corrected (and is model SF0868-005).</li>
 			</ul>
 		</div>	
 
