@@ -11,6 +11,26 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">January 06, 2017</p>
+			<ul>
+				<li>Models from 1958:</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR049">Caterpillar Tractor (LR049)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR050">Dennis Fire Engine (LR050)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR051">ERF Road Tanker (LR051)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR052">Bedford Wreck Truck (LR052)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR053">Daimler Ambulance (LR053)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR054">Bedford Removal Van (LR054)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR055">Caterpillar Bulldozer (LR055)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR056">MGA Sports Car (LR056)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR057">Bedford Duple Luxury Coach (LR057)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR058">1958 Vauxhall Cresta (LR058)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR059">Bedford Low Loader (LR059)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR060">Hillman Minx (LR060)</a></li>
+			</ul>
+		</div>			
+		
+		
+		<div class="section">
 			<p class="date">December 23, 2016</p>
 			<ul>
 				<li>Batch A of 2017 1-75 added</li>
