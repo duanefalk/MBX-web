@@ -11,6 +11,24 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">January 31, 2017</p>
+			<ul>
+				<li>Models from 1958:</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR061">Rolls-Royce Silver Cloud (LR061)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR062">Vauxhall Victor (LR062)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR063">Morris Minor 1000 (LR063)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR064">1 Ton Trojan Van (LR064)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR065">Meteor Sportsman MK II Boat & Trailer (LR065)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR066">M3 Personnel Carrier Half Track (LR066)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR067">Commer Pick-up MK VIII (LR067)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR068">Albion Chieftain (LR068)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR069">Maserati 4 CL/1948 (LR069)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR070">Aston-Martin DB 2-4 (LR070)</a></li>
+			</ul>
+		</div>			
+		
+		
+		<div class="section">
 			<p class="date">January 06, 2017</p>
 			<ul>
 				<li>Models from 1958:</li>
