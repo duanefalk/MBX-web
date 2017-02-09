@@ -11,6 +11,14 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">February 12, 2017</p>
+			<ul>
+				<li>Batches B and C of 2017 1-75 added</li>
+				<li>Several code 2/3 models from Matchbox USA and Shabbir Malik added</li>
+			</ul>
+		</div>	
+		
+		<div class="section">
 			<p class="date">January 31, 2017</p>
 			<ul>
 				<li>Models from 1958:</li>
