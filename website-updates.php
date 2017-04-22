@@ -11,6 +11,20 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">April 22, 2017</p>
+			<ul>
+				<li>Batches D and E of 2017 1-75 added</li>
+				<li>Code 2/3 models from Kiddie Kar Koll. added</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR071">Alvis Saracen Personnel Carrier (LR071)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR072">(GMC) D.U.K.W. Amphibian (LR072)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR073">(AEC) London Trolleybus (LR073)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR074">Wolseley 1500 (LR074)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR075">(AEC) BEA Coach (LR075)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR076">Ford Thames Van (LR076)</a></li>
+			</ul>
+		</div>	
+		
+		<div class="section">
 			<p class="date">February 12, 2017</p>
 			<ul>
 				<li>Batches B and C of 2017 1-75 added</li>
