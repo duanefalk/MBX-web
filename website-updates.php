@@ -11,6 +11,40 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">April 29, 2017</p>
+			<ul>
+				<li>Added 2017 5-packs Jungle and Toxic</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR077">Morris J2 Pick Up (LR077)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR078">Aveling Barford Roller (LR078)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR079">Euclid Quarry Truck (LR079)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR080">Merryweather Marquis (LR080)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR081">Land Rover Series II (LR081)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR082">Rotinoff Super Atlantic (LR082)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR083">ERF 68 G Truck (LR083)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR084">Weatherill Hydraulic Excavator (LR084)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR085">Ford Thames Compressor Truck (LR085)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR086">Daimler Ferret Scout Car (LR086)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR087">(AEC) General Service Lorry (LR087)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR088">Ford Service Ambulance (LR088)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR089">SCammel Breakdown Truck (LR089)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR090">Jaguar 3.4 Litre (LR090)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR091">Citroen DS 19 (LR091)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR092">Saladin Armoured Car (LR092)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR093">Austin MK 2 Radio Truck (LR093)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR094">Commer 30 CWT Van (LR094)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR095">Ford Thames Estate Car (LR095)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR096">Austin 200 Gal Water Truck (LR096)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR097">Fordson Major Tractor (LR097)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR098">Leyland 10 Ton Pressure Refueller (LR098)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR099">Mobile Canteen (LR099)</a></li>
+
+			</ul>
+		</div>		
+		
+		
+		
+		
+		<div class="section">
 			<p class="date">April 22, 2017</p>
 			<ul>
 				<li>Batches D and E of 2017 1-75 added</li>
