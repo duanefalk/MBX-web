@@ -30,6 +30,13 @@
 			</li>
 			<li>If you are not getting the results you expect, please send me a comment and I will check the database- I could easily have made a typo!</li>
 		</ol>
+		
+		<h2>Note Regarding Regular Wheels Variations & Releases</h2>
+		<ol>
+			<li>Unlike the later Superfast models, Regular wheels models and variations were not carefully tracked by Lesney by year of production and release. As a result, the organization I 'impose' on Regular wheel variations and releases is somewhat artificial. It is based it on information gleaned from a viariety of sources, but...DO NOT TAKE IT AS GOSPEL!</li>
+			<li>For example, Lesney tended to use whatever boxes they had available for a model/variation. So although it seems logical that a 'B' box would come in a year before a 'C' or 'D' box (and I've organized the releases that way here), in truth any box possibly could show up any year of a model's run. Similarly, variations tended to intermix rather than succeed one another, though I've laid them out as though when var 'b' comes out it replaces var 'a'.</li>
+			<li>So, please bear in mind that the years listed for Regular wheels variations and releases are based on best estimate, and there will be plenty of exceptions.</li>
+		</ol>
 	</div>
 </div>
 
