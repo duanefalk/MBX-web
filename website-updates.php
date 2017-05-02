@@ -11,6 +11,25 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">May 1, 2017</p>
+			<ul>
+				<li>Added new models form 1960:</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR100">Triumph Motorcycle and Sidecar (LR100)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Super Atlantic Trailer (LR101)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Austin Metropolitan Taxi (LR102)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">BLuebird Dauphine Trailer (LR103)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Volkswagen 1200 (LR104)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Cadillac Sixty Special (LR105)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Ford Fairlane Station Wagon (LR106)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Karrier Bantam 2 Ton Coca-Cola Truck (LR107)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Type D Jaguar (LR108)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Guy Pickford Removals Van (LR109)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Ford Thunderbird (LR110)</a></li>
+			</ul>
+		</div>		
+		
+		
+		<div class="section">
 			<p class="date">April 29, 2017</p>
 			<ul>
 				<li>Added 2017 5-packs Jungle and Toxic</li>
