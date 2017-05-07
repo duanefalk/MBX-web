@@ -11,20 +11,45 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">May 6, 2017</p>
+			<ul>
+				<li>Added new models form 1961:</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR111">Bedford 7 1/2 Ton Tipper (LR111)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR112">(AEC) Routemaster London Bus (LR112)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR113">Ford Anglia (LR113)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR114">Caterpillar Tractor (LR114)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR115">Foden 15 Ton Sugar Container (LR115)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR116">Ford Thames Trader Wreck Truck (LR116)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR117">Caterpillar Bulldozer (LR117)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR118">Commer Bottle Float (LR118)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR119">Foden Cement Mixer (LR119)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR120">Austin A 55 Cambridge (LR120)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR121">Crane Truck Magirus-Deutz (LR121)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR122">Lambretta TV 175 (LR122)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR123">Leyland Royal Tiger Coach (LR123)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR124">Sports Boat & Trailer (LR124)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR125"> Chevrolet Impala (LR125)</a></li>
+			</ul>
+		</div>			
+		
+		
+		
+		
+		<div class="section">
 			<p class="date">May 1, 2017</p>
 			<ul>
 				<li>Added new models form 1960:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR100">Triumph Motorcycle and Sidecar (LR100)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Super Atlantic Trailer (LR101)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Austin Metropolitan Taxi (LR102)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">BLuebird Dauphine Trailer (LR103)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Volkswagen 1200 (LR104)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Cadillac Sixty Special (LR105)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Ford Fairlane Station Wagon (LR106)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Karrier Bantam 2 Ton Coca-Cola Truck (LR107)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Type D Jaguar (LR108)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Guy Pickford Removals Van (LR109)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Ford Thunderbird (LR110)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR102">Austin Metropolitan Taxi (LR102)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR103">BLuebird Dauphine Trailer (LR103)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR104">Volkswagen 1200 (LR104)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR105">Cadillac Sixty Special (LR105)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR106">Ford Fairlane Station Wagon (LR106)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR107">Karrier Bantam 2 Ton Coca-Cola Truck (LR107)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR108">Type D Jaguar (LR108)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR109">Guy Pickford Removals Van (LR109)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR110">Ford Thunderbird (LR110)</a></li>
 			</ul>
 		</div>		
 		
