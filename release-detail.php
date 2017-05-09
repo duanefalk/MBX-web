@@ -110,7 +110,7 @@
 						<?php } else {
 							echo "<p><strong>Package ID#:</strong>  UNKNOWN" . "</p>";
 						}
-						if ($row["SeriesID"] AND ($row["ShowSeriesID"]=1)) {
+						if ($row["PkgVarCd"]) {
 							echo "<p><strong>Package Type Code:</strong> " . $row["PkgVarCd"] . "</p>";
 						} else {
 							echo "<p><strong>Package Type:</strong> UNKNOWN" . "</p>";
