@@ -11,6 +11,27 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">May 26, 2017</p>
+			<ul>
+				<li>Added new models form 1961:</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR126">Aveling Bardford Road Roller (LR126)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR127">Muir Hill Dumper (LR127)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR128">Bedford Lomas Ambulance (LR128)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR129">Aston Martin DBR 5 Racer (LR129)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR130">E Type Jaguar (LR130)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR131">Volkswagen Caravette (LR131)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR132">Pontiac Convertible (LR132)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR133">Aveling Barford Tractor Shovel (LR133)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR134">International Drott Excavator (LR134)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR135">Jaguar 3.8 Litre Mk II (LR135)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR136">Harley Davidson & Sidecar (LR136)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR137">F1 Ferrari (156) Racing Car (LR137)</a></li>
+			</ul>
+		</div>			
+		
+		
+		
+		<div class="section">
 			<p class="date">May 6, 2017</p>
 			<ul>
 				<li>Added new models form 1961:</li>
