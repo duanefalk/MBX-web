@@ -11,9 +11,25 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">June 2, 2017</p>
+			<ul>
+				<li>Added models from 1963:</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR138">Euclid Dump Truck (LR138)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR139">Dennis Tippax Refuse Collector (LR139)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR140">Scammel Mountaineer Snow Plough (LR140)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR141">Ford Zephyr 6 Mk III (LR141)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR142">Vauxhall Victor Estate Car (LR142)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR143">Commer Ice Cream Canteen (LR143)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR144">Mercedes-Benz 220SE (LR144)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR145">Ford Fairlane Police/Fire Chief's Car (LR145)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR146">Commer TV Service Van (LR146)</a></li>
+			</ul>
+		</div>			
+		
+		<div class="section">
 			<p class="date">May 26, 2017</p>
 			<ul>
-				<li>Added new models form 1961:</li>
+				<li>Added new models from 1962:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR126">Aveling Bardford Road Roller (LR126)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR127">Muir Hill Dumper (LR127)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR128">Bedford Lomas Ambulance (LR128)</a></li>
