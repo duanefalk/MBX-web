@@ -13,6 +13,26 @@
 		<div class="section">
 			<p class="date">June 2, 2017</p>
 			<ul>
+				<li>Added models from 1964:</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR147">Caterpillar D 8 Tractor (LR147)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR148">Taylor Jumbo Crane (LR148)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR149">Foden Hoveringham Tipper (LR149)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR150">Bedford Petrol Tanker (LR150)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR151">Jaguar Mk 10 (LR151)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR152">Lincoln Continental (LR152)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR153">Aktiv Snow-Trac (LR153)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR154">Rolls Royce Phantom V (LR154)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR155">John Deere Lanz 700 Tractor (LR155)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR156">Tipping Trailer (LR156)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR157">Alvis FOamite Crash Tender (LR157)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR158">Jeep Gladiator (LR158)</a></li>
+			</ul>
+		</div>			
+		
+		
+		<div class="section">
+			<p class="date">June 1, 2017</p>
+			<ul>
 				<li>Added models from 1963:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR138">Euclid Dump Truck (LR138)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR139">Dennis Tippax Refuse Collector (LR139)</a></li>
