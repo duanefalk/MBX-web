@@ -11,6 +11,30 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">June 6, 2017</p>
+			<ul>
+				<li>Added models from 1965:</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR159">AEC Routemastr Bus (LR159)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR160">Land Rover Safari (LR160)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR161">Dodge Wreck Truck (LR161)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR162">Lotus Mk 33 racing Car (LR162)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR163">Chevrolet Impala Taxi (LR163)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR164">Pontiac GP Sports Coupe (LR164)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR165">Trailer Caravan (LR165)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR166">Faun 8 Wheel Crane (LR166)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR167">Ford GT40 (LR167)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR168">Studebaker Lark Wagonaire (LR168)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR169">Ford Corsair with Boat (LR169)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR170">BRM Racing Car (LR170)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR171">S & S Cadillac Ambulance (LR171)</a></li>				
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR172">Fiat 1500 (LR172)</a></li>				
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR173">Mercedes Coach (LR173)</a></li>				
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR174">Hatra Tractor Shovel (LR174)</a></li>				
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR175">Ferrari (250 GTL) Berlinetta (LR175)</a></li>				
+			</ul>
+		</div>		
+
+		<div class="section">
 			<p class="date">June 2, 2017</p>
 			<ul>
 				<li>Added models from 1964:</li>
