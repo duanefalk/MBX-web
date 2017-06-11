@@ -11,6 +11,32 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">June 11, 2017</p>
+			<ul>
+				<li>Added models from 1966:</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR176">Dodge Stake Truck (LR176)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR177">Ford Mustang (LR177)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR178">Boat & Trailer (LR178)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR179">Leyland Pipe Truck (LR179)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR180">Mercedes 230 SL (LR180)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR181">Maxim Fire Pumper Truck (LR181)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR182">Opel Diplomat (LR182)</a></li>	
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR183">Dodge Cattle Truck (LR183)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR184">Dodge Dumper Truck (LR184)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR185">Ford Galaxie Police/Fire Chief Car (LR185)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR186">Land Rover Fire Truck (LR186)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR187">Leyland Site Hut Truck (LR187)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR188">Alvis Stalwart (LR188)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR189">MG 1100 (LR189)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR190">Greyhound Coach (LR190)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR191">Ford Grit Spreading Truck (LR191)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR192">Jeep CJ5 (LR192)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR193">Daimler Fleetline Bus (LR193)</a></li>	
+			</ul>
+		</div>	
+
+
+		<div class="section">
 			<p class="date">June 6, 2017</p>
 			<ul>
 				<li>Added models from 1965:</li>
