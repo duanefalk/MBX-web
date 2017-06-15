@@ -23,9 +23,19 @@
 					    $User_Coll_ID=$row3["User_Coll_ID"];
 					
 					    $VarID=$_POST["var_to_add"];
-					    $VerID=substr($VarID,0,10);
-					    $UMID=substr($VerID,0,6);        
-					
+						$LorS=substr($VarID,0,1);
+
+						if ($LorS=="L") {
+						    $VerID=substr($VarID,0,9);
+						    $UMID=substr($VerID,0,5);
+							} elseif ($LorS=="S") {
+							$VerID=substr($VarID,0,10);
+						    $UMID=substr($VerID,0,6);
+							} else {
+								echo "Invalid Variation ID";
+								exit;
+							}
+
 					    $Wishlist_InactivFlg="0";
 				
 				
