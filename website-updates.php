@@ -11,6 +11,27 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">June 15, 2017</p>
+			<ul>
+				<li>Added models from 1967:</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR194">Mercedes Truck (LR194)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR195">Mercedes Trailer (LR195)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR196">Mercedes Benz Binz Ambulance (LR196)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR197">Ford Reuse Truck (LR197)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR198">Rolls Royce Silver Shadow (LR198)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR199">Volkswagen Camper (LR199)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR200">Honda Motorcycle and Trailer (LR200)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR201">Ford Tractor (LR201)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR202">Hay Trailer (LR202)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR203">GMX Refrigerator Truck (LR203)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR204">Mercedes Unimog (LR204)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR205">Claas Combine Harvester (LR205)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR206">VOlkswagen 1600 TL (LR206)</a></li>	
+			</ul>
+		</div>	
+
+
+		<div class="section">
 			<p class="date">June 11, 2017</p>
 			<ul>
 				<li>Added models from 1966:</li>
