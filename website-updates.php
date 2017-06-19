@@ -11,6 +11,33 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">June 18, 2017</p>
+			<ul>
+				<li>Added models from 1968:</li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR207">Ford Pick-up Truck (LR207)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR208">Iso grifo (LR208)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR209">Volkswagen 1500 Saloon (LR209)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR210">Foden Concrete Truck (LR210)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR211">Ford Cortina Mk II (LR211)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR212">G.M.C. Tipper Truck (LR212)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR213">Mack Dump Truck (LR213)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR214">Leyland Petrol Tanker (LR214)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR215">Lamborghini Miura (LR215)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR216">Volkswagen Camper (LR216)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR217">Pont Trailer (LR217)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR218">Mercedes 300 SE Coupe (LR218)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR219">DAF Tipper Container Truck (LR219)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR220">Ford Zodiac MK. IV (LR220)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR221">Mercury Park Lane Police Car (LR221)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR222">DAF Girder Truck (LR222)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR223">Mercury Cougar (LR223)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR224">Dodge Crane Truck (LR224)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR225">Ford Heavy Wreck Truck (LR225)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR226">Mercury Commuter (LR226)</a></li>
+			</ul>
+		</div>					
+
+		<div class="section">
 			<p class="date">June 15, 2017</p>
 			<ul>
 				<li>Added models from 1967:</li>
