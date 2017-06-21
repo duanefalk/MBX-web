@@ -11,6 +11,16 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">June 21, 2017</p>
+			<ul>
+				<li>BUG FIX:</li>
+				<li>Corrected issue with adding variations to wishlists and collections. Previously program was incorrectly truncating LR model numbers, and they would not display in collection reports. Numbers, whether LR or SF, are now handled correctly and models are visible on reports. I have also corrected the errors in the database table, so LR models peviously entered should also display correctly. Please email me if you see any further problems with this.</li>
+			</ul>
+		</div>
+
+
+
+		<div class="section">
 			<p class="date">June 20, 2017</p>
 			<ul>
 				<li>Added models from 1969:</li>
