@@ -89,9 +89,21 @@
 	    <form name="Dir_Add_Mdl_to_Coll_Process" action="dir-add-mdl-to-coll-process.php" method="post">
 		<?php  
 	            $Coll_VarID=$Var_to_Add;
-	            $Coll_VerID=substr($Coll_VarID,0,10);
-	            $Coll_UMID=substr($Coll_VerID,0,6);
-                        
+				//updated 062117 to parse correctly for both LRxxx and SFxxxx models	                        
+				$LorS=substr($Coll_VarID,0,1);
+
+				if ($LorS=="L") {
+				    $Coll_VerID=substr($Coll_VarID,0,9);
+				    $Coll_UMID=substr($Coll_VarID,0,5);
+				} elseif ($LorS=="S") {
+					$Coll_VerID=substr($Coll_VarID,0,10);
+				    $Coll_UMID=substr($Coll_VarID,0,6);
+				} else {
+					echo "Invalid Variation ID";
+					exit;
+				}						
+						
+				
 		    //determine what copy to default in field
 		    $query=("SELECT * FROM Matchbox_Collection WHERE Username='$Username' AND VarID='$Var_to_Add'");								
 		    $result=0;

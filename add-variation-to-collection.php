@@ -90,11 +90,24 @@
 	    ?>
               
 		<form name="Add_Var_to_Coll" action="add-variation-to-collection.php" method="post">	
-            <?php               
+            <?php
+			
+		//updated 062117 to parse correctly for both LRxxx and SFxxxx models
 		$Coll_VarID=$Var_to_Add;
-                $Coll_VerID=substr($Coll_VarID,0,10);
-                $Coll_UMID=substr($Coll_VerID,0,6);
-                        
+		$LorS=substr($Coll_VarID,0,1);
+
+			if ($LorS=="L") {
+			    $Coll_VerID=substr($Coll_VarID,0,9);
+			    $Coll_UMID=substr($Coll_VarID,0,5);
+			} elseif ($LorS=="S") {
+				$Coll_VerID=substr($Coll_VarID,0,10);
+			    $Coll_UMID=substr($Coll_VarID,0,6);
+			} else {
+					echo "Invalid Variation ID";
+					exit;
+			}							
+		
+						
                 //determine what copy to default in field
                 $query=("SELECT * FROM Matchbox_Collection WHERE Username='$Username' AND User_Coll_ID='$User_CollID' AND VarID='$Var_to_Add'");								
 				$result=0;
