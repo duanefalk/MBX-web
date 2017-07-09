@@ -18,12 +18,10 @@
 			</ul>
 		</div>
 
-
-
 		<div class="section">
 			<p class="date">June 20, 2017</p>
+			<p>Added models from 1969:</p>
 			<ul>
-				<li>Added models from 1969:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR227">Mercedes Scaffolding Truck (LR227)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR228">Case Tractor (LR228)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR229">AEC Horse Box (LR229)</a></li>
@@ -31,9 +29,8 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR231">Iron Fairy Crane (LR231)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR232">Ford Kennel Truck (LR232)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR233">AEC 8 Wheel Tipper (LR233)</a></li>
-				<li></li>
-				<li>And that's ALL of the original models! Only miniatures left to add are the Matchbox Originals releases, which I will tack on as later LR#'s shortly.</li>
 			</ul>
+			<p>And that's ALL of the original models! Only miniatures left to add are the Matchbox Originals releases, which I will tack on as later LR#'s shortly.</p>
 		</div>					
 
 		<div class="section">
