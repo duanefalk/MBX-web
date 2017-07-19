@@ -76,7 +76,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR203">GMX Refrigerator Truck (LR203)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR204">Mercedes Unimog (LR204)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR205">Claas Combine Harvester (LR205)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR206">Vlkswagen 1600 TL (LR206)</a></li>	
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR206">Volkswagen 1600 TL (LR206)</a></li>	
 			</ul>
 		</div>	
 
