@@ -76,7 +76,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR203">GMX Refrigerator Truck (LR203)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR204">Mercedes Unimog (LR204)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR205">Claas Combine Harvester (LR205)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR206">VOlkswagen 1600 TL (LR206)</a></li>	
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR206">Vlkswagen 1600 TL (LR206)</a></li>	
 			</ul>
 		</div>	
 
@@ -145,7 +145,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR154">Rolls Royce Phantom V (LR154)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR155">John Deere Lanz 700 Tractor (LR155)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR156">Tipping Trailer (LR156)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR157">Alvis FOamite Crash Tender (LR157)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR157">Alvis Foamite Crash Tender (LR157)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR158">Jeep Gladiator (LR158)</a></li>
 			</ul>
 		</div>			
@@ -220,7 +220,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR100">Triumph Motorcycle and Sidecar (LR100)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Super Atlantic Trailer (LR101)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR102">Austin Metropolitan Taxi (LR102)</a></li>
-				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR103">BLuebird Dauphine Trailer (LR103)</a></li>
+				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR103">Bluebird Dauphine Trailer (LR103)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR104">Volkswagen 1200 (LR104)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR105">Cadillac Sixty Special (LR105)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR106">Ford Fairlane Station Wagon (LR106)</a></li>
