@@ -11,6 +11,18 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">July 17, 2017</p>
+			<ul>
+				<li>Added 2017:</li>
+				<li>1-75 batches G & H</li>
+				<li>Multi-Packs: Desert 5 pack, 9-pack w/ red Cayenne</li>
+				<li>MBUSA, MCCD code 2/3 models up to date</li>
+				<li>Shabir Malik 2017 CCI models added</li>
+			</ul>
+		</div>
+
+
+		<div class="section">
 			<p class="date">June 21, 2017</p>
 			<ul>
 				<li>BUG FIX:</li>
