@@ -12,8 +12,8 @@
 
 		<div class="section">
 			<p class="date">July 17, 2017</p>
-			<ul>
-				<li>Added 2017:</li>
+			<p>Added 2017:</p>
+			<ul>				
 				<li>1-75 batches G & H</li>
 				<li>Multi-Packs: Desert 5 pack, 9-pack w/ red Cayenne</li>
 				<li>MBUSA, MCCD code 2/3 models up to date</li>
@@ -47,8 +47,8 @@
 
 		<div class="section">
 			<p class="date">June 18, 2017</p>
+			<p>Added models from 1968:</p>
 			<ul>
-				<li>Added models from 1968:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR207">Ford Pick-up Truck (LR207)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR208">Iso grifo (LR208)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR209">Volkswagen 1500 Saloon (LR209)</a></li>
@@ -74,8 +74,8 @@
 
 		<div class="section">
 			<p class="date">June 15, 2017</p>
+			<p>Added models from 1967:</p>
 			<ul>
-				<li>Added models from 1967:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR194">Mercedes Truck (LR194)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR195">Mercedes Trailer (LR195)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR196">Mercedes Benz Binz Ambulance (LR196)</a></li>
@@ -95,8 +95,8 @@
 
 		<div class="section">
 			<p class="date">June 11, 2017</p>
-			<ul>
-				<li>Added models from 1966:</li>
+			<p>Added models from 1966:</p>
+			<ul>				
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR176">Dodge Stake Truck (LR176)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR177">Ford Mustang (LR177)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR178">Boat & Trailer (LR178)</a></li>
@@ -121,8 +121,8 @@
 
 		<div class="section">
 			<p class="date">June 6, 2017</p>
+			<p>Added models from 1965:</p>
 			<ul>
-				<li>Added models from 1965:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR159">AEC Routemastr Bus (LR159)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR160">Land Rover Safari (LR160)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR161">Dodge Wreck Truck (LR161)</a></li>
@@ -145,8 +145,8 @@
 
 		<div class="section">
 			<p class="date">June 2, 2017</p>
+			<p>Added models from 1964:</p>
 			<ul>
-				<li>Added models from 1964:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR147">Caterpillar D 8 Tractor (LR147)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR148">Taylor Jumbo Crane (LR148)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR149">Foden Hoveringham Tipper (LR149)</a></li>
@@ -165,8 +165,8 @@
 		
 		<div class="section">
 			<p class="date">June 1, 2017</p>
+			<p>Added models from 1963:</p>
 			<ul>
-				<li>Added models from 1963:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR138">Euclid Dump Truck (LR138)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR139">Dennis Tippax Refuse Collector (LR139)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR140">Scammel Mountaineer Snow Plough (LR140)</a></li>
@@ -181,8 +181,8 @@
 		
 		<div class="section">
 			<p class="date">May 26, 2017</p>
+			<p>Added new models from 1962:</p>
 			<ul>
-				<li>Added new models from 1962:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR126">Aveling Bardford Road Roller (LR126)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR127">Muir Hill Dumper (LR127)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR128">Bedford Lomas Ambulance (LR128)</a></li>
@@ -202,8 +202,8 @@
 		
 		<div class="section">
 			<p class="date">May 6, 2017</p>
+			<p>Added new models form 1961:</p>
 			<ul>
-				<li>Added new models form 1961:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR111">Bedford 7 1/2 Ton Tipper (LR111)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR112">(AEC) Routemaster London Bus (LR112)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR113">Ford Anglia (LR113)</a></li>
@@ -227,8 +227,8 @@
 		
 		<div class="section">
 			<p class="date">May 1, 2017</p>
+			<p>Added new models form 1960:</p>
 			<ul>
-				<li>Added new models form 1960:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR100">Triumph Motorcycle and Sidecar (LR100)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR101">Super Atlantic Trailer (LR101)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR102">Austin Metropolitan Taxi (LR102)</a></li>
@@ -246,8 +246,8 @@
 		
 		<div class="section">
 			<p class="date">April 29, 2017</p>
+			<p>Added 2017 5-packs Jungle and Toxic</p>
 			<ul>
-				<li>Added 2017 5-packs Jungle and Toxic</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR077">Morris J2 Pick Up (LR077)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR078">Aveling Barford Roller (LR078)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR079">Euclid Quarry Truck (LR079)</a></li>
@@ -271,7 +271,6 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR097">Fordson Major Tractor (LR097)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR098">Leyland 10 Ton Pressure Refueller (LR098)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR099">Mobile Canteen (LR099)</a></li>
-
 			</ul>
 		</div>		
 		
@@ -302,8 +301,8 @@
 		
 		<div class="section">
 			<p class="date">January 31, 2017</p>
+			<p>Models from 1958:</p>
 			<ul>
-				<li>Models from 1958:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR061">Rolls-Royce Silver Cloud (LR061)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR062">Vauxhall Victor (LR062)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR063">Morris Minor 1000 (LR063)</a></li>
@@ -320,8 +319,8 @@
 		
 		<div class="section">
 			<p class="date">January 06, 2017</p>
+			<p>Models from 1958:</p>
 			<ul>
-				<li>Models from 1958:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR049">Caterpillar Tractor (LR049)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR050">Dennis Fire Engine (LR050)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR051">ERF Road Tanker (LR051)</a></li>
@@ -349,8 +348,8 @@
 
 		<div class="section">
 			<p class="date">December 16, 2016</p>
+			<p>Finishing the lineup from 2016:</p>
 			<ul>
-				<li>Finishing the lineup from 2016:</li>
 				<li>New Version: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0892">#12 BMW 1M (SF0892)</a></li>
 				<li>New Version: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0924">#16 Meter Maid (SF0924)</a></li>
 				<li>New Version: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0873">#80 Ford Explorer (SF0873)</a></li>
@@ -359,8 +358,8 @@
 		
 		<div class="section">
 			<p class="date">December 15, 2016</p>
+			<p>Finishing the lineup from 1957:</p>
 			<ul>
-				<li>Finishing the lineup from 1957:</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR044">Karrier Refuse Collector (LR044)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR045">Ford Zodiak Mk II Convertible (LR045)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR046">Bedford 7 Ton Tipper (LR046)</a></li>
@@ -379,8 +378,8 @@
 				
 		<div class="section">
 			<p class="date">December 10, 2016</p>
+			<p>Please note: Regular wheels models should now be in correct order by release and catalog no.</p>
 			<ul>
-				<li>Please note: Regular wheels models should now be in correct order by release and catalog no.</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR032">Muir Hill Site Dumper (LR032)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR033">Massey Harris Tractor (LR033)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR034">AEC London Bus (LR034)</a></li>
@@ -397,8 +396,8 @@
 		</div>	
 		<div class="section">
 			<p class="date">December 5, 2016</p>
-			<ul>
-				<li>Please note: Regular wheels models should now be in correct order by release and catalog no.</li>
+			<p>Please note: Regular wheels models should now be in correct order by release and catalog no.</p>
+			<ul>				
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR021">(ERF) Transport Truck (LR021)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR022">Bedford Long Distance Coach (LR022)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR023">Vaxhall Cresta (LR023)</a></li>
@@ -415,8 +414,9 @@
 		
 		<div class="section">
 			<p class="date">November 23, 2016</p>
+			<p>Please note: I discovered that I have a number of the regular wheels models out of order with respect to release year. I am correcting those year by year as I go, so you will see the LR #'s change for models.</p>
+			<p>Once you see versions, variations and releases for a model, then it's in the correct order and all set.</p>
 			<ul>
-				<li>Please note: I doscovered that I have a number of the regular wheels models out of order with respect to release year. I am correcting those year by year as I go, so you will see the LR #'s change for models. Once you see versions, variations and releases for a model, then it's in the correct order and all set.</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR011">ERF Road Tanker (LR011)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR012">Land Rover (LR012)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR013">Bedford Wreck Truck (LR013)</a></li>
@@ -432,8 +432,8 @@
 		
 		<div class="section">
 			<p class="date">November 21, 2016</p>
+			<p>I have started on Regular wheels models!</p>
 			<ul>
-				<li>I have started on Regular wheels models!</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR001">Aveling Barford Road Roller (LR001)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR002">Muir Hill Site Dumper (LR002)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR003">Cement Mixer (LR003)</a></li>
@@ -446,8 +446,6 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=LR010">Scammel Mechanical Horse and Trailer (LR010)</a></li>
 			</ul>
 		</div>	
-		
-		
 		
 		<div class="section">
 			<p class="date">October 30, 2016</p>
@@ -464,16 +462,13 @@
 			</ul>
 		</div>
 		
-		
-		
 		<div class="section">
 			<p class="date">October 21, 2016</p>
 			<ul>
 				<li>2016 5-packs Shark Week &  Monsters added</li>
 				<li>2016 1-75's: Batch L added</li>
 			</ul>
-		</div>	
-		
+		</div>		
 		
 		<div class="section">
 			<p class="date">October 7, 2016</p>
@@ -492,13 +487,12 @@
 				<li>Including MBUSA models, MCCD models, Hershey Toy Show models</li>
 				<li>2016 1-75's: Batch H added</li>
 			</ul>
-		</div>
-		
+		</div>		
 		
 		<div class="section">
 			<p class="date">September 12, 2016</p>
+			<p>SUPERFAST ARE COMPLETE!!! All models of Superfast (up through June 2016) are now in the database and on the site. The next goal is to catch up on 2016, then go back and add Mack no.'s to all of the models (i.e. models after 2004). Then- on to regular Wheels.</p>
 			<ul>
-				<li>SUPERFAST ARE COMPLETE!!! All models of Superfast (up through June 2016) are now in the database and on the site. The next goal is to catch up on 2016, then go back and add Mack no.'s to all of the models (i.e. models after 2004). Then- on to regular Wheels.</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0047">Ford Group 6 (SF0047)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0037">Racing Mini (SF0037)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0030">Volkswagen Camper / Dormobile (SF0030)</a></li>
@@ -532,9 +526,8 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0005">Lamborghini Miura (SF0005)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0002">Iso Grifo (SF0002)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0001">Lotus Europa (SF0001)</a></li>
-				
-				<li>Also! The new MBX-U code 2 models are being sent out. 17 of the 30 on the pending list are on their way. The remainder to follow soon.</li>
 			</ul>
+			<p>Also! The new MBX-U code 2 models are being sent out. 17 of the 30 on the pending list are on their way. The remainder to follow soon.</p>
 		</div>	
 			
 		<div class="section">
@@ -570,8 +563,7 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0052">Kennel Truck (SF0052)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0051">Mercedes Unimog (SF0051)</a></li>
 			</ul>
-		</div>			
-		
+		</div>
 		
 		<div class="section">
 			<p class="date">May 27, 2016</p>
@@ -583,14 +575,12 @@
 				<li>2016 5-packs Fire Brigade, Jungle Crew, Construction Zone, Exotic and Desert</li>
 				<li>2016 9-packs (USA) with Olds, El Camino, Lancer Police, Ridge Raider, Mack Fire Truck, Questor & 4Runner</li>
 			</ul>
-		</div>	
-		
-		
+		</div>		
 		
 		<div class="section">
 			<p class="date">May 22, 2016</p>
+			<p>2016 1-75 models in batches A-D are online</p>
 			<ul>
-				<li>2016 1-75 models in batches A-D are online</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0026">Lotus MK 33 Racing Car (SF0026)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0006">Merryweather Fire Engine (SF0006)</a></li>
 			</ul>
@@ -611,8 +601,8 @@
 		
 		<div class="section">
 			<p class="date">May 2, 2016</p>
+			<p>Lots of models added, though I jumped around a bit among those remaining. Fewer than 50 Superfast to go!</p>
 			<ul>
-				<li>Lots of models added, though I jumped around a bit among those remaining. Fewer than 50 Superfast to go!
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0079">Baja Buggy (SF0079)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0078">Setra (S 80) Coach (SF0078)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0077">Hairy Hustler (SF0077)</a></li>
@@ -685,10 +675,10 @@
 
 		<div class="section">
 			<p class="date">March 30, 2016</p>
+			<p>Functionality Update: Website Updates page made available to all users (previously required an account login)</p>
+			<!--li>Functionality Update: Added a password recovery function- if oyu forget your password, enter the email you have on your account and your password will be sent to you</li-->
+			<p>Functionality Update: Added a 'bot detection' function before creating a new account</p>
 			<ul>
-				<li>Functionality Update: Website Updates page made available to all users (previously required an account login)</li>
-				<!--li>Functionality Update: Added a password recovery function- if oyu forget your password, enter the email you have on your account and your password will be sent to you</li-->
-				<li>Functionality Update: Added a 'bot detection' function before creating a new account</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0099">Soopa Coopa (SF0099)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0098">Maserati Bora (SF0098)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0097">Big Banger (SF0097)</a></li>
@@ -771,9 +761,7 @@
 		
 		<div class="section">
 			<p class="date">December 18, 2015</p>
-			<ul>
-				<li>Added 2015 1-75's batches G, H and J</li>
-			</ul>
+			<p>Added 2015 1-75's batches G, H and J</p>
 		</div>
 		
 		<div class="section">
@@ -786,7 +774,6 @@
 			</ul>
 		</div>		
 		
-		
 		<div class="section">
 			<p class="date">November 16, 2015</p>
 			<ul>
@@ -797,13 +784,11 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0140">Range Rover Police Patrol (SF0140)</a></li>
 			</ul>
 		</div>
-				
-		
 		
 		<div class="section">
 			<p class="date">November 2, 2015</p>
+			<p>Functionality update: New accounts will now provide separate fields for street addr., city, state/region etc.</p>
 			<ul>
-				<li>Functionality update: New accounts will now provide separate fields for street addr., city, state/region etc.</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0145">Formula 5000 (SF0145)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0142">Atlas Dump Truck (SF0142)</a></li>
 			</ul>
@@ -818,8 +803,8 @@
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0150">Rescue Hovercraft (SF0150)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0148">Cosmobile (SF0148)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0147">Planet Scout (SF0147)</a></li>
-				<li>For the next couple of weeks I will focus on updating 2015 models, and updating many of the model photos with those from my collection.</li>
 			</ul>
+			<p>For the next couple of weeks I will focus on updating 2015 models, and updating many of the model photos with those from my collection.</p>
 		</div>	
 		
 		
@@ -834,8 +819,8 @@
 
 		<div class="section">
 			<p class="date">September 11, 2015</p>
+			<p>Added feature: The <strong>Update / Delete Codes</strong> function for your collection's location and seller codes now shows you all of the codes you have in the database before you enter one for editing or deletion. We are working on adding checkboxes that lets you select directly from the list to edit - stay tuned.</p>
 			<ul>
-				<li>Added feature: The <strong>Update / Delete Codes</strong> function for your collection's location and seller codes now shows you all of the codes you have in the database before you enter one for editing or deletion. We are working on adding checkboxes that lets you select directly from the list to edit - stay tuned.</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0167">Honda 750 Police Motorcycle (SF0167)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0165">Bedford Car Transporter (SF0165)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0164">Dodge Cattle Truck (SF0164)</a></li>
@@ -846,8 +831,8 @@
 		</div>		
 		<div class="section">
 			<p class="date">August 28, 2015</p>
+			<p>Fix: Corrected a problem with the back arrow on many browsers. Previously if you did a search, then drilled down on a model, then pressed the back arrow you would get a brower error rather than return to the search results. That has been fixed and you will now be returned to the search results page.</p>
 			<ul>
-				<li>Fix: Corrected a problem with the back arrow on many browsers. Previously if you did a search, then drilled down on a model, then pressed the back arrow you would get a brower error rather than return to the search results. That has been fixed and you will now be returned to the search results page.</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0169">Mercedes Container Truck (SF0169)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0168">Bedford Horse Box (SF0168)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0166">Caravan (SF0166)</a></li>
@@ -928,8 +913,8 @@
 		</div>		
 		<div class="section">
 			<p class="date">May 28, 2015</p>
+			<p>2015 models to date have been entered! Code 1 models up through batch D, multi-packs, Jurassic World etc. Code 2/3's will come next week. Search releases with release year 2015 to see all.</p>
 			<ul>
-				<li>2015 models to date have been entered! Code 1 models up through batch D, multi-packs, Jurassic World etc. Code 2/3's will come next week. Search releases with release year 2015 to see all.</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0213">Ford Refuse Truck (SF0213)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0212">Pontiac Firebird (SF0212)</a></li>
 			</ul>
@@ -947,8 +932,8 @@
 		</div>			
 		<div class="section">
 			<p class="date">May 08, 2015</p>
+			<p>FIXES: Collection Summary report now works correctly. Working on Summary for All Sellers.</p>
 			<ul>
-				<li>FIXES: Collection Summary report now works correctly. Working on Summary for All Sellers.</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0220">Flat Car Side Tipper (SF0220)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0221">Motor-cycle Trailer (SF0221)</a></li>
 				<li>Note- SF0222 not used at present</li>
@@ -962,13 +947,13 @@
 		</div>			
 		<div class="section">
 			<p class="date">May 02, 2015</p>
+			<p>FIXES: Lots of work! Thanks to all 'beta testers' who found bugs for me.</p>
+			<p>Fixed issues with creating collection. Can now create collection without system error. Coll name limited to 12 chars</p>
+			<p>Variation and Release detail screens: fixed bug that allowed you to add models to collection or wishlist even if you had not created a collection, or didn't have appropriate security (ie not logged in). Now fixed: will not see collection options on these screens unless you are logged in and have created a collection first.</>
+			<p>Added validation to many user input fields (ie collection code display order now requires a number)</p>
+			<p>Fixed issues on Manage Collections screen- now shows appropriate check or x for steps you've completed or not</p>
+			<p>Open Items: Collection Summary Reports are not retuning correct results. Will work on those over next couple of days. Models in Collection reports does work.</p>
 			<ul>
-				<li>FIXES: Lots of work! Thanks to all 'beta testers' who found bugs for me.</li>
-				<li>Fixed issues with creating collection. Can now create collection without system error. Coll name limited to 12 chars</li>
-				<li>Variation and Release detail screens: fixed bug that allowed you to add models to collection or wishlist even if you had not created a collection, or didn't have appropriate security (ie not logged in). Now fixed: will not see collection options on these screens unless you are logged in and have created a collection first.</li>
-				<li>Added validation to many user input fields (ie collection code display order now requires a number)</li>
-				<li>Fixed issues on Manage Collections screen- now shows appropriate check or x for steps you've completed or not</li>
-				<li>Open Items: Collection Summary Reports are not retuning corect results. Will work on those over next coupel of days. Models in Collection reports does work.</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0229">BMW M1 (SF0229)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0230">Snorkel Fire Engine (SF0230)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0231">Ferrari 308 GTB (SF0231)</a></li>
@@ -979,11 +964,11 @@
 		</div>		
 		<div class="section">
 			<p class="date">April 22, 2015</p>
+			<p>ISSUE RESOLUTION: The problem with uploading files has been corrected. Uploaded files are now received by the site administrator, and the database record for the upload is created correctly.</p>
+			<p>Added Status Update function</p>
+			<p>Fixed 'Create Account': on successful account creation it sends you directly to login page (fixes the 'Hello ___' problem in header)</p>
+			<p>Fixed 'Edit Account' to show previous field entries</p>
 			<ul>
-				<li>ISSUE RESOLUTION: The problem with uploading files has been corrected. Uploaded files are now received by the site administrator, and the database record for the upload is created correctly.</li>	
-				<li>Added Status Update function</li>
-				<li>Fixed 'Create Account': on successful account creation it sends you directly to login page (fixes the 'Hello ___' problem in header)</li>
-				<li>Fixed 'Edit Account' to show previous field entries</li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0235">VW Rompin Rabbit (SF0235)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0236">Ford Mini Pickup (SF0236)</a></li>
 				<li>New Model: <a href="<?php ROOTURL; ?>models-detail-ver-listing.php?model=SF0237">Pontiac Firebird SE (SF0237)</a></li>
