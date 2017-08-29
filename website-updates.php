@@ -11,6 +11,14 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
+			<p class="date">August 28, 2017</p>
+			<ul>
+				<li>Error corrected: Collection Summary Report was not correctly totaling purchase prices of models. This has been fixed</li>
+			</ul>
+		</div>
+
+
+		<div class="section">
 			<p class="date">July 17, 2017</p>
 			<p>Added 2017:</p>
 			<ul>				

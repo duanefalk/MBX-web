@@ -78,7 +78,7 @@
 			$rows_count4=mysql_num_rows($result4);
 			for ($i=1; $i<=$rows_count4; $i++) {
 				$row4=mysql_fetch_array($result4);
-				$TotPurchPrice=$TotPurch_Price + $row4['PurchPrice'];
+				$TotPurchPrice=$TotPurchPrice + $row4['PurchPrice'];
 				$TotValue=$TotValue + $row4['ItemVal'];
 				if ($row4['SellFlag']) {
 					$TotSellFlg= $TotSellFlg +1;
