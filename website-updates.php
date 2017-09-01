@@ -11,9 +11,11 @@
 		<h2>Latest Website Updates</h2>
 
 		<div class="section">
-			<p class="date">August 28, 2017</p>
+			<p class="date">September 1, 2017</p>
 			<ul>
-				<li>Error corrected: Collection Summary Report was not correctly totaling purchase prices of models. This has been fixed</li>
+				<li>Added Batch H of 2017 1-75</li>
+				<li>Added second batch of Best of Matchbox models</li>
+				<li>Added Color Changers - yes they're back!</li>
 			</ul>
 		</div>
 
