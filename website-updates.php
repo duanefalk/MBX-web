@@ -10,6 +10,23 @@
 	
 		<h2>Latest Website Updates</h2>
 
+	<div class="section">
+			<p class="date">October 12, 2017</p>
+			<ul>
+				<li>2017 1-75: Current through Batch M</li>
+			</ul>
+		</div>
+
+
+		<div class="section">
+			<p class="date">September 6, 2017</p>
+			<ul>
+				<li>Numerous corrections to individual models</li>
+				<li>Purchase Price field in Collections table now has 2 decimal places to allow dollars and cents</li>
+			</ul>
+		</div>
+
+
 		<div class="section">
 			<p class="date">September 1, 2017</p>
 			<ul>
