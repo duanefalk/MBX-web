@@ -11,6 +11,15 @@
 		<h2>Latest Website Updates</h2>
 
 	<div class="section">
+			<p class="date">November 2, 2017</p>
+			<ul>
+				<li>2017 5-packs: Added River Explorers, Police and Open Road Cruisers</li>
+				<li>2017 Code 2/3: Hershey show model, MBUSA models up to date</li>
+			</ul>
+		</div>
+
+
+	<div class="section">
 			<p class="date">October 12, 2017</p>
 			<ul>
 				<li>2017 1-75: Current through Batch M</li>
