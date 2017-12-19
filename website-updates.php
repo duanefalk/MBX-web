@@ -10,6 +10,17 @@
 	
 		<h2>Latest Website Updates</h2>
 
+<div class="section">
+			<p class="date">December 19, 2017</p>
+			<ul>
+				<li>2017 5-packs: Added City Services</li>
+				<li>2017 1-75: Last 2 models (#61 and 79)</li>
+				<li>2018 Color Changers</li>
+				<li>2018 Globe Travelers</li>
+			</ul>
+		</div>
+
+
 	<div class="section">
 			<p class="date">November 2, 2017</p>
 			<ul>
