@@ -10,6 +10,14 @@
 	
 		<h2>Latest Website Updates</h2>
 
+
+<div class="section">
+			<p class="date">December 26, 2017</p>
+			<ul>
+				<li>2017 Camouflage Series: 6 models</li>
+			</ul>
+		</div>
+
 <div class="section">
 			<p class="date">December 19, 2017</p>
 			<ul>
