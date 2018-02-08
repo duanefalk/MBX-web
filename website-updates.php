@@ -10,6 +10,13 @@
 	
 		<h2>Latest Website Updates</h2>
 
+<div class="section">
+			<p class="date">February 8, 2018</p>
+			<ul>
+				<li>2017 9-pack w/ Fleetwood</li>
+				<li>2018 Chevy Trucks Series: 5 models</li>
+			</ul>
+		</div>
 
 <div class="section">
 			<p class="date">December 26, 2017</p>
