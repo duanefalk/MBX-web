@@ -11,6 +11,16 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">March 3, 2018</p>
+			<ul>
+				<li>2018 Jurassic World 5-pk and singles</li>
+				<li>2018 Chevy Trucks Series 5-pk (still need new red truck)</li>
+				<li>2018 1-75:   Batches A (actually 2017 models) and B</li>
+			</ul>
+		</div>
+
+
+<div class="section">
 			<p class="date">February 8, 2018</p>
 			<ul>
 				<li>2017 9-pack w/ Fleetwood</li>
