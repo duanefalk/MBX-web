@@ -92,9 +92,11 @@
                 //$Coll_Username="duanefalk";
 		$Coll_RelID=$Rel_to_Add;
 
-                $Coll_VarID=substr($Coll_RelID,0,-3);
-                $Coll_VerID=substr($Coll_VarID,0,10);
-                $Coll_UMID=substr($Coll_VerID,0,6);
+			//updated 032218 to parse correctly for both LRxxx and SFxxxx models 
+		
+	            $Coll_VarID=substr($Coll_RelID,0,-3);
+                $Coll_VerID=substr($Coll_RelID,0,-5);
+                $Coll_UMID=substr($Coll_RelID,0,-9);
 
                 //determine what copy to default in field
                 $query=("SELECT * FROM Matchbox_Collection WHERE Username='$User' AND RelID='$Rel_to_Add'");								
