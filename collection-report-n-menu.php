@@ -13,7 +13,7 @@
 <a href="index.php" class="button dark">Return to Main Page</a>
 </div>
 
-<form action="collection-report-m-process.php" method="post">
+<form action="collection-report-n-process.php" method="post">
 
 <!-- Search Options -->
 <div class="row">

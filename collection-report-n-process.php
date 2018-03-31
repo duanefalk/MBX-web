@@ -537,22 +537,6 @@ qqqq<?php
 						<td>MAN</td>
 						<td>Mack</td>
 						<td>Name</td>
-						<td>Origin</td>
-						<td>F Wh</td>
-						<td>R Wh</td>
-						<td>Window</td>
-						<td>Interior</td>
-						<td>Finish</td>
-						<td>Color Var</td>
-						<td>Tampo Var</td>
-						<td>Base Mat</td>
-						<td>Base Color</td>
-						<td>Detail Vars</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
 						<td>Copy</td>
 						<td>Condition</td>
 						<td>Seller</td>
@@ -592,22 +576,6 @@ qqqq<?php
 							echo "<td>" . $row['FAB_No'] . "</td>";
 							echo "<td>" . $row['Mack_No'] . "</td>";
 							echo "<td>" . $row['VerName'] . "</td>";
-							echo "<td>" . $row['ManufLoc'] . "</td>";
-							echo "<td>" . $row['FWhCd'] . "</td>";
-							echo "<td>" . $row['RWhCd'] . "</td>";
-							echo "<td>" . $row['WindowColor'] . "</td>";
-							echo "<td>" . $row['InteriorColor'] . "</td>";
-							echo "<td>" . $row['Finish'] . "</td>";
-							echo "<td>" . $row['ColorVar'] . "</td>";
-							echo "<td>" . $row['TempaVar'] . "</td>";
-							echo "<td>" . $row['Base1Material'] . "</td>";
-							echo "<td>" . $row['Base1Color'] . "</td>";
-							echo "<td>" . $row['Det1Typ'] . "</td>";
-							echo "<td>" . $row['Det1Var'] . "</td>";
-							echo "<td>" . $row['Det2Typ'] . "</td>";
-							echo "<td>" . $row['Det2Var'] . "</td>";
-							echo "<td>" . $row['Det3Typ'] . "</td>";
-							echo "<td>" . $row['Det3Var'] . "</td>";
 							echo "<td>" . $row['Copy'] . "</td>";
 							echo "<td>" . $row['VehCond'] . "</td>";
 							echo "<td>" . $row['Seller'] . "</td>";

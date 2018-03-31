@@ -17,8 +17,11 @@
 				<a href="collection-report-h.php" class="button dark">Summary for all Sellers</a>
 			</div>
 			<div class="large-4 columns end">   
-				<a href="collection-report-m-menu.php" class="button dark">Models in Collection</a>
-			</div>					
+				<a href="collection-report-m-menu.php" class="button dark">Models in Collection- Details</a>
+			</div>
+			<div class="large-4 columns end">   
+				<a href="collection-report-n-menu.php" class="button dark">Models in Collection- Purch/Val</a>
+			</div>		
 			<div class="large-4 columns end">   
 				<a href="collection-report-w.php" class="button dark">Wishlist Report</a>
 			</div>			
