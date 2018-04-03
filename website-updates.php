@@ -11,6 +11,13 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">April 3, 2018</p>
+			<ul>
+				<li>2018 1-75:   Batches C & D</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">March 3, 2018</p>
 			<ul>
 				<li>2018 Jurassic World 5-pk and singles</li>
