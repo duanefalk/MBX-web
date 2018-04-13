@@ -21,6 +21,8 @@
 	$_SESSION['ReleaseTheme']=$_POST['ReleaseTheme'];
 	$_SESSION['RelSeries_Check']=$_POST['RelSeries_Check'];
 	$_SESSION['RelSeries']=$_POST['RelSeries'];
+	$_SESSION['RelSubSeries_Check']=$_POST['RelSubSeries_Check'];
+	$_SESSION['SubSeries']=$_POST['SubSeries'];	
 	$_SESSION['SeriesID_Check']=$_POST['SeriesID_Check'];
 	$_SESSION['SeriesID']=$_POST['SeriesID'];
 	$_SESSION['RelYr_Check']=$_POST['RelYr_Check'];
@@ -183,8 +185,19 @@
 
 			<dl class="accordion" data-accordion>
 				<dd>	
-					<a href="#panel3">No. in Series</a>
+					<a href="#panel3">SubSeries</a>
 					<div id="panel3" class="content">
+						<input type=checkbox name="RelSubSeries_Check" id="RelSubSeries_Check" />
+						<label for="RelSubSeries_Check">SubSeries:</label>
+						<input type="text" name="SubSeries" id="SubSeries" value="" size="20" id="SubSeries" />										
+					</div>
+				</dd>
+			</dl>			
+
+			<dl class="accordion" data-accordion>
+				<dd>	
+					<a href="#panel4">No. in Series</a>
+					<div id="panel4" class="content">
 						<input type=checkbox name="SeriesID_Check" id="SeriesID_Check" />
 						<label for="SeriesID_Check"># in Series:</label>
 						<input type="text" name="SeriesID" id="SeriesID" value="" size="20" id="SeriesID" />										
@@ -194,8 +207,8 @@
 
 			<dl class="accordion" data-accordion>
 				<dd>	
-					<a href="#panel4">Release Year </a>
-					<div id="panel4" class="content">
+					<a href="#panel5">Release Year </a>
+					<div id="panel5" class="content">
 						<input type=checkbox name="RelYr_Check" id="RelYr_Check" />
 						<label for="RelYr_Check">Release Yr (yyyy):</label>
 						<input type="text" name="RelYr" value="" size="4" id="RelYr" data-parsley-minlength="4" data-parsley-maxlength="4" data-parsley-type="integer">										
@@ -205,8 +218,8 @@
 
 			<dl class="accordion" data-accordion>
 				<dd>	
-					<a href="#panel5">Country of Release</a>
-					<div id="panel5" class="content">
+					<a href="#panel6">Country of Release</a>
+					<div id="panel6" class="content">
 						<input type=checkbox name="CountryOfSale_Check" id="CountryOfSale_Check"  />
 						<label for="CountryOfSale_Check">Country Where Released:</label>
 						<?php
@@ -283,6 +296,10 @@
 			browseString.innerHTML = browseString.innerHTML + "<p>SERIES: <strong>" + document.getElementById("RelSeries").value + "</strong></p>";
 			stringBuilt = true;
 		}
+		if (document.getElementById("RelSubSeries_Check").checked) {
+			browseString.innerHTML = browseString.innerHTML + "<p>SUBSERIES: <strong>" + document.getElementById("SubSeries").value + "</strong></p>";
+			stringBuilt = true;
+		}	
 		if (document.getElementById("SeriesID_Check").checked) {
 			browseString.innerHTML = browseString.innerHTML + "<p>SERIES ID: <strong>" + document.getElementById("SeriesID").value + "</strong></p>";
 			stringBuilt = true;

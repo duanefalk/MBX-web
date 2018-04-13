@@ -17,9 +17,11 @@
 	        
 	        //set variables for post data
 	
-	        $RelTheme=$_SESSION['ReleaseTheme'];
+	    $RelTheme=$_SESSION['ReleaseTheme'];
 	        
 		$RelSeries=$_SESSION['RelSeries'];
+		
+		$RelSubSeries=$_SESSION['SubSeries'];
 			
 		$OrigSeriesID=$_SESSION['SeriesID'];
 	        $SeriesID=mysql_real_escape_string($_SESSION['SeriesID']);
@@ -93,7 +95,7 @@
 	                
 	            } else {
 	                //Browse criteria selected
-	                if (($_SESSION['ReleaseTheme_Check']) OR ($_SESSION['RelSeries_Check']) OR ($_SESSION['RelYr_Check']) OR ($_SESSION['SeriesID_Check']) OR ($_SESSION['CountryOfSale_Check'])) {
+	                if (($_SESSION['ReleaseTheme_Check']) OR ($_SESSION['RelSeries_Check']) OR ($_SESSION['RelSubSeries_Check']) OR ($_SESSION['RelYr_Check']) OR ($_SESSION['SeriesID_Check']) OR ($_SESSION['CountryOfSale_Check'])) {
 	
 	                    if ($_SESSION['ReleaseTheme_Check']) {
 	                        $PrevRelCriteria="1";
@@ -125,6 +127,27 @@
 	                            $QueryString .= " AND Matchbox_Releases.Series LIKE '%".$RelSeries."%'";
 	                        }
 	                    }
+	
+	                    if ($_SESSION['RelSubSeries_Check']) {
+	                        if ($PrevRelCriteria != "1") {
+	                            $PrevRelCriteria="1";
+	                            //note diff in single quotes on table name between this and one that works below :
+	                            //$QueryString= ("SELECT * FROM 'Matchbox_Versions' WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `Series` LIKE '%$RelSeries%')");
+	                            //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `Series` LIKE '%$RelSeries%')");
+	                            $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
+	                                   Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SubSeries, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr,
+	                                   Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
+	                            FROM Matchbox_Variations
+	                            LEFT JOIN Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
+	                            WHERE Matchbox_Releases.SubSeries  LIKE '%$RelSubSeries%'");
+	                      
+	                        } else {
+	                            $PrevRelCriteria="1";
+	                            $QueryString= chop($QueryString,")");
+	                            $QueryString .= " AND Matchbox_Releases.Series LIKE '%".$RelSubSeries."%'";
+	                        }
+	                    }						
+						
 	
 	                    if ($_SESSION['SeriesID_Check']) {
 							echo "<p>Series ID is: ".$OrigSeriesID."</p>";
@@ -286,7 +309,8 @@
 	            //echo "<br />";
 	            echo "<p>Var ID: ". $row["VarID"]."</p>";
 	            echo "<p>Rel ID: ". $row["RelID"]."</p>";
-	            echo "<p>Series: ".$row["Series"]."   ";
+				echo "<p>Series: ".$row["Series"]."</p>";
+	            echo "<p>SubSeries: ".$row["SubSeries"]."   ";
 	            if ($row["ShowSeriesID"]="1") {
 	                echo "#".$row["SeriesID"]."   ";
 	            }
