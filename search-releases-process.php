@@ -47,7 +47,7 @@
 						echo "<p>Pkg name is: ".$OrigPkgName."</p>";
                         $PrevRelCriteria="1";
                         $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
-	                                       Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
+	                                       Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SubSeries, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
 	                                       Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
 	                        FROM Matchbox_Variations
 	                        LEFT JOIN Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
@@ -60,7 +60,7 @@
 	                        $PrevRelCriteria="1";
 	                        
 	                        $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
-	                                       Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
+	                                       Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SubSeries, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
 	                                       Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
 	                        FROM Matchbox_Variations
 	                        LEFT JOIN Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
@@ -79,7 +79,7 @@
 	                        $PrevRelCriteria="1";
 	                        
 	                        $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
-	                                       Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
+	                                       Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SubSeries, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr, 
 	                                       Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
 	                        FROM Matchbox_Variations
 	                        LEFT JOIN Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
@@ -101,7 +101,7 @@
 	                        $PrevRelCriteria="1";
 	                        //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `Theme` LIKE '%$RelTheme%')");
 	                        $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
-	                                   Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr,
+	                                   Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SubSeries, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr,
 	                                   Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.Theme, Matchbox_Releases.CountryOfSale
 	                        FROM Matchbox_Variations
 	                        LEFT JOIN Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
@@ -115,7 +115,7 @@
 	                            //$QueryString= ("SELECT * FROM 'Matchbox_Versions' WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `Series` LIKE '%$RelSeries%')");
 	                            //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `Series` LIKE '%$RelSeries%')");
 	                            $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
-	                                   Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr,
+	                                   Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SubSeries, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr,
 	                                   Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
 	                            FROM Matchbox_Variations
 	                            LEFT JOIN Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
@@ -144,7 +144,7 @@
 	                        } else {
 	                            $PrevRelCriteria="1";
 	                            $QueryString= chop($QueryString,")");
-	                            $QueryString .= " AND Matchbox_Releases.Series LIKE '%".$RelSubSeries."%'";
+	                            $QueryString .= " AND Matchbox_Releases.SubSeries LIKE '%".$RelSubSeries."%'";
 	                        }
 	                    }						
 						
@@ -155,7 +155,7 @@
 	                            $PrevRelCriteria="1";
 	                            //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `SeriesID`='$SeriesID' AND `ShowSeriesID`='1')");
 	                            $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
-	                                   Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr,
+	                                   Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SubSeries, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr,
 	                                   Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
 	                            FROM Matchbox_Variations
 	                            LEFT JOIN Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
@@ -175,7 +175,7 @@
 	                            $PrevRelCriteria="1";
 	                            //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `RelYr` LIKE '%$RelYr%')");
 	                            $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
-	                                   Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr,
+	                                   Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SubSeries, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr,
 	                                   Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
 	                            FROM Matchbox_Variations
 	                            LEFT JOIN Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
@@ -195,7 +195,7 @@
 	                            $PrevRelCriteria="1";
 	                            //$QueryString= ("SELECT * FROM `Matchbox_Versions` WHERE `VerID` IN (SELECT `VerID` FROM `Matchbox_Releases` WHERE `CountryOfSale` LIKE '%$CountryOfSale%')");
 	                            $QueryString= ("SELECT DISTINCT Matchbox_Variations.UMID, Matchbox_Variations.VarID, Matchbox_Variations.BaseName, Matchbox_Variations.VarPhoto1Ref,
-	                                   Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr,
+	                                   Matchbox_Releases.RelID, Matchbox_Releases.Series, Matchbox_Releases.SubSeries, Matchbox_Releases.SeriesID, Matchbox_Releases.ShowSeriesID, Matchbox_Releases.RelYr,
 	                                   Matchbox_Releases.RelPkgPhotoRef, Matchbox_Releases.PkgName, Matchbox_Releases.MdlNameOnPkg, Matchbox_Releases.PkgID, Matchbox_Releases.CountryOfSale
 	                            FROM Matchbox_Variations
 	                            LEFT JOIN Matchbox_Releases ON Matchbox_Variations.VarID=Matchbox_Releases.VarID
@@ -309,11 +309,11 @@
 	            //echo "<br />";
 	            echo "<p>Var ID: ". $row["VarID"]."</p>";
 	            echo "<p>Rel ID: ". $row["RelID"]."</p>";
-				echo "<p>Series: ".$row["Series"]."</p>";
-	            echo "<p>SubSeries: ".$row["SubSeries"]."   ";
+				echo "<p>Series: ".$row["Series"]."       ";
 	            if ($row["ShowSeriesID"]="1") {
-	                echo "#".$row["SeriesID"]."   ";
+	                echo "Series#".$row["SeriesID"]."</p>";
 	            }
+				echo "<p>SubSeries: ".$row["SubSeries"]."</p>";
 	            echo "Country: ".$row["CountryOfSale"]."</p>";
 	            if ($row["PkgName"]) {
 	                 echo "<p>Pkg Name: ".$row["PkgName"]."</p>";
