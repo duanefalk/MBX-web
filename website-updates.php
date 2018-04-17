@@ -11,6 +11,13 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">April 18, 2018</p>
+			<ul>
+				<li>NEW FUNCTIONALITY: Added SubSeries as a criterion to the Search Release page, under Browse Release Data. This can be searched by itself or in combination with any others of the browse release data fields. As an example, you can search for Series= 1-75 and Subseries= MBX Adventure City to get only that portion of the 1-75 models.</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">April 3, 2018</p>
 			<ul>
 				<li>2018 1-75:   Batches C & D</li>
