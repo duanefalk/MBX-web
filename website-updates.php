@@ -11,6 +11,14 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">June 8, 2018</p>
+			<ul>
+				<li>2018 Multi-packs:   Batch B 9 Pk.</li>
+				<li>2018 Jurassic World:   island Explorers 5 pk.</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">June 2, 2018</p>
 			<ul>
 				<li>2018 1-75:   Batch E</li>
