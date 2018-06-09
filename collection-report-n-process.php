@@ -1,4 +1,4 @@
-qqqq<?php
+<?php
 	session_start();
 	$pageTitle = "Processing Your Collection Search";
 	$pageDescription = "Searching your own Matchbox University car collection.";
