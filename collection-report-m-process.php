@@ -531,40 +531,40 @@
         
 				<table>
 					<thead>
-					<tr>
-						<td>Photo</td>
-						<td>Variation</td>
-						<td>MAN</td>
-						<td>Mack</td>
-						<td>Name</td>
-						<td>Origin</td>
-						<td>F Wh</td>
-						<td>R Wh</td>
-						<td>Window</td>
-						<td>Interior</td>
-						<td>Finish</td>
-						<td>Color Var</td>
-						<td>Tampo Var</td>
-						<td>Base Mat</td>
-						<td>Base Color</td>
-						<td>Detail Vars</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td>Copy</td>
-						<td>Condition</td>
-						<td>Seller</td>
-						<td>Loc1</td>
-						<td>Loc2</td>
-						<td>Value</td>
-						<td>Price</td>
-						<td>Purch Dt</td>
-					</tr>
-					</thead>            
+						<tr>
+							<td>Photo</td>
+							<td>Variation</td>
+							<td>MAN</td>
+							<td>Mack</td>
+							<td>Name</td>
+							<td>Origin</td>
+							<td>F Wh</td>
+							<td>R Wh</td>
+							<td>Window</td>
+							<td>Interior</td>
+							<td>Finish</td>
+							<td>Color Var</td>
+							<td>Tampo Var</td>
+							<td>Base Mat</td>
+							<td>Base Color</td>
+							<td>Detail Vars</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>Copy</td>
+							<td>Condition</td>
+							<td>Seller</td>
+							<td>Loc1</td>
+							<td>Loc2</td>
+							<td>Value</td>
+							<td>Price</td>
+							<td>Purch Dt</td>
+						</tr>
+					</thead>
 				
-					<?php
+				<?php
 					//DISPLAY RESULTS
 					$rows = mysql_num_rows($result);
 					echo "No. of matches: ".$rows."<br></br>";
