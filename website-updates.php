@@ -11,6 +11,15 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">September 2, 2018</p>
+			<ul>
+				<li>2018 1-75:  Batches F, G and H added</li>
+				<li>2018 Gathering models added, aug MBUSA model added</li>
+				<li>2018 Jurassic World- 2 single models added</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">July 22, 2018</p>
 			<ul>
 				<li>2018 Multi-packs, 5-pks:   #5 Metro Transit</li>
