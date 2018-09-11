@@ -11,6 +11,15 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">September 11, 2018</p>
+			<ul>
+				<li>2018 Multi-packs: Texas patrol, 9 pack, added</li>
+				<li>2018 Everett Charity models added</li>
+				<li>2018 Jurassic World- 2 5 packs added</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">September 2, 2018</p>
 			<ul>
 				<li>2018 1-75:  Batches F, G and H added</li>
