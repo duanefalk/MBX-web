@@ -11,6 +11,13 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">September 17, 2018</p>
+			<ul>
+				<li>2018 1-75: Batch J added</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">September 11, 2018</p>
 			<ul>
 				<li>2018 Multi-packs: Texas patrol, 9 pack, added</li>
