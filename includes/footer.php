@@ -14,14 +14,6 @@
 		</div>
 	</div>  
 </footer>
-    
-<script src="js/vendor/jquery.js"></script>
-<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-<script src="js/vendor/fastclick.js"></script>
-<script src="js/foundation.min.js"></script>
-<script src="js/parsley.min.js"></script>
-<script src="js/lightbox.js"></script>
-<script src="js/utility.js"></script>
 
 <script>
 	$(document).foundation();

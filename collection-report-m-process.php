@@ -8,17 +8,19 @@
 ?>
 
 
-<div class="row">
+<div class="row wide">
 	<div class="large-12 columns">
-            <a href="collection-reports.php" class="button dark">Return to Collection Reports Menu</a>
-            <a href="index.php" class="button dark">Return to Main Page</a>
+	    
+	    <a href="collection-reports.php" class="button dark">Return to Collection Reports Menu</a>
+        <a href="index.php" class="button dark">Return to Main Page</a>
 
-                <h2>Models in Collection of <?php echo $_SESSION["Username"]; ?></h2>
-            <?php
-		$User=$_SESSION["Username"];
+        <h2>Models in Collection of <?php echo $_SESSION["Username"]; ?></h2>
 
+		
+        <?php
+			$User=$_SESSION["Username"];
 	
-		//SELECT section
+			//SELECT section
 			//IF NOT Checked items
 			if ((!$_POST['Seller_Check']) AND (!$_POST['Location_Check']) AND (!$_POST['Copies_Check']) AND (!$_POST['Sell_Check']) AND (!$_POST['Cond_Check'])) {	
 
@@ -269,7 +271,6 @@
 							 INNER JOIN Matchbox_Variations ON Matchbox_Collection.VarID=Matchbox_Variations.VarID
 							 INNER JOIN Matchbox_Versions ON Matchbox_Collection.VerID=Matchbox_Versions.VerID
 							WHERE Matchbox_Releases.RelYr>='$Rel_Yr_1' AND Matchbox_Releases.RelYr<='$Rel_Yr_2' AND Matchbox_Collection.Username = '$User' AND Matchbox_Collection.Coll_InactiveFlg=0";
-						
 					}
 					
 				} else {
@@ -527,9 +528,10 @@
 			
 				//DISPLAY COLUMN HEADERS
 			?>
+			
 			<div id="overflow">
         
-				<table>
+				<table class="one-col-image">
 					<thead>
 						<tr>
 							<td>Photo</td>
@@ -566,28 +568,37 @@
 				
 				<?php
 					//DISPLAY RESULTS
-					$rows = mysql_num_rows($result);
-					echo "No. of matches: ".$rows."<br></br>";
-					if ($Sort2==$Sort1){
-						echo "Sort by: ".$Sort1."<br></br>";	
-					} else {	
-						echo "Sort by: ".$Sort1.", ".$Sort2."<br></br>";
-					}	
+					$rows = mysql_num_rows($result);					
+				?>
+					
+					<p>No. of matches: <?php echo $rows; ?></p>
+					<?php if ($Sort2==$Sort1) { ?>
+						<p>Sort by: <?php echo $Sort1; ?></p>
+					<?php } else {	?>
+						<p>Sort by: <?php echo $Sort1; ?>, <?php echo $Sort2; ?></p>
+					<?php } ?>
+					
+							
+					
+				<?php 
+					
 					for ($i=1; $i<=$rows; $i++) {
 						$row = mysql_fetch_array($result);
 							
-						echo "<tr>";  
-							 
-							$picture= IMAGE_URL . $row["VarID"]."_1.jpg";
-							$picture_loc=IMAGE_PATH. $row["VarID"]."_1.jpg";
-								
+						echo "<tr>";							 
+							$picture = IMAGE_URL . $row["VarID"] . "_1.jpg";
+							$picture_loc = IMAGE_PATH . $row["VarID"] . "_1.jpg";								
 							if (file_exists($picture_loc)) {
 								//echo "picture exists";
-								echo "<td><img src=" . $picture . " /></td>";
+								echo "<td>";
+									echo "<span>" . $picture . "</span>";
+									echo "<img src=" . $picture . " />";
+								echo "</td>";
 							} else {
-								echo "<td><img src=" . DEFAULT_IMAGE . " /></td>";	
-							}
-							
+								echo "<td>";
+									echo "<img src=" . DEFAULT_IMAGE . " />";
+								echo "</td>";
+							}							
 							echo "<td>" . $row['VarID'] . "</td>"; 
 							echo "<td>" . $row['FAB_No'] . "</td>";
 							echo "<td>" . $row['Mack_No'] . "</td>";
@@ -625,6 +636,15 @@
 			</div>
 		
 			<a id="printThis" class="button dark" href="javascript:window.print()">Print this Report</a>
+			<!--input value="Export as CSV" type="button" onclick="$('#example1').table2CSV({header:['prefix','Employee Name','Contact']})"-->
+			<a id="exportThis" class="button dark" href="#">Export as .csv</a>
+			
+			
+			<script>
+			    $("#exportThis").on('click', function (event) {
+			        exportTableToCSV.apply(this, [$('table'), 'export.csv']);
+			    });
+			</script>
 			
 		<?php	
 		}

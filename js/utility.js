@@ -1,8 +1,8 @@
-$( document ).ready(function() {
+jQuery( document ).ready(function() {
 	
 	// ---- LOCAL SITE WARNING ---------------------------------------- //
 	if (window.location.href.indexOf("localhost") > -1 || window.location.href.indexOf("dev") > -1) {
-	    $('#warningLocal').css("display","block");
+	    jQuery('#warningLocal').css("display","block");
 	}
 	
 	
@@ -11,8 +11,8 @@ $( document ).ready(function() {
 	
 	
 	// ---- IMAGE POPUP ---------------------------------------------- //
-	$(document).ready(function() {
-		$('.imagePopup').magnificPopup({
+	jQuery(document).ready(function() {
+		jQuery('.imagePopup').magnificPopup({
 			type:'image',
 			gallery:{enabled:true}
 		});
@@ -22,7 +22,7 @@ $( document ).ready(function() {
 	// ---- SEARCH MODELS: DUPLICATE IMAGES DISPLAY ------------------ //
 	var moreThanOne = haveDuplicateImages();
 	if (moreThanOne == true) {
-		$('body.search_models #duplicateImages').css('opacity','1');
+		jQuery('body.search_models #duplicateImages').css('opacity','1');
 	} else {}
 	
 });
@@ -33,7 +33,7 @@ $( document ).ready(function() {
 
 // ---- HOME: BANNERS -------------------------------------------- //
 function fadeBanners() {
-    var visibleDiv = $('.banner:visible:first'); //find first visible div
+    var visibleDiv = jQuery('.banner:visible:first'); //find first visible div
 	console.log(visibleDiv);
     
     visibleDiv.fadeOut(400, function () {  //fade out first visible div
@@ -50,12 +50,12 @@ function haveDuplicateImages() {
 	var hasDupe = false;
 	var imgArr = [];
 	
-	$("li.carGrid img").each(function(){
-		if ($.inArray($(this).attr("src"),imgArr) > -1){
-			//$(this).css("border","3px solid green");
+	jQuery("li.carGrid img").each(function(){
+		if (jQuery.inArray(jQuery(this).attr("src"),imgArr) > -1){
+			//jQuery(this).css("border","3px solid green");
 			hasDupe = true;
 		} else {
-			imgArr.push($(this).attr("src"));   
+			imgArr.push(jQuery(this).attr("src"));   
 		}
 	});
 	
