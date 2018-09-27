@@ -63,18 +63,18 @@
 								$rows_own= mysql_num_rows($result_own);
 								//$rows_own= mysql_num_rows($result_own);
 								//check if pic exists and apply colors
-								echo $picture_loc;
+								//echo $picture_loc;
 								if (file_exists($picture_loc)) {									
 									if ($rows_own !="0") {
 										echo "<a href=\"".$url."\">"."<img class='own' src=".$picture." width=\"240\"></a>";
 									} else {
-										echo "<a href=\"".$url."\">"."<img class='own not' src=".$picture." width=\"240\"></a>";
+										echo "<a href=\"".$url."\">"."<img class='own-not' src=".$picture." width=\"240\"></a>";
 									}	
 								} else {
 									if ($rows_own !="0") {
 										echo "<a href=\"".$url."\">"."<img class='own' src=".DEFAULT_IMAGE." width=\"240\"></a>";
 									} else {
-										echo "<a href=\"".$url."\">"."<img class='own not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
+										echo "<a href=\"".$url."\">"."<img class='own-not' src=".DEFAULT_IMAGE." width=\"240\"></a>";
 									}
 								}	
 							} else {
@@ -91,7 +91,7 @@
 							} else {
 								echo "<a href=\"".$url."\">"."<img src=".DEFAULT_IMAGE." width=\"240\"></a>";
 							}
-						}			
+						}
 				
 						echo "<br />";
 						$PhotoRefCd= $row["VerPhoto1Ref"];
