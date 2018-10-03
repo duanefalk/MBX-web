@@ -11,6 +11,21 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">September 25, 2018</p>
+			<ul>
+				<li>PROBLEM FIXED: if you were logged in (and had a collection), and searched by MAN# from the home page, the resulting list all showed models with green bars- indicating you owned all of the models. This was corrected so that now only the models in your collection show the green bars. Note- listings from the Search Models page were already working correctly.</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">September 20, 2018</p>
+			<ul>
+				<li>2018 Mercedes series added</li>
+				<li>New finish dull/metallic added for those cars</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">September 17, 2018</p>
 			<ul>
 				<li>2018 1-75: Batch J added</li>
