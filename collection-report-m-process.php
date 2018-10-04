@@ -642,7 +642,7 @@
 			
 			<script>
 			    $("#exportThis").on('click', function (event) {
-			        exportTableToCSV.apply(this, [$('table'), 'export.csv']);
+			        exportTableToCSV.apply(this, [$('table'), 'matchbox-university-collection.csv']);
 			    });
 			</script>
 			

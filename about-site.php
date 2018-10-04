@@ -18,7 +18,7 @@
 				<li>Provide a comprehensive database of Matchbox miniatures that can be searched easily and quickly and gives detailed information on each model.</li>
 				<li>I started the site as a way to catalog my own collection, then thought it might be useful for others as well. For those who create an account on the site, it provides a way to build and maintain an electronic record of your models, accessible from any web device.</li>
 				<li>Provide <em>up-to-date</em> links to other Matchbox web sites, collectors clubs and reliable sellers.</li>
-				<li>ive site users a mechanism to provide input on model information, corrections and upload info and photos to be included on the site.</li>
+				<li>Give site users a mechanism to provide input on model information, corrections and upload info and photos to be included on the site.</li>
 			</ul>
 		</div>
 			
