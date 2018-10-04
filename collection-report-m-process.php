@@ -5,21 +5,25 @@
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
+	
+	$User = $_SESSION["Username"];
 ?>
 
 
-<div class="row wide">
+<div class="row">
 	<div class="large-12 columns">
-	    
 	    <a href="collection-reports.php" class="button dark">Return to Collection Reports Menu</a>
         <a href="index.php" class="button dark">Return to Main Page</a>
+	</div>
+</div>
 
-        <h2>Models in Collection of <?php echo $_SESSION["Username"]; ?></h2>
-
+<div class="row">
+	<div class="large-12 columns">
 		
-        <?php
-			$User=$_SESSION["Username"];
-	
+		<p class="paragraph-heading no-margin"><strong><?php echo $_SESSION["Username"]; ?>'s Collection</strong></p>
+        <h2>Models in Collection: Model Details</h2>
+		
+        <?php	
 			//SELECT section
 			//IF NOT Checked items
 			if ((!$_POST['Seller_Check']) AND (!$_POST['Location_Check']) AND (!$_POST['Copies_Check']) AND (!$_POST['Sell_Check']) AND (!$_POST['Cond_Check'])) {	
@@ -529,8 +533,7 @@
 				//DISPLAY COLUMN HEADERS
 			?>
 			
-			<div id="overflow">
-        
+			<div id="overflow">        
 				<table class="one-col-image">
 					<thead>
 						<tr>
@@ -587,15 +590,16 @@
 							
 						echo "<tr>";							 
 							$picture = IMAGE_URL . $row["VarID"] . "_1.jpg";
-							$picture_loc = IMAGE_PATH . $row["VarID"] . "_1.jpg";								
+							$picture_loc = IMAGE_PATH . $row["VarID"] . "_1.jpg";
 							if (file_exists($picture_loc)) {
-								//echo "picture exists";
+								$picture_loc = ROOTURL . $picture_loc;
 								echo "<td>";
-									echo "<span>" . $picture . "</span>";
+									echo "<span><a href=" . $picture_loc . ">" . $picture_loc . "</a></span>";
 									echo "<img src=" . $picture . " />";
 								echo "</td>";
 							} else {
 								echo "<td>";
+									echo "<span>no photo</span>";
 									echo "<img src=" . DEFAULT_IMAGE . " />";
 								echo "</td>";
 							}							
@@ -639,10 +643,10 @@
 			<!--input value="Export as CSV" type="button" onclick="$('#example1').table2CSV({header:['prefix','Employee Name','Contact']})"-->
 			<a id="exportThis" class="button dark" href="#">Export as .csv</a>
 			
-			
+			<?php /* EXPORT TABLE TO CSV */ ?>
 			<script>
 			    $("#exportThis").on('click', function (event) {
-			        exportTableToCSV.apply(this, [$('table'), 'matchbox-university-collection.csv']);
+			        exportTableToCSV.apply(this, [$('table'), 'mbxu-collection-model-details.csv']);
 			    });
 			</script>
 			

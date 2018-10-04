@@ -1,5 +1,5 @@
 {
-"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com\/",
+"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https://codekitapp.com/",
 "buildSteps": [
 	{
 		"name": "Process All Remaining Files and Folders",
@@ -7,1440 +7,1440 @@
 		"uuidString": "CF24B647-301F-42FB-A31C-38F152EE0E2E"
 		}
 	],
-"creatorBuild": "26680",
+"creatorBuild": "28901",
 "files": {
-	"\/.gitignore": {
+	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.gitignore",
+		"oAP": "/.gitignore",
 		"oF": 0
 		},
-	"\/.sass-cache\/049863aa848af1ca16eaef0ce66f6ab8894d6559\/_hover-link.scssc": {
+	"/.sass-cache/049863aa848af1ca16eaef0ce66f6ab8894d6559/_hover-link.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/049863aa848af1ca16eaef0ce66f6ab8894d6559\/_hover-link.scssc",
+		"oAP": "/.sass-cache/049863aa848af1ca16eaef0ce66f6ab8894d6559/_hover-link.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/049863aa848af1ca16eaef0ce66f6ab8894d6559\/_link-colors.scssc": {
+	"/.sass-cache/049863aa848af1ca16eaef0ce66f6ab8894d6559/_link-colors.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/049863aa848af1ca16eaef0ce66f6ab8894d6559\/_link-colors.scssc",
+		"oAP": "/.sass-cache/049863aa848af1ca16eaef0ce66f6ab8894d6559/_link-colors.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/049863aa848af1ca16eaef0ce66f6ab8894d6559\/_unstyled-link.scssc": {
+	"/.sass-cache/049863aa848af1ca16eaef0ce66f6ab8894d6559/_unstyled-link.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/049863aa848af1ca16eaef0ce66f6ab8894d6559\/_unstyled-link.scssc",
+		"oAP": "/.sass-cache/049863aa848af1ca16eaef0ce66f6ab8894d6559/_unstyled-link.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/16ba01f61dda33111a1ee96a7f222b997d516182\/_utilities.scssc": {
+	"/.sass-cache/16ba01f61dda33111a1ee96a7f222b997d516182/_utilities.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/16ba01f61dda33111a1ee96a7f222b997d516182\/_utilities.scssc",
+		"oAP": "/.sass-cache/16ba01f61dda33111a1ee96a7f222b997d516182/_utilities.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/34fdc95261064ed3ffe3c4713f05314d3109da84\/_compass.scssc": {
+	"/.sass-cache/34fdc95261064ed3ffe3c4713f05314d3109da84/_compass.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/34fdc95261064ed3ffe3c4713f05314d3109da84\/_compass.scssc",
+		"oAP": "/.sass-cache/34fdc95261064ed3ffe3c4713f05314d3109da84/_compass.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/55174d06eb30a92bebb844f07327a7722a0a2011\/_settings.scssc": {
+	"/.sass-cache/55174d06eb30a92bebb844f07327a7722a0a2011/_settings.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/55174d06eb30a92bebb844f07327a7722a0a2011\/_settings.scssc",
+		"oAP": "/.sass-cache/55174d06eb30a92bebb844f07327a7722a0a2011/_settings.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/55174d06eb30a92bebb844f07327a7722a0a2011\/interior.scssc": {
+	"/.sass-cache/55174d06eb30a92bebb844f07327a7722a0a2011/interior.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/55174d06eb30a92bebb844f07327a7722a0a2011\/interior.scssc",
+		"oAP": "/.sass-cache/55174d06eb30a92bebb844f07327a7722a0a2011/interior.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/55174d06eb30a92bebb844f07327a7722a0a2011\/lightbox.scssc": {
+	"/.sass-cache/55174d06eb30a92bebb844f07327a7722a0a2011/lightbox.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/55174d06eb30a92bebb844f07327a7722a0a2011\/lightbox.scssc",
+		"oAP": "/.sass-cache/55174d06eb30a92bebb844f07327a7722a0a2011/lightbox.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/55174d06eb30a92bebb844f07327a7722a0a2011\/print.scssc": {
+	"/.sass-cache/55174d06eb30a92bebb844f07327a7722a0a2011/print.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/55174d06eb30a92bebb844f07327a7722a0a2011\/print.scssc",
+		"oAP": "/.sass-cache/55174d06eb30a92bebb844f07327a7722a0a2011/print.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/55174d06eb30a92bebb844f07327a7722a0a2011\/style.scssc": {
+	"/.sass-cache/55174d06eb30a92bebb844f07327a7722a0a2011/style.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/55174d06eb30a92bebb844f07327a7722a0a2011\/style.scssc",
+		"oAP": "/.sass-cache/55174d06eb30a92bebb844f07327a7722a0a2011/style.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/55174d06eb30a92bebb844f07327a7722a0a2011\/trash.scssc": {
+	"/.sass-cache/55174d06eb30a92bebb844f07327a7722a0a2011/trash.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/55174d06eb30a92bebb844f07327a7722a0a2011\/trash.scssc",
+		"oAP": "/.sass-cache/55174d06eb30a92bebb844f07327a7722a0a2011/trash.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/7f28c1901763cf83095e2b8215604a30bbeb5f4b\/_settings.scssc": {
+	"/.sass-cache/7f28c1901763cf83095e2b8215604a30bbeb5f4b/_settings.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/7f28c1901763cf83095e2b8215604a30bbeb5f4b\/_settings.scssc",
+		"oAP": "/.sass-cache/7f28c1901763cf83095e2b8215604a30bbeb5f4b/_settings.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/7f28c1901763cf83095e2b8215604a30bbeb5f4b\/interior.scssc": {
+	"/.sass-cache/7f28c1901763cf83095e2b8215604a30bbeb5f4b/interior.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/7f28c1901763cf83095e2b8215604a30bbeb5f4b\/interior.scssc",
+		"oAP": "/.sass-cache/7f28c1901763cf83095e2b8215604a30bbeb5f4b/interior.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/7f28c1901763cf83095e2b8215604a30bbeb5f4b\/lightbox.scssc": {
+	"/.sass-cache/7f28c1901763cf83095e2b8215604a30bbeb5f4b/lightbox.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/7f28c1901763cf83095e2b8215604a30bbeb5f4b\/lightbox.scssc",
+		"oAP": "/.sass-cache/7f28c1901763cf83095e2b8215604a30bbeb5f4b/lightbox.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/7f28c1901763cf83095e2b8215604a30bbeb5f4b\/print.scssc": {
+	"/.sass-cache/7f28c1901763cf83095e2b8215604a30bbeb5f4b/print.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/7f28c1901763cf83095e2b8215604a30bbeb5f4b\/print.scssc",
+		"oAP": "/.sass-cache/7f28c1901763cf83095e2b8215604a30bbeb5f4b/print.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/7f28c1901763cf83095e2b8215604a30bbeb5f4b\/style.scssc": {
+	"/.sass-cache/7f28c1901763cf83095e2b8215604a30bbeb5f4b/style.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/7f28c1901763cf83095e2b8215604a30bbeb5f4b\/style.scssc",
+		"oAP": "/.sass-cache/7f28c1901763cf83095e2b8215604a30bbeb5f4b/style.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce\/_links.scssc": {
+	"/.sass-cache/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce/_links.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce\/_links.scssc",
+		"oAP": "/.sass-cache/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce/_links.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce\/_lists.scssc": {
+	"/.sass-cache/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce/_lists.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce\/_lists.scssc",
+		"oAP": "/.sass-cache/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce/_lists.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce\/_text.scssc": {
+	"/.sass-cache/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce/_text.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce\/_text.scssc",
+		"oAP": "/.sass-cache/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce/_text.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce\/_vertical_rhythm.scssc": {
+	"/.sass-cache/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce/_vertical_rhythm.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce\/_vertical_rhythm.scssc",
+		"oAP": "/.sass-cache/865aabd4afdddea17ea2ac0dc415bb1ed34d96ce/_vertical_rhythm.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e\/_clearfix.scssc": {
+	"/.sass-cache/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e/_clearfix.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e\/_clearfix.scssc",
+		"oAP": "/.sass-cache/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e/_clearfix.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e\/_float.scssc": {
+	"/.sass-cache/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e/_float.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e\/_float.scssc",
+		"oAP": "/.sass-cache/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e/_float.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e\/_hacks.scssc": {
+	"/.sass-cache/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e/_hacks.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e\/_hacks.scssc",
+		"oAP": "/.sass-cache/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e/_hacks.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e\/_min.scssc": {
+	"/.sass-cache/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e/_min.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e\/_min.scssc",
+		"oAP": "/.sass-cache/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e/_min.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e\/_reset.scssc": {
+	"/.sass-cache/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e/_reset.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e\/_reset.scssc",
+		"oAP": "/.sass-cache/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e/_reset.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e\/_tag-cloud.scssc": {
+	"/.sass-cache/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e/_tag-cloud.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e\/_tag-cloud.scssc",
+		"oAP": "/.sass-cache/8b8e1d0f3a298d0625f4b84a14204f821bb1e09e/_tag-cloud.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/910edfb8b2957552ca7fc993461ca4b772c79088\/_bullets.scssc": {
+	"/.sass-cache/910edfb8b2957552ca7fc993461ca4b772c79088/_bullets.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/910edfb8b2957552ca7fc993461ca4b772c79088\/_bullets.scssc",
+		"oAP": "/.sass-cache/910edfb8b2957552ca7fc993461ca4b772c79088/_bullets.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/910edfb8b2957552ca7fc993461ca4b772c79088\/_horizontal-list.scssc": {
+	"/.sass-cache/910edfb8b2957552ca7fc993461ca4b772c79088/_horizontal-list.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/910edfb8b2957552ca7fc993461ca4b772c79088\/_horizontal-list.scssc",
+		"oAP": "/.sass-cache/910edfb8b2957552ca7fc993461ca4b772c79088/_horizontal-list.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/910edfb8b2957552ca7fc993461ca4b772c79088\/_inline-block-list.scssc": {
+	"/.sass-cache/910edfb8b2957552ca7fc993461ca4b772c79088/_inline-block-list.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/910edfb8b2957552ca7fc993461ca4b772c79088\/_inline-block-list.scssc",
+		"oAP": "/.sass-cache/910edfb8b2957552ca7fc993461ca4b772c79088/_inline-block-list.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/910edfb8b2957552ca7fc993461ca4b772c79088\/_inline-list.scssc": {
+	"/.sass-cache/910edfb8b2957552ca7fc993461ca4b772c79088/_inline-list.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/910edfb8b2957552ca7fc993461ca4b772c79088\/_inline-list.scssc",
+		"oAP": "/.sass-cache/910edfb8b2957552ca7fc993461ca4b772c79088/_inline-list.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/972f03fa85d04af56871b9c7c67fdd1c7da97c91\/_grid-background.scssc": {
+	"/.sass-cache/972f03fa85d04af56871b9c7c67fdd1c7da97c91/_grid-background.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/972f03fa85d04af56871b9c7c67fdd1c7da97c91\/_grid-background.scssc",
+		"oAP": "/.sass-cache/972f03fa85d04af56871b9c7c67fdd1c7da97c91/_grid-background.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/985db7576802f85d5b644bd44c1e9282f52b0707\/_color.scssc": {
+	"/.sass-cache/985db7576802f85d5b644bd44c1e9282f52b0707/_color.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/985db7576802f85d5b644bd44c1e9282f52b0707\/_color.scssc",
+		"oAP": "/.sass-cache/985db7576802f85d5b644bd44c1e9282f52b0707/_color.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/985db7576802f85d5b644bd44c1e9282f52b0707\/_general.scssc": {
+	"/.sass-cache/985db7576802f85d5b644bd44c1e9282f52b0707/_general.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/985db7576802f85d5b644bd44c1e9282f52b0707\/_general.scssc",
+		"oAP": "/.sass-cache/985db7576802f85d5b644bd44c1e9282f52b0707/_general.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/985db7576802f85d5b644bd44c1e9282f52b0707\/_sprites.scssc": {
+	"/.sass-cache/985db7576802f85d5b644bd44c1e9282f52b0707/_sprites.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/985db7576802f85d5b644bd44c1e9282f52b0707\/_sprites.scssc",
+		"oAP": "/.sass-cache/985db7576802f85d5b644bd44c1e9282f52b0707/_sprites.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/985db7576802f85d5b644bd44c1e9282f52b0707\/_tables.scssc": {
+	"/.sass-cache/985db7576802f85d5b644bd44c1e9282f52b0707/_tables.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/985db7576802f85d5b644bd44c1e9282f52b0707\/_tables.scssc",
+		"oAP": "/.sass-cache/985db7576802f85d5b644bd44c1e9282f52b0707/_tables.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/aa977fca5da2621bfcaae1cec8a25c56ece66ff8\/_contrast.scssc": {
+	"/.sass-cache/aa977fca5da2621bfcaae1cec8a25c56ece66ff8/_contrast.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/aa977fca5da2621bfcaae1cec8a25c56ece66ff8\/_contrast.scssc",
+		"oAP": "/.sass-cache/aa977fca5da2621bfcaae1cec8a25c56ece66ff8/_contrast.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/da4ce4cfcfca3e334ee5847eaca592b3442351ee\/_base.scssc": {
+	"/.sass-cache/da4ce4cfcfca3e334ee5847eaca592b3442351ee/_base.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/da4ce4cfcfca3e334ee5847eaca592b3442351ee\/_base.scssc",
+		"oAP": "/.sass-cache/da4ce4cfcfca3e334ee5847eaca592b3442351ee/_base.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/da4ce4cfcfca3e334ee5847eaca592b3442351ee\/_sprite-img.scssc": {
+	"/.sass-cache/da4ce4cfcfca3e334ee5847eaca592b3442351ee/_sprite-img.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/da4ce4cfcfca3e334ee5847eaca592b3442351ee\/_sprite-img.scssc",
+		"oAP": "/.sass-cache/da4ce4cfcfca3e334ee5847eaca592b3442351ee/_sprite-img.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/da684bdc0e99a3612b9f13e5c3e1e673107ba0ec\/_alternating-rows-and-columns.scssc": {
+	"/.sass-cache/da684bdc0e99a3612b9f13e5c3e1e673107ba0ec/_alternating-rows-and-columns.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/da684bdc0e99a3612b9f13e5c3e1e673107ba0ec\/_alternating-rows-and-columns.scssc",
+		"oAP": "/.sass-cache/da684bdc0e99a3612b9f13e5c3e1e673107ba0ec/_alternating-rows-and-columns.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/da684bdc0e99a3612b9f13e5c3e1e673107ba0ec\/_borders.scssc": {
+	"/.sass-cache/da684bdc0e99a3612b9f13e5c3e1e673107ba0ec/_borders.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/da684bdc0e99a3612b9f13e5c3e1e673107ba0ec\/_borders.scssc",
+		"oAP": "/.sass-cache/da684bdc0e99a3612b9f13e5c3e1e673107ba0ec/_borders.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/da684bdc0e99a3612b9f13e5c3e1e673107ba0ec\/_scaffolding.scssc": {
+	"/.sass-cache/da684bdc0e99a3612b9f13e5c3e1e673107ba0ec/_scaffolding.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/da684bdc0e99a3612b9f13e5c3e1e673107ba0ec\/_scaffolding.scssc",
+		"oAP": "/.sass-cache/da684bdc0e99a3612b9f13e5c3e1e673107ba0ec/_scaffolding.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/df1d1181376352d5929ae2142e348865ddfdb9a6\/_settings.scssc": {
+	"/.sass-cache/df1d1181376352d5929ae2142e348865ddfdb9a6/_settings.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/df1d1181376352d5929ae2142e348865ddfdb9a6\/_settings.scssc",
+		"oAP": "/.sass-cache/df1d1181376352d5929ae2142e348865ddfdb9a6/_settings.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/df1d1181376352d5929ae2142e348865ddfdb9a6\/interior.scssc": {
+	"/.sass-cache/df1d1181376352d5929ae2142e348865ddfdb9a6/interior.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/df1d1181376352d5929ae2142e348865ddfdb9a6\/interior.scssc",
+		"oAP": "/.sass-cache/df1d1181376352d5929ae2142e348865ddfdb9a6/interior.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/df1d1181376352d5929ae2142e348865ddfdb9a6\/lightbox.scssc": {
+	"/.sass-cache/df1d1181376352d5929ae2142e348865ddfdb9a6/lightbox.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/df1d1181376352d5929ae2142e348865ddfdb9a6\/lightbox.scssc",
+		"oAP": "/.sass-cache/df1d1181376352d5929ae2142e348865ddfdb9a6/lightbox.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/df1d1181376352d5929ae2142e348865ddfdb9a6\/print.scssc": {
+	"/.sass-cache/df1d1181376352d5929ae2142e348865ddfdb9a6/print.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/df1d1181376352d5929ae2142e348865ddfdb9a6\/print.scssc",
+		"oAP": "/.sass-cache/df1d1181376352d5929ae2142e348865ddfdb9a6/print.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/df1d1181376352d5929ae2142e348865ddfdb9a6\/style copy.scssc": {
+	"/.sass-cache/df1d1181376352d5929ae2142e348865ddfdb9a6/style copy.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/df1d1181376352d5929ae2142e348865ddfdb9a6\/style copy.scssc",
+		"oAP": "/.sass-cache/df1d1181376352d5929ae2142e348865ddfdb9a6/style copy.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/df1d1181376352d5929ae2142e348865ddfdb9a6\/style.scssc": {
+	"/.sass-cache/df1d1181376352d5929ae2142e348865ddfdb9a6/style.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.sass-cache\/df1d1181376352d5929ae2142e348865ddfdb9a6\/style.scssc",
+		"oAP": "/.sass-cache/df1d1181376352d5929ae2142e348865ddfdb9a6/style.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118\/_ellipsis.scssc": {
+	"/.sass-cache/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118/_ellipsis.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118\/_ellipsis.scssc",
+		"oAP": "/.sass-cache/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118/_ellipsis.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118\/_force-wrap.scssc": {
+	"/.sass-cache/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118/_force-wrap.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118\/_force-wrap.scssc",
+		"oAP": "/.sass-cache/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118/_force-wrap.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118\/_nowrap.scssc": {
+	"/.sass-cache/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118/_nowrap.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118\/_nowrap.scssc",
+		"oAP": "/.sass-cache/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118/_nowrap.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118\/_replacement.scssc": {
+	"/.sass-cache/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118/_replacement.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118\/_replacement.scssc",
+		"oAP": "/.sass-cache/e27bb5fe9b5e55ce0cf06ee076ef659f284fb118/_replacement.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_appearance.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_appearance.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_appearance.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_appearance.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_background-clip.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_background-clip.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_background-clip.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_background-clip.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_background-origin.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_background-origin.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_background-origin.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_background-origin.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_background-size.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_background-size.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_background-size.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_background-size.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_border-radius.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_border-radius.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_border-radius.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_border-radius.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_box-shadow.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_box-shadow.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_box-shadow.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_box-shadow.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_box-sizing.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_box-sizing.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_box-sizing.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_box-sizing.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_box.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_box.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_box.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_box.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_columns.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_columns.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_columns.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_columns.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_filter.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_filter.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_filter.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_filter.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_font-face.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_font-face.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_font-face.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_font-face.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_hyphenation.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_hyphenation.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_hyphenation.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_hyphenation.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_images.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_images.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_images.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_images.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_inline-block.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_inline-block.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_inline-block.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_inline-block.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_opacity.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_opacity.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_opacity.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_opacity.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_regions.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_regions.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_regions.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_regions.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_shared.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_shared.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_shared.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_shared.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_text-shadow.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_text-shadow.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_text-shadow.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_text-shadow.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_transform.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_transform.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_transform.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_transform.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_transition.scssc": {
+	"/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_transition.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/e625724f5387dae690c3010059acac9464759cdc\/_transition.scssc",
+		"oAP": "/.sass-cache/e625724f5387dae690c3010059acac9464759cdc/_transition.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/f532f3279632c310e9d7809183f84974e2cd74a8\/_css3.scssc": {
+	"/.sass-cache/f532f3279632c310e9d7809183f84974e2cd74a8/_css3.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/f532f3279632c310e9d7809183f84974e2cd74a8\/_css3.scssc",
+		"oAP": "/.sass-cache/f532f3279632c310e9d7809183f84974e2cd74a8/_css3.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/f532f3279632c310e9d7809183f84974e2cd74a8\/_support.scssc": {
+	"/.sass-cache/f532f3279632c310e9d7809183f84974e2cd74a8/_support.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/f532f3279632c310e9d7809183f84974e2cd74a8\/_support.scssc",
+		"oAP": "/.sass-cache/f532f3279632c310e9d7809183f84974e2cd74a8/_support.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/f532f3279632c310e9d7809183f84974e2cd74a8\/_typography.scssc": {
+	"/.sass-cache/f532f3279632c310e9d7809183f84974e2cd74a8/_typography.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/f532f3279632c310e9d7809183f84974e2cd74a8\/_typography.scssc",
+		"oAP": "/.sass-cache/f532f3279632c310e9d7809183f84974e2cd74a8/_typography.scssc",
 		"oF": 0
 		},
-	"\/.sass-cache\/f532f3279632c310e9d7809183f84974e2cd74a8\/_utilities.scssc": {
+	"/.sass-cache/f532f3279632c310e9d7809183f84974e2cd74a8/_utilities.scssc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/.sass-cache\/f532f3279632c310e9d7809183f84974e2cd74a8\/_utilities.scssc",
+		"oAP": "/.sass-cache/f532f3279632c310e9d7809183f84974e2cd74a8/_utilities.scssc",
 		"oF": 0
 		},
-	"\/about-photos.php": {
+	"/about-photos.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/about-photos.php",
+		"oAP": "/about-photos.php",
 		"oF": 0
 		},
-	"\/about-site.php": {
+	"/about-site.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/about-site.php",
+		"oAP": "/about-site.php",
 		"oF": 0
 		},
-	"\/add-menu.php": {
+	"/add-menu.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-menu.php",
+		"oAP": "/add-menu.php",
 		"oF": 0
 		},
-	"\/add-microvariation-form.php": {
+	"/add-microvariation-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-microvariation-form.php",
+		"oAP": "/add-microvariation-form.php",
 		"oF": 0
 		},
-	"\/add-microvariation-process.php": {
+	"/add-microvariation-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-microvariation-process.php",
+		"oAP": "/add-microvariation-process.php",
 		"oF": 0
 		},
-	"\/add-model-form.php": {
+	"/add-model-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-model-form.php",
+		"oAP": "/add-model-form.php",
 		"oF": 0
 		},
-	"\/add-model-process.php": {
+	"/add-model-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-model-process.php",
+		"oAP": "/add-model-process.php",
 		"oF": 0
 		},
-	"\/add-package-type-form.php": {
+	"/add-package-type-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-package-type-form.php",
+		"oAP": "/add-package-type-form.php",
 		"oF": 0
 		},
-	"\/add-package-type-process.php": {
+	"/add-package-type-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-package-type-process.php",
+		"oAP": "/add-package-type-process.php",
 		"oF": 0
 		},
-	"\/add-reference-form.php": {
+	"/add-reference-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-reference-form.php",
+		"oAP": "/add-reference-form.php",
 		"oF": 0
 		},
-	"\/add-reference-process.php": {
+	"/add-reference-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-reference-process.php",
+		"oAP": "/add-reference-process.php",
 		"oF": 0
 		},
-	"\/add-release-form.php": {
+	"/add-release-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-release-form.php",
+		"oAP": "/add-release-form.php",
 		"oF": 0
 		},
-	"\/add-release-process.php": {
+	"/add-release-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-release-process.php",
+		"oAP": "/add-release-process.php",
 		"oF": 0
 		},
-	"\/add-release-to-collection-or-wishlist.php": {
+	"/add-release-to-collection-or-wishlist.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-release-to-collection-or-wishlist.php",
+		"oAP": "/add-release-to-collection-or-wishlist.php",
 		"oF": 0
 		},
-	"\/add-release-to-collection.php": {
+	"/add-release-to-collection.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-release-to-collection.php",
+		"oAP": "/add-release-to-collection.php",
 		"oF": 0
 		},
-	"\/add-release-to-wishlist.php": {
+	"/add-release-to-wishlist.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-release-to-wishlist.php",
+		"oAP": "/add-release-to-wishlist.php",
 		"oF": 0
 		},
-	"\/add-user-collection-code.php": {
+	"/add-user-collection-code.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-user-collection-code.php",
+		"oAP": "/add-user-collection-code.php",
 		"oF": 0
 		},
-	"\/add-value-list-item-form.php": {
+	"/add-value-list-item-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-value-list-item-form.php",
+		"oAP": "/add-value-list-item-form.php",
 		"oF": 0
 		},
-	"\/add-value-list-item-process.php": {
+	"/add-value-list-item-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-value-list-item-process.php",
+		"oAP": "/add-value-list-item-process.php",
 		"oF": 0
 		},
-	"\/add-variation-collection-or-wishlist.php": {
+	"/add-variation-collection-or-wishlist.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-variation-collection-or-wishlist.php",
+		"oAP": "/add-variation-collection-or-wishlist.php",
 		"oF": 0
 		},
-	"\/add-variation-form.php": {
+	"/add-variation-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-variation-form.php",
+		"oAP": "/add-variation-form.php",
 		"oF": 0
 		},
-	"\/add-variation-process.php": {
+	"/add-variation-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-variation-process.php",
+		"oAP": "/add-variation-process.php",
 		"oF": 0
 		},
-	"\/add-variation-to-collection.php": {
+	"/add-variation-to-collection.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-variation-to-collection.php",
+		"oAP": "/add-variation-to-collection.php",
 		"oF": 0
 		},
-	"\/add-variation-to-wishlist.php": {
+	"/add-variation-to-wishlist.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-variation-to-wishlist.php",
+		"oAP": "/add-variation-to-wishlist.php",
 		"oF": 0
 		},
-	"\/add-version-form.php": {
+	"/add-version-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-version-form.php",
+		"oAP": "/add-version-form.php",
 		"oF": 0
 		},
-	"\/add-version-process.php": {
+	"/add-version-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-version-process.php",
+		"oAP": "/add-version-process.php",
 		"oF": 0
 		},
-	"\/add-wheel-form.php": {
+	"/add-wheel-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-wheel-form.php",
+		"oAP": "/add-wheel-form.php",
 		"oF": 0
 		},
-	"\/add-wheel-process.php": {
+	"/add-wheel-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/add-wheel-process.php",
+		"oAP": "/add-wheel-process.php",
 		"oF": 0
 		},
-	"\/all-variations.php": {
+	"/all-variations.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/all-variations.php",
+		"oAP": "/all-variations.php",
 		"oF": 0
 		},
-	"\/apple-touch-icon-114x114-precomposed.png": {
+	"/apple-touch-icon-114x114-precomposed.png": {
 		"ft": 32768,
 		"iS": 6915,
 		"oA": 0,
-		"oAP": "\/apple-touch-icon-114x114-precomposed.png",
+		"oAP": "/apple-touch-icon-114x114-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/apple-touch-icon-144x144-precomposed.png": {
+	"/apple-touch-icon-144x144-precomposed.png": {
 		"ft": 32768,
 		"iS": 7437,
 		"oA": 0,
-		"oAP": "\/apple-touch-icon-144x144-precomposed.png",
+		"oAP": "/apple-touch-icon-144x144-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/apple-touch-icon-57x57-precomposed.png": {
+	"/apple-touch-icon-57x57-precomposed.png": {
 		"ft": 32768,
 		"iS": 3863,
 		"oA": 0,
-		"oAP": "\/apple-touch-icon-57x57-precomposed.png",
+		"oAP": "/apple-touch-icon-57x57-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/apple-touch-icon-72x72-precomposed.png": {
+	"/apple-touch-icon-72x72-precomposed.png": {
 		"ft": 32768,
 		"iS": 4725,
 		"oA": 0,
-		"oAP": "\/apple-touch-icon-72x72-precomposed.png",
+		"oAP": "/apple-touch-icon-72x72-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/apple-touch-icon.png": {
+	"/apple-touch-icon.png": {
 		"ft": 32768,
 		"iS": 3863,
 		"oA": 0,
-		"oAP": "\/apple-touch-icon.png",
+		"oAP": "/apple-touch-icon.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/authenticate-test.php": {
+	"/authenticate-test.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/authenticate-test.php",
+		"oAP": "/authenticate-test.php",
 		"oF": 0
 		},
-	"\/code-lvl-move.php": {
+	"/code-lvl-move.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/code-lvl-move.php",
+		"oAP": "/code-lvl-move.php",
 		"oF": 0
 		},
-	"\/collection-code-lists.php": {
+	"/collection-code-lists.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/collection-code-lists.php",
+		"oAP": "/collection-code-lists.php",
 		"oF": 0
 		},
-	"\/collection-report-a.php": {
+	"/collection-report-a.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/collection-report-a.php",
+		"oAP": "/collection-report-a.php",
 		"oF": 0
 		},
-	"\/collection-report-h.php": {
+	"/collection-report-h.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/collection-report-h.php",
+		"oAP": "/collection-report-h.php",
 		"oF": 0
 		},
-	"\/collection-report-m-menu.php": {
+	"/collection-report-m-menu.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/collection-report-m-menu.php",
+		"oAP": "/collection-report-m-menu.php",
 		"oF": 0
 		},
-	"\/collection-report-m-process.php": {
+	"/collection-report-m-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/collection-report-m-process.php",
+		"oAP": "/collection-report-m-process.php",
 		"oF": 0
 		},
-	"\/collection-report-n-menu.php": {
+	"/collection-report-n-menu.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/collection-report-n-menu.php",
+		"oAP": "/collection-report-n-menu.php",
 		"oF": 0
 		},
-	"\/collection-report-n-process.php": {
+	"/collection-report-n-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/collection-report-n-process.php",
+		"oAP": "/collection-report-n-process.php",
 		"oF": 0
 		},
-	"\/collection-report-w.php": {
+	"/collection-report-w.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/collection-report-w.php",
+		"oAP": "/collection-report-w.php",
 		"oF": 0
 		},
-	"\/collection-reports.php": {
+	"/collection-reports.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/collection-reports.php",
+		"oAP": "/collection-reports.php",
 		"oF": 0
 		},
-	"\/collections-menu.php": {
+	"/collections-menu.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/collections-menu.php",
+		"oAP": "/collections-menu.php",
 		"oF": 0
 		},
-	"\/config.rb": {
+	"/config.rb": {
 		"ft": 131072,
 		"oA": 0,
-		"oAP": "\/config.rb",
+		"oAP": "/config.rb",
 		"oF": 0
 		},
-	"\/create-collection.php": {
+	"/create-collection.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/create-collection.php",
+		"oAP": "/create-collection.php",
 		"oF": 0
 		},
-	"\/create-user-account-form.php": {
+	"/create-user-account-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/create-user-account-form.php",
+		"oAP": "/create-user-account-form.php",
 		"oF": 0
 		},
-	"\/create-user-account-process.php": {
+	"/create-user-account-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/create-user-account-process.php",
+		"oAP": "/create-user-account-process.php",
 		"oF": 0
 		},
-	"\/db-explain.php": {
+	"/db-explain.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/db-explain.php",
+		"oAP": "/db-explain.php",
 		"oF": 0
 		},
-	"\/dedication.php": {
+	"/dedication.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/dedication.php",
+		"oAP": "/dedication.php",
 		"oF": 0
 		},
-	"\/delete-collection-code.php": {
+	"/delete-collection-code.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/delete-collection-code.php",
+		"oAP": "/delete-collection-code.php",
 		"oF": 0
 		},
-	"\/delete-collection-outcome.php": {
+	"/delete-collection-outcome.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/delete-collection-outcome.php",
+		"oAP": "/delete-collection-outcome.php",
 		"oF": 0
 		},
-	"\/delete-collection.php": {
+	"/delete-collection.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/delete-collection.php",
+		"oAP": "/delete-collection.php",
 		"oF": 0
 		},
-	"\/delete-models-in-collection.php": {
+	"/delete-models-in-collection.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/delete-models-in-collection.php",
+		"oAP": "/delete-models-in-collection.php",
 		"oF": 0
 		},
-	"\/diecast-brands.php": {
+	"/diecast-brands.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/diecast-brands.php",
+		"oAP": "/diecast-brands.php",
 		"oF": 0
 		},
-	"\/diecast-history.php": {
+	"/diecast-history.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/diecast-history.php",
+		"oAP": "/diecast-history.php",
 		"oF": 0
 		},
-	"\/dir-add-mdl-to-coll-process.php": {
+	"/dir-add-mdl-to-coll-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/dir-add-mdl-to-coll-process.php",
+		"oAP": "/dir-add-mdl-to-coll-process.php",
 		"oF": 0
 		},
-	"\/dir-add-mdl-to-coll.php": {
+	"/dir-add-mdl-to-coll.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/dir-add-mdl-to-coll.php",
+		"oAP": "/dir-add-mdl-to-coll.php",
 		"oF": 0
 		},
-	"\/display-microvariations.php": {
+	"/display-microvariations.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/display-microvariations.php",
+		"oAP": "/display-microvariations.php",
 		"oF": 0
 		},
-	"\/early-lesney.php": {
+	"/early-lesney.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/early-lesney.php",
+		"oAP": "/early-lesney.php",
 		"oF": 0
 		},
-	"\/edit-account-form.php": {
+	"/edit-account-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/edit-account-form.php",
+		"oAP": "/edit-account-form.php",
 		"oF": 0
 		},
-	"\/edit-account-process.php": {
+	"/edit-account-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/edit-account-process.php",
+		"oAP": "/edit-account-process.php",
 		"oF": 0
 		},
-	"\/elements.php": {
+	"/elements.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/elements.php",
+		"oAP": "/elements.php",
 		"oF": 0
 		},
-	"\/favicon.ico": {
+	"/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/favicon.ico",
+		"oAP": "/favicon.ico",
 		"oF": 0
 		},
-	"\/google091f22d34d752a8f.html": {
+	"/google091f22d34d752a8f.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/google091f22d34d752a8f.html",
+		"oAP": "/google091f22d34d752a8f.html",
 		"oF": 0
 		},
-	"\/guest-login.php": {
+	"/guest-login.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/guest-login.php",
+		"oAP": "/guest-login.php",
 		"oF": 0
 		},
-	"\/how-made.php": {
+	"/how-made.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/how-made.php",
+		"oAP": "/how-made.php",
 		"oF": 0
 		},
-	"\/images": {
+	"/images": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "\/build\/images",
+		"oAP": "/build/images",
 		"oF": 0
 		},
-	"\/includes": {
+	"/includes": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "\/build\/includes",
+		"oAP": "/build/includes",
 		"oF": 0
 		},
-	"\/index.php": {
+	"/index.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/index.php",
+		"oAP": "/index.php",
 		"oF": 0
 		},
-	"\/js\/foundation.min.js": {
+	"/js/foundation.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/js\/min\/foundation.min-min.js",
+		"oAP": "/js/min/foundation.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.abide.js": {
+	"/js/foundation/foundation.abide.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.abide-min.js",
+		"oAP": "/js/foundation/min/foundation.abide-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.accordion.js": {
+	"/js/foundation/foundation.accordion.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.accordion-min.js",
+		"oAP": "/js/foundation/min/foundation.accordion-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.alert.js": {
+	"/js/foundation/foundation.alert.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.alert-min.js",
+		"oAP": "/js/foundation/min/foundation.alert-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.clearing.js": {
+	"/js/foundation/foundation.clearing.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.clearing-min.js",
+		"oAP": "/js/foundation/min/foundation.clearing-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.dropdown.js": {
+	"/js/foundation/foundation.dropdown.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.dropdown-min.js",
+		"oAP": "/js/foundation/min/foundation.dropdown-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.interchange.js": {
+	"/js/foundation/foundation.interchange.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.interchange-min.js",
+		"oAP": "/js/foundation/min/foundation.interchange-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.joyride.js": {
+	"/js/foundation/foundation.joyride.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.joyride-min.js",
+		"oAP": "/js/foundation/min/foundation.joyride-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.js": {
+	"/js/foundation/foundation.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation-min.js",
+		"oAP": "/js/foundation/min/foundation-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.magellan.js": {
+	"/js/foundation/foundation.magellan.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.magellan-min.js",
+		"oAP": "/js/foundation/min/foundation.magellan-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.offcanvas.js": {
+	"/js/foundation/foundation.offcanvas.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.offcanvas-min.js",
+		"oAP": "/js/foundation/min/foundation.offcanvas-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.orbit.js": {
+	"/js/foundation/foundation.orbit.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.orbit-min.js",
+		"oAP": "/js/foundation/min/foundation.orbit-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.reveal.js": {
+	"/js/foundation/foundation.reveal.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.reveal-min.js",
+		"oAP": "/js/foundation/min/foundation.reveal-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.tab.js": {
+	"/js/foundation/foundation.tab.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.tab-min.js",
+		"oAP": "/js/foundation/min/foundation.tab-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.tooltip.js": {
+	"/js/foundation/foundation.tooltip.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.tooltip-min.js",
+		"oAP": "/js/foundation/min/foundation.tooltip-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/foundation.topbar.js": {
+	"/js/foundation/foundation.topbar.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/foundation.topbar-min.js",
+		"oAP": "/js/foundation/min/foundation.topbar-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/foundation\/jquery.cookie.js": {
+	"/js/foundation/jquery.cookie.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/foundation\/min\/jquery.cookie-min.js",
+		"oAP": "/js/foundation/min/jquery.cookie-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/jquery-ui-1.10.3.custom.min.js": {
+	"/js/jquery-ui-1.10.3.custom.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/js\/min\/jquery-ui-1.10.3.custom.min-min.js",
+		"oAP": "/js/min/jquery-ui-1.10.3.custom.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/lightbox.js": {
+	"/js/lightbox.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/js\/min\/lightbox-min.js",
+		"oAP": "/js/min/lightbox-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/min\/utility-min.js": {
+	"/js/min/utility-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/min\/min\/utility-min-min.js",
+		"oAP": "/js/min/min/utility-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/parsley.min.js": {
+	"/js/parsley.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/js\/min\/parsley.min-min.js",
+		"oAP": "/js/min/parsley.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/plugin-csv-export.js": {
+	"/js/plugin-csv-export.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/js\/min\/plugin-csv-export-min.js",
+		"oAP": "/js/min/plugin-csv-export-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/utility.js": {
+	"/js/utility.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/min\/utility-min.js",
+		"oAP": "/js/min/utility-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/vendor\/fastclick.js": {
+	"/js/vendor/fastclick.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/js\/vendor\/min\/fastclick-min.js",
+		"oAP": "/js/vendor/min/fastclick-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/vendor\/jquery.cookie.js": {
+	"/js/vendor/jquery.cookie.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/vendor\/min\/jquery.cookie-min.js",
+		"oAP": "/js/vendor/min/jquery.cookie-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/vendor\/jquery.js": {
+	"/js/vendor/jquery.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/js\/vendor\/min\/jquery-min.js",
+		"oAP": "/js/vendor/min/jquery-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/vendor\/modernizr.js": {
+	"/js/vendor/modernizr.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/js\/vendor\/min\/modernizr-min.js",
+		"oAP": "/js/vendor/min/modernizr-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/vendor\/placeholder.js": {
+	"/js/vendor/placeholder.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/vendor\/min\/placeholder-min.js",
+		"oAP": "/js/vendor/min/placeholder-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/logout.php": {
+	"/logout.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/logout.php",
+		"oAP": "/logout.php",
 		"oF": 0
 		},
-	"\/lr-vs-sf.php": {
+	"/lr-vs-sf.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/lr-vs-sf.php",
+		"oAP": "/lr-vs-sf.php",
 		"oF": 0
 		},
-	"\/man-details-and-ver-listing.php": {
+	"/man-details-and-ver-listing.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/man-details-and-ver-listing.php",
+		"oAP": "/man-details-and-ver-listing.php",
 		"oF": 0
 		},
-	"\/manage-collections.php": {
+	"/manage-collections.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/manage-collections.php",
+		"oAP": "/manage-collections.php",
 		"oF": 0
 		},
-	"\/manage-models-in-collection.php": {
+	"/manage-models-in-collection.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/manage-models-in-collection.php",
+		"oAP": "/manage-models-in-collection.php",
 		"oF": 0
 		},
-	"\/matchbox-history.php": {
+	"/matchbox-history.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/matchbox-history.php",
+		"oAP": "/matchbox-history.php",
 		"oF": 0
 		},
-	"\/mb-code-system.php": {
+	"/mb-code-system.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/mb-code-system.php",
+		"oAP": "/mb-code-system.php",
 		"oF": 0
 		},
-	"\/mb-organization.php": {
+	"/mb-organization.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/mb-organization.php",
+		"oAP": "/mb-organization.php",
 		"oF": 0
 		},
-	"\/mbx-site-info.docx": {
+	"/mbx-site-info.docx": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/mbx-site-info.docx",
+		"oAP": "/mbx-site-info.docx",
 		"oF": 0
 		},
-	"\/mbx101-menu.php": {
+	"/mbx101-menu.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/mbx101-menu.php",
+		"oAP": "/mbx101-menu.php",
 		"oF": 0
 		},
-	"\/model-search-help.php": {
+	"/model-search-help.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/model-search-help.php",
+		"oAP": "/model-search-help.php",
 		"oF": 0
 		},
-	"\/models-detail-ver-listing.php": {
+	"/models-detail-ver-listing.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/models-detail-ver-listing.php",
+		"oAP": "/models-detail-ver-listing.php",
 		"oF": 0
 		},
-	"\/models-found-list.php": {
+	"/models-found-list.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/models-found-list.php",
+		"oAP": "/models-found-list.php",
 		"oF": 0
 		},
-	"\/outcomes.php": {
+	"/outcomes.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/outcomes.php",
+		"oAP": "/outcomes.php",
 		"oF": 0
 		},
-	"\/readme.md": {
+	"/readme.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1449,7 +1449,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 1,
-		"oAP": "\/readme.html",
+		"oAP": "/readme.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1458,191 +1458,129 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/ref-files.php": {
+	"/ref-files.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/ref-files.php",
+		"oAP": "/ref-files.php",
 		"oF": 0
 		},
-	"\/release-detail.php": {
+	"/release-detail.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/release-detail.php",
+		"oAP": "/release-detail.php",
 		"oF": 0
 		},
-	"\/sass\/ie.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/stylesheets\/ie.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/sass\/master.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/stylesheets\/master.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/sass\/print.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/stylesheets\/print.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/sass\/screen.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/stylesheets\/screen.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/search-models-menu.php": {
+	"/search-models-menu.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/search-models-menu.php",
+		"oAP": "/search-models-menu.php",
 		"oF": 0
 		},
-	"\/search-models-process.php": {
+	"/search-models-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/search-models-process.php",
+		"oAP": "/search-models-process.php",
 		"oF": 0
 		},
-	"\/search-releases-menu.php": {
+	"/search-releases-menu.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/search-releases-menu.php",
+		"oAP": "/search-releases-menu.php",
 		"oF": 0
 		},
-	"\/search-releases-process.php": {
+	"/search-releases-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/search-releases-process.php",
+		"oAP": "/search-releases-process.php",
 		"oF": 0
 		},
-	"\/series-list.php": {
+	"/series-list.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/series-list.php",
+		"oAP": "/series-list.php",
 		"oF": 0
 		},
-	"\/similar-39-chevy-deliv.php": {
+	"/similar-39-chevy-deliv.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/similar-39-chevy-deliv.php",
+		"oAP": "/similar-39-chevy-deliv.php",
 		"oF": 0
 		},
-	"\/similar-carbodies.php": {
+	"/similar-carbodies.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/similar-carbodies.php",
+		"oAP": "/similar-carbodies.php",
 		"oF": 0
 		},
-	"\/similar-ford-gt.php": {
+	"/similar-ford-gt.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/similar-ford-gt.php",
+		"oAP": "/similar-ford-gt.php",
 		"oF": 0
 		},
-	"\/similar-luminas.php": {
+	"/similar-luminas.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/similar-luminas.php",
+		"oAP": "/similar-luminas.php",
 		"oF": 0
 		},
-	"\/similar-models-compare.php": {
+	"/similar-models-compare.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/similar-models-compare.php",
+		"oAP": "/similar-models-compare.php",
 		"oF": 0
 		},
-	"\/similar-pontiac-stock-cars.php": {
+	"/similar-pontiac-stock-cars.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/similar-pontiac-stock-cars.php",
+		"oAP": "/similar-pontiac-stock-cars.php",
 		"oF": 0
 		},
-	"\/similar-tbirds.php": {
+	"/similar-tbirds.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/similar-tbirds.php",
+		"oAP": "/similar-tbirds.php",
 		"oF": 0
 		},
-	"\/similar-z3s.php": {
+	"/similar-z3s.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/similar-z3s.php",
+		"oAP": "/similar-z3s.php",
 		"oF": 0
 		},
-	"\/sitemap.xml": {
+	"/sitemap.xml": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/sitemap.xml",
+		"oAP": "/sitemap.xml",
 		"oF": 0
 		},
-	"\/stylesheets\/_print.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/stylesheets\/_print-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/stylesheets\/ie8.css": {
+	"/stylesheets/ie8.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ie8-min.css",
+		"oAP": "/stylesheets/ie8-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/stylesheets\/sass\/_foundation.scss": {
+	"/stylesheets/sass/_foundation.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1650,12 +1588,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/stylesheets\/_foundation.css",
+		"oAP": "/stylesheets/_foundation.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/stylesheets\/sass\/_interior.scss": {
+	"/stylesheets/sass/_interior.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1663,12 +1601,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/stylesheets\/_interior.css",
+		"oAP": "/stylesheets/_interior.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/stylesheets\/sass\/_lightbox.scss": {
+	"/stylesheets/sass/_lightbox.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1676,12 +1614,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/stylesheets\/_lightbox.css",
+		"oAP": "/stylesheets/_lightbox.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/stylesheets\/sass\/_normalize.scss": {
+	"/stylesheets/sass/_normalize.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1689,12 +1627,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/stylesheets\/_normalize.css",
+		"oAP": "/stylesheets/_normalize.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/stylesheets\/sass\/_parsley.scss": {
+	"/stylesheets/sass/_parsley.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1702,12 +1640,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/stylesheets\/_parsley.css",
+		"oAP": "/stylesheets/_parsley.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/stylesheets\/sass\/_print.scss": {
+	"/stylesheets/sass/_print.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1715,12 +1653,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/stylesheets\/_print.css",
+		"oAP": "/stylesheets/_print.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/stylesheets\/sass\/_settings.scss": {
+	"/stylesheets/sass/_settings.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1728,12 +1666,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/stylesheets\/_settings.css",
+		"oAP": "/stylesheets/_settings.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/stylesheets\/sass\/_tables.scss": {
+	"/stylesheets/sass/_tables.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1741,12 +1679,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/stylesheets\/_tables.css",
+		"oAP": "/stylesheets/_tables.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/stylesheets\/sass\/_universal.scss": {
+	"/stylesheets/sass/_universal.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1754,12 +1692,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/stylesheets\/_universal.css",
+		"oAP": "/stylesheets/_universal.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/stylesheets\/sass\/_variables_colors.scss": {
+	"/stylesheets/sass/_variables_colors.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1767,12 +1705,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/stylesheets\/_variables_colors.css",
+		"oAP": "/stylesheets/_variables_colors.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/stylesheets\/sass\/style.scss": {
+	"/stylesheets/sass/style.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1780,392 +1718,392 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/stylesheets\/style.css",
+		"oAP": "/stylesheets/style.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
 		},
-	"\/stylesheets\/style.css": {
+	"/stylesheets/style.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/stylesheets\/style-min.css",
+		"oAP": "/stylesheets/style-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/stylesheets\/ui-lightness\/images\/animated-overlay.gif": {
+	"/stylesheets/ui-lightness/images/animated-overlay.gif": {
 		"ft": 4194304,
 		"iS": 1738,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/animated-overlay.gif",
+		"oAP": "/stylesheets/ui-lightness/images/animated-overlay.gif",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-bg_diagonals-thick_18_b81900_40x40.png": {
+	"/stylesheets/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png": {
 		"ft": 32768,
 		"iS": 418,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-bg_diagonals-thick_18_b81900_40x40.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-bg_diagonals-thick_20_666666_40x40.png": {
+	"/stylesheets/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png": {
 		"ft": 32768,
 		"iS": 312,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-bg_diagonals-thick_20_666666_40x40.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-bg_flat_10_000000_40x100.png": {
+	"/stylesheets/ui-lightness/images/ui-bg_flat_10_000000_40x100.png": {
 		"ft": 32768,
 		"iS": 205,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-bg_flat_10_000000_40x100.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-bg_flat_10_000000_40x100.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-bg_glass_100_f6f6f6_1x400.png": {
+	"/stylesheets/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png": {
 		"ft": 32768,
 		"iS": 262,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-bg_glass_100_f6f6f6_1x400.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-bg_glass_100_fdf5ce_1x400.png": {
+	"/stylesheets/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png": {
 		"ft": 32768,
 		"iS": 348,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-bg_glass_100_fdf5ce_1x400.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-bg_glass_65_ffffff_1x400.png": {
+	"/stylesheets/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png": {
 		"ft": 32768,
 		"iS": 207,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-bg_glass_65_ffffff_1x400.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-bg_gloss-wave_35_f6a828_500x100.png": {
+	"/stylesheets/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png": {
 		"ft": 32768,
 		"iS": 5815,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-bg_gloss-wave_35_f6a828_500x100.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png": {
+	"/stylesheets/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png": {
 		"ft": 32768,
 		"iS": 278,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-bg_highlight-soft_75_ffe45c_1x100.png": {
+	"/stylesheets/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png": {
 		"ft": 32768,
 		"iS": 328,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-bg_highlight-soft_75_ffe45c_1x100.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-icons_222222_256x240.png": {
+	"/stylesheets/ui-lightness/images/ui-icons_222222_256x240.png": {
 		"ft": 32768,
 		"iS": 6922,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-icons_222222_256x240.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-icons_222222_256x240.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-icons_228ef1_256x240.png": {
+	"/stylesheets/ui-lightness/images/ui-icons_228ef1_256x240.png": {
 		"ft": 32768,
 		"iS": 4549,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-icons_228ef1_256x240.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-icons_228ef1_256x240.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-icons_ef8c08_256x240.png": {
+	"/stylesheets/ui-lightness/images/ui-icons_ef8c08_256x240.png": {
 		"ft": 32768,
 		"iS": 4549,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-icons_ef8c08_256x240.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-icons_ef8c08_256x240.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-icons_ffd27a_256x240.png": {
+	"/stylesheets/ui-lightness/images/ui-icons_ffd27a_256x240.png": {
 		"ft": 32768,
 		"iS": 4549,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-icons_ffd27a_256x240.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-icons_ffd27a_256x240.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/images\/ui-icons_ffffff_256x240.png": {
+	"/stylesheets/ui-lightness/images/ui-icons_ffffff_256x240.png": {
 		"ft": 32768,
 		"iS": 6299,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/images\/ui-icons_ffffff_256x240.png",
+		"oAP": "/stylesheets/ui-lightness/images/ui-icons_ffffff_256x240.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/stylesheets\/ui-lightness\/jquery-ui-1.10.3.custom.css": {
+	"/stylesheets/ui-lightness/jquery-ui-1.10.3.custom.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/jquery-ui-1.10.3.custom-min.css",
+		"oAP": "/stylesheets/ui-lightness/jquery-ui-1.10.3.custom-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/stylesheets\/ui-lightness\/jquery-ui-1.10.3.custom.min.css": {
+	"/stylesheets/ui-lightness/jquery-ui-1.10.3.custom.min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/stylesheets\/ui-lightness\/jquery-ui-1.10.3.custom.min-min.css",
+		"oAP": "/stylesheets/ui-lightness/jquery-ui-1.10.3.custom.min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/theme-list.php": {
+	"/theme-list.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/theme-list.php",
+		"oAP": "/theme-list.php",
 		"oF": 0
 		},
-	"\/update-collection-model-get-copy.php": {
+	"/update-collection-model-get-copy.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/update-collection-model-get-copy.php",
+		"oAP": "/update-collection-model-get-copy.php",
 		"oF": 0
 		},
-	"\/update-collection-model-process.php": {
+	"/update-collection-model-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/update-collection-model-process.php",
+		"oAP": "/update-collection-model-process.php",
 		"oF": 0
 		},
-	"\/update-collection-model.php": {
+	"/update-collection-model.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/update-collection-model.php",
+		"oAP": "/update-collection-model.php",
 		"oF": 0
 		},
-	"\/update-collection-outcome.php": {
+	"/update-collection-outcome.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/update-collection-outcome.php",
+		"oAP": "/update-collection-outcome.php",
 		"oF": 0
 		},
-	"\/update-collection.php": {
+	"/update-collection.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/update-collection.php",
+		"oAP": "/update-collection.php",
 		"oF": 0
 		},
-	"\/update-user-collection-code-process.php": {
+	"/update-user-collection-code-process.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/update-user-collection-code-process.php",
+		"oAP": "/update-user-collection-code-process.php",
 		"oF": 0
 		},
-	"\/update-user-collection-code.php": {
+	"/update-user-collection-code.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/update-user-collection-code.php",
+		"oAP": "/update-user-collection-code.php",
 		"oF": 0
 		},
-	"\/user-password-recall.php": {
+	"/user-password-recall.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/user-password-recall.php",
+		"oAP": "/user-password-recall.php",
 		"oF": 0
 		},
-	"\/user-upload-record.php": {
+	"/user-upload-record.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/user-upload-record.php",
+		"oAP": "/user-upload-record.php",
 		"oF": 0
 		},
-	"\/user-upload.php": {
+	"/user-upload.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/user-upload.php",
+		"oAP": "/user-upload.php",
 		"oF": 0
 		},
-	"\/user_uploads": {
+	"/user_uploads": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "\/build\/user_uploads",
+		"oAP": "/build/user_uploads",
 		"oF": 0
 		},
-	"\/variation-comparison.php": {
+	"/variation-comparison.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/variation-comparison.php",
+		"oAP": "/variation-comparison.php",
 		"oF": 0
 		},
-	"\/variation-detail.php": {
+	"/variation-detail.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/variation-detail.php",
+		"oAP": "/variation-detail.php",
 		"oF": 0
 		},
-	"\/ver-detail-var-listing.php": {
+	"/ver-detail-var-listing.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/ver-detail-var-listing.php",
+		"oAP": "/ver-detail-var-listing.php",
 		"oF": 0
 		},
-	"\/verification.php": {
+	"/verification.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/verification.php",
+		"oAP": "/verification.php",
 		"oF": 0
 		},
-	"\/website-updates.php": {
+	"/website-updates.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/website-updates.php",
+		"oAP": "/website-updates.php",
 		"oF": 0
 		},
-	"\/website_feedback.php": {
+	"/website_feedback.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/website_feedback.php",
+		"oAP": "/website_feedback.php",
 		"oF": 0
 		},
-	"\/wheel-types.php": {
+	"/wheel-types.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/wheel-types.php",
+		"oAP": "/wheel-types.php",
 		"oF": 0
 		},
-	"\/window-colors.php": {
+	"/window-colors.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/window-colors.php",
+		"oAP": "/window-colors.php",
 		"oF": 0
 		}
 	},
 "hooks": [
 	],
 "manualImportLinks": {
-	"\/js\/utility.js": [
+	"/js/utility.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/vendor\/jquery.js",
+			"linkedFileAbbreviatedPath": "/js/vendor/jquery.js",
 			"position": 0,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/vendor\/modernizr.js",
+			"linkedFileAbbreviatedPath": "/js/vendor/modernizr.js",
 			"position": 1,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/jquery-ui-1.10.3.custom.min.js",
+			"linkedFileAbbreviatedPath": "/js/jquery-ui-1.10.3.custom.min.js",
 			"position": 2,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/vendor\/fastclick.js",
+			"linkedFileAbbreviatedPath": "/js/vendor/fastclick.js",
 			"position": 3,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/foundation.min.js",
+			"linkedFileAbbreviatedPath": "/js/foundation.min.js",
 			"position": 4,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/parsley.min.js",
+			"linkedFileAbbreviatedPath": "/js/parsley.min.js",
 			"position": 5,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/lightbox.js",
+			"linkedFileAbbreviatedPath": "/js/lightbox.js",
 			"position": 6,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/plugin-csv-export.js",
+			"linkedFileAbbreviatedPath": "/js/plugin-csv-export.js",
 			"position": 7,
 			"type": 0
 			}
@@ -2175,7 +2113,7 @@
 	"creationDate": 521255360,
 	"displayValue": "mbx",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "\/apple-touch-icon-144x144-precomposed.png",
+	"iconImageName": "/apple-touch-icon-144x144-precomposed.png",
 	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
@@ -2183,141 +2121,94 @@
 	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 0,
 	"autoBuildNewItems": 1,
-	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
 	"autoprefixerEnableIEGrid": 0,
+	"babel7PresetType": 1,
+	"babelAllowRCFiles": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
-	"babelConfigFileHandlingType": 0,
+	"babelConfigType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
 	"babelPlugins": {
+		"arrow-functions": {
+			"active": 0
+			},
 		"async-generator-functions": {
 			"active": 0
 			},
 		"async-to-generator": {
 			"active": 0
 			},
-		"async-to-module-method": {
+		"block-scoped-functions": {
+			"active": 0
+			},
+		"block-scoping": {
 			"active": 0
 			},
 		"class-properties": {
 			"active": 0
 			},
+		"classes": {
+			"active": 0
+			},
+		"computed-properties": {
+			"active": 0
+			},
 		"decorators": {
 			"active": 0
 			},
-		"decorators-legacy": {
+		"destructuring": {
 			"active": 0
 			},
 		"do-expressions": {
 			"active": 0
 			},
-		"es2015-arrow-functions": {
+		"dotall-regex": {
 			"active": 0
 			},
-		"es2015-block-scoped-functions": {
-			"active": 0
-			},
-		"es2015-block-scoping": {
-			"active": 0
-			},
-		"es2015-classes": {
-			"active": 0
-			},
-		"es2015-computed-properties": {
-			"active": 0
-			},
-		"es2015-constants": {
-			"active": 0
-			},
-		"es2015-destructuring": {
-			"active": 0
-			},
-		"es2015-duplicate-keys": {
-			"active": 0
-			},
-		"es2015-for-of": {
-			"active": 0
-			},
-		"es2015-function-name": {
-			"active": 0
-			},
-		"es2015-literals": {
-			"active": 0
-			},
-		"es2015-modules-amd": {
-			"active": 0
-			},
-		"es2015-modules-commonjs": {
-			"active": 0
-			},
-		"es2015-modules-systemjs": {
-			"active": 0
-			},
-		"es2015-modules-umd": {
-			"active": 0
-			},
-		"es2015-object-super": {
-			"active": 0
-			},
-		"es2015-parameters": {
-			"active": 0
-			},
-		"es2015-shorthand-properties": {
-			"active": 0
-			},
-		"es2015-spread": {
-			"active": 0
-			},
-		"es2015-sticky-regex": {
-			"active": 0
-			},
-		"es2015-template-literals": {
-			"active": 0
-			},
-		"es2015-typeof-symbol": {
-			"active": 0
-			},
-		"es2015-unicode-regex": {
-			"active": 0
-			},
-		"es3-member-expression-literals": {
-			"active": 0
-			},
-		"es3-property-literals": {
-			"active": 0
-			},
-		"es5-property-mutators": {
-			"active": 0
-			},
-		"eval": {
+		"duplicate-keys": {
 			"active": 0
 			},
 		"exponentiation-operator": {
 			"active": 0
 			},
-		"export-extensions": {
+		"export-default-from": {
+			"active": 0
+			},
+		"export-namespace-from": {
 			"active": 0
 			},
 		"external-helpers": {
 			"active": 0
 			},
-		"flow-comments": {
+		"flow-strip-types": {
 			"active": 0
 			},
-		"flow-strip-types": {
+		"for-of": {
 			"active": 0
 			},
 		"function-bind": {
 			"active": 0
 			},
-		"inline-environment-variables": {
+		"function-name": {
+			"active": 0
+			},
+		"function-sent": {
+			"active": 0
+			},
+		"instanceof": {
 			"active": 0
 			},
 		"jscript": {
+			"active": 0
+			},
+		"literals": {
+			"active": 0
+			},
+		"logical-assignment-operators": {
 			"active": 0
 			},
 		"member-expression-literals": {
@@ -2329,7 +2220,28 @@
 		"minify-booleans": {
 			"active": 0
 			},
+		"modules-amd": {
+			"active": 0
+			},
+		"modules-commonjs": {
+			"active": 0
+			},
+		"modules-systemjs": {
+			"active": 0
+			},
+		"modules-umd": {
+			"active": 0
+			},
+		"new-target": {
+			"active": 0
+			},
 		"node-env-inline": {
+			"active": 0
+			},
+		"nullish-coalescing-operator": {
+			"active": 0
+			},
+		"numeric-separator": {
 			"active": 0
 			},
 		"object-assign": {
@@ -2341,7 +2253,25 @@
 		"object-set-prototype-of-to-assign": {
 			"active": 0
 			},
+		"object-super": {
+			"active": 0
+			},
+		"optional-catch-binding": {
+			"active": 0
+			},
+		"optional-chaining": {
+			"active": 0
+			},
+		"parameters": {
+			"active": 0
+			},
+		"pipeline-operator": {
+			"active": 0
+			},
 		"property-literals": {
+			"active": 0
+			},
+		"property-mutators": {
 			"active": 0
 			},
 		"proto-to-assign": {
@@ -2377,53 +2307,46 @@
 		"remove-debugger": {
 			"active": 0
 			},
+		"reserved-words": {
+			"active": 0
+			},
 		"runtime": {
+			"active": 0
+			},
+		"shorthand-properties": {
 			"active": 0
 			},
 		"simplify-comparison-operators": {
 			"active": 0
 			},
+		"spread": {
+			"active": 0
+			},
+		"sticky-regex": {
+			"active": 0
+			},
 		"strict-mode": {
 			"active": 0
 			},
-		"syntax-async-generators": {
+		"template-literals": {
 			"active": 0
 			},
-		"syntax-class-properties": {
+		"throw-expressions": {
 			"active": 0
 			},
-		"syntax-decorators": {
-			"active": 0
-			},
-		"syntax-do-expressions": {
-			"active": 0
-			},
-		"syntax-export-extensions": {
-			"active": 0
-			},
-		"syntax-flow": {
-			"active": 0
-			},
-		"syntax-function-bind": {
-			"active": 0
-			},
-		"syntax-function-sent": {
-			"active": 0
-			},
-		"syntax-jsx": {
-			"active": 0
-			},
-		"syntax-object-rest-spread": {
-			"active": 0
-			},
-		"undeclared-variables-check": {
+		"typeof-symbol": {
 			"active": 0
 			},
 		"undefined-to-void": {
 			"active": 0
+			},
+		"unicode-property-regex": {
+			"active": 0
+			},
+		"unicode-regex": {
+			"active": 0
 			}
 		},
-	"babelPresetType": 193,
 	"babelRetainLines": 0,
 	"bowerAbbreviatedPath": "bower_components",
 	"bowerAutoCreateInfoFile": 1,
@@ -2432,6 +2355,7 @@
 	"bowerSaveDevDependencies": 0,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
+	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
 	"buildFolderActive": 0,
 	"buildFolderName": "build",
 	"cleanBuild": 1,
@@ -2789,6 +2713,10 @@
 			"active": 0,
 			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
+		"max-classes-per-file": {
+			"active": 0,
+			"optionString": "1"
+			},
 		"max-depth": {
 			"active": 0,
 			"optionString": "{'max': 4}"
@@ -2800,6 +2728,10 @@
 		"max-lines": {
 			"active": 0,
 			"optionString": "{'max': 300, 'skipBlankLines': true, 'skipComments': true}"
+			},
+		"max-lines-per-function": {
+			"active": 0,
+			"optionString": "{'max': 50, 'skipBlankLines': true, 'skipComments': true, 'IIFEs': false}"
 			},
 		"max-nested-callbacks": {
 			"active": 0,
@@ -2845,6 +2777,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-async-promise-executor": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-await-in-loop": {
 			"active": 0,
 			"optionString": ""
@@ -2863,10 +2799,6 @@
 			},
 		"no-case-declarations": {
 			"active": 1,
-			"optionString": ""
-			},
-		"no-catch-shadow": {
-			"active": 0,
 			"optionString": ""
 			},
 		"no-class-assign": {
@@ -3065,9 +2997,13 @@
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
 			},
+		"no-misleading-character-class": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-mixed-operators": {
 			"active": 0,
-			"optionString": "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
+			"optionString": "{'groups': [['+', '-', '*', '/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
 			},
 		"no-mixed-requires": {
 			"active": 0,
@@ -3421,6 +3357,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-object-spread": {
+			"active": 0,
+			"optionString": ""
+			},
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
@@ -3449,6 +3389,10 @@
 			"active": 0,
 			"optionString": "'always'"
 			},
+		"require-atomic-updates": {
+			"active": 0,
+			"optionString": ""
+			},
 		"require-await": {
 			"active": 0,
 			"optionString": ""
@@ -3456,6 +3400,10 @@
 		"require-jsdoc": {
 			"active": 0,
 			"optionString": "{'require': {'FunctionDeclaration': true, 'MethodDefinition': false, 'ClassDeclaration': false, 'ArrowFunctionExpression': false}}"
+			},
+		"require-unicode-regexp": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-yield": {
 			"active": 1,
@@ -3511,7 +3459,7 @@
 			},
 		"spaced-comment": {
 			"active": 0,
-			"optionString": "'always', {'line': {'markers': ['\/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
+			"optionString": "'always', {'line': {'markers': ['/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
 			},
 		"strict": {
 			"active": 0,
@@ -3571,7 +3519,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "http://localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -3966,7 +3914,6 @@
 		"escapeHTMLCharacters": 0,
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
-		"outputStyle": 0,
 		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
@@ -3985,7 +3932,7 @@
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*-min.js",
-		"autoOutputPathRelativePath": "\/min",
+		"autoOutputPathRelativePath": "/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
@@ -4017,19 +3964,19 @@
 		"allowInsecureImports": 0,
 		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "less",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
 		"createSourceMap": 1,
-		"disableJavascript": 0,
+		"enableJavascript": 0,
 		"ieCompatibility": 1,
+		"mathStyle": 0,
 		"outputStyle": 0,
-		"relativeURLS": 0,
+		"rewriteURLStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"strictImports": 0,
-		"strictMath": 0,
 		"strictUnits": 0
 		},
 	"languageDefaultsMARKDOWN": {
@@ -4085,7 +4032,7 @@
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/",
+		"autoOutputPathRelativePath": "../",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
@@ -4114,7 +4061,7 @@
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "stylus",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
@@ -4138,36 +4085,70 @@
 	"languageDefaultsTS": {
 		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "\/js",
+		"autoOutputPathRelativePath": "/js",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
 		"createDeclarationFile": 0,
 		"createSourceMap": 0,
-		"jsxMode": 0,
 		"minifyOutput": 0,
 		"moduleResolutionType": 0,
 		"moduleType": 2,
-		"noImplicitAny": 0,
-		"preserveConstEnums": 0,
 		"removeComments": 0,
-		"suppressImplicitAnyIndexErrors": 0,
 		"targetECMAVersion": 0
 		},
 	"languageDefaultsUserDefined": [
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/images, \/includes, \/user_uploads",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules, /images, /includes, /user_uploads",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
+	"tsAllowSyntheticDefaultImports": 0,
+	"tsAllowUnreachableCode": 0,
+	"tsAllowUnusedLabels": 0,
+	"tsAlwaysStrict": 0,
+	"tsDownlevelIteration": 0,
+	"tsEmitBOM": 0,
+	"tsEmitDecoratorMetadata": 0,
+	"tsESModuleInterop": 0,
+	"tsForceConsistentCasingInFileNames": 0,
+	"tsImportHelpers": 0,
+	"tsIsolatedModules": 0,
+	"tsJSXFactory": "React.createElement",
+	"tsKeyofStringsOnly": 0,
+	"tsNoEmitHelpers": 0,
+	"tsNoFallthroughCasesInSwitch": 0,
+	"tsNoImplicitAny": 0,
+	"tsNoImplicitReturns": 0,
+	"tsNoImplicitThis": 0,
+	"tsNoImplicitUseStrict": 0,
+	"tsNoLib": 0,
+	"tsNoResolve": 0,
+	"tsNoStrictGenericChecks": 0,
+	"tsNoUnusedLocals": 0,
+	"tsNoUnusedParameters": 0,
+	"tsPreserveConstEnums": 0,
+	"tsPreserveSymlinks": 0,
+	"tsResolveJsonModule": 0,
+	"tsSkipLibCheck": 0,
+	"tsStrictFunctionTypes": 0,
+	"tsStrictNullChecks": 0,
+	"tsStrictPropertyInitialization": 0,
+	"tsStripInternal": 0,
+	"tsSuppressExcessPropertyErrors": 0,
+	"tsSuppressImplicitAnyIndexErrors": 0,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
-		"ascii-only": {
+		"arguments": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"bare-returns": {
+		"bare_returns": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -4175,11 +4156,11 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"bracketize": {
+		"braces": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"cascade": {
+		"collapse_vars": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -4203,6 +4184,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"directives": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"drop_console": {
 			"active": 0,
 			"flagValue": -1
@@ -4219,7 +4204,15 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"expression": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"hoist_funs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -4227,20 +4220,32 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"if_return": {
+		"html5_comments": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-level": {
+		"ie8": {
 			"active": 0,
-			"flagValue": 4
+			"flagValue": -1
+			},
+		"if_return": {
+			"active": 1,
+			"flagValue": -1
 			},
 		"indent-start": {
 			"active": 0,
 			"flagValue": 0
 			},
-		"inline-script": {
+		"indent_level": {
 			"active": 0,
+			"flagValue": 4
+			},
+		"inline": {
+			"active": 1,
+			"flagValue": 3
+			},
+		"inline_script": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"join_vars": {
@@ -4255,6 +4260,14 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"keep_infinity": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_quoted_props": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"loops": {
 			"active": 1,
 			"flagValue": -1
@@ -4263,12 +4276,20 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"max-line-len": {
+		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
 			},
 		"negate_iife": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"passes": {
+			"active": 1,
+			"flagValue": 1
+			},
+		"preserve_line": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"properties": {
@@ -4279,11 +4300,19 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"quote-keys": {
+		"quote_keys": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"screw-ie8": {
+		"quote_style": {
+			"active": 1,
+			"flagValue": 0
+			},
+		"reduce_funcs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"reduce_vars": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -4295,23 +4324,51 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"sort": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"space-colon": {
+		"shebang": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"support-ie8": {
-			"active": 0,
+		"side_effects": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"switches": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"toplevel": {
 			"active": 0,
 			"flagValue": -1
 			},
+		"typeofs": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"unsafe": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_comps": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_Function": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_proto": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_regexp": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_undefined": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -4323,9 +4380,17 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"webkit": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"width": {
 			"active": 1,
 			"flagValue": 80
+			},
+		"wrap_iife": {
+			"active": 0,
+			"flagValue": -1
 			}
 		},
 	"uglifyReservedNamesString": "$",

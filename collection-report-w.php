@@ -5,21 +5,22 @@
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
+	
+	$User = $_SESSION["Username"];
 ?>
 
 <div class="row">
 	<div class="large-12 columns">
         <a href="collection-reports.php" class="button dark">Return to Collection Reports Menu</a>
-	<a href="index.php" class="button dark">Return to Main Page</a>
+		<a href="index.php" class="button dark">Return to Main Page</a>
+	</div>
+</div>
+<div class="row">
+	<div class="large-12 columns">
 
         <h2>Wishlist for <?php echo $_SESSION["Username"]; ?></h2>
-
-        <?php
-			$User=$_SESSION["Username"];
-		?>
 		
 		<div id="overflow">
-        
 			<table>
 				<thead>
 		        	<tr>
@@ -125,6 +126,14 @@
 		</div>
 		
 		<a id="printThis" class="button dark" href="javascript:window.print()">Print this Report</a>
+		<a id="exportThis" class="button dark" href="#">Export as .csv</a>
+		
+		<?php /* EXPORT TABLE TO CSV */ ?>
+		<script>
+		    $("#exportThis").on('click', function (event) {
+		        exportTableToCSV.apply(this, [$('table'), 'mbxu-collection-wishlist.csv']);
+		    });
+		</script>
 	</div>
 </div>
 

@@ -5,20 +5,25 @@
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
+	
+	$User = $_SESSION["Username"];
 ?>
-
 
 <div class="row">
 	<div class="large-12 columns">
-            <a href="collection-reports.php" class="button dark">Return to Collection Reports Menu</a>
-            <a href="index.php" class="button dark">Return to Main Page</a>
+        <a href="collection-reports.php" class="button dark">Return to Collection Reports Menu</a>
+        <a href="index.php" class="button dark">Return to Main Page</a>
+	</div>
+</div>
 
-                <h2>Models in Collection of <?php echo $_SESSION["Username"]; ?></h2>
-            <?php
-		$User=$_SESSION["Username"];
+<div class="row">
+	<div class="large-12 columns">
 
-	
-		//SELECT section
+		<p class="paragraph-heading no-margin"><strong><?php echo $_SESSION["Username"]; ?>'s Collection</strong></p>
+        <h2>Models in Collection: Purchase &amp; Value Details</h2>
+
+        <?php
+			//SELECT section
 			//IF NOT Checked items
 			if ((!$_POST['Seller_Check']) AND (!$_POST['Location_Check']) AND (!$_POST['Copies_Check']) AND (!$_POST['Sell_Check']) AND (!$_POST['Cond_Check'])) {	
 
@@ -528,8 +533,7 @@
 				//DISPLAY COLUMN HEADERS
 			?>
 			<div id="overflow">
-        
-				<table>
+				<table class="one-col-image">
 					<thead>
 					<tr>
 						<td>Photo</td>
@@ -566,10 +570,16 @@
 							$picture_loc=IMAGE_PATH. $row["VarID"]."_1.jpg";
 								
 							if (file_exists($picture_loc)) {
-								//echo "picture exists";
-								echo "<td><img src=" . $picture . " /></td>";
+								$picture_loc = ROOTURL . $picture_loc;
+								echo "<td>";
+									echo "<span><a href=" . $picture_loc . ">" . $picture_loc . "</a></span>";
+									echo "<img src=" . $picture . " />";
+								echo "</td>";
 							} else {
-								echo "<td><img src=" . DEFAULT_IMAGE . " /></td>";	
+								echo "<td>";
+									echo "<span>no photo</span>";
+									echo "<img src=" . DEFAULT_IMAGE . " />";
+								echo "</td>";
 							}
 							
 							echo "<td>" . $row['VarID'] . "</td>"; 
@@ -593,8 +603,15 @@
 			</div>
 		
 			<a id="printThis" class="button dark" href="javascript:window.print()">Print this Report</a>
+			<a id="exportThis" class="button dark" href="#">Export as .csv</a>
 			
-		<?php	
+			<?php /* EXPORT TABLE TO CSV */ ?>
+			<script>
+			    $("#exportThis").on('click', function (event) {
+			        exportTableToCSV.apply(this, [$('table'), 'mbxu-collection-model-value-details.csv']);
+			    });
+			</script>
+		<?php
 		}
 		?>
             
