@@ -9,8 +9,17 @@ h1,h2,h3,h4,h5,h6 {@include headline; color:$black; line-height:115%;
 
 p,ul,ol,blockquote,code {@include body;}
 
-p {color:$black;
-	&.noMargin {margin-bottom:0;}
+p {
+	color:$black;
+	
+	&.noMargin,
+	&.no-margin {
+		margin-bottom:0;
+	}
+	&.paragraph-heading {
+		text-transform:uppercase;
+		letter-spacing:1px;
+	}
 	
 	a {color:$orange;}
 }
@@ -27,19 +36,17 @@ a:active,
 a:focus {color:$orange; text-decoration:none;}
 a.imagePopup {cursor:zoom-in;}
 
-table {
-	thead {background:transparentize($orange,.85);}	
-	tr td {padding:5px 6px; vertical-align:top; font-size:.85rem;
-		img {max-width:140px;}
-	}
-	tr.even,
-	tr.alt,
-	tr:nth-of-type(2n) {background:transparentize($teal,.925);}
-}
+
 
 select {height:auto;}
 
-.row {max-width:62.5rem;}
+.row {
+	max-width:62.5rem;
+	
+	&.wide {
+		max-width:92%;
+	}	
+}
 
 [class*="column"] + [class*="column"].end {float:left;}
 
@@ -87,7 +94,7 @@ button {
 
 
 /* -- Header --------------- */
-#header {margin:0; padding:0 0 2em; background:$orange url('../images/bgHeaderBottom.jpg') bottom center repeat-x; 
+#header {margin:0; padding:0 0 2em; background:$orange url('../images/bgHeaderBottom.jpg') bottom center repeat-x;
 	@media only screen and (max-width:480px){ position:relative; top:auto; text-align:center; }
 	
 	* {color:$cream;}

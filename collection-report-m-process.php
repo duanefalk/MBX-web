@@ -5,20 +5,26 @@
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
+	
+	$User = $_SESSION["Username"];
 ?>
 
 
 <div class="row">
 	<div class="large-12 columns">
-            <a href="collection-reports.php" class="button dark">Return to Collection Reports Menu</a>
-            <a href="index.php" class="button dark">Return to Main Page</a>
+	    <a href="collection-reports.php" class="button dark">Return to Collection Reports Menu</a>
+        <a href="index.php" class="button dark">Return to Main Page</a>
+	</div>
+</div>
 
-                <h2>Models in Collection of <?php echo $_SESSION["Username"]; ?></h2>
-            <?php
-		$User=$_SESSION["Username"];
-
-	
-		//SELECT section
+<div class="row">
+	<div class="large-12 columns">
+		
+		<p class="paragraph-heading no-margin"><strong><?php echo $_SESSION["Username"]; ?>'s Collection</strong></p>
+        <h2>Models in Collection: Model Details</h2>
+		
+        <?php	
+			//SELECT section
 			//IF NOT Checked items
 			if ((!$_POST['Seller_Check']) AND (!$_POST['Location_Check']) AND (!$_POST['Copies_Check']) AND (!$_POST['Sell_Check']) AND (!$_POST['Cond_Check'])) {	
 
@@ -269,7 +275,6 @@
 							 INNER JOIN Matchbox_Variations ON Matchbox_Collection.VarID=Matchbox_Variations.VarID
 							 INNER JOIN Matchbox_Versions ON Matchbox_Collection.VerID=Matchbox_Versions.VerID
 							WHERE Matchbox_Releases.RelYr>='$Rel_Yr_1' AND Matchbox_Releases.RelYr<='$Rel_Yr_2' AND Matchbox_Collection.Username = '$User' AND Matchbox_Collection.Coll_InactiveFlg=0";
-						
 					}
 					
 				} else {
@@ -527,67 +532,77 @@
 			
 				//DISPLAY COLUMN HEADERS
 			?>
-			<div id="overflow">
-        
-				<table>
+			
+			<div id="overflow">        
+				<table class="one-col-image">
 					<thead>
-					<tr>
-						<td>Photo</td>
-						<td>Variation</td>
-						<td>MAN</td>
-						<td>Mack</td>
-						<td>Name</td>
-						<td>Origin</td>
-						<td>F Wh</td>
-						<td>R Wh</td>
-						<td>Window</td>
-						<td>Interior</td>
-						<td>Finish</td>
-						<td>Color Var</td>
-						<td>Tampo Var</td>
-						<td>Base Mat</td>
-						<td>Base Color</td>
-						<td>Detail Vars</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td>Copy</td>
-						<td>Condition</td>
-						<td>Seller</td>
-						<td>Loc1</td>
-						<td>Loc2</td>
-						<td>Value</td>
-						<td>Price</td>
-						<td>Purch Dt</td>
-					</tr>
-					</thead>            
+						<tr>
+							<td>Photo</td>
+							<td>Variation</td>
+							<td>MAN</td>
+							<td>Mack</td>
+							<td>Name</td>
+							<td>Origin</td>
+							<td>F Wh</td>
+							<td>R Wh</td>
+							<td>Window</td>
+							<td>Interior</td>
+							<td>Finish</td>
+							<td>Color Var</td>
+							<td>Tampo Var</td>
+							<td>Base Mat</td>
+							<td>Base Color</td>
+							<td>Detail Vars</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>Copy</td>
+							<td>Condition</td>
+							<td>Seller</td>
+							<td>Loc1</td>
+							<td>Loc2</td>
+							<td>Value</td>
+							<td>Price</td>
+							<td>Purch Dt</td>
+						</tr>
+					</thead>
 				
-					<?php
+				<?php
 					//DISPLAY RESULTS
-					$rows = mysql_num_rows($result);
-					echo "No. of matches: ".$rows."<br></br>";
-					if ($Sort2==$Sort1){
-						echo "Sort by: ".$Sort1."<br></br>";	
-					} else {	
-						echo "Sort by: ".$Sort1.", ".$Sort2."<br></br>";
-					}	
+					$rows = mysql_num_rows($result);					
+				?>
+					
+					<p>No. of matches: <?php echo $rows; ?></p>
+					<?php if ($Sort2==$Sort1) { ?>
+						<p>Sort by: <?php echo $Sort1; ?></p>
+					<?php } else {	?>
+						<p>Sort by: <?php echo $Sort1; ?>, <?php echo $Sort2; ?></p>
+					<?php } ?>
+					
+							
+					
+				<?php 
+					
 					for ($i=1; $i<=$rows; $i++) {
 						$row = mysql_fetch_array($result);
 							
-						echo "<tr>";  
-							 
-							$picture= IMAGE_URL . $row["VarID"]."_1.jpg";
-							$picture_loc=IMAGE_PATH. $row["VarID"]."_1.jpg";
-								
+						echo "<tr>";							 
+							$picture = IMAGE_URL . $row["VarID"] . "_1.jpg";
+							$picture_loc = IMAGE_PATH . $row["VarID"] . "_1.jpg";
 							if (file_exists($picture_loc)) {
-								//echo "picture exists";
-								echo "<td><img src=" . $picture . " /></td>";
+								$picture_loc = ROOTURL . $picture_loc;
+								echo "<td>";
+									echo "<span><a href=" . $picture_loc . ">" . $picture_loc . "</a></span>";
+									echo "<img src=" . $picture . " />";
+								echo "</td>";
 							} else {
-								echo "<td><img src=" . DEFAULT_IMAGE . " /></td>";	
-							}
-							
+								echo "<td>";
+									echo "<span>no photo</span>";
+									echo "<img src=" . DEFAULT_IMAGE . " />";
+								echo "</td>";
+							}							
 							echo "<td>" . $row['VarID'] . "</td>"; 
 							echo "<td>" . $row['FAB_No'] . "</td>";
 							echo "<td>" . $row['Mack_No'] . "</td>";
@@ -625,6 +640,15 @@
 			</div>
 		
 			<a id="printThis" class="button dark" href="javascript:window.print()">Print this Report</a>
+			<!--input value="Export as CSV" type="button" onclick="$('#example1').table2CSV({header:['prefix','Employee Name','Contact']})"-->
+			<a id="exportThis" class="button dark" href="#">Export as .csv</a>
+			
+			<?php /* EXPORT TABLE TO CSV */ ?>
+			<script>
+			    $("#exportThis").on('click', function (event) {
+			        exportTableToCSV.apply(this, [$('table'), 'mbxu-collection-model-details.csv']);
+			    });
+			</script>
 			
 		<?php	
 		}

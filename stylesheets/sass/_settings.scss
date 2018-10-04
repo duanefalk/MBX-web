@@ -4,19 +4,6 @@
 @mixin headline {font-family:'Lato', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif; font-weight:700; font-style:normal;}
 
 
-/* -- Colors -- */
-$black: #444444;
-$white: #ffffff;
-$printBlack: #000000;
-
-/*$cream : #F3EECE;*/
-$cream: #f6f3dd;
-$gold: #e9a31d;
-$orange: #d45132;
-$teal: #087b80;
-$brown: #503f2d;
-$babyBlue: #d6eae9;
-
 @mixin roundedCorners {
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;

@@ -21,7 +21,7 @@
 	<link href="stylesheets/ui-lightness/jquery-ui-1.10.3.custom.min.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
 	
-	<script src="js/vendor/modernizr.js"></script>
+	<script src="js/min/utility-min.js"></script>
 	
 	<!-- IE8 Polyfills -->
 	<!--[if lt IE 9]>

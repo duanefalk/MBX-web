@@ -5,12 +5,15 @@
 	require_once("includes/db_connection.php");
 	include("includes/header.php");
 	include("includes/functions.php");
+	
+	$User = $_SESSION['Username'];
 ?>
 
-<?php $User=$_SESSION['Username']; ?>
-<div class="large-12 columns">
-<a href="collection-reports.php" class="button dark">Return to Collection Reports Menu</a>
-<a href="index.php" class="button dark">Return to Main Page</a>
+<div class="row">
+	<div class="large-12 columns">
+		<a href="collection-reports.php" class="button dark">Return to Collection Reports Menu</a>
+		<a href="index.php" class="button dark">Return to Main Page</a>
+	</div>
 </div>
 
 <form action="collection-report-n-process.php" method="post">
