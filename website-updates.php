@@ -11,6 +11,14 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">November 4 2018</p>
+			<ul>
+				<li>2018 Added several Code 2/3's</li>
+				<li>2018 Color Changers: Added photos for latest models</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">October 26, 2018</p>
 			<ul>
 				<li>2018 Multi-Packs: Added Coffee Cruisers, #7</li>
