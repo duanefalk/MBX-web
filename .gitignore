@@ -14,6 +14,7 @@ user_uploads/
 
 
 # Ignore CSS & Map File
+*.codekit3
 
 
 # OS generated files
