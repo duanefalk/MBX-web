@@ -87,7 +87,7 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/Early_Lesney.php</loc>
+  <loc>http://mbx-u.com/early-lesney.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
@@ -191,7 +191,7 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/Reference_List.php</loc>
+  <loc>http://mbx-u.com/reference-list.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
@@ -203,11 +203,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/Search_Models.php</loc>
+  <loc>http://mbx-u.com/search-models-menu.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mbx-u.com/Search_Releases.php</loc>
+  <loc>http://mbx-u.com/search-releases-menu.php</loc>
   <changefreq>weekly</changefreq>
 </url>
 </urlset>

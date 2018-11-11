@@ -5,7 +5,7 @@
 ?>
 <div class="row">
 	<div class="large-12 columns">
-	<a href="Reference_List.php" class="button dark">Photos Sources & Other Links</a>
+	<a href="reference-list.php" class="button dark">Photos Sources & Other Links</a>
         <a href="window-colors.php" class="button dark">Window Colors</a>
         <a href="wheel-types.php" class="button dark">Wheel Types</a>	
 	<a href="theme-list.php" class="button dark">Release Themes</a>
