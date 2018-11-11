@@ -11,6 +11,22 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">November 4 2018</p>
+			<ul>
+				<li>2018 Added several Code 2/3's</li>
+				<li>2018 Color Changers: Added photos for latest models</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">October 26, 2018</p>
+			<ul>
+				<li>2018 Multi-Packs: Added Coffee Cruisers, #7</li>
+				<li>2018 Color Changers: Added 2 models</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">September 25, 2018</p>
 			<ul>
 				<li>PROBLEM FIXED: if you were logged in (and had a collection), and searched by MAN# from the home page, the resulting list all showed models with green bars- indicating you owned all of the models. This was corrected so that now only the models in your collection show the green bars. Note- listings from the Search Models page were already working correctly.</li>
