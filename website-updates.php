@@ -1164,8 +1164,8 @@
 		<p class="tip">related pages:</p>
 		<a href="DB_explain.php">About the Database</a>
 		<a href="MB_Code_System.php">The Code System</a>
-		<a href="About_photos.php">Links & Photo References</a>
-		<a href="Ref_files.php">Reference Files</a>
+		<a href="about-photos.php">Links & Photo References</a>
+		<a href="ref-files.php">Reference Files</a>
 		<a href="Dedication.php">Dedication</a>
 	</div>
 </div>

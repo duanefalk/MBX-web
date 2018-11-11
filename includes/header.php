@@ -92,7 +92,7 @@
 						<h2>Connect to fellow collectors</h2>
 						<p>Through the Links & References option, you can check out an up-to-date list of many of the best Matchbox web sites out there.</p>
 						<p>Clubs, annual collectors’ meetings some of the popular Matchbox collecting guides are also listed.</p>
-						<p><a href="About_photos.php" class="button">Links &amp; References</a></p>
+						<p><a href="about-photos.php" class="button">Links &amp; References</a></p>
 					</div>					
 				</div>
 				<div class="large-5 medium-6 columns" id="bannerImage">

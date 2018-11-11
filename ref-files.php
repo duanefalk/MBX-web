@@ -27,7 +27,7 @@
 		<a href="about-site.php">About the Site</a>
 		<a href="db-explain.php">About the Database</a>
 		<a href="mb-code-system.php">The Code System</a>
-		<a href="About_photos.php">Links & Photo References</a>
+		<a href="about-photos.php">Links & Photo References</a>
 		<a href="dedication.php">Dedication</a>
 	</div>
 </div>

@@ -135,8 +135,8 @@
 		<p class="tip">related pages:</p>
 		<a href="about-site.php">About the Site</a>
 		<a href="mb-code-system.php">The Code System</a>
-		<a href="About_photos.php">Links & Photo References</a>
-		<a href="Ref_files.php">Reference Files</a>
+		<a href="about-photos.php">Links & Photo References</a>
+		<a href="ref-files.php">Reference Files</a>
 		<a href="dedication.php">Dedication</a>
 	</div>
 </div>
