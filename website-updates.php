@@ -11,6 +11,13 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">November 10 2018</p>
+			<ul>
+				<li>2018 1-75: Batch L added</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">November 4 2018</p>
 			<ul>
 				<li>2018 Added several Code 2/3's</li>
