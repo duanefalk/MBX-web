@@ -33,13 +33,7 @@
 	redirect_to("search-releases-process.php");
     }
 ?>
-
-
-
-
-
-
-
+<?php /*
 <head>
 	<script>
 		$(function() {
@@ -71,6 +65,7 @@
 		});
 	</script>
 </head>
+*/ ?>
 
 <form name="SearchReleases" action="search-releases-menu.php" method="post" data-parsley-validate>
 <div class="row">
