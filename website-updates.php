@@ -11,6 +11,14 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">December 13 2018</p>
+			<ul>
+				<li>2018 Multi-Packs: Added Wildfire Rescue</li>
+				<li>2018 Color Changers: 4 additional models entered</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">November 17 2018</p>
 			<ul>
 				<li>2018 1-75: Batch K added</li>
