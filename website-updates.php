@@ -11,6 +11,15 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">December 27 2018</p>
+			<ul>
+				<li>2019 Multi-Packs: Construction & Blue Highways</li>
+				<li>2019 1-75: Waves A & B added</li>
+				<li>2018 1-75: Wave M added; 2018 complete</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">December 13 2018</p>
 			<ul>
 				<li>2018 Multi-Packs: Added Wildfire Rescue</li>
