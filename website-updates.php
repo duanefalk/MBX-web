@@ -11,6 +11,15 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">January 31, 2019</p>
+			<ul>
+				<li>2019 1-75: Wave C (K) added</li>
+				<li>2019: 4 New Superfast added</li>
+				<li>2019: First 4 Moving Parts models added</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">December 27 2018</p>
 			<ul>
 				<li>2019 Multi-Packs: Construction & Blue Highways</li>
