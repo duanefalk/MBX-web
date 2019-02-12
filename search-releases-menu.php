@@ -34,37 +34,40 @@
     }
 ?>
 <?php /*
-<head>
-	<script>
-		$(function() {
-			$( "#accordion" ).accordion();
-
-			// Hover states on the static widgets
-			$( "#dialog-link, #icons li" ).hover(
-				function() {
-					$( this ).addClass( "ui-state-hover" );
-				},
-				function() {
-					$( this ).removeClass( "ui-state-hover" );
-				}
-			);
-		});
-		
-		$(function() {
-			$( "#accordion2" ).accordion();
 	
-			// Hover states on the static widgets
-			$( "#dialog-link, #icons li" ).hover(
-				function() {
-					$( this ).addClass( "ui-state-hover" );
-				},
-				function() {
-					$( this ).removeClass( "ui-state-hover" );
-				}
-			);
-		});
-	</script>
-</head>
+	//OUTDATED CODE, CAUSES PAGE TO BREAK
+	
+	<head>
+		<script>
+			$(function() {
+				$( "#accordion" ).accordion();
+	
+				// Hover states on the static widgets
+				$( "#dialog-link, #icons li" ).hover(
+					function() {
+						$( this ).addClass( "ui-state-hover" );
+					},
+					function() {
+						$( this ).removeClass( "ui-state-hover" );
+					}
+				);
+			});
+			
+			$(function() {
+				$( "#accordion2" ).accordion();
+		
+				// Hover states on the static widgets
+				$( "#dialog-link, #icons li" ).hover(
+					function() {
+						$( this ).addClass( "ui-state-hover" );
+					},
+					function() {
+						$( this ).removeClass( "ui-state-hover" );
+					}
+				);
+			});
+		</script>
+	</head>
 */ ?>
 
 <form name="SearchReleases" action="search-releases-menu.php" method="post" data-parsley-validate>

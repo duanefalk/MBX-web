@@ -11,6 +11,14 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">February 12, 2019</p>
+			<ul>
+				<li>2019 Multi-packs: No Road, No Problem</li>
+				<li>Aologize for temporary inconvenience with photos- we needed to move to a different server and had some trouble with getting all the photos copied over. That is in process now and should be done by wednesday. The database is fine, and the photos are reloading.</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">January 31, 2019</p>
 			<ul>
 				<li>2019 1-75: Wave C (K) added</li>
