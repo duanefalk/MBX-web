@@ -4,8 +4,8 @@ phpinfo.php
 
 # Images
 images/models/
-images/Similar_Models
-images/wheels
+# images/Similar_Models
+# images/wheels
 
 
 # Sass Cache remove
