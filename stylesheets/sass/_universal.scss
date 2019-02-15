@@ -45,7 +45,11 @@ select {height:auto;}
 	
 	&.wide {
 		max-width:92%;
-	}	
+	}
+	
+	.row {
+		margin-bottom:2em;
+	}
 }
 
 [class*="column"] + [class*="column"].end {float:left;}
@@ -63,10 +67,17 @@ button {
 	
 	&.dark {
 		color:$orange; border-color:$orange;
+		
 		&:hover,
-		&:focus {color:$teal; background:none; border-color:$teal;}
+		&:focus {
+			color:$teal;
+			background:none;
+			border-color:$teal;
+		}
 	}
-	&.block {display:block;}
+	&.block {
+		display:block;
+	}
 	&.cancel {
 		margin-left:1em;
 		color:$orange;
