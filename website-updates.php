@@ -11,6 +11,14 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">March 29, 2019</p>
+			<ul>
+				<li>2019 1-75: Wave D (L), E (M) added</li>
+				<li>Kiddie Kar Kollectibles and MBUSA latest Code 2/3 added</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">February 12, 2019</p>
 			<ul>
 				<li>2019 Multi-packs: No Road, No Problem</li>
