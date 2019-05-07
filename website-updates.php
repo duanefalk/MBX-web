@@ -11,6 +11,16 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">May 8 29, 2019</p>
+			<ul>
+				<li>2019 1-75: Wave F (N) added</li>
+				<li>Jurassic World singles and Dino Rivals 5-pk added</li>
+				<li>2019: Superfast and Color Changers added</li>
+				<li>A variety of code 2/3 models added</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">April 25 29, 2019</p>
 			<ul>
 				<li>2019 Multi-packs: Service Squad added</li>
