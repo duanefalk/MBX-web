@@ -11,6 +11,16 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">June 1 29, 2019</p>
+			<ul>
+				<li>2019 1-75: Wave G & H added</li>
+				<li>Lates wave of  Moving Parts added</li>
+				<li>2019: 9 packs, B1, B2, C1 added</li>
+				<li>A variety of code 2/3 models added</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">May 8 29, 2019</p>
 			<ul>
 				<li>2019 1-75: Wave F (N) added</li>
