@@ -11,7 +11,7 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
-			<p class="date">June 1 29, 2019</p>
+			<p class="date">June 1, 2019</p>
 			<ul>
 				<li>2019 1-75: Wave G & H added</li>
 				<li>Lates wave of  Moving Parts added</li>
