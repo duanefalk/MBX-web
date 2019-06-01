@@ -21,7 +21,7 @@
 		</div>
 
 <div class="section">
-			<p class="date">May 8 29, 2019</p>
+			<p class="date">May 8, 2019</p>
 			<ul>
 				<li>2019 1-75: Wave F (N) added</li>
 				<li>Jurassic World singles and Dino Rivals 5-pk added</li>
@@ -31,7 +31,7 @@
 		</div>
 
 <div class="section">
-			<p class="date">April 25 29, 2019</p>
+			<p class="date">April 25, 2019</p>
 			<ul>
 				<li>2019 Multi-packs: Service Squad added</li>
 				<li>MBUSA March & April Code 2/3 added</li>
