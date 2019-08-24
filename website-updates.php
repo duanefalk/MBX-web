@@ -11,6 +11,15 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">August 24, 2019</p>
+			<ul>
+				<li>2019 5 packs: MBX Service Center, MBX to the Rescue added</li>
+				<li>2019 1-75: Wave J & K (?not sure on the naming) added</li>
+				<li>A variety of code 2/3 models added</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">June 21, 2019</p>
 			<ul>
 				<li>2019 5 packs: MBX Wild added</li>
