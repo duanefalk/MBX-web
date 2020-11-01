@@ -124,6 +124,10 @@
 	<div class="large-3 columns text-center">
 		<h5>Cream</h5>
 		<p><img src="images/ref_images/cream.jpg" width="120"></p>
+	</div>
+	<div class="large-3 columns text-center">
+		<h5>Charcoal</h5>
+		<p><img src="images/ref_images/charcoal.jpg" width="120"></p>
 	</div>	
 </div>
 

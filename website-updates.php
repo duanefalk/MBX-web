@@ -11,6 +11,130 @@
 		<h2>Latest Website Updates</h2>
 
 <div class="section">
+			<p class="date">October 22, 2020</p>
+			<ul>
+				<li>Most recent 9-pks added</li>
+				<li>Wave E 1-75 added</li>
+			</ul>
+		</div>
+
+
+<div class="section">
+			<p class="date">August 2, 2020</p>
+			<ul>
+				<li>Highway Speeders 5-pk added</li>
+				<li>First 6 Retro models added</li>
+				<li>Last 2 months of MBUSA models added</li>
+				<li>Made a number of FAB/MAN no. corrections</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">July 7, 2020</p>
+			<ul>
+				<li>Some database corrections (thanks to Radu Stoicescu for pointing out!):</li>
+				<li>Jeep Grand Cherokee Feature Cars changed from MB977 to FC 07</li>
+				<li>Tinforcer corrected to MB1047</li>
+				<li>Corvette Sting-ray III corrected to MB255</li>
+				<li>Rescue Truck (SF0467) corrected to MB386</li>
+				<li>Also SF1028 and SF1072 were duplicates. Those were merged into 1028. If you had any collection entries with 1072 Im afraid you'll need to re-enter those as 1028. My apologies!</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">June 8, 2020</p>
+			<ul>
+				<li>Wave D of 1-75 added</li>
+				<li>2 Top Gun Maverick 5-packs added</li>
+				<li>Latest set of Moving Parts models added</li>
+				<li>Variety of Code 2/3 models added</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">April 27, 2020</p>
+			<ul>
+				<li>9-pack No. 1 & 2 added</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">April 23, 2020</p>
+			<ul>
+				<li>5-pack City Adventure II added</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">April 18, 2020</p>
+			<ul>
+				<li>All 2018 and 2019 Jurassic World models added</li>
+				<li>2018 Mercedes-Benz 5 pack (w/ unique model) added</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">April 15, 2020</p>
+			<ul>
+				<li>2020 Multi-pack Construction II added</li>
+				<li>2 2020 Moving Parts added</li>
+				<li>In process of adding 2019 Jurassic World models that I had missed (thanks for heads up Radu!)</li>
+				<li>Correction: fixed model SF1007; was missing green model, had charcoal and grey models lumped togethe rincorrectly</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">April 7, 2020</p>
+			<ul>
+				<li>2020 1-75 Wave C added</li>
+				<li>Several 2020 code 2/3 added</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">December 11, 2019</p>
+			<ul>
+				<li>2020 5-packs: MBX COuntryside, MBX Highway</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">November 30, 2019</p>
+			<ul>
+				<li>2020 1-75: Wave A of new models</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">November 20, 2019</p>
+			<ul>
+				<li>2019 1-75: last 2 batches/waves for the year added</li>
+				<li>A large variety of code 2/3 models added</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">November 9, 2019</p>
+			<ul>
+				<li>Added latest Moving Parts moels</li>
+				<li>2019 1-75: more new 'Superfast' in the 1-75, Gold chase models</li>
+				<li>First handful of 2020 1-75, from row</li>
+				<li>A variety of code 2/3 models added</li>
+			</ul>
+		</div>
+
+<div class="section">
+			<p class="date">October 24, 2019</p>
+			<ul>
+				<li>2019 5 packs: Holiday and Auto Bahn</li>
+				<li>2019 1-75: new 'Superfast' in the 1-75, Gold chase models</li>
+				<li>New Jeep series  and Moving Parts models added</li>
+				<li>Promos form Gathering in ABQ added</li>
+				<li>A variety of code 2/3 models added</li>
+			</ul>
+		</div>
+
+<div class="section">
 			<p class="date">August 24, 2019</p>
 			<ul>
 				<li>2019 5 packs: MBX Service Center, MBX to the Rescue added</li>

@@ -487,9 +487,9 @@
 			} elseif ($Sort1=="Seller") {
 				$query_sort=" ORDER BY Matchbox_Collection.Seller ASC";
 			} elseif ($Sort1=="MdlValue") {
-				$query_sort=" ORDER BY Matchbox_Collection.ItemVal ASC";
+				$query_sort=" ORDER BY Matchbox_Collection.ItemVal DESC";
 			} elseif ($Sort1=="PurchPrice") {
-				$query_sort=" ORDER BY Matchbox_Collection.PurchPrice ASC";	
+				$query_sort=" ORDER BY Matchbox_Collection.PurchPrice DESC";	
 			} elseif ($Sort1=="PurchDt") {	
 				$query_sort=" ORDER BY Matchbox_Collection.PurchDt ASC";
 			}	

@@ -94,7 +94,6 @@
 	    $message = "Hi" . $First_Name . ",\r\n\r\n";
 	    $message .= "Thanks for checking out MBX-U and creating an account. I hope you enjoy the site.\r\n\r\n";
 	    $message .= "Now that you've set up an account you can create and track your own Matchbox collection. Also, if you have any information or photos of rare or unusual models you can upload those to the site. I attribute all photos to the origin.\r\n\r\n";
-	    $message .= "We just received the new code model I had made for the site. I will send those out shortly to new members.\r\n\r\n";
 	    $message .= "If you have any questions or run into any problems I'm glad to help. Email us at info@mbx-u.com.\r\n\r\n";
 	    $message .= "Regards, Duane";
 	    $headers = 'From:info@mbx-u.com' . "\r\n" . 'Reply-To:info@mbx-u.com' . "\r\n" . 'Bcc:info@mbx-u.com';	    

@@ -73,7 +73,7 @@
 					<input type="text" name="Username" value="<? echo $Username?>" size="20" id="Username"-->
 					
 					<div class="formRow">			
-						<label for="User_Coll_ID">Collection Identifier*: <small>(max 12 chars)</small></label>
+						<label for="User_Coll_ID">Collection Identifier*: <small>(max 12 chars NO special characters please)</small></label>
 						<input type="text" name="User_Coll_ID" value="" size="12" id="User_Coll_ID" maxlength="12" required>
 					</div>	
 

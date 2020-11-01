@@ -114,7 +114,7 @@
 	<div class="large-6 medium-6 columns">	
 				
 		<h2 class="demoHeaders">Or Browse Release Data</h2>
-		<p>Choose one or more criteria to browse with. Please be sure your selection is sufficently specific to provide meaningful results (i.e. specifying only 'released in USA' will produce a list too large to be useful. Note: These criteria will be ignored if you've selected a search above.</p>
+		<p>Choose one or more criteria to browse with. Please be sure your selection is sufficiently specific to provide meaningful results (i.e. specifying only 'released in USA' will produce a list too large to be useful. Note: These criteria will be ignored if you've selected a search above.</p>
 		
 		<div id="accordion2">
 			<dl class="accordion" data-accordion>

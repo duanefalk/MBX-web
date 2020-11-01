@@ -311,7 +311,7 @@
 	            echo "<p>Rel ID: ". $row["RelID"]."</p>";
 				echo "<p>Series: ".$row["Series"]."       ";
 	            if ($row["ShowSeriesID"]="1") {
-	                echo "Series#".$row["SeriesID"]."</p>";
+	                echo "Series# ".$row["SeriesID"]."</p>";
 	            }
 				echo "<p>SubSeries: ".$row["SubSeries"]."</p>";
 	            echo "Country: ".$row["CountryOfSale"]."</p>";
