@@ -32,31 +32,47 @@ Variation Comparison
 
 
 /* -- HOME ----------------------- */
-body.home #header {margin-bottom:2em; padding-bottom:0; background:$orange url('../images/banners/chalkboard.png') center center no-repeat;	
-	* {color:$cream;}
-	#logo {
-		@media only screen and (max-width:480px){ text-align:center; }
-	}	
-	#banner { margin-top:2em;
-		.banner {
-			&.one {display:block;}
-			
-			&.two,
-			&.three,
-			&.four,
-			&.five {display:none;}
-			
-			#bannerText {
-				margin-top:2em;
-			}
+body.home {
+
+	/* HEADER */
+	#header {
+
+		margin-bottom:2em; 
+		padding-bottom:0; 
+		background:$orange url('../images/banners/chalkboard.png') center center no-repeat;	
+
+		* {
+			color:$cream;
 		}
-		#bannerImage {
-			@media only screen and (max-width:1024px){ text-align:center; }
-			@media only screen and (max-width:639px){ 
-				img {max-width:60%; margin:0 auto;}
+		#logo {
+			@media only screen and (max-width:480px){ text-align:center; }
+		}	
+		#banner { 
+			margin-top:2em;
+
+			.banner {
+				&.one {
+					display:block;
+				}
+				
+				&.two,
+				&.three,
+				&.four,
+				&.five {display:none;}
+				
+				#bannerText {
+					margin-top:2em;
+				}
+			}
+			#bannerImage {
+				@media only screen and (max-width:1024px){ text-align:center; }
+				@media only screen and (max-width:639px){ 
+					img {max-width:60%; margin:0 auto;}
+				}
 			}
 		}
 	}
+
 }
 #quick_search {
 	padding:1.5em; color:$white; background:$teal; border-radius:1em;

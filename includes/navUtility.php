@@ -1,4 +1,7 @@
 <div id="utilityNav">
+	<div id="announcement-banner">
+		<p>Announcement about closing the site: <a href="#announcement-popup" rel="modal:open">Read Now</a>.</p>
+	</div>
 	<div id="warningLocal">
 		<div class="row">
 			<div class="large-12 columns">

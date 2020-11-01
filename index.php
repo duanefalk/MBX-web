@@ -32,3 +32,12 @@
 </div>
 
 <?php require("includes/footer.php"); ?>
+
+<script>
+	jQuery(document).ready(function() {
+		jQuery("#announcement-popup").modal({
+			fadeDuration: 500,
+			fadeDelay: 0.50
+		});
+	});
+</script>

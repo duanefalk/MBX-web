@@ -124,8 +124,33 @@ button {
  
 
 /* -- Navigation ------------- */
-#utilityNav { margin-bottom:.5em; text-align:right; background:transparentize($black,.75);
+#utilityNav { 
+	margin-bottom:.5em; 
+	text-align:right; 
+	background:transparentize($black,.75);
+
 	@media only screen and (max-width:1024px){ text-align:center; }
+
+	#announcement-banner {
+		padding: 1.00em 0; 
+		text-align: center; 
+		background: $teal;
+
+		p {
+			margin:0; 
+			@include body; 
+			font-size: 0.90rem;
+			color:$white;
+			text-transform: uppercase;
+
+			a {
+				padding: 0;
+				color: $gold; 
+				font-size: 0.90rem;
+				@include headline;
+			}
+		}
+	}
 	
 	#warningLocal {display:none; padding:.5em 0; text-align:center; background:$teal;
 		p {margin:0; @include body; color:$white;
@@ -220,4 +245,22 @@ dl.accordion { margin:0 auto 1em; @include body;
 		
 		p {}
 	}	
+}
+
+/* POPUP */
+.jquery-modal #announcement-popup {
+
+	padding: 2.00em;
+	
+	h4 {
+		margin: 0 0 1.00em;
+	}
+	p {
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+.blocker {
+	background: transparentize($teal, 0.10);
 }

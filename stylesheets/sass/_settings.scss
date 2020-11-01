@@ -3,7 +3,6 @@
 @mixin italic {font-family:'Lato', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif; font-weight:400; font-style:italic;}
 @mixin headline {font-family:'Lato', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif; font-weight:700; font-style:normal;}
 
-
 @mixin roundedCorners {
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;

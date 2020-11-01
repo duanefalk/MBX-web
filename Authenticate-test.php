@@ -1,6 +1,5 @@
 <?php
 	ob_start();
-	// we must never forget to start the session
 	session_start();
 	$_SESSION['Sec_Lvl']=1;
 	$pageTitle = "Log In";
