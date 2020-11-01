@@ -16,8 +16,8 @@
 
 	<title><?php if ($pageTitle) { echo $pageTitle . " | "; } ?>Matchbox University</title>
 	
-	<link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
-	<script src="js/min/utility-min.js"></script>
+	<link href="stylesheets/style.css?v=2.00" media="all" rel="stylesheet" type="text/css" />
+	<script src="js/min/utility-min.js?v=2.00"></script>
 	
 	<!-- IE8 Polyfills -->
 	<!--[if lt IE 9]>
